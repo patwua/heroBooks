@@ -1,9 +1,15 @@
+import Link from "next/link";
+
 export function Sidebar() {
   return (
     <aside className="w-64 bg-gray-100 p-4">
       <nav>
-        <ul>
-          <li><a href="/app">Dashboard</a></li>
+        <ul className="space-y-2">
+          <li><Link href="/dashboard">Dashboard</Link></li>
+          <li><Link href="/customers">Customers</Link></li>
+          <li><Link href="/sales">Sales</Link></li>
+          <li><Link href="/vendors">Vendors</Link></li>
+          <li><Link href="/settings">Settings</Link></li>
         </ul>
       </nav>
     </aside>
