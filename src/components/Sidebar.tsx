@@ -1,20 +1,29 @@
 import Link from "next/link";
 
+const links = [
+  { href: "/dashboard", label: "Dashboard" },
+  { href: "/customers", label: "Customers" },
+  { href: "/sales", label: "Sales (Create)" },
+  { href: "/sales/invoices", label: "Invoices" },
+  { href: "/sales/payments", label: "Payments" },
+  { href: "/reports/ar-aging", label: "Reports: A/R Aging" },
+  { href: "/reports/vat", label: "Reports: VAT" },
+  { href: "/app/purchases/bills", label: "Purchases: Bills" },
+  { href: "/vendors", label: "Vendors" },
+  { href: "/settings", label: "Settings" },
+  { href: "/app/bank", label: "Bank Reconciliation" }
+];
+
 export function Sidebar() {
   return (
     <aside className="w-64 bg-gray-100 p-4">
       <nav>
         <ul className="space-y-2">
-          <li><Link href="/dashboard">Dashboard</Link></li>
-          <li><Link href="/customers">Customers</Link></li>
-          <li><Link href="/sales">Sales (Create)</Link></li>
-          <li><Link href="/sales/invoices">Invoices</Link></li>
-          <li><Link href="/sales/payments">Payments</Link></li>
-          <li><Link href="/reports/ar-aging">Reports: A/R Aging</Link></li>
-          <li><Link href="/reports/vat">Reports: VAT</Link></li>
-          <li><Link href="/app/purchases/bills">Purchases: Bills</Link></li>
-          <li><Link href="/vendors">Vendors</Link></li>
-          <li><Link href="/settings">Settings</Link></li>
+          {links.map((link) => (
+            <li key={link.href}>
+              <Link href={link.href}>{link.label}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </aside>
