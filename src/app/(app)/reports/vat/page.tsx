@@ -8,22 +8,20 @@ export default async function VatPage() {
   return (
     <div>
       <h1 className="text-xl mb-4">VAT Summary</h1>
-      <table className="text-left">
-        <thead>
-          <tr>
-            <th>Tax Code</th>
-            <th>VAT Collected</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Object.entries(data).map(([code, amount]) => (
-            <tr key={code} className="border-t">
-              <td>{code}</td>
-              <td>{fmtMoney(amount as number)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="grid grid-cols-3 gap-4 mb-8">
+        <div className="p-4 border rounded">
+          <div className="font-semibold">Output VAT</div>
+          <div>{fmtMoney(data.outputVat)}</div>
+        </div>
+        <div className="p-4 border rounded">
+          <div className="font-semibold">Input VAT</div>
+          <div>{fmtMoney(data.inputVat)}</div>
+        </div>
+        <div className="p-4 border rounded">
+          <div className="font-semibold">Net VAT</div>
+          <div>{fmtMoney(data.netVat)}</div>
+        </div>
+      </div>
     </div>
   );
 }

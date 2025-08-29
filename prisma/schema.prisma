@@ -66,6 +66,8 @@ model Org {
   taxCodes   TaxCode[]
   items      Item[]
   invoices   Invoice[]
+  vendors    Vendor[]
+  bills      Bill[]
 }
 
 model OrgSettings {
@@ -105,6 +107,7 @@ model TaxCode {
   org    Org       @relation(fields: [orgId], references: [id])
   items  Item[]
   lines  InvoiceLine[]
+  billLines BillLine[]
 }
 
 model Item {
@@ -154,4 +157,35 @@ model Payment {
   method    String
   receiptNumber Int
   invoice   Invoice  @relation(fields: [invoiceId], references: [id])
+}
+
+model Vendor {
+  id     String @id @default(cuid())
+  orgId  String
+  name   String
+  org    Org    @relation(fields: [orgId], references: [id])
+  bills  Bill[]
+}
+
+model Bill {
+  id        String   @id @default(cuid())
+  orgId     String
+  vendorId  String
+  billDate  DateTime @default(now())
+  dueDate   DateTime?
+  wht       Decimal? @db.Decimal(10, 2)
+  org       Org      @relation(fields: [orgId], references: [id])
+  vendor    Vendor   @relation(fields: [vendorId], references: [id])
+  lines     BillLine[]
+}
+
+model BillLine {
+  id          String   @id @default(cuid())
+  billId      String
+  description String?
+  quantity    Int      @default(1)
+  unitCost    Decimal  @db.Decimal(10, 2)
+  taxCodeId   String?
+  bill        Bill     @relation(fields: [billId], references: [id])
+  taxCode     TaxCode? @relation(fields: [taxCodeId], references: [id])
 }
