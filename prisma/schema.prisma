@@ -8,30 +8,29 @@ datasource db {
 }
 
 model User {
-  id            String   @id @default(cuid())
+  id            String    @id @default(cuid())
   name          String?
-  email         String?  @unique
+  email         String?   @unique
   emailVerified DateTime?
   image         String?
   password      String?
   accounts      Account[]
   sessions      Session[]
   orgs          UserOrg[]
-
 }
 
 model Account {
-  id                String @id @default(cuid())
+  id                String  @id @default(cuid())
   userId            String
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String?  @db.Text
-  access_token      String?  @db.Text
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String?  @db.Text
+  id_token          String? @db.Text
   session_state     String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -56,27 +55,28 @@ model VerificationToken {
 }
 
 model Org {
-  id         String       @id @default(cuid())
-  name       String
-  createdAt  DateTime     @default(now())
-  updatedAt  DateTime     @updatedAt
-  settings   OrgSettings?
-  users      UserOrg[]
-  customers  Customer[]
-  taxCodes   TaxCode[]
-  items      Item[]
-  invoices   Invoice[]
-  vendors    Vendor[]
-  bills      Bill[]
+  id               String            @id @default(cuid())
+  name             String
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  settings         OrgSettings?
+  users            UserOrg[]
+  customers        Customer[]
+  taxCodes         TaxCode[]
+  items            Item[]
+  invoices         Invoice[]
+  vendors          Vendor[]
+  bills            Bill[]
+  bankTransactions BankTransaction[]
 }
 
 model OrgSettings {
-  orgId     String  @id
-  timezone  String? @default("UTC")
-  currency  String? @default("USD")
-  apiKey    String? @unique
+  orgId      String  @id
+  timezone   String? @default("UTC")
+  currency   String? @default("USD")
+  apiKey     String? @unique
   webhookUrl String?
-  org       Org     @relation(fields: [orgId], references: [id])
+  org        Org     @relation(fields: [orgId], references: [id])
 }
 
 model UserOrg {
@@ -91,49 +91,50 @@ model UserOrg {
 }
 
 model Customer {
-  id      String   @id @default(cuid())
-  orgId   String
-  name    String
-  email   String?
-  org     Org      @relation(fields: [orgId], references: [id])
+  id       String    @id @default(cuid())
+  orgId    String
+  name     String
+  email    String?
+  org      Org       @relation(fields: [orgId], references: [id])
   invoices Invoice[]
 }
 
 model TaxCode {
-  id     String    @id @default(cuid())
-  orgId  String
-  name   String
-  rate   Float
-  org    Org       @relation(fields: [orgId], references: [id])
-  items  Item[]
-  lines  InvoiceLine[]
+  id        String        @id @default(cuid())
+  orgId     String
+  name      String
+  rate      Float
+  org       Org           @relation(fields: [orgId], references: [id])
+  items     Item[]
+  lines     InvoiceLine[]
   billLines BillLine[]
 }
 
 model Item {
-  id          String    @id @default(cuid())
+  id          String        @id @default(cuid())
   orgId       String
   name        String
   description String?
-  price       Decimal   @db.Decimal(10, 2)
-  org         Org       @relation(fields: [orgId], references: [id])
+  price       Decimal       @db.Decimal(10, 2)
+  org         Org           @relation(fields: [orgId], references: [id])
   taxCodeId   String?
-  taxCode     TaxCode?  @relation(fields: [taxCodeId], references: [id])
+  taxCode     TaxCode?      @relation(fields: [taxCodeId], references: [id])
   lines       InvoiceLine[]
 }
 
 model Invoice {
-  id         String        @id @default(cuid())
-  orgId      String
-  customerId String?
-  number     Int           @default(1)
-  issueDate  DateTime      @default(now())
-  dueDate    DateTime?
-  status     String        @default("draft")
-  org        Org           @relation(fields: [orgId], references: [id])
-  customer   Customer?     @relation(fields: [customerId], references: [id])
-  lines      InvoiceLine[]
-  payments   Payment[]
+  id               String            @id @default(cuid())
+  orgId            String
+  customerId       String?
+  number           Int               @default(1)
+  issueDate        DateTime          @default(now())
+  dueDate          DateTime?
+  status           String            @default("draft")
+  org              Org               @relation(fields: [orgId], references: [id])
+  customer         Customer?         @relation(fields: [customerId], references: [id])
+  lines            InvoiceLine[]
+  payments         Payment[]
+  bankTransactions BankTransaction[]
 }
 
 model InvoiceLine {
@@ -150,33 +151,35 @@ model InvoiceLine {
 }
 
 model Payment {
-  id        String   @id @default(cuid())
-  invoiceId String
-  amount    Decimal  @db.Decimal(10, 2)
-  date      DateTime @default(now())
-  method    String
-  receiptNumber Int
-  invoice   Invoice  @relation(fields: [invoiceId], references: [id])
+  id               String            @id @default(cuid())
+  invoiceId        String
+  amount           Decimal           @db.Decimal(10, 2)
+  date             DateTime          @default(now())
+  method           String
+  receiptNumber    Int
+  invoice          Invoice           @relation(fields: [invoiceId], references: [id])
+  bankTransactions BankTransaction[]
 }
 
 model Vendor {
-  id     String @id @default(cuid())
-  orgId  String
-  name   String
-  org    Org    @relation(fields: [orgId], references: [id])
-  bills  Bill[]
+  id    String @id @default(cuid())
+  orgId String
+  name  String
+  org   Org    @relation(fields: [orgId], references: [id])
+  bills Bill[]
 }
 
 model Bill {
-  id        String   @id @default(cuid())
-  orgId     String
-  vendorId  String
-  billDate  DateTime @default(now())
-  dueDate   DateTime?
-  wht       Decimal? @db.Decimal(10, 2)
-  org       Org      @relation(fields: [orgId], references: [id])
-  vendor    Vendor   @relation(fields: [vendorId], references: [id])
-  lines     BillLine[]
+  id               String            @id @default(cuid())
+  orgId            String
+  vendorId         String
+  billDate         DateTime          @default(now())
+  dueDate          DateTime?
+  wht              Decimal?          @db.Decimal(10, 2)
+  org              Org               @relation(fields: [orgId], references: [id])
+  vendor           Vendor            @relation(fields: [vendorId], references: [id])
+  lines            BillLine[]
+  bankTransactions BankTransaction[]
 }
 
 model BillLine {
@@ -188,4 +191,26 @@ model BillLine {
   taxCodeId   String?
   bill        Bill     @relation(fields: [billId], references: [id])
   taxCode     TaxCode? @relation(fields: [taxCodeId], references: [id])
+}
+
+model BankTransaction {
+  id        String   @id @default(cuid())
+  orgId     String
+  bankName  String
+  accountNo String
+  date      DateTime
+  amount    Decimal  @db.Decimal(10, 2)
+  type      String
+  memo      String?
+  invoiceId String?
+  paymentId String?
+  billId    String?
+  status    String   @default("UNMATCHED")
+
+  org     Org      @relation(fields: [orgId], references: [id])
+  invoice Invoice? @relation(fields: [invoiceId], references: [id])
+  payment Payment? @relation(fields: [paymentId], references: [id])
+  bill    Bill?    @relation(fields: [billId], references: [id])
+
+  @@index([orgId, date])
 }
