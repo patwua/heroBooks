@@ -1,61 +1,51 @@
 # heroBooks
 
-Next.js application for heroBooks accounting.
+A Next.js accounting app scaffolded with TypeScript, Tailwind CSS, NextAuth, and Prisma.
 
-## Stack
-- Next.js
-- Prisma
-- NextAuth
-- Tailwind CSS
-- PostgreSQL
+## Setup
 
-## Local Setup
-1. Copy example environment file:
-   ```sh
-   cp .env.example .env
-   ```
-2. Install dependencies:
-   ```sh
-   npm install
-   ```
-3. Apply database migrations:
-   ```sh
-   npx prisma migrate dev
-   ```
-4. Start the development server:
-   ```sh
-   npm run dev
-   ```
+### 1. Environment Variables
+Create a `.env` file from the example and provide real values:
 
-## Environment Variables
+```bash
+cp .env.example .env
+```
+
+Required variables:
+
 - `DATABASE_URL` – PostgreSQL connection string
 - `NEXTAUTH_URL` – base URL for NextAuth callbacks
-- `NEXTAUTH_SECRET` – session encryption secret
-- `GOOGLE_CLIENT_ID` – optional, enables Google SSO
-- `GOOGLE_CLIENT_SECRET` – optional, enables Google SSO
+- `NEXTAUTH_SECRET` – used to sign NextAuth tokens
+- `GOOGLE_CLIENT_ID` – Google OAuth client ID
+- `GOOGLE_CLIENT_SECRET` – Google OAuth client secret
 
-## Testing
-- Lint the project:
-  ```sh
-  npm run lint
-  ```
-- (No test suite yet) Once tests are added, run:
-  ```sh
-  npm test
-  ```
+### 2. Local Development
 
-## Deployment
-1. Create a new Web Service on Render and connect this repository.
-2. Set environment variables from your `.env` file.
-3. Build command: `npm install && npx prisma migrate deploy`
-4. Start command: `npm run start`
-5. For manual deployment:
-   ```sh
-   npm run build
-   npm start
+```bash
+npm install
+npx prisma migrate dev
+npm run dev
+```
+
+The app is now available at <http://localhost:3000>.
+
+### 3. Deployment on Render
+
+1. Create a new Web Service and connect this repository.
+2. Set the environment variables above in the Render dashboard.
+3. Build command:
+   ```bash
+   npm install && npx prisma migrate deploy
+   ```
+4. Start command:
+   ```bash
+   npm run start
    ```
 
 ## Roadmap
+
 - Organization creation
 - VAT invoices
 - Public API
+- Dashboard widgets
+- Mobile-friendly UI
