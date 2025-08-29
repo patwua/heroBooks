@@ -7,7 +7,9 @@ export function Sidebar() {
         <ul className="space-y-2">
           <li><Link href="/dashboard">Dashboard</Link></li>
           <li><Link href="/customers">Customers</Link></li>
-          <li><Link href="/sales">Sales</Link></li>
+          <li><Link href="/sales">Sales (Create)</Link></li>
+          <li><Link href="/sales/invoices">Invoices</Link></li>
+          <li><Link href="/sales/payments">Payments</Link></li>
           <li><Link href="/vendors">Vendors</Link></li>
           <li><Link href="/settings">Settings</Link></li>
         </ul>

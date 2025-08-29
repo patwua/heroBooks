@@ -10,6 +10,20 @@ interface InvoiceItemInput {
   vatCodeId?: string;
 }
 
+export async function GET() {
+  const session = await getServerSession(authOptions);
+  if (!session) {
+    return new NextResponse("Unauthorized", { status: 401 });
+  }
+
+  const invoices = await prisma.invoice.findMany({
+    where: { organization: { ownerId: session.user.id } },
+    include: { customer: true }
+  });
+
+  return NextResponse.json(invoices);
+}
+
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
   if (!session) {
