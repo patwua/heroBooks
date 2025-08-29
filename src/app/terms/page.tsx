@@ -1,8 +1,3 @@
-export default function TermsPage() {
-  return (
-    <section className="p-8">
-      <h1 className="text-2xl font-bold">Terms of Service</h1>
-      <p className="mt-2">Please read these terms carefully.</p>
-    </section>
-  );
+export default function Terms() {
+  return <main className="mx-auto max-w-3xl px-6 py-16"><h1 className="text-2xl font-semibold">Terms of Service</h1></main>;
 }

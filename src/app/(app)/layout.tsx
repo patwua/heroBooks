@@ -1,21 +1,19 @@
-import type { ReactNode } from "react";
-import { Sidebar } from "@/components/Sidebar";
-import { Topbar } from "@/components/Topbar";
+import Sidebar from "@/src/components/Sidebar";
+import Topbar from "@/src/components/Topbar";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/authOptions";
+import { authOptions } from "@/src/lib/authOptions";
 import { redirect } from "next/navigation";
 
-export default async function AppLayout({ children }: { children: ReactNode }) {
+export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const session = await getServerSession(authOptions);
-  if (!session) {
-    redirect("/sign-in");
-  }
+  if (!session?.user) redirect("/sign-in");
+
   return (
-    <div className="flex h-screen">
+    <div className="min-h-screen flex">
       <Sidebar />
-      <div className="flex-1">
+      <div className="flex-1 flex flex-col">
         <Topbar />
-        <main className="p-4">{children}</main>
+        <div className="p-6">{children}</div>
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
-import type { ReactNode } from "react";
-import { cn } from "@/lib/utils";
-
-export function Card({ className, children }: { className?: string; children: ReactNode }) {
-  return <div className={cn("rounded border p-4", className)}>{children}</div>;
+import { cn } from "@/src/lib/utils";
+import React from "react";
+export function Card({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn("rounded-2xl bg-slate-900/60 border border-slate-800 p-5", className)} {...props} />;
 }
