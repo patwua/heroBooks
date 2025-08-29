@@ -1,68 +1,61 @@
 # heroBooks
 
+Next.js application for heroBooks accounting.
 
-## Stack Overview
-heroBooks uses Next.js, Prisma, and NextAuth with PostgreSQL.
+## Stack
+- Next.js
+- Prisma
+- NextAuth
+- Tailwind CSS
+- PostgreSQL
 
-## Local Development
-1. Copy env file:
+## Local Setup
+1. Copy example environment file:
    ```sh
    cp .env.example .env
    ```
 2. Install dependencies:
    ```sh
-   npm i
+   npm install
    ```
-3. Apply migrations:
+3. Apply database migrations:
    ```sh
    npx prisma migrate dev
    ```
-4. Start development server:
+4. Start the development server:
    ```sh
    npm run dev
    ```
 
 ## Environment Variables
-The following variables configure authentication:
-- `NEXTAUTH_SECRET` – required for session encryption.
-- `NEXTAUTH_URL` – base URL for NextAuth callbacks.
-- `GOOGLE_CLIENT_ID` – optional, enables Google SSO.
-- `GOOGLE_CLIENT_SECRET` – optional, enables Google SSO.
+- `DATABASE_URL` – PostgreSQL connection string
+- `NEXTAUTH_URL` – base URL for NextAuth callbacks
+- `NEXTAUTH_SECRET` – session encryption secret
+- `GOOGLE_CLIENT_ID` – optional, enables Google SSO
+- `GOOGLE_CLIENT_SECRET` – optional, enables Google SSO
 
-## Deployment on Render
-1. Create a new **Web Service** in Render and connect this repository.
-2. Set the environment variables from `.env`.
-3. Use Build Command `npm install && npx prisma migrate deploy`.
-4. Use Start Command `npm run start`.
+## Testing
+- Lint the project:
+  ```sh
+  npm run lint
+  ```
+- (No test suite yet) Once tests are added, run:
+  ```sh
+  npm test
+  ```
 
-## Next
+## Deployment
+1. Create a new Web Service on Render and connect this repository.
+2. Set environment variables from your `.env` file.
+3. Build command: `npm install && npx prisma migrate deploy`
+4. Start command: `npm run start`
+5. For manual deployment:
+   ```sh
+   npm run build
+   npm start
+   ```
+
+## Roadmap
 - Organization creation
 - VAT invoices
 - Public API
-
-Next.js application for heroBooks accounting.
-
-## Setup
-
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Copy `.env.example` to `.env` and set values for `DATABASE_URL`, `NEXTAUTH_URL`, and `NEXTAUTH_SECRET`.
-3. Initialize the database and generate Prisma client:
-   ```bash
-   npx prisma migrate dev
-   ```
-4. Run development server:
-   ```bash
-   npm run dev
-   ```
-
-## Deployment
-
-Build the application and start in production mode:
-```bash
-npm run build
-npm start
-```
-
