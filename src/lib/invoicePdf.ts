@@ -5,7 +5,12 @@ interface InvoiceLike {
   number: number;
   issueDate?: string | Date;
   customer?: { name: string; email?: string };
-  items: Array<{ description: string; quantity: number; unitPrice: number; lineTotal: number }>;
+  lines: Array<{
+    description: string;
+    quantity: number;
+    unitPrice: number;
+    taxCode?: { rate: number };
+  }>;
 }
 
 export async function invoicePdf(invoice: InvoiceLike, logo?: Buffer) {
@@ -35,12 +40,14 @@ export async function invoicePdf(invoice: InvoiceLike, logo?: Buffer) {
     let subtotal = 0;
     let vatTotal = 0;
 
-    invoice.items.forEach((item) => {
+    invoice.lines.forEach((item) => {
       const line = item.quantity * item.unitPrice;
+      const vat = line * (item.taxCode?.rate || 0);
       subtotal += line;
-      vatTotal += item.lineTotal - line;
+      vatTotal += vat;
+      const lineTotal = line + vat;
       doc.text(
-        `${item.description} - ${item.quantity} x ${fmtMoney(item.unitPrice)} = ${fmtMoney(item.lineTotal)}`
+        `${item.description} - ${item.quantity} x ${fmtMoney(item.unitPrice)} = ${fmtMoney(lineTotal)}`
       );
     });
 

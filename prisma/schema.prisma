@@ -72,6 +72,8 @@ model OrgSettings {
   orgId     String  @id
   timezone  String? @default("UTC")
   currency  String? @default("USD")
+  apiKey    String? @unique
+  webhookUrl String?
   org       Org     @relation(fields: [orgId], references: [id])
 }
 

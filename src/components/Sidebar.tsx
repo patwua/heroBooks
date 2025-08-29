@@ -10,6 +10,8 @@ export function Sidebar() {
           <li><Link href="/sales">Sales (Create)</Link></li>
           <li><Link href="/sales/invoices">Invoices</Link></li>
           <li><Link href="/sales/payments">Payments</Link></li>
+          <li><Link href="/reports/ar-aging">Reports: A/R Aging</Link></li>
+          <li><Link href="/reports/vat">Reports: VAT</Link></li>
           <li><Link href="/vendors">Vendors</Link></li>
           <li><Link href="/settings">Settings</Link></li>
         </ul>

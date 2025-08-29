@@ -49,3 +49,32 @@ The app is now available at <http://localhost:3000>.
 - Public API
 - Dashboard widgets
 - Mobile-friendly UI
+
+## Public API (v1)
+
+Rotate an API key via `POST /api/admin/rotate-api-key` and configure a webhook URL with `POST /api/admin/set-webhook`.
+Authenticated requests include `Authorization: Bearer <apiKey>`.
+
+Available endpoints:
+
+- `GET /api/v1/tax-codes` – list tax codes
+- `POST /api/v1/customers` – create a customer
+- `POST /api/v1/invoices` – create an invoice
+- `POST /api/v1/payments` – record a payment
+
+### Webhooks
+
+If a webhook URL is configured, the app sends JSON payloads:
+
+```json
+{ "event": "invoice.created", "data": { /* invoice */ } }
+{ "event": "payment.created", "data": { /* payment */ } }
+```
+
+### Running the project
+
+```bash
+npm install
+npx prisma migrate dev
+npm run dev
+```
