@@ -7,6 +7,7 @@ const links = [
   { href: "/app/sales", label: "Sales" },
   { href: "/app/vendors", label: "Vendors" },
   { href: "/app/settings", label: "Settings" },
+  { href: "/app/admin/inbox", label: "Admin: Inbox" },
 ];
 
 export default function Sidebar() {

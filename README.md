@@ -33,3 +33,9 @@ Sign-up/sign-in (email/password + optional Google)
 Protected /app/* with a clean, modern shell
 
 Brand assets in place (logo + favicon)
+
+## Inbound email
+- Create `InboundMailbox` entries mapping an email address to an org. Example: `bills@herobooks.net` -> some org ID.
+- Cron or manual trigger: `POST /api/admin/email-ingest/run` with header `x-ingest-secret: <EMAIL_INGEST_SECRET>` connects via IMAP and processes unseen messages.
+- Webhook: `POST /api/email/inbound` with the same `x-ingest-secret` and JSON payload `{from,to,subject,text,attachments:[{filename,contentType,contentBase64}]}`.
+- Both paths parse PDF attachments, create draft bills, and log results in `EmailIngestLog`.
