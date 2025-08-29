@@ -90,3 +90,24 @@ model VerificationToken {
   expires    DateTime
   @@id([identifier, token])
 }
+
+model InboundMailbox {
+  id       String   @id @default(cuid())
+  email    String   @unique
+  orgId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  logs     EmailIngestLog[]
+}
+
+model EmailIngestLog {
+  id        String   @id @default(cuid())
+  mailboxId String?
+  mailbox   InboundMailbox? @relation(fields: [mailboxId], references: [id])
+  vendor    String?
+  billId    String?
+  status    String
+  error     String?
+  createdAt DateTime @default(now())
+}
+
