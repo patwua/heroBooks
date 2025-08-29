@@ -5,6 +5,7 @@ const links = [
   { href: "/customers", label: "Customers" },
   { href: "/sales", label: "Sales (Create)" },
   { href: "/sales/invoices", label: "Invoices" },
+  { href: "/app/sales/estimates", label: "Sales: Estimates" },
   { href: "/sales/payments", label: "Payments" },
   { href: "/reports/ar-aging", label: "Reports: A/R Aging" },
   { href: "/reports/vat", label: "Reports: VAT" },

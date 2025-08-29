@@ -65,6 +65,7 @@ model Org {
   taxCodes         TaxCode[]
   items            Item[]
   invoices         Invoice[]
+  estimates        Estimate[]
   vendors          Vendor[]
   bills            Bill[]
   bankTransactions BankTransaction[]
@@ -97,6 +98,7 @@ model Customer {
   email    String?
   org      Org       @relation(fields: [orgId], references: [id])
   invoices Invoice[]
+  estimates Estimate[]
 }
 
 model TaxCode {
@@ -107,6 +109,7 @@ model TaxCode {
   org       Org           @relation(fields: [orgId], references: [id])
   items     Item[]
   lines     InvoiceLine[]
+  estimateLines EstimateLine[]
   billLines BillLine[]
 }
 
@@ -147,6 +150,33 @@ model InvoiceLine {
   taxCodeId   String?
   invoice     Invoice  @relation(fields: [invoiceId], references: [id])
   item        Item?    @relation(fields: [itemId], references: [id])
+  taxCode     TaxCode? @relation(fields: [taxCodeId], references: [id])
+}
+
+model Estimate {
+  id         String   @id @default(cuid())
+  orgId      String
+  customerId String?
+  number     String   @unique
+  issueDate  DateTime @default(now())
+  expiryDate DateTime?
+  status     String   @default("draft")
+  subTotal   Decimal  @db.Decimal(10, 2)
+  vatTotal   Decimal  @db.Decimal(10, 2)
+  total      Decimal  @db.Decimal(10, 2)
+  org        Org      @relation(fields: [orgId], references: [id])
+  customer   Customer? @relation(fields: [customerId], references: [id])
+  lines      EstimateLine[]
+}
+
+model EstimateLine {
+  id          String   @id @default(cuid())
+  estimateId  String
+  description String?
+  quantity    Int      @default(1)
+  unitPrice   Decimal  @db.Decimal(10, 2)
+  taxCodeId   String?
+  estimate    Estimate @relation(fields: [estimateId], references: [id])
   taxCode     TaxCode? @relation(fields: [taxCodeId], references: [id])
 }
 
