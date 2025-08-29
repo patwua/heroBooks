@@ -30,6 +30,14 @@ export default function PaymentsPage() {
     setResult(data);
   }
 
+  async function emailReceipt(paymentId: string) {
+    await fetch("/api/email/send-receipt", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ paymentId })
+    });
+  }
+
   return (
     <div>
       <h1 className="text-xl mb-4">Record Payment</h1>
@@ -67,13 +75,21 @@ export default function PaymentsPage() {
           <p>Receipt: {result.receiptNumber}</p>
           <p>Status: {result.status}</p>
           {result.paymentId && (
-            <a
-              href={`/api/receipts/${result.paymentId}/pdf`}
-              target="_blank"
-              className="underline"
-            >
-              View Receipt PDF
-            </a>
+            <div className="flex gap-2">
+              <a
+                href={`/api/receipts/${result.paymentId}/pdf`}
+                target="_blank"
+                className="underline"
+              >
+                View Receipt PDF
+              </a>
+              <button
+                onClick={() => emailReceipt(result.paymentId)}
+                className="underline"
+              >
+                Email Receipt
+              </button>
+            </div>
           )}
         </div>
       )}

@@ -78,3 +78,27 @@ npm install
 npx prisma migrate dev
 npm run dev
 ```
+
+## Outbound Email + DKIM
+
+Configure SMTP credentials to enable transactional emails. The mailer uses the following environment variables:
+
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_SECURE`
+- `SMTP_USER`
+- `SMTP_PASS`
+- `EMAIL_FROM`
+
+For DKIM signing, also set:
+
+- `DKIM_DOMAIN`
+- `DKIM_SELECTOR`
+- `DKIM_PRIVATE_KEY`
+
+Publish a DNS TXT record at `<selector>._domainkey.<domain>` containing the public key that matches `DKIM_PRIVATE_KEY`.
+
+Available endpoints:
+
+- `POST /api/email/send-invoice` – send an invoice email with PDF attachment
+- `POST /api/email/send-receipt` – send a receipt email with PDF attachment
