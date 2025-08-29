@@ -16,6 +16,7 @@ model User {
   accounts      Account[]
   sessions      Session[]
   orgs          UserOrg[]
+
 }
 
 model Account {
