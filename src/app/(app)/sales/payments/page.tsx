@@ -66,6 +66,15 @@ export default function PaymentsPage() {
         <div className="mt-4">
           <p>Receipt: {result.receiptNumber}</p>
           <p>Status: {result.status}</p>
+          {result.paymentId && (
+            <a
+              href={`/api/receipts/${result.paymentId}/pdf`}
+              target="_blank"
+              className="underline"
+            >
+              View Receipt PDF
+            </a>
+          )}
         </div>
       )}
     </div>

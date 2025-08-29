@@ -7,3 +7,11 @@ export async function receiptNumber() {
   });
   return (last?.receiptNumber ?? 0) + 1;
 }
+
+export async function invoiceNumber() {
+  const last = await prisma.invoice.findFirst({
+    orderBy: { number: "desc" },
+    select: { number: true }
+  });
+  return (last?.number ?? 0) + 1;
+}

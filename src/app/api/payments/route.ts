@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/authOptions";
 import { prisma } from "@/lib/prisma";
 import { receiptNumber } from "@/lib/numbering";
+import { notifyWebhook } from "@/lib/webhooks";
 import { Prisma } from "@prisma/client";
 import { z } from "zod";
 
@@ -31,7 +32,7 @@ export async function POST(req: Request) {
   }
 
   const number = await receiptNumber();
-  await prisma.payment.create({
+  const payment = await prisma.payment.create({
     data: {
       invoiceId,
       amount: new Prisma.Decimal(amount),
@@ -40,10 +41,7 @@ export async function POST(req: Request) {
     }
   });
 
-  await prisma.invoice.update({
-    where: { id: invoiceId },
-    data: { status: "paid" }
-  });
-
-  return NextResponse.json({ receiptNumber: number, status: "paid" });
+  await prisma.invoice.update({ where: { id: invoiceId }, data: { status: "paid" } });
+  await notifyWebhook(invoice.orgId, "payment.created", payment);
+  return NextResponse.json({ paymentId: payment.id, receiptNumber: number, status: "paid" });
 }
