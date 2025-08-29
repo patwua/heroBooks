@@ -15,6 +15,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  organizations Organization[]
 }
 
 model Account {
@@ -50,4 +51,59 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model Organization {
+  id       String   @id @default(cuid())
+  name     String
+  ownerId  String
+  owner    User     @relation(fields: [ownerId], references: [id])
+  customers Customer[]
+  invoices  Invoice[]
+  vatCodes  VatCode[]
+}
+
+model Customer {
+  id             String   @id @default(cuid())
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  name           String
+  email          String?
+  createdAt      DateTime @default(now())
+  invoices       Invoice[]
+}
+
+model VatCode {
+  id             String   @id @default(cuid())
+  organizationId String?
+  organization   Organization? @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  code           String
+  name           String
+  rate           Float
+  items          InvoiceItem[]
+
+  @@unique([organizationId, code])
+}
+
+model Invoice {
+  id             String   @id @default(cuid())
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  customerId     String
+  customer       Customer @relation(fields: [customerId], references: [id])
+  createdAt      DateTime @default(now())
+  total          Float
+  items          InvoiceItem[]
+}
+
+model InvoiceItem {
+  id          String  @id @default(cuid())
+  invoiceId   String
+  invoice     Invoice @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  description String
+  quantity    Int
+  unitPrice   Float
+  vatCodeId   String?
+  vatCode     VatCode? @relation(fields: [vatCodeId], references: [id])
+  lineTotal   Float
 }
