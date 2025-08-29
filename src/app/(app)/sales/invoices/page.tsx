@@ -17,6 +17,7 @@ export default async function InvoicesPage() {
             <th>Date</th>
             <th>Total</th>
             <th>Status</th>
+            <th>Email</th>
             <th></th>
           </tr>
         </thead>
@@ -27,6 +28,14 @@ export default async function InvoicesPage() {
               <td>{fmtDate(inv.issueDate)}</td>
               <td>{fmtMoney(inv.total)}</td>
               <td>{inv.status}</td>
+              <td>
+                <form action="/api/email/send-invoice" method="POST">
+                  <input type="hidden" name="invoiceId" value={inv.id} />
+                  <button type="submit" className="underline">
+                    Send
+                  </button>
+                </form>
+              </td>
               <td>
                 <Link href={`/api/invoices/${inv.id}/pdf`} target="_blank">
                   View PDF
