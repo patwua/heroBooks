@@ -1,7 +1,19 @@
-datasource db { provider = "postgresql"; url = env("DATABASE_URL") }
-generator client { provider = "prisma-client-js" }
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
 
-enum Role { OWNER ADMIN ACCOUNTANT AGENT VIEWER }
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  OWNER
+  ADMIN
+  ACCOUNTANT
+  AGENT
+  VIEWER
+}
 
 model User {
   id             String   @id @default(cuid())
@@ -28,10 +40,11 @@ model Org {
 }
 
 model OrgSettings {
-  id        String  @id @default(cuid())
-  orgId     String  @unique
-  org       Org     @relation(fields: [orgId], references: [id])
-  brandHex  String? // primary color for theming
+  id                  String  @id @default(cuid())
+  orgId               String  @unique
+  org                 Org     @relation(fields: [orgId], references: [id])
+  brandHex            String? // primary color for theming
+  allowNegativeStock  Boolean @default(false)
 }
 
 model UserOrg {
@@ -44,7 +57,7 @@ model UserOrg {
   @@unique([userId, orgId])
 }
 
-/* NextAuth adapter models */
+// NextAuth adapter models
 model Account {
   id                String  @id @default(cuid())
   userId            String
