@@ -1,31 +1,27 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const links = [
-  { href: "/dashboard", label: "Dashboard" },
-  { href: "/customers", label: "Customers" },
-  { href: "/sales", label: "Sales (Create)" },
-  { href: "/sales/invoices", label: "Invoices" },
-  { href: "/app/sales/estimates", label: "Sales: Estimates" },
-  { href: "/sales/payments", label: "Payments" },
-  { href: "/reports/ar-aging", label: "Reports: A/R Aging" },
-  { href: "/reports/vat", label: "Reports: VAT" },
-  { href: "/app/purchases/bills", label: "Purchases: Bills" },
-  { href: "/vendors", label: "Vendors" },
-  { href: "/settings", label: "Settings" },
-  { href: "/app/bank", label: "Bank Reconciliation" }
+  { href: "/app/dashboard", label: "Dashboard" },
+  { href: "/app/customers", label: "Customers" },
+  { href: "/app/sales", label: "Sales" },
+  { href: "/app/vendors", label: "Vendors" },
+  { href: "/app/settings", label: "Settings" },
 ];
 
-export function Sidebar() {
+export default function Sidebar() {
   return (
-    <aside className="w-64 bg-gray-100 p-4">
-      <nav>
-        <ul className="space-y-2">
-          {links.map((link) => (
-            <li key={link.href}>
-              <Link href={link.href}>{link.label}</Link>
-            </li>
-          ))}
-        </ul>
+    <aside className="h-full w-64 shrink-0 border-r border-slate-800 bg-slate-950/40 backdrop-blur">
+      <div className="flex items-center gap-3 px-4 py-4">
+        <Image src="/logo.svg" alt="heroBooks" width={28} height={28} />
+        <span className="font-semibold">heroBooks</span>
+      </div>
+      <nav className="px-2 py-2 space-y-1">
+        {links.map(l => (
+          <Link key={l.href} href={l.href} className="block rounded-xl px-3 py-2 text-sm text-slate-300 hover:bg-slate-800/60">
+            {l.label}
+          </Link>
+        ))}
       </nav>
     </aside>
   );

@@ -1,18 +1,32 @@
 import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/src/components/ui/button";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <section className="p-8">
-      <h1 className="text-2xl font-bold">Welcome to heroBooks</h1>
-      <p className="mt-2">Simple accounting for growing businesses.</p>
-      <div className="mt-4 space-x-2">
-        <Link href="/sign-up" className="rounded bg-blue-600 px-4 py-2 text-white">
-          Get Started
-        </Link>
-        <Link href="/pricing" className="rounded border px-4 py-2">
-          View Pricing
-        </Link>
+    <main className="min-h-screen bg-gradient-to-b from-slate-950 to-slate-900">
+      <div className="mx-auto max-w-5xl px-6 py-20">
+        <div className="flex items-center gap-3">
+          <Image src="/logo.svg" width={40} height={40} alt="heroBooks"/>
+          <h1 className="text-3xl font-semibold">heroBooks</h1>
+        </div>
+        <p className="mt-6 max-w-2xl text-slate-300">
+          Modern, multi-tenant accounting tailored for Guyana: VAT-ready invoices, clean reports,
+          and an API to plug into your dealer system.
+        </p>
+        <div className="mt-8 flex gap-3">
+          <Link href="/sign-up"><Button>Get started</Button></Link>
+          <Link href="/pricing"><Button variant="outline">Pricing</Button></Link>
+        </div>
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
+          {["VAT-ready invoicing", "Double-entry ledger", "Clean API"].map((t) => (
+            <div key={t} className="rounded-2xl border border-slate-800 p-6 bg-slate-900/40">
+              <h3 className="font-medium">{t}</h3>
+              <p className="mt-2 text-sm text-slate-400">Built for compliance and speed.</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </section>
+    </main>
   );
 }
