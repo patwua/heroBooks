@@ -15,7 +15,8 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  organizations Organization[]
+  orgs          UserOrg[]
+
 }
 
 model Account {
@@ -53,57 +54,99 @@ model VerificationToken {
   @@unique([identifier, token])
 }
 
-model Organization {
-  id       String   @id @default(cuid())
-  name     String
-  ownerId  String
-  owner    User     @relation(fields: [ownerId], references: [id])
-  customers Customer[]
-  invoices  Invoice[]
-  vatCodes  VatCode[]
+model Org {
+  id         String       @id @default(cuid())
+  name       String
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
+  settings   OrgSettings?
+  users      UserOrg[]
+  customers  Customer[]
+  taxCodes   TaxCode[]
+  items      Item[]
+  invoices   Invoice[]
+}
+
+model OrgSettings {
+  orgId     String  @id
+  timezone  String? @default("UTC")
+  currency  String? @default("USD")
+  org       Org     @relation(fields: [orgId], references: [id])
+}
+
+model UserOrg {
+  id     String @id @default(cuid())
+  userId String
+  orgId  String
+  role   String @default("member")
+  user   User   @relation(fields: [userId], references: [id])
+  org    Org    @relation(fields: [orgId], references: [id])
+
+  @@unique([userId, orgId])
 }
 
 model Customer {
-  id             String   @id @default(cuid())
-  organizationId String
-  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
-  name           String
-  email          String?
-  createdAt      DateTime @default(now())
-  invoices       Invoice[]
+  id      String   @id @default(cuid())
+  orgId   String
+  name    String
+  email   String?
+  org     Org      @relation(fields: [orgId], references: [id])
+  invoices Invoice[]
 }
 
-model VatCode {
-  id             String   @id @default(cuid())
-  organizationId String?
-  organization   Organization? @relation(fields: [organizationId], references: [id], onDelete: Cascade)
-  code           String
-  name           String
-  rate           Float
-  items          InvoiceItem[]
+model TaxCode {
+  id     String    @id @default(cuid())
+  orgId  String
+  name   String
+  rate   Float
+  org    Org       @relation(fields: [orgId], references: [id])
+  items  Item[]
+  lines  InvoiceLine[]
+}
 
-  @@unique([organizationId, code])
+model Item {
+  id          String    @id @default(cuid())
+  orgId       String
+  name        String
+  description String?
+  price       Decimal   @db.Decimal(10, 2)
+  org         Org       @relation(fields: [orgId], references: [id])
+  taxCodeId   String?
+  taxCode     TaxCode?  @relation(fields: [taxCodeId], references: [id])
+  lines       InvoiceLine[]
 }
 
 model Invoice {
-  id             String   @id @default(cuid())
-  organizationId String
-  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
-  customerId     String
-  customer       Customer @relation(fields: [customerId], references: [id])
-  createdAt      DateTime @default(now())
-  total          Float
-  items          InvoiceItem[]
+  id         String        @id @default(cuid())
+  orgId      String
+  customerId String?
+  number     Int           @default(1)
+  issueDate  DateTime      @default(now())
+  dueDate    DateTime?
+  status     String        @default("draft")
+  org        Org           @relation(fields: [orgId], references: [id])
+  customer   Customer?     @relation(fields: [customerId], references: [id])
+  lines      InvoiceLine[]
+  payments   Payment[]
 }
 
-model InvoiceItem {
-  id          String  @id @default(cuid())
+model InvoiceLine {
+  id          String   @id @default(cuid())
   invoiceId   String
-  invoice     Invoice @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
-  description String
-  quantity    Int
-  unitPrice   Float
-  vatCodeId   String?
-  vatCode     VatCode? @relation(fields: [vatCodeId], references: [id])
-  lineTotal   Float
+  itemId      String?
+  description String?
+  quantity    Int      @default(1)
+  unitPrice   Decimal  @db.Decimal(10, 2)
+  taxCodeId   String?
+  invoice     Invoice  @relation(fields: [invoiceId], references: [id])
+  item        Item?    @relation(fields: [itemId], references: [id])
+  taxCode     TaxCode? @relation(fields: [taxCodeId], references: [id])
+}
+
+model Payment {
+  id        String   @id @default(cuid())
+  invoiceId String
+  amount    Decimal  @db.Decimal(10, 2)
+  date      DateTime @default(now())
+  invoice   Invoice  @relation(fields: [invoiceId], references: [id])
 }
