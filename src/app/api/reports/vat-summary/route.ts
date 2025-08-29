@@ -11,16 +11,26 @@ export async function GET() {
     select: { orgId: true }
   });
   if (!userOrg) return new NextResponse("No organization", { status: 400 });
-  const lines = await prisma.invoiceLine.findMany({
+  const invoiceLines = await prisma.invoiceLine.findMany({
     where: { invoice: { orgId: userOrg.orgId } },
     include: { taxCode: true }
   });
-  const summary: Record<string, number> = {};
-  for (const line of lines) {
+  const billLines = await prisma.billLine.findMany({
+    where: { bill: { orgId: userOrg.orgId } },
+    include: { taxCode: true }
+  });
+  let outputVat = 0;
+  for (const line of invoiceLines) {
     if (!line.taxCode) continue;
     const base = Number(line.unitPrice) * line.quantity;
-    const vat = base * line.taxCode.rate;
-    summary[line.taxCode.name] = (summary[line.taxCode.name] || 0) + vat;
+    outputVat += base * line.taxCode.rate;
   }
-  return NextResponse.json(summary);
+  let inputVat = 0;
+  for (const line of billLines) {
+    if (!line.taxCode) continue;
+    const base = Number(line.unitCost) * line.quantity;
+    inputVat += base * line.taxCode.rate;
+  }
+  const netVat = outputVat - inputVat;
+  return NextResponse.json({ outputVat, inputVat, netVat });
 }
