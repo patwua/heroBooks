@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: heroBooks
+    runtime: node
+    buildCommand: pnpm install && pnpm dlx prisma generate && pnpm build
+    startCommand: pnpm dlx prisma migrate deploy && pnpm start

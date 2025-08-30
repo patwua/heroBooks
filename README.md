@@ -6,15 +6,15 @@ Auth: NextAuth (Google + Credentials) • Prisma • Postgres
 
 ## Local
 1) `cp .env.example .env` and set DATABASE_URL, NEXTAUTH_SECRET
-2) `npm i`
-3) `npx prisma migrate dev --name init`
-4) `npm run dev`
+2) `pnpm install`
+3) `pnpm prisma migrate dev --name init`
+4) `pnpm dev`
 
 ## Render
 - Create **Postgres**; copy internal connection string -> `DATABASE_URL`
 - Create **Web Service** from GitHub
-  - Build: `npm run build`
-  - Start: `npm start`
+  - Build: `pnpm install && pnpm dlx prisma generate && pnpm build`
+  - Start: `pnpm dlx prisma migrate deploy && pnpm start`
   - Add envs from `.env.example`
 - Point **herobooks.net** DNS to the service; enable HTTPS
 
