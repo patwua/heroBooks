@@ -6,15 +6,15 @@ Auth: NextAuth (Google + Credentials) • Prisma • Postgres
 
 ## Local
 1) `cp .env.example .env` and set DATABASE_URL, NEXTAUTH_SECRET
-2) `npm i`
-3) `npx prisma migrate dev --name init`
-4) `npm run dev`
+2) `pnpm install`
+3) `pnpm prisma:generate && pnpm prisma migrate dev --name init`
+4) `pnpm dev`
 
 ## Render
 - Create **Postgres**; copy internal connection string -> `DATABASE_URL`
 - Create **Web Service** from GitHub
-  - Build: `npm run build`
-  - Start: `npm start`
+  - Build: `pnpm install && pnpm dlx prisma generate && pnpm build`
+  - Start: `pnpm dlx prisma migrate deploy && pnpm start`
   - Add envs from `.env.example`
 - Point **herobooks.net** DNS to the service; enable HTTPS
 
@@ -34,8 +34,3 @@ Protected /app/* with a clean, modern shell
 
 Brand assets in place (logo + favicon)
 
-## Inbound email
-- Create `InboundMailbox` entries mapping an email address to an org. Example: `bills@herobooks.net` -> some org ID.
-- Cron or manual trigger: `POST /api/admin/email-ingest/run` with header `x-ingest-secret: <EMAIL_INGEST_SECRET>` connects via IMAP and processes unseen messages.
-- Webhook: `POST /api/email/inbound` with the same `x-ingest-secret` and JSON payload `{from,to,subject,text,attachments:[{filename,contentType,contentBase64}]}`.
-- Both paths parse PDF attachments, create draft bills, and log results in `EmailIngestLog`.

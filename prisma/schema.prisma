@@ -16,44 +16,45 @@ enum Role {
 }
 
 model User {
-  id             String   @id @default(cuid())
-  name           String?
-  email          String?  @unique
-  emailVerified  DateTime?
-  image          String?
-  passwordHash   String?
-  accounts       Account[]
-  sessions       Session[]
-  memberships    UserOrg[]
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  passwordHash  String?
+  accounts      Account[]
+  sessions      Session[]
+  memberships   UserOrg[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
 }
 
 model Org {
-  id         String    @id @default(cuid())
-  name       String
-  country    String    @default("GY")
-  settings   OrgSettings?
-  members    UserOrg[]
-  createdAt  DateTime  @default(now())
-  updatedAt  DateTime  @updatedAt
+  id        String       @id @default(cuid())
+  name      String
+  country   String       @default("GY")
+  settings  OrgSettings?
+  members   UserOrg[]
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
 }
 
 model OrgSettings {
-  id                  String  @id @default(cuid())
-  orgId               String  @unique
-  org                 Org     @relation(fields: [orgId], references: [id])
-  brandHex            String? // primary color for theming
-  allowNegativeStock  Boolean @default(false)
+  id                 String  @id @default(cuid())
+  orgId              String  @unique
+  org                Org     @relation(fields: [orgId], references: [id])
+  brandHex           String? // primary color for theming
+  allowNegativeStock Boolean @default(false)
 }
 
 model UserOrg {
-  id        String  @id @default(cuid())
-  userId    String
-  orgId     String
-  role      Role
-  user      User    @relation(fields: [userId], references: [id])
-  org       Org     @relation(fields: [orgId], references: [id])
+  id     String @id @default(cuid())
+  userId String
+  orgId  String
+  role   Role
+  user   User   @relation(fields: [userId], references: [id])
+  org    Org    @relation(fields: [orgId], references: [id])
+
   @@unique([userId, orgId])
 }
 
@@ -88,26 +89,26 @@ model VerificationToken {
   identifier String
   token      String   @unique
   expires    DateTime
+
   @@id([identifier, token])
 }
 
 model InboundMailbox {
-  id       String   @id @default(cuid())
-  email    String   @unique
-  orgId    String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  logs     EmailIngestLog[]
+  id        String           @id @default(cuid())
+  email     String           @unique
+  orgId     String
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+  logs      EmailIngestLog[]
 }
 
 model EmailIngestLog {
-  id        String   @id @default(cuid())
+  id        String          @id @default(cuid())
   mailboxId String?
   mailbox   InboundMailbox? @relation(fields: [mailboxId], references: [id])
   vendor    String?
   billId    String?
   status    String
   error     String?
-  createdAt DateTime @default(now())
+  createdAt DateTime        @default(now())
 }
-
