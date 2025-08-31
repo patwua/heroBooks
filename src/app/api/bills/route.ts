@@ -48,16 +48,40 @@ export async function POST(req: Request) {
   if (!userOrg) return new NextResponse("No organization", { status: 400 });
   const body = await req.json();
   const { vendorId, lines, whtRate }: { vendorId: string; lines: BillLineInput[]; whtRate?: number } = body;
-  const formattedLines = lines.map((l) => ({
-    description: l.description,
-    quantity: l.quantity,
-    unitCost: new Prisma.Decimal(l.unitCost),
-    taxCodeId: l.taxCodeId
-  }));
+
+  const vendor = await prisma.vendor.findFirst({
+    where: { id: vendorId, orgId: userOrg.orgId },
+    select: { id: true }
+  });
+  if (!vendor) {
+    return new NextResponse("Invalid vendor", { status: 400 });
+  }
+
+  const formattedLines: any[] = [];
+  for (const l of lines) {
+    let taxCodeId: string | undefined = undefined;
+    if (l.taxCodeId) {
+      const tc = await prisma.taxCode.findFirst({
+        where: { id: l.taxCodeId, orgId: userOrg.orgId },
+        select: { id: true }
+      });
+      if (!tc) {
+        return new NextResponse("Invalid tax code", { status: 400 });
+      }
+      taxCodeId = tc.id;
+    }
+    formattedLines.push({
+      description: l.description,
+      quantity: l.quantity,
+      unitCost: new Prisma.Decimal(l.unitCost),
+      taxCodeId
+    });
+  }
+
   const bill = await prisma.bill.create({
     data: {
       orgId: userOrg.orgId,
-      vendorId,
+      vendorId: vendor.id,
       wht: whtRate ? new Prisma.Decimal(whtRate) : undefined,
       lines: { create: formattedLines }
     },

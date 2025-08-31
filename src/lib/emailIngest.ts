@@ -83,14 +83,16 @@ export async function runImapIngestion() {
       contentType: a.contentType,
       contentBase64: (a.content as Buffer).toString('base64'),
     }));
-    const to = parsed.to?.value?.[0]?.address || '';
-    await ingestParsedMessage({
-      from: parsed.from?.text,
-      to,
-      subject: parsed.subject,
-      text: parsed.text,
-      attachments,
-    });
+    for (const addr of parsed.to?.value || []) {
+      const to = addr.address || '';
+      await ingestParsedMessage({
+        from: parsed.from?.text,
+        to,
+        subject: parsed.subject,
+        text: parsed.text,
+        attachments,
+      });
+    }
     await client.messageFlagsAdd(seq, ['\\Seen']);
   }
   await client.logout();

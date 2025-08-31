@@ -28,6 +28,9 @@ export async function POST(
   if (!estimate) {
     return new NextResponse("Not found", { status: 404 });
   }
+  if (estimate.status === "converted") {
+    return new NextResponse("Already converted", { status: 400 });
+  }
 
   const number = await invoiceNumber();
 
