@@ -1,7 +1,7 @@
-import Sidebar from "@/src/components/Sidebar";
-import Topbar from "@/src/components/Topbar";
+import Sidebar from "@/components/Sidebar";
+import Topbar from "@/components/Topbar";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/src/lib/authOptions";
+import { authOptions } from "@/lib/authOptions";
 import { redirect } from "next/navigation";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
