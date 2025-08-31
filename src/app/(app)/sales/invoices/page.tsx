@@ -2,9 +2,7 @@ import Link from "next/link";
 import { fmtMoney, fmtDate } from "@/lib/format";
 
 export default async function InvoicesPage() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/invoices`, {
-    cache: "no-store"
-  });
+  const res = await fetch("/api/invoices", { cache: "no-store" });
   const invoices = await res.json();
 
   return (
