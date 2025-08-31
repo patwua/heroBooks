@@ -10,14 +10,14 @@ export async function POST() {
     return new NextResponse("Unauthorized", { status: 401 });
   }
 
-  const existing = await prisma.organization.findFirst({
+  const existing = await prisma.org.findFirst({
     where: { ownerId: session.user.id }
   });
   if (existing) {
     return NextResponse.json(existing);
   }
 
-  const org = await prisma.organization.create({
+  const org = await prisma.org.create({
     data: {
       name: "Demo Org",
       ownerId: session.user.id,
