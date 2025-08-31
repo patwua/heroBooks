@@ -49,7 +49,10 @@ export async function POST() {
     });
     const tAmount = parseFloat(t.amount.toString());
     const invoice = invoices.find((inv) => {
-      const total = inv.lines.reduce((s, l) => s + parseFloat(l.unitPrice.toString()) * l.quantity, 0);
+      const total = inv.lines.reduce(
+        (s, l) => s + parseFloat(l.unitPrice.toString()) * l.quantity,
+        0
+      );
       return Math.abs(total - tAmount) < 0.01;
     });
     if (invoice) {
@@ -66,8 +69,11 @@ export async function POST() {
       include: { lines: true }
     });
     const bill = bills.find((b) => {
-      const total = b.lines.reduce((s, l) => s + parseFloat(l.unitCost.toString()) * l.quantity, 0);
-      return Math.abs(total - tAmount) < 0.01;
+      const total = b.lines.reduce(
+        (s, l) => s + parseFloat(l.unitCost.toString()) * l.quantity,
+        0
+      );
+      return Math.abs(total - Math.abs(tAmount)) < 0.01;
     });
     if (bill) {
       await prisma.bankTransaction.update({
