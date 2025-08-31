@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export default function BankPage() {
   const [file, setFile] = useState<File | null>(null);
@@ -51,9 +53,9 @@ export default function BankPage() {
     <div>
       <h1 className="text-xl mb-4">Bank Reconciliation</h1>
       <div className="space-x-2">
-        <input type="file" accept=".csv" onChange={(e) => setFile(e.target.files?.[0] || null)} />
-        <button onClick={upload} className="px-2 py-1 border">Upload CSV</button>
-        <button onClick={reconcile} className="px-2 py-1 border">Reconcile</button>
+        <Input type="file" accept=".csv" onChange={(e) => setFile(e.target.files?.[0] || null)} className="w-auto" />
+        <Button onClick={upload} variant="outline">Upload CSV</Button>
+        <Button onClick={reconcile} variant="outline">Reconcile</Button>
       </div>
       {status && <p className="mt-2">{status}</p>}
       <table className="mt-4 w-full">
