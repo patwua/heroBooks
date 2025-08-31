@@ -13,9 +13,16 @@ export async function POST(req: Request) {
   if (!session) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
+  const userOrg = await prisma.userOrg.findFirst({
+    where: { userId: session.user.id },
+    select: { orgId: true }
+  });
+  if (!userOrg) {
+    return new NextResponse("No organization", { status: 400 });
+  }
   const { paymentId } = await req.json();
-  const payment = await prisma.payment.findUnique({
-    where: { id: paymentId },
+  const payment = await prisma.payment.findFirst({
+    where: { id: paymentId, invoice: { orgId: userOrg.orgId } },
     include: { invoice: { include: { customer: true } } }
   });
   if (!payment || !payment.invoice?.customer?.email) {
