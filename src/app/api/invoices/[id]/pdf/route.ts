@@ -15,8 +15,16 @@ export async function GET(
     return new NextResponse("Unauthorized", { status: 401 });
   }
 
-  const invoice = await prisma.invoice.findUnique({
-    where: { id: params.id },
+  const userOrg = await prisma.userOrg.findFirst({
+    where: { userId: session.user.id },
+    select: { orgId: true }
+  });
+  if (!userOrg) {
+    return new NextResponse("No organization", { status: 400 });
+  }
+
+  const invoice = await prisma.invoice.findFirst({
+    where: { id: params.id, orgId: userOrg.orgId },
     include: { customer: true, lines: { include: { taxCode: true } } }
   });
   if (!invoice) {

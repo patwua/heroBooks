@@ -12,6 +12,14 @@ export async function POST(req: Request) {
   if (!org) return new NextResponse("Unauthorized", { status: 401 });
   const body = await req.json();
   const { customerId, items } = body;
+
+  const customer = await prisma.customer.findFirst({
+    where: { id: customerId, orgId: org.id },
+    select: { id: true }
+  });
+  if (!customer) {
+    return new NextResponse("Invalid customer", { status: 400 });
+  }
   const number = await invoiceNumber();
   const lines: any[] = [];
   for (const item of items || []) {
@@ -25,7 +33,7 @@ export async function POST(req: Request) {
   const invoice = await prisma.invoice.create({
     data: {
       orgId: org.id,
-      customerId,
+      customerId: customer.id,
       number,
       lines: { create: lines }
     },
