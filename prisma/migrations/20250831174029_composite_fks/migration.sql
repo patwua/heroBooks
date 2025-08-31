@@ -28,6 +28,9 @@
 -- CreateEnum
 CREATE TYPE "Role" AS ENUM ('OWNER', 'ADMIN', 'ACCOUNTANT', 'AGENT', 'VIEWER');
 
+-- Ensure UUID generation extension is available
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+
 -- DropForeignKey
 ALTER TABLE "Account" DROP CONSTRAINT "Account_userId_fkey";
 
@@ -100,8 +103,13 @@ DROP COLUMN "currency",
 DROP COLUMN "timezone",
 ADD COLUMN     "allowNegativeStock" BOOLEAN NOT NULL DEFAULT false,
 ADD COLUMN     "brandHex" TEXT,
-ADD COLUMN     "id" TEXT NOT NULL,
-ADD CONSTRAINT "OrgSettings_pkey" PRIMARY KEY ("id");
+ADD COLUMN     "id" TEXT;
+
+UPDATE "OrgSettings" SET "id" = gen_random_uuid()::text;
+
+ALTER TABLE "OrgSettings" ALTER COLUMN "id" SET NOT NULL;
+
+ALTER TABLE "OrgSettings" ADD CONSTRAINT "OrgSettings_pkey" PRIMARY KEY ("id");
 
 -- AlterTable
 ALTER TABLE "Payment" ADD COLUMN     "orgId" TEXT NOT NULL;
@@ -109,11 +117,22 @@ ALTER TABLE "Payment" ADD COLUMN     "orgId" TEXT NOT NULL;
 -- AlterTable
 ALTER TABLE "User" ADD COLUMN     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 ADD COLUMN     "passwordHash" TEXT,
-ADD COLUMN     "updatedAt" TIMESTAMP(3) NOT NULL;
+ADD COLUMN     "updatedAt" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP;
+
+UPDATE "User" SET "updatedAt" = NOW() WHERE "updatedAt" IS NULL;
+
+ALTER TABLE "User" ALTER COLUMN "updatedAt" SET NOT NULL;
 
 -- AlterTable
-ALTER TABLE "UserOrg" DROP COLUMN "role",
-ADD COLUMN     "role" "Role" NOT NULL;
+ALTER TABLE "UserOrg" ADD COLUMN "role_new" "Role";
+
+UPDATE "UserOrg" SET "role_new" = "role"::"Role";
+
+ALTER TABLE "UserOrg" DROP COLUMN "role";
+
+ALTER TABLE "UserOrg" RENAME COLUMN "role_new" TO "role";
+
+ALTER TABLE "UserOrg" ALTER COLUMN "role" SET NOT NULL;
 
 -- AlterTable
 ALTER TABLE "VerificationToken" ADD CONSTRAINT "VerificationToken_pkey" PRIMARY KEY ("identifier", "token");
