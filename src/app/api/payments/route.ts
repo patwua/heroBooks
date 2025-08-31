@@ -19,6 +19,14 @@ export async function POST(req: Request) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
 
+  const userOrg = await prisma.userOrg.findFirst({
+    where: { userId: session.user.id },
+    select: { orgId: true }
+  });
+  if (!userOrg) {
+    return new NextResponse("No organization", { status: 400 });
+  }
+
   const body = await req.json();
   const parsed = PaymentSchema.safeParse(body);
   if (!parsed.success) {
@@ -26,7 +34,9 @@ export async function POST(req: Request) {
   }
 
   const { invoiceId, amount, method } = parsed.data;
-  const invoice = await prisma.invoice.findUnique({ where: { id: invoiceId } });
+  const invoice = await prisma.invoice.findFirst({
+    where: { id: invoiceId, orgId: userOrg.orgId }
+  });
   if (!invoice) {
     return new NextResponse("Invalid invoice", { status: 400 });
   }
