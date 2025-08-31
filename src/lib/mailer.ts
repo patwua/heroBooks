@@ -1,4 +1,4 @@
-import nodemailer, { SendMailOptions } from "nodemailer";
+import nodemailer from "nodemailer";
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
@@ -21,6 +21,6 @@ const transporter = nodemailer.createTransport({
     : {})
 });
 
-export function sendMail(opts: SendMailOptions) {
+export function sendMail(opts: Record<string, any>) {
   return transporter.sendMail({ from: process.env.EMAIL_FROM, ...opts });
 }

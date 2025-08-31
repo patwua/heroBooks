@@ -14,17 +14,18 @@ interface EstimateItemInput {
 
 export async function GET() {
   const session = await getServerSession(authOptions);
-  if (!session) {
+  const userId = session?.user?.id;
+  if (!userId) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
   const userOrg = await prisma.userOrg.findFirst({
-    where: { userId: session.user.id },
+    where: { userId },
     select: { orgId: true }
   });
   if (!userOrg) {
     return new NextResponse("No organization", { status: 400 });
   }
-  const estimates = await prisma.estimate.findMany({
+  const estimates = await (prisma as any).estimate.findMany({
     where: { orgId: userOrg.orgId }
   });
   return NextResponse.json(estimates);
@@ -32,11 +33,12 @@ export async function GET() {
 
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
-  if (!session) {
+  const userId = session?.user?.id;
+  if (!userId) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
   const userOrg = await prisma.userOrg.findFirst({
-    where: { userId: session.user.id },
+    where: { userId },
     select: { orgId: true }
   });
   if (!userOrg) {
@@ -70,7 +72,7 @@ export async function POST(req: Request) {
     taxCodeId: item.taxCodeId
   }));
 
-  const estimate = await prisma.estimate.create({
+  const estimate = await (prisma as any).estimate.create({
     data: {
       orgId: userOrg.orgId,
       customerId,
