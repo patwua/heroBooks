@@ -29,7 +29,7 @@
 CREATE TYPE "Role" AS ENUM ('OWNER', 'ADMIN', 'ACCOUNTANT', 'AGENT', 'VIEWER');
 
 -- Ensure UUID generation extension is available
-CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- DropForeignKey
 ALTER TABLE "Account" DROP CONSTRAINT "Account_userId_fkey";
@@ -42,15 +42,6 @@ ALTER TABLE "BankTransaction" DROP CONSTRAINT "BankTransaction_invoiceId_fkey";
 
 -- DropForeignKey
 ALTER TABLE "BankTransaction" DROP CONSTRAINT "BankTransaction_paymentId_fkey";
-
--- DropForeignKey
-ALTER TABLE "Bill" DROP CONSTRAINT "Bill_vendorId_fkey";
-
--- DropForeignKey
-ALTER TABLE "BillLine" DROP CONSTRAINT "BillLine_billId_fkey";
-
--- DropForeignKey
-ALTER TABLE "BillLine" DROP CONSTRAINT "BillLine_taxCodeId_fkey";
 
 -- DropForeignKey
 ALTER TABLE "Estimate" DROP CONSTRAINT "Estimate_customerId_fkey";
@@ -105,7 +96,7 @@ ADD COLUMN     "allowNegativeStock" BOOLEAN NOT NULL DEFAULT false,
 ADD COLUMN     "brandHex" TEXT,
 ADD COLUMN     "id" TEXT;
 
-UPDATE "OrgSettings" SET "id" = gen_random_uuid()::text;
+UPDATE "OrgSettings" SET "id" = uuid_generate_v4();
 
 ALTER TABLE "OrgSettings" ALTER COLUMN "id" SET NOT NULL;
 
@@ -117,16 +108,26 @@ ALTER TABLE "Payment" ADD COLUMN     "orgId" TEXT NOT NULL;
 -- AlterTable
 ALTER TABLE "User" ADD COLUMN     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 ADD COLUMN     "passwordHash" TEXT,
-ADD COLUMN     "updatedAt" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP;
+ADD COLUMN     "updatedAt" TIMESTAMP(3);
 
-UPDATE "User" SET "updatedAt" = NOW() WHERE "updatedAt" IS NULL;
+UPDATE "User" SET "updatedAt" = CURRENT_TIMESTAMP WHERE "updatedAt" IS NULL;
 
-ALTER TABLE "User" ALTER COLUMN "updatedAt" SET NOT NULL;
+ALTER TABLE "User"
+  ALTER COLUMN "updatedAt" SET NOT NULL,
+  ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
 
 -- AlterTable
 ALTER TABLE "UserOrg" ADD COLUMN "role_new" "Role";
 
-UPDATE "UserOrg" SET "role_new" = "role"::"Role";
+UPDATE "UserOrg" SET "role_new" = CASE LOWER("role")
+  WHEN 'owner' THEN 'OWNER'::"Role"
+  WHEN 'admin' THEN 'ADMIN'::"Role"
+  WHEN 'accountant' THEN 'ACCOUNTANT'::"Role"
+  WHEN 'agent' THEN 'AGENT'::"Role"
+  WHEN 'viewer' THEN 'VIEWER'::"Role"
+  WHEN 'member' THEN 'VIEWER'::"Role"
+  ELSE 'VIEWER'::"Role"
+END;
 
 ALTER TABLE "UserOrg" DROP COLUMN "role";
 
@@ -229,15 +230,6 @@ ALTER TABLE "InvoiceLine" ADD CONSTRAINT "InvoiceLine_taxCodeId_orgId_fkey" FORE
 
 -- AddForeignKey
 ALTER TABLE "Payment" ADD CONSTRAINT "Payment_invoiceId_orgId_fkey" FOREIGN KEY ("invoiceId", "orgId") REFERENCES "Invoice"("id", "orgId") ON DELETE RESTRICT ON UPDATE CASCADE;
-
--- AddForeignKey
-ALTER TABLE "Bill" ADD CONSTRAINT "Bill_vendorId_orgId_fkey" FOREIGN KEY ("vendorId", "orgId") REFERENCES "Vendor"("id", "orgId") ON DELETE RESTRICT ON UPDATE CASCADE;
-
--- AddForeignKey
-ALTER TABLE "BillLine" ADD CONSTRAINT "BillLine_billId_orgId_fkey" FOREIGN KEY ("billId", "orgId") REFERENCES "Bill"("id", "orgId") ON DELETE RESTRICT ON UPDATE CASCADE;
-
--- AddForeignKey
-ALTER TABLE "BillLine" ADD CONSTRAINT "BillLine_taxCodeId_orgId_fkey" FOREIGN KEY ("taxCodeId", "orgId") REFERENCES "TaxCode"("id", "orgId") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "Estimate" ADD CONSTRAINT "Estimate_customerId_orgId_fkey" FOREIGN KEY ("customerId", "orgId") REFERENCES "Customer"("id", "orgId") ON DELETE RESTRICT ON UPDATE CASCADE;
