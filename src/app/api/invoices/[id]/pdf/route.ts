@@ -19,7 +19,7 @@ export async function GET(
     where: { id: params.id },
     include: { customer: true, lines: { include: { taxCode: true } } }
   });
-  if (!invoice) {
+  if (!invoice || !invoice.customer) {
     return new NextResponse("Not found", { status: 404 });
   }
 
@@ -27,8 +27,8 @@ export async function GET(
   try {
     logo = fs.readFileSync(path.join(process.cwd(), "public", "logo.svg"));
   } catch {}
-  const pdf = await invoicePdf(invoice, logo);
-  return new NextResponse(pdf, {
+  const pdf = await invoicePdf(invoice as any, logo);
+  return new NextResponse(pdf as any, {
     headers: { "Content-Type": "application/pdf" }
   });
 }

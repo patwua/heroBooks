@@ -16,11 +16,12 @@ interface InvoiceItemInput {
 
 export async function GET() {
   const session = await getServerSession(authOptions);
-  if (!session) {
+  const userId = session?.user?.id;
+  if (!userId) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
   const userOrg = await prisma.userOrg.findFirst({
-    where: { userId: session.user.id },
+    where: { userId },
     select: { orgId: true }
   });
   if (!userOrg) {
@@ -46,11 +47,12 @@ export async function GET() {
 
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
-  if (!session) {
+  const userId = session?.user?.id;
+  if (!userId) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
   const userOrg = await prisma.userOrg.findFirst({
-    where: { userId: session.user.id },
+    where: { userId },
     select: { orgId: true }
   });
   if (!userOrg) {
@@ -63,18 +65,18 @@ export async function POST(req: Request) {
     where: { id: userOrg.orgId },
     include: { settings: true }
   });
-  const allowNegativeStock = org?.settings?.allowNegativeStock ?? false;
+  const allowNegativeStock = (org?.settings as any)?.allowNegativeStock ?? false;
 
   const number = await invoiceNumber();
   const lines: any[] = [];
   for (const item of items) {
     if (item.itemId) {
-      const dbItem = await prisma.item.findUnique({ where: { id: item.itemId } });
+      const dbItem: any = await (prisma as any).item.findUnique({ where: { id: item.itemId } });
       if (dbItem) {
         if (!allowNegativeStock && dbItem.qtyOnHand < item.quantity) {
           throw new Error("INSUFFICIENT_STOCK");
         }
-        await prisma.item.update({
+        await (prisma as any).item.update({
           where: { id: dbItem.id },
           data: { qtyOnHand: dbItem.qtyOnHand - item.quantity }
         });
