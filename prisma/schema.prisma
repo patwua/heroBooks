@@ -1,83 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-generator client {
-  provider = "prisma-client-js"
-}
-
-enum Role {
-  OWNER
-  ADMIN
-  ACCOUNTANT
-  AGENT
-  VIEWER
-}
-
 model User {
-  id            String    @id @default(cuid())
+  id            String   @id @default(cuid())
   name          String?
-  email         String?   @unique
+  email         String?  @unique
   emailVerified DateTime?
   image         String?
-  passwordHash  String?
+  password      String?
   accounts      Account[]
   sessions      Session[]
-  memberships   UserOrg[]
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  orgs          UserOrg[]
+
 }
 
-model Org {
-  id        String       @id @default(cuid())
-  name      String
-  country   String       @default("GY")
-  settings  OrgSettings?
-  members   UserOrg[]
-  customers Customer[]
-  taxCodes  TaxCode[]
-  items     Item[]
-  invoices  Invoice[]
-  estimates Estimate[]
-  createdAt DateTime     @default(now())
-  updatedAt DateTime     @updatedAt
-}
-
-model OrgSettings {
-  id                 String  @id @default(cuid())
-  orgId              String  @unique
-  org                Org     @relation(fields: [orgId], references: [id])
-  brandHex           String? // primary color for theming
-  allowNegativeStock Boolean @default(false)
-}
-
-model UserOrg {
-  id     String @id @default(cuid())
-  userId String
-  orgId  String
-  role   Role
-  user   User   @relation(fields: [userId], references: [id])
-  org    Org    @relation(fields: [orgId], references: [id])
-
-  @@unique([userId, orgId])
-}
-
-// NextAuth adapter models
 model Account {
-  id                String  @id @default(cuid())
+  id                String @id @default(cuid())
   userId            String
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String?
-  access_token      String?
+  refresh_token     String?  @db.Text
+  access_token      String?  @db.Text
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String?
+  id_token          String?  @db.Text
   session_state     String?
-  user              User    @relation(fields: [userId], references: [id])
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
 }
@@ -86,36 +43,51 @@ model Session {
   id           String   @id @default(cuid())
   sessionToken String   @unique
   userId       String
-  user         User     @relation(fields: [userId], references: [id])
   expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model VerificationToken {
   identifier String
-  token      String   @unique
+  token      String
   expires    DateTime
 
-  @@id([identifier, token])
+  @@unique([identifier, token])
 }
 
-model InboundMailbox {
-  id        String           @id @default(cuid())
-  email     String           @unique
-  orgId     String
-  createdAt DateTime         @default(now())
-  updatedAt DateTime         @updatedAt
-  logs      EmailIngestLog[]
+model Org {
+  id         String       @id @default(cuid())
+  name       String
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
+  settings   OrgSettings?
+  users      UserOrg[]
+  customers  Customer[]
+  taxCodes   TaxCode[]
+  items      Item[]
+  invoices   Invoice[]
+  vendors    Vendor[]
+  bills      Bill[]
 }
 
-model EmailIngestLog {
-  id        String          @id @default(cuid())
-  mailboxId String?
-  mailbox   InboundMailbox? @relation(fields: [mailboxId], references: [id])
-  vendor    String?
-  billId    String?
-  status    String
-  error     String?
-  createdAt DateTime        @default(now())
+model OrgSettings {
+  orgId     String  @id
+  timezone  String? @default("UTC")
+  currency  String? @default("USD")
+  apiKey    String? @unique
+  webhookUrl String?
+  org       Org     @relation(fields: [orgId], references: [id])
+}
+
+model UserOrg {
+  id     String @id @default(cuid())
+  userId String
+  orgId  String
+  role   String @default("member")
+  user   User   @relation(fields: [userId], references: [id])
+  org    Org    @relation(fields: [orgId], references: [id])
+
+  @@unique([userId, orgId])
 }
 
 model Customer {
@@ -125,7 +97,6 @@ model Customer {
   email   String?
   org     Org      @relation(fields: [orgId], references: [id])
   invoices Invoice[]
-  estimates Estimate[]
 }
 
 model TaxCode {
@@ -136,19 +107,18 @@ model TaxCode {
   org    Org       @relation(fields: [orgId], references: [id])
   items  Item[]
   lines  InvoiceLine[]
-  estimateLines EstimateLine[]
+  billLines BillLine[]
 }
 
 model Item {
-  id          String   @id @default(cuid())
+  id          String    @id @default(cuid())
   orgId       String
   name        String
   description String?
-  price       Decimal  @db.Decimal(10, 2)
-  qtyOnHand   Int      @default(0)
-  org         Org      @relation(fields: [orgId], references: [id])
+  price       Decimal   @db.Decimal(10, 2)
+  org         Org       @relation(fields: [orgId], references: [id])
   taxCodeId   String?
-  taxCode     TaxCode? @relation(fields: [taxCodeId], references: [id])
+  taxCode     TaxCode?  @relation(fields: [taxCodeId], references: [id])
   lines       InvoiceLine[]
 }
 
@@ -179,39 +149,43 @@ model InvoiceLine {
   taxCode     TaxCode? @relation(fields: [taxCodeId], references: [id])
 }
 
-model Estimate {
-  id         String   @id @default(cuid())
-  orgId      String
-  customerId String?
-  number     String   @unique
-  issueDate  DateTime @default(now())
-  expiryDate DateTime?
-  status     String   @default("draft")
-  subTotal   Decimal  @db.Decimal(10, 2)
-  vatTotal   Decimal  @db.Decimal(10, 2)
-  total      Decimal  @db.Decimal(10, 2)
-  org        Org      @relation(fields: [orgId], references: [id])
-  customer   Customer? @relation(fields: [customerId], references: [id])
-  lines      EstimateLine[]
+model Payment {
+  id        String   @id @default(cuid())
+  invoiceId String
+  amount    Decimal  @db.Decimal(10, 2)
+  date      DateTime @default(now())
+  method    String
+  receiptNumber Int
+  invoice   Invoice  @relation(fields: [invoiceId], references: [id])
 }
 
-model EstimateLine {
+model Vendor {
+  id     String @id @default(cuid())
+  orgId  String
+  name   String
+  org    Org    @relation(fields: [orgId], references: [id])
+  bills  Bill[]
+}
+
+model Bill {
+  id        String   @id @default(cuid())
+  orgId     String
+  vendorId  String
+  billDate  DateTime @default(now())
+  dueDate   DateTime?
+  wht       Decimal? @db.Decimal(10, 2)
+  org       Org      @relation(fields: [orgId], references: [id])
+  vendor    Vendor   @relation(fields: [vendorId], references: [id])
+  lines     BillLine[]
+}
+
+model BillLine {
   id          String   @id @default(cuid())
-  estimateId  String
+  billId      String
   description String?
   quantity    Int      @default(1)
-  unitPrice   Decimal  @db.Decimal(10, 2)
+  unitCost    Decimal  @db.Decimal(10, 2)
   taxCodeId   String?
-  estimate    Estimate @relation(fields: [estimateId], references: [id])
+  bill        Bill     @relation(fields: [billId], references: [id])
   taxCode     TaxCode? @relation(fields: [taxCodeId], references: [id])
-}
-
-model Payment {
-  id            String   @id @default(cuid())
-  invoiceId     String
-  amount        Decimal  @db.Decimal(10, 2)
-  date          DateTime @default(now())
-  method        String
-  receiptNumber Int
-  invoice       Invoice  @relation(fields: [invoiceId], references: [id])
 }
