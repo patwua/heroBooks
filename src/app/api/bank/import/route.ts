@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/authOptions";
 import { prisma } from "@/lib/prisma";
 import { Prisma } from "@prisma/client";
+import Papa from "papaparse";
 
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
@@ -28,10 +29,12 @@ export async function POST(req: Request) {
   }
 
   const text = await file.text();
-  const lines = text.trim().split(/\r?\n/).slice(1); // skip header
-  const data = lines
-    .map((line) => {
-      const [dateStr, amountStr, memo] = line.split(",");
+  const parsed = Papa.parse<string[]>(text, { skipEmptyLines: true });
+  const rows = parsed.data as string[][];
+  const data = rows
+    .slice(1) // skip header
+    .map((cols) => {
+      const [dateStr, amountStr, memo] = cols;
       if (!dateStr || !amountStr) return null;
       const amount = parseFloat(amountStr);
       if (isNaN(amount)) return null;
