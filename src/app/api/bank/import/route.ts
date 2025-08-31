@@ -36,7 +36,7 @@ export async function POST(req: Request) {
     .map((cols) => {
       const [dateStr, amountStr, memo] = cols;
       if (!dateStr || !amountStr) return null;
-      const amount = parseFloat(amountStr);
+      const amount = parseFloat(amountStr.replace(/,/g, ""));
       if (isNaN(amount)) return null;
       return {
         orgId: userOrg.orgId,
