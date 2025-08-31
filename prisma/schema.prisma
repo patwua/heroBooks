@@ -16,44 +16,53 @@ enum Role {
 }
 
 model User {
-  id             String   @id @default(cuid())
-  name           String?
-  email          String?  @unique
-  emailVerified  DateTime?
-  image          String?
-  passwordHash   String?
-  accounts       Account[]
-  sessions       Session[]
-  memberships    UserOrg[]
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  passwordHash  String?
+  accounts      Account[]
+  sessions      Session[]
+  memberships   UserOrg[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
 }
 
 model Org {
-  id         String    @id @default(cuid())
-  name       String
-  country    String    @default("GY")
-  settings   OrgSettings?
-  members    UserOrg[]
-  createdAt  DateTime  @default(now())
-  updatedAt  DateTime  @updatedAt
+  id               String            @id @default(cuid())
+  name             String
+  country          String            @default("GY")
+  settings         OrgSettings?
+  members          UserOrg[]
+  customers        Customer[]
+  taxCodes         TaxCode[]
+  items            Item[]
+  invoices         Invoice[]
+  vendors          Vendor[]
+  bills            Bill[]
+  estimates        Estimate[]
+  bankTransactions BankTransaction[]
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
 }
 
 model OrgSettings {
-  id                  String  @id @default(cuid())
-  orgId               String  @unique
-  org                 Org     @relation(fields: [orgId], references: [id])
-  brandHex            String? // primary color for theming
-  allowNegativeStock  Boolean @default(false)
+  id                 String  @id @default(cuid())
+  orgId              String  @unique
+  org                Org     @relation(fields: [orgId], references: [id])
+  brandHex           String? // primary color for theming
+  allowNegativeStock Boolean @default(false)
 }
 
 model UserOrg {
-  id        String  @id @default(cuid())
-  userId    String
-  orgId     String
-  role      Role
-  user      User    @relation(fields: [userId], references: [id])
-  org       Org     @relation(fields: [orgId], references: [id])
+  id     String @id @default(cuid())
+  userId String
+  orgId  String
+  role   Role
+  user   User   @relation(fields: [userId], references: [id])
+  org    Org    @relation(fields: [orgId], references: [id])
+
   @@unique([userId, orgId])
 }
 
@@ -88,26 +97,207 @@ model VerificationToken {
   identifier String
   token      String   @unique
   expires    DateTime
+
   @@id([identifier, token])
 }
 
 model InboundMailbox {
-  id       String   @id @default(cuid())
-  email    String   @unique
-  orgId    String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  logs     EmailIngestLog[]
+  id        String           @id @default(cuid())
+  email     String           @unique
+  orgId     String
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+  logs      EmailIngestLog[]
 }
 
 model EmailIngestLog {
-  id        String   @id @default(cuid())
+  id        String          @id @default(cuid())
   mailboxId String?
   mailbox   InboundMailbox? @relation(fields: [mailboxId], references: [id])
   vendor    String?
   billId    String?
   status    String
   error     String?
-  createdAt DateTime @default(now())
+  createdAt DateTime        @default(now())
 }
 
+model Customer {
+  id        String     @id @default(cuid())
+  orgId     String
+  name      String
+  email     String?
+  org       Org        @relation(fields: [orgId], references: [id])
+  invoices  Invoice[]
+  estimates Estimate[]
+
+  @@unique([id, orgId])
+}
+
+model TaxCode {
+  id            String         @id @default(cuid())
+  orgId         String
+  name          String
+  rate          Float
+  org           Org            @relation(fields: [orgId], references: [id])
+  items         Item[]
+  invoiceLines  InvoiceLine[]
+  billLines     BillLine[]
+  estimateLines EstimateLine[]
+
+  @@unique([id, orgId])
+}
+
+model Item {
+  id           String        @id @default(cuid())
+  orgId        String
+  name         String
+  description  String?
+  price        Decimal       @db.Decimal(10, 2)
+  taxCodeId    String?
+  org          Org           @relation(fields: [orgId], references: [id])
+  taxCode      TaxCode?      @relation(fields: [taxCodeId, orgId], references: [id, orgId])
+  invoiceLines InvoiceLine[]
+
+  @@unique([id, orgId])
+}
+
+model Invoice {
+  id               String            @id @default(cuid())
+  orgId            String
+  customerId       String?
+  number           Int               @default(1)
+  issueDate        DateTime          @default(now())
+  dueDate          DateTime?
+  status           String            @default("draft")
+  org              Org               @relation(fields: [orgId], references: [id])
+  customer         Customer?         @relation(fields: [customerId, orgId], references: [id, orgId])
+  lines            InvoiceLine[]
+  payments         Payment[]
+  bankTransactions BankTransaction[]
+
+  @@unique([id, orgId])
+  @@unique([orgId, number])
+}
+
+model InvoiceLine {
+  id          String   @id @default(cuid())
+  invoiceId   String
+  orgId       String
+  itemId      String?
+  description String?
+  quantity    Int      @default(1)
+  unitPrice   Decimal  @db.Decimal(10, 2)
+  taxCodeId   String?
+  invoice     Invoice  @relation(fields: [invoiceId, orgId], references: [id, orgId])
+  item        Item?    @relation(fields: [itemId, orgId], references: [id, orgId])
+  taxCode     TaxCode? @relation(fields: [taxCodeId, orgId], references: [id, orgId])
+
+  @@unique([id, orgId])
+}
+
+model Payment {
+  id               String            @id @default(cuid())
+  invoiceId        String
+  orgId            String
+  amount           Decimal           @db.Decimal(10, 2)
+  date             DateTime          @default(now())
+  invoice          Invoice           @relation(fields: [invoiceId, orgId], references: [id, orgId])
+  bankTransactions BankTransaction[]
+
+  @@unique([id, orgId])
+}
+
+model Vendor {
+  id    String  @id @default(cuid())
+  orgId String
+  name  String
+  email String?
+  org   Org     @relation(fields: [orgId], references: [id])
+  bills Bill[]
+
+  @@unique([id, orgId])
+}
+
+model Bill {
+  id               String            @id @default(cuid())
+  orgId            String
+  vendorId         String
+  billDate         DateTime          @default(now())
+  dueDate          DateTime?
+  wht              Decimal?          @db.Decimal(10, 2)
+  org              Org               @relation(fields: [orgId], references: [id])
+  vendor           Vendor            @relation(fields: [vendorId, orgId], references: [id, orgId])
+  lines            BillLine[]
+  bankTransactions BankTransaction[]
+
+  @@unique([id, orgId])
+}
+
+model BillLine {
+  id          String   @id @default(cuid())
+  billId      String
+  orgId       String
+  description String?
+  quantity    Int      @default(1)
+  unitCost    Decimal  @db.Decimal(10, 2)
+  taxCodeId   String?
+  bill        Bill     @relation(fields: [billId, orgId], references: [id, orgId])
+  taxCode     TaxCode? @relation(fields: [taxCodeId, orgId], references: [id, orgId])
+
+  @@unique([id, orgId])
+}
+
+model Estimate {
+  id         String         @id @default(cuid())
+  orgId      String
+  customerId String?
+  number     String
+  issueDate  DateTime       @default(now())
+  expiryDate DateTime?
+  status     String         @default("draft")
+  subTotal   Decimal        @db.Decimal(10, 2)
+  vatTotal   Decimal        @db.Decimal(10, 2)
+  total      Decimal        @db.Decimal(10, 2)
+  org        Org            @relation(fields: [orgId], references: [id])
+  customer   Customer?      @relation(fields: [customerId, orgId], references: [id, orgId])
+  lines      EstimateLine[]
+
+  @@unique([id, orgId])
+  @@unique([orgId, number])
+}
+
+model EstimateLine {
+  id          String   @id @default(cuid())
+  estimateId  String
+  orgId       String
+  description String?
+  quantity    Int      @default(1)
+  unitPrice   Decimal  @db.Decimal(10, 2)
+  taxCodeId   String?
+  estimate    Estimate @relation(fields: [estimateId, orgId], references: [id, orgId])
+  taxCode     TaxCode? @relation(fields: [taxCodeId, orgId], references: [id, orgId])
+
+  @@unique([id, orgId])
+}
+
+model BankTransaction {
+  id        String   @id @default(cuid())
+  orgId     String
+  bankName  String
+  accountNo String
+  date      DateTime
+  amount    Decimal  @db.Decimal(10, 2)
+  type      String
+  memo      String?
+  invoiceId String?
+  paymentId String?
+  billId    String?
+  status    String   @default("UNMATCHED")
+  org       Org      @relation(fields: [orgId], references: [id])
+  invoice   Invoice? @relation(fields: [invoiceId, orgId], references: [id, orgId])
+  payment   Payment? @relation(fields: [paymentId, orgId], references: [id, orgId])
+  bill      Bill?    @relation(fields: [billId, orgId], references: [id, orgId])
+
+  @@unique([id, orgId])
+  @@index([orgId, date])
+}
