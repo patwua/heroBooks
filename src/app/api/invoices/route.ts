@@ -76,7 +76,7 @@ export async function POST(req: Request) {
             throw new Error("INSUFFICIENT_STOCK");
           }
           await tx.item.update({
-            where: { id: dbItem.id, orgId: userOrg.orgId },
+            where: { id: dbItem.id },
             data: { qtyOnHand: dbItem.qtyOnHand - item.quantity }
           });
           let taxCodeId = item.taxCodeId ?? dbItem.taxCodeId ?? undefined;
