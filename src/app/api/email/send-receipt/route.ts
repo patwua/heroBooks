@@ -21,9 +21,13 @@ export async function POST(req: Request) {
   if (!userOrg) {
     return new NextResponse("No organization", { status: 400 });
   }
-  const { paymentId } = await req.json();
+  const form = await req.formData();
+  const paymentId = form.get("paymentId")?.toString();
+  if (!paymentId) {
+    return new NextResponse("Missing paymentId", { status: 400 });
+  }
   const payment = await prisma.payment.findFirst({
-    where: { id: paymentId, invoice: { orgId: userOrg.orgId } },
+    where: { id: paymentId, orgId: userOrg.orgId },
     include: { invoice: { include: { customer: true } } }
   });
   if (!payment || !payment.invoice?.customer?.email) {
