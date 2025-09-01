@@ -5,9 +5,9 @@ Next.js (App Router) • TypeScript • Tailwind
 Auth: NextAuth (Google + Credentials) • Prisma • Postgres
 
 ## Local
-1) `cp .env.example .env` and set DATABASE_URL, NEXTAUTH_SECRET
+1) `cp .env.example .env` and set `DATABASE_URL` to your hosted Postgres connection string and `NEXTAUTH_SECRET`
 2) `npm i`
-3) `npx prisma migrate dev --name init`
+3) `npx prisma migrate deploy`
 4) `npm run dev`
 
 ## Render
@@ -17,6 +17,7 @@ Auth: NextAuth (Google + Credentials) • Prisma • Postgres
   - Start: `npm start`
   - Add envs from `.env.example`
 - Point **herobooks.net** DNS to the service; enable HTTPS
+- Run `npx prisma migrate deploy` during deploys to apply migrations using the remote `DATABASE_URL`
 
 ## Next
 - Org creation flow + role assignments
