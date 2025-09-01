@@ -4,7 +4,7 @@ import { fmtMoney, fmtDate } from "@/lib/format";
 interface InvoiceLike {
   number: number;
   issueDate?: string | Date;
-  customer?: { name: string; email?: string };
+  customer?: { name: string; email?: string } | null;
   lines: Array<{
     description: string;
     quantity: number;

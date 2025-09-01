@@ -36,8 +36,23 @@ export async function GET(
   try {
     logo = fs.readFileSync(path.join(process.cwd(), "public", "logo.svg"));
   } catch {}
-  const pdf = await invoicePdf(invoice, logo);
-  return new NextResponse(pdf, {
+  const pdf = await invoicePdf(
+    {
+      number: invoice.number,
+      issueDate: invoice.issueDate ?? undefined,
+      customer: invoice.customer
+        ? { name: invoice.customer.name, email: invoice.customer.email || undefined }
+        : null,
+      lines: invoice.lines.map((l) => ({
+        description: l.description || "",
+        quantity: l.quantity,
+        unitPrice: Number(l.unitPrice),
+        taxCode: l.taxCode ? { rate: l.taxCode.rate } : undefined
+      }))
+    },
+    logo
+  );
+  return new NextResponse(pdf as any, {
     headers: { "Content-Type": "application/pdf" }
   });
 }

@@ -37,7 +37,22 @@ export async function POST(req: Request) {
   try {
     logo = fs.readFileSync(path.join(process.cwd(), "public", "logo.svg"));
   } catch {}
-  const pdf = await invoicePdf(invoice, logo);
+  const pdf = await invoicePdf(
+    {
+      number: invoice.number,
+      issueDate: invoice.issueDate ?? undefined,
+      customer: invoice.customer
+        ? { name: invoice.customer.name, email: invoice.customer.email || undefined }
+        : null,
+      lines: invoice.lines.map((l) => ({
+        description: l.description || "",
+        quantity: l.quantity,
+        unitPrice: Number(l.unitPrice),
+        taxCode: l.taxCode ? { rate: l.taxCode.rate } : undefined
+      }))
+    },
+    logo
+  );
   const total = invoice.lines.reduce((sum, l) => {
     const line = l.quantity * Number(l.unitPrice);
     const vat = line * (l.taxCode?.rate || 0);

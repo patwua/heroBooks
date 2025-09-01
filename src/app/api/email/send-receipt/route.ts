@@ -33,7 +33,16 @@ export async function POST(req: Request) {
   try {
     logo = fs.readFileSync(path.join(process.cwd(), "public", "logo.svg"));
   } catch {}
-  const pdf = await receiptPdf(payment, logo);
+  const pdf = await receiptPdf(
+    {
+      receiptNumber: payment.receiptNumber,
+      date: payment.date,
+      invoice: payment.invoice ? { number: payment.invoice.number } : undefined,
+      amount: Number(payment.amount),
+      method: payment.method
+    },
+    logo
+  );
   const { default: mjml2html } = (eval("require")("mjml") as typeof import("mjml"));
   const html = mjml2html(
     receiptTemplate({

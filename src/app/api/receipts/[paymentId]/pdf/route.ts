@@ -33,8 +33,17 @@ export async function GET(
   try {
     logo = fs.readFileSync(path.join(process.cwd(), "public", "logo.svg"));
   } catch {}
-  const pdf = await receiptPdf(payment, logo);
-  return new NextResponse(pdf, {
+  const pdf = await receiptPdf(
+    {
+      receiptNumber: payment.receiptNumber,
+      date: payment.date,
+      invoice: payment.invoice ? { number: payment.invoice.number } : undefined,
+      amount: Number(payment.amount),
+      method: payment.method
+    },
+    logo
+  );
+  return new NextResponse(pdf as any, {
     headers: { "Content-Type": "application/pdf" }
   });
 }
