@@ -54,7 +54,7 @@ export async function POST(req: Request) {
     select: { id: true }
   });
   if (!vendor) {
-    return new NextResponse("Invalid vendor", { status: 400 });
+    return new NextResponse("Not found", { status: 404 });
   }
 
   const formattedLines: any[] = [];
@@ -66,7 +66,7 @@ export async function POST(req: Request) {
         select: { id: true }
       });
       if (!tc) {
-        return new NextResponse("Invalid tax code", { status: 400 });
+        return new NextResponse("Not found", { status: 404 });
       }
       taxCodeId = tc.id;
     }

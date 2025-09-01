@@ -38,7 +38,7 @@ export async function POST(req: Request) {
     where: { id: invoiceId, orgId: userOrg.orgId }
   });
   if (!invoice) {
-    return new NextResponse("Invalid invoice", { status: 400 });
+    return new NextResponse("Not found", { status: 404 });
   }
 
   const number = await receiptNumber();
