@@ -21,8 +21,7 @@ export async function POST(req: Request) {
   if (!userOrg) {
     return new NextResponse("No organization", { status: 400 });
   }
-  const form = await req.formData();
-  const paymentId = form.get("paymentId")?.toString();
+  const { paymentId } = await req.json();
   if (!paymentId) {
     return new NextResponse("Missing paymentId", { status: 400 });
   }
