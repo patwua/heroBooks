@@ -48,14 +48,6 @@ export async function POST(req: Request) {
   const body = await req.json();
   const { customerId, items }: { customerId: string; items: InvoiceItemInput[] } = body;
 
-  const customer = await prisma.customer.findFirst({
-    where: { id: customerId, orgId: userOrg.orgId },
-    select: { id: true }
-  });
-  if (!customer) {
-    return new NextResponse("Not found", { status: 404 });
-  }
-
   const org = await prisma.org.findUnique({
     where: { id: userOrg.orgId },
     include: { settings: true }
@@ -66,6 +58,13 @@ export async function POST(req: Request) {
 
   try {
     const invoice = await prisma.$transaction(async (tx) => {
+      const customer = await tx.customer.findFirst({
+        where: { id: customerId, orgId: userOrg.orgId },
+        select: { id: true }
+      });
+      if (!customer) {
+        throw new Error("CUSTOMER_NOT_FOUND");
+      }
       const lines: any[] = [];
       for (const item of items) {
         if (item.itemId) {
@@ -133,7 +132,11 @@ export async function POST(req: Request) {
     await notifyWebhook(userOrg.orgId, "invoice.created", invoice);
     return NextResponse.json(invoice);
   } catch (err: any) {
-    if (err.message === "ITEM_NOT_FOUND" || err.message === "TAXCODE_NOT_FOUND") {
+    if (
+      err.message === "ITEM_NOT_FOUND" ||
+      err.message === "TAXCODE_NOT_FOUND" ||
+      err.message === "CUSTOMER_NOT_FOUND"
+    ) {
       return new NextResponse("Not found", { status: 404 });
     }
     if (err.message === "INSUFFICIENT_STOCK") {
