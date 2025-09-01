@@ -201,6 +201,8 @@ model Payment {
   invoiceId        String
   orgId            String
   amount           Decimal           @db.Decimal(10, 2)
+  method           String
+  receiptNumber    Int
   date             DateTime          @default(now())
   invoice          Invoice           @relation(fields: [invoiceId, orgId], references: [id, orgId])
   bankTransactions BankTransaction[]
