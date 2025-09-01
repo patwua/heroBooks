@@ -159,6 +159,7 @@ model Item {
   org          Org           @relation(fields: [orgId], references: [id])
   taxCode      TaxCode?      @relation(fields: [taxCodeId, orgId], references: [id, orgId])
   invoiceLines InvoiceLine[]
+  billLines    BillLine[]
 
   @@unique([id, orgId])
 }
@@ -241,11 +242,13 @@ model BillLine {
   id          String   @id @default(cuid())
   billId      String
   orgId       String
+  itemId      String?
   description String?
   quantity    Int      @default(1)
   unitCost    Decimal  @db.Decimal(10, 2)
   taxCodeId   String?
   bill        Bill     @relation(fields: [billId, orgId], references: [id, orgId])
+  item        Item?    @relation(fields: [itemId, orgId], references: [id, orgId])
   taxCode     TaxCode? @relation(fields: [taxCodeId, orgId], references: [id, orgId])
 
   @@unique([id, orgId])

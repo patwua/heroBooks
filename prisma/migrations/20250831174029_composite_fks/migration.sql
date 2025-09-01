@@ -117,10 +117,9 @@ ADD COLUMN     "updatedAt" TIMESTAMP(3);
 
 UPDATE "User" SET "updatedAt" = CURRENT_TIMESTAMP WHERE "updatedAt" IS NULL;
 
--- enforce updatedAt constraints and default
+-- enforce updatedAt constraints
 ALTER TABLE "User"
-  ALTER COLUMN "updatedAt" SET NOT NULL,
-  ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
+  ALTER COLUMN "updatedAt" SET NOT NULL;
 
 -- AlterTable
 -- migrate existing string roles to enum values via a temporary column
