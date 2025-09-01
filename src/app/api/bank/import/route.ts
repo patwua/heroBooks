@@ -7,12 +7,13 @@ import Papa from "papaparse";
 
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
-  if (!session) {
+  const userId = (session?.user as { id?: string })?.id;
+  if (!userId) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
 
   const userOrg = await prisma.userOrg.findFirst({
-    where: { userId: session.user.id },
+    where: { userId },
     select: { orgId: true }
   });
   if (!userOrg) {
