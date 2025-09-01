@@ -11,7 +11,7 @@ interface ParsedAttachment {
 
 interface ParsedMessage {
   from?: string;
-  to?: AddressObject | string | null;
+  to?: AddressObject | AddressObject[] | string | null;
   subject?: string;
   text?: string;
   attachments?: ParsedAttachment[];
@@ -21,6 +21,14 @@ export async function ingestParsedMessage(msg: ParsedMessage) {
   const recipients: string[] = [];
   if (typeof msg.to === 'string') {
     recipients.push(msg.to);
+  } else if (Array.isArray(msg.to)) {
+    for (const obj of msg.to) {
+      for (const addr of obj.value || []) {
+        if (addr.address) {
+          recipients.push(addr.address);
+        }
+      }
+    }
   } else if (msg.to?.value) {
     for (const addr of msg.to.value) {
       if (addr.address) {
@@ -99,7 +107,7 @@ export async function runImapIngestion() {
         }));
         await ingestParsedMessage({
           from: parsed.from?.text,
-          to: Array.isArray(parsed.to) ? parsed.to[0] : parsed.to || null,
+          to: parsed.to || null,
           subject: parsed.subject,
           text: parsed.text,
           attachments,

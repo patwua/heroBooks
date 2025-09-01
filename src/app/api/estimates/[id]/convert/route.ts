@@ -61,8 +61,8 @@ export async function POST(
     estimate.lines.map(async (l) => {
       let rate = 0;
       if (l.taxCodeId) {
-        const tc = await prisma.taxCode.findUnique({
-          where: { id: l.taxCodeId },
+        const tc = await prisma.taxCode.findFirst({
+          where: { id: l.taxCodeId, orgId: userOrg.orgId },
           select: { rate: true }
         });
         rate = tc?.rate ?? 0;

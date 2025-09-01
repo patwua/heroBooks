@@ -23,7 +23,7 @@ export async function GET(
     return new NextResponse("No organization", { status: 400 });
   }
   const payment = await prisma.payment.findFirst({
-    where: { id: params.paymentId, invoice: { orgId: userOrg.orgId } },
+    where: { id: params.paymentId, orgId: userOrg.orgId },
     include: { invoice: true }
   });
   if (!payment) {
