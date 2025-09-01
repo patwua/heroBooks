@@ -6,24 +6,32 @@ import { DEFAULT_VAT_CODES } from "@/lib/defaultVatCodes";
 
 export async function POST() {
   const session = await getServerSession(authOptions);
-  if (!session) {
+  if (!session || !session.user) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
-
-  const existing = await prisma.org.findFirst({
-    where: { ownerId: session.user.id }
+  const userId = (session.user as { id: string }).id;
+  const existing = await prisma.userOrg.findFirst({
+    where: { userId },
+    include: { org: { include: { taxCodes: true } } }
   });
   if (existing) {
-    return NextResponse.json(existing);
+    return NextResponse.json(existing.org);
   }
 
   const org = await prisma.org.create({
     data: {
       name: "Demo Org",
-      ownerId: session.user.id,
-      vatCodes: { create: DEFAULT_VAT_CODES }
+      taxCodes: { create: DEFAULT_VAT_CODES }
     },
-    include: { vatCodes: true }
+    include: { taxCodes: true }
+  });
+
+  await prisma.userOrg.create({
+    data: {
+      userId,
+      orgId: org.id,
+      role: "OWNER"
+    }
   });
 
   return NextResponse.json(org);
