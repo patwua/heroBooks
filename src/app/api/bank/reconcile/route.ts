@@ -68,12 +68,13 @@ export async function POST() {
       where: { orgId: userOrg.orgId, billDate: { gte: start, lte: end } },
       include: { lines: true }
     });
+    const absTAmount = Math.abs(tAmount);
     const bill = bills.find((b) => {
       const total = b.lines.reduce(
         (s, l) => s + parseFloat(l.unitCost.toString()) * l.quantity,
         0
       );
-      return Math.abs(total - Math.abs(tAmount)) < 0.01;
+      return Math.abs(total - absTAmount) < 0.01;
     });
     if (bill) {
       await prisma.bankTransaction.update({
