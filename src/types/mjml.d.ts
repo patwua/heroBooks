@@ -1,2 +1,2 @@
 declare module "mjml";
-declare module "bcrypt";
+declare module "bcryptjs";
