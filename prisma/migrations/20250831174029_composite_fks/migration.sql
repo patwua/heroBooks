@@ -103,6 +103,7 @@ UPDATE "OrgSettings" SET "id" = uuid_generate_v4();
 
 -- enforce id constraints
 ALTER TABLE "OrgSettings" ALTER COLUMN "id" SET NOT NULL;
+ALTER TABLE "OrgSettings" ALTER COLUMN "id" SET DEFAULT uuid_generate_v4();
 
 ALTER TABLE "OrgSettings" ADD CONSTRAINT "OrgSettings_pkey" PRIMARY KEY ("id");
 
@@ -120,6 +121,7 @@ UPDATE "User" SET "updatedAt" = CURRENT_TIMESTAMP WHERE "updatedAt" IS NULL;
 -- enforce updatedAt constraints
 ALTER TABLE "User"
   ALTER COLUMN "updatedAt" SET NOT NULL;
+ALTER TABLE "User" ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
 
 -- AlterTable
 -- migrate existing string roles to enum values via a temporary column
