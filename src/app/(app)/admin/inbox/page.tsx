@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
+export const dynamic = "force-dynamic";
 
 async function createMailbox(formData: FormData) {
   'use server';
