@@ -43,11 +43,14 @@ export async function POST(req: Request) {
     const vat = line * (l.taxCode?.rate || 0);
     return sum + line + vat;
   }, 0);
-  const html = invoiceTemplate({
-    number: invoice.number,
-    issueDate: invoice.issueDate,
-    total
-  });
+  const { default: mjml2html } = (eval("require")("mjml") as typeof import("mjml"));
+  const html = mjml2html(
+    invoiceTemplate({
+      number: invoice.number,
+      issueDate: invoice.issueDate,
+      total
+    })
+  ).html;
   await sendMail({
     to: invoice.customer.email,
     subject: `Invoice #${invoice.number}`,
