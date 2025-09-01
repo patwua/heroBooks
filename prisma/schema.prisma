@@ -54,6 +54,7 @@ model OrgSettings {
   brandHex           String? // primary color for theming
   allowNegativeStock Boolean @default(false)
   apiKey             String? @unique
+  webhookUrl         String?
 }
 
 model UserOrg {
