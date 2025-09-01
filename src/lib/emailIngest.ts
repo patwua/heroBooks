@@ -12,16 +12,25 @@ interface ParsedAttachment {
 
 interface ParsedMessage {
   from?: string;
-  to?: AddressObject | null;
+  to?: AddressObject | string | null;
   subject?: string;
   text?: string;
   attachments?: ParsedAttachment[];
 }
 
 export async function ingestParsedMessage(msg: ParsedMessage) {
-  const recipients = msg.to?.value || [];
-  for (const addr of recipients) {
-    const to = addr.address?.toLowerCase() || '';
+  const recipients: string[] = [];
+  if (typeof msg.to === 'string') {
+    recipients.push(msg.to);
+  } else if (msg.to?.value) {
+    for (const addr of msg.to.value) {
+      if (addr.address) {
+        recipients.push(addr.address);
+      }
+    }
+  }
+  for (const rawTo of recipients) {
+    const to = rawTo.toLowerCase();
     const mailbox = await prisma.inboundMailbox.findUnique({ where: { email: to } });
     if (!mailbox) {
       await prisma.emailIngestLog.create({
