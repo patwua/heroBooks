@@ -36,7 +36,7 @@ export async function POST(req: Request) {
     .map((cols) => {
       const [dateStr, amountStr, memo] = cols;
       if (!dateStr || !amountStr) return null;
-      const sanitizedAmountStr = amountStr.replace(/,/g, "");
+      const sanitizedAmountStr = amountStr.replace(/[\s,]/g, "");
       const amount = parseFloat(sanitizedAmountStr);
       if (isNaN(amount)) return null;
       return {
