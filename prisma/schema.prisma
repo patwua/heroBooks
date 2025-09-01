@@ -53,6 +53,7 @@ model OrgSettings {
   org                Org     @relation(fields: [orgId], references: [id])
   brandHex           String? // primary color for theming
   allowNegativeStock Boolean @default(false)
+  apiKey             String? @unique
 }
 
 model UserOrg {
