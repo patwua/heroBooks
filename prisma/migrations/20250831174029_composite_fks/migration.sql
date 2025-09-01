@@ -94,10 +94,13 @@ DROP COLUMN "currency",
 DROP COLUMN "timezone",
 ADD COLUMN     "allowNegativeStock" BOOLEAN NOT NULL DEFAULT false,
 ADD COLUMN     "brandHex" TEXT,
+-- add new id column as nullable so we can backfill
 ADD COLUMN     "id" TEXT;
 
+-- backfill existing rows before making id required
 UPDATE "OrgSettings" SET "id" = uuid_generate_v4();
 
+-- enforce id constraints
 ALTER TABLE "OrgSettings" ALTER COLUMN "id" SET NOT NULL;
 
 ALTER TABLE "OrgSettings" ADD CONSTRAINT "OrgSettings_pkey" PRIMARY KEY ("id");
@@ -108,15 +111,18 @@ ALTER TABLE "Payment" ADD COLUMN     "orgId" TEXT NOT NULL;
 -- AlterTable
 ALTER TABLE "User" ADD COLUMN     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 ADD COLUMN     "passwordHash" TEXT,
+-- introduce updatedAt column as nullable, then backfill
 ADD COLUMN     "updatedAt" TIMESTAMP(3);
 
 UPDATE "User" SET "updatedAt" = CURRENT_TIMESTAMP WHERE "updatedAt" IS NULL;
 
+-- enforce updatedAt constraints and default
 ALTER TABLE "User"
   ALTER COLUMN "updatedAt" SET NOT NULL,
   ALTER COLUMN "updatedAt" SET DEFAULT CURRENT_TIMESTAMP;
 
 -- AlterTable
+-- migrate existing string roles to enum values via a temporary column
 ALTER TABLE "UserOrg" ADD COLUMN "role_new" "Role";
 
 UPDATE "UserOrg" SET "role_new" = CASE LOWER("role")
