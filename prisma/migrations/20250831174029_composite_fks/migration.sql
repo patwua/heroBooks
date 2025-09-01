@@ -94,6 +94,7 @@ DROP COLUMN "currency",
 DROP COLUMN "timezone",
 ADD COLUMN     "allowNegativeStock" BOOLEAN NOT NULL DEFAULT false,
 ADD COLUMN     "brandHex" TEXT,
+ADD COLUMN     "apiKey" TEXT,
 -- add new id column as nullable so we can backfill
 ADD COLUMN     "id" TEXT;
 
@@ -199,7 +200,19 @@ CREATE UNIQUE INDEX "InvoiceLine_id_orgId_key" ON "InvoiceLine"("id", "orgId");
 CREATE UNIQUE INDEX "Item_id_orgId_key" ON "Item"("id", "orgId");
 
 -- CreateIndex
+CREATE UNIQUE INDEX "Vendor_id_orgId_key" ON "Vendor"("id", "orgId");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Bill_id_orgId_key" ON "Bill"("id", "orgId");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "BillLine_id_orgId_key" ON "BillLine"("id", "orgId");
+
+-- CreateIndex
 CREATE UNIQUE INDEX "OrgSettings_orgId_key" ON "OrgSettings"("orgId");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "OrgSettings_apiKey_key" ON "OrgSettings"("apiKey");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Payment_id_orgId_key" ON "Payment"("id", "orgId");
