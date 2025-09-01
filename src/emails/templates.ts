@@ -1,4 +1,3 @@
-import mjml2html from "mjml";
 import { fmtMoney, fmtDate } from "@/lib/format";
 
 export function invoiceTemplate(invoice: {
@@ -6,7 +5,7 @@ export function invoiceTemplate(invoice: {
   issueDate?: string | Date;
   total: number;
 }) {
-  const { html } = mjml2html(`
+  return `
     <mjml>
       <mj-body>
         <mj-section>
@@ -18,8 +17,7 @@ export function invoiceTemplate(invoice: {
         </mj-section>
       </mj-body>
     </mjml>
-  `);
-  return html;
+  `;
 }
 
 export function receiptTemplate(payment: {
@@ -27,7 +25,7 @@ export function receiptTemplate(payment: {
   date: string | Date;
   amount: number;
 }) {
-  const { html } = mjml2html(`
+  return `
     <mjml>
       <mj-body>
         <mj-section>
@@ -39,6 +37,5 @@ export function receiptTemplate(payment: {
         </mj-section>
       </mj-body>
     </mjml>
-  `);
-  return html;
+  `;
 }

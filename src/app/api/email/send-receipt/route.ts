@@ -34,11 +34,14 @@ export async function POST(req: Request) {
     logo = fs.readFileSync(path.join(process.cwd(), "public", "logo.svg"));
   } catch {}
   const pdf = await receiptPdf(payment, logo);
-  const html = receiptTemplate({
-    receiptNumber: payment.receiptNumber,
-    date: payment.date,
-    amount: Number(payment.amount)
-  });
+  const { default: mjml2html } = (eval("require")("mjml") as typeof import("mjml"));
+  const html = mjml2html(
+    receiptTemplate({
+      receiptNumber: payment.receiptNumber,
+      date: payment.date,
+      amount: Number(payment.amount)
+    })
+  ).html;
   await sendMail({
     to: payment.invoice.customer.email,
     subject: `Receipt #${payment.receiptNumber}`,
