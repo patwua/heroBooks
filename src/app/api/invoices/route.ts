@@ -16,11 +16,12 @@ interface InvoiceItemInput {
 
 export async function GET() {
   const session = await getServerSession(authOptions);
-  if (!session) {
+  if (!session?.user?.id) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
+  const userId = session.user.id;
   const userOrg = await prisma.userOrg.findFirst({
-    where: { userId: session.user.id },
+    where: { userId },
     select: { orgId: true }
   });
   if (!userOrg) {
@@ -35,11 +36,12 @@ export async function GET() {
 
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
-  if (!session) {
+  if (!session?.user?.id) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
+  const userId = session.user.id;
   const userOrg = await prisma.userOrg.findFirst({
-    where: { userId: session.user.id },
+    where: { userId },
     select: { orgId: true }
   });
   if (!userOrg) {
