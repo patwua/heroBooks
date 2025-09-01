@@ -1,6 +1,5 @@
 import { ImapFlow } from 'imapflow';
 import { simpleParser, AddressObject } from 'mailparser';
-import pdfParse from 'pdf-parse';
 import { prisma } from './prisma';
 import { runVendorExtractors } from './vendorExtractors';
 
@@ -41,6 +40,7 @@ export async function ingestParsedMessage(msg: ParsedMessage) {
     for (const att of msg.attachments || []) {
       if (att.contentType === 'application/pdf' && att.contentBase64) {
         try {
+          const pdfParse = (await import('pdf-parse')).default;
           const pdf = await pdfParse(Buffer.from(att.contentBase64, 'base64'));
           const vendorInfo = runVendorExtractors(pdf.text);
           const vendorName = vendorInfo?.vendorName || 'Unknown Vendor';
@@ -50,7 +50,7 @@ export async function ingestParsedMessage(msg: ParsedMessage) {
             create: { orgId: mailbox.orgId, name: vendorName },
           });
           const bill = await prisma.bill.create({
-            data: { orgId: mailbox.orgId, vendorId: vendor.id, status: 'draft' },
+            data: { orgId: mailbox.orgId, vendorId: vendor.id },
           });
           await prisma.emailIngestLog.create({
             data: {
@@ -76,7 +76,7 @@ export async function ingestParsedMessage(msg: ParsedMessage) {
 
 export async function runImapIngestion() {
   const client = new ImapFlow({
-    host: process.env.IMAP_HOST,
+    host: process.env.IMAP_HOST || "",
     port: Number(process.env.IMAP_PORT || 993),
     secure: process.env.IMAP_TLS !== 'false',
     auth: {
@@ -85,24 +85,28 @@ export async function runImapIngestion() {
     },
   });
   await client.connect();
-  await client.selectMailbox('INBOX');
+  await client.mailboxOpen('INBOX');
   const unseen = await client.search({ seen: false });
-  for (const seq of unseen) {
-    const { source } = await client.fetchOne(seq, { source: true });
-    const parsed = await simpleParser(source as Buffer);
-    const attachments = (parsed.attachments || []).map((a) => ({
-      filename: a.filename,
-      contentType: a.contentType,
-      contentBase64: (a.content as Buffer).toString('base64'),
-    }));
-    await ingestParsedMessage({
-      from: parsed.from?.text,
-      to: parsed.to || null,
-      subject: parsed.subject,
-      text: parsed.text,
-      attachments,
-    });
-    await client.messageFlagsAdd(seq, ['\\Seen']);
+  if (Array.isArray(unseen)) {
+    for (const seq of unseen) {
+      const result = await client.fetchOne(seq, { source: true });
+      if (result && result.source) {
+        const parsed = await simpleParser(result.source as Buffer);
+        const attachments = (parsed.attachments || []).map((a) => ({
+          filename: a.filename,
+          contentType: a.contentType,
+          contentBase64: (a.content as Buffer).toString('base64'),
+        }));
+        await ingestParsedMessage({
+          from: parsed.from?.text,
+          to: Array.isArray(parsed.to) ? parsed.to[0] : parsed.to || null,
+          subject: parsed.subject,
+          text: parsed.text,
+          attachments,
+        });
+        await client.messageFlagsAdd(seq, ['\\Seen']);
+      }
+    }
   }
   await client.logout();
 }

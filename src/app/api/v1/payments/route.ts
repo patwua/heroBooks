@@ -17,6 +17,7 @@ export async function POST(req: Request) {
   const payment = await prisma.payment.create({
     data: {
       invoiceId,
+      orgId: org.id,
       amount: new Prisma.Decimal(amount),
       method,
       receiptNumber: number

@@ -156,6 +156,7 @@ model Item {
   description  String?
   price        Decimal       @db.Decimal(10, 2)
   taxCodeId    String?
+  qtyOnHand    Int           @default(0)
   org          Org           @relation(fields: [orgId], references: [id])
   taxCode      TaxCode?      @relation(fields: [taxCodeId, orgId], references: [id, orgId])
   invoiceLines InvoiceLine[]
@@ -221,6 +222,7 @@ model Vendor {
   bills Bill[]
 
   @@unique([id, orgId])
+  @@unique([orgId, name])
 }
 
 model Bill {
