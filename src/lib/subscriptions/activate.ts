@@ -11,7 +11,16 @@ import { addMonths, startOfDay } from "date-fns";
 export async function activateSubscriptionFromIntent(intentId: string) {
   const intent = await prisma.checkoutIntent.findUnique({
     where: { id: intentId },
-    include: { user: { select: { id: true, email: true, name: true, UserOrg: { select: { orgId: true } } } } as any },
+    include: {
+      user: {
+        select: {
+          id: true,
+          email: true,
+          name: true,
+          memberships: { select: { orgId: true } },
+        },
+      },
+    },
   });
   if (!intent) throw new Error("Intent not found");
 
@@ -29,7 +38,7 @@ export async function activateSubscriptionFromIntent(intentId: string) {
   if (existing) return existing.id;
 
   // Determine orgId (single membership → auto; else pending assignment)
-  const orgIds = (intent.user as any)?.UserOrg?.map((uo: any) => uo.orgId) ?? [];
+  const orgIds: string[] = intent.user.memberships?.map((m: { orgId: string }) => m.orgId) ?? [];
   const orgId = orgIds.length === 1 ? orgIds[0] : null;
   const status = orgId ? "active" : "pending_assignment";
 
