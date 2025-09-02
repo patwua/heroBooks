@@ -30,7 +30,7 @@ export default function PricingPage() {
             <Row>Email support</Row>
           </ul>
           <Button asChild className="mt-6">
-            <Link href="/sign-up">Start free</Link>
+            <Link href="/sign-up?plan=starter">Start free</Link>
           </Button>
         </div>
 
@@ -64,9 +64,9 @@ export default function PricingPage() {
             <Row>Dedicated success manager</Row>
           </ul>
           <Button asChild variant="outline" className="mt-6">
-            <Link href="/contact">Contact sales</Link>
+            <Link href="/sign-up?plan=enterprise">Contact sales</Link>
           </Button>
-        </div>
+      </div>
       </div>
 
       <div className="mt-10 rounded-2xl border p-6 bg-muted/40">
