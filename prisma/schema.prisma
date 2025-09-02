@@ -16,17 +16,18 @@ enum Role {
 }
 
 model User {
-  id            String    @id @default(cuid())
+  id            String          @id @default(cuid())
   name          String?
-  email         String?   @unique
+  email         String?         @unique
   emailVerified DateTime?
   image         String?
   passwordHash  String?
   accounts      Account[]
   sessions      Session[]
   memberships   UserOrg[]
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @default(now()) @updatedAt
+  preference    UserPreference?
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @default(now()) @updatedAt
 }
 
 model Org {
@@ -34,6 +35,7 @@ model Org {
   name             String
   country          String            @default("GY")
   settings         OrgSettings?
+  theme            OrgTheme?
   members          UserOrg[]
   customers        Customer[]
   taxCodes         TaxCode[]
@@ -312,9 +314,9 @@ model BankTransaction {
 }
 
 model OrgTheme {
-  id         String  @id @default(cuid())
-  org        Org     @relation(fields: [orgId], references: [id], onDelete: Cascade)
-  orgId      String  @unique
+  id         String   @id @default(cuid())
+  org        Org      @relation(fields: [orgId], references: [id], onDelete: Cascade)
+  orgId      String   @unique
   // Simple knobs for branding (extend later)
   brandColor String? // hex
   logoUrl    String?
