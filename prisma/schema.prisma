@@ -25,6 +25,7 @@ model User {
   accounts      Account[]
   sessions      Session[]
   memberships   UserOrg[]
+  checkoutIntents CheckoutIntent[]
   preference    UserPreference?
   createdAt     DateTime        @default(now())
   updatedAt     DateTime        @default(now()) @updatedAt
@@ -45,6 +46,7 @@ model Org {
   bills            Bill[]
   estimates        Estimate[]
   bankTransactions BankTransaction[]
+  subscriptions    OrgSubscription[]
   createdAt        DateTime          @default(now())
   updatedAt        DateTime          @updatedAt
 }
@@ -347,4 +349,32 @@ model CheckoutIntent {
   externalRef   String?  // PSP order/transaction reference
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
+
+  // link to created subscriptions
+  subscription  OrgSubscription[]
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  createdAt  DateTime @default(now())
+  actorId    String?
+  actorEmail String?
+  action     String
+  targetType String
+  targetId   String
+  metadata   Json?
+}
+
+model OrgSubscription {
+  id                  String   @id @default(cuid())
+  org                 Org?     @relation(fields: [orgId], references: [id], onDelete: SetNull)
+  orgId               String?
+  plan                String
+  status              String   @default("active")
+  currentPeriodStart  DateTime
+  currentPeriodEnd    DateTime
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+  checkoutIntent      CheckoutIntent? @relation(fields: [checkoutIntentId], references: [id], onDelete: SetNull)
+  checkoutIntentId    String?
 }

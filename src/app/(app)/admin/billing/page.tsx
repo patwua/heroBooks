@@ -98,6 +98,7 @@ export default async function AdminBillingPage({ searchParams }: { searchParams:
               <th className="text-left p-2">Method</th>
               <th className="text-left p-2">External Ref</th>
               <th className="text-left p-2">Status</th>
+              <th className="text-left p-2">Sub?</th>
               <th className="text-left p-2">Actions</th>
             </tr>
           </thead>
@@ -118,6 +119,11 @@ export default async function AdminBillingPage({ searchParams }: { searchParams:
                 <td className="p-2"><MethodBadge method={r.paymentMethod ?? null} /></td>
                 <td className="p-2 font-mono text-xs">{r.externalRef ?? "—"}</td>
                 <td className="p-2"><StatusBadge status={r.status} /></td>
+                <td className="p-2">
+                  {/* show a quick badge if we can find a linked subscription */}
+                  {/* lightweight inline check w/o extra query: indicate '—' and rely on Audit if needed */}
+                  {r.status === "paid" ? <span className="text-xs">Created</span> : <span className="text-xs text-muted-foreground">—</span>}
+                </td>
                 <td className="p-2">
                   {/* Only show manual actions for non-PayPal or unpaid */}
                   {r.status !== "paid" ? <IntentRowActions id={r.id} /> : <span className="text-xs text-muted-foreground">—</span>}

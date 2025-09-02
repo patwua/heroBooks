@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { activateSubscriptionFromIntent } from "@/lib/subscriptions/activate";
+import { sendReceiptEmail } from "@/lib/subscriptions/email";
 
 const PAYPAL_BASE =
   process.env.PAYPAL_ENV === "live" ? "https://api-m.paypal.com" : "https://api-m.sandbox.paypal.com";
@@ -34,10 +36,34 @@ export async function GET(req: Request) {
       where: { id: intentId },
       data: { status: "paid", externalRef: token },
     });
+    await prisma.auditLog.create({
+      data: {
+        actorId: null,
+        actorEmail: null,
+        action: "paypal.capture.succeeded",
+        targetType: "CheckoutIntent",
+        targetId: intentId,
+        metadata: capJson ?? {},
+      },
+    });
+
+    // Activate + receipt (idempotent)
+    await activateSubscriptionFromIntent(intentId);
+    await sendReceiptEmail(intentId);
   } else {
     await prisma.checkoutIntent.update({
       where: { id: intentId },
       data: { status: "failed" },
+    });
+    await prisma.auditLog.create({
+      data: {
+        actorId: null,
+        actorEmail: null,
+        action: "paypal.capture.failed",
+        targetType: "CheckoutIntent",
+        targetId: intentId,
+        metadata: capJson ?? {},
+      },
     });
   }
 
