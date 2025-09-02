@@ -1,3 +1,3 @@
-export default function Customers() {
-  return <div className="text-slate-300">Customers — coming soon</div>;
+export default function CustomersPage() {
+  return <div className="text-sm">Customers — TODO: list, create, edit (scoped to active org).</div>;
 }

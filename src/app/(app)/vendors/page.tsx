@@ -1,3 +1,3 @@
-export default function Vendors() {
-  return <div className="text-slate-300">Vendors — coming soon</div>;
+export default function VendorsPage() {
+  return <div className="text-sm">Vendors — TODO: list, create, WHT setup.</div>;
 }
