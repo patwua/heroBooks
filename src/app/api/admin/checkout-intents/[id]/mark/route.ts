@@ -24,8 +24,8 @@ export async function POST(req: Request, { params }: { params: { id: string } })
 
   await prisma.auditLog.create({
     data: {
-      actorId: (gate as any)?.user?.id ?? null,
-      actorEmail: (gate as any)?.user?.email ?? null,
+      actorId: gate.user?.id ?? null,
+      actorEmail: gate.user?.email ?? null,
       action: "checkout.intent.updated",
       targetType: "CheckoutIntent",
       targetId: id,
