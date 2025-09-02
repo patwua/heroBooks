@@ -38,12 +38,12 @@ export default function MarketingHeader() {
           <Button asChild variant="ghost" size="sm">
             <Link href="/sign-in">Sign in</Link>
           </Button>
+          {/* Preselect the popular plan on sign-up */}
           <Button asChild size="sm">
-            <Link href="/sign-up">Get started</Link>
+            <Link href="/sign-up?plan=business">Get started</Link>
           </Button>
         </div>
       </div>
-      {/* Promo / “ad” band */}
       <div className="w-full bg-primary/10 border-t">
         <div className="container mx-auto px-4 py-2 text-xs sm:text-sm text-center">
           🎉 Early adopters: 2 months <b>50% off</b> on Business plan. Use code <b>GYA-LAUNCH</b> at checkout.

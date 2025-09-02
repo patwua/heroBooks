@@ -23,7 +23,8 @@ export default function HomePage() {
           </p>
           <div className="mt-6 flex items-center justify-center gap-3">
             <Button asChild size="lg">
-              <Link href="/sign-up">Start free</Link>
+              {/* Default to business for best fit */}
+              <Link href="/sign-up?plan=business">Start free</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
               <Link href="/pricing">View pricing</Link>
@@ -124,7 +125,7 @@ export default function HomePage() {
           <p className="text-muted-foreground mt-2">Invite your accountant anytime—no extra seat fee during beta.</p>
           <div className="mt-5 flex items-center justify-center gap-3">
             <Button asChild size="lg">
-              <a href="/sign-up">Create your account</a>
+              <a href="/sign-up?plan=business">Create your account</a>
             </Button>
             <Button asChild variant="outline" size="lg">
               <a href="/pricing">See plans</a>
