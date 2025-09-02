@@ -16,18 +16,19 @@ enum Role {
 }
 
 model User {
-  id            String          @id @default(cuid())
-  name          String?
-  email         String?         @unique
-  emailVerified DateTime?
-  image         String?
-  passwordHash  String?
-  accounts      Account[]
-  sessions      Session[]
-  memberships   UserOrg[]
-  preference    UserPreference?
-  createdAt     DateTime        @default(now())
-  updatedAt     DateTime        @default(now()) @updatedAt
+  id             String           @id @default(cuid())
+  name           String?
+  email          String?          @unique
+  emailVerified  DateTime?
+  image          String?
+  passwordHash   String?
+  accounts       Account[]
+  sessions       Session[]
+  memberships    UserOrg[]
+  preference     UserPreference?
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @default(now()) @updatedAt
+  CheckoutIntent CheckoutIntent[]
 }
 
 model Org {
@@ -47,6 +48,7 @@ model Org {
   bankTransactions BankTransaction[]
   createdAt        DateTime          @default(now())
   updatedAt        DateTime          @updatedAt
+  OrgSubscription  OrgSubscription[]
 }
 
 model OrgSettings {
@@ -333,6 +335,31 @@ model UserPreference {
   updatedAt DateTime @updatedAt
 }
 
+model AuditLog {
+  id         String   @id @default(cuid())
+  createdAt  DateTime @default(now())
+  actorId    String?
+  actorEmail String?
+  action     String
+  targetType String
+  targetId   String
+  metadata   Json?
+}
+
+model OrgSubscription {
+  id                 String          @id @default(cuid())
+  org                Org?            @relation(fields: [orgId], references: [id], onDelete: SetNull)
+  orgId              String?
+  plan               String
+  status             String          @default("active") // active|cancelled|expired|pending_assignment
+  currentPeriodStart DateTime
+  currentPeriodEnd   DateTime
+  createdAt          DateTime        @default(now())
+  updatedAt          DateTime        @updatedAt
+  checkoutIntent     CheckoutIntent? @relation(fields: [checkoutIntentId], references: [id], onDelete: SetNull)
+  checkoutIntentId   String?
+}
+
 model CheckoutIntent {
   id            String   @id @default(cuid())
   user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -343,8 +370,10 @@ model CheckoutIntent {
   discount      Int      @default(0)
   promoCode     String?
   status        String   @default("created") // created|processing|paid|failed|cancelled
-  paymentMethod String?  // "paypal" | "zelle" | "mmg" | "bank"
-  externalRef   String?  // PSP order/transaction reference
+  paymentMethod String? // "paypal" | "zelle" | "mmg" | "bank"
+  externalRef   String? // PSP order/transaction reference
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
+
+  subscription OrgSubscription[]
 }

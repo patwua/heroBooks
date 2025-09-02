@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { mmgProvider } from "@/lib/payments/mmg";
+import { activateSubscriptionFromIntent } from "@/lib/subscriptions/activate";
+import { sendReceiptEmail } from "@/lib/subscriptions/email";
 
 export const dynamic = "force-dynamic";
 
@@ -14,8 +16,24 @@ export async function POST(req: Request) {
 
   await prisma.checkoutIntent.update({
     where: { id: intentId },
-    data: { status: status === "paid" ? "paid" : status, externalRef: externalRef ?? undefined },
+    data: { status: status === "paid" ? "paid" : status!, externalRef: externalRef ?? undefined },
   });
+
+  await prisma.auditLog.create({
+    data: {
+      actorId: null,
+      actorEmail: null,
+      action: "mmg.webhook",
+      targetType: "CheckoutIntent",
+      targetId: intentId,
+      metadata: parsed,
+    },
+  });
+
+  if (status === "paid") {
+    await activateSubscriptionFromIntent(intentId);
+    await sendReceiptEmail(intentId);
+  }
 
   return NextResponse.json({ ok: true });
 }
