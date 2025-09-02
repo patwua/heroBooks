@@ -18,30 +18,32 @@ const DropdownMenuContent = React.forwardRef<HTMLDivElement, DropdownMenuPrimiti
 );
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 
-const DropdownMenuItem = React.forwardRef<HTMLDivElement, DropdownMenuPrimitive.DropdownMenuItemProps>(
-  ({ className, inset, ...props }, ref) => (
-    <DropdownMenuPrimitive.Item
-      ref={ref}
-      className={cn(
-        "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground",
-        inset && "pl-8",
-        className
-      )}
-      {...props}
-    />
-  )
-);
+const DropdownMenuItem = React.forwardRef<
+  React.ElementRef<typeof DropdownMenuPrimitive.Item>,
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & { inset?: boolean }
+>(({ className, inset, ...props }, ref) => (
+  <DropdownMenuPrimitive.Item
+    ref={ref}
+    className={cn(
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground",
+      inset && "pl-8",
+      className
+    )}
+    {...props}
+  />
+));
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 
-const DropdownMenuLabel = React.forwardRef<HTMLDivElement, DropdownMenuPrimitive.DropdownMenuLabelProps>(
-  ({ className, inset, ...props }, ref) => (
-    <DropdownMenuPrimitive.Label
-      ref={ref}
-      className={cn("px-2 py-1.5 text-sm font-semibold", inset && "pl-8", className)}
-      {...props}
-    />
-  )
-);
+const DropdownMenuLabel = React.forwardRef<
+  React.ElementRef<typeof DropdownMenuPrimitive.Label>,
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & { inset?: boolean }
+>(({ className, inset, ...props }, ref) => (
+  <DropdownMenuPrimitive.Label
+    ref={ref}
+    className={cn("px-2 py-1.5 text-sm font-semibold", inset && "pl-8", className)}
+    {...props}
+  />
+));
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 
 const DropdownMenuSeparator = React.forwardRef<HTMLDivElement, DropdownMenuPrimitive.DropdownMenuSeparatorProps>(

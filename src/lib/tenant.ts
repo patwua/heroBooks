@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import { getServerSession } from "next-auth";
 import { authOptions } from "./authOptions";
 import { prisma } from "./prisma";
+import type { Org, OrgTheme, UserOrg } from "@prisma/client";
 
 const ORG_COOKIE = "hb_org";
 
@@ -21,7 +22,7 @@ export async function getActiveOrgId(): Promise<string> {
     const first = await prisma.userOrg.findFirst({
       where: { userId: session.user.id },
       select: { orgId: true },
-      orderBy: { createdAt: "asc" },
+      orderBy: { orgId: "asc" },
     });
     if (!first) throw new Error("No organization membership found");
     return first.orgId;
@@ -41,13 +42,21 @@ export async function getActiveOrgId(): Promise<string> {
 }
 
 /** List orgs current user belongs to */
-export async function listUserOrgs() {
+type OrgWithTheme = Pick<Org, "id" | "name"> & {
+  theme: Pick<OrgTheme, "logoUrl"> | null;
+};
+
+type UserOrgWithOrg = UserOrg & {
+  org: OrgWithTheme;
+};
+
+export async function listUserOrgs(): Promise<UserOrgWithOrg[]> {
   const session = await getServerSession(authOptions);
   if (!session?.user?.id) return [];
   return prisma.userOrg.findMany({
     where: { userId: session.user.id },
-    include: { org: { select: { id: true, name: true, logoUrl: true } } },
-    orderBy: { createdAt: "asc" },
+    include: { org: { select: { id: true, name: true, theme: { select: { logoUrl: true } } } } },
+    orderBy: { orgId: "asc" },
   });
 }
 
