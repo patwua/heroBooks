@@ -18,39 +18,66 @@ export async function GET(req: Request) {
   const creds = Buffer.from(
     `${process.env.PAYPAL_CLIENT_ID}:${process.env.PAYPAL_CLIENT_SECRET}`
   ).toString("base64");
-  const tokRes = await fetch(`${PAYPAL_BASE}/v1/oauth2/token`, {
-    method: "POST",
-    headers: { Authorization: `Basic ${creds}`, "Content-Type": "application/x-www-form-urlencoded" },
-    body: "grant_type=client_credentials",
-  });
-  const { access_token } = await tokRes.json();
-
-  const capRes = await fetch(`${PAYPAL_BASE}/v2/checkout/orders/${token}/capture`, {
-    method: "POST",
-    headers: { Authorization: `Bearer ${access_token}`, "Content-Type": "application/json" },
-  });
-  const capJson = await capRes.json();
-
-  if (capRes.ok) {
-    await prisma.checkoutIntent.update({
-      where: { id: intentId },
-      data: { status: "paid", externalRef: token },
-    });
-    await prisma.auditLog.create({
-      data: {
-        actorId: null,
-        actorEmail: null,
-        action: "paypal.capture.succeeded",
-        targetType: "CheckoutIntent",
-        targetId: intentId,
-        metadata: capJson ?? {},
+  try {
+    const tokRes = await fetch(`${PAYPAL_BASE}/v1/oauth2/token`, {
+      method: "POST",
+      headers: {
+        Authorization: `Basic ${creds}`,
+        "Content-Type": "application/x-www-form-urlencoded",
       },
+      body: "grant_type=client_credentials",
     });
+    const { access_token } = await tokRes.json();
 
-    // Activate + receipt (idempotent)
-    await activateSubscriptionFromIntent(intentId);
-    await sendReceiptEmail(intentId);
-  } else {
+    const capRes = await fetch(
+      `${PAYPAL_BASE}/v2/checkout/orders/${token}/capture`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${access_token}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const capJson = await capRes.json();
+
+    if (capRes.ok) {
+      await prisma.checkoutIntent.update({
+        where: { id: intentId },
+        data: { status: "paid", externalRef: token },
+      });
+      await prisma.auditLog.create({
+        data: {
+          actorId: null,
+          actorEmail: null,
+          action: "paypal.capture.succeeded",
+          targetType: "CheckoutIntent",
+          targetId: intentId,
+          metadata: capJson ?? {},
+        },
+      });
+
+      // Activate + receipt (idempotent)
+      await activateSubscriptionFromIntent(intentId);
+      await sendReceiptEmail(intentId);
+    } else {
+      await prisma.checkoutIntent.update({
+        where: { id: intentId },
+        data: { status: "failed" },
+      });
+      await prisma.auditLog.create({
+        data: {
+          actorId: null,
+          actorEmail: null,
+          action: "paypal.capture.failed",
+          targetType: "CheckoutIntent",
+          targetId: intentId,
+          metadata: capJson ?? {},
+        },
+      });
+    }
+  } catch (err) {
+    console.error(err);
     await prisma.checkoutIntent.update({
       where: { id: intentId },
       data: { status: "failed" },
@@ -62,7 +89,9 @@ export async function GET(req: Request) {
         action: "paypal.capture.failed",
         targetType: "CheckoutIntent",
         targetId: intentId,
-        metadata: capJson ?? {},
+        metadata: {
+          error: err instanceof Error ? err.message : String(err),
+        },
       },
     });
   }
