@@ -1,9 +1,13 @@
 import { fmtMoney } from "@/lib/format";
 
 export default async function VatReportPage() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/reports/vat-summary`, {
+  const res = await fetch("/api/reports/vat-summary", {
     cache: "no-store",
   });
+  if (!res.ok) {
+    const message = await res.text();
+    return <div>{message || "Failed to fetch VAT summary"}</div>;
+  }
   const data = await res.json();
   return (
     <div>
