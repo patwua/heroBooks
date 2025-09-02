@@ -310,3 +310,23 @@ model BankTransaction {
   @@unique([id, orgId])
   @@index([orgId, date])
 }
+
+model OrgTheme {
+  id         String  @id @default(cuid())
+  org        Org     @relation(fields: [orgId], references: [id], onDelete: Cascade)
+  orgId      String  @unique
+  // Simple knobs for branding (extend later)
+  brandColor String? // hex
+  logoUrl    String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model UserPreference {
+  id        String   @id @default(cuid())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String   @unique
+  theme     String   @default("system") // system|light|dark
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
