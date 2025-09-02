@@ -14,7 +14,12 @@ export async function POST(req: Request, { params }: { params: { id: string } })
     return NextResponse.json({ error: "invalid-status" }, { status: 400 });
   }
 
-  const intentBefore = await prisma.checkoutIntent.findUnique({ where: { id } });
+  const intentBefore = await prisma.checkoutIntent.findFirst({
+    where: {
+      id,
+      user: { memberships: { some: { orgId: gate.orgId } } },
+    },
+  });
   if (!intentBefore) return NextResponse.json({ error: "not-found" }, { status: 404 });
 
   await prisma.checkoutIntent.update({

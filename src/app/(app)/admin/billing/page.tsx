@@ -11,6 +11,9 @@ export default async function AdminBillingPage() {
   }
 
   const rows = await prisma.checkoutIntent.findMany({
+    where: {
+      user: { memberships: { some: { orgId: gate.orgId } } },
+    },
     include: { user: { select: { name: true, email: true } } },
     orderBy: { createdAt: "desc" },
   });
