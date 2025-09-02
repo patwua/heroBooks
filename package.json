@@ -4,7 +4,7 @@
   "packageManager": "pnpm@10.5.2",
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "next build",
     "start": "prisma migrate deploy && next start",
     "postinstall": "prisma generate",
     "lint": "next lint"
