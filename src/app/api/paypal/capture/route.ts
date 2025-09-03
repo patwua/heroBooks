@@ -18,6 +18,7 @@ export async function GET(req: Request) {
   const creds = Buffer.from(
     `${process.env.PAYPAL_CLIENT_ID}:${process.env.PAYPAL_CLIENT_SECRET}`
   ).toString("base64");
+  let captureSucceeded = false;
   try {
     const tokRes = await fetch(`${PAYPAL_BASE}/v1/oauth2/token`, {
       method: "POST",
@@ -42,6 +43,7 @@ export async function GET(req: Request) {
     const capJson = await capRes.json();
 
     if (capRes.ok) {
+      captureSucceeded = true;
       await prisma.checkoutIntent.update({
         where: { id: intentId },
         data: { status: "paid", externalRef: token },
@@ -56,10 +58,6 @@ export async function GET(req: Request) {
           metadata: capJson ?? {},
         },
       });
-
-      // Activate + receipt (idempotent)
-      await activateSubscriptionFromIntent(intentId);
-      await sendReceiptEmail(intentId);
     } else {
       await prisma.checkoutIntent.update({
         where: { id: intentId },
@@ -94,6 +92,16 @@ export async function GET(req: Request) {
         },
       },
     });
+  }
+
+  if (captureSucceeded) {
+    try {
+      // Activate + receipt (idempotent)
+      await activateSubscriptionFromIntent(intentId);
+      await sendReceiptEmail(intentId);
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   return NextResponse.redirect(new URL(`/checkout/confirm?id=${intentId}`, url).toString());
