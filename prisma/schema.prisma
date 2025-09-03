@@ -376,5 +376,5 @@ model OrgSubscription {
   createdAt           DateTime @default(now())
   updatedAt           DateTime @updatedAt
   checkoutIntent      CheckoutIntent? @relation(fields: [checkoutIntentId], references: [id], onDelete: SetNull)
-  checkoutIntentId    String?
+  checkoutIntentId    String? @unique
 }

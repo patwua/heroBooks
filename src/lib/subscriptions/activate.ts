@@ -30,13 +30,6 @@ export async function activateSubscriptionFromIntent(intentId: string) {
     return null;
   }
 
-  // Check if there's already a subscription linked via this intent (idempotency)
-  const existing = await prisma.orgSubscription.findFirst({
-    where: { checkoutIntentId: intent.id },
-    select: { id: true },
-  });
-  if (existing) return existing.id;
-
   // Determine orgId (single membership → auto; else pending assignment)
   const orgIds: string[] = intent.user.memberships?.map((m: { orgId: string }) => m.orgId) ?? [];
   const orgId = orgIds.length === 1 ? orgIds[0] : null;
@@ -47,8 +40,10 @@ export async function activateSubscriptionFromIntent(intentId: string) {
   const periodStart = startOfDay(now);
   const periodEnd = startOfDay(addMonths(now, 1));
 
-  const sub = await prisma.orgSubscription.create({
-    data: {
+  // Create the subscription if it doesn't exist yet (idempotent via unique checkoutIntentId)
+  const sub = await prisma.orgSubscription.upsert({
+    where: { checkoutIntentId: intent.id },
+    create: {
       orgId,
       plan: intent.plan,
       status,
@@ -56,6 +51,7 @@ export async function activateSubscriptionFromIntent(intentId: string) {
       currentPeriodEnd: periodEnd,
       checkoutIntentId: intent.id,
     },
+    update: {},
     select: { id: true },
   });
 
