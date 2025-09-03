@@ -6,6 +6,7 @@ import { prisma } from "@/lib/prisma";
 import { normalizePlan, type Plan } from "@/lib/plans";
 import { getPlanPriceGyd, applyPromo } from "@/lib/pricing";
 import { getProviderOrThrow } from "@/lib/payments";
+import { getActiveOrgId } from "@/lib/tenant";
 
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
@@ -18,9 +19,12 @@ export async function POST(req: Request) {
   const baseAmount = getPlanPriceGyd(plan);
   const { finalAmount, discountAmount, promoApplied } = applyPromo(baseAmount, promoCode);
 
+  const orgId = await getActiveOrgId();
+
   const intent = await prisma.checkoutIntent.create({
     data: {
       userId: session.user.id,
+      orgId,
       plan,
       amount: finalAmount,
       discount: discountAmount,

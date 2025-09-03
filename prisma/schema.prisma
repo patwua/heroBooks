@@ -47,6 +47,7 @@ model Org {
   estimates        Estimate[]
   bankTransactions BankTransaction[]
   subscriptions    OrgSubscription[]
+  checkoutIntents  CheckoutIntent[]
   createdAt        DateTime          @default(now())
   updatedAt        DateTime          @updatedAt
 }
@@ -337,6 +338,8 @@ model UserPreference {
 
 model CheckoutIntent {
   id            String   @id @default(cuid())
+  org           Org      @relation(fields: [orgId], references: [id], onDelete: Cascade)
+  orgId         String
   user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId        String
   plan          String
@@ -352,6 +355,8 @@ model CheckoutIntent {
 
   // link to created subscriptions
   subscription  OrgSubscription[]
+
+  @@index([orgId])
 }
 
 model AuditLog {
