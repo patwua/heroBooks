@@ -14,7 +14,7 @@ export async function GET(req: Request) {
   const page = Math.max(1, Number(searchParams.get("page") || "1"));
   const pageSize = Math.min(100, Math.max(10, Number(searchParams.get("size") || "20")));
 
-  const where: any = {};
+  const where: any = { orgId: gate.orgId };
   if (status && status !== "all") where.status = status;
   if (method && method !== "all") where.paymentMethod = method;
   if (q) {

@@ -17,7 +17,6 @@ export async function activateSubscriptionFromIntent(intentId: string) {
           id: true,
           email: true,
           name: true,
-          memberships: { select: { orgId: true } },
         },
       },
     },
@@ -37,10 +36,8 @@ export async function activateSubscriptionFromIntent(intentId: string) {
   });
   if (existing) return existing.id;
 
-  // Determine orgId (single membership → auto; else pending assignment)
-  const orgIds: string[] = intent.user.memberships?.map((m: { orgId: string }) => m.orgId) ?? [];
-  const orgId = orgIds.length === 1 ? orgIds[0] : null;
-  const status = orgId ? "active" : "pending_assignment";
+  const orgId = intent.orgId;
+  const status = "active";
 
   // Compute 1-month period (simple monthly plan; adjust for annual later)
   const now = new Date();
@@ -72,7 +69,7 @@ export async function activateSubscriptionFromIntent(intentId: string) {
         plan: intent.plan,
         amountGYD: intent.amount,
         paymentMethod: intent.paymentMethod,
-        orgAttached: orgId ? true : false,
+        orgAttached: true,
       },
     },
   });

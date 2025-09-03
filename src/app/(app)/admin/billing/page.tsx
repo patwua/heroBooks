@@ -26,7 +26,7 @@ export default async function AdminBillingPage({ searchParams }: { searchParams:
   const page = Math.max(1, Number(searchParams.page ?? "1"));
   const pageSize = 20;
 
-  const where: any = {};
+  const where: any = { orgId: gate.orgId };
   if (status !== "all") where.status = status;
   if (method !== "all") where.paymentMethod = method;
   if (q) {
