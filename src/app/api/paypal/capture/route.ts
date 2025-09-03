@@ -73,6 +73,7 @@ export async function GET(req: Request) {
           metadata: capJson ?? {},
         },
       });
+      return NextResponse.redirect(new URL(`/checkout/confirm?id=${intentId}`, url).toString());
     }
   } catch (err) {
     console.error(err);
@@ -85,6 +86,27 @@ export async function GET(req: Request) {
         actorId: null,
         actorEmail: null,
         action: "paypal.capture.failed",
+        targetType: "CheckoutIntent",
+        targetId: intentId,
+        metadata: {
+          error: err instanceof Error ? err.message : String(err),
+        },
+      },
+    });
+    return NextResponse.redirect(new URL(`/checkout/confirm?id=${intentId}`, url).toString());
+  }
+
+  try {
+    // Activate + receipt (idempotent)
+    await activateSubscriptionFromIntent(intentId);
+    await sendReceiptEmail(intentId);
+  } catch (err) {
+    console.error(err);
+    await prisma.auditLog.create({
+      data: {
+        actorId: null,
+        actorEmail: null,
+        action: "paypal.postprocess.failed",
         targetType: "CheckoutIntent",
         targetId: intentId,
         metadata: {
