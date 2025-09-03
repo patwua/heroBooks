@@ -43,7 +43,6 @@ export async function GET(req: Request) {
     const capJson = await capRes.json();
 
     if (capRes.ok) {
-      captureSucceeded = true;
       await prisma.checkoutIntent.update({
         where: { id: intentId },
         data: { status: "paid", externalRef: token },
@@ -58,6 +57,7 @@ export async function GET(req: Request) {
           metadata: capJson ?? {},
         },
       });
+      captureSucceeded = true;
     } else {
       await prisma.checkoutIntent.update({
         where: { id: intentId },
@@ -96,26 +96,6 @@ export async function GET(req: Request) {
     return NextResponse.redirect(new URL(`/checkout/confirm?id=${intentId}`, url).toString());
   }
 
-  try {
-    // Activate + receipt (idempotent)
-    await activateSubscriptionFromIntent(intentId);
-    await sendReceiptEmail(intentId);
-  } catch (err) {
-    console.error(err);
-    await prisma.auditLog.create({
-      data: {
-        actorId: null,
-        actorEmail: null,
-        action: "paypal.postprocess.failed",
-        targetType: "CheckoutIntent",
-        targetId: intentId,
-        metadata: {
-          error: err instanceof Error ? err.message : String(err),
-        },
-      },
-    });
-  }
-
   if (captureSucceeded) {
     try {
       // Activate + receipt (idempotent)
@@ -123,6 +103,18 @@ export async function GET(req: Request) {
       await sendReceiptEmail(intentId);
     } catch (err) {
       console.error(err);
+      await prisma.auditLog.create({
+        data: {
+          actorId: null,
+          actorEmail: null,
+          action: "paypal.postprocess.failed",
+          targetType: "CheckoutIntent",
+          targetId: intentId,
+          metadata: {
+            error: err instanceof Error ? err.message : String(err),
+          },
+        },
+      });
     }
   }
 
