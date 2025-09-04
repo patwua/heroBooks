@@ -1,28 +1,6 @@
 import KpiCard from "@/components/dashboard/KpiCard";
 import { AgingList } from "@/components/dashboard/AgingList";
-// Placeholder server "queries"
-async function getDashboardData() {
-  // TODO: replace with real Prisma queries using getActiveOrgId()
-  return {
-    arTotal: 15230,
-    apTotal: 9680,
-    vatDue: 2240,
-    arAging: [
-      { label: "Current", amount: 8200 },
-      { label: "1–30d", amount: 4200 },
-      { label: "31–60d", amount: 630 },
-      { label: "61–90d", amount: 200 },
-      { label: "90d+", amount: 0 },
-    ],
-    apAging: [
-      { label: "Current", amount: 6000 },
-      { label: "1–30d", amount: 2500 },
-      { label: "31–60d", amount: 900 },
-      { label: "61–90d", amount: 280 },
-      { label: "90d+", amount: 0 },
-    ],
-  };
-}
+import { getDashboardData } from "@/lib/dashboard";
 
 export default async function DashboardPage() {
   const data = await getDashboardData();
