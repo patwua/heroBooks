@@ -34,7 +34,8 @@
     "react-dom": "18.3.1",
     "react-fast-marquee": "^1.6.5",
     "tailwind-merge": "^2.6.0",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "date-fns": "^3.0.0"
   },
   "devDependencies": {
     "@types/mailparser": "^3.4.6",
