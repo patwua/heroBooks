@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import { normalizePlan, type Plan } from "@/lib/plans";
 
 export default function SignUpPage({
@@ -17,20 +18,28 @@ export default function SignUpPage({
   const [plan, setPlan] = useState<Plan>(initialPlan);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setError("");
     const res = await fetch("/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password, plan }),
     });
-    if (res.ok) {
-      await signIn("credentials", {
-        email,
-        password,
-        callbackUrl: "/app/dashboard",
-      });
+    const data = await res.json();
+    if (!res.ok) {
+      setError(data?.error ?? "Registration failed");
+      return;
+    }
+    await signIn("credentials", { email, password, redirect: false });
+    alert("Account created!");
+    if (plan === "starter") {
+      router.push("/settings/profile");
+    } else {
+      router.push(`/checkout?plan=${plan}`);
     }
   }
 
@@ -90,6 +99,7 @@ export default function SignUpPage({
         <button className="w-full rounded-md bg-primary text-primary-foreground py-2 text-sm font-medium">
           Create account
         </button>
+        {error && <p className="text-sm text-red-500">{error}</p>}
 
         <p className="text-xs text-muted-foreground">
           By creating an account, you agree to our <a className="underline" href="/legal/terms">Terms</a> and

@@ -19,9 +19,10 @@ export const authOptions: NextAuthOptions = {
       async authorize(creds) {
         if (!creds?.email || !creds.password) return null;
         const user = await prisma.user.findUnique({ where: { email: creds.email } });
-        if (!user?.passwordHash) return null;
+        if (!user?.passwordHash) throw new Error("Account not found");
         const ok = await compare(creds.password, user.passwordHash);
-        return ok ? user : null;
+        if (!ok) throw new Error("Incorrect password");
+        return user;
       }
     })
   ],
