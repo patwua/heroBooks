@@ -1,11 +1,11 @@
 "use client";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import { normalizePlan, type Plan } from "@/lib/plans";
 
 const PRICES: Record<Plan, number> = { starter: 0, business: 9900, enterprise: 0 };
 
-export default function CheckoutPage() {
+function CheckoutContent() {
   const router = useRouter();
   const sp = useSearchParams();
   const initialPlan = normalizePlan(sp.get("plan"));
@@ -25,8 +25,11 @@ export default function CheckoutPage() {
   }, [base, promo]);
 
   function formatGYD(n: number) {
-    try { return new Intl.NumberFormat(undefined, { style: "currency", currency: "GYD", maximumFractionDigits: 0 }).format(n); }
-    catch { return `GYD $${n.toLocaleString()}`; }
+    try {
+      return new Intl.NumberFormat(undefined, { style: "currency", currency: "GYD", maximumFractionDigits: 0 }).format(n);
+    } catch {
+      return `GYD $${n.toLocaleString()}`;
+    }
   }
 
   async function onSubmit(e: React.FormEvent) {
@@ -112,5 +115,13 @@ export default function CheckoutPage() {
         </button>
       </form>
     </section>
+  );
+}
+
+export default function CheckoutPage() {
+  return (
+    <Suspense fallback={null}>
+      <CheckoutContent />
+    </Suspense>
   );
 }
