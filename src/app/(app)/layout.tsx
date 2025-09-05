@@ -10,7 +10,7 @@ export const metadata = {
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const session = await auth();
-  if (!session) redirect("/signin");
+  if (!session) redirect("/sign-in");
 
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

@@ -23,9 +23,13 @@ export default function SignIn() {
             setError("");
             const res = await signIn("credentials", { email, password, redirect: false });
             if (res?.error) {
+              if (res.error === "No user found") {
+                router.push("/sign-up");
+                return;
+              }
               setError(res.error);
             } else {
-              router.push("/app/dashboard");
+              router.push("/dashboard");
             }
           }}
         >
@@ -36,7 +40,11 @@ export default function SignIn() {
           </Button>
           {error && <p className="text-sm text-red-500">{error}</p>}
         </form>
-        <Button className="w-full mt-3" variant="outline" onClick={() => signIn("google", { callbackUrl: "/app/dashboard" })}>
+        <Button
+          className="w-full mt-3"
+          variant="outline"
+          onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+        >
           Continue with Google
         </Button>
         <p className="mt-4 text-xs text-slate-400">
