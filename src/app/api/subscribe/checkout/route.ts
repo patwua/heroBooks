@@ -6,6 +6,7 @@ import { normalizePlan, type Plan } from "@/lib/plans";
 import { getPlanPriceGyd, applyPromo } from "@/lib/pricing";
 import { getProviderOrThrow } from "@/lib/payments";
 import { getActiveOrgId } from "@/lib/tenant";
+import { baseUrl } from "@/env";
 
 export async function POST(req: Request) {
   const session = await auth();
@@ -38,7 +39,7 @@ export async function POST(req: Request) {
     intentId: intent.id,
     amountGYD: finalAmount,
     description: `heroBooks ${plan} plan`,
-    returnUrl: `${process.env.NEXTAUTH_URL}/checkout/confirm`,
+    returnUrl: `${baseUrl}/checkout/confirm`,
     metadata: { plan },
   });
 
