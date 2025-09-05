@@ -137,8 +137,14 @@ model Customer {
   org       Org        @relation(fields: [orgId], references: [id])
   invoices  Invoice[]
   estimates Estimate[]
+  isDemo        Boolean  @default(false)
+  demoSessionId String?
+  expiresAt     DateTime?
 
   @@unique([id, orgId])
+  @@index([orgId, isDemo])
+  @@index([isDemo, expiresAt])
+  @@index([isDemo, demoSessionId])
 }
 
 model TaxCode {
@@ -167,8 +173,14 @@ model Item {
   taxCode      TaxCode?      @relation(fields: [taxCodeId, orgId], references: [id, orgId])
   invoiceLines InvoiceLine[]
   billLines    BillLine[]
+  isDemo        Boolean  @default(false)
+  demoSessionId String?
+  expiresAt     DateTime?
 
   @@unique([id, orgId])
+  @@index([orgId, isDemo])
+  @@index([isDemo, expiresAt])
+  @@index([isDemo, demoSessionId])
 }
 
 model Invoice {
@@ -184,9 +196,15 @@ model Invoice {
   lines            InvoiceLine[]
   payments         Payment[]
   bankTransactions BankTransaction[]
+  isDemo        Boolean  @default(false)
+  demoSessionId String?
+  expiresAt     DateTime?
 
   @@unique([id, orgId])
   @@unique([orgId, number])
+  @@index([orgId, isDemo])
+  @@index([isDemo, expiresAt])
+  @@index([isDemo, demoSessionId])
 }
 
 model InvoiceLine {
@@ -215,8 +233,14 @@ model Payment {
   date             DateTime          @default(now())
   invoice          Invoice           @relation(fields: [invoiceId, orgId], references: [id, orgId])
   bankTransactions BankTransaction[]
+  isDemo        Boolean  @default(false)
+  demoSessionId String?
+  expiresAt     DateTime?
 
   @@unique([id, orgId])
+  @@index([orgId, isDemo])
+  @@index([isDemo, expiresAt])
+  @@index([isDemo, demoSessionId])
 }
 
 model Vendor {
@@ -276,9 +300,15 @@ model Estimate {
   org        Org            @relation(fields: [orgId], references: [id])
   customer   Customer?      @relation(fields: [customerId, orgId], references: [id, orgId])
   lines      EstimateLine[]
+  isDemo        Boolean  @default(false)
+  demoSessionId String?
+  expiresAt     DateTime?
 
   @@unique([id, orgId])
   @@unique([orgId, number])
+  @@index([orgId, isDemo])
+  @@index([isDemo, expiresAt])
+  @@index([isDemo, demoSessionId])
 }
 
 model EstimateLine {
@@ -312,9 +342,15 @@ model BankTransaction {
   invoice   Invoice? @relation(fields: [invoiceId, orgId], references: [id, orgId])
   payment   Payment? @relation(fields: [paymentId, orgId], references: [id, orgId])
   bill      Bill?    @relation(fields: [billId, orgId], references: [id, orgId])
+  isDemo        Boolean  @default(false)
+  demoSessionId String?
+  expiresAt     DateTime?
 
   @@unique([id, orgId])
   @@index([orgId, date])
+  @@index([orgId, isDemo])
+  @@index([isDemo, expiresAt])
+  @@index([isDemo, demoSessionId])
 }
 
 model OrgTheme {

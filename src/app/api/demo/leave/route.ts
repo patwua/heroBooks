@@ -7,7 +7,7 @@ export async function POST() {
   if (!session?.user?.id) {
     return NextResponse.json({ ok: false, error: "Not authenticated" }, { status: 401 });
   }
-  // Opportunistic cleanup (TTL) — safe no-op for now
+  // Opportunistic expired purge
   await purgeExpiredDemoDataIfAny();
 
   // Unset demo and fall back to the user's last real org (kept in your own session.orgId handling)

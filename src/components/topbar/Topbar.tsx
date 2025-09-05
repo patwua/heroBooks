@@ -6,7 +6,7 @@ import { isDemoSession } from "@/lib/demo";
 
 export default async function Topbar() {
   const session = await auth();
-  const demo = isDemoSession(session);
+  const demo = await isDemoSession(session);
 
   return (
     <header className="h-14 border-b bg-background/60 backdrop-blur flex items-center justify-between px-4">
