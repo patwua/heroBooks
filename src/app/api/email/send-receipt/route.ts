@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/authOptions";
+import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { receiptPdf } from "@/lib/receiptPdf";
 import { receiptTemplate } from "@/emails/templates";
@@ -9,7 +8,7 @@ import fs from "fs";
 import path from "path";
 
 export async function POST(req: Request) {
-  const session = await getServerSession(authOptions);
+  const session = await auth();
   if (!session?.user?.id) {
     return new NextResponse("Unauthorized", { status: 401 });
   }

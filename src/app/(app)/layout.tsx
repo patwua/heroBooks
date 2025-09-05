@@ -1,8 +1,7 @@
 import Sidebar from "@/components/nav/Sidebar";
 import Topbar from "@/components/topbar/Topbar";
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/authOptions";
+import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 
 export const metadata = {
@@ -10,8 +9,8 @@ export const metadata = {
 };
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
-  const session = await getServerSession(authOptions);
-  if (!session) redirect("/sign-in");
+  const session = await auth();
+  if (!session) redirect("/signin");
 
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

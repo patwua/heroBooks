@@ -1,6 +1,5 @@
-import { getServerSession } from "next-auth";
 import type { Session } from "next-auth";
-import { authOptions } from "./auth";
+import { auth } from "./auth";
 import { prisma } from "./prisma";
 
 export type AdminGate =
@@ -8,7 +7,7 @@ export type AdminGate =
   | { ok: false; reason: "unauthorized" | "forbidden" };
 
 export async function requireAdmin(): Promise<AdminGate> {
-  const session = await getServerSession(authOptions);
+  const session = await auth();
   if (!session?.user?.id) return { ok: false, reason: "unauthorized" };
 
   const userId = (session.user as any).id as string;
