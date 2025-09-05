@@ -8,7 +8,7 @@ declare module "next-auth" {
       name?: string | null;
     };
     demo?: boolean;
-    orgId?: string;          // active org for the session (demo uses DEMO_ORG_ID)
+    orgId?: string;          // active org for the session (demo uses resolved DEMO_ORG_ID)
     demoSessionId?: string;  // per-session UUID for demo isolation
   }
 }

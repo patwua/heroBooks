@@ -15,12 +15,12 @@ export async function GET() {
   if (await isDemoSession(session)) {
     await purgeExpiredDemoDataIfAny();
     const where = await demoReadWhere(session);
-    const data = await prisma.customer.findMany({ where, orderBy: { createdAt: "desc" } });
+    const data = await prisma.item.findMany({ where, orderBy: { name: "asc" } });
     return NextResponse.json(data);
   }
   const orgId = await resolveActiveOrgId(session);
-  const customers = await prisma.customer.findMany({ where: { orgId }, orderBy: { createdAt: "desc" } });
-  return NextResponse.json(customers);
+  const items = await prisma.item.findMany({ where: { orgId }, orderBy: { name: "asc" } });
+  return NextResponse.json(items);
 }
 
 export async function POST(req: Request) {
@@ -29,11 +29,11 @@ export async function POST(req: Request) {
   const body = await req.json();
   if (await isDemoSession(session)) {
     await purgeExpiredDemoDataIfAny();
-    const data = await prisma.customer.create({ data: await withDemoWrite(session, body) });
+    const data = await prisma.item.create({ data: await withDemoWrite(session, body) });
     return NextResponse.json({ ...data, demo: true });
   }
   const orgId = await resolveActiveOrgId(session);
-  const data = await prisma.customer.create({ data: { ...body, orgId } });
+  const data = await prisma.item.create({ data: { ...body, orgId } });
   return NextResponse.json(data);
 }
 

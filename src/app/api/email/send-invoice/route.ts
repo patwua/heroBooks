@@ -67,7 +67,7 @@ export async function POST(req: Request) {
     })
   ).html;
 
-  if (isDemoSession(session)) {
+  if (await isDemoSession(session)) {
     const allowSendToSelf = form.get("sendToSelf")?.toString() === "true";
     if (!allowSendToSelf) {
       return NextResponse.json({ ok: true, mode: "preview", html });
