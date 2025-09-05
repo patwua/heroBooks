@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { receiptPdf } from "@/lib/receiptPdf";
 import { receiptTemplate } from "@/emails/templates";
 import { sendMail } from "@/lib/mailer";
+import { isDemoSession } from "@/lib/demo";
 import fs from "fs";
 import path from "path";
 
@@ -20,7 +21,7 @@ export async function POST(req: Request) {
   if (!userOrg) {
     return new NextResponse("No organization", { status: 400 });
   }
-  const { paymentId } = await req.json();
+  const { paymentId, sendToSelf } = await req.json();
   if (!paymentId) {
     return new NextResponse("Missing paymentId", { status: 400 });
   }
@@ -53,6 +54,23 @@ export async function POST(req: Request) {
       amount: Number(payment.amount)
     })
   ).html;
+
+  if (isDemoSession(session)) {
+    const allowSendToSelf = Boolean(sendToSelf);
+    if (!allowSendToSelf) {
+      return NextResponse.json({ ok: true, mode: "preview", html });
+    }
+    await sendMail({
+      to: session.user.email!,
+      subject: `Receipt #${payment.receiptNumber}`,
+      html,
+      attachments: [
+        { filename: `receipt-${payment.receiptNumber}.pdf`, content: pdf }
+      ]
+    });
+    return NextResponse.json({ ok: true });
+  }
+
   await sendMail({
     to: payment.invoice.customer.email,
     subject: `Receipt #${payment.receiptNumber}`,

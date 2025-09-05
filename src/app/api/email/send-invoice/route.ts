@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { invoicePdf } from "@/lib/invoicePdf";
 import { invoiceTemplate } from "@/emails/templates";
 import { sendMail } from "@/lib/mailer";
+import { isDemoSession } from "@/lib/demo";
 import fs from "fs";
 import path from "path";
 
@@ -65,6 +66,22 @@ export async function POST(req: Request) {
       total
     })
   ).html;
+
+  if (isDemoSession(session)) {
+    const allowSendToSelf = form.get("sendToSelf")?.toString() === "true";
+    if (!allowSendToSelf) {
+      return NextResponse.json({ ok: true, mode: "preview", html });
+    }
+    // Force recipient = user’s own email
+    await sendMail({
+      to: session.user.email!,
+      subject: `Invoice #${invoice.number}`,
+      html,
+      attachments: [{ filename: `invoice-${invoice.number}.pdf`, content: pdf }],
+    });
+    return NextResponse.json({ ok: true });
+  }
+
   await sendMail({
     to: invoice.customer.email,
     subject: `Invoice #${invoice.number}`,
