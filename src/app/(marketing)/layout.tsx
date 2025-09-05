@@ -1,6 +1,6 @@
 import MarketingHeader from "@/components/marketing/MarketingHeader";
 import MarketingFooter from "@/components/marketing/MarketingFooter";
-import { ThemeProvider } from "@/components/ui/theme-provider";
+import { MarketingProviders } from "@/components/marketing/MarketingProviders";
 
 export const metadata = {
   title: "heroBooks — Guyana-first Accounting",
@@ -10,12 +10,12 @@ export const metadata = {
 
 export default function MarketingLayout({ children }: { children: React.ReactNode }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <MarketingProviders>
       <div className="min-h-screen flex flex-col bg-background">
         <MarketingHeader />
         <main className="flex-1">{children}</main>
         <MarketingFooter />
       </div>
-    </ThemeProvider>
+    </MarketingProviders>
   );
 }
