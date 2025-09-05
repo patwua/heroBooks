@@ -20,12 +20,16 @@ export const authConfig = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        if (!credentials?.email || !credentials.password) return null;
-        const user = await prisma.user.findUnique({ where: { email: credentials.email } });
+        const { email, password } = credentials as {
+          email?: string;
+          password?: string;
+        };
+        if (!email || !password) return null;
+        const user = await prisma.user.findUnique({ where: { email } });
         if (!user || !user.passwordHash) {
           throw new Error("No user found");
         }
-        const valid = await compare(credentials.password, user.passwordHash);
+        const valid = await compare(password, user.passwordHash);
         if (!valid) {
           throw new Error("Invalid email or password");
         }
