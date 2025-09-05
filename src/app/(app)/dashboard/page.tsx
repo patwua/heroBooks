@@ -1,7 +1,7 @@
 import KpiCard from "@/components/dashboard/KpiCard";
 import { AgingList } from "@/components/dashboard/AgingList";
 import { getDashboardData } from "@/lib/dashboard";
-import { auth } from "next-auth";
+import { auth } from "@/lib/auth";
 import { isDemoSession } from "@/lib/demo";
 import Link from "next/link";
 
@@ -11,7 +11,10 @@ export default async function DashboardPage() {
   const session = await auth();
   const demo = isDemoSession(session);
   const noRealOrg = !demo && !(session as any)?.orgId;
-  const data = await getDashboardData();
+  let data: Awaited<ReturnType<typeof getDashboardData>> | null = null;
+  if (!noRealOrg) {
+    data = await getDashboardData();
+  }
 
   return (
     <div className="space-y-6">
@@ -46,26 +49,30 @@ export default async function DashboardPage() {
       <h1 className="text-2xl font-semibold">Welcome{session?.user?.name ? `, ${session.user.name}` : ""}</h1>
       <p className="text-gray-600">This is your heroBooks dashboard.</p>
 
-      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        <KpiCard title="A/R Total" value={`$${data.arTotal.toLocaleString()}`} hint="Open customer balances" />
-        <KpiCard title="A/P Total" value={`$${data.apTotal.toLocaleString()}`} hint="Open vendor balances" />
-        <KpiCard title="VAT Due" value={`$${data.vatDue.toLocaleString()}`} hint="Estimated current period" />
-        <KpiCard title="Cash" value="$0" hint="Connect bank to see live" />
-      </div>
+      {data && (
+        <>
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            <KpiCard title="A/R Total" value={`$${data.arTotal.toLocaleString()}`} hint="Open customer balances" />
+            <KpiCard title="A/P Total" value={`$${data.apTotal.toLocaleString()}`} hint="Open vendor balances" />
+            <KpiCard title="VAT Due" value={`$${data.vatDue.toLocaleString()}`} hint="Estimated current period" />
+            <KpiCard title="Cash" value="$0" hint="Connect bank to see live" />
+          </div>
 
-      <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
-        <AgingList title="A/R Aging" buckets={data.arAging} />
-        <AgingList title="A/P Aging" buckets={data.apAging} />
-      </div>
+          <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
+            <AgingList title="A/R Aging" buckets={data.arAging} />
+            <AgingList title="A/P Aging" buckets={data.apAging} />
+          </div>
 
-      <div className="rounded-xl border p-4 bg-card">
-        <div className="text-sm font-medium mb-2">Reminders</div>
-        <ul className="list-disc list-inside text-sm text-muted-foreground">
-          <li>VAT filing due soon – review VAT Summary</li>
-          <li>3 invoices are past due – send reminders</li>
-          <li>Bank import available – reconcile this week</li>
-        </ul>
-      </div>
+          <div className="rounded-xl border p-4 bg-card">
+            <div className="text-sm font-medium mb-2">Reminders</div>
+            <ul className="list-disc list-inside text-sm text-muted-foreground">
+              <li>VAT filing due soon – review VAT Summary</li>
+              <li>3 invoices are past due – send reminders</li>
+              <li>Bank import available – reconcile this week</li>
+            </ul>
+          </div>
+        </>
+      )}
     </div>
   );
 }
