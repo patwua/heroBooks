@@ -1,4 +1,5 @@
 import { PaymentProvider, CreateCheckoutInput, CreateCheckoutResult } from "./types";
+import { baseUrl } from "@/env";
 
 const PAYPAL_BASE =
   process.env.PAYPAL_ENV === "live" ? "https://api-m.paypal.com" : "https://api-m.sandbox.paypal.com";
@@ -38,10 +39,8 @@ export const paypalProvider: PaymentProvider = {
             },
           ],
           application_context: {
-            return_url: `${process.env.NEXTAUTH_URL}/api/paypal/capture?intent=${encodeURIComponent(
-              input.intentId
-            )}`,
-            cancel_url: `${process.env.NEXTAUTH_URL}/checkout?cancel=1`,
+            return_url: `${baseUrl}/api/paypal/capture?intent=${encodeURIComponent(input.intentId)}`,
+            cancel_url: `${baseUrl}/checkout?cancel=1`,
             brand_name: "heroBooks",
             user_action: "PAY_NOW",
           },
