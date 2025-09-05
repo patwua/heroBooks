@@ -1,20 +1,40 @@
 import type { NextAuthConfig } from "next-auth";
 import Google from "next-auth/providers/google";
+import Credentials from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { prisma } from "@/lib/prisma";
+import { compare } from "bcryptjs";
 
 export const authConfig = {
   adapter: PrismaAdapter(prisma),
-  session: { strategy: "jwt" },
+  session: { strategy: "jwt", maxAge: 30 * 24 * 60 * 60 },
   providers: [
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID ?? "",
       clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "",
       allowDangerousEmailAccountLinking: true,
     }),
+    Credentials({
+      credentials: {
+        email: { label: "Email", type: "email" },
+        password: { label: "Password", type: "password" },
+      },
+      async authorize(credentials) {
+        if (!credentials?.email || !credentials.password) return null;
+        const user = await prisma.user.findUnique({ where: { email: credentials.email } });
+        if (!user || !user.passwordHash) {
+          throw new Error("No user found");
+        }
+        const valid = await compare(credentials.password, user.passwordHash);
+        if (!valid) {
+          throw new Error("Invalid email or password");
+        }
+        return { id: user.id, email: user.email ?? undefined, name: user.name ?? undefined };
+      },
+    }),
   ],
   pages: {
-    signIn: "/signin",
+    signIn: "/sign-in",
   },
   callbacks: {
     async jwt({ token, user }) {

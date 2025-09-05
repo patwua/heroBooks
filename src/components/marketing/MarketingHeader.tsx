@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSession } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -14,6 +15,7 @@ const nav = [
 
 export default function MarketingHeader() {
   const pathname = usePathname();
+  const { data: session } = useSession();
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/70 backdrop-blur">
       <div className="container mx-auto px-4 h-14 flex items-center justify-between">
@@ -35,9 +37,15 @@ export default function MarketingHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild variant="ghost" size="sm">
-            <Link href="/sign-in">Sign in</Link>
-          </Button>
+          {session ? (
+            <Button asChild variant="ghost" size="sm">
+              <Link href="/dashboard">Dashboard</Link>
+            </Button>
+          ) : (
+            <Button asChild variant="ghost" size="sm">
+              <Link href="/sign-in">Sign in</Link>
+            </Button>
+          )}
           {/* Preselect the popular plan on sign-up */}
           <Button asChild size="sm">
             <Link href="/sign-up?plan=business">Get started</Link>

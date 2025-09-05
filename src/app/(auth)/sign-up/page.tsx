@@ -34,7 +34,11 @@ export default function SignUpPage({
       setError(data?.error ?? "Registration failed");
       return;
     }
-    await signIn("credentials", { email, password, redirect: false });
+    const signInRes = await signIn("credentials", { email, password, redirect: false });
+    if (signInRes?.error) {
+      setError(signInRes.error);
+      return;
+    }
     alert("Account created!");
     if (plan === "starter") {
       router.push("/settings/profile");
