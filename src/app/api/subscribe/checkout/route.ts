@@ -1,7 +1,6 @@
 // Updated to route to paypal|zelle|mmg|bank only
 import { NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { normalizePlan, type Plan } from "@/lib/plans";
 import { getPlanPriceGyd, applyPromo } from "@/lib/pricing";
@@ -9,7 +8,7 @@ import { getProviderOrThrow } from "@/lib/payments";
 import { getActiveOrgId } from "@/lib/tenant";
 
 export async function POST(req: Request) {
-  const session = await getServerSession(authOptions);
+  const session = await auth();
   if (!session?.user?.id) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const { plan: rawPlan, promoCode, paymentMethod = "paypal" } = await req.json?.() ?? {};

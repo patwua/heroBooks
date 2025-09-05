@@ -1,12 +1,11 @@
 import { NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/authOptions";
+import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { cookies } from "next/headers";
 import { ORG_COOKIE_NAME } from "@/lib/tenant";
 
 export async function POST(req: Request) {
-  const session = await getServerSession(authOptions);
+  const session = await auth();
   if (!session?.user?.id) return NextResponse.json({ error: "unauth" }, { status: 401 });
 
   const { orgId } = await req.json();

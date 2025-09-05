@@ -1,6 +1,5 @@
 import { cookies } from "next/headers";
-import { getServerSession } from "next-auth";
-import { authOptions } from "./authOptions";
+import { auth } from "./auth";
 import { prisma } from "./prisma";
 import type { Org, OrgTheme, UserOrg } from "@prisma/client";
 
@@ -11,7 +10,7 @@ const ORG_COOKIE = "hb_org";
  * Throws on invalid access.
  */
 export async function getActiveOrgId(): Promise<string> {
-  const session = await getServerSession(authOptions);
+  const session = await auth();
   if (!session?.user?.id) throw new Error("Not authenticated");
 
   const jar = cookies();
@@ -51,7 +50,7 @@ type UserOrgWithOrg = UserOrg & {
 };
 
 export async function listUserOrgs(): Promise<UserOrgWithOrg[]> {
-  const session = await getServerSession(authOptions);
+  const session = await auth();
   if (!session?.user?.id) return [];
   return prisma.userOrg.findMany({
     where: { userId: session.user.id },

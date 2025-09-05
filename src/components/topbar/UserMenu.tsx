@@ -1,5 +1,4 @@
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/authOptions";
+import { auth } from "@/lib/auth";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
@@ -8,7 +7,7 @@ import {
 import Link from "next/link";
 
 export default async function UserMenu() {
-  const session = await getServerSession(authOptions);
+  const session = await auth();
   const user = session?.user;
   const initials = (user?.name ?? "U")
     .split(" ")
