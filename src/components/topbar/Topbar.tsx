@@ -3,6 +3,7 @@ import OrgSwitcher from "./OrgSwitcher";
 import UserMenu from "./UserMenu";
 import { isDemoModeFromCookies } from "@/lib/demo";
 import DemoExitButton from "./DemoExitButton";
+import HideLockedSwitch from "./HideLockedSwitch";
 
 export default async function Topbar() {
   const inDemo = isDemoModeFromCookies();
@@ -18,6 +19,7 @@ export default async function Topbar() {
         )}
       </div>
       <div className="flex items-center gap-2">
+        <HideLockedSwitch />
         <OrgSwitcher />
         {inDemo ? <DemoExitButton /> : null}
         <ThemeToggle />
