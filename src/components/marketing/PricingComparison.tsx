@@ -1,14 +1,13 @@
 import { Check, Minus } from "lucide-react";
 
-type PlanKey = "starter" | "business" | "enterprise";
+export type PlanKey = "starter" | "business" | "enterprise";
 
-const plans: { key: PlanKey; name: string; price: string; highlight?: boolean }[] = [
+const basePlans: { key: PlanKey; name: string; price: string }[] = [
   { key: "starter", name: "Starter", price: "GYD $0 (beta)" },
-  { key: "business", name: "Business", price: "GYD $9,900 / mo", highlight: true },
+  { key: "business", name: "Business", price: "GYD $9,900 / mo" },
   { key: "enterprise", name: "Enterprise", price: "Let’s talk" },
 ];
 
-// Each feature maps which plans include it
 const features: { label: string; notes?: string; included: Partial<Record<PlanKey, boolean>> }[] = [
   { label: "Users", notes: "Starter: up to 2", included: { starter: true, business: true, enterprise: true } },
   { label: "VAT-ready invoicing", included: { starter: true, business: true, enterprise: true } },
@@ -27,10 +26,17 @@ function Cell({ ok }: { ok: boolean | undefined }) {
   return <Minus className="h-4 w-4 text-muted-foreground" />;
 }
 
-export default function PricingComparison({ next = "/sign-up" }: { next?: string }) {
+export default function PricingComparison({
+  next = "/sign-up",
+  highlight = "business",
+}: {
+  next?: string;
+  highlight?: PlanKey;
+}) {
+  const plans = basePlans.map((p) => ({ ...p, highlight: p.key === highlight }));
   return (
     <div className="mt-12 border rounded-2xl overflow-hidden">
-      {/* Header row */}
+      {/* Header */}
       <div className="grid grid-cols-4 bg-muted/40">
         <div className="p-4 text-sm font-medium">Features</div>
         {plans.map((p) => (
@@ -58,7 +64,7 @@ export default function PricingComparison({ next = "/sign-up" }: { next?: string
         ))}
       </div>
 
-      {/* CTAs */}
+      {/* CTAs respect `next` */}
       <div className="grid grid-cols-4 bg-muted/30">
         <div className="p-4 text-sm font-medium">Choose your plan</div>
         {plans.map((p) => {
@@ -79,4 +85,3 @@ export default function PricingComparison({ next = "/sign-up" }: { next?: string
     </div>
   );
 }
-
