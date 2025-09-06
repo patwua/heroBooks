@@ -6,12 +6,6 @@ export const VAT_CODES = [
   { name: "Exempt", rate: 0 },
 ];
 
-// NOTE: Your schema does not expose Org-level PAYE/NIS/COA storage.
-// If/when you add those tables/fields, we’ll seed them here.
-// export const PAYE = { ... }
-// export const NIS = { ... }
-// export const COA = { ... }
-
 export const SEED_CUSTOMERS = [
   { name: "ACME Trading", email: "acme@example.com" },
   { name: "Georgetown Retailers", email: "shop@gt-retail.gy" },
@@ -25,13 +19,38 @@ export const SEED_VENDORS = [
 ];
 
 export const SEED_ITEMS = [
-  // price is Decimal(10,2) in your schema
   { name: "Standard VAT Widget", price: new Decimal(15000), tax: "VAT Standard 14%" },
   { name: "Zero-rated Export Service", price: new Decimal(30000), tax: "Zero-rated 0%" },
   { name: "Exempt Health Service", price: new Decimal(10000), tax: "Exempt" },
   { name: "Standard VAT Gadget", price: new Decimal(8500), tax: "VAT Standard 14%" },
   { name: "Standard VAT Subscription (Monthly)", price: new Decimal(5000), tax: "VAT Standard 14%" },
 ];
+
+export const COA = {
+  assets: [
+    { code: "1000", name: "Cash at Bank" },
+    { code: "1100", name: "Accounts Receivable" },
+    { code: "1200", name: "Inventory" },
+  ],
+  liabilities: [
+    { code: "2000", name: "Accounts Payable" },
+    { code: "2100", name: "VAT Payable (Output-Input)" },
+    { code: "2200", name: "PAYE Payable" },
+    { code: "2300", name: "NIS Payable" },
+  ],
+  equity: [{ code: "3000", name: "Owner’s Equity" }],
+  income: [
+    { code: "4000", name: "Sales (Standard-rated)" },
+    { code: "4010", name: "Sales (Zero-rated)" },
+    { code: "4020", name: "Sales (Exempt)" },
+  ],
+  cogs: [{ code: "5000", name: "Cost of Goods Sold" }],
+  expense: [
+    { code: "6000", name: "Bank Charges" },
+    { code: "6100", name: "Rent" },
+    { code: "6200", name: "Utilities" },
+  ],
+};
 
 export const SEED_DOCS = {
   invoices: [
@@ -67,7 +86,6 @@ export const SEED_DOCS = {
     },
   ],
   payments: [
-    // partial for INV-1001
     {
       ref: "PMT-9001",
       invoiceNumber: 1001,
@@ -84,5 +102,22 @@ export const SEED_DOCS = {
     { ref: "BT-7004", date: "2025-08-14", description: "Utilities", amount: new Decimal(-15000) },
     { ref: "BT-7005", date: "2025-08-17", description: "Bank Fee", amount: new Decimal(-500) },
   ],
+};
+
+export const PAYE_2025 = {
+  effectiveFrom: "2025-01-01",
+  bracketsMonthly: [
+    { order: 1, upTo: "130000.00", rate: "0.0000" },
+    { order: 2, upTo: "260000.00", rate: "0.2500" },
+    { order: 3, upTo: null,        rate: "0.3500" },
+  ],
+};
+
+export const NIS_2025 = {
+  effectiveFrom: "2025-01-01",
+  employeeRate: "0.0560",
+  employerRate: "0.0840",
+  ceilingAmount: "280000.00",
+  ceilingPeriod: "monthly",
 };
 
