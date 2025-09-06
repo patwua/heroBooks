@@ -55,6 +55,7 @@ model Org {
   taxAdvisoryReceipts TaxAdvisoryReceipt[]
   subscriptions    OrgSubscription[]
   checkoutIntents  CheckoutIntent[]
+  payslips         Payslip[]
   createdAt        DateTime          @default(now())
   updatedAt        DateTime          @updatedAt
 }
@@ -509,4 +510,25 @@ model TaxAdvisoryReceipt {
   advisory   TaxAdvisory   @relation(fields: [advisoryId], references: [id])
   @@unique([orgId, advisoryId])
   @@index([orgId, acceptedAt])
+}
+
+model Payslip {
+  id            String   @id @default(cuid())
+  orgId         String
+  period        DateTime  // e.g., 2025-08-01 (use first day of month)
+  employeeName  String
+  employeeEmail String?
+  gross         Decimal  @db.Decimal(14,2)
+  allowance     Decimal  @db.Decimal(14,2)
+  chargeable    Decimal  @db.Decimal(14,2)
+  payeTax       Decimal  @db.Decimal(14,2)
+  nisEmployee   Decimal  @db.Decimal(14,2)
+  nisEmployer   Decimal  @db.Decimal(14,2)
+  nisInsurable  Decimal  @db.Decimal(14,2)
+  net           Decimal  @db.Decimal(14,2)
+  createdAt     DateTime @default(now())
+  org           Org      @relation(fields: [orgId], references: [id])
+
+  @@index([orgId, period])
+  @@unique([id, orgId])
 }

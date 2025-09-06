@@ -12,6 +12,8 @@ import {
   purgeExpiredDemoDataIfAny,
   getDemoOrgId,
 } from "@/lib/demo";
+import { Decimal } from "@prisma/client/runtime/library";
+import { calcLineVat } from "@/lib/tax/vat";
 
 interface InvoiceItemInput {
   itemId?: string;
@@ -19,6 +21,20 @@ interface InvoiceItemInput {
   quantity: number;
   unitPrice?: number;
   taxCodeId?: string;
+}
+
+async function computeInvoiceTotals(invoiceId: string, orgId: string) {
+  const lines = await prisma.invoiceLine.findMany({
+    where: { orgId, invoiceId },
+    include: { taxCode: true },
+  });
+  const sub = lines.reduce((acc, l) => acc.add(l.unitPrice.mul(l.quantity)), new Decimal(0));
+  const vat = lines.reduce(
+    (acc, l) => acc.add(calcLineVat(l.unitPrice, l.quantity, l.taxCode?.rate ?? 0)),
+    new Decimal(0),
+  );
+  const total = sub.add(vat);
+  return { subTotal: sub, vatTotal: vat, total };
 }
 
 export async function GET() {
@@ -133,7 +149,8 @@ export async function POST(req: Request) {
       return tx.invoice.create({ data, include: { lines: true, customer: true } });
     });
     if (!demo) await notifyWebhook(orgId, "invoice.created", invoice);
-    return NextResponse.json(demo ? { ...invoice, demo: true } : invoice);
+    const totals = await computeInvoiceTotals(invoice.id, orgId);
+    return NextResponse.json({ ok: true, data: { invoice: demo ? { ...invoice, demo: true } : invoice, totals } });
   } catch (err: any) {
     if (
       err.message === "ITEM_NOT_FOUND" ||
@@ -147,5 +164,58 @@ export async function POST(req: Request) {
     }
     throw err;
   }
+}
+
+export async function PUT(req: Request) {
+  const session = await auth();
+  if (!session?.user?.id) return new NextResponse("Unauthorized", { status: 401 });
+  const orgId = await resolveActiveOrgId(session);
+  if (!orgId) return new NextResponse("No organization", { status: 400 });
+
+  const body = await req.json();
+  const { id, customerId, issueDate, dueDate, status, items } = body as any;
+  if (!id) return new NextResponse("Missing invoice id", { status: 400 });
+
+  await prisma.invoice.update({
+    where: { id },
+    data: {
+      customerId: customerId ?? undefined,
+      issueDate: issueDate ? new Date(issueDate) : undefined,
+      dueDate: dueDate ? new Date(dueDate) : undefined,
+      status: status ?? undefined,
+    },
+  });
+
+  if (Array.isArray(items)) {
+    await prisma.invoiceLine.deleteMany({ where: { orgId, invoiceId: id } });
+
+    const itemIds = items.map((l: any) => l.itemId).filter(Boolean);
+    const dbItems = itemIds.length
+      ? await prisma.item.findMany({ where: { orgId, id: { in: itemIds } } })
+      : [];
+    const itemById = new Map(dbItems.map((i) => [i.id, i]));
+
+    await prisma.invoice.update({
+      where: { id },
+      data: {
+        lines: {
+          create: items.map((l: any) => {
+            const it = l.itemId ? itemById.get(l.itemId) : null;
+            return {
+              orgId,
+              itemId: l.itemId ?? null,
+              description: l.description ?? it?.description ?? null,
+              quantity: l.quantity ?? 1,
+              unitPrice: l.unitPrice ? new Prisma.Decimal(l.unitPrice) : new Prisma.Decimal(it?.price ?? 0),
+              taxCodeId: l.taxCodeId ?? it?.taxCodeId ?? null,
+            };
+          }),
+        },
+      },
+    });
+  }
+
+  const totals = await computeInvoiceTotals(id, orgId);
+  return NextResponse.json({ ok: true, data: { id, totals } });
 }
 
