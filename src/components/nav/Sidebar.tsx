@@ -1,105 +1,103 @@
 import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 import {
-  getActiveOrgId,
-  getFeatureStatuses,
-  FEATURE_REGISTRY,
-  reasonText,
-  getUserUiSettings,
-} from "@/lib/features";
+  LayoutDashboard,
+  FileText,
+  Users,
+  Package,
+  Receipt,
+  Building2,
+  Settings,
+  Tags,
+  Banknote,
+  Wallet,
+} from "lucide-react";
 
-function LockedBadge({ reason }: { reason: string }) {
-  const text = reasonText(reason as any);
-  return (
-    <span
-      title={text}
-      className="ml-2 text-[10px] rounded bg-muted px-1 py-0.5 cursor-help"
-    >
-      Locked
-    </span>
-  );
-}
+const groups = [
+  {
+    label: "Overview",
+    items: [{ href: "/dashboard", label: "Dashboard", icon: LayoutDashboard }],
+  },
+  {
+    label: "Sales",
+    items: [
+      { href: "/invoices", label: "Invoices", icon: FileText },
+      { href: "/estimates", label: "Estimates", icon: Tags },
+      { href: "/customers", label: "Customers", icon: Users },
+      { href: "/payments", label: "Payments", icon: Wallet },
+    ],
+  },
+  {
+    label: "Purchases",
+    items: [
+      { href: "/bills", label: "Bills", icon: Receipt },
+      { href: "/vendors", label: "Vendors", icon: Building2 },
+      { href: "/items", label: "Items", icon: Package },
+    ],
+  },
+  {
+    label: "Reports",
+    items: [{ href: "/reports", label: "Reports", icon: Banknote }],
+  },
+  {
+    label: "Organization",
+    items: [{ href: "/settings", label: "Settings", icon: Settings }],
+  },
+];
 
-function NavItem({ href, label }: { href: string; label: React.ReactNode }) {
-  return (
-    <Link
-      href={href}
-      className="flex items-center justify-between rounded px-2 py-1 hover:bg-accent hover:text-accent-foreground"
-    >
-      {label}
-    </Link>
-  );
-}
-
-export default async function Sidebar() {
-  const orgId = await getActiveOrgId();
-  const { hideLockedFeatures } = await getUserUiSettings();
-
-  // Primary, always-on navigation (kept out of feature flags)
-  const STATIC_NAV = [
-    { group: "accounting", label: "Dashboard", route: "/dashboard" },
-    { group: "accounting", label: "Invoices", route: "/invoices" },
-    { group: "accounting", label: "Estimates", route: "/estimates" },
-    { group: "accounting", label: "Customers", route: "/customers" },
-    { group: "accounting", label: "Vendors", route: "/vendors" },
-    { group: "accounting", label: "Items", route: "/items" },
-    { group: "settings",   label: "Organization", route: "/settings/org" },
-  ];
-
-  const statuses = await getFeatureStatuses(
-    FEATURE_REGISTRY.map((f) => f.key),
-    orgId,
-  );
-
-  const groups: Record<
-    string,
-    { label: string; items: { meta: any; locked?: boolean; reason?: string }[] }
-  > = {
-    accounting: { label: "Accounting", items: [] },
-    reports: { label: "Reports", items: [] },
-    settings: { label: "Settings", items: [] },
-  };
-
-  // Always render the static nav
-  for (const item of STATIC_NAV) {
-    groups[item.group]?.items.push({
-      meta: { key: `core:${item.route}`, route: item.route, label: item.label },
-    });
-  }
-
-  // Then add feature-gated entries
-  for (const meta of FEATURE_REGISTRY) {
-    const st = statuses[meta.key];
-    const locked = !st.allowed;
-    if (hideLockedFeatures && locked) continue;
-    groups[meta.group].items.push({ meta, locked, reason: st.reason });
-  }
+export default function Sidebar() {
+  const pathname = usePathname();
 
   return (
-    <aside className="w-60 shrink-0 border-r bg-background p-3 text-sm">
-      {Object.values(groups).map((g) => (
-        <div key={g.label} className="space-y-1 mb-4">
-          <div className="px-2 py-1 text-xs uppercase text-muted-foreground">
-            {g.label}
+    <aside className="w-64 shrink-0 border-r bg-background">
+      <div className="h-14 px-4 flex items-center gap-2 border-b">
+        <Image
+          src="/logos/heroBooks mini Color.png"
+          width={24}
+          height={24}
+          alt="heroBooks"
+        />
+        <span className="font-semibold tracking-tight">heroBooks</span>
+      </div>
+      <nav className="px-2 py-4 space-y-6">
+        {groups.map((g) => (
+          <div key={g.label}>
+            <div className="px-2 text-[11px] uppercase tracking-wider text-muted-foreground mb-2">
+              {g.label}
+            </div>
+            <ul className="space-y-1">
+              {g.items.map((item) => {
+                const active =
+                  pathname === item.href || pathname?.startsWith(item.href + "/");
+                const Icon = item.icon;
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        "flex items-center gap-2 rounded-md px-3 py-2 text-sm",
+                        active ? "bg-primary/10 text-primary" : "hover:bg-muted"
+                      )}
+                    >
+                      <Icon className="h-4 w-4" />
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
-          {g.items.map(({ meta, locked, reason }) => (
-            <NavItem
-              key={meta.key}
-              href={meta.route}
-              label={
-                <>
-                  <span>{meta.label}</span>
-                  {/* Only show badge for feature-flagged (not static) */}
-                  {meta.key?.startsWith("core:") ? null : (locked && (
-                    <LockedBadge reason={reason} />
-                  ))}
-                </>
-              }
-            />
-          ))}
-        </div>
-      ))}
+        ))}
+      </nav>
 
-      {/* Hide/Show toggle lives in topbar, see Topbar */}
+      {/* Bottom profile/settings area remains (your existing component/link) */}
+      <div className="mt-auto px-2 py-3 border-t text-xs text-muted-foreground">
+        <Link href="/profile" className="hover:underline">
+          Profile & Avatar
+        </Link>
+      </div>
     </aside>
   );
 }
