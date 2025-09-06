@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import { Prisma } from "@prisma/client";
 import {
   isDemoSession,
   demoReadWhere,
@@ -15,7 +16,7 @@ export async function GET() {
   }
   if (await isDemoSession(session)) {
     await purgeExpiredDemoDataIfAny();
-    const where = await demoReadWhere(session);
+    const where = (await demoReadWhere(session)) as Prisma.BankTransactionWhereInput;
     const transactions = await prisma.bankTransaction.findMany({
       where,
       orderBy: { date: "desc" },

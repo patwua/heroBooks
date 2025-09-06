@@ -15,11 +15,12 @@ export async function GET() {
   if (await isDemoSession(session)) {
     await purgeExpiredDemoDataIfAny();
     const where = await demoReadWhere(session);
-    const data = await prisma.customer.findMany({ where, orderBy: { createdAt: "desc" } });
+    const data = await prisma.customer.findMany({ where, orderBy: { name: "asc" } });
     return NextResponse.json(data);
   }
   const orgId = await resolveActiveOrgId(session);
-  const customers = await prisma.customer.findMany({ where: { orgId }, orderBy: { createdAt: "desc" } });
+  if (!orgId) return new NextResponse("No organization", { status: 400 });
+  const customers = await prisma.customer.findMany({ where: { orgId }, orderBy: { name: "asc" } });
   return NextResponse.json(customers);
 }
 
@@ -33,6 +34,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ ...data, demo: true });
   }
   const orgId = await resolveActiveOrgId(session);
+  if (!orgId) return new NextResponse("No organization", { status: 400 });
   const data = await prisma.customer.create({ data: { ...body, orgId } });
   return NextResponse.json(data);
 }
