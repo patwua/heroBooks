@@ -19,6 +19,7 @@ export async function GET() {
     return NextResponse.json(data);
   }
   const orgId = await resolveActiveOrgId(session);
+  if (!orgId) return new NextResponse("No organization", { status: 400 });
   const items = await prisma.item.findMany({ where: { orgId }, orderBy: { name: "asc" } });
   return NextResponse.json(items);
 }
@@ -33,6 +34,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ ...data, demo: true });
   }
   const orgId = await resolveActiveOrgId(session);
+  if (!orgId) return new NextResponse("No organization", { status: 400 });
   const data = await prisma.item.create({ data: { ...body, orgId } });
   return NextResponse.json(data);
 }

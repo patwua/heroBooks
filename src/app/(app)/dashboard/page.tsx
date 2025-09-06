@@ -1,8 +1,8 @@
 import KpiCard from "@/components/dashboard/KpiCard";
 import { AgingList } from "@/components/dashboard/AgingList";
-import { getDashboardData } from "@/lib/dashboard";
+import { getDashboardData, getDashboardDataForOrg } from "@/lib/dashboard";
 import { auth } from "@/lib/auth";
-import { isDemoSession } from "@/lib/demo";
+import { isDemoSession, getDemoOrgId } from "@/lib/demo";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
@@ -10,10 +10,16 @@ export const dynamic = "force-dynamic";
 export default async function DashboardPage() {
   const session = await auth();
   const demo = await isDemoSession(session);
-  const noRealOrg = !demo && !(session as any)?.orgId;
+  let noRealOrg = false;
   let data: Awaited<ReturnType<typeof getDashboardData>> | null = null;
-  if (!noRealOrg) {
-    data = await getDashboardData();
+  if (demo) {
+    data = await getDashboardDataForOrg(await getDemoOrgId());
+  } else {
+    try {
+      data = await getDashboardData();
+    } catch {
+      noRealOrg = true;
+    }
   }
 
   return (

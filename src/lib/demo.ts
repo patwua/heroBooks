@@ -39,6 +39,7 @@ export async function getDemoOrgId(): Promise<string> {
 /** Is current session in demo mode (and demo org configured)? */
 export async function isDemoSession(session: Session | null | undefined) {
   if (!session?.demo) return false;
+  if (!RAW_DEMO_ORG.trim()) return false;
   const demoOrgId = await getDemoOrgId();
   return Boolean(session?.orgId === demoOrgId);
 }
@@ -60,12 +61,12 @@ export async function purgeExpiredDemoDataIfAny() {
   const now = new Date();
   // Extend this list if you add more demo-enabled tables
   await Promise.allSettled([
-    prisma.invoice.deleteMany({ where: { isDemo: true, expiresAt: { lt: now } } }),
-    prisma.payment.deleteMany({ where: { isDemo: true, expiresAt: { lt: now } } }),
-    prisma.estimate.deleteMany({ where: { isDemo: true, expiresAt: { lt: now } } }),
-    prisma.customer.deleteMany({ where: { isDemo: true, expiresAt: { lt: now } } }),
-    prisma.item.deleteMany({ where: { isDemo: true, expiresAt: { lt: now } } }),
-    prisma.bankTransaction.deleteMany({ where: { isDemo: true, expiresAt: { lt: now } } }),
+    prisma.invoice.deleteMany({ where: { isDemo: true, expiresAt: { lt: now } } as any }),
+    prisma.payment.deleteMany({ where: { isDemo: true, expiresAt: { lt: now } } as any }),
+    prisma.estimate.deleteMany({ where: { isDemo: true, expiresAt: { lt: now } } as any }),
+    prisma.customer.deleteMany({ where: { isDemo: true, expiresAt: { lt: now } } as any }),
+    prisma.item.deleteMany({ where: { isDemo: true, expiresAt: { lt: now } } as any }),
+    prisma.bankTransaction.deleteMany({ where: { isDemo: true, expiresAt: { lt: now } } as any }),
   ]);
 }
 
@@ -82,7 +83,7 @@ export async function withDemoWrite<T extends Record<string, any>>(session: Sess
 }
 
 /** Demo read filter: only seed(!isDemo) + my ephemeral (isDemo + my session) for this org */
-export async function demoReadWhere(session: Session) {
+export async function demoReadWhere(session: Session): Promise<Record<string, any>> {
   const orgId = await getDemoOrgId();
   return {
     orgId,
