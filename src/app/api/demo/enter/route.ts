@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { enterDemo, getOrCreateDemoOrgId } from "@/lib/demo";
+import { prisma } from "@/lib/prisma";
 
 export async function GET() {
   return NextResponse.json(
@@ -16,6 +17,16 @@ export async function POST() {
   try {
     const orgId = await getOrCreateDemoOrgId();
     await enterDemo(orgId);
+    await prisma.auditLog.create({
+      data: {
+        actorId: session.user.id,
+        actorEmail: session.user.email ?? null,
+        action: "demo.enter",
+        targetType: "Org",
+        targetId: orgId,
+        metadata: { userId: session.user.id },
+      },
+    });
     // You can redirect to dashboard for a nice UX
     return NextResponse.json({ ok: true, orgId, redirect: "/dashboard" });
   } catch (e: any) {

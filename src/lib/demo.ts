@@ -5,6 +5,7 @@ import { prisma } from "@/lib/prisma";
 import { ORG_COOKIE_NAME } from "@/lib/tenant";
 
 const DEMO_COOKIE = "hb_demo";
+const LAST_ENTER_COOKIE = "hb_demo_last";
 const RAW_DEMO_ORG = (process.env.DEMO_ORG_ID ?? "").trim();
 const DEMO_TTL_HOURS = Number(process.env.DEMO_TTL_HOURS || "72");
 
@@ -63,6 +64,10 @@ export async function getDemoOrgId(): Promise<string> {
 /** Enter demo: set cookies (org + demo flag) */
 export async function enterDemo(orgId: string) {
   const jar = cookies();
+  const now = Date.now();
+  const last = Number(jar.get(LAST_ENTER_COOKIE)?.value || 0);
+  if (now - last < 10_000) return; // 10s quiet period
+
   jar.set(ORG_COOKIE_NAME, orgId, {
     httpOnly: true,
     sameSite: "lax",
@@ -71,6 +76,13 @@ export async function enterDemo(orgId: string) {
     maxAge: 60 * 60 * 6, // 6h demo window
   });
   jar.set(DEMO_COOKIE, "1", {
+    httpOnly: true,
+    sameSite: "lax",
+    path: "/",
+    secure: true,
+    maxAge: 60 * 60 * 6,
+  });
+  jar.set(LAST_ENTER_COOKIE, String(now), {
     httpOnly: true,
     sameSite: "lax",
     path: "/",
