@@ -3,14 +3,28 @@ import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
 import { isSuperUser } from "@/lib/features";
 
+async function isAdmin(userId: string) {
+  // Adjust to your schema: if you store roles per-org, query that instead.
+  const user = await prisma.user.findUnique({
+    where: { id: userId },
+    select: { role: true },
+  });
+  return user?.role === "ADMIN" || user?.role === "SUPERADMIN";
+}
+
 function ymd(d: Date) {
   return d.toISOString().slice(0, 10);
 }
 
 export async function GET() {
   const session = await auth();
+  const userId = session?.user?.id;
+  if (!userId) {
+    return NextResponse.json({ ok: false, error: "Forbidden" }, { status: 403 });
+  }
   const superOk = await isSuperUser();
-  if (!session?.user?.id || !superOk) {
+  const adminOk = await isAdmin(userId);
+  if (!superOk && !adminOk) {
     return NextResponse.json({ ok: false, error: "Forbidden" }, { status: 403 });
   }
 

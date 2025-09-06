@@ -90,7 +90,7 @@ export default async function Sidebar() {
                   <span>{meta.label}</span>
                   {/* Only show badge for feature-flagged (not static) */}
                   {meta.key?.startsWith("core:") ? null : (locked && (
-                    <LockedBadge reason={reason} />
+                    <LockedBadge reason={reason ?? "Locked"} />
                   ))}
                 </>
               }
