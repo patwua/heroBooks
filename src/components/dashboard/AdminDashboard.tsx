@@ -1,21 +1,60 @@
+"use client";
+import { useEffect, useState } from "react";
+import LineChartCard from "@/components/charts/LineChartCard";
+import StackedBarCard from "@/components/charts/StackedBarCard";
+
 export default function AdminDashboard() {
+  const [data, setData] = useState<{
+    signups: any[];
+    locked: any[];
+    topPaths: any[];
+  } | null>(null);
+
+  useEffect(() => {
+    (async () => {
+      const res = await fetch("/api/admin/analytics/overview");
+      const j = await res.json();
+      setData(j.data);
+    })();
+  }, []);
+
+  if (!data) return null;
+
   return (
     <div className="grid gap-4 md:grid-cols-3">
-      <section className="md:col-span-2 p-4 border rounded">
-        <h3 className="font-semibold mb-2">Platform Analytics</h3>
-        <ul className="text-sm list-disc ml-5">
-          <li>Signups (7d)</li>
-          <li>Locked feature impressions (7d)</li>
-          <li>Conversion to enable/upgrade</li>
-        </ul>
-      </section>
-      <section className="p-4 border rounded">
-        <h3 className="font-semibold mb-2">Audit Log</h3>
-        <p className="text-sm text-muted-foreground">
-          Recent critical actions will appear here.
-        </p>
-      </section>
+      <div className="md:col-span-2">
+        <LineChartCard
+          title="Signups (last 30 days)"
+          data={data.signups}
+          xKey="day"
+          yKey="count"
+        />
+      </div>
+      <div className="md:col-span-1 p-4 border rounded">
+        <div className="text-sm font-semibold mb-2">Top Locked Pages</div>
+        <ol className="text-sm list-decimal ml-6">
+          {data.topPaths.map((r: any) => (
+            <li
+              key={r.path}
+              className="truncate flex justify-between gap-2"
+            >
+              <span className="truncate">{r.path}</span>
+              <span>{r.count}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+      <div className="md:col-span-3">
+        <StackedBarCard
+          title="Locked Feature Impressions"
+          data={data.locked}
+          xKey="feature"
+          series={[
+            { key: "plan", label: "Upgrade" },
+            { key: "toggle", label: "Activate" },
+          ]}
+        />
+      </div>
     </div>
   );
 }
-
