@@ -1,108 +1,47 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
-import {
-  LayoutDashboard, Users, Package, FileText, CreditCard,
-  Building2, Receipt, Banknote, Table2, ChartBar, Settings, ShieldCheck
-} from "lucide-react";
-import { useEffect, useState } from "react";
+import { canUseFeature, getActiveOrgId } from "@/lib/features";
 
-const adminSection = {
-  label: "Admin",
-  items: [{ href: "/admin/billing", icon: ShieldCheck, label: "Billing" }],
-};
+export default async function Sidebar() {
+  const orgId = await getActiveOrgId();
 
-export default function Sidebar() {
-  const pathname = usePathname();
-  const [showAdmin, setShowAdmin] = useState(false);
-
-  useEffect(() => {
-    // Non-sensitive UI hint: if ADMIN_EMAILS is set at build time, show the link.
-    if (process.env.NEXT_PUBLIC_HAS_ADMIN === "1") setShowAdmin(true);
-  }, []);
-
-  const sections = [
-    {
-      label: "Overview",
-      items: [{ href: "/dashboard", icon: LayoutDashboard, label: "Dashboard" }],
-    },
-    {
-      label: "Sales",
-      items: [
-        { href: "/customers", icon: Users, label: "Customers" },
-        { href: "/items", icon: Package, label: "Items" },
-        { href: "/estimates", icon: FileText, label: "Estimates" },
-        { href: "/invoices", icon: Receipt, label: "Invoices" },
-        { href: "/payments", icon: CreditCard, label: "Payments" },
-      ],
-    },
-    {
-      label: "Purchases",
-      items: [
-        { href: "/vendors", icon: Building2, label: "Vendors" },
-        { href: "/bills", icon: Receipt, label: "Bills" },
-      ],
-    },
-    {
-      label: "Banking",
-      items: [{ href: "/banking/imports", icon: Banknote, label: "Import & Reconcile" }],
-    },
-    {
-      label: "Reports",
-      items: [
-        { href: "/reports/vat", icon: Table2, label: "VAT Summary" },
-        { href: "/reports/trial-balance", icon: ChartBar, label: "Trial Balance" },
-        { href: "/reports/profit-loss", icon: ChartBar, label: "Profit & Loss" },
-      ],
-    },
-    {
-      label: "Settings",
-      items: [
-        { href: "/settings/profile", icon: Settings, label: "Profile" },
-        { href: "/settings/organization", icon: Settings, label: "Organization" },
-        { href: "/settings/branding", icon: Settings, label: "Branding" },
-      ],
-    },
-  ];
-
-  if (showAdmin) sections.push(adminSection as any);
+  const showPayroll = await canUseFeature("payroll", orgId);
+  const showPayrollReport = await canUseFeature("payroll", orgId);
 
   return (
-    <aside className="w-64 shrink-0 border-r bg-background/60 backdrop-blur">
-      <div className="p-4">
-        <div className="text-xl font-semibold">heroBooks</div>
+    <aside className="w-60 shrink-0 border-r bg-background p-3 text-sm">
+      <div className="space-y-1">
+        <div className="px-2 py-1 text-xs uppercase text-muted-foreground">Accounting</div>
+        <NavItem href="/dashboard" label="Dashboard" />
+        <NavItem href="/invoices" label="Invoices" />
+        <NavItem href="/estimates" label="Estimates" />
+        <NavItem href="/customers" label="Customers" />
+        <NavItem href="/vendors" label="Vendors" />
+        <NavItem href="/items" label="Products & Services" />
+        {showPayroll && <NavItem href="/payroll" label="Payroll" />}
       </div>
-      <nav className="px-2 pb-6 space-y-6">
-        {sections.map((s: any) => (
-          <div key={s.label}>
-            <div className="px-2 text-[11px] uppercase tracking-wider text-muted-foreground mb-2">
-              {s.label}
-            </div>
-            <ul className="space-y-1">
-              {s.items.map((item: any) => {
-                const active = pathname === item.href || pathname?.startsWith(item.href + "/");
-                const Icon = item.icon;
-                return (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className={cn(
-                        "flex items-center gap-2 rounded-md px-3 py-2 text-sm",
-                        active ? "bg-primary/10 text-primary" : "hover:bg-muted text-foreground"
-                      )}
-                    >
-                      <Icon className="h-4 w-4" />
-                      {item.label}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        ))}
-      </nav>
+
+      <div className="mt-4 space-y-1">
+        <div className="px-2 py-1 text-xs uppercase text-muted-foreground">Reports</div>
+        <NavItem href="/reports/vat" label="VAT" />
+        <NavItem href="/reports/trial-balance" label="Trial Balance" />
+        <NavItem href="/reports/profit-loss" label="Profit & Loss" />
+        {showPayrollReport && <NavItem href="/reports/payroll" label="Payroll Summary" />}
+      </div>
+
+      <div className="mt-4 space-y-1">
+        <div className="px-2 py-1 text-xs uppercase text-muted-foreground">Settings</div>
+        <NavItem href="/settings/organization" label="Organization" />
+        <NavItem href="/settings/profile" label="Profile" />
+        <NavItem href="/settings/branding" label="Branding" />
+      </div>
     </aside>
+  );
+}
+
+function NavItem({ href, label }: { href: string; label: string }) {
+  return (
+    <Link href={href} className="block rounded px-2 py-1 hover:bg-accent hover:text-accent-foreground">
+      {label}
+    </Link>
   );
 }
