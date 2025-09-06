@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { chooseOnce } from "@/lib/randomize";
+import TrackLink from "@/components/marketing/TrackLink";
 
 const HERO_IMAGES = [
   "/photos/landing/construction.webp",
@@ -26,34 +27,22 @@ export default function HeroRandom() {
           Local compliance, faster invoices, clean reports, and an API when you’re ready.
         </p>
         <div className="mt-6 flex items-center gap-3">
-          <a
+          <TrackLink
             href="/get-started"
             className="inline-flex h-10 items-center rounded-md bg-primary px-6 text-primary-foreground"
-            onClick={() =>
-              fetch("/api/track/marketing", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ event: "cta_get_started", meta: { hero: chosen } }),
-                keepalive: true,
-              })
-            }
+            event="cta_get_started"
+            meta={{ hero: chosen }}
           >
             Get started
-          </a>
-          <a
+          </TrackLink>
+          <TrackLink
             href="/sign-up?plan=business&demo=1"
             className="inline-flex h-10 items-center rounded-md border px-6"
-            onClick={() =>
-              fetch("/api/track/marketing", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ event: "cta_try_demo", meta: { hero: chosen } }),
-                keepalive: true,
-              })
-            }
+            event="cta_try_demo"
+            meta={{ hero: chosen }}
           >
             Try demo
-          </a>
+          </TrackLink>
         </div>
       </div>
 
