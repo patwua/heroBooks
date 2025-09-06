@@ -1,109 +1,126 @@
-import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
-import { calcLines, nextDocNumber } from "@/lib/vatCalc";
-import { Prisma } from "@prisma/client";
-import {
-  isDemoSession,
-  demoReadWhere,
-  withDemoWrite,
-  resolveActiveOrgId,
-  purgeExpiredDemoDataIfAny,
-  getDemoOrgId,
-} from "@/lib/demo";
+import { NextResponse } from "next/server";
+import { Decimal } from "@prisma/client/runtime/library";
+import { calcLineVat } from "@/lib/tax/vat";
 
-interface EstimateItemInput {
-  description: string;
-  quantity: number;
-  unitPrice: number;
-  taxCodeId?: string;
-}
-
-export async function GET() {
-  const session = await auth();
-  if (!session?.user?.id) return new NextResponse("Unauthorized", { status: 401 });
-  if (await isDemoSession(session)) {
-    await purgeExpiredDemoDataIfAny();
-    const where = await demoReadWhere(session);
-    const estimates = await prisma.estimate.findMany({ where, include: { customer: true } });
-    return NextResponse.json(estimates);
-  }
-  const orgId = await resolveActiveOrgId(session);
-  if (!orgId) return new NextResponse("No organization", { status: 400 });
-  const estimates = await prisma.estimate.findMany({ where: { orgId }, include: { customer: true } });
-  return NextResponse.json(estimates);
+function sumEst(lines: Array<{ unitPrice: Decimal; quantity: number; taxRate: number }>) {
+  const sub = lines.reduce((acc, l) => acc.add(l.unitPrice.mul(l.quantity)), new Decimal(0));
+  const vat = lines.reduce((acc, l) => acc.add(calcLineVat(l.unitPrice, l.quantity, l.taxRate)), new Decimal(0));
+  return { subTotal: sub, vatTotal: vat, total: sub.add(vat) };
 }
 
 export async function POST(req: Request) {
   const session = await auth();
-  if (!session?.user?.id) return new NextResponse("Unauthorized", { status: 401 });
-  const demo = await isDemoSession(session);
-  const orgId = demo ? await getDemoOrgId() : await resolveActiveOrgId(session);
-  if (!orgId) return new NextResponse("No organization", { status: 400 });
+  if (!session?.user?.id) return NextResponse.json({ ok: false, error: "Unauthorized" }, { status: 401 });
+  const orgId = (session as any).orgId || null;
+  if (!orgId) return NextResponse.json({ ok: false, error: "No active org" }, { status: 400 });
+
   const body = await req.json();
-  const { customerId, items }: { customerId: string; items: EstimateItemInput[] } = body;
+  const { customerId, issueDate, expiryDate, status, number, lines } = body as any;
 
-  const customer = await prisma.customer.findFirst({
-    where: { id: customerId, orgId },
-    select: { id: true },
-  });
-  if (!customer) {
-    return new NextResponse("Not found", { status: 404 });
-  }
+  const itemIds = (lines ?? []).map((l: any) => l.itemId).filter(Boolean);
+  const items = itemIds.length ? await prisma.item.findMany({ where: { orgId, id: { in: itemIds } } }) : [];
+  const itemById = new Map(items.map((i) => [i.id, i]));
 
-  const number = await nextDocNumber("EST", "estimate");
-
-  const vatInputs: { quantity: number; unitPrice: number; taxRate: number }[] = [];
-  const lines: any[] = [];
-  for (const item of items) {
-    let rate = 0;
-    let taxCodeId: string | undefined = undefined;
-    if (item.taxCodeId) {
-      const tc = await prisma.taxCode.findFirst({
-        where: { id: item.taxCodeId, orgId },
-        select: { id: true, rate: true },
-      });
-      if (!tc) {
-        return new NextResponse("Not found", { status: 404 });
-      }
-      rate = tc.rate;
-      taxCodeId = tc.id;
-    }
-    vatInputs.push({ quantity: item.quantity, unitPrice: item.unitPrice, taxRate: rate });
-    lines.push({
-      description: item.description,
-      quantity: item.quantity,
-      unitPrice: new Prisma.Decimal(item.unitPrice),
+  const lineCreates = (lines ?? []).map((l: any) => {
+    const it = l.itemId ? itemById.get(l.itemId) : null;
+    const unitPrice = l.unitPrice ? new Decimal(l.unitPrice) : new Decimal(it?.price ?? 0);
+    const taxCodeId = l.taxCodeId ?? it?.taxCodeId ?? null;
+    return {
+      orgId,
+      itemId: l.itemId ?? null,
+      description: l.description ?? it?.name ?? null,
+      quantity: l.quantity ?? 1,
+      unitPrice,
       taxCodeId,
-    });
-  }
-
-  const totals = calcLines(vatInputs);
-
-  const data = demo
-    ? await withDemoWrite(session, {
-        customerId: customer.id,
-        number,
-        subTotal: new Prisma.Decimal(totals.subTotal),
-        vatTotal: new Prisma.Decimal(totals.vatTotal),
-        total: new Prisma.Decimal(totals.total),
-        lines: { create: lines },
-      })
-    : {
-        orgId,
-        customerId: customer.id,
-        number,
-        subTotal: new Prisma.Decimal(totals.subTotal),
-        vatTotal: new Prisma.Decimal(totals.vatTotal),
-        total: new Prisma.Decimal(totals.total),
-        lines: { create: lines },
-      };
-
-  const estimate = await prisma.estimate.create({
-    data,
-    include: { lines: true, customer: true },
+      _calc: { unitPrice, quantity: l.quantity ?? 1, taxRate: 0 },
+    } as any;
   });
 
-  return NextResponse.json(demo ? { ...estimate, demo: true } : estimate);
+  const withRates = await Promise.all(
+    lineCreates.map(async (lc: any) => {
+      if (!lc.taxCodeId) return { ...lc, _calc: { ...lc._calc, taxRate: 0 } };
+      const tc = await prisma.taxCode.findUnique({ where: { id: lc.taxCodeId } });
+      return { ...lc, _calc: { ...lc._calc, taxRate: tc?.rate ?? 0 } };
+    })
+  );
+
+  const calcInput = withRates.map((x: any) => ({ unitPrice: x._calc.unitPrice, quantity: x._calc.quantity, taxRate: x._calc.taxRate }));
+  const totals = sumEst(calcInput);
+
+  const created = await prisma.estimate.create({
+    data: {
+      orgId,
+      number,
+      customerId: customerId ?? null,
+      issueDate: issueDate ? new Date(issueDate) : undefined,
+      expiryDate: expiryDate ? new Date(expiryDate) : undefined,
+      status: status ?? undefined,
+      subTotal: totals.subTotal,
+      vatTotal: totals.vatTotal,
+      total: totals.total,
+      lines: { create: withRates.map(({ _calc, ...rest }: any) => rest) },
+    },
+  });
+
+  return NextResponse.json({ ok: true, data: created });
 }
 
+export async function PUT(req: Request) {
+  const session = await auth();
+  if (!session?.user?.id) return NextResponse.json({ ok: false, error: "Unauthorized" }, { status: 401 });
+  const orgId = (session as any).orgId || null;
+  if (!orgId) return NextResponse.json({ ok: false, error: "No active org" }, { status: 400 });
+
+  const body = await req.json();
+  const { id, customerId, issueDate, expiryDate, status, lines } = body as any;
+  if (!id) return NextResponse.json({ ok: false, error: "Missing estimate id" }, { status: 400 });
+
+  const itemIds = (lines ?? []).map((l: any) => l.itemId).filter(Boolean);
+  const items = itemIds.length ? await prisma.item.findMany({ where: { orgId, id: { in: itemIds } } }) : [];
+  const itemById = new Map(items.map((i) => [i.id, i]));
+
+  const lineCreates = (lines ?? []).map((l: any) => {
+    const it = l.itemId ? itemById.get(l.itemId) : null;
+    const unitPrice = l.unitPrice ? new Decimal(l.unitPrice) : new Decimal(it?.price ?? 0);
+    const taxCodeId = l.taxCodeId ?? it?.taxCodeId ?? null;
+    return {
+      orgId,
+      itemId: l.itemId ?? null,
+      description: l.description ?? it?.name ?? null,
+      quantity: l.quantity ?? 1,
+      unitPrice,
+      taxCodeId,
+      _calc: { unitPrice, quantity: l.quantity ?? 1, taxRate: 0 },
+    } as any;
+  });
+
+  const withRates = await Promise.all(
+    lineCreates.map(async (lc: any) => {
+      if (!lc.taxCodeId) return { ...lc, _calc: { ...lc._calc, taxRate: 0 } };
+      const tc = await prisma.taxCode.findUnique({ where: { id: lc.taxCodeId } });
+      return { ...lc, _calc: { ...lc._calc, taxRate: tc?.rate ?? 0 } };
+    })
+  );
+
+  const calcInput = withRates.map((x: any) => ({ unitPrice: x._calc.unitPrice, quantity: x._calc.quantity, taxRate: x._calc.taxRate }));
+  const totals = sumEst(calcInput);
+
+  await prisma.estimateLine.deleteMany({ where: { orgId, estimateId: id } });
+  const updated = await prisma.estimate.update({
+    where: { id },
+    data: {
+      customerId: customerId ?? undefined,
+      issueDate: issueDate ? new Date(issueDate) : undefined,
+      expiryDate: expiryDate ? new Date(expiryDate) : undefined,
+      status: status ?? undefined,
+      subTotal: totals.subTotal,
+      vatTotal: totals.vatTotal,
+      total: totals.total,
+      lines: { create: withRates.map(({ _calc, ...rest }: any) => rest) },
+    },
+  });
+
+  return NextResponse.json({ ok: true, data: updated });
+}
