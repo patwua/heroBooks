@@ -1,11 +1,10 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+import { auth } from "@/lib/auth";
 
 /** POST { event: string; meta?: Record<string, unknown> } */
 export async function POST(req: Request) {
-  const session = await getServerSession(authOptions);
+  const session = await auth();
   const { event, meta } = await req.json().catch(() => ({}));
   if (!event) return NextResponse.json({ error: "event-required" }, { status: 400 });
 
