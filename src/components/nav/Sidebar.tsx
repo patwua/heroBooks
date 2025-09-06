@@ -1,11 +1,15 @@
 import Link from "next/link";
-import { canUseFeature, getActiveOrgId } from "@/lib/features";
+import { auth } from "@/lib/auth";
+import { getActiveOrgId, getFeatureStatuses } from "@/lib/features";
 
 export default async function Sidebar() {
+  const _session = await auth();
   const orgId = await getActiveOrgId();
-
-  const showPayroll = await canUseFeature("payroll", orgId);
-  const showPayrollReport = await canUseFeature("payroll", orgId);
+  const statuses = await getFeatureStatuses(["payroll"], orgId);
+  const payrollLocked = !statuses.payroll.allowed;
+  const badge = payrollLocked ? (
+    <span className="ml-2 text-[10px] rounded bg-muted px-1 py-0.5">Locked</span>
+  ) : null;
 
   return (
     <aside className="w-60 shrink-0 border-r bg-background p-3 text-sm">
@@ -17,7 +21,15 @@ export default async function Sidebar() {
         <NavItem href="/customers" label="Customers" />
         <NavItem href="/vendors" label="Vendors" />
         <NavItem href="/items" label="Products & Services" />
-        {showPayroll && <NavItem href="/payroll" label="Payroll" />}
+        <NavItem
+          href="/payroll"
+          label={
+            <>
+              <span>Payroll</span>
+              {badge}
+            </>
+          }
+        />
       </div>
 
       <div className="mt-4 space-y-1">
@@ -25,7 +37,15 @@ export default async function Sidebar() {
         <NavItem href="/reports/vat" label="VAT" />
         <NavItem href="/reports/trial-balance" label="Trial Balance" />
         <NavItem href="/reports/profit-loss" label="Profit & Loss" />
-        {showPayrollReport && <NavItem href="/reports/payroll" label="Payroll Summary" />}
+        <NavItem
+          href="/reports/payroll"
+          label={
+            <>
+              <span>Payroll Summary</span>
+              {badge}
+            </>
+          }
+        />
       </div>
 
       <div className="mt-4 space-y-1">
@@ -38,9 +58,12 @@ export default async function Sidebar() {
   );
 }
 
-function NavItem({ href, label }: { href: string; label: string }) {
+function NavItem({ href, label }: { href: string; label: React.ReactNode }) {
   return (
-    <Link href={href} className="block rounded px-2 py-1 hover:bg-accent hover:text-accent-foreground">
+    <Link
+      href={href}
+      className="flex items-center justify-between rounded px-2 py-1 hover:bg-accent hover:text-accent-foreground"
+    >
       {label}
     </Link>
   );
