@@ -4,11 +4,23 @@ import { auth } from "@/lib/auth";
 import { isSuperUser } from "@/lib/features";
 
 async function isAdmin(userId: string) {
+  // 1) Global admin from users.role
+  const user = await prisma.user.findUnique({
+    where: { id: userId },
+    select: { role: true },
+  });
+  const globalRole = user?.role?.toUpperCase();
+  const isGlobalAdmin =
+    globalRole === "ADMIN" || globalRole === "SUPERADMIN";
+
+  // 2) Org-level admin/owner membership
   const membership = await prisma.userOrg.findFirst({
     where: { userId, role: { in: ["OWNER", "ADMIN"] } },
     select: { id: true },
   });
-  return Boolean(membership);
+  const isOrgAdmin = Boolean(membership);
+
+  return isGlobalAdmin || isOrgAdmin;
 }
 
 function ymd(d: Date) {
