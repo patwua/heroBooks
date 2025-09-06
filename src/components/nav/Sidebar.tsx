@@ -3,12 +3,27 @@ import { auth } from "@/lib/auth";
 import { getActiveOrgId, getFeatureStatuses } from "@/lib/features";
 
 export default async function Sidebar() {
-  const _session = await auth();
+  const session = await auth();
   const orgId = await getActiveOrgId();
   const statuses = await getFeatureStatuses(["payroll"], orgId);
-  const payrollLocked = !statuses.payroll.allowed;
-  const badge = payrollLocked ? (
-    <span className="ml-2 text-[10px] rounded bg-muted px-1 py-0.5">Locked</span>
+
+  const payroll = statuses.payroll;
+  const locked = !payroll.allowed;
+  const reasonText =
+    payroll.reason === "plan"
+      ? "Locked – Upgrade required"
+      : payroll.reason === "toggle"
+        ? "Locked – Enable in Settings"
+        : "Locked";
+
+  const badge = locked ? (
+    <span
+      className="ml-2 text-[10px] rounded bg-muted px-1 py-0.5"
+      title={reasonText}
+      aria-label={reasonText}
+    >
+      Locked
+    </span>
   ) : null;
 
   return (

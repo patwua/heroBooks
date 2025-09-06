@@ -19,6 +19,21 @@ export default function FeatureGuard({
       );
       const j = await res.json();
       setState(j.data);
+
+      // Telemetry: only when locked
+      if (j?.data && !j.data.allowed) {
+        try {
+          await fetch("/api/telemetry/feature-impression", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              feature,
+              reason: j.data.reason,
+              path: window.location.pathname,
+            }),
+          });
+        } catch {}
+      }
     })();
   }, [feature]);
 
@@ -29,7 +44,7 @@ export default function FeatureGuard({
   const body =
     state.reason === "plan"
       ? "Your current plan does not include this feature. Upgrade to unlock it."
-      : "This feature is available on your plan but disabled. You can enable it in Settings.";
+      : "This feature is available on your plan but disabled. You can enable it in Settings (tax and statutory settings may require additional inputs).";
 
   return (
     <div className="max-w-lg space-y-2">
