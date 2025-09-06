@@ -22,6 +22,7 @@ export default function MarketingFooter() {
           <div className="text-sm font-medium mb-3">Company</div>
           <ul className="space-y-2 text-sm">
             <li><Link href="/contact" className="text-muted-foreground hover:text-foreground">Contact</Link></li>
+            <li><Link href="/help" className="text-muted-foreground hover:text-foreground">Help & FAQ</Link></li>
             <li><Link href="/legal/privacy" className="text-muted-foreground hover:text-foreground">Privacy</Link></li>
             <li><Link href="/legal/terms" className="text-muted-foreground hover:text-foreground">Terms</Link></li>
           </ul>
