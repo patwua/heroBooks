@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import PricingComparison from "@/components/marketing/PricingComparison";
 
 function Row({ children }: { children: React.ReactNode }) {
   return <li className="flex items-center gap-2 text-sm"><Check className="h-4 w-4 text-primary" />{children}</li>;
@@ -8,7 +9,10 @@ function Row({ children }: { children: React.ReactNode }) {
 
 export const metadata = { title: "Pricing — heroBooks" };
 
-export default function PricingPage() {
+export default function PricingPage({ searchParams }: { searchParams: Record<string, string | string[] | undefined> }) {
+  // Honor ?next=/sign-up (or any URL) to continue after plan selection
+  const next = (Array.isArray(searchParams?.next) ? searchParams.next[0] : searchParams?.next) || "/sign-up";
+
   return (
     <section className="container mx-auto px-4 py-12">
       <div className="text-center max-w-2xl mx-auto">
@@ -16,6 +20,7 @@ export default function PricingPage() {
         <p className="text-muted-foreground mt-2">Transparent plans in GYD. All include VAT-ready invoicing and core reports.</p>
       </div>
 
+      {/* Cards remain for quick scan */}
       <div className="mt-8 grid gap-6 md:grid-cols-3">
         {/* Starter */}
         <div className="rounded-2xl border bg-card p-6 flex flex-col">
@@ -30,11 +35,11 @@ export default function PricingPage() {
             <Row>Email support</Row>
           </ul>
           <Button asChild className="mt-6">
-            <Link href="/sign-up?plan=starter">Start free</Link>
+            <Link href={`${next}?plan=starter`}>Start free</Link>
           </Button>
         </div>
 
-        {/* Business (Most Popular) */}
+        {/* Business */}
         <div className="rounded-2xl border-2 border-primary bg-card p-6 flex flex-col relative">
           <span className="absolute -top-3 right-6 rounded-full bg-primary text-primary-foreground text-xs px-2 py-1">Most popular</span>
           <div className="text-sm font-medium">Business</div>
@@ -47,7 +52,7 @@ export default function PricingPage() {
             <Row>Priority support</Row>
           </ul>
           <Button asChild className="mt-6">
-            <Link href="/sign-up?plan=business">Choose Business</Link>
+            <Link href={`/checkout?plan=business`}>Choose Business</Link>
           </Button>
           <div className="text-xs text-muted-foreground mt-2">Use code <b>GYA-LAUNCH</b> for 50% off first 2 months.</div>
         </div>
@@ -64,10 +69,13 @@ export default function PricingPage() {
             <Row>Dedicated success manager</Row>
           </ul>
           <Button asChild variant="outline" className="mt-6">
-            <Link href="/sign-up?plan=enterprise">Contact sales</Link>
+            <Link href="/contact">Contact sales</Link>
           </Button>
+        </div>
       </div>
-      </div>
+
+      {/* NEW: Side-by-side comparison matrix with plan headers & prices */}
+      <PricingComparison next={next} />
 
       <div className="mt-10 rounded-2xl border p-6 bg-muted/40">
         <div className="text-sm font-medium">All plans include</div>
@@ -81,3 +89,4 @@ export default function PricingPage() {
     </section>
   );
 }
+
