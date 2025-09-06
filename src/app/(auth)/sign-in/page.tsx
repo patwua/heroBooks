@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
+import { getCsrfToken } from "next-auth/react";
 
-export default function SignInPage({
+export default async function SignInPage({
   searchParams,
 }: {
   searchParams: Record<string, string | string[] | undefined>;
@@ -14,6 +15,7 @@ export default function SignInPage({
 
   const showContinueDemo = reset || hadDemoBefore;
   const oauthCallback = showContinueDemo ? "/continue-demo" : "/dashboard";
+  const csrfToken = await getCsrfToken();
 
   return (
     <section className="container mx-auto px-4 py-12 max-w-md">
@@ -33,6 +35,7 @@ export default function SignInPage({
       )}
 
       <form action="/api/auth/callback/credentials" method="POST" className="mt-6 space-y-4">
+        <input type="hidden" name="csrfToken" value={csrfToken ?? undefined} />
         <div className="grid gap-2">
           <label className="text-sm">Email</label>
           <input name="email" type="email" required className="rounded-md border bg-background px-3 py-2 text-sm" placeholder="you@company.gy" />
