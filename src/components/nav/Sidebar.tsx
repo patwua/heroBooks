@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import LockedBadge from "./LockedBadge";
 import {
   LayoutDashboard,
   FileText,
@@ -72,6 +75,8 @@ export default function Sidebar() {
                 const active =
                   pathname === item.href || pathname?.startsWith(item.href + "/");
                 const Icon = item.icon;
+                const locked = false;
+                const reason: string | undefined = undefined;
                 return (
                   <li key={item.href}>
                     <Link
@@ -83,6 +88,7 @@ export default function Sidebar() {
                     >
                       <Icon className="h-4 w-4" />
                       {item.label}
+                      {locked && <LockedBadge reason={reason ?? "Locked"} />}
                     </Link>
                   </li>
                 );
