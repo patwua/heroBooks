@@ -14,6 +14,10 @@ export default function SignUpPage({
     ? searchParams.plan[0]
     : searchParams?.plan ?? null;
   const initialPlan: Plan = normalizePlan(raw);
+  const demo =
+    (Array.isArray(searchParams?.demo)
+      ? searchParams.demo[0]
+      : searchParams?.demo) === "1";
 
   const [plan, setPlan] = useState<Plan>(initialPlan);
   const [email, setEmail] = useState("");
@@ -24,10 +28,10 @@ export default function SignUpPage({
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError("");
-    const res = await fetch("/api/register", {
+    const res = await fetch("/api/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password, plan }),
+      body: JSON.stringify({ email, password, plan, demo }),
     });
     const data = await res.json();
     if (!res.ok) {
@@ -37,6 +41,11 @@ export default function SignUpPage({
     const signInRes = await signIn("credentials", { email, password, redirect: false });
     if (signInRes?.error) {
       setError(signInRes.error);
+      return;
+    }
+    if (demo) {
+      await fetch("/api/demo/enter", { method: "POST" });
+      router.push("/dashboard");
       return;
     }
     alert("Account created!");
@@ -51,7 +60,8 @@ export default function SignUpPage({
     <section className="container mx-auto px-4 py-12 max-w-md">
       <h1 className="text-2xl font-semibold">Create your account</h1>
       <p className="text-sm text-muted-foreground mt-1">
-        Start with the plan that fits—change anytime.
+        Start with the plan that fits—change anytime.{' '}
+        <a className="underline" href="/sign-in">Already have an account? Sign in</a>
       </p>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-4">
@@ -73,6 +83,9 @@ export default function SignUpPage({
             ))}
           </div>
         </fieldset>
+
+        {/* Carry demo intent forward */}
+        {demo && <input type="hidden" name="demo" value="1" />}
 
         {/* Your existing fields */}
         <div className="grid gap-2">
