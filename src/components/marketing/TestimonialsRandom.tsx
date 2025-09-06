@@ -1,23 +1,14 @@
 import Image from "next/image";
-import { cookies, headers } from "next/headers";
+import { chooseOnce } from "@/lib/randomize";
 
 const TESTIMONIALS = [
   { img: "/photos/testimonials/shop-owner.webp", quote: "heroBooks saves me hours every VAT month.", name: "Shawn — Shop owner, Georgetown" },
-  { img: "/photos/testimonials/salon-owner.webp", quote: "Invoices and receipts that my customers love.", name: "Latoya — Salon owner, New Amsterdam" },
+  { img: "/photos/testimonials/salon-owner.webp", quote: "Invoices and receipts my customers love.", name: "Latoya — Salon owner, New Amsterdam" },
   { img: "/photos/testimonials/transport-owner.webp", quote: "Bank imports and reconciliation are a breeze.", name: "Marcus — Logistics, Linden" },
 ];
-const COOKIE = "hb_testimonial";
-const pick = <T,>(a: T[]) => a[Math.floor(Math.random() * a.length)];
 
 export default function TestimonialsRandom() {
-  headers();
-  const jar = cookies();
-  let chosenIdx = Number(jar.get(COOKIE)?.value ?? NaN);
-  if (Number.isNaN(chosenIdx) || chosenIdx < 0 || chosenIdx >= TESTIMONIALS.length) {
-    chosenIdx = Math.floor(Math.random() * TESTIMONIALS.length);
-    jar.set(COOKIE, String(chosenIdx), { path: "/", httpOnly: false, sameSite: "lax", maxAge: 60 * 60 * 12 });
-  }
-  const t = TESTIMONIALS[chosenIdx];
+  const t = chooseOnce("hb_testimonial", TESTIMONIALS);
 
   return (
     <section className="mt-16">
