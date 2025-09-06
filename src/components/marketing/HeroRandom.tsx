@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { cookies, headers } from "next/headers";
+import { chooseOnce } from "@/lib/randomize";
 
-const POOL = [
+const HERO_IMAGES = [
   "/photos/landing/construction.webp",
   "/photos/landing/salon.webp",
   "/photos/landing/barbershop.webp",
@@ -12,17 +12,9 @@ const POOL = [
   "/photos/landing/school-board.webp",
   "/photos/landing/carwash.webp",
 ];
-const COOKIE = "hb_hero";
-const pick = <T,>(a: T[]) => a[Math.floor(Math.random() * a.length)];
 
 export default function HeroRandom() {
-  headers(); // make segment dynamic
-  const jar = cookies();
-  let chosen = jar.get(COOKIE)?.value;
-  if (!chosen || !POOL.includes(chosen)) {
-    chosen = pick(POOL);
-    jar.set(COOKIE, chosen, { path: "/", httpOnly: false, sameSite: "lax", maxAge: 60 * 60 * 12 });
-  }
+  const chosen = chooseOnce("hb_hero", HERO_IMAGES);
 
   return (
     <div className="relative grid items-center gap-10 md:grid-cols-2 pt-16">
@@ -34,12 +26,46 @@ export default function HeroRandom() {
           Local compliance, faster invoices, clean reports, and an API when you’re ready.
         </p>
         <div className="mt-6 flex items-center gap-3">
-          <a href="/get-started" className="inline-flex h-10 items-center rounded-md bg-primary px-6 text-primary-foreground">Get started</a>
-          <a href="/sign-up?plan=business&demo=1" className="inline-flex h-10 items-center rounded-md border px-6">Try demo</a>
+          <a
+            href="/get-started"
+            className="inline-flex h-10 items-center rounded-md bg-primary px-6 text-primary-foreground"
+            onClick={() =>
+              fetch("/api/track/marketing", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ event: "cta_get_started", meta: { hero: chosen } }),
+                keepalive: true,
+              })
+            }
+          >
+            Get started
+          </a>
+          <a
+            href="/sign-up?plan=business&demo=1"
+            className="inline-flex h-10 items-center rounded-md border px-6"
+            onClick={() =>
+              fetch("/api/track/marketing", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ event: "cta_try_demo", meta: { hero: chosen } }),
+                keepalive: true,
+              })
+            }
+          >
+            Try demo
+          </a>
         </div>
       </div>
+
       <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border">
-        <Image src={chosen} alt="Guyanese small business using heroBooks" fill sizes="(min-width: 768px) 50vw, 100vw" priority className="object-cover" />
+        <Image
+          src={chosen}
+          alt="Guyanese small business using heroBooks"
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
+          priority
+          className="object-cover"
+        />
       </div>
     </div>
   );
