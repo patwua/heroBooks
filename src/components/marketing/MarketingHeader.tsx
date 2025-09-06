@@ -1,9 +1,7 @@
 "use client";
-
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 const nav = [
   { href: "/#features", label: "Features" },
@@ -16,29 +14,21 @@ export default function MarketingHeader() {
   const pathname = usePathname();
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/70 backdrop-blur">
-      <div className="container mx-auto px-4 h-14 flex items-center justify-between">
-        <Link href="/" className="font-semibold tracking-tight text-lg">heroBooks</Link>
+      <div className="container mx-auto h-14 px-4 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/logos/heroBooks mini Color.png" alt="heroBooks" width={24} height={24} />
+          <span className="font-semibold tracking-tight">heroBooks</span>
+        </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
-          {nav.map((n) => (
-            <Link
-              key={n.href}
-              href={n.href}
-              className={cn(
-                "text-muted-foreground hover:text-foreground transition-colors",
-                pathname === n.href && "text-foreground"
-              )}
-            >
+          {nav.map(n => (
+            <Link key={n.href} href={n.href} className={pathname === n.href ? "text-foreground" : "text-muted-foreground hover:text-foreground"}>
               {n.label}
             </Link>
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild variant="ghost" size="sm">
-            <Link href="/sign-in">Sign in</Link>
-          </Button>
-          <Button asChild size="sm">
-            <Link href="/get-started">Get started</Link>
-          </Button>
+          <Link href="/sign-in" className="text-sm px-3 py-1.5 rounded-md hover:bg-muted">Sign in</Link>
+          <Link href="/get-started" className="text-sm px-3 py-1.5 rounded-md bg-primary text-primary-foreground">Get started</Link>
         </div>
       </div>
       <div className="w-full bg-primary/10 border-t">
@@ -49,4 +39,3 @@ export default function MarketingHeader() {
     </header>
   );
 }
-
