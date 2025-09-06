@@ -48,7 +48,7 @@ export default function MarketingHeader() {
           )}
           {/* Preselect the popular plan on sign-up */}
           <Button asChild size="sm">
-            <Link href="/sign-up?plan=business">Get started</Link>
+            <Link href="/get-started">Get started</Link>
           </Button>
         </div>
       </div>
