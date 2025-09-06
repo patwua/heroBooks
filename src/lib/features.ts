@@ -24,10 +24,10 @@ const PLAN_FEATURES: Record<PlanName, PlatformFeature[]> = {
   enterprise: ["vat", "payroll", "paye", "nis", "propertyTax"],
 };
 
-export const getActiveOrgId = cache(async () => {
+export async function getActiveOrgId(): Promise<string | null> {
   const session = await auth();
   return (session as any)?.orgId ?? null;
-});
+}
 
 export async function isSuperUser(): Promise<boolean> {
   const session = await auth();
@@ -47,24 +47,62 @@ export const getOrgPlan = cache(async (orgId: string | null): Promise<PlanName> 
   return "business";
 });
 
-export async function canUseFeature(feature: PlatformFeature, orgId: string | null): Promise<boolean> {
-  // Superuser can see everything
-  if (await isSuperUser()) return true;
+export type FeatureStatus = {
+  allowed: boolean;
+  reason: "ok" | "toggle" | "plan" | "super";
+};
 
-  // Plan gate
+export async function getFeatureStatus(
+  feature: PlatformFeature,
+  orgId: string | null,
+): Promise<FeatureStatus> {
+  if (await isSuperUser()) return { allowed: true, reason: "super" };
+
   const plan = await getOrgPlan(orgId);
   const planAllows = PLAN_FEATURES[plan]?.includes(feature) ?? false;
-  if (!planAllows) return false;
+  if (!planAllows) return { allowed: false, reason: "plan" };
 
-  // Org settings gate
-  const toggles = await getOrgTaxFeature(orgId);
-  if (!toggles) return feature === "vat"; // VAT default true in our schema
+  const t = await getOrgTaxFeature(orgId);
 
-  if (feature === "vat") return !!toggles.enableVAT;
-  if (feature === "paye" || feature === "payroll")
-    return !!toggles.enablePAYE || !!toggles.enableNIS; // payroll shown if either is on
-  if (feature === "nis") return !!toggles.enableNIS;
-  if (feature === "propertyTax") return !!toggles.enablePropTax;
+  // If no row, default VAT enabled; others disabled
+  if (!t) {
+    if (feature === "vat") return { allowed: true, reason: "ok" };
+    if (feature === "payroll" || feature === "paye" || feature === "nis")
+      return { allowed: false, reason: "toggle" };
+    return { allowed: false, reason: "toggle" };
+  }
 
-  return false;
+  if (feature === "vat")
+    return { allowed: !!t.enableVAT, reason: t.enableVAT ? "ok" : "toggle" };
+  if (feature === "paye")
+    return { allowed: !!t.enablePAYE, reason: t.enablePAYE ? "ok" : "toggle" };
+  if (feature === "nis")
+    return { allowed: !!t.enableNIS, reason: t.enableNIS ? "ok" : "toggle" };
+  if (feature === "payroll")
+    return {
+      allowed: !!(t.enablePAYE || t.enableNIS),
+      reason: t.enablePAYE || t.enableNIS ? "ok" : "toggle",
+    };
+  if (feature === "propertyTax")
+    return { allowed: !!t.enablePropTax, reason: t.enablePropTax ? "ok" : "toggle" };
+
+  return { allowed: false, reason: "toggle" };
+}
+
+export async function getFeatureStatuses(
+  features: PlatformFeature[],
+  orgId: string | null,
+) {
+  const entries = await Promise.all(
+    features.map(async (f) => [f, await getFeatureStatus(f, orgId)] as const),
+  );
+  return Object.fromEntries(entries) as Record<PlatformFeature, FeatureStatus>;
+}
+
+export async function canUseFeature(
+  feature: PlatformFeature,
+  orgId: string | null,
+): Promise<boolean> {
+  const status = await getFeatureStatus(feature, orgId);
+  return status.allowed;
 }

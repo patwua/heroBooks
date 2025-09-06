@@ -1,6 +1,7 @@
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
+import { canUseFeature } from "@/lib/features";
 
 export async function GET(req: Request) {
   const session = await auth();
@@ -21,7 +22,14 @@ export async function GET(req: Request) {
       lte: to ? new Date(to) : undefined,
     };
 
-  const rows = await prisma.payslip.findMany({ where });
+  const allowed = await canUseFeature("payroll", orgId);
+  if (!allowed)
+    return NextResponse.json(
+      { ok: false, error: "Payroll feature not enabled" },
+      { status: 403 },
+    );
+
+    const rows = await prisma.payslip.findMany({ where });
 
   // Group by YYYY-MM
   const buckets = new Map<string, { gross: number; paye: number; nisEmp: number; nisEr: number }>();
