@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
 import { cache } from "react";
+import { unstable_cache, revalidateTag } from "next/cache";
 
 export type PlatformFeature =
   | "vat"
@@ -109,13 +110,28 @@ export async function getFeatureStatuses(features: PlatformFeature[], orgId: str
 }
 
 // ---- User UI settings ----
-// Request-/user-scoped: do NOT memoize globally.
+// Per-user cached via unstable_cache; isolated and fresh with a short TTL.
 export async function getUserUiSettings() {
   const session = await auth();
-  const userId = session?.user?.id || null;
+  const userId = session?.user?.id ?? null;
   if (!userId) return { hideLockedFeatures: false };
-  const row = await prisma.userSettings.findUnique({ where: { userId } });
-  return { hideLockedFeatures: row?.hideLockedFeatures ?? false };
+
+  // Keyed by userId to avoid cross-account bleed. Small TTL to reduce DB load.
+  const readUserUiSettings = unstable_cache(
+    async () => {
+      const row = await prisma.userSettings.findUnique({ where: { userId } });
+      return { hideLockedFeatures: row?.hideLockedFeatures ?? false };
+    },
+    ["userUiSettings", userId],
+    { revalidate: 15, tags: [`userUiSettings:${userId}`] }
+  );
+
+  return readUserUiSettings();
+}
+
+// (Optional) Call this after a user updates their setting to reflect instantly.
+export function revalidateUserUiSettings(userId: string) {
+  revalidateTag(`userUiSettings:${userId}`);
 }
 
 export async function canUseFeature(feature: PlatformFeature, orgId: string | null): Promise<boolean> {
