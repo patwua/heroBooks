@@ -10,7 +10,8 @@ function Row({ children }: { children: React.ReactNode }) {
 export const metadata = { title: "Pricing — heroBooks" };
 
 export default function PricingPage({ searchParams }: { searchParams: Record<string, string | string[] | undefined> }) {
-  const next = (Array.isArray(searchParams?.next) ? searchParams.next[0] : searchParams?.next) || "/sign-up";
+  const nextRaw = Array.isArray(searchParams?.next) ? searchParams.next[0] : searchParams?.next;
+  const next = typeof nextRaw === "string" && nextRaw.startsWith("/") ? nextRaw : "/sign-up";
   const highlightRaw = (Array.isArray(searchParams?.highlight) ? searchParams.highlight[0] : searchParams?.highlight) || "business";
   const highlight = (["starter", "business", "enterprise"].includes(highlightRaw) ? highlightRaw : "business") as PlanKey;
 
