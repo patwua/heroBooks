@@ -1,0 +1,539 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/public/photos/landing/accounting.webp b/public/photos/landing/accounting.webp
+index 48cdce85287243a96a9e7d47855104acbcb79837..e14973cc015d45622419c946b6f22b8ceae6d5d6 100644
+GIT binary patch
+literal 54
+zcmWIYbaT^VU|<M$bqWXzuuxC}vJDs+<}zw=F>o<3I;g2GVPGy``1i}eM<K0NGUw<u
+I?FI%003;O*mH+?%
+
+literal 12
+TcmXTONlZ@7$j?bhE#d+IAD9G=
+
+diff --git a/public/photos/landing/barbershop.webp b/public/photos/landing/barbershop.webp
+index 48cdce85287243a96a9e7d47855104acbcb79837..e14973cc015d45622419c946b6f22b8ceae6d5d6 100644
+GIT binary patch
+literal 54
+zcmWIYbaT^VU|<M$bqWXzuuxC}vJDs+<}zw=F>o<3I;g2GVPGy``1i}eM<K0NGUw<u
+I?FI%003;O*mH+?%
+
+literal 12
+TcmXTONlZ@7$j?bhE#d+IAD9G=
+
+diff --git a/public/photos/landing/carwash.webp b/public/photos/landing/carwash.webp
+index 48cdce85287243a96a9e7d47855104acbcb79837..e14973cc015d45622419c946b6f22b8ceae6d5d6 100644
+GIT binary patch
+literal 54
+zcmWIYbaT^VU|<M$bqWXzuuxC}vJDs+<}zw=F>o<3I;g2GVPGy``1i}eM<K0NGUw<u
+I?FI%003;O*mH+?%
+
+literal 12
+TcmXTONlZ@7$j?bhE#d+IAD9G=
+
+diff --git a/public/photos/landing/construction.webp b/public/photos/landing/construction.webp
+index 48cdce85287243a96a9e7d47855104acbcb79837..e14973cc015d45622419c946b6f22b8ceae6d5d6 100644
+GIT binary patch
+literal 54
+zcmWIYbaT^VU|<M$bqWXzuuxC}vJDs+<}zw=F>o<3I;g2GVPGy``1i}eM<K0NGUw<u
+I?FI%003;O*mH+?%
+
+literal 12
+TcmXTONlZ@7$j?bhE#d+IAD9G=
+
+diff --git a/public/photos/landing/dealership.webp b/public/photos/landing/dealership.webp
+index 48cdce85287243a96a9e7d47855104acbcb79837..e14973cc015d45622419c946b6f22b8ceae6d5d6 100644
+GIT binary patch
+literal 54
+zcmWIYbaT^VU|<M$bqWXzuuxC}vJDs+<}zw=F>o<3I;g2GVPGy``1i}eM<K0NGUw<u
+I?FI%003;O*mH+?%
+
+literal 12
+TcmXTONlZ@7$j?bhE#d+IAD9G=
+
+diff --git a/public/photos/landing/logistics.webp b/public/photos/landing/logistics.webp
+index 48cdce85287243a96a9e7d47855104acbcb79837..e14973cc015d45622419c946b6f22b8ceae6d5d6 100644
+GIT binary patch
+literal 54
+zcmWIYbaT^VU|<M$bqWXzuuxC}vJDs+<}zw=F>o<3I;g2GVPGy``1i}eM<K0NGUw<u
+I?FI%003;O*mH+?%
+
+literal 12
+TcmXTONlZ@7$j?bhE#d+IAD9G=
+
+diff --git a/public/photos/landing/real-estate.webp b/public/photos/landing/real-estate.webp
+index 48cdce85287243a96a9e7d47855104acbcb79837..e14973cc015d45622419c946b6f22b8ceae6d5d6 100644
+GIT binary patch
+literal 54
+zcmWIYbaT^VU|<M$bqWXzuuxC}vJDs+<}zw=F>o<3I;g2GVPGy``1i}eM<K0NGUw<u
+I?FI%003;O*mH+?%
+
+literal 12
+TcmXTONlZ@7$j?bhE#d+IAD9G=
+
+diff --git a/public/photos/landing/salon.webp b/public/photos/landing/salon.webp
+index 48cdce85287243a96a9e7d47855104acbcb79837..e14973cc015d45622419c946b6f22b8ceae6d5d6 100644
+GIT binary patch
+literal 54
+zcmWIYbaT^VU|<M$bqWXzuuxC}vJDs+<}zw=F>o<3I;g2GVPGy``1i}eM<K0NGUw<u
+I?FI%003;O*mH+?%
+
+literal 12
+TcmXTONlZ@7$j?bhE#d+IAD9G=
+
+diff --git a/public/photos/landing/school-board.webp b/public/photos/landing/school-board.webp
+index 48cdce85287243a96a9e7d47855104acbcb79837..e14973cc015d45622419c946b6f22b8ceae6d5d6 100644
+GIT binary patch
+literal 54
+zcmWIYbaT^VU|<M$bqWXzuuxC}vJDs+<}zw=F>o<3I;g2GVPGy``1i}eM<K0NGUw<u
+I?FI%003;O*mH+?%
+
+literal 12
+TcmXTONlZ@7$j?bhE#d+IAD9G=
+
+diff --git a/public/photos/testimonials/salon-owner.webp b/public/photos/testimonials/salon-owner.webp
+index 48cdce85287243a96a9e7d47855104acbcb79837..e14973cc015d45622419c946b6f22b8ceae6d5d6 100644
+GIT binary patch
+literal 54
+zcmWIYbaT^VU|<M$bqWXzuuxC}vJDs+<}zw=F>o<3I;g2GVPGy``1i}eM<K0NGUw<u
+I?FI%003;O*mH+?%
+
+literal 12
+TcmXTONlZ@7$j?bhE#d+IAD9G=
+
+diff --git a/public/photos/testimonials/shop-owner.webp b/public/photos/testimonials/shop-owner.webp
+index 48cdce85287243a96a9e7d47855104acbcb79837..e14973cc015d45622419c946b6f22b8ceae6d5d6 100644
+GIT binary patch
+literal 54
+zcmWIYbaT^VU|<M$bqWXzuuxC}vJDs+<}zw=F>o<3I;g2GVPGy``1i}eM<K0NGUw<u
+I?FI%003;O*mH+?%
+
+literal 12
+TcmXTONlZ@7$j?bhE#d+IAD9G=
+
+diff --git a/public/photos/testimonials/transport-owner.webp b/public/photos/testimonials/transport-owner.webp
+index 48cdce85287243a96a9e7d47855104acbcb79837..e14973cc015d45622419c946b6f22b8ceae6d5d6 100644
+GIT binary patch
+literal 54
+zcmWIYbaT^VU|<M$bqWXzuuxC}vJDs+<}zw=F>o<3I;g2GVPGy``1i}eM<K0NGUw<u
+I?FI%003;O*mH+?%
+
+literal 12
+TcmXTONlZ@7$j?bhE#d+IAD9G=
+
+diff --git a/src/app/(app)/layout.tsx b/src/app/(app)/layout.tsx
+index 96ec924fdf4ac44932ff230cabfe77baaa7fc106..cb86968b8390d47a668d0721348ca3d983275125 100644
+--- a/src/app/(app)/layout.tsx
++++ b/src/app/(app)/layout.tsx
+@@ -1,19 +1,21 @@
+ import "../globals.css";
+ import Sidebar from "@/components/nav/Sidebar";
+ import Topbar from "@/components/topbar/Topbar";
++import AppBannerRandom from "@/components/app/AppBannerRandom";
+ 
+ export default function AppLayout({ children }: { children: React.ReactNode }) {
+   return (
+     <html lang="en" suppressHydrationWarning>
+       <body>
+         <div className="flex min-h-screen">
+           <Sidebar />
+           <div className="flex-1 flex flex-col min-w-0">
+             <Topbar />
++            <AppBannerRandom />
+             <main className="flex-1">{children}</main>
+           </div>
+         </div>
+       </body>
+     </html>
+   );
+ }
+diff --git a/src/app/(marketing)/page.tsx b/src/app/(marketing)/page.tsx
+index 6b78ee3c613cb12f7c640e7af8f6e6009516e597..3b76505374a9922d10bfb05a164765d75e514ec0 100644
+--- a/src/app/(marketing)/page.tsx
++++ b/src/app/(marketing)/page.tsx
+@@ -1,42 +1,27 @@
+ import HeroRandom from "@/components/marketing/HeroRandom";
++import FeaturesRandom from "@/components/marketing/FeaturesRandom";
+ import TestimonialsRandom from "@/components/marketing/TestimonialsRandom";
++import TipsAdsRandom from "@/components/marketing/TipsAdsRandom";
+ 
+ export default function MarketingHome() {
+   return (
+     <main className="container mx-auto px-4 py-12">
+       <HeroRandom />
+-
+-      {/* Features */}
+-      <section id="features" className="mt-16 grid gap-6 sm:grid-cols-3">
+-        {[
+-          { title: "VAT-ready invoicing", text: "One-click VAT, zero-rated & exempt items." },
+-          { title: "PAYE & NIS summaries", text: "Local payroll deductions made simple." },
+-          { title: "Clean API", text: "Plug into your dealer or POS system." },
+-        ].map(f => (
+-          <div key={f.title} className="rounded-xl border p-6 bg-card">
+-            <div className="text-lg font-medium">{f.title}</div>
+-            <p className="text-sm text-muted-foreground mt-2">{f.text}</p>
+-          </div>
+-        ))}
+-      </section>
+-
+-      {/* Why Local */}
++      <FeaturesRandom count={6} />
+       <section id="why-local" className="mt-16 rounded-2xl border bg-primary/5 p-6">
+         <h2 className="text-xl font-semibold">Why Local</h2>
+         <ul className="mt-3 grid sm:grid-cols-2 gap-2 text-sm text-muted-foreground">
+           <li>✓ Built around GRA requirements</li>
+           <li>✓ VAT, NIS & PAYE workflows out of the box</li>
+           <li>✓ Local support and term-friendly pricing</li>
+           <li>✓ Familiar reports and exports</li>
+         </ul>
+       </section>
+-
+       <TestimonialsRandom />
+-
+-      {/* Pricing teaser */}
++      <TipsAdsRandom />
+       <section className="mt-16 text-center">
+         <a href="/pricing" className="inline-flex items-center rounded-md bg-primary text-primary-foreground h-10 px-6">See pricing</a>
+       </section>
+     </main>
+   );
+ }
+diff --git a/src/app/api/track/marketing/route.ts b/src/app/api/track/marketing/route.ts
+index 47be4abeb7c45024ecac91f96a977249d18d0960..95a99db19f2f5143c581e4ae10f923e78bb9986b 100644
+--- a/src/app/api/track/marketing/route.ts
++++ b/src/app/api/track/marketing/route.ts
+@@ -1,26 +1,24 @@
+ import { NextResponse } from "next/server";
+ import { prisma } from "@/lib/prisma";
+-import { auth } from "@/lib/auth";
++import { getServerSession } from "next-auth";
++import { authOptions } from "@/lib/auth";
+ 
+-/**
+- * Track lightweight marketing clicks to AuditLog.
+- * POST { event: "demo_click" | "compare_plans_click", meta?: Record<string, unknown> }
+- */
++/** POST { event: string; meta?: Record<string, unknown> } */
+ export async function POST(req: Request) {
+-  const session = await auth();
++  const session = await getServerSession(authOptions);
+   const { event, meta } = await req.json().catch(() => ({}));
+   if (!event) return NextResponse.json({ error: "event-required" }, { status: 400 });
+ 
+   await prisma.auditLog.create({
+     data: {
+       actorId: session?.user?.id ?? null,
+       actorEmail: session?.user?.email ?? null,
+       action: `marketing.${String(event)}`,
+       targetType: "Marketing",
+       targetId: "site",
+       metadata: meta ?? {},
+     },
+   });
+ 
+   return NextResponse.json({ ok: true });
+ }
+diff --git a/src/components/app/AppBannerRandom.tsx b/src/components/app/AppBannerRandom.tsx
+new file mode 100644
+index 0000000000000000000000000000000000000000..0591baf9de60626609626ee4109f4c02b3448205
+--- /dev/null
++++ b/src/components/app/AppBannerRandom.tsx
+@@ -0,0 +1,35 @@
++import Link from "next/link";
++import { chooseOnce } from "@/lib/randomize";
++
++const BANNERS = [
++  { text: "Invite your accountant — it’s free to add users.", href: "/settings/team", color: "bg-blue-50 text-blue-900", event: "banner_invite_accountant" },
++  { text: "Import your bank file and reconcile in seconds.", href: "/bank/import", color: "bg-green-50 text-green-900", event: "banner_import_bank" },
++  { text: "Try estimates → invoices workflow today.", href: "/estimates", color: "bg-amber-50 text-amber-900", event: "banner_estimates_to_invoices" },
++  { text: "VAT reminders keep you on track — check reports.", href: "/reports/vat", color: "bg-purple-50 text-purple-900", event: "banner_vat_reminders" },
++];
++
++export default function AppBannerRandom() {
++  const b = chooseOnce("hb_app_banner", BANNERS);
++
++  return (
++    <div className={`px-4 py-2 border-b ${b.color}`}>
++      <div className="container mx-auto flex items-center justify-between text-sm">
++        <span>{b.text}</span>
++        <Link
++          href={b.href}
++          className="underline font-medium ml-4"
++          onClick={() => {
++            fetch("/api/track/marketing", {
++              method: "POST",
++              headers: { "Content-Type": "application/json" },
++              body: JSON.stringify({ event: b.event, meta: { where: "app_banner" } }),
++              keepalive: true,
++            });
++          }}
++        >
++          Learn more
++        </Link>
++      </div>
++    </div>
++  );
++}
+diff --git a/src/components/marketing/FeaturesRandom.tsx b/src/components/marketing/FeaturesRandom.tsx
+new file mode 100644
+index 0000000000000000000000000000000000000000..a68ea6539ecb266f4dc90c238e582ae6cf4d530c
+--- /dev/null
++++ b/src/components/marketing/FeaturesRandom.tsx
+@@ -0,0 +1,27 @@
++import { chooseNOnce } from "@/lib/randomize";
++
++const ALL_FEATURES = [
++  { title: "VAT-ready invoicing", text: "One-click VAT (14%), zero-rated & exempt items." },
++  { title: "PAYE & NIS summaries", text: "Local payroll deductions made simple." },
++  { title: "Double-entry ledger", text: "Solid accounting fundamentals built-in." },
++  { title: "Bank import & reconcile", text: "CSV statements matched in seconds." },
++  { title: "Custom sequences & branding", text: "Professional docs with your logo." },
++  { title: "Clean API", text: "Plug into your dealer or POS system." },
++  { title: "Trial Balance & P&L", text: "Reports your accountant expects." },
++  { title: "Email invoicing & PDFs", text: "Send branded PDF invoices instantly." },
++];
++
++export default function FeaturesRandom({ count = 6 }: { count?: number }) {
++  const selected = chooseNOnce("hb_features", ALL_FEATURES, count);
++
++  return (
++    <section id="features" className="mt-16 grid gap-6 sm:grid-cols-3">
++      {selected.map((f) => (
++        <div key={f.title} className="rounded-xl border p-6 bg-card">
++          <div className="text-lg font-medium">{f.title}</div>
++          <p className="text-sm text-muted-foreground mt-2">{f.text}</p>
++        </div>
++      ))}
++    </section>
++  );
++}
+diff --git a/src/components/marketing/HeroRandom.tsx b/src/components/marketing/HeroRandom.tsx
+index e6bbc7f7ea9b7582e073ea03888d222c07d63494..8cdbc53a0b5a188bd236b04e38199ee117a419e1 100644
+--- a/src/components/marketing/HeroRandom.tsx
++++ b/src/components/marketing/HeroRandom.tsx
+@@ -1,46 +1,72 @@
+ import Image from "next/image";
+-import { cookies, headers } from "next/headers";
++import { chooseOnce } from "@/lib/randomize";
+ 
+-const POOL = [
++const HERO_IMAGES = [
+   "/photos/landing/construction.webp",
+   "/photos/landing/salon.webp",
+   "/photos/landing/barbershop.webp",
+   "/photos/landing/logistics.webp",
+   "/photos/landing/dealership.webp",
+   "/photos/landing/accounting.webp",
+   "/photos/landing/real-estate.webp",
+   "/photos/landing/school-board.webp",
+   "/photos/landing/carwash.webp",
+ ];
+-const COOKIE = "hb_hero";
+-const pick = <T,>(a: T[]) => a[Math.floor(Math.random() * a.length)];
+ 
+ export default function HeroRandom() {
+-  headers(); // make segment dynamic
+-  const jar = cookies();
+-  let chosen = jar.get(COOKIE)?.value;
+-  if (!chosen || !POOL.includes(chosen)) {
+-    chosen = pick(POOL);
+-    jar.set(COOKIE, chosen, { path: "/", httpOnly: false, sameSite: "lax", maxAge: 60 * 60 * 12 });
+-  }
++  const chosen = chooseOnce("hb_hero", HERO_IMAGES);
+ 
+   return (
+     <div className="relative grid items-center gap-10 md:grid-cols-2 pt-16">
+       <div>
+         <h1 className="text-4xl font-semibold tracking-tight">
+           Accounting built for Guyana — VAT, NIS & PAYE made simple
+         </h1>
+         <p className="mt-3 text-muted-foreground">
+           Local compliance, faster invoices, clean reports, and an API when you’re ready.
+         </p>
+         <div className="mt-6 flex items-center gap-3">
+-          <a href="/get-started" className="inline-flex h-10 items-center rounded-md bg-primary px-6 text-primary-foreground">Get started</a>
+-          <a href="/sign-up?plan=business&demo=1" className="inline-flex h-10 items-center rounded-md border px-6">Try demo</a>
++          <a
++            href="/get-started"
++            className="inline-flex h-10 items-center rounded-md bg-primary px-6 text-primary-foreground"
++            onClick={() =>
++              fetch("/api/track/marketing", {
++                method: "POST",
++                headers: { "Content-Type": "application/json" },
++                body: JSON.stringify({ event: "cta_get_started", meta: { hero: chosen } }),
++                keepalive: true,
++              })
++            }
++          >
++            Get started
++          </a>
++          <a
++            href="/sign-up?plan=business&demo=1"
++            className="inline-flex h-10 items-center rounded-md border px-6"
++            onClick={() =>
++              fetch("/api/track/marketing", {
++                method: "POST",
++                headers: { "Content-Type": "application/json" },
++                body: JSON.stringify({ event: "cta_try_demo", meta: { hero: chosen } }),
++                keepalive: true,
++              })
++            }
++          >
++            Try demo
++          </a>
+         </div>
+       </div>
++
+       <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border">
+-        <Image src={chosen} alt="Guyanese small business using heroBooks" fill sizes="(min-width: 768px) 50vw, 100vw" priority className="object-cover" />
++        <Image
++          src={chosen}
++          alt="Guyanese small business using heroBooks"
++          fill
++          sizes="(min-width: 768px) 50vw, 100vw"
++          priority
++          className="object-cover"
++        />
+       </div>
+     </div>
+   );
+ }
+diff --git a/src/components/marketing/TestimonialsRandom.tsx b/src/components/marketing/TestimonialsRandom.tsx
+index 80a2cd2391081a4ee201b50496b6f79b2446d7fd..23bfc7a8f4f8d3e54002b4dfdc16f5759b57345b 100644
+--- a/src/components/marketing/TestimonialsRandom.tsx
++++ b/src/components/marketing/TestimonialsRandom.tsx
+@@ -1,35 +1,26 @@
+ import Image from "next/image";
+-import { cookies, headers } from "next/headers";
++import { chooseOnce } from "@/lib/randomize";
+ 
+ const TESTIMONIALS = [
+   { img: "/photos/testimonials/shop-owner.webp", quote: "heroBooks saves me hours every VAT month.", name: "Shawn — Shop owner, Georgetown" },
+-  { img: "/photos/testimonials/salon-owner.webp", quote: "Invoices and receipts that my customers love.", name: "Latoya — Salon owner, New Amsterdam" },
++  { img: "/photos/testimonials/salon-owner.webp", quote: "Invoices and receipts my customers love.", name: "Latoya — Salon owner, New Amsterdam" },
+   { img: "/photos/testimonials/transport-owner.webp", quote: "Bank imports and reconciliation are a breeze.", name: "Marcus — Logistics, Linden" },
+ ];
+-const COOKIE = "hb_testimonial";
+-const pick = <T,>(a: T[]) => a[Math.floor(Math.random() * a.length)];
+ 
+ export default function TestimonialsRandom() {
+-  headers();
+-  const jar = cookies();
+-  let chosenIdx = Number(jar.get(COOKIE)?.value ?? NaN);
+-  if (Number.isNaN(chosenIdx) || chosenIdx < 0 || chosenIdx >= TESTIMONIALS.length) {
+-    chosenIdx = Math.floor(Math.random() * TESTIMONIALS.length);
+-    jar.set(COOKIE, String(chosenIdx), { path: "/", httpOnly: false, sameSite: "lax", maxAge: 60 * 60 * 12 });
+-  }
+-  const t = TESTIMONIALS[chosenIdx];
++  const t = chooseOnce("hb_testimonial", TESTIMONIALS);
+ 
+   return (
+     <section className="mt-16">
+       <div className="rounded-2xl border p-6 grid gap-6 sm:grid-cols-[120px_1fr] items-center bg-muted/30">
+         <div className="relative h-24 w-24 overflow-hidden rounded-full border">
+           <Image src={t.img} alt={t.name} fill className="object-cover" />
+         </div>
+         <div className="text-sm">
+           <p className="text-foreground text-lg leading-snug">“{t.quote}”</p>
+           <p className="text-muted-foreground mt-2">{t.name}</p>
+         </div>
+       </div>
+     </section>
+   );
+ }
+diff --git a/src/components/marketing/TipsAdsRandom.tsx b/src/components/marketing/TipsAdsRandom.tsx
+new file mode 100644
+index 0000000000000000000000000000000000000000..9bccb163a508163dc056d89dfec4094fe51d5634
+--- /dev/null
++++ b/src/components/marketing/TipsAdsRandom.tsx
+@@ -0,0 +1,34 @@
++import Link from "next/link";
++import { chooseOnce } from "@/lib/randomize";
++
++const CARDS = [
++  { title: "Try the demo", text: "See sample data with VAT-ready invoices.", href: "/sign-up?plan=business&demo=1", event: "tip_try_demo" },
++  { title: "Compare plans", text: "Starter is free during beta.", href: "/pricing?highlight=business", event: "tip_compare_plans" },
++  { title: "Invite your accountant", text: "Collaboration is free.", href: "/sign-in", event: "tip_invite_accountant" },
++];
++
++export default function TipsAdsRandom() {
++  const c = chooseOnce("hb_tip", CARDS);
++  return (
++    <section className="mt-16">
++      <div className="rounded-2xl border p-6 bg-primary/5">
++        <div className="text-lg font-medium">{c.title}</div>
++        <p className="text-sm text-muted-foreground mt-2">{c.text}</p>
++        <Link
++          href={c.href}
++          className="inline-flex mt-4 rounded-md border px-3 py-1.5 text-sm hover:bg-muted"
++          onClick={() =>
++            fetch("/api/track/marketing", {
++              method: "POST",
++              headers: { "Content-Type": "application/json" },
++              body: JSON.stringify({ event: c.event, meta: { where: "tips_ads" } }),
++              keepalive: true,
++            })
++          }
++        >
++          Learn more
++        </Link>
++      </div>
++    </section>
++  );
++}
+diff --git a/src/lib/randomize.ts b/src/lib/randomize.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..4d2d98428d1e86e27835ef9ca1aab8c42004cd46
+--- /dev/null
++++ b/src/lib/randomize.ts
+@@ -0,0 +1,49 @@
++import { cookies, headers } from "next/headers";
++
++/**
++ * Choose one item from a pool and persist in a readable cookie for ~12h.
++ */
++export function chooseOnce<T>(cookieName: string, pool: T[]): T {
++  headers(); // ensure dynamic segment
++  const jar = cookies();
++  let idx = Number(jar.get(cookieName)?.value ?? NaN);
++  if (Number.isNaN(idx) || idx < 0 || idx >= pool.length) {
++    idx = Math.floor(Math.random() * pool.length);
++    jar.set(cookieName, String(idx), { path: "/", httpOnly: false, sameSite: "lax", maxAge: 60 * 60 * 12 });
++  }
++  return pool[idx];
++}
++
++/**
++ * Choose N unique items from a pool and persist their indices for ~12h.
++ */
++export function chooseNOnce<T>(cookieName: string, pool: T[], n: number): T[] {
++  headers(); // ensure dynamic segment
++  const jar = cookies();
++  const raw = jar.get(cookieName)?.value;
++  let pickedIdx: number[] | null = null;
++
++  if (raw) {
++    try {
++      const arr = JSON.parse(raw) as number[];
++      if (Array.isArray(arr) && arr.every((x) => Number.isInteger(x) && x >= 0 && x < pool.length)) {
++        pickedIdx = arr.slice(0, n);
++      }
++    } catch {
++      /* ignore */
++    }
++  }
++
++  if (!pickedIdx || pickedIdx.length !== n) {
++    const all = [...pool.keys()];
++    // Fisher-Yates for first n
++    for (let i = all.length - 1; i > 0; i--) {
++      const j = Math.floor(Math.random() * (i + 1));
++      [all[i], all[j]] = [all[j], all[i]];
++    }
++    pickedIdx = all.slice(0, Math.min(n, pool.length));
++    jar.set(cookieName, JSON.stringify(pickedIdx), { path: "/", httpOnly: false, sameSite: "lax", maxAge: 60 * 60 * 12 });
++  }
++
++  return pickedIdx.map((i) => pool[i]);
++}
+ 
+EOF
+)
