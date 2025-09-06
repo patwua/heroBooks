@@ -1,7 +1,12 @@
+'use client';
+export const dynamic = 'force-dynamic';
+import { Suspense } from 'react';
+
 export const metadata = { title: "Forgot Password — heroBooks" };
 
 export default function ForgotPasswordPage() {
   return (
+    <Suspense fallback={null}>
     <section className="container mx-auto px-4 py-12 max-w-md">
       <h1 className="text-2xl font-semibold">Forgot your password?</h1>
       <p className="text-sm text-muted-foreground mt-1">
@@ -37,5 +42,6 @@ export default function ForgotPasswordPage() {
         <p className="text-xs text-muted-foreground">We’ll email a link that expires in 30 minutes.</p>
       </form>
     </section>
+    </Suspense>
   );
 }
