@@ -43,10 +43,11 @@ const PLAN_FEATURES: Record<PlanName, PlatformFeature[]> = {
 };
 
 // ---- Session helpers ----
-export const getActiveOrgId = cache(async () => {
+// Request-scoped: do NOT memoize globally.
+export async function getActiveOrgId() {
   const session = await auth();
   return (session as any)?.orgId ?? null;
-});
+}
 
 export async function isSuperUser(): Promise<boolean> {
   const session = await auth();
@@ -108,13 +109,14 @@ export async function getFeatureStatuses(features: PlatformFeature[], orgId: str
 }
 
 // ---- User UI settings ----
-export const getUserUiSettings = cache(async () => {
+// Request-/user-scoped: do NOT memoize globally.
+export async function getUserUiSettings() {
   const session = await auth();
   const userId = session?.user?.id || null;
   if (!userId) return { hideLockedFeatures: false };
   const row = await prisma.userSettings.findUnique({ where: { userId } });
   return { hideLockedFeatures: row?.hideLockedFeatures ?? false };
-});
+}
 
 export async function canUseFeature(feature: PlatformFeature, orgId: string | null): Promise<boolean> {
   const status = await getFeatureStatus(feature, orgId);

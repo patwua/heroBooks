@@ -34,6 +34,17 @@ export default async function Sidebar() {
   const orgId = await getActiveOrgId();
   const { hideLockedFeatures } = await getUserUiSettings();
 
+  // Primary, always-on navigation (kept out of feature flags)
+  const STATIC_NAV = [
+    { group: "accounting", label: "Dashboard", route: "/dashboard" },
+    { group: "accounting", label: "Invoices", route: "/invoices" },
+    { group: "accounting", label: "Estimates", route: "/estimates" },
+    { group: "accounting", label: "Customers", route: "/customers" },
+    { group: "accounting", label: "Vendors", route: "/vendors" },
+    { group: "accounting", label: "Items", route: "/items" },
+    { group: "settings",   label: "Organization", route: "/settings/org" },
+  ];
+
   const statuses = await getFeatureStatuses(
     FEATURE_REGISTRY.map((f) => f.key),
     orgId,
@@ -41,13 +52,21 @@ export default async function Sidebar() {
 
   const groups: Record<
     string,
-    { label: string; items: { meta: any; locked: boolean; reason: string }[] }
+    { label: string; items: { meta: any; locked?: boolean; reason?: string }[] }
   > = {
     accounting: { label: "Accounting", items: [] },
     reports: { label: "Reports", items: [] },
     settings: { label: "Settings", items: [] },
   };
 
+  // Always render the static nav
+  for (const item of STATIC_NAV) {
+    groups[item.group]?.items.push({
+      meta: { key: `core:${item.route}`, route: item.route, label: item.label },
+    });
+  }
+
+  // Then add feature-gated entries
   for (const meta of FEATURE_REGISTRY) {
     const st = statuses[meta.key];
     const locked = !st.allowed;
@@ -69,7 +88,10 @@ export default async function Sidebar() {
               label={
                 <>
                   <span>{meta.label}</span>
-                  {locked && <LockedBadge reason={reason} />}
+                  {/* Only show badge for feature-flagged (not static) */}
+                  {meta.key?.startsWith("core:") ? null : (locked && (
+                    <LockedBadge reason={reason} />
+                  ))}
                 </>
               }
             />
