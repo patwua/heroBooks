@@ -1,75 +1,21 @@
 import Link from "next/link";
-import { auth } from "@/lib/auth";
-import { getActiveOrgId, getFeatureStatuses } from "@/lib/features";
+import {
+  getActiveOrgId,
+  getFeatureStatuses,
+  FEATURE_REGISTRY,
+  reasonText,
+  getUserUiSettings,
+} from "@/lib/features";
 
-export default async function Sidebar() {
-  const session = await auth();
-  const orgId = await getActiveOrgId();
-  const statuses = await getFeatureStatuses(["payroll"], orgId);
-
-  const payroll = statuses.payroll;
-  const locked = !payroll.allowed;
-  const reasonText =
-    payroll.reason === "plan"
-      ? "Locked – Upgrade required"
-      : payroll.reason === "toggle"
-        ? "Locked – Enable in Settings"
-        : "Locked";
-
-  const badge = locked ? (
+function LockedBadge({ reason }: { reason: string }) {
+  const text = reasonText(reason as any);
+  return (
     <span
-      className="ml-2 text-[10px] rounded bg-muted px-1 py-0.5"
-      title={reasonText}
-      aria-label={reasonText}
+      title={text}
+      className="ml-2 text-[10px] rounded bg-muted px-1 py-0.5 cursor-help"
     >
       Locked
     </span>
-  ) : null;
-
-  return (
-    <aside className="w-60 shrink-0 border-r bg-background p-3 text-sm">
-      <div className="space-y-1">
-        <div className="px-2 py-1 text-xs uppercase text-muted-foreground">Accounting</div>
-        <NavItem href="/dashboard" label="Dashboard" />
-        <NavItem href="/invoices" label="Invoices" />
-        <NavItem href="/estimates" label="Estimates" />
-        <NavItem href="/customers" label="Customers" />
-        <NavItem href="/vendors" label="Vendors" />
-        <NavItem href="/items" label="Products & Services" />
-        <NavItem
-          href="/payroll"
-          label={
-            <>
-              <span>Payroll</span>
-              {badge}
-            </>
-          }
-        />
-      </div>
-
-      <div className="mt-4 space-y-1">
-        <div className="px-2 py-1 text-xs uppercase text-muted-foreground">Reports</div>
-        <NavItem href="/reports/vat" label="VAT" />
-        <NavItem href="/reports/trial-balance" label="Trial Balance" />
-        <NavItem href="/reports/profit-loss" label="Profit & Loss" />
-        <NavItem
-          href="/reports/payroll"
-          label={
-            <>
-              <span>Payroll Summary</span>
-              {badge}
-            </>
-          }
-        />
-      </div>
-
-      <div className="mt-4 space-y-1">
-        <div className="px-2 py-1 text-xs uppercase text-muted-foreground">Settings</div>
-        <NavItem href="/settings/organization" label="Organization" />
-        <NavItem href="/settings/profile" label="Profile" />
-        <NavItem href="/settings/branding" label="Branding" />
-      </div>
-    </aside>
   );
 }
 
@@ -83,3 +29,56 @@ function NavItem({ href, label }: { href: string; label: React.ReactNode }) {
     </Link>
   );
 }
+
+export default async function Sidebar() {
+  const orgId = await getActiveOrgId();
+  const { hideLockedFeatures } = await getUserUiSettings();
+
+  const statuses = await getFeatureStatuses(
+    FEATURE_REGISTRY.map((f) => f.key),
+    orgId,
+  );
+
+  const groups: Record<
+    string,
+    { label: string; items: { meta: any; locked: boolean; reason: string }[] }
+  > = {
+    accounting: { label: "Accounting", items: [] },
+    reports: { label: "Reports", items: [] },
+    settings: { label: "Settings", items: [] },
+  };
+
+  for (const meta of FEATURE_REGISTRY) {
+    const st = statuses[meta.key];
+    const locked = !st.allowed;
+    if (hideLockedFeatures && locked) continue;
+    groups[meta.group].items.push({ meta, locked, reason: st.reason });
+  }
+
+  return (
+    <aside className="w-60 shrink-0 border-r bg-background p-3 text-sm">
+      {Object.values(groups).map((g) => (
+        <div key={g.label} className="space-y-1 mb-4">
+          <div className="px-2 py-1 text-xs uppercase text-muted-foreground">
+            {g.label}
+          </div>
+          {g.items.map(({ meta, locked, reason }) => (
+            <NavItem
+              key={meta.key}
+              href={meta.route}
+              label={
+                <>
+                  <span>{meta.label}</span>
+                  {locked && <LockedBadge reason={reason} />}
+                </>
+              }
+            />
+          ))}
+        </div>
+      ))}
+
+      {/* Hide/Show toggle lives in topbar, see Topbar */}
+    </aside>
+  );
+}
+
