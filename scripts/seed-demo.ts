@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { prisma } from "@/lib/prisma";
 import { getDemoOrgId } from "@/lib/demo";
-import { VAT_CODES, SEED_CUSTOMERS, SEED_VENDORS, SEED_ITEMS, SEED_DOCS } from "@/lib/seed/demo-data";
+import { VAT_CODES, SEED_CUSTOMERS, SEED_VENDORS, SEED_ITEMS, SEED_DOCS, COA, PAYE_2025, NIS_2025 } from "@/lib/seed/demo-data";
 import { Decimal } from "@prisma/client/runtime/library";
 
 async function upsertDemoOrg(): Promise<string> {
@@ -76,6 +76,93 @@ async function seedItems(orgId: string) {
     });
   }
   console.log("✓ Items");
+}
+
+async function seedCOA(orgId: string) {
+  const groups: Array<[string, { code: string; name: string }[]]> = [
+    ["asset", COA.assets],
+    ["liability", COA.liabilities],
+    ["equity", COA.equity],
+    ["income", COA.income],
+    ["cogs", COA.cogs],
+    ["expense", COA.expense],
+  ];
+  for (const [group, arr] of groups) {
+    for (const a of arr) {
+      await prisma.ledgerAccount.upsert({
+        where: { orgId_code: { orgId, code: a.code } },
+        create: { orgId, code: a.code, name: a.name, group },
+        update: { name: a.name, group },
+      });
+    }
+  }
+  console.log("✓ COA (LedgerAccount)");
+}
+
+async function seedPAYE(orgId: string) {
+  const eff = new Date(PAYE_2025.effectiveFrom);
+  for (const b of PAYE_2025.bracketsMonthly) {
+    await prisma.payeBracket
+      .upsert({
+        where: { orgId_effectiveFrom_order: { orgId, effectiveFrom: eff, order: b.order } } as any,
+        create: {
+          orgId,
+          order: b.order,
+          upTo: b.upTo ? new Decimal(b.upTo) : null,
+          rate: new Decimal(b.rate),
+          effectiveFrom: eff,
+        },
+        update: { upTo: b.upTo ? new Decimal(b.upTo) : null, rate: new Decimal(b.rate) },
+      })
+      .catch(async () => {
+        const exists = await prisma.payeBracket.findFirst({ where: { orgId, effectiveFrom: eff, order: b.order } });
+        if (!exists) {
+          await prisma.payeBracket.create({
+            data: {
+              orgId,
+              order: b.order,
+              upTo: b.upTo ? new Decimal(b.upTo) : null,
+              rate: new Decimal(b.rate),
+              effectiveFrom: eff,
+            },
+          });
+        } else {
+          await prisma.payeBracket.update({
+            where: { id: exists.id },
+            data: { upTo: b.upTo ? new Decimal(b.upTo) : null, rate: new Decimal(b.rate) },
+          });
+        }
+      });
+  }
+  console.log("✓ PAYE 2025 brackets");
+}
+
+async function seedNIS(orgId: string) {
+  const eff = new Date(NIS_2025.effectiveFrom);
+  const existing = await prisma.nisSetting.findFirst({ where: { orgId, effectiveFrom: eff } });
+  if (!existing) {
+    await prisma.nisSetting.create({
+      data: {
+        orgId,
+        employeeRate: new Decimal(NIS_2025.employeeRate),
+        employerRate: new Decimal(NIS_2025.employerRate),
+        ceilingAmount: NIS_2025.ceilingAmount ? new Decimal(NIS_2025.ceilingAmount) : null,
+        ceilingPeriod: NIS_2025.ceilingPeriod,
+        effectiveFrom: eff,
+      },
+    });
+  } else {
+    await prisma.nisSetting.update({
+      where: { id: existing.id },
+      data: {
+        employeeRate: new Decimal(NIS_2025.employeeRate),
+        employerRate: new Decimal(NIS_2025.employerRate),
+        ceilingAmount: NIS_2025.ceilingAmount ? new Decimal(NIS_2025.ceilingAmount) : null,
+        ceilingPeriod: NIS_2025.ceilingPeriod,
+      },
+    });
+  }
+  console.log("✓ NIS 2025 settings");
 }
 
 async function seedInvoices(orgId: string) {
@@ -347,6 +434,9 @@ async function main() {
   await seedInvoices(orgId);
   await seedEstimates(orgId);
   await seedBank(orgId);
+  await seedCOA(orgId);
+  await seedPAYE(orgId);
+  await seedNIS(orgId);
   console.log("Demo seed complete ✅");
 }
 

@@ -47,6 +47,11 @@ model Org {
   bills            Bill[]
   estimates        Estimate[]
   bankTransactions BankTransaction[]
+  ledgerAccounts   LedgerAccount[]
+  payeBrackets     PayeBracket[]
+  nisSettings      NisSetting[]
+  taxFeature       OrgTaxFeature?
+  taxAdvisoryReceipts TaxAdvisoryReceipt[]
   subscriptions    OrgSubscription[]
   checkoutIntents  CheckoutIntent[]
   createdAt        DateTime          @default(now())
@@ -419,4 +424,76 @@ model OrgSubscription {
   updatedAt           DateTime @updatedAt
   checkoutIntent      CheckoutIntent? @relation(fields: [checkoutIntentId], references: [id], onDelete: SetNull)
   checkoutIntentId    String?
+}
+
+model LedgerAccount {
+  id     String @id @default(cuid())
+  orgId  String
+  code   String
+  name   String
+  group  String  // 'asset' | 'liability' | 'equity' | 'income' | 'expense' | 'cogs'
+  org    Org     @relation(fields: [orgId], references: [id])
+  @@unique([orgId, code])
+  @@index([orgId, group])
+}
+
+model PayeBracket {
+  id            String   @id @default(cuid())
+  orgId         String
+  order         Int
+  upTo          Decimal? @db.Decimal(14,2) // null = no cap/top band
+  rate          Decimal  @db.Decimal(5,4)  // e.g. 0.2500
+  effectiveFrom DateTime
+  effectiveTo   DateTime?
+  org           Org      @relation(fields: [orgId], references: [id])
+  @@index([orgId, effectiveFrom, effectiveTo])
+}
+
+model NisSetting {
+  id            String   @id @default(cuid())
+  orgId         String   @unique
+  employeeRate  Decimal  @db.Decimal(5,4)  // 0.0560
+  employerRate  Decimal  @db.Decimal(5,4)  // 0.0840
+  ceilingAmount Decimal? @db.Decimal(14,2) // 280000.00 (monthly)
+  ceilingPeriod String   // 'weekly' | 'monthly' | 'annual'
+  effectiveFrom DateTime
+  effectiveTo   DateTime?
+  org           Org      @relation(fields: [orgId], references: [id])
+  @@index([orgId, effectiveFrom, effectiveTo])
+}
+
+model OrgTaxFeature {
+  id            String   @id @default(cuid())
+  orgId         String   @unique
+  enableVAT     Boolean  @default(true)
+  enablePAYE    Boolean  @default(false)
+  enableNIS     Boolean  @default(false)
+  enablePropTax Boolean  @default(false)
+  effectiveFrom DateTime @default(now())
+  org           Org      @relation(fields: [orgId], references: [id])
+}
+
+model TaxAdvisory {
+  id            String   @id @default(cuid())
+  region        String   // 'GY'
+  kind          String   // 'PAYE' | 'NIS' | 'VAT'
+  title         String
+  body          String
+  payloadJson   Json     // serialized brackets/settings to apply
+  effectiveFrom DateTime
+  createdAt     DateTime @default(now())
+  receipts      TaxAdvisoryReceipt[]
+}
+
+model TaxAdvisoryReceipt {
+  id         String   @id @default(cuid())
+  orgId      String
+  advisoryId String
+  acceptedAt DateTime?
+  declinedAt DateTime?
+  acceptedBy String?
+  org        Org           @relation(fields: [orgId], references: [id])
+  advisory   TaxAdvisory   @relation(fields: [advisoryId], references: [id])
+  @@unique([orgId, advisoryId])
+  @@index([orgId, acceptedAt])
 }
