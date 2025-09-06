@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { chooseOnce } from "@/lib/randomize";
+import TrackLink from "@/components/marketing/TrackLink";
 
 const BANNERS = [
   { text: "Invite your accountant — it’s free to add users.", href: "/settings/team", color: "bg-blue-50 text-blue-900", event: "banner_invite_accountant" },
@@ -15,20 +15,14 @@ export default function AppBannerRandom() {
     <div className={`px-4 py-2 border-b ${b.color}`}>
       <div className="container mx-auto flex items-center justify-between text-sm">
         <span>{b.text}</span>
-        <Link
+        <TrackLink
           href={b.href}
           className="underline font-medium ml-4"
-          onClick={() => {
-            fetch("/api/track/marketing", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ event: b.event, meta: { where: "app_banner" } }),
-              keepalive: true,
-            });
-          }}
+          event={b.event}
+          meta={{ where: "app_banner" }}
         >
           Learn more
-        </Link>
+        </TrackLink>
       </div>
     </div>
   );

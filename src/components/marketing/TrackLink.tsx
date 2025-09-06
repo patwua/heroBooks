@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 type Props = React.ComponentProps<typeof Link> & {
-  event: "demo_click" | "compare_plans_click";
+  event: string;
   meta?: Record<string, unknown>;
 };
 
