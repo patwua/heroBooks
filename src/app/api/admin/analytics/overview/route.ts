@@ -4,12 +4,11 @@ import { auth } from "@/lib/auth";
 import { isSuperUser } from "@/lib/features";
 
 async function isAdmin(userId: string) {
-  const user = await prisma.user.findUnique({
-    where: { id: userId },
-    select: { role: true },
+  const membership = await prisma.userOrg.findFirst({
+    where: { userId, role: { in: ["OWNER", "ADMIN"] } },
+    select: { id: true },
   });
-  const role = user?.role?.toLowerCase();
-  return role === "admin" || role === "superadmin";
+  return Boolean(membership);
 }
 
 function ymd(d: Date) {
