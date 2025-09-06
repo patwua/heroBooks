@@ -2,10 +2,15 @@ import HeroRandom from "@/components/marketing/HeroRandom";
 import FeaturesRandom from "@/components/marketing/FeaturesRandom";
 import TestimonialsRandom from "@/components/marketing/TestimonialsRandom";
 import TipsAdsRandom from "@/components/marketing/TipsAdsRandom";
+import { cookies } from "next/headers";
 
 export default function MarketingHome() {
+  const variant = cookies().get("hb_variant")?.value ?? null;
   return (
-    <main className="container mx-auto px-4 py-12">
+    <main
+      className="container mx-auto px-4 py-12"
+      data-variant={variant ?? undefined}
+    >
       <HeroRandom />
       <FeaturesRandom count={6} />
       <section id="why-local" className="mt-16 rounded-2xl border bg-primary/5 p-6">
