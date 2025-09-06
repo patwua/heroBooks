@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import TaxStrip from "@/components/marketing/TaxStrip";
 import LogosMarquee from "@/components/marketing/LogosMarquee";
 import FeatureCard from "@/components/marketing/FeatureCard";
+import DemoEnterButton from "@/components/marketing/DemoEnterButton";
 import { FileSpreadsheet, Receipt, Calculator, Banknote, ShieldCheck, PlugZap } from "lucide-react";
 
 export default function HomePage() {
@@ -22,6 +23,7 @@ export default function HomePage() {
             clean reports, and an API to plug into your dealer system.
           </p>
           <div className="mt-6 flex items-center justify-center gap-3">
+            <DemoEnterButton label="Try the demo" />
             <Button asChild size="lg">
               {/* Default to business for best fit */}
               <Link href="/sign-up?plan=business">Start free</Link>

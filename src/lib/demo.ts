@@ -1,47 +1,102 @@
 import type { Session } from "next-auth";
+import { cookies } from "next/headers";
+import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
+import { ORG_COOKIE_NAME } from "@/lib/tenant";
 
-const RAW_DEMO_ORG = process.env.DEMO_ORG_ID || "";
+const DEMO_COOKIE = "hb_demo";
+const RAW_DEMO_ORG = (process.env.DEMO_ORG_ID ?? "").trim();
 const DEMO_TTL_HOURS = Number(process.env.DEMO_TTL_HOURS || "72");
 
 let cachedDemoOrgId: string | undefined;
 
-/**
- * Resolve the demo org id:
- * - If DEMO_ORG_ID looks like a cuid/uuid and matches an existing org, use it.
- * - Otherwise, treat DEMO_ORG_ID as a name: find or create org with that name and return its id.
- * Caches result for this process.
- */
-export async function getDemoOrgId(): Promise<string> {
-  if (cachedDemoOrgId) return cachedDemoOrgId;
-  const val = RAW_DEMO_ORG.trim();
-  if (!val) throw new Error("DEMO_ORG_ID not configured");
+/** Resolve DEMO_ORG_ID env as an existing org (by id or exact name) or create it. Also ensure current user membership. */
+export async function getOrCreateDemoOrgId(): Promise<string> {
+  const session = await auth();
+  if (!session?.user?.id) throw new Error("Not authenticated");
 
-  // Try by id first
-  const existingById = await prisma.org.findFirst({ where: { id: val }, select: { id: true } });
-  if (existingById) {
-    cachedDemoOrgId = existingById.id;
-    return cachedDemoOrgId;
+  const raw = RAW_DEMO_ORG;
+  if (!raw) throw new Error("DEMO_ORG_ID not set");
+
+  // 1) try by primary key id
+  let org = await prisma.org.findUnique({ where: { id: raw } });
+
+  // 2) else try by name
+  if (!org) {
+    org = await prisma.org.findFirst({ where: { name: raw } });
   }
 
-  // Otherwise treat as name
-  let byName = await prisma.org.findFirst({ where: { name: val }, select: { id: true } });
-  if (!byName) {
-    byName = await prisma.org.create({
-      data: { name: val },
-      select: { id: true },
+  // 3) else create
+  if (!org) {
+    org = await prisma.org.create({
+      data: {
+        name: raw,
+        // seed any defaults you want for demo org here (tax codes, sequences, etc.)
+      },
     });
   }
-  cachedDemoOrgId = byName.id;
-  return cachedDemoOrgId!;
+
+  // Ensure user membership
+  const member = await prisma.userOrg.findFirst({
+    where: { userId: session.user.id, orgId: org.id },
+  });
+  if (!member) {
+    await prisma.userOrg.create({
+      data: {
+        userId: session.user.id,
+        orgId: org.id,
+        role: "ADMIN", // demo convenience; tighten later if you want
+      },
+    });
+  }
+
+  return org.id;
 }
 
-/** Is current session in demo mode (and demo org configured)? */
-export async function isDemoSession(session: Session | null | undefined) {
-  if (!session?.demo) return false;
-  if (!RAW_DEMO_ORG.trim()) return false;
-  const demoOrgId = await getDemoOrgId();
-  return Boolean(session?.orgId === demoOrgId);
+/** Cached org id helper for legacy callers */
+export async function getDemoOrgId(): Promise<string> {
+  if (cachedDemoOrgId) return cachedDemoOrgId;
+  cachedDemoOrgId = await getOrCreateDemoOrgId();
+  return cachedDemoOrgId;
+}
+
+/** Enter demo: set cookies (org + demo flag) */
+export async function enterDemo(orgId: string) {
+  const jar = cookies();
+  jar.set(ORG_COOKIE_NAME, orgId, {
+    httpOnly: true,
+    sameSite: "lax",
+    path: "/",
+    secure: true,
+    maxAge: 60 * 60 * 6, // 6h demo window
+  });
+  jar.set(DEMO_COOKIE, "1", {
+    httpOnly: true,
+    sameSite: "lax",
+    path: "/",
+    secure: true,
+    maxAge: 60 * 60 * 6,
+  });
+}
+
+/** Leave demo: clear demo flag; keep org cookie logic simple (optional: restore last real org) */
+export async function leaveDemo() {
+  const jar = cookies();
+  jar.delete(DEMO_COOKIE);
+  // You can also clear org cookie to force reselect:
+  // jar.delete(ORG_COOKIE_NAME);
+}
+
+export function isDemoModeFromCookies(): boolean {
+  const val = cookies().get(DEMO_COOKIE)?.value;
+  return val === "1";
+}
+
+export const DEMO_COOKIE_NAME = DEMO_COOKIE;
+
+/** Legacy helper: determine demo from cookie */
+export async function isDemoSession(_session: Session | null | undefined) {
+  return isDemoModeFromCookies();
 }
 
 /** Resolve active orgId based on session (demo takes precedence) */

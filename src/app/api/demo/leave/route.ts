@@ -1,18 +1,19 @@
-import { auth } from "@/lib/auth";
 import { NextResponse } from "next/server";
-import { purgeExpiredDemoDataIfAny } from "@/lib/demo";
+import { auth } from "@/lib/auth";
+import { leaveDemo } from "@/lib/demo";
+
+export async function GET() {
+  return NextResponse.json(
+    { error: "Use POST /api/demo/leave while authenticated." },
+    { status: 405 }
+  );
+}
 
 export async function POST() {
   const session = await auth();
-  if (!session?.user?.id) {
-    return NextResponse.json({ ok: false, error: "Not authenticated" }, { status: 401 });
-  }
-  // Opportunistic expired purge
-  await purgeExpiredDemoDataIfAny();
+  if (!session?.user?.id) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
 
-  // Unset demo and fall back to the user's last real org (kept in your own session.orgId handling)
-  // @ts-ignore
-  await session.update({ demo: false, orgId: null });
-  return NextResponse.json({ ok: true });
+  await leaveDemo();
+  return NextResponse.json({ ok: true, redirect: "/dashboard" });
 }
 
