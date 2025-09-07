@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { recordFeatureImpression } from "@/lib/telemetry";
 import { getStoryById } from "@/lib/stories";
 import ComingSoonOverlay from "@/components/marketing/ComingSoonOverlay";
-import { testimonialCopy } from "@/lib/copy/imageCopy";
+import { testimonialCopy, TestimonialKey } from "@/lib/copy/imageCopy";
 import { testimonialImages } from "@/lib/images";
 
 const headings = [
