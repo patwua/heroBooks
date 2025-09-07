@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import ComingSoonOverlay from "@/components/marketing/ComingSoonOverlay";
 import { stories } from "@/lib/stories";
 import { recordFeatureImpression } from "@/lib/telemetry";
 
@@ -23,9 +24,9 @@ export default function StoriesListing() {
   const [filter, setFilter] = useState("all");
   const [page, setPage] = useState(1);
 
-  const filtered = stories
-    .filter((s) => s.consent_obtained)
-    .filter((s) => filter === "all" || s.tags.includes(filter));
+  const filtered = stories.filter(
+    (s) => filter === "all" || s.tags.includes(filter)
+  );
 
   const visible = filtered.slice(0, page * PAGE_SIZE);
 
@@ -84,9 +85,17 @@ export default function StoriesListing() {
       <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
         {visible.length ? (
           visible.map((story) => (
-            <div key={story.id} className="flex flex-col overflow-hidden rounded-2xl border">
+            <div
+              key={story.id}
+              className="relative flex flex-col overflow-hidden rounded-2xl border"
+            >
               <div className="relative h-40 w-full overflow-hidden">
-                <Image src={story.image_src} alt={story.persona.name} fill className="object-cover" />
+                <Image
+                  src={story.image_src}
+                  alt={story.image_alt ?? story.persona.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="flex flex-1 flex-col p-4">
                 <h3 className="font-semibold">{story.title}</h3>
@@ -94,13 +103,18 @@ export default function StoriesListing() {
                   {story.persona.name} — {story.persona.role}, {story.persona.location}
                 </p>
                 <p className="mt-2 text-sm text-muted-foreground">{story.teaser}</p>
-                <Link
-                  href={`/stories/${story.slug}`}
-                  className="mt-auto text-sm font-medium underline"
-                >
-                  See how heroBooks works for them
-                </Link>
+                {story.consent_obtained && (
+                  <Link
+                    href={`/stories/${story.slug}`}
+                    className="mt-auto text-sm font-medium underline"
+                  >
+                    See how heroBooks works for them
+                  </Link>
+                )}
               </div>
+              {!story.consent_obtained && (
+                <ComingSoonOverlay story={story} trySetup />
+              )}
             </div>
           ))
         ) : (

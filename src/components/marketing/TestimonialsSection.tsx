@@ -6,6 +6,7 @@ import { testimonialCopy } from "@/lib/copy/imageCopy";
 import { chooseOnce } from "@/lib/randomize";
 import { recordFeatureImpression } from "@/lib/telemetry";
 import { getStoryById } from "@/lib/stories";
+import ComingSoonOverlay from "@/components/marketing/ComingSoonOverlay";
 
 const headings = [
   "Trusted by local professionals",
@@ -60,22 +61,27 @@ export default function TestimonialsSection() {
                   See how heroBooks works for them
                 </button>
                 {isOpen && story && (
-                  <div className="mt-4 flex flex-col gap-2 text-sm">
+                  <div className="relative mt-4 flex flex-col gap-2 text-sm">
                     {story.summary_lines.map((line) => (
                       <p key={line}>{line}</p>
                     ))}
-                    <a
-                      href={story.try_setup_href}
-                      className="mt-2 inline-block text-sm font-medium underline"
-                      onClick={() =>
-                        recordFeatureImpression({
-                          feature: "case_study_try_setup_click",
-                          meta: { story_id: t.storyId, href: story.try_setup_href },
-                        })
-                      }
-                    >
-                      Try this setup
-                    </a>
+                    {story.consent_obtained && (
+                      <a
+                        href={story.try_setup_href}
+                        className="mt-2 inline-block text-sm font-medium underline"
+                        onClick={() =>
+                          recordFeatureImpression({
+                            feature: "case_study_try_setup_click",
+                            meta: { story_id: t.storyId, href: story.try_setup_href },
+                          })
+                        }
+                      >
+                        Try this setup
+                      </a>
+                    )}
+                    {!story.consent_obtained && (
+                      <ComingSoonOverlay story={story} trySetup />
+                    )}
                   </div>
                 )}
                 <div className="mt-auto text-xs text-muted-foreground">

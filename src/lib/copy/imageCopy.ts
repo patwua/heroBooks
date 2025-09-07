@@ -110,6 +110,24 @@ export const testimonialCopy = {
     storyId: "story_logistics_devon_bartica",
     since: "Since 2023",
   },
+  "dealer-ryan": {
+    name: "Ryan",
+    role: "Dealership, Georgetown",
+    quote:
+      "Purchase, duty, and reconditioning tracked per unit—real margins without guesswork.",
+    teaser: "Every unit’s true cost—at a glance",
+    storyId: "story_dealership_ryan_georgetown",
+    since: "Since 2024",
+  },
+  "contractor-keisha": {
+    name: "Keisha",
+    role: "Construction, Linden",
+    quote:
+      "Progress billing and job costs aligned—profitability in view before month-end.",
+    teaser: "Jobs on schedule, books in sync",
+    storyId: "story_construction_keisha_linden",
+    since: "Since 2024",
+  },
 } as const;
 
 export const bannerCopy = {

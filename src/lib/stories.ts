@@ -4,6 +4,7 @@ export interface Story {
   title: string;
   persona: { name: string; role: string; location: string };
   image_src: string;
+  image_alt?: string;
   teaser: string;
   summary_lines: string[];
   features_used: string[];
@@ -81,11 +82,58 @@ export const stories: Story[] = [
     anonymized: false,
   },
   {
+    id: "story_realestate_ayanna_alberttown",
+    slug: "ayanna-real-estate-alberttown",
+    title: "Rent rolls and reports made simple",
+    persona: { name: "Ayanna", role: "Property Manager", location: "Alberttown" },
+    image_src: "/photos/landing/real-estate.webp",
+    image_alt: "Property manager reviewing rent roll reports",
+    teaser: "Automated rent and owner statements—month-end without manual math.",
+    summary_lines: [
+      "Automated recurring invoices for monthly rent and utilities.",
+      "Kept deposits and receipts organized for audits.",
+      "Ran clean owner statements without manual math.",
+      "“Tenants happier; month-end calmer.”",
+    ],
+    features_used: ["Recurring invoices", "Deposits", "Receipts", "Owner statements"],
+    cta_label: "See real-estate tools",
+    cta_href: "/features/real-estate",
+    try_setup_href: "/features?stack=realestate_recurring",
+    tags: ["real-estate", "recurring", "receipts", "reports", "guyana"],
+    published_at: null,
+    consent_obtained: false,
+    anonymized: false,
+  },
+  {
+    id: "story_schoolboard_marcus_newamsterdam",
+    slug: "marcus-school-board-new-amsterdam",
+    title: "Grant tracking with real transparency",
+    persona: { name: "Marcus", role: "School Board Treasurer", location: "New Amsterdam" },
+    image_src: "/photos/landing/school-board.webp",
+    image_alt: "Treasurer reviewing school grant allocations",
+    teaser: "Grant tracking and audit prep without spreadsheet chaos.",
+    summary_lines: [
+      "Managed grants and fees with clear allocations.",
+      "Streamlined audit prep using consistent categories and receipts.",
+      "Published summary reports for board meetings in minutes.",
+      "“Less paperwork, more accountability.”",
+    ],
+    features_used: ["Categories", "Receipts", "Reports", "Audit prep"],
+    cta_label: "See education tools",
+    cta_href: "/features/education",
+    try_setup_href: "/features?stack=school_transparency",
+    tags: ["schools", "education", "grants", "audit", "receipts", "reports", "guyana"],
+    published_at: null,
+    consent_obtained: false,
+    anonymized: false,
+  },
+  {
     id: "story_dealership_ryan_georgetown",
     slug: "ryan-dealership-georgetown",
     title: "Every unit’s true cost—at a glance",
     persona: { name: "Ryan", role: "Dealer", location: "Georgetown" },
     image_src: "/photos/landing/dealership.webp",
+    image_alt: "Dealer reviewing unit costs and margins",
     teaser: "How Ryan uses per-unit COGS to price with confidence.",
     summary_lines: [
       "Tracked purchase, duty, and reconditioning on each unit for real margins.",
@@ -113,6 +161,7 @@ export const stories: Story[] = [
     title: "Jobs on schedule, books in sync",
     persona: { name: "Keisha", role: "Contractor", location: "Linden" },
     image_src: "/photos/landing/construction.webp",
+    image_alt: "Contractor on site checking project costs and billing",
     teaser: "How Keisha uses job tracking and progress billing to stay on schedule.",
     summary_lines: [
       "Used projects/jobs to group quotes, invoices, and expenses per site.",

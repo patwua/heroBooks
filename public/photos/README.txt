@@ -22,6 +22,8 @@ Testimonial Images:
 - shop-owner.webp
 - salon-owner.webp
 - transport-owner.webp
+- dealer-ryan.webp
+- contractor-keisha.webp
 
 Notes:
 - All images are 1024x1024 WebP format

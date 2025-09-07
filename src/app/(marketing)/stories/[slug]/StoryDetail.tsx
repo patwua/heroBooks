@@ -36,7 +36,12 @@ export default function StoryDetail({ story }: { story: Story }) {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16">
       <div className="relative h-60 w-full overflow-hidden rounded-xl">
-        <Image src={story.image_src} alt={story.persona.name} fill className="object-cover" />
+        <Image
+          src={story.image_src}
+          alt={story.image_alt ?? story.persona.name}
+          fill
+          className="object-cover"
+        />
       </div>
       <h1 className="mt-4 text-2xl font-bold">{story.title}</h1>
       <p className="mt-2 text-muted-foreground">
@@ -92,7 +97,12 @@ export default function StoryDetail({ story }: { story: Story }) {
             {related.map((s) => (
               <div key={s.id} className="flex flex-col overflow-hidden rounded-2xl border">
                 <div className="relative h-32 w-full overflow-hidden">
-                  <Image src={s.image_src} alt={s.persona.name} fill className="object-cover" />
+                <Image
+                  src={s.image_src}
+                  alt={s.image_alt ?? s.persona.name}
+                  fill
+                  className="object-cover"
+                />
                 </div>
                 <div className="flex flex-col p-4">
                   <h3 className="font-semibold">{s.title}</h3>
