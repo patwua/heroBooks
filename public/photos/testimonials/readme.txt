@@ -1,1 +1,7 @@
-Place testimonial headshots here (e.g., t1.jpg, t2.jpg, t3.jpg). Replace placeholders referenced in src/app/(marketing)/page.tsx.
+Create the following 96x96 WebP testimonial headshots and place them in this folder:
+
+- contractor-keisha-96x96.webp
+- dealer-ryan-96x96.webp
+- salon-owner-96x96.webp
+- shop-owner-96x96.webp
+- transport-owner-96x96.webp

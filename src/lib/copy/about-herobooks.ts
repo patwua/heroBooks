@@ -2,12 +2,12 @@
 const aboutCopy = {
   hero: {
     title: "About heroBooks",
-    subtitle: "Simple, local-first accounting — built in Guyana, for Guyana.",
+    subtitle: "Simple, local-first accounting — built in Guyana, ready for the Caribbean.",
   },
   mission: {
     tag: "Our Mission",
     headline: "Make bookkeeping effortless for local businesses",
-    body: "We’re building modern accounting that understands VAT, PAYE, NIS, and the realities of running a small business in Guyana.",
+    body: "We’re building modern accounting that understands VAT, PAYE, NIS, and the realities of running a small business in Guyana — with an eye toward the broader Caribbean.",
     bullets: [
       "VAT-ready invoicing and clean, local reports",
       "Double-entry ledger without the drama",
@@ -30,7 +30,7 @@ const aboutCopy = {
     subtitle: "Clarity. Local expertise. Reliability.",
     items: [
       { t: "Clarity", d: "Interfaces that make sense — and reports you can actually use." },
-      { t: "Local Expertise", d: "Built for Guyana’s VAT, PAYE, NIS, and statutory filings." },
+      { t: "Local Expertise", d: "Built for Guyana’s VAT, PAYE, NIS, and statutory filings, and adaptable for the wider Caribbean." },
       { t: "Reliability", d: "Your books shouldn’t break. Neither should our promises." },
     ],
   },

@@ -5,7 +5,7 @@ import { testimonialCopy } from "@/lib/copy/imageCopy";
 const headings = [
   "Trusted by local professionals",
   "Trusted by local trades",
-  "Trusted by growing businesses in Guyana",
+  "Trusted by growing businesses in Guyana and across the Caribbean",
 ];
 
 export default async function TestimonialsSection() {
