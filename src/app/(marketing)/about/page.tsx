@@ -7,7 +7,7 @@ import aboutCopy from "@/lib/copy/about-herobooks";
 
 export const metadata = {
   title: "About Us — heroBooks",
-  description: "Simple, local-first accounting for Guyana. Learn about our mission, values, and team.",
+  description: "Learn about heroBooks' mission, values, and the team behind local-first accounting.",
 };
 
 export default function AboutPage() {
