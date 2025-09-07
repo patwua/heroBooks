@@ -17,7 +17,10 @@ export default function UserMenu() {
 
   return (
     <DropdownMenu open={open} onOpenChange={setOpen}>
-      <DropdownMenuTrigger className="rounded-full focus:outline-none">
+      <DropdownMenuTrigger
+        className="rounded-full focus:outline-none"
+        aria-label="Account & organizations"
+      >
         <Avatar className="h-8 w-8">
           <AvatarImage src="/avatars/default.png" alt="User" />
           <AvatarFallback>HB</AvatarFallback>

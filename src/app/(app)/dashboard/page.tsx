@@ -1,7 +1,6 @@
 import { auth } from "@/lib/auth";
 import AdminDashboard from "@/components/dashboard/AdminDashboard";
 import UserDashboard from "@/components/dashboard/UserDashboard";
-import PlanHint from "@/components/dashboard/PlanHint";
 
 export default async function DashboardPage() {
   const session = await auth();
@@ -12,13 +11,11 @@ export default async function DashboardPage() {
   if (isSuper || role === "ADMIN")
     return (
       <section className="p-6 space-y-6">
-        <PlanHint />
         <AdminDashboard />
       </section>
     );
   return (
     <section className="p-6 space-y-6">
-      <PlanHint />
       <UserDashboard />
     </section>
   );
