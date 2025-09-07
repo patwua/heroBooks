@@ -1,6 +1,6 @@
 import TestimonialsClient from "./TestimonialsClient";
 import { chooseNOnce } from "@/lib/randomize";
-import { testimonialCopy } from "@/lib/copy/imageCopy";
+import { testimonialCopy, TestimonialKey } from "@/lib/copy/imageCopy";
 
 const headings = [
   "Trusted by local professionals",
@@ -9,7 +9,10 @@ const headings = [
 ];
 
 export default async function TestimonialsSection() {
-  const entries = Object.entries(testimonialCopy);
+  const entries = Object.entries(testimonialCopy) as [
+    TestimonialKey,
+    (typeof testimonialCopy)[TestimonialKey]
+  ][];
   const selected = await chooseNOnce("hb_testimonials", entries, 3);
   const heading = headings[Math.floor(Math.random() * headings.length)];
 

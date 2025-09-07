@@ -15,7 +15,7 @@ const headings = [
 
 export type TestimonialsClientProps = {
   heading?: string;
-  entries: [string, (typeof testimonialCopy)[string]][];
+  entries: [TestimonialKey, (typeof testimonialCopy)[TestimonialKey]][];
 };
 
 export default function TestimonialsClient({ heading, entries }: TestimonialsClientProps) {
@@ -49,7 +49,7 @@ export default function TestimonialsClient({ heading, entries }: TestimonialsCli
           return (
             <div
               key={id}
-              className="flex cursor-pointer flex-col gap-2 rounded-xl border p-4 bg-muted/30 text-sm"
+              className="relative flex cursor-pointer flex-col gap-2 rounded-xl border p-4 bg-muted/30 text-sm"
               onClick={() => {
                 const next = { ...open, [id]: !isOpen };
                 setOpen(next);
