@@ -2,7 +2,7 @@ import "../globals.css";
 import Sidebar from "@/components/nav/Sidebar";
 import Topbar from "@/components/topbar/Topbar";
 import AssistSidebar from "@/components/app/AssistSidebar";
-import AppFooter from "@/components/app/AppFooter";
+import Footer from "@/components/Footer";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -16,7 +16,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
               <main className="flex-1">{children}</main>
               <AssistSidebar />
             </div>
-            <AppFooter />
+            <Footer authenticated />
           </div>
         </div>
       </body>
