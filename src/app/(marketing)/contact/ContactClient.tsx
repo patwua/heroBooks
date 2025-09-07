@@ -57,27 +57,66 @@ export default function ContactClient({ initialSubject }: { initialSubject: stri
             <ul className="mb-3 list-disc space-y-1 pl-5 text-sm text-slate-700">{current.guidance.map((g: string, i: number) => (<li key={i}>{g}</li>))}</ul>
           )}
           <form onSubmit={onSubmit} className="grid gap-3">
-            <label className="block">
+            <label htmlFor="subject" className="block">
               <span className="text-sm font-medium">{shared.labels.subject}</span>
-              <select className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" value={subject} onChange={(e) => setSubject(e.target.value)}>
-                {SUBJECTS.map((s) => (<option key={s.value} value={s.value}>{s.label}</option>))}
+              <select
+                id="subject"
+                name="subject"
+                className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+              >
+                {SUBJECTS.map((s) => (
+                  <option key={s.value} value={s.value}>
+                    {s.label}
+                  </option>
+                ))}
               </select>
             </label>
-            <label className="block">
+            <label htmlFor="name" className="block">
               <span className="text-sm font-medium">{shared.labels.name}</span>
-              <input required value={fields.name} onChange={(e) => updateField("name", e.target.value)} className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" />
+              <input
+                id="name"
+                name="name"
+                required
+                value={fields.name}
+                onChange={(e) => updateField("name", e.target.value)}
+                className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"
+              />
             </label>
-            <label className="block">
+            <label htmlFor="email" className="block">
               <span className="text-sm font-medium">{shared.labels.email}</span>
-              <input required type="email" value={fields.email} onChange={(e) => updateField("email", e.target.value)} className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                value={fields.email}
+                onChange={(e) => updateField("email", e.target.value)}
+                className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"
+              />
             </label>
             {current.fieldsets.map((f: any) => (
-              <label key={f.name} className="block">
+              <label key={f.name} htmlFor={f.name} className="block">
                 <span className="text-sm font-medium">{f.label}</span>
                 {f.type === "textarea" ? (
-                  <textarea rows={4} required={f.required} onChange={(e) => updateField(f.name, e.target.value)} className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" />
+                  <textarea
+                    id={f.name}
+                    name={f.name}
+                    rows={4}
+                    required={f.required}
+                    onChange={(e) => updateField(f.name, e.target.value)}
+                    className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"
+                  />
                 ) : (
-                  <input type="text" required={f.required} onChange={(e) => updateField(f.name, e.target.value)} className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" />
+                  <input
+                    id={f.name}
+                    name={f.name}
+                    type="text"
+                    required={f.required}
+                    onChange={(e) => updateField(f.name, e.target.value)}
+                    className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"
+                  />
                 )}
               </label>
             ))}
