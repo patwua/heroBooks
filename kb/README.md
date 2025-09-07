@@ -35,7 +35,5 @@ Prefer primary sources such as the Guyana Revenue Authority, National Insurance 
 and Caribbean Examinations Council. Secondary sources may supplement but must be
 clearly attributed.
 
----
-
 *Information is general in nature and not a substitute for professional tax or
 legal advice.*
