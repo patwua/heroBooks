@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { recordFeatureImpression } from "@/lib/telemetry";
 
 export default function HomePage() {
+  const onPriceClick = (plan: string) => () =>
+    recordFeatureImpression({ feature: "cta_click", reason: `pricing:${plan}`, path: "/#pricing" });
+
   return (
     <div>
       {/* HERO */}
@@ -15,12 +19,29 @@ export default function HomePage() {
               VAT-ready invoices, clean reports, and an API ready to plug into your dealer system.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="#pricing" className="rounded-lg bg-emerald-600 px-5 py-3 text-white shadow hover:bg-emerald-700">Get Started</Link>
-              <Link href="#demo" className="rounded-lg border px-5 py-3 text-foreground hover:bg-neutral-50 dark:hover:bg-neutral-900">Explore in Demo</Link>
+              <Link
+                href="#pricing"
+                className="rounded-lg bg-emerald-600 px-5 py-3 text-white shadow hover:bg-emerald-700"
+                onClick={onPriceClick("hero")}
+              >
+                Get Started
+              </Link>
+              <Link
+                href="#demo"
+                className="rounded-lg border px-5 py-3 text-foreground hover:bg-neutral-50 dark:hover:bg-neutral-900"
+              >
+                Explore in Demo
+              </Link>
             </div>
           </div>
           <div className="relative h-[320px] w-full rounded-2xl bg-neutral-100 dark:bg-neutral-800">
-            <Image src="/photos/landing/hero-placeholder.jpg" alt="heroBooks" fill className="rounded-2xl object-cover" sizes="(min-width: 1024px) 600px, 100vw" />
+            <Image
+              src="/photos/landing/hero-placeholder.jpg"
+              alt="heroBooks"
+              fill
+              className="rounded-2xl object-cover"
+              sizes="(min-width: 1024px) 600px, 100vw"
+            />
           </div>
         </div>
       </section>
@@ -50,15 +71,25 @@ export default function HomePage() {
           <div>
             <h2 className="text-2xl font-bold">Why Choose Local?</h2>
             <p className="mt-4 text-muted-foreground">
-              Think local, act local — utilize accounting software that understands
-              and meets the demands of Guyanese businesses.
+              Think local, act local — utilize accounting software that understands and meets the demands of Guyanese businesses.
             </p>
             <div className="mt-6">
-              <Link href="#pricing" className="rounded-lg bg-emerald-600 px-5 py-3 text-white shadow hover:bg-emerald-700">Get Started</Link>
+              <Link
+                href="#pricing"
+                className="rounded-lg bg-emerald-600 px-5 py-3 text-white shadow hover:bg-emerald-700"
+                onClick={onPriceClick("why-local")}
+              >
+                Get Started
+              </Link>
             </div>
           </div>
           <div className="relative h-[300px] w-full rounded-2xl bg-neutral-100 dark:bg-neutral-800">
-            <Image src="/photos/landing/why-placeholder.jpg" alt="Why Local" fill className="rounded-2xl object-cover" />
+            <Image
+              src="/photos/landing/why-placeholder.jpg"
+              alt="Why Local"
+              fill
+              className="rounded-2xl object-cover"
+            />
           </div>
         </div>
       </section>
@@ -73,7 +104,9 @@ export default function HomePage() {
                 <div className="relative mb-4 h-14 w-14 overflow-hidden rounded-full bg-neutral-200">
                   <Image src={`/photos/testimonials/t${i}.jpg`} alt="" fill className="object-cover" />
                 </div>
-                <blockquote className="text-sm text-muted-foreground">“heroBooks keeps our VAT clean and reporting painless.”</blockquote>
+                <blockquote className="text-sm text-muted-foreground">
+                  “heroBooks keeps our VAT clean and reporting painless.”
+                </blockquote>
                 <figcaption className="mt-3 text-sm font-medium">Shop Owner #{i}</figcaption>
               </figure>
             ))}
@@ -84,25 +117,53 @@ export default function HomePage() {
       {/* PRICING */}
       <section id="pricing" className="border-t">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold">Simple pricing</h2>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-2xl font-bold">Simple pricing</h2>
+            <p className="mt-2 text-sm text-muted-foreground">Start small, scale with your business.</p>
+          </div>
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {["Starter", "Business", "Enterprise"].map((name, idx) => (
-              <div key={name} className="rounded-2xl border p-6">
-                <h3 className="text-lg font-semibold">{name}</h3>
-                <p className="mt-1 text-3xl font-extrabold">{idx === 0 ? "$19" : "$49"}<span className="text-base font-medium text-muted-foreground">/mo</span></p>
-                <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                  <li>✔ VAT‑ready invoicing</li>
-                  <li>✔ Double‑entry ledger</li>
-                  <li>✔ Reports & exports</li>
-                  <li>{idx > 0 ? "✔ API access" : "— API access"}</li>
-                </ul>
-                <div className="mt-6">
-                  <Link href="#" className="w-full rounded-lg bg-emerald-600 px-4 py-2 text-center text-white hover:bg-emerald-700">
-                    Choose {name}
-                  </Link>
+            {["Starter", "Business", "Enterprise"].map((name, idx) => {
+              const featured = idx === 1;
+              const price = idx === 0 ? "$19" : idx === 1 ? "$49" : "Custom";
+              const onClick = onPriceClick(name.toLowerCase());
+              return (
+                <div
+                  key={name}
+                  className={`relative rounded-2xl border p-6 transition hover:shadow-lg ${
+                    featured ? "border-emerald-500 shadow-emerald-100 dark:shadow-emerald-900/20" : ""
+                  }`}
+                >
+                  {featured && (
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-emerald-600 px-3 py-1 text-xs font-semibold text-white shadow">
+                      Most Popular
+                    </span>
+                  )}
+                  <h3 className="text-lg font-semibold">{name}</h3>
+                  <p className="mt-1 text-3xl font-extrabold">
+                    {price}
+                    <span className="text-base font-medium text-muted-foreground">{price !== "Custom" ? "/mo" : ""}</span>
+                  </p>
+                  <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                    <li>✔ VAT‑ready invoicing</li>
+                    <li>✔ Double‑entry ledger</li>
+                    <li>✔ Reports & exports</li>
+                    <li>{idx > 0 ? "✔ API access" : "— API access"}</li>
+                  </ul>
+                  <div className="mt-6">
+                    <button
+                      onClick={onClick}
+                      className={`w-full rounded-lg px-4 py-2 text-center text-white ${
+                        featured
+                          ? "bg-emerald-600 hover:bg-emerald-700"
+                          : "bg-neutral-900 hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
+                      }`}
+                    >
+                      {price === "Custom" ? "Contact sales" : `Choose ${name}`}
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -113,7 +174,10 @@ export default function HomePage() {
           <h2 className="text-2xl font-bold">Frequently asked questions</h2>
           <div className="mt-6 space-y-4">
             {[
-              { q: "How does heroBooks handle VAT?", a: "Invoices can be tagged VAT‑14, zero‑rated, or exempt; exports are ready for filing." },
+              {
+                q: "How does heroBooks handle VAT?",
+                a: "Invoices can be tagged VAT‑14, zero‑rated, or exempt; exports are ready for filing.",
+              },
               { q: "Is there a demo?", a: "Yes — click ‘Explore in Demo’ to try core flows." },
               { q: "Do you have an API?", a: "Yes — clean REST endpoints for integrations." },
             ].map((item) => (
@@ -125,21 +189,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* FOOTER */}
-      <footer className="border-t">
-        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-12 sm:px-6 lg:px-8 md:flex-row md:items-center md:justify-between">
-          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} heroBooks</p>
-          <nav className="flex flex-wrap items-center gap-4 text-sm">
-            <a href="#features" className="hover:underline">Features</a>
-            <a href="#pricing" className="hover:underline">Pricing</a>
-            <Link href="/about" className="hover:underline">About</Link>
-            <Link href="/partners" className="hover:underline">Partners</Link>
-            <Link href="/contact" className="hover:underline">Talk to us</Link>
-            <Link href="/legal" className="hover:underline">Terms & Privacy</Link>
-          </nav>
-        </div>
-      </footer>
     </div>
   );
 }
