@@ -10,11 +10,11 @@ import { useEffect, useState } from "react";
 import { recordFeatureImpression } from "@/lib/telemetry";
 
 const anchorLinks = [
-  { href: "#features", label: "Features" },
-  { href: "#why-local", label: "Why Local" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#features", label: "Features" },
+  { href: "/#why-local", label: "Why Local" },
+  { href: "/#testimonials", label: "Testimonials" },
+  { href: "/#pricing", label: "Pricing" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export default function StickyNav() {
@@ -25,7 +25,7 @@ export default function StickyNav() {
   // Scrollspy for landing sections
   useEffect(() => {
     if (pathname !== "/") return;
-    const ids = anchorLinks.map((a) => a.href.slice(1));
+    const ids = anchorLinks.map((a) => a.href.split("#")[1]);
     const els = ids
       .map((id) => (typeof document !== "undefined" ? document.getElementById(id) : null))
       .filter(Boolean) as HTMLElement[];
