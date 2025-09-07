@@ -1,0 +1,38 @@
+{
+  "snippets": [
+    {
+      "article_id": "double-entry-explained",
+      "question": "What is double-entry accounting?",
+      "answer": "Every transaction records equal debits and credits.",
+      "type": "definition"
+    },
+    {
+      "article_id": "vat-invoice-requirements",
+      "question": "Which items are mandatory on a VAT invoice in Guyana?",
+      "answer": "Name and TIN of supplier, invoice number, date, description, taxable amount, VAT at 14%.",
+      "type": "howto"
+    },
+    {
+      "article_id": "paye-thresholds-guyana",
+      "question": "What is the personal allowance for PAYE in Guyana?",
+      "answer": "As at 2024 the annual allowance is GYD 960,000.",
+      "type": "faq"
+    }
+  ],
+  "assistant_keys": [
+    {
+      "article_id": "vat-invoice-requirements",
+      "intent": "DO",
+      "key": "vat_invoice_create",
+      "synonyms": ["VAT invoice", "tax invoice"],
+      "link": "/dashboard/invoices/new"
+    },
+    {
+      "article_id": "paye-thresholds-guyana",
+      "intent": "ASK",
+      "key": "paye_thresholds",
+      "synonyms": ["PAYE rates", "income tax bands"],
+      "link": "/dashboard/settings/payroll"
+    }
+  ]
+}

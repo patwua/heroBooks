@@ -1,0 +1,23 @@
+nis_links:
+  - title: "NIS Contribution Rates"
+    url: "https://www.nis.org.gy/contributions"
+  - title: "NIS Employer Forms"
+    url: "https://www.nis.org.gy/forms"
+
+gra_links:
+  - title: "GRA VAT Portal"
+    url: "https://etax.gra.gov.gy"
+  - title: "GRA Forms"
+    url: "https://www.gra.gov.gy/forms"
+
+popular_snippets:
+  - question: "What is the VAT rate in Guyana?"
+    answer: "The standard VAT rate is 14% as at 2024."
+  - question: "How often do I file PAYE?"
+    answer: "Employers submit monthly PAYE returns to the GRA."
+
+promos:
+  - text: "Invite your accountant"
+    link: "/dashboard/settings/team"
+  - text: "Import bank file"
+    link: "/dashboard/banking/import"

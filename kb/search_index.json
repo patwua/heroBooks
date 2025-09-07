@@ -1,0 +1,29 @@
+[
+  {
+    "id": "double-entry-explained",
+    "title": "Double-entry explained (with GYD examples)",
+    "summary": "An introduction to the double-entry system using Guyanese dollar examples.",
+    "tags": ["double entry", "bookkeeping"],
+    "category_id": "getting-started",
+    "jurisdiction": ["Guyana", "CARICOM"],
+    "snippets": ["Every transaction records equal debits and credits."]
+  },
+  {
+    "id": "vat-invoice-requirements",
+    "title": "What makes a VAT-compliant invoice in Guyana?",
+    "summary": "Key details that every Guyanese VAT invoice must include.",
+    "tags": ["VAT", "invoicing"],
+    "category_id": "sales-vat",
+    "jurisdiction": ["Guyana"],
+    "snippets": ["Name and TIN of supplier, invoice number, date, description, taxable amount, VAT at 14%."]
+  },
+  {
+    "id": "paye-thresholds-guyana",
+    "title": "PAYE: thresholds, bands, and calculations (Guyana)",
+    "summary": "Explains current PAYE tax bands and how to compute deductions.",
+    "tags": ["PAYE", "payroll"],
+    "category_id": "payroll-paye-nis",
+    "jurisdiction": ["Guyana"],
+    "snippets": ["As at 2024 the annual allowance is GYD 960,000."]
+  }
+]
