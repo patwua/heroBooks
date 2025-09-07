@@ -13,7 +13,7 @@ export async function getActiveOrgId(): Promise<string> {
   const session = await auth();
   if (!session?.user?.id) throw new Error("Not authenticated");
 
-  const jar = cookies();
+  const jar = await cookies();
   const cookieOrg = jar.get(ORG_COOKIE)?.value;
 
   if (!cookieOrg) {

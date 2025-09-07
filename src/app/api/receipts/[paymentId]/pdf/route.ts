@@ -7,7 +7,7 @@ import path from "path";
 
 export async function GET(
   req: Request,
-  { params }: { params: { paymentId: string } }
+  { params }: { params: Promise<{ paymentId: string }> }
 ) {
   const session = await auth();
   if (!session?.user?.id) {
@@ -21,8 +21,9 @@ export async function GET(
   if (!userOrg) {
     return new NextResponse("No organization", { status: 400 });
   }
+  const { paymentId } = await params;
   const payment = await prisma.payment.findFirst({
-    where: { id: params.paymentId, orgId: userOrg.orgId },
+    where: { id: paymentId, orgId: userOrg.orgId },
     include: { invoice: true }
   });
   if (!payment) {

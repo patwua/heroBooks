@@ -6,8 +6,8 @@ import ThemeToggle from "./ThemeToggle";
 import NotificationsBell from "./NotificationsBell";
 import UserMenu from "./UserMenu";
 
-export default function Topbar() {
-  const inDemo = isDemoModeFromCookies();
+export default async function Topbar() {
+  const inDemo = await isDemoModeFromCookies();
   return (
     <header className="sticky top-0 z-50 h-16 border-b bg-background/70 backdrop-blur">
       {inDemo && (

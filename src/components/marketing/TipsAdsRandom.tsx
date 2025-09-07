@@ -7,8 +7,8 @@ const CARDS = [
   { title: "Invite your accountant", text: "Collaboration is free.", href: "/sign-in", event: "tip_invite_accountant" },
 ];
 
-export default function TipsAdsRandom() {
-  const c = chooseOnce("hb_tip", CARDS);
+export default async function TipsAdsRandom() {
+  const c = await chooseOnce("hb_tip", CARDS);
   return (
     <section className="mt-16">
       <div className="rounded-2xl border p-6 bg-primary/5">

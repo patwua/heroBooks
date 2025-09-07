@@ -19,7 +19,8 @@ export async function POST(req: Request) {
   if (!membership) return NextResponse.json({ error: "not a member" }, { status: 403 });
 
   // set cookie (httpOnly)
-  cookies().set(ORG_COOKIE_NAME, orgId, {
+  const c = await cookies();
+  c.set(ORG_COOKIE_NAME, orgId, {
     httpOnly: true,
     sameSite: "lax",
     path: "/",

@@ -1,14 +1,13 @@
 export const metadata = { title: "Reset Password — heroBooks" };
 
-export default function ResetPasswordPage({
+export default async function ResetPasswordPage({
   searchParams,
 }: {
-  searchParams: Record<string, string | string[] | undefined>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
+  const params = await searchParams;
   const token =
-    (Array.isArray(searchParams?.token)
-      ? searchParams.token[0]
-      : searchParams?.token) ?? "";
+    (Array.isArray(params?.token) ? params.token[0] : params?.token) ?? "";
 
   return (
     <section className="container mx-auto px-4 py-12 max-w-md">

@@ -11,8 +11,12 @@ const ALL_FEATURES = [
   { title: "Email invoicing & PDFs", text: "Send branded PDF invoices instantly." },
 ];
 
-export default function FeaturesRandom({ count = 6 }: { count?: number }) {
-  const selected = chooseNOnce("hb_features", ALL_FEATURES, count);
+export default async function FeaturesRandom({
+  count = 6,
+}: {
+  count?: number;
+}) {
+  const selected = await chooseNOnce("hb_features", ALL_FEATURES, count);
 
   return (
     <section id="features" className="mt-16 grid gap-6 sm:grid-cols-3">

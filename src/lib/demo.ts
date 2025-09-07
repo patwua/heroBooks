@@ -63,7 +63,7 @@ export async function getDemoOrgId(): Promise<string> {
 
 /** Enter demo: set cookies (org + demo flag) */
 export async function enterDemo(orgId: string) {
-  const jar = cookies();
+  const jar = await cookies();
   const now = Date.now();
   const last = Number(jar.get(LAST_ENTER_COOKIE)?.value || 0);
   if (now - last < 10_000) return; // 10s quiet period
@@ -93,14 +93,15 @@ export async function enterDemo(orgId: string) {
 
 /** Leave demo: clear demo flag; keep org cookie logic simple (optional: restore last real org) */
 export async function leaveDemo() {
-  const jar = cookies();
+  const jar = await cookies();
   jar.delete(DEMO_COOKIE);
   // You can also clear org cookie to force reselect:
   // jar.delete(ORG_COOKIE_NAME);
 }
 
-export function isDemoModeFromCookies(): boolean {
-  const val = cookies().get(DEMO_COOKIE)?.value;
+export async function isDemoModeFromCookies(): Promise<boolean> {
+  const jar = await cookies();
+  const val = jar.get(DEMO_COOKIE)?.value;
   return val === "1";
 }
 

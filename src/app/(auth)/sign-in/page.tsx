@@ -1,16 +1,17 @@
 import { cookies } from "next/headers";
 import SignInClient from "./SignInClient";
 
-export default function SignInPage({
+export default async function SignInPage({
   searchParams,
 }: {
-  searchParams?: { exists?: string; reset?: string };
+  searchParams: Promise<{ exists?: string; reset?: string }>;
 }) {
-  const c = cookies();
+  const params = await searchParams;
+  const c = await cookies();
   const hadDemoBefore =
     c.get("hb_demo")?.value === "1" || Boolean(c.get("hb_demo_last")?.value);
-  const reset = searchParams?.reset === "1";
-  const exists = searchParams?.exists === "1";
+  const reset = params.reset === "1";
+  const exists = params.exists === "1";
   return (
     <SignInClient hadDemoBefore={hadDemoBefore} reset={reset} exists={exists} />
   );

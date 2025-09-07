@@ -9,14 +9,20 @@ function Row({ children }: { children: React.ReactNode }) {
 
 export const metadata = { title: "Pricing — heroBooks" };
 
-export default function PricingPage({ searchParams }: { searchParams: Record<string, string | string[] | undefined> }) {
-  const nextRaw = Array.isArray(searchParams?.next) ? searchParams.next[0] : searchParams?.next;
+export default async function PricingPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const params = await searchParams;
+  const nextRaw = Array.isArray(params?.next) ? params.next[0] : params?.next;
   const next =
     typeof nextRaw === "string" && nextRaw.startsWith("/") && !nextRaw.startsWith("//")
       ? nextRaw
       : "/sign-up";
-  const highlightRaw = (Array.isArray(searchParams?.highlight) ? searchParams.highlight[0] : searchParams?.highlight) || "essentials";
-  const highlight = (["starter", "essentials", "growth", "pro"].includes(highlightRaw) ? highlightRaw : "essentials") as PlanKey;
+  const highlightRaw =
+    (Array.isArray(params?.highlight) ? params.highlight[0] : params?.highlight) || "business";
+  const highlight = (["starter", "business", "enterprise"].includes(highlightRaw) ? highlightRaw : "business") as PlanKey;
 
   return (
     <section className="w-full bg-orange-50">
