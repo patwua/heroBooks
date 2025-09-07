@@ -8,7 +8,8 @@
     "start": "prisma migrate deploy && next start",
     "postinstall": "prisma generate",
     "lint": "next lint",
-    "seed:demo": "tsx scripts/seed-demo.ts"
+    "seed:demo": "tsx scripts/seed-demo.ts",
+    "kb:download": "tsx scripts/download-kb-drive.ts"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.10.0",
