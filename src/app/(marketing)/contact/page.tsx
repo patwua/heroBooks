@@ -1,5 +1,4 @@
 export const metadata = { title: "Talk to us — heroBooks" };
-
 export default function ContactPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
