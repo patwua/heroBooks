@@ -1,0 +1,10 @@
+export const metadata = { title: "Partners — heroBooks" };
+
+export default function PartnersPage() {
+  return (
+    <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+      <h1 className="text-3xl font-bold">Partners</h1>
+      <p className="mt-4 text-muted-foreground">Coming soon: ecosystem of banks, POS vendors, and integrators.</p>
+    </div>
+  );
+}

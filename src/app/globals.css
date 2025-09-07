@@ -68,4 +68,5 @@
 }
 
 html, body, #__next { height: 100%; }
+html { scroll-behavior: smooth; }
 body { @apply bg-background text-foreground; }
