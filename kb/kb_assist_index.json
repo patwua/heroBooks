@@ -1,38 +1,2522 @@
-{
-  "snippets": [
-    {
-      "article_id": "double-entry-explained",
-      "question": "What is double-entry accounting?",
-      "answer": "Every transaction records equal debits and credits.",
-      "type": "definition"
-    },
-    {
-      "article_id": "vat-invoice-requirements",
-      "question": "Which items are mandatory on a VAT invoice in Guyana?",
-      "answer": "Name and TIN of supplier, invoice number, date, description, taxable amount, VAT at 14%.",
-      "type": "howto"
-    },
-    {
-      "article_id": "paye-thresholds-guyana",
-      "question": "What is the personal allowance for PAYE in Guyana?",
-      "answer": "As at 2024 the annual allowance is GYD 960,000.",
-      "type": "faq"
-    }
-  ],
-  "assistant_keys": [
-    {
-      "article_id": "vat-invoice-requirements",
-      "intent": "DO",
-      "key": "vat_invoice_create",
-      "synonyms": ["VAT invoice", "tax invoice"],
-      "link": "/dashboard/invoices/new"
-    },
-    {
-      "article_id": "paye-thresholds-guyana",
-      "intent": "ASK",
-      "key": "paye_thresholds",
-      "synonyms": ["PAYE rates", "income tax bands"],
-      "link": "/dashboard/settings/payroll"
-    }
-  ]
-}
+[
+  {
+    "question": "What is double-entry explained with gyd examples?",
+    "answer": "Double-entry explained with GYD examples refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "getting-started-1"
+  },
+  {
+    "question": "How do I perform double-entry explained with gyd examples in heroBooks?",
+    "answer": "This article provides a step-by-step guide on double-entry explained with gyd examples. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "getting-started-1"
+  },
+  {
+    "question": "Why is double-entry explained with gyd examples important?",
+    "answer": "Understanding double-entry explained with gyd examples helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "getting-started-1"
+  },
+  {
+    "question": "What is chart of accounts for a small guyanese business?",
+    "answer": "Chart of Accounts for a small Guyanese business refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "getting-started-2"
+  },
+  {
+    "question": "How do I perform chart of accounts for a small guyanese business in heroBooks?",
+    "answer": "This article provides a step-by-step guide on chart of accounts for a small guyanese business. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "getting-started-2"
+  },
+  {
+    "question": "Why is chart of accounts for a small guyanese business important?",
+    "answer": "Understanding chart of accounts for a small guyanese business helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "getting-started-2"
+  },
+  {
+    "question": "What is accrual vs cash accounting in guyana?",
+    "answer": "Accrual vs cash accounting in Guyana refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "getting-started-3"
+  },
+  {
+    "question": "How do I perform accrual vs cash accounting in guyana in heroBooks?",
+    "answer": "This article provides a step-by-step guide on accrual vs cash accounting in guyana. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "getting-started-3"
+  },
+  {
+    "question": "Why is accrual vs cash accounting in guyana important?",
+    "answer": "Understanding accrual vs cash accounting in guyana helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "getting-started-3"
+  },
+  {
+    "question": "What is trial balance: purpose and preparation?",
+    "answer": "Trial balance: purpose and preparation refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "getting-started-4"
+  },
+  {
+    "question": "How do I perform trial balance: purpose and preparation in heroBooks?",
+    "answer": "This article provides a step-by-step guide on trial balance: purpose and preparation. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "getting-started-4"
+  },
+  {
+    "question": "Why is trial balance: purpose and preparation important?",
+    "answer": "Understanding trial balance: purpose and preparation helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "getting-started-4"
+  },
+  {
+    "question": "What is adjusting entries at month-end?",
+    "answer": "Adjusting entries at month-end refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "getting-started-5"
+  },
+  {
+    "question": "How do I perform adjusting entries at month-end in heroBooks?",
+    "answer": "This article provides a step-by-step guide on adjusting entries at month-end. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "getting-started-5"
+  },
+  {
+    "question": "Why is adjusting entries at month-end important?",
+    "answer": "Understanding adjusting entries at month-end helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "getting-started-5"
+  },
+  {
+    "question": "What is opening balances and capital contributions?",
+    "answer": "Opening balances and capital contributions refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "getting-started-6"
+  },
+  {
+    "question": "How do I perform opening balances and capital contributions in heroBooks?",
+    "answer": "This article provides a step-by-step guide on opening balances and capital contributions. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "getting-started-6"
+  },
+  {
+    "question": "Why is opening balances and capital contributions important?",
+    "answer": "Understanding opening balances and capital contributions helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "getting-started-6"
+  },
+  {
+    "question": "What is accounting equation fundamentals?",
+    "answer": "Accounting equation fundamentals refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "getting-started-7"
+  },
+  {
+    "question": "How do I perform accounting equation fundamentals in heroBooks?",
+    "answer": "This article provides a step-by-step guide on accounting equation fundamentals. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "getting-started-7"
+  },
+  {
+    "question": "Why is accounting equation fundamentals important?",
+    "answer": "Understanding accounting equation fundamentals helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "getting-started-7"
+  },
+  {
+    "question": "What is understanding debits and credits in poa?",
+    "answer": "Understanding debits and credits in PoA refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "getting-started-8"
+  },
+  {
+    "question": "How do I perform understanding debits and credits in poa in heroBooks?",
+    "answer": "This article provides a step-by-step guide on understanding debits and credits in poa. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "getting-started-8"
+  },
+  {
+    "question": "Why is understanding debits and credits in poa important?",
+    "answer": "Understanding understanding debits and credits in poa helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "getting-started-8"
+  },
+  {
+    "question": "What is what makes a vat-compliant invoice in guyana??",
+    "answer": "What makes a VAT-compliant invoice in Guyana? refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "sales-vat-9"
+  },
+  {
+    "question": "How do I perform what makes a vat-compliant invoice in guyana? in heroBooks?",
+    "answer": "This article provides a step-by-step guide on what makes a vat-compliant invoice in guyana?. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "sales-vat-9"
+  },
+  {
+    "question": "Why is what makes a vat-compliant invoice in guyana? important?",
+    "answer": "Understanding what makes a vat-compliant invoice in guyana? helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "sales-vat-9"
+  },
+  {
+    "question": "What is zero-rated vs exempt supplies in guyana vat?",
+    "answer": "Zero-rated vs Exempt supplies in Guyana VAT refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "sales-vat-10"
+  },
+  {
+    "question": "How do I perform zero-rated vs exempt supplies in guyana vat in heroBooks?",
+    "answer": "This article provides a step-by-step guide on zero-rated vs exempt supplies in guyana vat. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "sales-vat-10"
+  },
+  {
+    "question": "Why is zero-rated vs exempt supplies in guyana vat important?",
+    "answer": "Understanding zero-rated vs exempt supplies in guyana vat helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "sales-vat-10"
+  },
+  {
+    "question": "What is recording sales returns and allowances?",
+    "answer": "Recording sales returns and allowances refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "sales-vat-11"
+  },
+  {
+    "question": "How do I perform recording sales returns and allowances in heroBooks?",
+    "answer": "This article provides a step-by-step guide on recording sales returns and allowances. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "sales-vat-11"
+  },
+  {
+    "question": "Why is recording sales returns and allowances important?",
+    "answer": "Understanding recording sales returns and allowances helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "sales-vat-11"
+  },
+  {
+    "question": "What is credit notes and debit notes: when and how?",
+    "answer": "Credit notes and debit notes: when and how refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "sales-vat-12"
+  },
+  {
+    "question": "How do I perform credit notes and debit notes: when and how in heroBooks?",
+    "answer": "This article provides a step-by-step guide on credit notes and debit notes: when and how. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "sales-vat-12"
+  },
+  {
+    "question": "Why is credit notes and debit notes: when and how important?",
+    "answer": "Understanding credit notes and debit notes: when and how helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "sales-vat-12"
+  },
+  {
+    "question": "What is vat filing calendar and preparation checklist?",
+    "answer": "VAT filing calendar and preparation checklist refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "sales-vat-13"
+  },
+  {
+    "question": "How do I perform vat filing calendar and preparation checklist in heroBooks?",
+    "answer": "This article provides a step-by-step guide on vat filing calendar and preparation checklist. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "sales-vat-13"
+  },
+  {
+    "question": "Why is vat filing calendar and preparation checklist important?",
+    "answer": "Understanding vat filing calendar and preparation checklist helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "sales-vat-13"
+  },
+  {
+    "question": "What is managing accounts receivable?",
+    "answer": "Managing accounts receivable refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "sales-vat-14"
+  },
+  {
+    "question": "How do I perform managing accounts receivable in heroBooks?",
+    "answer": "This article provides a step-by-step guide on managing accounts receivable. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "sales-vat-14"
+  },
+  {
+    "question": "Why is managing accounts receivable important?",
+    "answer": "Understanding managing accounts receivable helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "sales-vat-14"
+  },
+  {
+    "question": "What is early payment discounts and treatment?",
+    "answer": "Early payment discounts and treatment refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "sales-vat-15"
+  },
+  {
+    "question": "How do I perform early payment discounts and treatment in heroBooks?",
+    "answer": "This article provides a step-by-step guide on early payment discounts and treatment. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "sales-vat-15"
+  },
+  {
+    "question": "Why is early payment discounts and treatment important?",
+    "answer": "Understanding early payment discounts and treatment helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "sales-vat-15"
+  },
+  {
+    "question": "What is bad debts and allowance for doubtful accounts?",
+    "answer": "Bad debts and allowance for doubtful accounts refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "sales-vat-16"
+  },
+  {
+    "question": "How do I perform bad debts and allowance for doubtful accounts in heroBooks?",
+    "answer": "This article provides a step-by-step guide on bad debts and allowance for doubtful accounts. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "sales-vat-16"
+  },
+  {
+    "question": "Why is bad debts and allowance for doubtful accounts important?",
+    "answer": "Understanding bad debts and allowance for doubtful accounts helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "sales-vat-16"
+  },
+  {
+    "question": "What is expense categorization for guyanese vat?",
+    "answer": "Expense categorization for Guyanese VAT refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "purchases-payables-17"
+  },
+  {
+    "question": "How do I perform expense categorization for guyanese vat in heroBooks?",
+    "answer": "This article provides a step-by-step guide on expense categorization for guyanese vat. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "purchases-payables-17"
+  },
+  {
+    "question": "Why is expense categorization for guyanese vat important?",
+    "answer": "Understanding expense categorization for guyanese vat helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "purchases-payables-17"
+  },
+  {
+    "question": "What is supplier bills vs expenses: which to use??",
+    "answer": "Supplier bills vs expenses: which to use? refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "purchases-payables-18"
+  },
+  {
+    "question": "How do I perform supplier bills vs expenses: which to use? in heroBooks?",
+    "answer": "This article provides a step-by-step guide on supplier bills vs expenses: which to use?. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "purchases-payables-18"
+  },
+  {
+    "question": "Why is supplier bills vs expenses: which to use? important?",
+    "answer": "Understanding supplier bills vs expenses: which to use? helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "purchases-payables-18"
+  },
+  {
+    "question": "What is withholding tax overview (guyana context)?",
+    "answer": "Withholding tax overview (Guyana context) refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "purchases-payables-19"
+  },
+  {
+    "question": "How do I perform withholding tax overview (guyana context) in heroBooks?",
+    "answer": "This article provides a step-by-step guide on withholding tax overview (guyana context). It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "purchases-payables-19"
+  },
+  {
+    "question": "Why is withholding tax overview (guyana context) important?",
+    "answer": "Understanding withholding tax overview (guyana context) helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "purchases-payables-19"
+  },
+  {
+    "question": "What is petty cash controls for small shops?",
+    "answer": "Petty cash controls for small shops refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "purchases-payables-20"
+  },
+  {
+    "question": "How do I perform petty cash controls for small shops in heroBooks?",
+    "answer": "This article provides a step-by-step guide on petty cash controls for small shops. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "purchases-payables-20"
+  },
+  {
+    "question": "Why is petty cash controls for small shops important?",
+    "answer": "Understanding petty cash controls for small shops helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "purchases-payables-20"
+  },
+  {
+    "question": "What is accounts payable management and aging?",
+    "answer": "Accounts payable management and aging refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "purchases-payables-21"
+  },
+  {
+    "question": "How do I perform accounts payable management and aging in heroBooks?",
+    "answer": "This article provides a step-by-step guide on accounts payable management and aging. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "purchases-payables-21"
+  },
+  {
+    "question": "Why is accounts payable management and aging important?",
+    "answer": "Understanding accounts payable management and aging helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "purchases-payables-21"
+  },
+  {
+    "question": "What is managing supplier relationships?",
+    "answer": "Managing supplier relationships refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "purchases-payables-22"
+  },
+  {
+    "question": "How do I perform managing supplier relationships in heroBooks?",
+    "answer": "This article provides a step-by-step guide on managing supplier relationships. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "purchases-payables-22"
+  },
+  {
+    "question": "Why is managing supplier relationships important?",
+    "answer": "Understanding managing supplier relationships helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "purchases-payables-22"
+  },
+  {
+    "question": "What is recording purchase returns and allowances?",
+    "answer": "Recording purchase returns and allowances refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "purchases-payables-23"
+  },
+  {
+    "question": "How do I perform recording purchase returns and allowances in heroBooks?",
+    "answer": "This article provides a step-by-step guide on recording purchase returns and allowances. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "purchases-payables-23"
+  },
+  {
+    "question": "Why is recording purchase returns and allowances important?",
+    "answer": "Understanding recording purchase returns and allowances helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "purchases-payables-23"
+  },
+  {
+    "question": "What is prepaid expenses and accruals?",
+    "answer": "Prepaid expenses and accruals refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "purchases-payables-24"
+  },
+  {
+    "question": "How do I perform prepaid expenses and accruals in heroBooks?",
+    "answer": "This article provides a step-by-step guide on prepaid expenses and accruals. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "purchases-payables-24"
+  },
+  {
+    "question": "Why is prepaid expenses and accruals important?",
+    "answer": "Understanding prepaid expenses and accruals helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "purchases-payables-24"
+  },
+  {
+    "question": "What is importing bank files: csv/ofx do's and don'ts?",
+    "answer": "Importing bank files: CSV/OFX do's and don'ts refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "banking-reconciliation-25"
+  },
+  {
+    "question": "How do I perform importing bank files: csv/ofx do's and don'ts in heroBooks?",
+    "answer": "This article provides a step-by-step guide on importing bank files: csv/ofx do's and don'ts. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "banking-reconciliation-25"
+  },
+  {
+    "question": "Why is importing bank files: csv/ofx do's and don'ts important?",
+    "answer": "Understanding importing bank files: csv/ofx do's and don'ts helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "banking-reconciliation-25"
+  },
+  {
+    "question": "What is bank rules to auto-categorize common transactions?",
+    "answer": "Bank rules to auto-categorize common transactions refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "banking-reconciliation-26"
+  },
+  {
+    "question": "How do I perform bank rules to auto-categorize common transactions in heroBooks?",
+    "answer": "This article provides a step-by-step guide on bank rules to auto-categorize common transactions. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "banking-reconciliation-26"
+  },
+  {
+    "question": "Why is bank rules to auto-categorize common transactions important?",
+    "answer": "Understanding bank rules to auto-categorize common transactions helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "banking-reconciliation-26"
+  },
+  {
+    "question": "What is handling merchant fees and chargebacks?",
+    "answer": "Handling merchant fees and chargebacks refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "banking-reconciliation-27"
+  },
+  {
+    "question": "How do I perform handling merchant fees and chargebacks in heroBooks?",
+    "answer": "This article provides a step-by-step guide on handling merchant fees and chargebacks. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "banking-reconciliation-27"
+  },
+  {
+    "question": "Why is handling merchant fees and chargebacks important?",
+    "answer": "Understanding handling merchant fees and chargebacks helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "banking-reconciliation-27"
+  },
+  {
+    "question": "What is bank reconciliations step-by-step?",
+    "answer": "Bank reconciliations step-by-step refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "banking-reconciliation-28"
+  },
+  {
+    "question": "How do I perform bank reconciliations step-by-step in heroBooks?",
+    "answer": "This article provides a step-by-step guide on bank reconciliations step-by-step. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "banking-reconciliation-28"
+  },
+  {
+    "question": "Why is bank reconciliations step-by-step important?",
+    "answer": "Understanding bank reconciliations step-by-step helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "banking-reconciliation-28"
+  },
+  {
+    "question": "What is outstanding checks and deposits in transit?",
+    "answer": "Outstanding checks and deposits in transit refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "banking-reconciliation-29"
+  },
+  {
+    "question": "How do I perform outstanding checks and deposits in transit in heroBooks?",
+    "answer": "This article provides a step-by-step guide on outstanding checks and deposits in transit. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "banking-reconciliation-29"
+  },
+  {
+    "question": "Why is outstanding checks and deposits in transit important?",
+    "answer": "Understanding outstanding checks and deposits in transit helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "banking-reconciliation-29"
+  },
+  {
+    "question": "What is bank errors and how to adjust?",
+    "answer": "Bank errors and how to adjust refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "banking-reconciliation-30"
+  },
+  {
+    "question": "How do I perform bank errors and how to adjust in heroBooks?",
+    "answer": "This article provides a step-by-step guide on bank errors and how to adjust. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "banking-reconciliation-30"
+  },
+  {
+    "question": "Why is bank errors and how to adjust important?",
+    "answer": "Understanding bank errors and how to adjust helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "banking-reconciliation-30"
+  },
+  {
+    "question": "What is setting up bank feeds in herobooks?",
+    "answer": "Setting up bank feeds in heroBooks refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "banking-reconciliation-31"
+  },
+  {
+    "question": "How do I perform setting up bank feeds in herobooks in heroBooks?",
+    "answer": "This article provides a step-by-step guide on setting up bank feeds in herobooks. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "banking-reconciliation-31"
+  },
+  {
+    "question": "Why is setting up bank feeds in herobooks important?",
+    "answer": "Understanding setting up bank feeds in herobooks helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "banking-reconciliation-31"
+  },
+  {
+    "question": "What is managing multiple bank accounts?",
+    "answer": "Managing multiple bank accounts refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "banking-reconciliation-32"
+  },
+  {
+    "question": "How do I perform managing multiple bank accounts in heroBooks?",
+    "answer": "This article provides a step-by-step guide on managing multiple bank accounts. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "banking-reconciliation-32"
+  },
+  {
+    "question": "Why is managing multiple bank accounts important?",
+    "answer": "Understanding managing multiple bank accounts helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "banking-reconciliation-32"
+  },
+  {
+    "question": "What is paye thresholds, bands, and calculations (guyana)?",
+    "answer": "PAYE thresholds, bands, and calculations (Guyana) refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "payroll-paye-nis-33"
+  },
+  {
+    "question": "How do I perform paye thresholds, bands, and calculations (guyana) in heroBooks?",
+    "answer": "This article provides a step-by-step guide on paye thresholds, bands, and calculations (guyana). It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "payroll-paye-nis-33"
+  },
+  {
+    "question": "Why is paye thresholds, bands, and calculations (guyana) important?",
+    "answer": "Understanding paye thresholds, bands, and calculations (guyana) helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "payroll-paye-nis-33"
+  },
+  {
+    "question": "What is nis contributions: employer vs employee vs self-employed?",
+    "answer": "NIS contributions: employer vs employee vs self-employed refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "payroll-paye-nis-34"
+  },
+  {
+    "question": "How do I perform nis contributions: employer vs employee vs self-employed in heroBooks?",
+    "answer": "This article provides a step-by-step guide on nis contributions: employer vs employee vs self-employed. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "payroll-paye-nis-34"
+  },
+  {
+    "question": "Why is nis contributions: employer vs employee vs self-employed important?",
+    "answer": "Understanding nis contributions: employer vs employee vs self-employed helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "payroll-paye-nis-34"
+  },
+  {
+    "question": "What is payroll journal entries with gyd examples?",
+    "answer": "Payroll journal entries with GYD examples refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "payroll-paye-nis-35"
+  },
+  {
+    "question": "How do I perform payroll journal entries with gyd examples in heroBooks?",
+    "answer": "This article provides a step-by-step guide on payroll journal entries with gyd examples. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "payroll-paye-nis-35"
+  },
+  {
+    "question": "Why is payroll journal entries with gyd examples important?",
+    "answer": "Understanding payroll journal entries with gyd examples helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "payroll-paye-nis-35"
+  },
+  {
+    "question": "What is year-end payroll reporting: forms and deadlines?",
+    "answer": "Year-end payroll reporting: forms and deadlines refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "payroll-paye-nis-36"
+  },
+  {
+    "question": "How do I perform year-end payroll reporting: forms and deadlines in heroBooks?",
+    "answer": "This article provides a step-by-step guide on year-end payroll reporting: forms and deadlines. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "payroll-paye-nis-36"
+  },
+  {
+    "question": "Why is year-end payroll reporting: forms and deadlines important?",
+    "answer": "Understanding year-end payroll reporting: forms and deadlines helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "payroll-paye-nis-36"
+  },
+  {
+    "question": "What is employee benefits and allowances?",
+    "answer": "Employee benefits and allowances refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "payroll-paye-nis-37"
+  },
+  {
+    "question": "How do I perform employee benefits and allowances in heroBooks?",
+    "answer": "This article provides a step-by-step guide on employee benefits and allowances. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "payroll-paye-nis-37"
+  },
+  {
+    "question": "Why is employee benefits and allowances important?",
+    "answer": "Understanding employee benefits and allowances helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "payroll-paye-nis-37"
+  },
+  {
+    "question": "What is leaves and termination payouts?",
+    "answer": "Leaves and termination payouts refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "payroll-paye-nis-38"
+  },
+  {
+    "question": "How do I perform leaves and termination payouts in heroBooks?",
+    "answer": "This article provides a step-by-step guide on leaves and termination payouts. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "payroll-paye-nis-38"
+  },
+  {
+    "question": "Why is leaves and termination payouts important?",
+    "answer": "Understanding leaves and termination payouts helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "payroll-paye-nis-38"
+  },
+  {
+    "question": "What is payroll taxes vs statutory deductions?",
+    "answer": "Payroll taxes vs statutory deductions refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "payroll-paye-nis-39"
+  },
+  {
+    "question": "How do I perform payroll taxes vs statutory deductions in heroBooks?",
+    "answer": "This article provides a step-by-step guide on payroll taxes vs statutory deductions. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "payroll-paye-nis-39"
+  },
+  {
+    "question": "Why is payroll taxes vs statutory deductions important?",
+    "answer": "Understanding payroll taxes vs statutory deductions helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "payroll-paye-nis-39"
+  },
+  {
+    "question": "What is using herobooks to run payroll?",
+    "answer": "Using heroBooks to run payroll refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "payroll-paye-nis-40"
+  },
+  {
+    "question": "How do I perform using herobooks to run payroll in heroBooks?",
+    "answer": "This article provides a step-by-step guide on using herobooks to run payroll. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "payroll-paye-nis-40"
+  },
+  {
+    "question": "Why is using herobooks to run payroll important?",
+    "answer": "Understanding using herobooks to run payroll helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "payroll-paye-nis-40"
+  },
+  {
+    "question": "What is per-unit cogs for vehicle dealers: duty & reconditioning?",
+    "answer": "Per-unit COGS for vehicle dealers: duty & reconditioning refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "inventory-cogs-41"
+  },
+  {
+    "question": "How do I perform per-unit cogs for vehicle dealers: duty & reconditioning in heroBooks?",
+    "answer": "This article provides a step-by-step guide on per-unit cogs for vehicle dealers: duty & reconditioning. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "inventory-cogs-41"
+  },
+  {
+    "question": "Why is per-unit cogs for vehicle dealers: duty & reconditioning important?",
+    "answer": "Understanding per-unit cogs for vehicle dealers: duty & reconditioning helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "inventory-cogs-41"
+  },
+  {
+    "question": "What is inventory valuation methods: fifo vs weighted average?",
+    "answer": "Inventory valuation methods: FIFO vs weighted average refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "inventory-cogs-42"
+  },
+  {
+    "question": "How do I perform inventory valuation methods: fifo vs weighted average in heroBooks?",
+    "answer": "This article provides a step-by-step guide on inventory valuation methods: fifo vs weighted average. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "inventory-cogs-42"
+  },
+  {
+    "question": "Why is inventory valuation methods: fifo vs weighted average important?",
+    "answer": "Understanding inventory valuation methods: fifo vs weighted average helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "inventory-cogs-42"
+  },
+  {
+    "question": "What is stock counts and shrinkage entries?",
+    "answer": "Stock counts and shrinkage entries refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "inventory-cogs-43"
+  },
+  {
+    "question": "How do I perform stock counts and shrinkage entries in heroBooks?",
+    "answer": "This article provides a step-by-step guide on stock counts and shrinkage entries. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "inventory-cogs-43"
+  },
+  {
+    "question": "Why is stock counts and shrinkage entries important?",
+    "answer": "Understanding stock counts and shrinkage entries helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "inventory-cogs-43"
+  },
+  {
+    "question": "What is managing inventory turnover?",
+    "answer": "Managing inventory turnover refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "inventory-cogs-44"
+  },
+  {
+    "question": "How do I perform managing inventory turnover in heroBooks?",
+    "answer": "This article provides a step-by-step guide on managing inventory turnover. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "inventory-cogs-44"
+  },
+  {
+    "question": "Why is managing inventory turnover important?",
+    "answer": "Understanding managing inventory turnover helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "inventory-cogs-44"
+  },
+  {
+    "question": "What is recording goods in transit and consignments?",
+    "answer": "Recording goods in transit and consignments refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "inventory-cogs-45"
+  },
+  {
+    "question": "How do I perform recording goods in transit and consignments in heroBooks?",
+    "answer": "This article provides a step-by-step guide on recording goods in transit and consignments. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "inventory-cogs-45"
+  },
+  {
+    "question": "Why is recording goods in transit and consignments important?",
+    "answer": "Understanding recording goods in transit and consignments helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "inventory-cogs-45"
+  },
+  {
+    "question": "What is tracking costs of goods sold (cogs)?",
+    "answer": "Tracking costs of goods sold (COGS) refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "inventory-cogs-46"
+  },
+  {
+    "question": "How do I perform tracking costs of goods sold (cogs) in heroBooks?",
+    "answer": "This article provides a step-by-step guide on tracking costs of goods sold (cogs). It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "inventory-cogs-46"
+  },
+  {
+    "question": "Why is tracking costs of goods sold (cogs) important?",
+    "answer": "Understanding tracking costs of goods sold (cogs) helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "inventory-cogs-46"
+  },
+  {
+    "question": "What is reconditioning and repairs: capital or expense?",
+    "answer": "Reconditioning and repairs: capital or expense refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "inventory-cogs-47"
+  },
+  {
+    "question": "How do I perform reconditioning and repairs: capital or expense in heroBooks?",
+    "answer": "This article provides a step-by-step guide on reconditioning and repairs: capital or expense. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "inventory-cogs-47"
+  },
+  {
+    "question": "Why is reconditioning and repairs: capital or expense important?",
+    "answer": "Understanding reconditioning and repairs: capital or expense helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "inventory-cogs-47"
+  },
+  {
+    "question": "What is setting reorder points and safety stock?",
+    "answer": "Setting reorder points and safety stock refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "inventory-cogs-48"
+  },
+  {
+    "question": "How do I perform setting reorder points and safety stock in heroBooks?",
+    "answer": "This article provides a step-by-step guide on setting reorder points and safety stock. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "inventory-cogs-48"
+  },
+  {
+    "question": "Why is setting reorder points and safety stock important?",
+    "answer": "Understanding setting reorder points and safety stock helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "inventory-cogs-48"
+  },
+  {
+    "question": "What is job costing: materials, labour, overhead allocation?",
+    "answer": "Job costing: materials, labour, overhead allocation refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "projects-jobs-49"
+  },
+  {
+    "question": "How do I perform job costing: materials, labour, overhead allocation in heroBooks?",
+    "answer": "This article provides a step-by-step guide on job costing: materials, labour, overhead allocation. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "projects-jobs-49"
+  },
+  {
+    "question": "Why is job costing: materials, labour, overhead allocation important?",
+    "answer": "Understanding job costing: materials, labour, overhead allocation helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "projects-jobs-49"
+  },
+  {
+    "question": "What is progress billing and retention (guyana context)?",
+    "answer": "Progress billing and retention (Guyana context) refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "projects-jobs-50"
+  },
+  {
+    "question": "How do I perform progress billing and retention (guyana context) in heroBooks?",
+    "answer": "This article provides a step-by-step guide on progress billing and retention (guyana context). It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "projects-jobs-50"
+  },
+  {
+    "question": "Why is progress billing and retention (guyana context) important?",
+    "answer": "Understanding progress billing and retention (guyana context) helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "projects-jobs-50"
+  },
+  {
+    "question": "What is project profitability dashboard: what to watch?",
+    "answer": "Project profitability dashboard: what to watch refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "projects-jobs-51"
+  },
+  {
+    "question": "How do I perform project profitability dashboard: what to watch in heroBooks?",
+    "answer": "This article provides a step-by-step guide on project profitability dashboard: what to watch. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "projects-jobs-51"
+  },
+  {
+    "question": "Why is project profitability dashboard: what to watch important?",
+    "answer": "Understanding project profitability dashboard: what to watch helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "projects-jobs-51"
+  },
+  {
+    "question": "What is recording mobilization advances and retention?",
+    "answer": "Recording mobilization advances and retention refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "projects-jobs-52"
+  },
+  {
+    "question": "How do I perform recording mobilization advances and retention in heroBooks?",
+    "answer": "This article provides a step-by-step guide on recording mobilization advances and retention. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "projects-jobs-52"
+  },
+  {
+    "question": "Why is recording mobilization advances and retention important?",
+    "answer": "Understanding recording mobilization advances and retention helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "projects-jobs-52"
+  },
+  {
+    "question": "What is construction contracts: ifrs vs local gaap?",
+    "answer": "Construction contracts: IFRS vs local GAAP refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "projects-jobs-53"
+  },
+  {
+    "question": "How do I perform construction contracts: ifrs vs local gaap in heroBooks?",
+    "answer": "This article provides a step-by-step guide on construction contracts: ifrs vs local gaap. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "projects-jobs-53"
+  },
+  {
+    "question": "Why is construction contracts: ifrs vs local gaap important?",
+    "answer": "Understanding construction contracts: ifrs vs local gaap helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "projects-jobs-53"
+  },
+  {
+    "question": "What is change orders and variations accounting?",
+    "answer": "Change orders and variations accounting refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "projects-jobs-54"
+  },
+  {
+    "question": "How do I perform change orders and variations accounting in heroBooks?",
+    "answer": "This article provides a step-by-step guide on change orders and variations accounting. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "projects-jobs-54"
+  },
+  {
+    "question": "Why is change orders and variations accounting important?",
+    "answer": "Understanding change orders and variations accounting helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "projects-jobs-54"
+  },
+  {
+    "question": "What is time tracking and labour costing?",
+    "answer": "Time tracking and labour costing refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "projects-jobs-55"
+  },
+  {
+    "question": "How do I perform time tracking and labour costing in heroBooks?",
+    "answer": "This article provides a step-by-step guide on time tracking and labour costing. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "projects-jobs-55"
+  },
+  {
+    "question": "Why is time tracking and labour costing important?",
+    "answer": "Understanding time tracking and labour costing helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "projects-jobs-55"
+  },
+  {
+    "question": "What is equipment rentals and usage costs?",
+    "answer": "Equipment rentals and usage costs refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "projects-jobs-56"
+  },
+  {
+    "question": "How do I perform equipment rentals and usage costs in heroBooks?",
+    "answer": "This article provides a step-by-step guide on equipment rentals and usage costs. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "projects-jobs-56"
+  },
+  {
+    "question": "Why is equipment rentals and usage costs important?",
+    "answer": "Understanding equipment rentals and usage costs helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "projects-jobs-56"
+  },
+  {
+    "question": "What is capitalization policy for small businesses?",
+    "answer": "Capitalization policy for small businesses refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "fixed-assets-57"
+  },
+  {
+    "question": "How do I perform capitalization policy for small businesses in heroBooks?",
+    "answer": "This article provides a step-by-step guide on capitalization policy for small businesses. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "fixed-assets-57"
+  },
+  {
+    "question": "Why is capitalization policy for small businesses important?",
+    "answer": "Understanding capitalization policy for small businesses helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "fixed-assets-57"
+  },
+  {
+    "question": "What is depreciation methods & examples (gyd)?",
+    "answer": "Depreciation methods & examples (GYD) refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "fixed-assets-58"
+  },
+  {
+    "question": "How do I perform depreciation methods & examples (gyd) in heroBooks?",
+    "answer": "This article provides a step-by-step guide on depreciation methods & examples (gyd). It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "fixed-assets-58"
+  },
+  {
+    "question": "Why is depreciation methods & examples (gyd) important?",
+    "answer": "Understanding depreciation methods & examples (gyd) helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "fixed-assets-58"
+  },
+  {
+    "question": "What is asset disposal and gain/loss?",
+    "answer": "Asset disposal and gain/loss refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "fixed-assets-59"
+  },
+  {
+    "question": "How do I perform asset disposal and gain/loss in heroBooks?",
+    "answer": "This article provides a step-by-step guide on asset disposal and gain/loss. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "fixed-assets-59"
+  },
+  {
+    "question": "Why is asset disposal and gain/loss important?",
+    "answer": "Understanding asset disposal and gain/loss helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "fixed-assets-59"
+  },
+  {
+    "question": "What is revaluation and impairment of assets?",
+    "answer": "Revaluation and impairment of assets refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "fixed-assets-60"
+  },
+  {
+    "question": "How do I perform revaluation and impairment of assets in heroBooks?",
+    "answer": "This article provides a step-by-step guide on revaluation and impairment of assets. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "fixed-assets-60"
+  },
+  {
+    "question": "Why is revaluation and impairment of assets important?",
+    "answer": "Understanding revaluation and impairment of assets helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "fixed-assets-60"
+  },
+  {
+    "question": "What is recording capital leases vs finance leases?",
+    "answer": "Recording capital leases vs finance leases refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "fixed-assets-61"
+  },
+  {
+    "question": "How do I perform recording capital leases vs finance leases in heroBooks?",
+    "answer": "This article provides a step-by-step guide on recording capital leases vs finance leases. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "fixed-assets-61"
+  },
+  {
+    "question": "Why is recording capital leases vs finance leases important?",
+    "answer": "Understanding recording capital leases vs finance leases helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "fixed-assets-61"
+  },
+  {
+    "question": "What is component depreciation (ifrs for smes)?",
+    "answer": "Component depreciation (IFRS for SMEs) refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "fixed-assets-62"
+  },
+  {
+    "question": "How do I perform component depreciation (ifrs for smes) in heroBooks?",
+    "answer": "This article provides a step-by-step guide on component depreciation (ifrs for smes). It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "fixed-assets-62"
+  },
+  {
+    "question": "Why is component depreciation (ifrs for smes) important?",
+    "answer": "Understanding component depreciation (ifrs for smes) helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "fixed-assets-62"
+  },
+  {
+    "question": "What is asset register setup and tracking?",
+    "answer": "Asset register setup and tracking refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "fixed-assets-63"
+  },
+  {
+    "question": "How do I perform asset register setup and tracking in heroBooks?",
+    "answer": "This article provides a step-by-step guide on asset register setup and tracking. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "fixed-assets-63"
+  },
+  {
+    "question": "Why is asset register setup and tracking important?",
+    "answer": "Understanding asset register setup and tracking helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "fixed-assets-63"
+  },
+  {
+    "question": "What is maintenance vs capital improvements?",
+    "answer": "Maintenance vs capital improvements refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "fixed-assets-64"
+  },
+  {
+    "question": "How do I perform maintenance vs capital improvements in heroBooks?",
+    "answer": "This article provides a step-by-step guide on maintenance vs capital improvements. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "fixed-assets-64"
+  },
+  {
+    "question": "Why is maintenance vs capital improvements important?",
+    "answer": "Understanding maintenance vs capital improvements helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "fixed-assets-64"
+  },
+  {
+    "question": "What is p&l, balance sheet, cash flow \u2014 how they connect?",
+    "answer": "P&L, Balance Sheet, Cash Flow \u2014 how they connect refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "financial-reporting-65"
+  },
+  {
+    "question": "How do I perform p&l, balance sheet, cash flow \u2014 how they connect in heroBooks?",
+    "answer": "This article provides a step-by-step guide on p&l, balance sheet, cash flow \u2014 how they connect. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "financial-reporting-65"
+  },
+  {
+    "question": "Why is p&l, balance sheet, cash flow \u2014 how they connect important?",
+    "answer": "Understanding p&l, balance sheet, cash flow \u2014 how they connect helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "financial-reporting-65"
+  },
+  {
+    "question": "What is aging schedules: ar/ap best practices?",
+    "answer": "Aging schedules: AR/AP best practices refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "financial-reporting-66"
+  },
+  {
+    "question": "How do I perform aging schedules: ar/ap best practices in heroBooks?",
+    "answer": "This article provides a step-by-step guide on aging schedules: ar/ap best practices. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "financial-reporting-66"
+  },
+  {
+    "question": "Why is aging schedules: ar/ap best practices important?",
+    "answer": "Understanding aging schedules: ar/ap best practices helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "financial-reporting-66"
+  },
+  {
+    "question": "What is audit trail and documentation basics?",
+    "answer": "Audit trail and documentation basics refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "financial-reporting-67"
+  },
+  {
+    "question": "How do I perform audit trail and documentation basics in heroBooks?",
+    "answer": "This article provides a step-by-step guide on audit trail and documentation basics. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "financial-reporting-67"
+  },
+  {
+    "question": "Why is audit trail and documentation basics important?",
+    "answer": "Understanding audit trail and documentation basics helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "financial-reporting-67"
+  },
+  {
+    "question": "What is preparing notes to the financial statements?",
+    "answer": "Preparing notes to the financial statements refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "financial-reporting-68"
+  },
+  {
+    "question": "How do I perform preparing notes to the financial statements in heroBooks?",
+    "answer": "This article provides a step-by-step guide on preparing notes to the financial statements. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "financial-reporting-68"
+  },
+  {
+    "question": "Why is preparing notes to the financial statements important?",
+    "answer": "Understanding preparing notes to the financial statements helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "financial-reporting-68"
+  },
+  {
+    "question": "What is cash flow statement: indirect method?",
+    "answer": "Cash flow statement: indirect method refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "financial-reporting-69"
+  },
+  {
+    "question": "How do I perform cash flow statement: indirect method in heroBooks?",
+    "answer": "This article provides a step-by-step guide on cash flow statement: indirect method. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "financial-reporting-69"
+  },
+  {
+    "question": "Why is cash flow statement: indirect method important?",
+    "answer": "Understanding cash flow statement: indirect method helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "financial-reporting-69"
+  },
+  {
+    "question": "What is budgets vs actuals: variance analysis?",
+    "answer": "Budgets vs actuals: variance analysis refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "financial-reporting-70"
+  },
+  {
+    "question": "How do I perform budgets vs actuals: variance analysis in heroBooks?",
+    "answer": "This article provides a step-by-step guide on budgets vs actuals: variance analysis. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "financial-reporting-70"
+  },
+  {
+    "question": "Why is budgets vs actuals: variance analysis important?",
+    "answer": "Understanding budgets vs actuals: variance analysis helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "financial-reporting-70"
+  },
+  {
+    "question": "What is common financial ratios for smes?",
+    "answer": "Common financial ratios for SMEs refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "financial-reporting-71"
+  },
+  {
+    "question": "How do I perform common financial ratios for smes in heroBooks?",
+    "answer": "This article provides a step-by-step guide on common financial ratios for smes. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "financial-reporting-71"
+  },
+  {
+    "question": "Why is common financial ratios for smes important?",
+    "answer": "Understanding common financial ratios for smes helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "financial-reporting-71"
+  },
+  {
+    "question": "What is interpreting financial statements for decision-making?",
+    "answer": "Interpreting financial statements for decision-making refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "financial-reporting-72"
+  },
+  {
+    "question": "How do I perform interpreting financial statements for decision-making in heroBooks?",
+    "answer": "This article provides a step-by-step guide on interpreting financial statements for decision-making. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "financial-reporting-72"
+  },
+  {
+    "question": "Why is interpreting financial statements for decision-making important?",
+    "answer": "Understanding interpreting financial statements for decision-making helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "financial-reporting-72"
+  },
+  {
+    "question": "What is registering for vat in guyana: steps and forms?",
+    "answer": "Registering for VAT in Guyana: steps and forms refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-73"
+  },
+  {
+    "question": "How do I perform registering for vat in guyana: steps and forms in heroBooks?",
+    "answer": "This article provides a step-by-step guide on registering for vat in guyana: steps and forms. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-73"
+  },
+  {
+    "question": "Why is registering for vat in guyana: steps and forms important?",
+    "answer": "Understanding registering for vat in guyana: steps and forms helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-73"
+  },
+  {
+    "question": "What is filing vat returns online: step-by-step?",
+    "answer": "Filing VAT returns online: step-by-step refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-74"
+  },
+  {
+    "question": "How do I perform filing vat returns online: step-by-step in heroBooks?",
+    "answer": "This article provides a step-by-step guide on filing vat returns online: step-by-step. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-74"
+  },
+  {
+    "question": "Why is filing vat returns online: step-by-step important?",
+    "answer": "Understanding filing vat returns online: step-by-step helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-74"
+  },
+  {
+    "question": "What is nis employer registration & monthly remittances?",
+    "answer": "NIS employer registration & monthly remittances refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-75"
+  },
+  {
+    "question": "How do I perform nis employer registration & monthly remittances in heroBooks?",
+    "answer": "This article provides a step-by-step guide on nis employer registration & monthly remittances. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-75"
+  },
+  {
+    "question": "Why is nis employer registration & monthly remittances important?",
+    "answer": "Understanding nis employer registration & monthly remittances helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-75"
+  },
+  {
+    "question": "What is common compliance penalties and how to avoid them?",
+    "answer": "Common compliance penalties and how to avoid them refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-76"
+  },
+  {
+    "question": "How do I perform common compliance penalties and how to avoid them in heroBooks?",
+    "answer": "This article provides a step-by-step guide on common compliance penalties and how to avoid them. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-76"
+  },
+  {
+    "question": "Why is common compliance penalties and how to avoid them important?",
+    "answer": "Understanding common compliance penalties and how to avoid them helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-76"
+  },
+  {
+    "question": "What is understanding personal income tax bands and rates?",
+    "answer": "Understanding personal income tax bands and rates refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-77"
+  },
+  {
+    "question": "How do I perform understanding personal income tax bands and rates in heroBooks?",
+    "answer": "This article provides a step-by-step guide on understanding personal income tax bands and rates. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-77"
+  },
+  {
+    "question": "Why is understanding personal income tax bands and rates important?",
+    "answer": "Understanding understanding personal income tax bands and rates helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-77"
+  },
+  {
+    "question": "What is filing annual corporate income tax returns?",
+    "answer": "Filing annual corporate income tax returns refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-78"
+  },
+  {
+    "question": "How do I perform filing annual corporate income tax returns in heroBooks?",
+    "answer": "This article provides a step-by-step guide on filing annual corporate income tax returns. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-78"
+  },
+  {
+    "question": "Why is filing annual corporate income tax returns important?",
+    "answer": "Understanding filing annual corporate income tax returns helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-78"
+  },
+  {
+    "question": "What is foreign tax credit and double taxation?",
+    "answer": "Foreign tax credit and double taxation refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-79"
+  },
+  {
+    "question": "How do I perform foreign tax credit and double taxation in heroBooks?",
+    "answer": "This article provides a step-by-step guide on foreign tax credit and double taxation. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-79"
+  },
+  {
+    "question": "Why is foreign tax credit and double taxation important?",
+    "answer": "Understanding foreign tax credit and double taxation helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-79"
+  },
+  {
+    "question": "What is record-keeping requirements under gra?",
+    "answer": "Record-keeping requirements under GRA refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-80"
+  },
+  {
+    "question": "How do I perform record-keeping requirements under gra in heroBooks?",
+    "answer": "This article provides a step-by-step guide on record-keeping requirements under gra. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-80"
+  },
+  {
+    "question": "Why is record-keeping requirements under gra important?",
+    "answer": "Understanding record-keeping requirements under gra helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-80"
+  },
+  {
+    "question": "What is how to apply for tax clearance certificates?",
+    "answer": "How to apply for tax clearance certificates refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-81"
+  },
+  {
+    "question": "How do I perform how to apply for tax clearance certificates in heroBooks?",
+    "answer": "This article provides a step-by-step guide on how to apply for tax clearance certificates. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-81"
+  },
+  {
+    "question": "Why is how to apply for tax clearance certificates important?",
+    "answer": "Understanding how to apply for tax clearance certificates helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-81"
+  },
+  {
+    "question": "What is vat exemptions for small businesses?",
+    "answer": "VAT exemptions for small businesses refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-82"
+  },
+  {
+    "question": "How do I perform vat exemptions for small businesses in heroBooks?",
+    "answer": "This article provides a step-by-step guide on vat exemptions for small businesses. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-82"
+  },
+  {
+    "question": "Why is vat exemptions for small businesses important?",
+    "answer": "Understanding vat exemptions for small businesses helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-82"
+  },
+  {
+    "question": "What is handling tax audits and investigations?",
+    "answer": "Handling tax audits and investigations refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-83"
+  },
+  {
+    "question": "How do I perform handling tax audits and investigations in heroBooks?",
+    "answer": "This article provides a step-by-step guide on handling tax audits and investigations. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-83"
+  },
+  {
+    "question": "Why is handling tax audits and investigations important?",
+    "answer": "Understanding handling tax audits and investigations helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-83"
+  },
+  {
+    "question": "What is paye and overtime allowances: compliance?",
+    "answer": "PAYE and overtime allowances: compliance refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-84"
+  },
+  {
+    "question": "How do I perform paye and overtime allowances: compliance in heroBooks?",
+    "answer": "This article provides a step-by-step guide on paye and overtime allowances: compliance. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-84"
+  },
+  {
+    "question": "Why is paye and overtime allowances: compliance important?",
+    "answer": "Understanding paye and overtime allowances: compliance helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-84"
+  },
+  {
+    "question": "What is tax incentives for agriculture and manufacturing?",
+    "answer": "Tax incentives for agriculture and manufacturing refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-85"
+  },
+  {
+    "question": "How do I perform tax incentives for agriculture and manufacturing in heroBooks?",
+    "answer": "This article provides a step-by-step guide on tax incentives for agriculture and manufacturing. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-85"
+  },
+  {
+    "question": "Why is tax incentives for agriculture and manufacturing important?",
+    "answer": "Understanding tax incentives for agriculture and manufacturing helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-85"
+  },
+  {
+    "question": "What is import duty concessions and exemptions?",
+    "answer": "Import duty concessions and exemptions refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-86"
+  },
+  {
+    "question": "How do I perform import duty concessions and exemptions in heroBooks?",
+    "answer": "This article provides a step-by-step guide on import duty concessions and exemptions. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-86"
+  },
+  {
+    "question": "Why is import duty concessions and exemptions important?",
+    "answer": "Understanding import duty concessions and exemptions helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-86"
+  },
+  {
+    "question": "What is understanding capital gains tax?",
+    "answer": "Understanding capital gains tax refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-87"
+  },
+  {
+    "question": "How do I perform understanding capital gains tax in heroBooks?",
+    "answer": "This article provides a step-by-step guide on understanding capital gains tax. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-87"
+  },
+  {
+    "question": "Why is understanding capital gains tax important?",
+    "answer": "Understanding understanding capital gains tax helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-87"
+  },
+  {
+    "question": "What is tax obligations for ngos and non-profits?",
+    "answer": "Tax obligations for NGOs and non-profits refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-88"
+  },
+  {
+    "question": "How do I perform tax obligations for ngos and non-profits in heroBooks?",
+    "answer": "This article provides a step-by-step guide on tax obligations for ngos and non-profits. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-88"
+  },
+  {
+    "question": "Why is tax obligations for ngos and non-profits important?",
+    "answer": "Understanding tax obligations for ngos and non-profits helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-88"
+  },
+  {
+    "question": "What is tax deadlines for small businesses in guyana?",
+    "answer": "Tax deadlines for small businesses in Guyana refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-89"
+  },
+  {
+    "question": "How do I perform tax deadlines for small businesses in guyana in heroBooks?",
+    "answer": "This article provides a step-by-step guide on tax deadlines for small businesses in guyana. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-89"
+  },
+  {
+    "question": "Why is tax deadlines for small businesses in guyana important?",
+    "answer": "Understanding tax deadlines for small businesses in guyana helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-89"
+  },
+  {
+    "question": "What is vat exemptions for educational services?",
+    "answer": "VAT exemptions for educational services refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-90"
+  },
+  {
+    "question": "How do I perform vat exemptions for educational services in heroBooks?",
+    "answer": "This article provides a step-by-step guide on vat exemptions for educational services. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-90"
+  },
+  {
+    "question": "Why is vat exemptions for educational services important?",
+    "answer": "Understanding vat exemptions for educational services helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-90"
+  },
+  {
+    "question": "What is tax allowances for pension contributions?",
+    "answer": "Tax allowances for pension contributions refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-91"
+  },
+  {
+    "question": "How do I perform tax allowances for pension contributions in heroBooks?",
+    "answer": "This article provides a step-by-step guide on tax allowances for pension contributions. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-91"
+  },
+  {
+    "question": "Why is tax allowances for pension contributions important?",
+    "answer": "Understanding tax allowances for pension contributions helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-91"
+  },
+  {
+    "question": "What is taxation of foreign income for residents?",
+    "answer": "Taxation of foreign income for residents refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "compliance-92"
+  },
+  {
+    "question": "How do I perform taxation of foreign income for residents in heroBooks?",
+    "answer": "This article provides a step-by-step guide on taxation of foreign income for residents. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "compliance-92"
+  },
+  {
+    "question": "Why is taxation of foreign income for residents important?",
+    "answer": "Understanding taxation of foreign income for residents helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "compliance-92"
+  },
+  {
+    "question": "What is rent roll setup & recurring billing?",
+    "answer": "Rent roll setup & recurring billing refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "real-estate-93"
+  },
+  {
+    "question": "How do I perform rent roll setup & recurring billing in heroBooks?",
+    "answer": "This article provides a step-by-step guide on rent roll setup & recurring billing. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "real-estate-93"
+  },
+  {
+    "question": "Why is rent roll setup & recurring billing important?",
+    "answer": "Understanding rent roll setup & recurring billing helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "real-estate-93"
+  },
+  {
+    "question": "What is security deposits accounting (gyd)?",
+    "answer": "Security deposits accounting (GYD) refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "real-estate-94"
+  },
+  {
+    "question": "How do I perform security deposits accounting (gyd) in heroBooks?",
+    "answer": "This article provides a step-by-step guide on security deposits accounting (gyd). It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "real-estate-94"
+  },
+  {
+    "question": "Why is security deposits accounting (gyd) important?",
+    "answer": "Understanding security deposits accounting (gyd) helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "real-estate-94"
+  },
+  {
+    "question": "What is owner statements: structure and best practices?",
+    "answer": "Owner statements: structure and best practices refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "real-estate-95"
+  },
+  {
+    "question": "How do I perform owner statements: structure and best practices in heroBooks?",
+    "answer": "This article provides a step-by-step guide on owner statements: structure and best practices. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "real-estate-95"
+  },
+  {
+    "question": "Why is owner statements: structure and best practices important?",
+    "answer": "Understanding owner statements: structure and best practices helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "real-estate-95"
+  },
+  {
+    "question": "What is accounting for maintenance and repairs?",
+    "answer": "Accounting for maintenance and repairs refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "real-estate-96"
+  },
+  {
+    "question": "How do I perform accounting for maintenance and repairs in heroBooks?",
+    "answer": "This article provides a step-by-step guide on accounting for maintenance and repairs. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "real-estate-96"
+  },
+  {
+    "question": "Why is accounting for maintenance and repairs important?",
+    "answer": "Understanding accounting for maintenance and repairs helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "real-estate-96"
+  },
+  {
+    "question": "What is service charge reconciliation?",
+    "answer": "Service charge reconciliation refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "real-estate-97"
+  },
+  {
+    "question": "How do I perform service charge reconciliation in heroBooks?",
+    "answer": "This article provides a step-by-step guide on service charge reconciliation. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "real-estate-97"
+  },
+  {
+    "question": "Why is service charge reconciliation important?",
+    "answer": "Understanding service charge reconciliation helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "real-estate-97"
+  },
+  {
+    "question": "What is accounting for property taxes?",
+    "answer": "Accounting for property taxes refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "real-estate-98"
+  },
+  {
+    "question": "How do I perform accounting for property taxes in heroBooks?",
+    "answer": "This article provides a step-by-step guide on accounting for property taxes. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "real-estate-98"
+  },
+  {
+    "question": "Why is accounting for property taxes important?",
+    "answer": "Understanding accounting for property taxes helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "real-estate-98"
+  },
+  {
+    "question": "What is real estate vat treatment?",
+    "answer": "Real estate VAT treatment refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "real-estate-99"
+  },
+  {
+    "question": "How do I perform real estate vat treatment in heroBooks?",
+    "answer": "This article provides a step-by-step guide on real estate vat treatment. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "real-estate-99"
+  },
+  {
+    "question": "Why is real estate vat treatment important?",
+    "answer": "Understanding real estate vat treatment helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "real-estate-99"
+  },
+  {
+    "question": "What is amortizing leasehold improvements?",
+    "answer": "Amortizing leasehold improvements refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "real-estate-100"
+  },
+  {
+    "question": "How do I perform amortizing leasehold improvements in heroBooks?",
+    "answer": "This article provides a step-by-step guide on amortizing leasehold improvements. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "real-estate-100"
+  },
+  {
+    "question": "Why is amortizing leasehold improvements important?",
+    "answer": "Understanding amortizing leasehold improvements helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "real-estate-100"
+  },
+  {
+    "question": "What is cxc poa syllabus 101: sections a\u2013c at a glance?",
+    "answer": "CXC PoA Syllabus 101: Sections A\u2013C at a glance refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-101"
+  },
+  {
+    "question": "How do I perform cxc poa syllabus 101: sections a\u2013c at a glance in heroBooks?",
+    "answer": "This article provides a step-by-step guide on cxc poa syllabus 101: sections a\u2013c at a glance. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-101"
+  },
+  {
+    "question": "Why is cxc poa syllabus 101: sections a\u2013c at a glance important?",
+    "answer": "Understanding cxc poa syllabus 101: sections a\u2013c at a glance helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-101"
+  },
+  {
+    "question": "What is common poa journal entries for exams?",
+    "answer": "Common PoA journal entries for exams refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-102"
+  },
+  {
+    "question": "How do I perform common poa journal entries for exams in heroBooks?",
+    "answer": "This article provides a step-by-step guide on common poa journal entries for exams. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-102"
+  },
+  {
+    "question": "Why is common poa journal entries for exams important?",
+    "answer": "Understanding common poa journal entries for exams helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-102"
+  },
+  {
+    "question": "What is trial balance & corrections (exam-style)?",
+    "answer": "Trial balance & corrections (exam-style) refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-103"
+  },
+  {
+    "question": "How do I perform trial balance & corrections (exam-style) in heroBooks?",
+    "answer": "This article provides a step-by-step guide on trial balance & corrections (exam-style). It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-103"
+  },
+  {
+    "question": "Why is trial balance & corrections (exam-style) important?",
+    "answer": "Understanding trial balance & corrections (exam-style) helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-103"
+  },
+  {
+    "question": "What is preparing financial statements for cxc exams?",
+    "answer": "Preparing financial statements for CXC exams refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-104"
+  },
+  {
+    "question": "How do I perform preparing financial statements for cxc exams in heroBooks?",
+    "answer": "This article provides a step-by-step guide on preparing financial statements for cxc exams. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-104"
+  },
+  {
+    "question": "Why is preparing financial statements for cxc exams important?",
+    "answer": "Understanding preparing financial statements for cxc exams helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-104"
+  },
+  {
+    "question": "What is accounting for partnerships in cxc poa?",
+    "answer": "Accounting for partnerships in CXC PoA refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-105"
+  },
+  {
+    "question": "How do I perform accounting for partnerships in cxc poa in heroBooks?",
+    "answer": "This article provides a step-by-step guide on accounting for partnerships in cxc poa. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-105"
+  },
+  {
+    "question": "Why is accounting for partnerships in cxc poa important?",
+    "answer": "Understanding accounting for partnerships in cxc poa helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-105"
+  },
+  {
+    "question": "What is manufacturing accounts in cxc poa?",
+    "answer": "Manufacturing accounts in CXC PoA refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-106"
+  },
+  {
+    "question": "How do I perform manufacturing accounts in cxc poa in heroBooks?",
+    "answer": "This article provides a step-by-step guide on manufacturing accounts in cxc poa. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-106"
+  },
+  {
+    "question": "Why is manufacturing accounts in cxc poa important?",
+    "answer": "Understanding manufacturing accounts in cxc poa helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-106"
+  },
+  {
+    "question": "What is incomplete records questions in cxc poa?",
+    "answer": "Incomplete records questions in CXC PoA refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-107"
+  },
+  {
+    "question": "How do I perform incomplete records questions in cxc poa in heroBooks?",
+    "answer": "This article provides a step-by-step guide on incomplete records questions in cxc poa. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-107"
+  },
+  {
+    "question": "Why is incomplete records questions in cxc poa important?",
+    "answer": "Understanding incomplete records questions in cxc poa helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-107"
+  },
+  {
+    "question": "What is bank reconciliation questions for cxc poa?",
+    "answer": "Bank reconciliation questions for CXC PoA refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-108"
+  },
+  {
+    "question": "How do I perform bank reconciliation questions for cxc poa in heroBooks?",
+    "answer": "This article provides a step-by-step guide on bank reconciliation questions for cxc poa. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-108"
+  },
+  {
+    "question": "Why is bank reconciliation questions for cxc poa important?",
+    "answer": "Understanding bank reconciliation questions for cxc poa helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-108"
+  },
+  {
+    "question": "What is control accounts and reconciliations?",
+    "answer": "Control accounts and reconciliations refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-109"
+  },
+  {
+    "question": "How do I perform control accounts and reconciliations in heroBooks?",
+    "answer": "This article provides a step-by-step guide on control accounts and reconciliations. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-109"
+  },
+  {
+    "question": "Why is control accounts and reconciliations important?",
+    "answer": "Understanding control accounts and reconciliations helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-109"
+  },
+  {
+    "question": "What is accounting for vat in cxc context?",
+    "answer": "Accounting for VAT in CXC context refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-110"
+  },
+  {
+    "question": "How do I perform accounting for vat in cxc context in heroBooks?",
+    "answer": "This article provides a step-by-step guide on accounting for vat in cxc context. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-110"
+  },
+  {
+    "question": "Why is accounting for vat in cxc context important?",
+    "answer": "Understanding accounting for vat in cxc context helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-110"
+  },
+  {
+    "question": "What is ratio analysis for cxc poa?",
+    "answer": "Ratio analysis for CXC PoA refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-111"
+  },
+  {
+    "question": "How do I perform ratio analysis for cxc poa in heroBooks?",
+    "answer": "This article provides a step-by-step guide on ratio analysis for cxc poa. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-111"
+  },
+  {
+    "question": "Why is ratio analysis for cxc poa important?",
+    "answer": "Understanding ratio analysis for cxc poa helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-111"
+  },
+  {
+    "question": "What is depreciation and disposal for cxc poa?",
+    "answer": "Depreciation and disposal for CXC PoA refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-112"
+  },
+  {
+    "question": "How do I perform depreciation and disposal for cxc poa in heroBooks?",
+    "answer": "This article provides a step-by-step guide on depreciation and disposal for cxc poa. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-112"
+  },
+  {
+    "question": "Why is depreciation and disposal for cxc poa important?",
+    "answer": "Understanding depreciation and disposal for cxc poa helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-112"
+  },
+  {
+    "question": "What is accruals and prepayments exam tips?",
+    "answer": "Accruals and prepayments exam tips refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-113"
+  },
+  {
+    "question": "How do I perform accruals and prepayments exam tips in heroBooks?",
+    "answer": "This article provides a step-by-step guide on accruals and prepayments exam tips. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-113"
+  },
+  {
+    "question": "Why is accruals and prepayments exam tips important?",
+    "answer": "Understanding accruals and prepayments exam tips helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-113"
+  },
+  {
+    "question": "What is exam study tips for cxc poa?",
+    "answer": "Exam study tips for CXC PoA refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-114"
+  },
+  {
+    "question": "How do I perform exam study tips for cxc poa in heroBooks?",
+    "answer": "This article provides a step-by-step guide on exam study tips for cxc poa. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-114"
+  },
+  {
+    "question": "Why is exam study tips for cxc poa important?",
+    "answer": "Understanding exam study tips for cxc poa helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-114"
+  },
+  {
+    "question": "What is common mistakes in cxc poa?",
+    "answer": "Common mistakes in CXC PoA refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-115"
+  },
+  {
+    "question": "How do I perform common mistakes in cxc poa in heroBooks?",
+    "answer": "This article provides a step-by-step guide on common mistakes in cxc poa. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-115"
+  },
+  {
+    "question": "Why is common mistakes in cxc poa important?",
+    "answer": "Understanding common mistakes in cxc poa helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-115"
+  },
+  {
+    "question": "What is past paper practice for cxc poa?",
+    "answer": "Past paper practice for CXC PoA refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "education-poa-116"
+  },
+  {
+    "question": "How do I perform past paper practice for cxc poa in heroBooks?",
+    "answer": "This article provides a step-by-step guide on past paper practice for cxc poa. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "education-poa-116"
+  },
+  {
+    "question": "Why is past paper practice for cxc poa important?",
+    "answer": "Understanding past paper practice for cxc poa helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "education-poa-116"
+  },
+  {
+    "question": "What is segregation of duties: why and how?",
+    "answer": "Segregation of duties: why and how refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "internal-controls-117"
+  },
+  {
+    "question": "How do I perform segregation of duties: why and how in heroBooks?",
+    "answer": "This article provides a step-by-step guide on segregation of duties: why and how. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "internal-controls-117"
+  },
+  {
+    "question": "Why is segregation of duties: why and how important?",
+    "answer": "Understanding segregation of duties: why and how helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "internal-controls-117"
+  },
+  {
+    "question": "What is fraud prevention and detection for smes?",
+    "answer": "Fraud prevention and detection for SMEs refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "internal-controls-118"
+  },
+  {
+    "question": "How do I perform fraud prevention and detection for smes in heroBooks?",
+    "answer": "This article provides a step-by-step guide on fraud prevention and detection for smes. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "internal-controls-118"
+  },
+  {
+    "question": "Why is fraud prevention and detection for smes important?",
+    "answer": "Understanding fraud prevention and detection for smes helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "internal-controls-118"
+  },
+  {
+    "question": "What is policies and procedures manual: creating one?",
+    "answer": "Policies and procedures manual: creating one refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "internal-controls-119"
+  },
+  {
+    "question": "How do I perform policies and procedures manual: creating one in heroBooks?",
+    "answer": "This article provides a step-by-step guide on policies and procedures manual: creating one. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "internal-controls-119"
+  },
+  {
+    "question": "Why is policies and procedures manual: creating one important?",
+    "answer": "Understanding policies and procedures manual: creating one helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "internal-controls-119"
+  },
+  {
+    "question": "What is internal audit checklist for small businesses?",
+    "answer": "Internal audit checklist for small businesses refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "internal-controls-120"
+  },
+  {
+    "question": "How do I perform internal audit checklist for small businesses in heroBooks?",
+    "answer": "This article provides a step-by-step guide on internal audit checklist for small businesses. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "internal-controls-120"
+  },
+  {
+    "question": "Why is internal audit checklist for small businesses important?",
+    "answer": "Understanding internal audit checklist for small businesses helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "internal-controls-120"
+  },
+  {
+    "question": "What is cash handling controls?",
+    "answer": "Cash handling controls refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "internal-controls-121"
+  },
+  {
+    "question": "How do I perform cash handling controls in heroBooks?",
+    "answer": "This article provides a step-by-step guide on cash handling controls. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "internal-controls-121"
+  },
+  {
+    "question": "Why is cash handling controls important?",
+    "answer": "Understanding cash handling controls helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "internal-controls-121"
+  },
+  {
+    "question": "What is it controls and data security?",
+    "answer": "IT controls and data security refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "internal-controls-122"
+  },
+  {
+    "question": "How do I perform it controls and data security in heroBooks?",
+    "answer": "This article provides a step-by-step guide on it controls and data security. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "internal-controls-122"
+  },
+  {
+    "question": "Why is it controls and data security important?",
+    "answer": "Understanding it controls and data security helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "internal-controls-122"
+  },
+  {
+    "question": "What is whistleblower policies?",
+    "answer": "Whistleblower policies refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "internal-controls-123"
+  },
+  {
+    "question": "How do I perform whistleblower policies in heroBooks?",
+    "answer": "This article provides a step-by-step guide on whistleblower policies. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "internal-controls-123"
+  },
+  {
+    "question": "Why is whistleblower policies important?",
+    "answer": "Understanding whistleblower policies helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "internal-controls-123"
+  },
+  {
+    "question": "What is risk assessment and mitigation?",
+    "answer": "Risk assessment and mitigation refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "internal-controls-124"
+  },
+  {
+    "question": "How do I perform risk assessment and mitigation in heroBooks?",
+    "answer": "This article provides a step-by-step guide on risk assessment and mitigation. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "internal-controls-124"
+  },
+  {
+    "question": "Why is risk assessment and mitigation important?",
+    "answer": "Understanding risk assessment and mitigation helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "internal-controls-124"
+  },
+  {
+    "question": "What is retail shops: daily sales & vat workflow?",
+    "answer": "Retail shops: daily sales & VAT workflow refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "industry-guides-125"
+  },
+  {
+    "question": "How do I perform retail shops: daily sales & vat workflow in heroBooks?",
+    "answer": "This article provides a step-by-step guide on retail shops: daily sales & vat workflow. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "industry-guides-125"
+  },
+  {
+    "question": "Why is retail shops: daily sales & vat workflow important?",
+    "answer": "Understanding retail shops: daily sales & vat workflow helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "industry-guides-125"
+  },
+  {
+    "question": "What is beauty/salon: tips, receipts, payroll basics?",
+    "answer": "Beauty/Salon: tips, receipts, payroll basics refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "industry-guides-126"
+  },
+  {
+    "question": "How do I perform beauty/salon: tips, receipts, payroll basics in heroBooks?",
+    "answer": "This article provides a step-by-step guide on beauty/salon: tips, receipts, payroll basics. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "industry-guides-126"
+  },
+  {
+    "question": "Why is beauty/salon: tips, receipts, payroll basics important?",
+    "answer": "Understanding beauty/salon: tips, receipts, payroll basics helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "industry-guides-126"
+  },
+  {
+    "question": "What is logistics: quotes \u2192 delivery \u2192 invoice with vat?",
+    "answer": "Logistics: quotes \u2192 delivery \u2192 invoice with VAT refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "industry-guides-127"
+  },
+  {
+    "question": "How do I perform logistics: quotes \u2192 delivery \u2192 invoice with vat in heroBooks?",
+    "answer": "This article provides a step-by-step guide on logistics: quotes \u2192 delivery \u2192 invoice with vat. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "industry-guides-127"
+  },
+  {
+    "question": "Why is logistics: quotes \u2192 delivery \u2192 invoice with vat important?",
+    "answer": "Understanding logistics: quotes \u2192 delivery \u2192 invoice with vat helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "industry-guides-127"
+  },
+  {
+    "question": "What is schools/boards: grants, fees, transparency?",
+    "answer": "Schools/Boards: grants, fees, transparency refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "industry-guides-128"
+  },
+  {
+    "question": "How do I perform schools/boards: grants, fees, transparency in heroBooks?",
+    "answer": "This article provides a step-by-step guide on schools/boards: grants, fees, transparency. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "industry-guides-128"
+  },
+  {
+    "question": "Why is schools/boards: grants, fees, transparency important?",
+    "answer": "Understanding schools/boards: grants, fees, transparency helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "industry-guides-128"
+  },
+  {
+    "question": "What is ngos: fund accounting and reporting?",
+    "answer": "NGOs: fund accounting and reporting refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "industry-guides-129"
+  },
+  {
+    "question": "How do I perform ngos: fund accounting and reporting in heroBooks?",
+    "answer": "This article provides a step-by-step guide on ngos: fund accounting and reporting. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "industry-guides-129"
+  },
+  {
+    "question": "Why is ngos: fund accounting and reporting important?",
+    "answer": "Understanding ngos: fund accounting and reporting helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "industry-guides-129"
+  },
+  {
+    "question": "What is agriculture: accounting for crops & livestock?",
+    "answer": "Agriculture: accounting for crops & livestock refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "industry-guides-130"
+  },
+  {
+    "question": "How do I perform agriculture: accounting for crops & livestock in heroBooks?",
+    "answer": "This article provides a step-by-step guide on agriculture: accounting for crops & livestock. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "industry-guides-130"
+  },
+  {
+    "question": "Why is agriculture: accounting for crops & livestock important?",
+    "answer": "Understanding agriculture: accounting for crops & livestock helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "industry-guides-130"
+  },
+  {
+    "question": "What is manufacturing: process costing?",
+    "answer": "Manufacturing: process costing refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "industry-guides-131"
+  },
+  {
+    "question": "How do I perform manufacturing: process costing in heroBooks?",
+    "answer": "This article provides a step-by-step guide on manufacturing: process costing. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "industry-guides-131"
+  },
+  {
+    "question": "Why is manufacturing: process costing important?",
+    "answer": "Understanding manufacturing: process costing helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "industry-guides-131"
+  },
+  {
+    "question": "What is healthcare practices: medical billing & vat?",
+    "answer": "Healthcare practices: medical billing & VAT refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "industry-guides-132"
+  },
+  {
+    "question": "How do I perform healthcare practices: medical billing & vat in heroBooks?",
+    "answer": "This article provides a step-by-step guide on healthcare practices: medical billing & vat. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "industry-guides-132"
+  },
+  {
+    "question": "Why is healthcare practices: medical billing & vat important?",
+    "answer": "Understanding healthcare practices: medical billing & vat helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "industry-guides-132"
+  },
+  {
+    "question": "What is exporting reports for your accountant?",
+    "answer": "Exporting reports for your accountant refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "api-integrations-133"
+  },
+  {
+    "question": "How do I perform exporting reports for your accountant in heroBooks?",
+    "answer": "This article provides a step-by-step guide on exporting reports for your accountant. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "api-integrations-133"
+  },
+  {
+    "question": "Why is exporting reports for your accountant important?",
+    "answer": "Understanding exporting reports for your accountant helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "api-integrations-133"
+  },
+  {
+    "question": "What is dealer system hookups: principles & api overview?",
+    "answer": "Dealer system hookups: principles & API overview refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "api-integrations-134"
+  },
+  {
+    "question": "How do I perform dealer system hookups: principles & api overview in heroBooks?",
+    "answer": "This article provides a step-by-step guide on dealer system hookups: principles & api overview. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "api-integrations-134"
+  },
+  {
+    "question": "Why is dealer system hookups: principles & api overview important?",
+    "answer": "Understanding dealer system hookups: principles & api overview helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "api-integrations-134"
+  },
+  {
+    "question": "What is integrating herobooks with third-party pos?",
+    "answer": "Integrating heroBooks with third-party POS refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "api-integrations-135"
+  },
+  {
+    "question": "How do I perform integrating herobooks with third-party pos in heroBooks?",
+    "answer": "This article provides a step-by-step guide on integrating herobooks with third-party pos. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "api-integrations-135"
+  },
+  {
+    "question": "Why is integrating herobooks with third-party pos important?",
+    "answer": "Understanding integrating herobooks with third-party pos helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "api-integrations-135"
+  },
+  {
+    "question": "What is using webhooks to automate tasks?",
+    "answer": "Using Webhooks to automate tasks refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "api-integrations-136"
+  },
+  {
+    "question": "How do I perform using webhooks to automate tasks in heroBooks?",
+    "answer": "This article provides a step-by-step guide on using webhooks to automate tasks. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "api-integrations-136"
+  },
+  {
+    "question": "Why is using webhooks to automate tasks important?",
+    "answer": "Understanding using webhooks to automate tasks helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "api-integrations-136"
+  },
+  {
+    "question": "What is data exports & imports: csv & json?",
+    "answer": "Data exports & imports: CSV & JSON refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "api-integrations-137"
+  },
+  {
+    "question": "How do I perform data exports & imports: csv & json in heroBooks?",
+    "answer": "This article provides a step-by-step guide on data exports & imports: csv & json. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "api-integrations-137"
+  },
+  {
+    "question": "Why is data exports & imports: csv & json important?",
+    "answer": "Understanding data exports & imports: csv & json helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "api-integrations-137"
+  },
+  {
+    "question": "What is building custom dashboards with the api?",
+    "answer": "Building custom dashboards with the API refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "api-integrations-138"
+  },
+  {
+    "question": "How do I perform building custom dashboards with the api in heroBooks?",
+    "answer": "This article provides a step-by-step guide on building custom dashboards with the api. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "api-integrations-138"
+  },
+  {
+    "question": "Why is building custom dashboards with the api important?",
+    "answer": "Understanding building custom dashboards with the api helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "api-integrations-138"
+  },
+  {
+    "question": "What is securing your api keys?",
+    "answer": "Securing your API keys refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "api-integrations-139"
+  },
+  {
+    "question": "How do I perform securing your api keys in heroBooks?",
+    "answer": "This article provides a step-by-step guide on securing your api keys. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "api-integrations-139"
+  },
+  {
+    "question": "Why is securing your api keys important?",
+    "answer": "Understanding securing your api keys helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "api-integrations-139"
+  },
+  {
+    "question": "What is rate limits and performance tips?",
+    "answer": "Rate limits and performance tips refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+    "type": "definition",
+    "article_id": "api-integrations-140"
+  },
+  {
+    "question": "How do I perform rate limits and performance tips in heroBooks?",
+    "answer": "This article provides a step-by-step guide on rate limits and performance tips. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+    "type": "howto",
+    "article_id": "api-integrations-140"
+  },
+  {
+    "question": "Why is rate limits and performance tips important?",
+    "answer": "Understanding rate limits and performance tips helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article.",
+    "type": "faq",
+    "article_id": "api-integrations-140"
+  }
+]

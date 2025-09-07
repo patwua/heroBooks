@@ -4,34 +4,74 @@
     "title": "Getting Started (PoA Basics)",
     "slug": "getting-started",
     "children": [
-      {"id": "double-entry", "title": "Double Entry", "slug": "double-entry"},
-      {"id": "chart-of-accounts", "title": "Chart of Accounts", "slug": "chart-of-accounts"},
-      {"id": "accrual-vs-cash", "title": "Accrual vs Cash", "slug": "accrual-vs-cash"},
-      {"id": "trial-balance", "title": "Trial Balance", "slug": "trial-balance"},
-      {"id": "adjusting-entries", "title": "Adjusting Entries", "slug": "adjusting-entries"}
+      {
+        "id": "intro-poa",
+        "title": "Introduction to Principles of Accounts",
+        "slug": "intro-poa",
+        "children": []
+      },
+      {
+        "id": "accounting-terms",
+        "title": "Accounting Terminology",
+        "slug": "accounting-terms",
+        "children": []
+      },
+      {
+        "id": "chart-of-accounts",
+        "title": "Chart of Accounts",
+        "slug": "chart-of-accounts",
+        "children": []
+      }
     ]
   },
   {
     "id": "sales-vat",
     "title": "Sales, Invoicing & VAT",
-    "slug": "sales-vat",
+    "slug": "sales-invoicing-vat",
     "children": [
-      {"id": "vat-invoice", "title": "VAT Invoices", "slug": "vat-invoice"},
-      {"id": "zero-rated", "title": "Zero-rated vs Exempt", "slug": "zero-rated"},
-      {"id": "sales-returns", "title": "Sales Returns", "slug": "sales-returns"},
-      {"id": "credit-notes", "title": "Credit & Debit Notes", "slug": "credit-notes"},
-      {"id": "vat-filing", "title": "VAT Filing", "slug": "vat-filing"}
+      {
+        "id": "sales-process",
+        "title": "Sales Processes",
+        "slug": "sales-process",
+        "children": []
+      },
+      {
+        "id": "vat-compliance",
+        "title": "VAT Compliance",
+        "slug": "vat-compliance",
+        "children": []
+      },
+      {
+        "id": "credit-notes",
+        "title": "Credit Notes & Returns",
+        "slug": "credit-notes",
+        "children": []
+      }
     ]
   },
   {
-    "id": "purchases-expenses",
+    "id": "purchases-payables",
     "title": "Purchases, Expenses & Payables",
-    "slug": "purchases-expenses",
+    "slug": "purchases-expenses-payables",
     "children": [
-      {"id": "expense-categorization", "title": "Expense Categorization", "slug": "expense-categorization"},
-      {"id": "supplier-bills", "title": "Supplier Bills vs Expenses", "slug": "supplier-bills"},
-      {"id": "withholding-tax", "title": "Withholding Tax", "slug": "withholding-tax"},
-      {"id": "petty-cash", "title": "Petty Cash Controls", "slug": "petty-cash"}
+      {
+        "id": "expense-categories",
+        "title": "Expense Categories",
+        "slug": "expense-categories",
+        "children": []
+      },
+      {
+        "id": "supplier-management",
+        "title": "Supplier Management",
+        "slug": "supplier-management",
+        "children": []
+      },
+      {
+        "id": "petty-cash",
+        "title": "Petty Cash Control",
+        "slug": "petty-cash",
+        "children": []
+      }
     ]
   },
   {
@@ -39,9 +79,24 @@
     "title": "Banking & Reconciliation",
     "slug": "banking-reconciliation",
     "children": [
-      {"id": "import-bank-files", "title": "Importing Bank Files", "slug": "import-bank-files"},
-      {"id": "bank-rules", "title": "Bank Rules", "slug": "bank-rules"},
-      {"id": "merchant-fees", "title": "Merchant Fees & Chargebacks", "slug": "merchant-fees"}
+      {
+        "id": "bank-imports",
+        "title": "Bank Imports & Reconciliation",
+        "slug": "bank-imports",
+        "children": []
+      },
+      {
+        "id": "bank-rules",
+        "title": "Bank Rules & Auto Categorisation",
+        "slug": "bank-rules",
+        "children": []
+      },
+      {
+        "id": "cash-flow",
+        "title": "Cash Flow Management",
+        "slug": "cash-flow",
+        "children": []
+      }
     ]
   },
   {
@@ -49,10 +104,30 @@
     "title": "Payroll, PAYE & NIS",
     "slug": "payroll-paye-nis",
     "children": [
-      {"id": "paye-thresholds", "title": "PAYE Thresholds", "slug": "paye-thresholds"},
-      {"id": "nis-contributions", "title": "NIS Contributions", "slug": "nis-contributions"},
-      {"id": "payroll-journal-entries", "title": "Payroll Journal Entries", "slug": "payroll-journal-entries"},
-      {"id": "year-end-payroll", "title": "Year-end Payroll Reporting", "slug": "year-end-payroll"}
+      {
+        "id": "paye-calculations",
+        "title": "PAYE Calculations",
+        "slug": "paye-calculations",
+        "children": []
+      },
+      {
+        "id": "nis-contributions",
+        "title": "NIS Contributions",
+        "slug": "nis-contributions",
+        "children": []
+      },
+      {
+        "id": "payroll-journal",
+        "title": "Payroll Journal Entries",
+        "slug": "payroll-journal",
+        "children": []
+      },
+      {
+        "id": "payroll-reporting",
+        "title": "Reporting & Filings",
+        "slug": "payroll-reporting",
+        "children": []
+      }
     ]
   },
   {
@@ -60,29 +135,74 @@
     "title": "Inventory & COGS (incl. Dealerships)",
     "slug": "inventory-cogs",
     "children": [
-      {"id": "vehicle-cogs", "title": "Vehicle Dealer COGS", "slug": "vehicle-cogs"},
-      {"id": "inventory-valuation", "title": "Inventory Valuation Methods", "slug": "inventory-valuation"},
-      {"id": "stock-counts", "title": "Stock Counts & Shrinkage", "slug": "stock-counts"}
+      {
+        "id": "inventory-methods",
+        "title": "Inventory Methods",
+        "slug": "inventory-methods",
+        "children": []
+      },
+      {
+        "id": "cogs-margins",
+        "title": "COGS & Margins",
+        "slug": "cogs-margins",
+        "children": []
+      },
+      {
+        "id": "stock-control",
+        "title": "Stock Control & Shrinkage",
+        "slug": "stock-control",
+        "children": []
+      }
     ]
   },
   {
     "id": "projects-jobs",
     "title": "Projects & Jobs (Construction)",
-    "slug": "projects-jobs",
+    "slug": "projects-jobs-construction",
     "children": [
-      {"id": "job-costing", "title": "Job Costing", "slug": "job-costing"},
-      {"id": "progress-billing", "title": "Progress Billing", "slug": "progress-billing"},
-      {"id": "project-dashboard", "title": "Project Profitability Dashboard", "slug": "project-dashboard"}
+      {
+        "id": "job-costing",
+        "title": "Job Costing",
+        "slug": "job-costing",
+        "children": []
+      },
+      {
+        "id": "progress-billing",
+        "title": "Progress Billing & Retention",
+        "slug": "progress-billing",
+        "children": []
+      },
+      {
+        "id": "project-profitability",
+        "title": "Project Profitability",
+        "slug": "project-profitability",
+        "children": []
+      }
     ]
   },
   {
     "id": "fixed-assets",
     "title": "Fixed Assets & Depreciation",
-    "slug": "fixed-assets",
+    "slug": "fixed-assets-depreciation",
     "children": [
-      {"id": "capitalization-policy", "title": "Capitalization Policy", "slug": "capitalization-policy"},
-      {"id": "depreciation-methods", "title": "Depreciation Methods", "slug": "depreciation-methods"},
-      {"id": "asset-disposal", "title": "Asset Disposal", "slug": "asset-disposal"}
+      {
+        "id": "capitalization",
+        "title": "Capitalisation & Policies",
+        "slug": "capitalization",
+        "children": []
+      },
+      {
+        "id": "depreciation-methods",
+        "title": "Depreciation Methods",
+        "slug": "depreciation-methods",
+        "children": []
+      },
+      {
+        "id": "asset-disposal",
+        "title": "Asset Disposal & Revaluation",
+        "slug": "asset-disposal",
+        "children": []
+      }
     ]
   },
   {
@@ -90,9 +210,24 @@
     "title": "Financial Statements & Reporting",
     "slug": "financial-reporting",
     "children": [
-      {"id": "financial-statements", "title": "Financial Statements", "slug": "financial-statements"},
-      {"id": "aging-schedules", "title": "Aging Schedules", "slug": "aging-schedules"},
-      {"id": "audit-trail", "title": "Audit Trail Basics", "slug": "audit-trail"}
+      {
+        "id": "financial-statements",
+        "title": "Preparing Financial Statements",
+        "slug": "financial-statements",
+        "children": []
+      },
+      {
+        "id": "ratio-analysis",
+        "title": "Ratio Analysis & Decision Making",
+        "slug": "ratio-analysis",
+        "children": []
+      },
+      {
+        "id": "reports-tax-returns",
+        "title": "Reporting & Tax Returns",
+        "slug": "reports-tax-returns",
+        "children": []
+      }
     ]
   },
   {
@@ -100,10 +235,30 @@
     "title": "Compliance (GRA, VAT, NIS, PAYE)",
     "slug": "compliance",
     "children": [
-      {"id": "registering-vat", "title": "Registering for VAT", "slug": "registering-vat"},
-      {"id": "filing-vat-online", "title": "Filing VAT Online", "slug": "filing-vat-online"},
-      {"id": "nis-registration", "title": "NIS Employer Registration", "slug": "nis-registration"},
-      {"id": "compliance-penalties", "title": "Compliance Penalties", "slug": "compliance-penalties"}
+      {
+        "id": "vat-registration",
+        "title": "VAT Registration & Returns",
+        "slug": "vat-registration",
+        "children": []
+      },
+      {
+        "id": "paye-income-tax",
+        "title": "PAYE & Income Tax",
+        "slug": "paye-income-tax",
+        "children": []
+      },
+      {
+        "id": "nis-remittances",
+        "title": "NIS & Social Security",
+        "slug": "nis-remittances",
+        "children": []
+      },
+      {
+        "id": "penalties-appeals",
+        "title": "Penalties & Appeals",
+        "slug": "penalties-appeals",
+        "children": []
+      }
     ]
   },
   {
@@ -111,19 +266,49 @@
     "title": "Real Estate & Property Management",
     "slug": "real-estate",
     "children": [
-      {"id": "rent-roll", "title": "Rent Roll Setup", "slug": "rent-roll"},
-      {"id": "security-deposits", "title": "Security Deposits", "slug": "security-deposits"},
-      {"id": "owner-statements", "title": "Owner Statements", "slug": "owner-statements"}
+      {
+        "id": "rent-roll",
+        "title": "Rent Roll & Recurring Billing",
+        "slug": "rent-roll",
+        "children": []
+      },
+      {
+        "id": "deposits",
+        "title": "Security Deposits",
+        "slug": "deposits",
+        "children": []
+      },
+      {
+        "id": "owner-statements",
+        "title": "Owner Statements",
+        "slug": "owner-statements",
+        "children": []
+      }
     ]
   },
   {
-    "id": "education-cxc",
+    "id": "education-poa",
     "title": "Education (CXC PoA Study Guides)",
-    "slug": "education-cxc",
+    "slug": "education-poa",
     "children": [
-      {"id": "cxc-syllabus", "title": "CXC PoA Syllabus", "slug": "cxc-syllabus"},
-      {"id": "journal-entries-exam", "title": "Exam Journal Entries", "slug": "journal-entries-exam"},
-      {"id": "trial-balance-exam", "title": "Trial Balance & Corrections", "slug": "trial-balance-exam"}
+      {
+        "id": "poa-syllabus",
+        "title": "PoA Syllabus Overview",
+        "slug": "poa-syllabus",
+        "children": []
+      },
+      {
+        "id": "exam-entries",
+        "title": "Journal Entries for Exams",
+        "slug": "exam-entries",
+        "children": []
+      },
+      {
+        "id": "trial-balance-corrections",
+        "title": "Trial Balance & Corrections",
+        "slug": "trial-balance-corrections",
+        "children": []
+      }
     ]
   },
   {
@@ -131,8 +316,24 @@
     "title": "Internal Controls & Best Practices",
     "slug": "internal-controls",
     "children": [
-      {"id": "cash-controls", "title": "Cash Controls", "slug": "cash-controls"},
-      {"id": "segregation-duties", "title": "Segregation of Duties", "slug": "segregation-duties"}
+      {
+        "id": "segregation",
+        "title": "Segregation of Duties",
+        "slug": "segregation",
+        "children": []
+      },
+      {
+        "id": "fraud-prevention",
+        "title": "Fraud Prevention & Detection",
+        "slug": "fraud-prevention",
+        "children": []
+      },
+      {
+        "id": "policies-procedures",
+        "title": "Policies & Procedures",
+        "slug": "policies-procedures",
+        "children": []
+      }
     ]
   },
   {
@@ -140,10 +341,30 @@
     "title": "Industry Guides (Retail, Beauty/Salon, Logistics, Schools, NGOs)",
     "slug": "industry-guides",
     "children": [
-      {"id": "retail", "title": "Retail Shops", "slug": "retail"},
-      {"id": "salon", "title": "Beauty & Salon", "slug": "salon"},
-      {"id": "logistics", "title": "Logistics", "slug": "logistics"},
-      {"id": "schools-ngos", "title": "Schools & NGOs", "slug": "schools-ngos"}
+      {
+        "id": "retail",
+        "title": "Retail Accounting",
+        "slug": "retail",
+        "children": []
+      },
+      {
+        "id": "beauty",
+        "title": "Beauty & Salon Accounting",
+        "slug": "beauty",
+        "children": []
+      },
+      {
+        "id": "logistics",
+        "title": "Logistics & Transport",
+        "slug": "logistics",
+        "children": []
+      },
+      {
+        "id": "schools-ngos",
+        "title": "Schools & NGOs",
+        "slug": "schools-ngos",
+        "children": []
+      }
     ]
   },
   {
@@ -151,8 +372,24 @@
     "title": "API & Integrations (Pro)",
     "slug": "api-integrations",
     "children": [
-      {"id": "export-reports", "title": "Exporting Reports", "slug": "export-reports"},
-      {"id": "dealer-system-hookups", "title": "Dealer System Hookups", "slug": "dealer-system-hookups"}
+      {
+        "id": "api-setup",
+        "title": "API Setup",
+        "slug": "api-setup",
+        "children": []
+      },
+      {
+        "id": "integrations-pos",
+        "title": "POS & System Integrations",
+        "slug": "integrations-pos",
+        "children": []
+      },
+      {
+        "id": "data-import-export",
+        "title": "Data Exports & Imports",
+        "slug": "data-import-export",
+        "children": []
+      }
     ]
   }
 ]

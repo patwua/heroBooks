@@ -1,39 +1,23 @@
 # heroBooks Knowledge Base
 
-This folder contains the content and indexes for the heroBooks Knowledge Base.
+This knowledge base contains accounting guides and best practices tailored to Guyana and the wider Caribbean/CXC context. It powers the heroBooks Assistance sidebar and AI help system.
 
 ## Structure
 
-- `taxonomy.json` — hierarchical list of categories and topics.
-- `articles/` — Markdown articles with YAML front‑matter.
-- `kb_assist_index.json` — snippets and assistant keys compiled from articles.
-- `search_index.json` — basic search index for titles and tags.
-- `right_rail.yaml` — NIS/GRA quick links, popular snippets, internal promos.
-- `brand_options.md` — candidate banner slogans.
-
-## Downloading research drafts
-
-Run `pnpm kb:download` to fetch the latest research drafts from the shared
-Google Drive. The script requires `gdown` (install with `pip install gdown`).
-Files are placed in `kb/drive_raw` for manual conversion to Markdown articles.
+- `taxonomy.json` defines the top-level and sub-level categories for the knowledge base.
+- `articles/` contains Markdown files for each article with front-matter metadata and body content.
+- `kb_assist_index.json` aggregates question-answer pairs (`kb_snippets`) and intent keys for the assistance system.
+- `search_index.json` indexes article metadata and snippet answers to facilitate KB search and suggestion.
+- `right_rail.yaml` holds quick links to official resources (NIS, GRA), selected popular snippets, and subtle internal promotions. All external links open in a new tab.
+- `brand_options.md` proposes five slogan options for branding the knowledge base with a short rationale for each.
 
 ## Maintenance
 
-1. Update articles regularly; set `last_reviewed` to the current ISO date.
-2. Verify all rates and thresholds against official GRA and NIS sources.
-3. Run `pnpm lint` before committing to ensure formatting and types are valid.
-4. Rebuild `kb_assist_index.json` and `search_index.json` after adding or editing articles.
+- **Review cycle**: Articles should be reviewed at least annually, or sooner if tax rates and laws change. When changes occur, update the `last_reviewed` date in the front matter and refresh the relevant sections.
+- **Citation policy**: All statements of fact must be backed by a citation from a reputable source. Add citations in the `sources` array with title, URL, publisher, and date accessed.
+- **Adding articles**: Follow the existing schema in the front matter. Ensure the `id` is unique and the `category_id` corresponds to an entry in `taxonomy.json`.
+- **Updating indices**: When articles change or new ones are added, regenerate `kb_assist_index.json` and `search_index.json` accordingly.
 
-## Review Cycle
+## Sources
 
-Facts tied to filing periods or statutory rates should be reviewed every 6 months.
-Use analytics events to flag articles with old `last_reviewed` dates.
-
-## Sourcing Policy
-
-Prefer primary sources such as the Guyana Revenue Authority, National Insurance Scheme,
-and Caribbean Examinations Council. Secondary sources may supplement but must be
-clearly attributed.
-
-*Information is general in nature and not a substitute for professional tax or
-legal advice.*
+Primary sources used in this initial knowledge base include the Guyana Revenue Authority (GRA) for tax and compliance guidance, the National Insurance Scheme (NIS) for contribution rates, the Caribbean Examinations Council (CXC) for Principles of Accounts syllabus context, and the IFRS Foundation for standards applicable to SMEs. These sources are cited within individual articles' metadata.
