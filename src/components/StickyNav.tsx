@@ -50,7 +50,7 @@ export default function StickyNav() {
   const onNavClick = (label: string, href: string) => () =>
     recordFeatureImpression({ feature: "nav_click", reason: label, path: href });
 
-  if (status === "loading" || status === "pending") {
+  if (status === "loading") {
     return (
       <header className="fixed inset-x-0 top-0 z-50 border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:bg-neutral-900/70">
         <nav className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-4 sm:px-6 lg:px-8">

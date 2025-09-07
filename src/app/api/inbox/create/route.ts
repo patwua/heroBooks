@@ -3,9 +3,9 @@ import { z } from "zod";
 
 const InboxSchema = z
   .object({
-    name: z.string().min(1, "Name is required."),
-    email: z.string().email("Valid email is required."),
-    message: z.string().min(1, "Message is required."),
+    name: z.string().trim().min(1, "Name is required."),
+    email: z.string().trim().email("Valid email is required."),
+    message: z.string().trim().min(1, "Message is required."),
   })
   .passthrough();
 
