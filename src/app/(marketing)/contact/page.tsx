@@ -8,6 +8,7 @@ export const metadata = {
 
 export default function ContactPage({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
   const subjectParam = typeof searchParams.subject === "string" ? searchParams.subject.toLowerCase() : "general";
-  return <ContactClient initialSubject={subjectParam} />;
+  // key ensures component resets when subject changes
+  return <ContactClient key={subjectParam} initialSubject={subjectParam} />;
 }
 

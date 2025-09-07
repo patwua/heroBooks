@@ -9,8 +9,9 @@ type ToastState = { type: "success" | "error"; message: string } | null;
 interface Fields { name: string; email: string; [key: string]: string | undefined }
 
 export default function ContactClient({ initialSubject }: { initialSubject: string }) {
+  const initialFields: Fields = { name: "", email: "" };
   const [subject, setSubject] = useState<string>(initialSubject);
-  const [fields, setFields] = useState<Fields>({ name: "", email: "" });
+  const [fields, setFields] = useState<Fields>(initialFields);
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [toast, setToast] = useState<ToastState>(null);
 
@@ -31,9 +32,9 @@ export default function ContactClient({ initialSubject }: { initialSubject: stri
       const json = await r.json();
       if (!json.ok) throw new Error(json.error || "Failed");
       setToast({ type: "success", message: current.success.detail || shared.toasts.success });
-      setFields({ name: "", email: "" });
-    } catch {
-      setToast({ type: "error", message: shared.toasts.error });
+      setFields(initialFields);
+    } catch (err: any) {
+      setToast({ type: "error", message: err?.message || shared.toasts.error });
     } finally {
       setSubmitting(false);
     }
@@ -105,6 +106,7 @@ export default function ContactClient({ initialSubject }: { initialSubject: stri
                     name={f.name}
                     rows={4}
                     required={f.required}
+                    value={fields[f.name] || ""}
                     onChange={(e) => updateField(f.name, e.target.value)}
                     className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"
                   />
@@ -114,6 +116,7 @@ export default function ContactClient({ initialSubject }: { initialSubject: stri
                     name={f.name}
                     type="text"
                     required={f.required}
+                    value={fields[f.name] || ""}
                     onChange={(e) => updateField(f.name, e.target.value)}
                     className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2"
                   />
