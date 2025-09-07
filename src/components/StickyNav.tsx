@@ -6,6 +6,7 @@ import { Bell, User, ChevronDown, Menu } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 import SearchExpand from "@/components/SearchExpand";
 import MobileMenu from "@/components/MobileMenu";
+import AuthDropdown from "@/components/AuthDropdown";
 import { useEffect, useState } from "react";
 import { recordFeatureImpression } from "@/lib/telemetry";
 
@@ -21,6 +22,7 @@ export default function StickyNav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string>("");
+  const [authOpen, setAuthOpen] = useState(false);
 
   // Scrollspy for landing sections
   useEffect(() => {
@@ -102,13 +104,17 @@ export default function StickyNav() {
           >
             <Bell className="h-5 w-5" />
           </Link>
-          <button
-            className="flex items-center gap-1 rounded-md px-2 py-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-            aria-label="Account menu"
-          >
-            <User className="h-5 w-5" />
-            <ChevronDown className="h-4 w-4" />
-          </button>
+          <div className="relative">
+            <button
+              className="flex items-center gap-1 rounded-md px-2 py-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+              aria-label="Account menu"
+              onClick={() => setAuthOpen((o) => !o)}
+            >
+              <User className="h-5 w-5" />
+              <ChevronDown className="h-4 w-4" />
+            </button>
+            {authOpen && <AuthDropdown onClose={() => setAuthOpen(false)} />}
+          </div>
           <ThemeToggle />
           <button
             className="p-2 md:hidden rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-800"
