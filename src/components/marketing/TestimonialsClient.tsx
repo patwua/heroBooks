@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { recordFeatureImpression } from "@/lib/telemetry";
 import { getStoryById } from "@/lib/stories";
 import ComingSoonOverlay from "@/components/marketing/ComingSoonOverlay";
-import { testimonialCopy } from "@/lib/copy/imageCopy";
+import { testimonialCopy, TestimonialKey } from "@/lib/copy/imageCopy";
 
 const headings = [
   "Trusted by local professionals",
@@ -14,7 +14,7 @@ const headings = [
 
 export type TestimonialsClientProps = {
   heading?: string;
-  entries: [string, (typeof testimonialCopy)[string]][];
+  entries: [TestimonialKey, (typeof testimonialCopy)[TestimonialKey]][];
 };
 
 export default function TestimonialsClient({ heading, entries }: TestimonialsClientProps) {
@@ -48,7 +48,7 @@ export default function TestimonialsClient({ heading, entries }: TestimonialsCli
           return (
             <div
               key={id}
-              className="flex cursor-pointer flex-col gap-2 rounded-xl border p-4 bg-muted/30 text-sm"
+              className="relative flex cursor-pointer flex-col gap-2 rounded-xl border p-4 bg-muted/30 text-sm"
               onClick={() => {
                 const next = { ...open, [id]: !isOpen };
                 setOpen(next);
