@@ -1,42 +1,65 @@
 import Image from "next/image";
 import Link from "next/link";
-import HeroStatic from "@/components/marketing/HeroStatic";
-import HeroRandom from "@/components/marketing/HeroRandom";
+import HeroClient from "@/components/marketing/HeroClient";
 import TestimonialsSection from "@/components/marketing/TestimonialsSection";
 import PricingSection from "@/components/marketing/PricingSection";
 import FAQSection from "@/components/marketing/FAQSection";
+import { chooseNOnce } from "@/lib/randomize";
+import { heroCopy, HeroKey } from "@/lib/copy/imageCopy";
 
 export default function HomePage() {
+  const keys = Object.keys(heroCopy) as HeroKey[];
+  const [hero1Key, hero2Key] = chooseNOnce("hb_home_heroes", keys, 2);
+  const hero1 = heroCopy[hero1Key];
+  const hero2 = heroCopy[hero2Key];
+
   return (
     <div>
-      {/* HERO STATIC */}
-      <section className="border-b">
-        <HeroStatic />
-      </section>
-
-      {/* HERO RANDOMIZED STORY */}
+      {/* HERO 1 */}
       <section className="border-b">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <HeroRandom />
+          <HeroClient
+            itemId={hero1Key}
+            headline={hero1.headline}
+            story={hero1.story}
+            ctas={hero1.ctas}
+            imgSrc={`/photos/landing/${hero1Key}.webp`}
+            reverse
+          />
         </div>
       </section>
 
       {/* FEATURES */}
-      <section id="features" className="border-t">
+      <section id="features" className="border-b">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold">Built for compliance and speed</h2>
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-5">
             {[
-              { title: "VAT‑ready Invoicing", desc: "Zero‑rated, VAT‑14, and clean tax exports." },
-              { title: "Double‑entry ledger", desc: "Accurate accounting made simple." },
-              { title: "Clean API", desc: "Integrates easily with your software." },
+              { title: "VAT compliance", desc: "Automatic VAT‑14 and zero‑rated support.", href: "/features#vat" },
+              { title: "PAYE & NIS", desc: "Payroll that stays in step with GRA rules.", href: "/features#payroll" },
+              { title: "Real‑time reports", desc: "Know your numbers the instant they change.", href: "/features#reports" },
+              { title: "Bank reconciliation", desc: "Match transactions in minutes, not hours.", href: "/features#banking" },
+              { title: "Multi‑currency", desc: "Invoice and track in USD, GYD, and more.", href: "/features#multicurrency" },
             ].map((f) => (
-              <div key={f.title} className="rounded-2xl border p-6">
+              <Link key={f.title} href={f.href} className="rounded-2xl border p-6 hover:bg-muted block">
                 <h3 className="font-semibold">{f.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
-              </div>
+              </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* HERO 2 */}
+      <section className="border-b">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <HeroClient
+            itemId={hero2Key}
+            headline={hero2.headline}
+            story={hero2.story}
+            ctas={hero2.ctas}
+            imgSrc={`/photos/landing/${hero2Key}.webp`}
+          />
         </div>
       </section>
 

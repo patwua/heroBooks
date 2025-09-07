@@ -13,9 +13,10 @@ export type HeroClientProps = {
     secondary: { label: string; href: string };
   };
   imgSrc: string;
+  reverse?: boolean;
 };
 
-export default function HeroClient({ itemId, headline, story, ctas, imgSrc }: HeroClientProps) {
+export default function HeroClient({ itemId, headline, story, ctas, imgSrc, reverse }: HeroClientProps) {
   useEffect(() => {
     recordFeatureImpression({
       feature: "hero_impression",
@@ -26,7 +27,7 @@ export default function HeroClient({ itemId, headline, story, ctas, imgSrc }: He
 
   return (
     <div className="relative grid items-center gap-10 py-16 md:grid-cols-2">
-      <div>
+      <div className={reverse ? "md:order-2" : undefined}>
         <h2 className="text-3xl font-semibold tracking-tight">{headline}</h2>
         <p className="mt-3 text-muted-foreground">{story}</p>
         <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -48,7 +49,9 @@ export default function HeroClient({ itemId, headline, story, ctas, imgSrc }: He
           </TrackLink>
         </div>
       </div>
-      <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border">
+      <div
+        className={`relative aspect-[16/10] w-full overflow-hidden rounded-2xl border ${reverse ? "md:order-1" : ""}`}
+      >
         <Image src={imgSrc} alt={headline} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
       </div>
     </div>
