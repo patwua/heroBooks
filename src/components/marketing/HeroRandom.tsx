@@ -11,9 +11,10 @@ export default function HeroRandom() {
     <HeroClient
       itemId={chosen}
       headline={copy.headline}
-      subhead={copy.subhead}
-      cta={copy.cta}
+      story={copy.story}
+      ctas={copy.ctas}
       imgSrc={imgSrc}
     />
   );
 }
+
