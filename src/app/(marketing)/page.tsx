@@ -187,6 +187,11 @@ export default function HomePage() {
               </details>
             ))}
           </div>
+          <div className="mt-8 text-center">
+            <Link href="/help" className="text-sm font-medium text-emerald-700 hover:underline">
+              View the full Help & FAQ →
+            </Link>
+          </div>
         </div>
       </section>
     </div>
