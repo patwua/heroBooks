@@ -2,6 +2,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useSession } from "next-auth/react";
+import { Button } from "@/components/ui/button";
+import SearchExpand from "@/components/SearchExpand";
+import NotificationsBell from "@/components/topbar/NotificationsBell";
+import UserMenu from "@/components/topbar/UserMenu";
 
 const nav = [
   { href: "/features", label: "Features" },
@@ -12,6 +17,7 @@ const nav = [
 
 export default function MarketingHeader() {
   const pathname = usePathname();
+  const { data: session } = useSession();
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/70 backdrop-blur">
       <div className="container mx-auto h-14 px-4 flex items-center justify-between">
@@ -20,15 +26,48 @@ export default function MarketingHeader() {
           <span className="font-semibold tracking-tight">heroBooks</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
-          {nav.map(n => (
-            <Link key={n.href} href={n.href} className={pathname === n.href ? "text-foreground" : "text-muted-foreground hover:text-foreground"}>
+          {!session && (
+            <Button asChild>
+              <Link href="/pricing#starter">Start free</Link>
+            </Button>
+          )}
+          {nav.map((n) => (
+            <Link
+              key={n.href}
+              href={n.href}
+              className={
+                pathname === n.href
+                  ? "text-foreground"
+                  : "text-muted-foreground hover:text-foreground"
+              }
+            >
               {n.label}
             </Link>
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Link href="/sign-in" className="text-sm px-3 py-1.5 rounded-md hover:bg-muted">Sign in</Link>
-          <Link href="/get-started" className="text-sm px-3 py-1.5 rounded-md bg-primary text-primary-foreground">Get started</Link>
+          {!session ? (
+            <>
+              <Link
+                href="/sign-in"
+                className="text-sm px-3 py-1.5 rounded-md hover:bg-muted"
+              >
+                Sign in
+              </Link>
+              <Link
+                href="/get-started"
+                className="text-sm px-3 py-1.5 rounded-md bg-primary text-primary-foreground"
+              >
+                Get started
+              </Link>
+            </>
+          ) : (
+            <>
+              <SearchExpand />
+              <NotificationsBell />
+              <UserMenu />
+            </>
+          )}
         </div>
       </div>
       <div className="w-full bg-primary/10 border-t">
