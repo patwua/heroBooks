@@ -80,6 +80,15 @@ export const heroCopy = {
       secondary: { label: "See features", href: "/features" },
     },
   },
+  compliance: {
+    headline: "Built for Guyana & Caribbean compliance",
+    story:
+      "From VAT and PAYE to NIS, heroBooks keeps regional rules baked in so your books stay audit‑ready across borders.",
+    ctas: {
+      primary: { label: "Get started", href: "/get-started" },
+      secondary: { label: "See compliance", href: "/features#compliance" },
+    },
+  },
 } as const;
 
 export const testimonialCopy = {
