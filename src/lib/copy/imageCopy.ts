@@ -86,28 +86,28 @@ export const testimonialCopy = {
   "shop-owner": {
     name: "Sasha",
     role: "Retail, Georgetown",
-    quotes: [
-      "We used to close late at month-end. With heroBooks, sales and VAT are always current—and I finally know my numbers without guessing.",
-      "Bank imports reconcile in minutes. I spend less time stressing and more time serving customers.",
-    ],
+    quote:
+      "We used to close late at month-end. With heroBooks, sales and VAT are always current—and I finally know my numbers without guessing. Month-end used to scare me; now I just reconcile and file.",
+    teaser: "Daily sales + VAT kept current—month-end without the scramble.",
+    storyId: "story_retail_sasha_georgetown",
     since: "Since 2024",
   },
   "salon-owner": {
     name: "Maya",
     role: "Beauty, East Bank",
-    quotes: [
-      "Bookings, receipts, PAYE—everything in one place. I can send an invoice from my phone before the client leaves.",
-      "Payroll used to scare me. Now it’s just part of closing the week.",
-    ],
+    quote:
+      "Bookings, receipts, PAYE—everything in one place. I can send an invoice from my phone before the client leaves. Payroll used to scare me; now it’s just part of closing the week.",
+    teaser: "Invoices from the chair, PAYE handled at week-end.",
+    storyId: "story_beauty_maya_eastbank",
     since: "Since 2024",
   },
   "transport-owner": {
     name: "Devon",
     role: "Logistics, Bartica Road",
-    quotes: [
-      "From quotes to delivery receipts, we keep jobs moving and the books clean. Even fuel and tolls reconcile faster.",
-      "Less spreadsheet chaos, more on-time runs—and reporting that actually mirrors the work.",
-    ],
+    quote:
+      "From quotes to delivery receipts, we keep jobs moving and the books clean. Even fuel and tolls reconcile faster. Less spreadsheet chaos, more on-time runs—and reporting that actually mirrors the work.",
+    teaser: "Quotes → delivery receipts → VAT—jobs flow into the books.",
+    storyId: "story_logistics_devon_bartica",
     since: "Since 2023",
   },
 } as const;
