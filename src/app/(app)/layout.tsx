@@ -2,6 +2,7 @@ import "../globals.css";
 import Sidebar from "@/components/nav/Sidebar";
 import Topbar from "@/components/topbar/Topbar";
 import AppBannerRandom from "@/components/app/AppBannerRandom";
+import AssistSidebar from "@/components/app/AssistSidebar";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -12,7 +13,10 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <div className="flex-1 flex flex-col min-w-0">
             <Topbar />
             <AppBannerRandom />
-            <main className="flex-1">{children}</main>
+            <div className="flex flex-1">
+              <main className="flex-1">{children}</main>
+              <AssistSidebar />
+            </div>
           </div>
         </div>
       </body>
