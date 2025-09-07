@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 import { recordFeatureImpression } from "@/lib/telemetry";
 import { getStoryById } from "@/lib/stories";
 import ComingSoonOverlay from "@/components/marketing/ComingSoonOverlay";
-import { testimonialCopy, TestimonialKey } from "@/lib/copy/imageCopy";
+import { testimonialCopy } from "@/lib/copy/imageCopy";
+import { testimonialImages } from "@/lib/images";
 
 const headings = [
   "Trusted by local professionals",
   "Trusted by local trades",
-  "Trusted by growing businesses in Guyana",
+  "Trusted by growing businesses in Guyana and across the Caribbean",
 ];
 
 export type TestimonialsClientProps = {
@@ -43,7 +44,7 @@ export default function TestimonialsClient({ heading, entries }: TestimonialsCli
       <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
         {entries.map(([id, t]) => {
           const story = getStoryById(t.storyId);
-          const imgSrc = `/photos/testimonials/${id}.webp`;
+          const imgSrc = testimonialImages[id as keyof typeof testimonialImages];
           const isOpen = open[id];
           return (
             <div
@@ -62,7 +63,15 @@ export default function TestimonialsClient({ heading, entries }: TestimonialsCli
             >
               <div className="flex gap-3">
                 <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg border">
-                  <Image src={imgSrc} alt={t.name} fill className="object-cover" />
+                  {imgSrc && (
+                    <Image
+                      src={imgSrc}
+                      alt={t.name}
+                      width={96}
+                      height={96}
+                      className="h-full w-full object-cover"
+                    />
+                  )}
                 </div>
                 <p className="leading-snug line-clamp-3">“{t.quote}”</p>
               </div>

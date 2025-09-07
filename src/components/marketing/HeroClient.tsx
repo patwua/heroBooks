@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import TrackLink from "@/components/marketing/TrackLink";
 import { useEffect } from "react";
 import { recordFeatureImpression } from "@/lib/telemetry";
@@ -12,7 +12,7 @@ export type HeroClientProps = {
     primary: { label: string; href: string };
     secondary: { label: string; href: string };
   };
-  imgSrc: string;
+  imgSrc: StaticImageData;
   reverse?: boolean;
 };
 
@@ -20,7 +20,7 @@ export default function HeroClient({ itemId, headline, story, ctas, imgSrc, reve
   useEffect(() => {
     recordFeatureImpression({
       feature: "hero_impression",
-      path: imgSrc,
+      path: imgSrc.src,
       meta: { location: "marketing_hero_randomized", item_id: itemId },
     });
   }, [itemId, imgSrc]);
@@ -49,10 +49,13 @@ export default function HeroClient({ itemId, headline, story, ctas, imgSrc, reve
           </TrackLink>
         </div>
       </div>
-      <div
-        className={`relative aspect-[16/10] w-full overflow-hidden rounded-2xl border ${reverse ? "md:order-1" : ""}`}
-      >
-        <Image src={imgSrc} alt={headline} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+      <div className={reverse ? "md:order-1" : ""}>
+        <Image
+          src={imgSrc}
+          alt={headline}
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="h-auto w-full rounded-2xl border object-cover"
+        />
       </div>
     </div>
   );

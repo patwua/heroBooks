@@ -45,9 +45,9 @@ export const heroCopy = {
     },
   },
   accounting: {
-    headline: "Guyana-ready accounting",
+    headline: "Guyana-ready accounting, built for the Caribbean",
     story:
-      "Local tax codes baked in: VAT, PAYE, NIS. Generate clean reports that match how you actually operate.",
+      "Local tax codes baked in: VAT, PAYE, NIS today, with room to scale across the Caribbean.",
     ctas: {
       primary: { label: "Get started", href: "/get-started" },
       secondary: { label: "View reports", href: "/features/reports" },

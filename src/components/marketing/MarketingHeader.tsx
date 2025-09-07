@@ -26,11 +26,6 @@ export default function MarketingHeader() {
           <span className="font-semibold tracking-tight">heroBooks</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
-          {!session && (
-            <Button asChild>
-              <Link href="/pricing#starter">Start free</Link>
-            </Button>
-          )}
           {nav.map((n) => (
             <Link
               key={n.href}
@@ -54,12 +49,9 @@ export default function MarketingHeader() {
               >
                 Sign in
               </Link>
-              <Link
-                href="/get-started"
-                className="text-sm px-3 py-1.5 rounded-md bg-primary text-primary-foreground"
-              >
-                Get started
-              </Link>
+              <Button asChild>
+                <Link href="/pricing#starter">Start free trial</Link>
+              </Button>
             </>
           ) : (
             <>

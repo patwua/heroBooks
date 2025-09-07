@@ -6,9 +6,10 @@ import FAQSection from "@/components/marketing/FAQSection";
 import MediaBullets from "@/components/marketing/MediaBullets";
 import { chooseNOnce } from "@/lib/randomize";
 import { heroCopy, HeroKey } from "@/lib/copy/imageCopy";
+import { heroImages } from "@/lib/images";
 
 export default async function HomePage() {
-  const keys = Object.keys(heroCopy) as HeroKey[];
+  const keys = Object.keys(heroImages) as HeroKey[];
   const [hero1Key, hero2Key, hero3Key] = await chooseNOnce(
     "hb_home_heroes",
     keys,
@@ -17,6 +18,9 @@ export default async function HomePage() {
   const hero1 = heroCopy[hero1Key];
   const hero2 = heroCopy[hero2Key];
   const hero3 = heroCopy[hero3Key];
+  const hero1Img = heroImages[hero1Key]!;
+  const hero2Img = heroImages[hero2Key]!;
+  const hero3Img = heroImages[hero3Key]!;
 
   return (
     <div>
@@ -28,7 +32,7 @@ export default async function HomePage() {
             headline={hero1.headline}
             story={hero1.story}
             ctas={hero1.ctas}
-            imgSrc={`/photos/landing/${hero1Key}.webp`}
+            imgSrc={hero1Img}
             reverse
           />
         </div>
@@ -78,7 +82,7 @@ export default async function HomePage() {
             headline={hero2.headline}
             story={hero2.story}
             ctas={hero2.ctas}
-            imgSrc={`/photos/landing/${hero2Key}.webp`}
+            imgSrc={hero2Img}
           />
         </div>
         </section>
@@ -91,7 +95,7 @@ export default async function HomePage() {
             headline={hero3.headline}
             story={hero3.story}
             ctas={hero3.ctas}
-            imgSrc={`/photos/landing/${hero3Key}.webp`}
+            imgSrc={hero3Img}
           />
         </div>
       </section>

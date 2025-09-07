@@ -23,7 +23,7 @@ export const stories: Story[] = [
     slug: "sasha-retail-georgetown",
     title: "Sales tidy, VAT on time",
     persona: { name: "Sasha", role: "Shop Owner", location: "Georgetown" },
-    image_src: "/photos/landing/accounting.webp",
+    image_src: "/photos/landing/accounting-1024x640.webp",
     teaser: "How Sasha uses daily sales tracking to stay VAT-ready.",
     summary_lines: [
       "Logged daily sales and expenses so VAT is always up to date.",
@@ -44,7 +44,7 @@ export const stories: Story[] = [
     slug: "maya-beauty-eastbank",
     title: "Invoices from the chair",
     persona: { name: "Maya", role: "Stylist", location: "East Bank" },
-    image_src: "/photos/landing/salon.webp",
+    image_src: "/photos/landing/salon-1024x640.webp",
     teaser: "How Maya uses mobile invoicing and PAYE payroll to keep chairs turning.",
     summary_lines: [
       "Sent invoices from the chair and tracked payments by client.",
@@ -65,7 +65,7 @@ export const stories: Story[] = [
     slug: "devon-logistics-bartica",
     title: "Jobs flowing into the books",
     persona: { name: "Devon", role: "Transport Owner", location: "Bartica Road" },
-    image_src: "/photos/landing/logistics.webp",
+    image_src: "/photos/landing/logistics-1024x640.webp",
     teaser: "How Devon uses quotes and delivery receipts to keep VAT in the flow.",
     summary_lines: [
       "Converted quotes to delivery receipts with VAT applied.",
@@ -86,7 +86,7 @@ export const stories: Story[] = [
     slug: "ayanna-real-estate-alberttown",
     title: "Rent rolls and reports made simple",
     persona: { name: "Ayanna", role: "Property Manager", location: "Alberttown" },
-    image_src: "/photos/landing/real-estate.webp",
+    image_src: "/photos/landing/real-estate-1024x640.webp",
     image_alt: "Property manager reviewing rent roll reports",
     teaser: "Automated rent and owner statements—month-end without manual math.",
     summary_lines: [
@@ -109,7 +109,7 @@ export const stories: Story[] = [
     slug: "marcus-school-board-new-amsterdam",
     title: "Grant tracking with real transparency",
     persona: { name: "Marcus", role: "School Board Treasurer", location: "New Amsterdam" },
-    image_src: "/photos/landing/school-board.webp",
+    image_src: "/photos/landing/school-board-1024x640.webp",
     image_alt: "Treasurer reviewing school grant allocations",
     teaser: "Grant tracking and audit prep without spreadsheet chaos.",
     summary_lines: [
@@ -132,7 +132,7 @@ export const stories: Story[] = [
     slug: "ryan-dealership-georgetown",
     title: "Every unit’s true cost—at a glance",
     persona: { name: "Ryan", role: "Dealer", location: "Georgetown" },
-    image_src: "/photos/landing/dealership.webp",
+    image_src: "/photos/landing/dealership-1024x640.webp",
     image_alt: "Dealer reviewing unit costs and margins",
     teaser: "How Ryan uses per-unit COGS to price with confidence.",
     summary_lines: [
@@ -160,7 +160,7 @@ export const stories: Story[] = [
     slug: "keisha-construction-linden",
     title: "Jobs on schedule, books in sync",
     persona: { name: "Keisha", role: "Contractor", location: "Linden" },
-    image_src: "/photos/landing/construction.webp",
+    image_src: "/photos/landing/construction-1024x640.webp",
     image_alt: "Contractor on site checking project costs and billing",
     teaser: "How Keisha uses job tracking and progress billing to stay on schedule.",
     summary_lines: [

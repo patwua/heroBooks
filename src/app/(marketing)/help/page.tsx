@@ -8,7 +8,7 @@ export default function HelpPage() {
       <header className="mb-10">
         <h1 className="text-3xl font-bold">Help & FAQ</h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          A single place for getting started, understanding Guyana‑specific taxes, and using heroBooks effectively.
+          A single place for getting started, understanding Guyana‑specific taxes, and using heroBooks effectively as we scale across the Caribbean.
         </p>
       </header>
 
@@ -16,7 +16,7 @@ export default function HelpPage() {
       <section className="border rounded-2xl p-6">
         <h2 className="text-xl font-semibold">Getting Started with heroBooks</h2>
         <ul className="mt-3 list-disc space-y-2 pl-6 text-sm text-muted-foreground">
-          <li>heroBooks is built for individuals and SMEs in Guyana with VAT, payroll and reporting built‑in.</li>
+          <li>heroBooks is built for individuals and SMEs in Guyana with VAT, payroll and reporting built‑in, and we&rsquo;re scaling across the Caribbean.</li>
           <li>Create an account, set your business profile, then invite your team with role‑based permissions.</li>
           <li>Start with invoicing and expenses; connect payroll later — the system calculates PAYE & NIS automatically.</li>
         </ul>

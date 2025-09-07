@@ -53,7 +53,7 @@ export default function StoriesListing() {
     <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <h1 className="text-2xl font-bold">Customer stories</h1>
       <p className="mt-2 text-muted-foreground">
-        Real operations using heroBooks for Guyana—VAT, PAYE, and NIS in the flow.
+        Real operations using heroBooks in Guyana—VAT, PAYE, and NIS in the flow—with an eye on the wider Caribbean.
       </p>
 
       <div className="mt-6">
