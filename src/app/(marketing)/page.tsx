@@ -4,6 +4,7 @@ import HeroClient from "@/components/marketing/HeroClient";
 import TestimonialsSection from "@/components/marketing/TestimonialsSection";
 import PricingSection from "@/components/marketing/PricingSection";
 import FAQSection from "@/components/marketing/FAQSection";
+import MediaBullets from "@/components/marketing/MediaBullets";
 import { chooseNOnce } from "@/lib/randomize";
 import { heroCopy, HeroKey } from "@/lib/copy/imageCopy";
 
@@ -47,11 +48,26 @@ export default async function HomePage() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* HERO 2 */}
-      <section className="border-b">
+        {/* FEATURE DEMO */}
+        <section className="border-b">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <MediaBullets
+            mediaSrc="/feature-demo.webp"
+            bullets={[
+              "Fast onboarding with guided setup.",
+              "Intuitive dashboard for quick insights.",
+              "Secure cloud backups and access anywhere.",
+            ]}
+            reverse
+          />
+        </div>
+        </section>
+
+        {/* HERO 2 */}
+        <section className="border-b">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <HeroClient
             itemId={hero2Key}
@@ -61,7 +77,7 @@ export default async function HomePage() {
             imgSrc={`/photos/landing/${hero2Key}.webp`}
           />
         </div>
-      </section>
+        </section>
 
       {/* WHY LOCAL */}
       <section id="why-local" className="border-t">
