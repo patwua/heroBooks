@@ -8,8 +8,13 @@ export function generateStaticParams() {
     .map((s) => ({ slug: s.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const story = getStoryBySlug(params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const story = getStoryBySlug(slug);
   if (!story || !story.consent_obtained)
     return { robots: { index: false, follow: false } };
   return {
@@ -18,8 +23,13 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function StoryPage({ params }: { params: { slug: string } }) {
-  const story = getStoryBySlug(params.slug);
+export default async function StoryPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const story = getStoryBySlug(slug);
   if (!story || !story.consent_obtained) notFound();
   return <StoryDetail story={story} />;
 }

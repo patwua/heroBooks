@@ -5,11 +5,21 @@ import MethodBadge from "@/components/admin/MethodBadge";
 import IntentRowActions from "@/components/admin/IntentRowActions";
 import Link from "next/link";
 
-type SearchParams = { q?: string; status?: string; method?: string; page?: string };
+type SearchParams = {
+  q?: string;
+  status?: string;
+  method?: string;
+  page?: string;
+};
 
 export const metadata = { title: "Admin · Billing — heroBooks" };
 
-export default async function AdminBillingPage({ searchParams }: { searchParams: SearchParams }) {
+export default async function AdminBillingPage({
+  searchParams,
+}: {
+  searchParams: Promise<SearchParams>;
+}) {
+  const params = await searchParams;
   const gate = await requireAdmin();
   if (!gate.ok) {
     return (
@@ -20,10 +30,10 @@ export default async function AdminBillingPage({ searchParams }: { searchParams:
     );
   }
 
-  const q = (searchParams.q ?? "").trim();
-  const status = searchParams.status ?? "all";
-  const method = searchParams.method ?? "all";
-  const page = Math.max(1, Number(searchParams.page ?? "1"));
+  const q = (params.q ?? "").trim();
+  const status = params.status ?? "all";
+  const method = params.method ?? "all";
+  const page = Math.max(1, Number(params.page ?? "1"));
   const pageSize = 20;
 
   const where: any = { orgId: gate.orgId };

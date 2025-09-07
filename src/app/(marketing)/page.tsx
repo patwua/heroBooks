@@ -7,9 +7,9 @@ import FAQSection from "@/components/marketing/FAQSection";
 import { chooseNOnce } from "@/lib/randomize";
 import { heroCopy, HeroKey } from "@/lib/copy/imageCopy";
 
-export default function HomePage() {
+export default async function HomePage() {
   const keys = Object.keys(heroCopy) as HeroKey[];
-  const [hero1Key, hero2Key] = chooseNOnce("hb_home_heroes", keys, 2);
+  const [hero1Key, hero2Key] = await chooseNOnce("hb_home_heroes", keys, 2);
   const hero1 = heroCopy[hero1Key];
   const hero2 = heroCopy[hero2Key];
 

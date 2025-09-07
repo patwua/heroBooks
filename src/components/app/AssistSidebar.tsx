@@ -2,9 +2,9 @@ import { chooseOnce } from "@/lib/randomize";
 import { bannerCopy, BannerKey } from "@/lib/copy/imageCopy";
 import BannerCard from "./BannerCard";
 
-export default function AssistSidebar() {
+export default async function AssistSidebar() {
   const keys = Object.keys(bannerCopy) as BannerKey[];
-  const chosen = chooseOnce("hb_banner", keys);
+  const chosen = await chooseOnce("hb_banner", keys);
   const b = bannerCopy[chosen];
   const imgSrc = `/photos/banners/${chosen}.webp`;
 

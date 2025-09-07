@@ -6,7 +6,7 @@ import { calcLines } from "@/lib/vatCalc";
 
 export async function POST(
   req: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const session = await auth();
   if (!session?.user?.id) {
@@ -21,8 +21,9 @@ export async function POST(
     return new NextResponse("No organization", { status: 400 });
   }
 
+  const { id } = await params;
   const estimate = await prisma.estimate.findFirst({
-    where: { id: params.id, orgId: userOrg.orgId },
+    where: { id, orgId: userOrg.orgId },
     include: { lines: true }
   });
   if (!estimate) {

@@ -4,7 +4,7 @@ import { ORG_COOKIE_NAME } from "@/lib/tenant";
 
 /** Returns "starter" | "business" | "enterprise" | "none" | "pending_assignment" */
 export async function getCurrentPlanForActiveOrg(): Promise<string> {
-  const orgId = cookies().get(ORG_COOKIE_NAME)?.value;
+  const orgId = (await cookies()).get(ORG_COOKIE_NAME)?.value;
   if (!orgId) return "none";
 
   const sub = await prisma.orgSubscription.findFirst({

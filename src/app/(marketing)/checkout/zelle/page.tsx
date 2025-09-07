@@ -1,8 +1,13 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 
-export default async function ZelleInstructionsPage({ searchParams }: { searchParams: Record<string, string | string[] | undefined> }) {
-  const intent = (Array.isArray(searchParams?.intent) ? searchParams.intent[0] : searchParams?.intent) ?? "";
+export default async function ZelleInstructionsPage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const params = await searchParams;
+  const intent = (Array.isArray(params?.intent) ? params.intent[0] : params?.intent) ?? "";
   const rec = intent ? await prisma.checkoutIntent.findUnique({ where: { id: intent } }) : null;
 
   return (

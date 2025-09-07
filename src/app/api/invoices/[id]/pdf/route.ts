@@ -7,7 +7,7 @@ import path from "path";
 
 export async function GET(
   req: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const session = await auth();
   if (!session?.user?.id) {
@@ -23,8 +23,9 @@ export async function GET(
     return new NextResponse("No organization", { status: 400 });
   }
 
+  const { id } = await params;
   const invoice = await prisma.invoice.findFirst({
-    where: { id: params.id, orgId: userOrg.orgId },
+    where: { id, orgId: userOrg.orgId },
     include: { customer: true, lines: { include: { taxCode: true } } }
   });
   if (!invoice) {
