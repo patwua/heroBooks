@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { testimonialCopy } from "@/lib/copy/imageCopy";
-import { chooseOnce } from "@/lib/randomize";
 import { recordFeatureImpression } from "@/lib/telemetry";
 import { getStoryById } from "@/lib/stories";
 import ComingSoonOverlay from "@/components/marketing/ComingSoonOverlay";
@@ -15,9 +14,13 @@ const headings = [
 ];
 
 export default function TestimonialsSection() {
-  const heading = chooseOnce("hb_testimonial_heading", headings);
+  const [heading, setHeading] = useState(headings[0]);
   const entries = Object.entries(testimonialCopy);
   const [open, setOpen] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    setHeading(headings[Math.floor(Math.random() * headings.length)]);
+  }, []);
 
   useEffect(() => {
     recordFeatureImpression({
