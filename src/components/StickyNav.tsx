@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useSession } from "next-auth/react";
 import { Bell, User, ChevronDown, Menu } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 import SearchExpand from "@/components/SearchExpand";
@@ -18,6 +19,7 @@ const anchorLinks = [
 ];
 
 export default function StickyNav() {
+  const { data: session, status } = useSession();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string>("");
@@ -46,14 +48,26 @@ export default function StickyNav() {
   const onNavClick = (label: string, href: string) => () =>
     recordFeatureImpression({ feature: "nav_click", reason: label, path: href });
 
+  if (status === "loading" || status === "pending") {
+    return (
+      <header className="fixed inset-x-0 top-0 z-50 border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:bg-neutral-900/70">
+        <nav className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-4 sm:px-6 lg:px-8">
+          <span className="sr-only">Loading navigation...</span>
+        </nav>
+      </header>
+    );
+  }
+
+  const homeHref = session ? "/dashboard" : "/";
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:bg-neutral-900/70">
       <nav className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-4 sm:px-6 lg:px-8">
         <Link
-          href="/"
+          href={homeHref}
           className="flex items-center gap-2 shrink-0"
           aria-label="heroBooks Home"
-          onClick={onNavClick("Home", "/")}
+          onClick={onNavClick("Home", homeHref)}
         >
           <Image
             src="/logos/heroBook%20Full%20Color.svg"
