@@ -1,24 +1,21 @@
 import { Check, Minus } from "lucide-react";
 
-export type PlanKey = "starter" | "business" | "enterprise";
+export type PlanKey = "starter" | "essentials" | "growth" | "pro";
 
 const basePlans: { key: PlanKey; name: string; price: string }[] = [
-  { key: "starter", name: "Starter", price: "GYD $0 (beta)" },
-  { key: "business", name: "Business", price: "GYD $9,900 / mo" },
-  { key: "enterprise", name: "Enterprise", price: "Let’s talk" },
+  { key: "starter", name: "Starter", price: "GYD $3,000 / mo" },
+  { key: "essentials", name: "Essentials", price: "GYD $5,000 / mo" },
+  { key: "growth", name: "Growth", price: "GYD $10,000 / mo" },
+  { key: "pro", name: "Pro", price: "Custom" },
 ];
 
 const features: { label: string; notes?: string; included: Partial<Record<PlanKey, boolean>> }[] = [
-  { label: "Users", notes: "Starter: up to 2", included: { starter: true, business: true, enterprise: true } },
-  { label: "VAT-ready invoicing", included: { starter: true, business: true, enterprise: true } },
-  { label: "Double-entry ledger", included: { starter: true, business: true, enterprise: true } },
-  { label: "Bank import & reconcile", included: { starter: false, business: true, enterprise: true } },
-  { label: "PAYE & NIS summaries", included: { starter: false, business: true, enterprise: true } },
-  { label: "Custom sequences & branding", included: { starter: false, business: true, enterprise: true } },
-  { label: "Priority support", included: { starter: false, business: true, enterprise: true } },
-  { label: "Advanced approvals & roles", included: { starter: false, business: false, enterprise: true } },
-  { label: "SLA & onboarding", included: { starter: false, business: false, enterprise: true } },
-  { label: "Custom integrations & API limits", included: { starter: false, business: false, enterprise: true } },
+  { label: "Users", notes: "Starter: up to 2", included: { starter: true, essentials: true, growth: true, pro: true } },
+  { label: "VAT-ready invoicing", included: { starter: true, essentials: true, growth: true, pro: true } },
+  { label: "Bank import & reconcile", included: { starter: false, essentials: true, growth: true, pro: true } },
+  { label: "PAYE & NIS summaries", included: { starter: false, essentials: true, growth: true, pro: true } },
+  { label: "Advanced approvals & roles", included: { starter: false, essentials: false, growth: true, pro: true } },
+  { label: "Custom integrations & API limits", included: { starter: false, essentials: false, growth: false, pro: true } },
 ];
 
 function Cell({ ok }: { ok: boolean | undefined }) {
@@ -28,7 +25,7 @@ function Cell({ ok }: { ok: boolean | undefined }) {
 
 export default function PricingComparison({
   next = "/sign-up",
-  highlight = "business",
+  highlight = "essentials",
 }: {
   next?: string;
   highlight?: PlanKey;
@@ -37,7 +34,7 @@ export default function PricingComparison({
   return (
     <div className="mt-12 border rounded-2xl overflow-hidden">
       {/* Header */}
-      <div className="grid grid-cols-4 bg-muted/40">
+      <div className="grid grid-cols-5 bg-muted/40">
         <div className="p-4 text-sm font-medium">Features</div>
         {plans.map((p) => (
           <div key={p.key} className={`p-4 text-sm font-medium ${p.highlight ? "bg-primary/10" : ""}`}>
@@ -50,7 +47,7 @@ export default function PricingComparison({
       {/* Feature rows */}
       <div className="divide-y">
         {features.map((f) => (
-          <div key={f.label} className="grid grid-cols-4 items-center">
+          <div key={f.label} className="grid grid-cols-5 items-center">
             <div className="p-3 text-sm">
               <div>{f.label}</div>
               {f.notes && <div className="text-xs text-muted-foreground">{f.notes}</div>}
@@ -65,14 +62,11 @@ export default function PricingComparison({
       </div>
 
       {/* CTAs respect `next` */}
-      <div className="grid grid-cols-4 bg-muted/30">
+      <div className="grid grid-cols-5 bg-muted/30">
         <div className="p-4 text-sm font-medium">Choose your plan</div>
         {plans.map((p) => {
-          const href =
-            p.key === "enterprise"
-              ? "/contact"
-              : `${next}?plan=${encodeURIComponent(p.key)}`;
-          const label = p.key === "enterprise" ? "Contact sales" : `Choose ${p.name}`;
+          const href = p.key === "pro" ? "/contact" : `${next}?plan=${encodeURIComponent(p.key)}`;
+          const label = p.key === "pro" ? "Contact sales" : `Choose ${p.name}`;
           return (
             <div key={p.key} className={`p-4 ${p.highlight ? "bg-primary/10" : ""}`}>
               <a href={href} className="inline-flex items-center justify-center w-full rounded-md border px-3 py-2 text-sm">
