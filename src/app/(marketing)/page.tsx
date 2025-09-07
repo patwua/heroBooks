@@ -1,43 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeroRandom from "@/components/marketing/HeroRandom";
+import TestimonialsRandom from "@/components/marketing/TestimonialsRandom";
 
 export default function HomePage() {
   return (
     <div>
       {/* HERO */}
-      <section className="relative">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24 lg:px-8">
-          <div className="flex flex-col justify-center">
-            <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">
-              Modern, multi-tenant accounting tailored for Guyana
-            </h1>
-            <p className="mt-4 max-w-prose text-lg text-muted-foreground">
-              VAT-ready invoices, clean reports, and an API ready to plug into your dealer system.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="#pricing"
-                className="rounded-lg bg-emerald-600 px-5 py-3 text-white shadow hover:bg-emerald-700"
-              >
-                Get Started
-              </Link>
-              <Link
-                href="#demo"
-                className="rounded-lg border px-5 py-3 text-foreground hover:bg-neutral-50 dark:hover:bg-neutral-900"
-              >
-                Explore in Demo
-              </Link>
-            </div>
-          </div>
-          <div className="relative h-[320px] w-full rounded-2xl bg-neutral-100 dark:bg-neutral-800">
-            <Image
-              src="/photos/landing/hero-placeholder.jpg"
-              alt="heroBooks"
-              fill
-              className="rounded-2xl object-cover"
-              sizes="(min-width: 1024px) 600px, 100vw"
-            />
-          </div>
+      <section className="border-b">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <HeroRandom />
         </div>
       </section>
 
@@ -92,19 +64,7 @@ export default function HomePage() {
       <section id="testimonials" className="border-t">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold">Trusted by local teams</h2>
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {[1, 2, 3].map((i) => (
-              <figure key={i} className="rounded-2xl border p-6">
-                <div className="relative mb-4 h-14 w-14 overflow-hidden rounded-full bg-neutral-200">
-                  <Image src={`/photos/testimonials/t${i}.jpg`} alt="" fill className="object-cover" />
-                </div>
-                <blockquote className="text-sm text-muted-foreground">
-                  “heroBooks keeps our VAT clean and reporting painless.”
-                </blockquote>
-                <figcaption className="mt-3 text-sm font-medium">Shop Owner #{i}</figcaption>
-              </figure>
-            ))}
-          </div>
+          <TestimonialsRandom />
         </div>
       </section>
 
