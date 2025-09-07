@@ -1,11 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { recordFeatureImpression } from "@/lib/telemetry";
 
 export default function HomePage() {
-  const onPriceClick = (plan: string) => () =>
-    recordFeatureImpression({ feature: "cta_click", reason: `pricing:${plan}`, path: "/#pricing" });
-
   return (
     <div>
       {/* HERO */}
@@ -22,7 +18,6 @@ export default function HomePage() {
               <Link
                 href="#pricing"
                 className="rounded-lg bg-emerald-600 px-5 py-3 text-white shadow hover:bg-emerald-700"
-                onClick={onPriceClick("hero")}
               >
                 Get Started
               </Link>
@@ -77,7 +72,6 @@ export default function HomePage() {
               <Link
                 href="#pricing"
                 className="rounded-lg bg-emerald-600 px-5 py-3 text-white shadow hover:bg-emerald-700"
-                onClick={onPriceClick("why-local")}
               >
                 Get Started
               </Link>
@@ -125,7 +119,6 @@ export default function HomePage() {
             {["Starter", "Business", "Enterprise"].map((name, idx) => {
               const featured = idx === 1;
               const price = idx === 0 ? "$19" : idx === 1 ? "$49" : "Custom";
-              const onClick = onPriceClick(name.toLowerCase());
               return (
                 <div
                   key={name}
@@ -151,7 +144,6 @@ export default function HomePage() {
                   </ul>
                   <div className="mt-6">
                     <button
-                      onClick={onClick}
                       className={`w-full rounded-lg px-4 py-2 text-center text-white ${
                         featured
                           ? "bg-emerald-600 hover:bg-emerald-700"
