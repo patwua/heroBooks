@@ -111,13 +111,13 @@ export default function StickyNav() {
 
         <div className="ml-auto flex items-center gap-2">
           <SearchExpand />
-          <Link
-            href="#"
+          <button
+            onClick={onNavClick("Notifications", "/notifications")}
             className="p-2 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-800"
             aria-label="Notifications"
           >
             <Bell className="h-5 w-5" />
-          </Link>
+          </button>
           <div className="relative">
             <button
               className="flex items-center gap-1 rounded-md px-2 py-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-800"
