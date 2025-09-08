@@ -1,4 +1,4 @@
-// heroBooks brand tokens — used by marketing pages (About/Contact) and general theming.
+// heroBooks brand tokens—used by marketing pages (About/Contact) and general theming.
 // These are neutral, easy-to-theme tokens matching the emerald/teal palette from the heroBooks logo.
 export const colors = {
   // Core brand emerald

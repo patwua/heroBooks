@@ -83,7 +83,7 @@ export const heroCopy = {
   compliance: {
     headline: "Built for Guyana & Caribbean compliance",
     story:
-      "From VAT and PAYE to NIS, heroBooks keeps regional rules baked in so your books stay audit-ready across borders.",
+      "From VAT and PAYE to NIS, heroBooks keeps regional rules baked in so your books stay audit‑ready across borders.",
     ctas: {
       primary: { label: "Get started", href: "/get-started" },
       secondary: { label: "See compliance", href: "/features#compliance" },
@@ -115,7 +115,7 @@ export const testimonialCopy = {
     role: "Logistics, Bartica Road",
     quote:
       "From quotes to delivery receipts, we keep jobs moving and the books clean. Even fuel and tolls reconcile faster. Less spreadsheet chaos, more on-time runs—and reporting that actually mirrors the work.",
-    teaser: "Quotes + delivery receipts + VAT—jobs flow into the books.",
+    teaser: "Quotes → delivery receipts → VAT—jobs flow into the books.",
     storyId: "story_logistics_devon_bartica",
     since: "Since 2023",
   },
@@ -160,4 +160,5 @@ export const bannerCopy = {
 export type HeroKey = keyof typeof heroCopy;
 export type TestimonialKey = keyof typeof testimonialCopy;
 export type BannerKey = keyof typeof bannerCopy;
+
 

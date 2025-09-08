@@ -1,7 +1,7 @@
 import ContactClient from "./ContactClient";
 
 export const metadata = {
-  title: "Contact — heroBooks",
+  title: "Contact - heroBooks",
   description:
     "Contact heroBooks for sales, support, partnerships, press, billing, or general inquiries.",
 };

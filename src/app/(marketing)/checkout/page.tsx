@@ -104,7 +104,7 @@ function CheckoutContent() {
         {/* Summary */}
         <div className="rounded-xl border p-4 bg-card text-sm">
           <div className="flex items-center justify-between"><span>Subtotal</span><span>{formatGYD(base)}</span></div>
-          <div className="flex items-center justify-between"><span>Discount</span><span>− {formatGYD(discount)}</span></div>
+          <div className="flex items-center justify-between"><span>Discount</span><span>- {formatGYD(discount)}</span></div>
           <div className="mt-2 border-t pt-2 flex items-center justify-between font-medium">
             <span>Total due today</span><span>{formatGYD(final)}</span>
           </div>
@@ -125,3 +125,4 @@ export default function CheckoutPage() {
     </Suspense>
   );
 }
+

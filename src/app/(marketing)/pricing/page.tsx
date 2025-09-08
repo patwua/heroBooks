@@ -7,7 +7,7 @@ function Row({ children }: { children: React.ReactNode }) {
   return <li className="flex items-center gap-2 text-sm"><Check className="h-4 w-4 text-primary" />{children}</li>;
 }
 
-export const metadata = { title: "Pricing — heroBooks" };
+export const metadata = { title: "Pricing - heroBooks" };
 
 export default async function PricingPage({
   searchParams,
@@ -116,3 +116,4 @@ export default async function PricingPage({
     </section>
   );
 }
+

@@ -2,12 +2,13 @@
 const aboutCopy = {
   hero: {
     title: "About heroBooks",
-    subtitle: "Simple, local-first accounting — built in Guyana, ready for the Caribbean.",
+    subtitle: "Simple, local-first accounting—built in Guyana, ready for the Caribbean.",
   },
   mission: {
     tag: "Our Mission",
     headline: "Make bookkeeping effortless for local businesses",
-    body: "We’re building modern accounting that understands VAT, PAYE, NIS, and the realities of running a small business in Guyana — with an eye toward the broader Caribbean.",
+    body:
+      "We’re building modern accounting that understands VAT, PAYE, NIS, and the realities of running a small business in Guyana—with an eye toward the broader Caribbean.",
     bullets: [
       "VAT-ready invoicing and clean, local reports",
       "Double-entry ledger without the drama",
@@ -22,14 +23,14 @@ const aboutCopy = {
     title: "Who We Are",
     paragraphs: [
       "heroBooks is a small, hands-on team of accountants, engineers, and operators from the region.",
-      "We’re obsessed with clarity, compliance, and speed — so you can spend less time on books and more time on the business.",
+      "We’re obsessed with clarity, compliance, and speed—so you can spend less time on books and more time on the business.",
     ],
   },
   values: {
     title: "Our Values",
     subtitle: "Clarity. Local expertise. Reliability.",
     items: [
-      { t: "Clarity", d: "Interfaces that make sense — and reports you can actually use." },
+      { t: "Clarity", d: "Interfaces that make sense—and reports you can actually use." },
       { t: "Local Expertise", d: "Built for Guyana’s VAT, PAYE, NIS, and statutory filings, and adaptable for the wider Caribbean." },
       { t: "Reliability", d: "Your books shouldn’t break. Neither should our promises." },
     ],
@@ -66,7 +67,7 @@ const aboutCopy = {
     bullets: [
       { label: "Data Security", text: "Least-privilege access, encrypted in transit and at rest." },
       { label: "Accuracy", text: "Double-entry core with rigorous tests." },
-      { label: "Support", text: "Humans in the loop — real help when you need it." },
+      { label: "Support", text: "Humans in the loop—real help when you need it." },
     ],
     factCheck: {
       title: "Change Management",
@@ -74,12 +75,12 @@ const aboutCopy = {
         "Specs & acceptance criteria scoped with customers",
         "Peer review & automated tests",
         "Staged rollout and monitoring",
-        "Docs & in‑product guidance",
+        "Docs & in-product guidance",
       ],
     },
     corrections: {
       title: "If we miss, we fix",
-      text: "Bugs happen — we’ll acknowledge, fix, and document material issues.",
+      text: "Bugs happen—we’ll acknowledge, fix, and document material issues.",
       linkText: "Report an issue",
     },
   },

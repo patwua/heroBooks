@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import DemoEnterButton from "@/components/marketing/DemoEnterButton";
 import TrackLink from "@/components/marketing/TrackLink";
 
-export const metadata = { title: "Get Started — heroBooks" };
+export const metadata = { title: "Get Started - heroBooks" };
 
 export default function GetStartedPage() {
   return (
@@ -39,3 +39,4 @@ export default function GetStartedPage() {
     </section>
   );
 }
+

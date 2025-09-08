@@ -1,4 +1,10 @@
-export type ContactFieldset = { name: string; label: string; type: "text" | "textarea"; required?: boolean };
+export type ContactFieldset = {
+  name: string;
+  label: string;
+  type: "text" | "textarea";
+  required?: boolean;
+};
+
 export interface ContactSubject {
   hero: { title: string; subtitle: string };
   guidance: string[];
@@ -79,9 +85,7 @@ export const contactCopy = {
     guidance: [],
     success: { detail: "Thanks — message received." },
     meta: { privacyShort: "We only use your info to reply." },
-    fieldsets: [
-      { name: "message", label: "Message", type: "textarea", required: true },
-    ],
+    fieldsets: [{ name: "message", label: "Message", type: "textarea", required: true }],
   },
 } as const;
 

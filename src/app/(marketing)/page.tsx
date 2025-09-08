@@ -47,11 +47,11 @@ export default async function HomePage() {
           <h2 className="text-2xl font-bold">Built for compliance and speed</h2>
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-5">
             {[
-              { title: "VAT compliance", desc: "Automatic VAT‑14 and zero‑rated support.", href: "/features#vat" },
+              { title: "VAT compliance", desc: "Automatic VAT-14 and zero-rated support.", href: "/features#vat" },
               { title: "PAYE & NIS", desc: "Payroll that stays in step with GRA rules.", href: "/features#payroll" },
-              { title: "Real‑time reports", desc: "Know your numbers the instant they change.", href: "/features#reports" },
+              { title: "Real-time reports", desc: "Know your numbers the instant they change.", href: "/features#reports" },
               { title: "Bank reconciliation", desc: "Match transactions in minutes, not hours.", href: "/features#banking" },
-              { title: "Multi‑currency", desc: "Invoice and track in USD, GYD, and more.", href: "/features#multicurrency" },
+              { title: "Multi-currency", desc: "Invoice and track in USD, GYD, and more.", href: "/features#multicurrency" },
             ].map((f) => (
               <Link key={f.title} href={f.href} className="rounded-2xl border p-6 hover:bg-muted block">
                 <h3 className="font-semibold">{f.title}</h3>

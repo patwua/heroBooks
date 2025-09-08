@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const metadata = { title: "Help & FAQ — heroBooks" };
+export const metadata = { title: "Help & FAQ - heroBooks" };
 
 export default function HelpPage() {
   return (
@@ -8,7 +8,7 @@ export default function HelpPage() {
       <header className="mb-10">
         <h1 className="text-3xl font-bold">Help & FAQ</h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          A single place for getting started, understanding Guyana‑specific taxes, and using heroBooks effectively as we scale across the Caribbean.
+          A single place for getting started, understanding Guyana-specific taxes, and using heroBooks effectively as we scale across the Caribbean.
         </p>
       </header>
 
@@ -16,9 +16,9 @@ export default function HelpPage() {
       <section className="border rounded-2xl p-6">
         <h2 className="text-xl font-semibold">Getting Started with heroBooks</h2>
         <ul className="mt-3 list-disc space-y-2 pl-6 text-sm text-muted-foreground">
-          <li>heroBooks is built for individuals and SMEs in Guyana with VAT, payroll and reporting built‑in, and we&rsquo;re scaling across the Caribbean.</li>
-          <li>Create an account, set your business profile, then invite your team with role‑based permissions.</li>
-          <li>Start with invoicing and expenses; connect payroll later — the system calculates PAYE & NIS automatically.</li>
+          <li>heroBooks is built for individuals and SMEs in Guyana with VAT, payroll and reporting built-in, and we’re scaling across the Caribbean.</li>
+          <li>Create an account, set your business profile, then invite your team with role-based permissions.</li>
+          <li>Start with invoicing and expenses; connect payroll later—the system calculates PAYE & NIS automatically.</li>
         </ul>
       </section>
 
@@ -30,10 +30,10 @@ export default function HelpPage() {
             <span className="font-medium text-foreground">Dashboard</span>: KPIs, cash flow, upcoming obligations.
           </li>
           <li>
-            <span className="font-medium text-foreground">Transactions</span>: import statements, auto‑categorize expenses.
+            <span className="font-medium text-foreground">Transactions</span>: import statements, auto-categorize expenses.
           </li>
           <li>
-            <span className="font-medium text-foreground">Invoicing</span>: send VAT‑ready invoices and track overdue balances.
+            <span className="font-medium text-foreground">Invoicing</span>: send VAT-ready invoices and track overdue balances.
           </li>
           <li>
             <span className="font-medium text-foreground">Payroll</span>: salaries, PAYE and NIS with statutory caps.
@@ -48,13 +48,13 @@ export default function HelpPage() {
           <div>
             <h3 className="font-medium text-foreground">PAYE (2025 rules)</h3>
             <p>
-              First G$3.12M at 25%, remainder at 35%; tax‑free threshold ~G$130k/month. Personal deduction is the
-              greater of G$1.56M or one‑third of chargeable income. Child allowance up to G$10k/month per child.
+              First G$3.12M at 25%, remainder at 35%; tax-free threshold ~G$130k/month. Personal deduction is the
+              greater of G$1.56M or one-third of chargeable income. Child allowance up to G$10k/month per child.
             </p>
           </div>
           <div>
             <h3 className="font-medium text-foreground">NIS Contributions</h3>
-            <p>Employee 5.6% and Employer 8.4% with a monthly earnings cap; self‑employed 12.5%.</p>
+            <p>Employee 5.6% and Employer 8.4% with a monthly earnings cap; self-employed 12.5%.</p>
           </div>
           <div>
             <h3 className="font-medium text-foreground">VAT & Other Taxes</h3>
@@ -66,7 +66,7 @@ export default function HelpPage() {
           <div>
             <h3 className="font-medium text-foreground">Corporate Tax</h3>
             <p>
-              Non‑commercial 25%; commercial 40%; some sectors higher. Withholding typically 20% to non‑residents
+              Non-commercial 25%; commercial 40%; some sectors higher. Withholding typically 20% to non-residents
               (treaties/exceptions may apply).
             </p>
           </div>
@@ -74,7 +74,7 @@ export default function HelpPage() {
             <h3 className="font-medium text-foreground">Chart of Accounts Tips</h3>
             <p>
               Use simple numbering (1000 assets, 2000 liabilities, 3000 equity, 4000 income, 5000+ expenses). Add
-              sub‑accounts only when needed.
+              sub-accounts only when needed.
             </p>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function HelpPage() {
         <ul className="mt-3 list-disc space-y-2 pl-6 text-sm text-muted-foreground">
           <li>Set reminders for filings and payments; let AI summarize monthly VAT/PAYE.</li>
           <li>Upload documents for OCR and data extraction; always review before filing.</li>
-          <li>AI is assistive — consult a professional for complex or edge‑case scenarios.</li>
+          <li>AI is assistive—consult a professional for complex or edge-case scenarios.</li>
         </ul>
       </section>
 
@@ -101,7 +101,7 @@ export default function HelpPage() {
             },
             {
               q: "What deductions can I claim?",
-              a: "Greater of G$1.56M or one‑third of chargeable income; child allowance up to G$10k/month per child.",
+              a: "Greater of G$1.56M or one-third of chargeable income; child allowance up to G$10k/month per child.",
             },
             {
               q: "Do I need to register for VAT?",
@@ -113,27 +113,18 @@ export default function HelpPage() {
             },
             {
               q: "Capital gains on selling a house?",
-              a: "Generally 20% — exemptions may apply based on holding period/thresholds.",
+              a: "Generally 20%—exemptions may apply based on holding period/thresholds.",
             },
             {
               q: "Corporate tax rates?",
-              a: "Non‑commercial 25%; commercial 40%; some sectors higher.",
+              a: "Non-commercial 25%; commercial 40%; some sectors higher.",
             },
-          ].map((item) => (
-            <details key={item.q} className="group rounded-2xl border p-4">
-              <summary className="cursor-pointer list-none font-medium">{item.q}</summary>
-              <p className="mt-2 text-sm text-muted-foreground">{item.a}</p>
+          ].map((f, i) => (
+            <details key={i} className="rounded-xl border p-4">
+              <summary className="cursor-pointer text-foreground">{f.q}</summary>
+              <p className="mt-2 text-sm text-muted-foreground">{f.a}</p>
             </details>
           ))}
-        </div>
-        <p className="mt-6 text-xs text-muted-foreground">
-          This page is general guidance only and may not reflect the latest changes. Always confirm with the GRA or a qualified
-          professional.
-        </p>
-        <div className="mt-6">
-          <Link href="/contact" className="text-sm font-medium text-emerald-700 hover:underline">
-            Still need help? Contact us →
-          </Link>
         </div>
       </section>
     </div>
