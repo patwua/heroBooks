@@ -24,39 +24,17 @@ export default function FAQSection() {
       q: "Does payroll include PAYE and NIS?",
       a: "Yes—enable payroll basics, set thresholds, and we calculate PAYE/NIS on each run.",
     },
-    {
-      q: "What reports are included?",
-      a: "Profit & Loss, Balance Sheet, Sales & Purchases, VAT summary, and more depending on plan.",
-    },
-    {
-      q: "Can I switch plans later?",
-      a: "Anytime. Your data stays intact when upgrading or downgrading.",
-    },
-    {
-      q: "How does the demo work?",
-      a: "Explore with sample data. You can reset or switch to your live org when ready.",
-    },
-    {
-      q: "Do you have an API?",
-      a: "Yes—Pro includes an API to plug into dealer or service workflows.",
-    },
-    {
-      q: "Is my data secure?",
-      a: "We use modern encryption, role-based access, and audit logging. See our Security page.",
-    },
-    {
-      q: "How do I get support?",
-      a: "Use the in-app Assistance Sidebar, email support, or request a callback for Pro.",
-    },
   ];
   return (
     <section id="faq" className="border-t">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <h2 className="text-2xl font-bold">Frequently asked questions</h2>
-        <div className="mt-6 space-y-4">
+        <div className="mt-6 space-y-3">
           {faqs.map((item) => (
-            <details key={item.q} className="group rounded-2xl border p-4">
-              <summary className="cursor-pointer list-none font-medium">{item.q}</summary>
+            <details key={item.q} className="group rounded-2xl border p-3">
+              <summary className="cursor-pointer list-none font-medium">
+                {item.q}
+              </summary>
               <p className="mt-2 text-sm text-muted-foreground">{item.a}</p>
             </details>
           ))}

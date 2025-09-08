@@ -4,6 +4,7 @@ import SectionCard from "@/components/UX/SectionCard";
 import Page from "@/components/UX/Page";
 import { asCssVars } from "@/lib/brand-tokens";
 import aboutCopy from "@/lib/copy/about-herobooks";
+import { Button } from "@/components/ui/button";
 
 export const metadata = {
   title: "About Us — heroBooks",
@@ -26,9 +27,13 @@ export default function AboutPage() {
           </ul>
           <div className="mt-4 flex flex-wrap gap-2">
             {mission.ctas.map((c) => (
-              <Link key={c.href} href={c.href} className={c.type === "primary" ? "rounded-xl bg-[var(--brand)] px-4 py-2 font-semibold text-white" : "rounded-xl border border-[var(--brand-light)] bg-[var(--brand-lighter)] px-4 py-2 font-semibold text-[var(--brand)]"}>
-                {c.label}
-              </Link>
+              <Button
+                key={c.href}
+                asChild
+                variant={c.type === "primary" ? "default" : "outline"}
+              >
+                <Link href={c.href}>{c.label}</Link>
+              </Button>
             ))}
           </div>
         </SectionCard>
@@ -67,7 +72,9 @@ export default function AboutPage() {
             ))}
           </div>
           <div className="mt-4 text-center">
-            <Link href="/contact?subject=press" className="inline-block rounded-xl bg-black px-4 py-2 font-semibold text-white">→ {leadershipHighlights.cta}</Link>
+            <Button asChild>
+              <Link href="/contact?subject=press">→ {leadershipHighlights.cta}</Link>
+            </Button>
           </div>
         </SectionCard>
 
@@ -87,7 +94,9 @@ export default function AboutPage() {
             <h3 className="mt-4 text-lg font-semibold">{standards.corrections.title}</h3>
             <p className="text-[15px] text-slate-700">{standards.corrections.text}</p>
             <div className="mt-3">
-              <Link href="/contact?subject=support" className="rounded-xl border border-[var(--brand-light)] bg-[var(--brand-lighter)] px-3 py-2 text-sm font-semibold text-[var(--brand)]">{standards.corrections.linkText}</Link>
+              <Button asChild variant="outline" size="sm">
+                <Link href="/contact?subject=support">{standards.corrections.linkText}</Link>
+              </Button>
             </div>
           </SectionCard>
           <SectionCard id="about-reach-us">
@@ -96,7 +105,9 @@ export default function AboutPage() {
             <ul className="mt-4 space-y-4">
               {reachUs.contacts.map((c) => (
                 <li key={c.token} className="list-none">
-                  <Link href={`/contact?subject=${c.token}`} className="rounded-xl bg-black px-4 py-2 text-sm font-semibold text-white">{c.label}</Link>
+                  <Button asChild size="sm">
+                    <Link href={`/contact?subject=${c.token}`}>{c.label}</Link>
+                  </Button>
                   <p className="mt-1 text-sm text-slate-600">{c.desc}</p>
                 </li>
               ))}
@@ -105,7 +116,6 @@ export default function AboutPage() {
           </SectionCard>
         </div>
       </Page>
-      <footer className="px-4 pb-8 text-center text-slate-500">© {new Date().getFullYear()} heroBooks — All rights reserved.</footer>
     </div>
   );
 }

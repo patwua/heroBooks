@@ -10,11 +10,11 @@ export default function Footer({ authenticated = false }: FooterProps) {
     ? ({ target: "_blank", rel: "noopener noreferrer" } as const)
     : {};
   return (
-    <footer className="border-t bg-background text-sm">
+    <footer className="border-t bg-foreground text-background text-sm">
       <div className="container mx-auto grid gap-8 px-4 py-10 sm:grid-cols-5">
         <div>
           <div className="mb-2 font-semibold">Product</div>
-          <ul className="space-y-1 text-muted-foreground">
+          <ul className="space-y-1 text-background/70">
             <li>
               <Link href="/#features" {...linkProps} className="hover:underline">
                 Features
@@ -48,7 +48,7 @@ export default function Footer({ authenticated = false }: FooterProps) {
         </div>
         <div>
           <div className="mb-2 font-semibold">Company</div>
-          <ul className="space-y-1 text-muted-foreground">
+          <ul className="space-y-1 text-background/70">
             <li>
               <Link href="/about" {...linkProps} className="hover:underline">
                 About
@@ -73,7 +73,7 @@ export default function Footer({ authenticated = false }: FooterProps) {
         </div>
         <div>
           <div className="mb-2 font-semibold">Resources</div>
-          <ul className="space-y-1 text-muted-foreground">
+          <ul className="space-y-1 text-background/70">
             <li>
               <Link href="/docs" {...linkProps} className="hover:underline">
                 Docs/Guides
@@ -98,7 +98,7 @@ export default function Footer({ authenticated = false }: FooterProps) {
         </div>
         <div>
           <div className="mb-2 font-semibold">Legal</div>
-          <ul className="space-y-1 text-muted-foreground">
+          <ul className="space-y-1 text-background/70">
             <li>
               <Link
                 href="/legal/privacy"
@@ -139,7 +139,7 @@ export default function Footer({ authenticated = false }: FooterProps) {
         </div>
         <div>
           <div className="mb-2 font-semibold">Contact</div>
-          <ul className="space-y-1 text-muted-foreground">
+          <ul className="space-y-1 text-background/70">
             <li>
               <a href="mailto:support@herobooks.gy" className="hover:underline">
                 support@herobooks.gy
@@ -149,7 +149,7 @@ export default function Footer({ authenticated = false }: FooterProps) {
           </ul>
         </div>
       </div>
-      <div className="border-t py-4 text-center text-xs text-muted-foreground">
+      <div className="border-t border-background/20 py-4 text-center text-xs text-background/70">
         © {year} heroBooks. Built for businesses in Guyana.
       </div>
     </footer>
