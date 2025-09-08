@@ -2,11 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useSession } from "next-auth/react";
 import { Button } from "@/components/ui/button";
-import SearchExpand from "@/components/SearchExpand";
-import NotificationsBell from "@/components/topbar/NotificationsBell";
-import UserMenu from "@/components/topbar/UserMenu";
 
 const nav = [
   { href: "/features", label: "Features" },
@@ -17,15 +13,21 @@ const nav = [
 
 export default function MarketingHeader() {
   const pathname = usePathname();
-  const { data: session } = useSession();
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/70 backdrop-blur">
-      <div className="container mx-auto h-14 px-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <Image src="/logos/heroBooks mini Color.png" alt="heroBooks" width={24} height={24} />
-          <span className="font-semibold tracking-tight">heroBooks</span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-6 text-sm">
+      <div className="container mx-auto flex h-14 items-center">
+        <div className="flex flex-1 items-center">
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/logos/heroBooks mini Color.png"
+              alt="heroBooks"
+              width={24}
+              height={24}
+            />
+            <span className="font-semibold tracking-tight">heroBooks</span>
+          </Link>
+        </div>
+        <nav className="hidden flex-1 items-center justify-center gap-6 text-sm md:flex">
           {nav.map((n) => (
             <Link
               key={n.href}
@@ -40,31 +42,22 @@ export default function MarketingHeader() {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-2">
-          {!session ? (
-            <>
-              <Link
-                href="/sign-in"
-                className="text-sm px-3 py-1.5 rounded-md hover:bg-muted"
-              >
-                Sign in
-              </Link>
-              <Button asChild>
-                <Link href="/pricing#starter">Start free trial</Link>
-              </Button>
-            </>
-          ) : (
-            <>
-              <SearchExpand />
-              <NotificationsBell />
-              <UserMenu />
-            </>
-          )}
+        <div className="flex flex-1 items-center justify-end gap-2">
+          <Link
+            href="/sign-in"
+            className="rounded-md px-3 py-1.5 text-sm hover:bg-muted"
+          >
+            Sign in
+          </Link>
+          <Button asChild>
+            <Link href="/pricing#starter">Start free trial</Link>
+          </Button>
         </div>
       </div>
-      <div className="w-full bg-primary/10 border-t">
-        <div className="container mx-auto px-4 py-2 text-xs sm:text-sm text-center">
-          🎉 Early adopters: 2 months <b>50% off</b> on Business plan. Use code <b>GYA-LAUNCH</b>.
+      <div className="w-full border-t bg-primary/10">
+        <div className="container mx-auto px-4 py-2 text-center text-xs sm:text-sm">
+          🎉 Early adopters: 2 months <b>50% off</b> on Business plan. Use code
+          <b> GYA-LAUNCH</b>.
         </div>
       </div>
     </header>
