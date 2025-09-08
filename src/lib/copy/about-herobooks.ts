@@ -42,19 +42,19 @@ const aboutCopy = {
       {
         name: "A. Founder",
         title: "CEO",
-        photo: "/brand/leadership/founder.jpg", // upload manually
+        photo: "/leadership/founder.webp",
         bio: "Sets product direction and keeps us focused on real customer outcomes.",
       },
       {
         name: "B. Engineer",
         title: "CTO",
-        photo: "/brand/leadership/cto.jpg", // upload manually
+        photo: "/leadership/cto.webp",
         bio: "Builds our platform for speed, reliability, and security.",
       },
       {
         name: "C. Finance",
         title: "Head of Finance & Ops",
-        photo: "/brand/leadership/finance.jpg", // upload manually
+        photo: "/leadership/finance.webp",
         bio: "Brings deep accounting discipline to every feature and report.",
       },
     ],

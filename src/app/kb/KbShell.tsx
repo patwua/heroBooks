@@ -49,7 +49,7 @@ export default function KbShell({
             ←
           </Link>
           <Link href="/">
-            <Image src="/logo.svg" alt="heroBooks" width={100} height={24} />
+            <Image src="/logos/logo.svg" alt="heroBooks" width={100} height={24} />
           </Link>
         </div>
         <input

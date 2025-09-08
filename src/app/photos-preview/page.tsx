@@ -5,12 +5,12 @@ import { auth } from "@/lib/auth";
 import { notFound } from "next/navigation";
 
 function listImages(sub: string) {
-  const dir = path.join(process.cwd(), "public/photos", sub);
+  const dir = path.join(process.cwd(), "public", sub);
   if (!fs.existsSync(dir)) return [] as string[];
   return fs
     .readdirSync(dir)
     .filter((f) => f.endsWith(".webp"))
-    .map((f) => `/photos/${sub}/${f}`);
+    .map((f) => `/${sub}/${f}`);
 }
 
 export default async function PhotosPreviewPage() {

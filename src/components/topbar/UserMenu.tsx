@@ -22,7 +22,7 @@ export default function UserMenu() {
         aria-label="Account & organizations"
       >
         <Avatar className="h-8 w-8">
-          <AvatarImage src="/avatars/default.png" alt="User" />
+          <AvatarImage src="/avatar/default.webp" alt="User" />
           <AvatarFallback>HB</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>

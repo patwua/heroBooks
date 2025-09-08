@@ -66,7 +66,7 @@ export default async function HomePage() {
         <section className="border-b">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <MediaBullets
-            mediaSrc="/feature-demo.webp"
+            mediaSrc="/landing/feature-demo-1600x1000.webp"
             bullets={[
               "Fast onboarding with guided setup.",
               "Intuitive dashboard for quick insights.",

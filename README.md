@@ -40,3 +40,37 @@ Brand assets in place (logo + favicon)
 - Cron or manual trigger: `POST /api/admin/email-ingest/run` with header `x-ingest-secret: <EMAIL_INGEST_SECRET>` connects via IMAP and processes unseen messages.
 - Webhook: `POST /api/email/inbound` with the same `x-ingest-secret` and JSON payload `{from,to,subject,text,attachments:[{filename,contentType,contentBase64}]}`.
 - Both paths parse PDF attachments, create draft bills, and log results in `EmailIngestLog`.
+
+## Image Pipeline (marketing images)
+
+Script: `hb_image_pipeline.py` (Pillow-based)
+
+Common examples (PowerShell):
+
+1) Landing images (fit inside 1024x640, batch)
+
+   python .\hb_image_pipeline.py --src "C:\heroBooks\heroBooks\public\landing\*.webp" --dst "C:\heroBooks\heroBooks\public\landing" --preset landing --quality 85
+
+   Notes: `--preset landing` sets size=1024x640 and mode=fit. Files are written as `<name>-1024x640.webp` in `--dst` unless `--inplace` is used.
+
+2) Avatars / leadership (square 512x512, crop, in-place)
+
+   python .\hb_image_pipeline.py --src "C:\heroBooks\heroBooks\public\leadership\*.webp" --dst "C:\heroBooks\heroBooks\public\leadership" --preset avatar --inplace --quality 85
+
+   Notes: `--preset avatar` sets size=512x512 and mode=crop. `--inplace` keeps original filenames.
+
+3) Add branding (optional logo)
+
+   python .\hb_image_pipeline.py --src "C:\path\to\image.webp" --dst "C:\out\dir" --size 1024x640 --mode crop --logo "C:\heroBooks\heroBooks\public\logos\heroBooks mini Color.png" --logo-placement bottom-left --logo-scale 15 --logo-opacity 100 --quality 85
+
+Flags:
+- `--src`: file(s) or glob(s)
+- `--dst`: output file or directory
+- `--size` WIDTHxHEIGHT (or use `--preset`)
+- `--mode`: `crop` (cover + center-crop) or `fit` (contain + transparent padding)
+- `--inplace`: keep original filenames (writes into `--dst` directory if provided)
+- `--logo`: optional overlay (PNG recommended)
+- `--logo-placement`: bottom-right | bottom-left | top-right | top-left | center
+- `--logo-scale`: percent of output width (default 15)
+- `--logo-opacity`: 0–100 (default 100)
+- `--quality`: output quality for WebP/JPEG (default 85)

@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "heroBooks — Modern Accounting for Guyana",
   description: "Guyana-ready accounting with VAT, WHT, and clean APIs.",
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: "/logos/favicon.svg" },
   metadataBase: new URL("https://herobooks.net"),
 };
 

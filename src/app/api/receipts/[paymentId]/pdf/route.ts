@@ -31,7 +31,7 @@ export async function GET(
   }
   let logo: Buffer | undefined;
   try {
-    logo = fs.readFileSync(path.join(process.cwd(), "public", "logo.svg"));
+    logo = fs.readFileSync(path.join(process.cwd(), "public", "logos", "logo.svg"));
   } catch {}
   const pdf = await receiptPdf(
     {
