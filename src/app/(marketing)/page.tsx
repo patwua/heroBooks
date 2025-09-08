@@ -4,6 +4,7 @@ import TestimonialsSection from "@/components/marketing/TestimonialsSection";
 import PricingSection from "@/components/marketing/PricingSection";
 import FAQSection from "@/components/marketing/FAQSection";
 import MediaBullets from "@/components/marketing/MediaBullets";
+import FeatureHighlight from "@/components/marketing/FeatureHighlight";
 import { chooseNOnce } from "@/lib/randomize";
 import { heroCopy, HeroKey } from "@/lib/copy/imageCopy";
 import { heroImages } from "@/lib/images";
@@ -37,6 +38,8 @@ export default async function HomePage() {
           />
         </div>
       </section>
+
+      <FeatureHighlight />
 
       {/* FEATURES */}
       <section id="features" className="border-b">
