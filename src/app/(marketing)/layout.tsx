@@ -1,4 +1,4 @@
-import "../globals.css";
+import "../global.css";
 import MarketingHeader from "@/components/marketing/MarketingHeader";
 import Footer from "@/components/Footer";
 import FloatingTrialCTA from "@/components/marketing/FloatingTrialCTA";
