@@ -1,27 +1,24 @@
-import { cn } from "@/lib/utils";
+import Image from "next/image"
 
-export default function FeatureCard({
-  title,
-  desc,
-  icon,
-  className,
-}: {
-  title: string;
-  desc: string;
-  icon: React.ReactNode;
-  className?: string;
-}) {
+export function FeatureCard(props: { title: string; body: string; img: string }) {
   return (
-    <div className={cn("rounded-xl border bg-card p-5", className)}>
-      <div className="flex items-start gap-3">
-        <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-          {icon}
-        </div>
-        <div>
-          <div className="font-semibold">{title}</div>
-          <div className="text-sm text-muted-foreground mt-1">{desc}</div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="order-2 md:order-1">
+        <h3 className="text-2xl font-semibold">{props.title}</h3>
+        <p className="mt-2 text-muted-foreground">{props.body}</p>
+      </div>
+      <div className="order-1 md:order-2">
+        <div className="w-full max-w-sm">
+          <Image
+            src={props.img}
+            alt={props.title}
+            width={800}
+            height={800}
+            className="rounded-2xl aspect-square object-cover"
+            priority={false}
+          />
         </div>
       </div>
     </div>
-  );
+  )
 }

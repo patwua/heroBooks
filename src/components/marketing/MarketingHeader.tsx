@@ -1,65 +1,41 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button";
+import Link from "next/link"
+import Image from "next/image"
 
-const nav = [
-  { href: "/features", label: "Features" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/#why-local", label: "Why Local" },
-  { href: "/contact", label: "Contact" },
-];
+// Simple env-based promo flag; default off
+const PROMO_ENABLED = process.env.MARKETING_PROMO === "true"
 
 export default function MarketingHeader() {
-  const pathname = usePathname();
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/70 backdrop-blur">
-      <div className="container mx-auto flex h-14 items-center">
-        <div className="flex flex-1 items-center">
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/logos/heroBooks mini Color.png"
-              alt="heroBooks"
-              width={24}
-              height={24}
-            />
-            <span className="font-semibold tracking-tight">heroBooks</span>
-          </Link>
+    <header className="w-full">
+      {PROMO_ENABLED && (
+        <div className="bg-blue-600/95 text-white text-center py-2 text-sm">
+          Early adopters: 2 months 50% off on Business plan. Use code <span className="font-semibold">GYA-LAUNCH</span>.
         </div>
-        <nav className="hidden flex-1 items-center justify-center gap-6 text-sm md:flex">
-          {nav.map((n) => (
-            <Link
-              key={n.href}
-              href={n.href}
-              className={
-                pathname === n.href
-                  ? "text-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              }
-            >
-              {n.label}
-            </Link>
-          ))}
+      )}
+      <div className="mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/logos/logo.svg"
+            alt="heroBooks"
+            width={140}
+            height={44}
+            priority
+            className="h-11 w-auto"
+          />
+        </Link>
+        <nav className="hidden md:flex items-center gap-6 text-sm">
+          <Link href="/features">Features</Link>
+          <Link href="/pricing">Pricing</Link>
+          <Link href="/about">Why Local</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
-        <div className="flex flex-1 items-center justify-end gap-2">
-          <Link
-            href="/sign-in"
-            className="rounded-md px-3 py-1.5 text-sm hover:bg-muted"
-          >
-            Sign in
+        <div className="flex items-center gap-3">
+          <Link href="/sign-in" className="text-sm">Sign in</Link>
+          <Link href="/get-started" className="inline-flex items-center rounded-xl bg-blue-600 px-4 py-2 text-white text-sm hover:bg-blue-700">
+            Start free trial
           </Link>
-          <Button asChild>
-            <Link href="/pricing#starter">Start free trial</Link>
-          </Button>
-        </div>
-      </div>
-      <div className="w-full border-t bg-primary/10">
-        <div className="container mx-auto px-4 py-2 text-center text-xs sm:text-sm">
-          🎉 Early adopters: 2 months <b>50% off</b> on Business plan. Use code
-          <b> GYA-LAUNCH</b>.
         </div>
       </div>
     </header>
-  );
+  )
 }

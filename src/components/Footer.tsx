@@ -10,147 +10,152 @@ export default function Footer({ authenticated = false }: FooterProps) {
     ? ({ target: "_blank", rel: "noopener noreferrer" } as const)
     : {};
   return (
-    <footer className="border-t bg-foreground text-background text-sm">
-      <div className="container mx-auto grid gap-8 px-4 py-10 sm:grid-cols-5">
-        <div>
-          <div className="mb-2 font-semibold">Product</div>
-          <ul className="space-y-1 text-background/70">
-            <li>
-              <Link href="/#features" {...linkProps} className="hover:underline">
-                Features
-              </Link>
-            </li>
-            <li>
-              <Link href="/pricing" {...linkProps} className="hover:underline">
-                Pricing
-              </Link>
-            </li>
-            <li>
-              <Link href="/demo" {...linkProps} className="hover:underline">
-                Demo
-              </Link>
-            </li>
-            <li>
-              <Link href="/changelog" {...linkProps} className="hover:underline">
-                Changelog
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://status.herobooks.gy"
-                {...linkProps}
-                className="hover:underline"
-              >
-                Status
-              </Link>
-            </li>
-          </ul>
+    <footer className="bg-neutral-900 text-neutral-100">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 text-sm">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div>
+            <div className="mb-2 font-semibold">Product</div>
+            <ul className="space-y-1 text-neutral-300">
+              <li>
+                <Link href="/#features" {...linkProps} className="hover:underline">
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" {...linkProps} className="hover:underline">
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/demo" {...linkProps} className="hover:underline">
+                  Demo
+                </Link>
+              </li>
+              <li>
+                <Link href="/changelog" {...linkProps} className="hover:underline">
+                  Changelog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://status.herobooks.gy"
+                  {...linkProps}
+                  className="hover:underline"
+                >
+                  Status
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div className="mb-2 font-semibold">Company</div>
+            <ul className="space-y-1 text-neutral-300">
+              <li>
+                <Link href="/about" {...linkProps} className="hover:underline">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/leadership" {...linkProps} className="hover:underline">
+                  Leadership
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" {...linkProps} className="hover:underline">
+                  Careers (coming soon)
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" {...linkProps} className="hover:underline">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div className="mb-2 font-semibold">Resources</div>
+            <ul className="space-y-1 text-neutral-300">
+              <li>
+                <Link href="/docs" {...linkProps} className="hover:underline">
+                  Docs/Guides
+                </Link>
+              </li>
+              <li>
+                <Link href="/help" {...linkProps} className="hover:underline">
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link href="/news" {...linkProps} className="hover:underline">
+                  News (WaterNewsGY)
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" {...linkProps} className="hover:underline">
+                  Blog (Patwua)
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div className="mb-2 font-semibold">Legal</div>
+            <ul className="space-y-1 text-neutral-300">
+              <li>
+                <Link
+                  href="/legal/privacy"
+                  {...linkProps}
+                  className="hover:underline"
+                >
+                  Privacy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/legal/terms"
+                  {...linkProps}
+                  className="hover:underline"
+                >
+                  Terms
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/legal/data-processing"
+                  {...linkProps}
+                  className="hover:underline"
+                >
+                  Data Processing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/legal/cookies"
+                  {...linkProps}
+                  className="hover:underline"
+                >
+                  Cookies
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div className="mb-2 font-semibold">Contact</div>
+            <ul className="space-y-1 text-neutral-300">
+              <li>
+                <a href="mailto:support@herobooks.gy" className="hover:underline">
+                  support@herobooks.gy
+                </a>
+              </li>
+              <li>Georgetown, Guyana</li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <div className="mb-2 font-semibold">Company</div>
-          <ul className="space-y-1 text-background/70">
-            <li>
-              <Link href="/about" {...linkProps} className="hover:underline">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/leadership" {...linkProps} className="hover:underline">
-                Leadership
-              </Link>
-            </li>
-            <li>
-              <Link href="/careers" {...linkProps} className="hover:underline">
-                Careers (coming soon)
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" {...linkProps} className="hover:underline">
-                Contact
-              </Link>
-            </li>
-          </ul>
+        <div className="mt-10 border-t border-white/10 pt-6 flex items-center justify-between">
+          <p className="text-neutral-300">© {year} heroBooks. Built for businesses in Guyana.</p>
+          <a href="mailto:support@herobooks.gy" className="hover:underline">
+            support@herobooks.gy
+          </a>
         </div>
-        <div>
-          <div className="mb-2 font-semibold">Resources</div>
-          <ul className="space-y-1 text-background/70">
-            <li>
-              <Link href="/docs" {...linkProps} className="hover:underline">
-                Docs/Guides
-              </Link>
-            </li>
-            <li>
-              <Link href="/help" {...linkProps} className="hover:underline">
-                Help Center
-              </Link>
-            </li>
-            <li>
-              <Link href="/news" {...linkProps} className="hover:underline">
-                News (WaterNewsGY)
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog" {...linkProps} className="hover:underline">
-                Blog (Patwua)
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <div className="mb-2 font-semibold">Legal</div>
-          <ul className="space-y-1 text-background/70">
-            <li>
-              <Link
-                href="/legal/privacy"
-                {...linkProps}
-                className="hover:underline"
-              >
-                Privacy
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/legal/terms"
-                {...linkProps}
-                className="hover:underline"
-              >
-                Terms
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/legal/data-processing"
-                {...linkProps}
-                className="hover:underline"
-              >
-                Data Processing
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/legal/cookies"
-                {...linkProps}
-                className="hover:underline"
-              >
-                Cookies
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <div className="mb-2 font-semibold">Contact</div>
-          <ul className="space-y-1 text-background/70">
-            <li>
-              <a href="mailto:support@herobooks.gy" className="hover:underline">
-                support@herobooks.gy
-              </a>
-            </li>
-            <li>Georgetown, Guyana</li>
-          </ul>
-        </div>
-      </div>
-      <div className="border-t border-background/20 py-4 text-center text-xs text-background/70">
-        © {year} heroBooks. Built for businesses in Guyana.
       </div>
     </footer>
   );
