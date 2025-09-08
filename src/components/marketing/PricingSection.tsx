@@ -66,6 +66,7 @@ export default function PricingSection() {
         <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           {plans.map((plan) => (
             <div
+              id={plan.id}
               key={plan.id}
               className={`relative flex flex-col rounded-2xl border bg-background p-6 ${
                 plan.featured ? "scale-105 border-emerald-500 shadow-lg" : ""
