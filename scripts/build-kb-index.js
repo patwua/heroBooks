@@ -12,22 +12,35 @@ const ROOT = process.cwd();
 const ARTICLES_DIR = path.join(ROOT, "kb", "articles");
 const search = [];
 const assist = [];
+
+// Gather all placeholder offenders so authors can fix them in one pass.
+const offenders = [];
+
+// Tightly scoped phrases used in stubs; keep list short to avoid false positives.
 const BAD_PHRASES = [
-  /This section explains/i,
-  /Provide current/i,
-  /Discuss the/i,
+  /This is a placeholder/i,
+  /Discuss the foundational principles/i,
+  /Provide current rates/i,
   /Outline practical steps/i,
-  /Include a practical example/i
+  /Include a practical example/i,
+  /Highlight typical mistakes/i,
+  /Define important terms/i,
+  /List the sources cited/i,
+  /Next actions: Read this article/i, // older template text
+  /Next actions: Follow the step-by-step/i
 ];
 
 for (const file of fs.readdirSync(ARTICLES_DIR)) {
   if (!file.endsWith(".md")) continue;
   const raw = fs.readFileSync(path.join(ARTICLES_DIR, file), "utf8");
   const { data, content } = matter(raw);
+
   // Placeholder guard
   if (BAD_PHRASES.some((rx) => rx.test(content))) {
-    throw new Error(`❌ Placeholder text found in ${file}`);
+    offenders.push(file);
+    continue; // skip indexing placeholders
   }
+
   const html = marked.parse(content);
   search.push({
     id: data.id,
@@ -48,6 +61,12 @@ for (const file of fs.readdirSync(ARTICLES_DIR)) {
       a: s.answer
     });
   }
+}
+
+if (offenders.length) {
+  console.error("❌ Placeholder text found in the following KB articles:");
+  offenders.forEach((f) => console.error(" -", f));
+  process.exit(1);
 }
 
 fs.writeFileSync(

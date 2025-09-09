@@ -38,16 +38,14 @@ export default function KnowledgeBaseLayout({
   const articles = getArticles();
   const rightRail = getRightRail();
   // Wrap KB with the same marketing scaffold (sticky header + footer)
-  return (
-    <div className="min-h-screen flex flex-col">
-      {/* @ts-expect-error Server Component */}
-      <MarketingHeader />
-      <KbShell articles={articles} rightRail={rightRail}>
-        {children}
-      </KbShell>
-      {/* Footer opens external links in new tab when authenticated (logic inside) */}
-      {/* @ts-expect-error Server Component */}
-      <Footer />
-    </div>
-  );
-}
+    return (
+      <div className="min-h-screen flex flex-col">
+        <MarketingHeader />
+        <KbShell articles={articles} rightRail={rightRail}>
+          {children}
+        </KbShell>
+        {/* Footer opens external links in new tab when authenticated (logic inside) */}
+        <Footer />
+      </div>
+    );
+  }

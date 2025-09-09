@@ -5,8 +5,9 @@ import { marked } from "marked";
 import Page from "@/components/UX/Page";
 import SectionCard from "@/components/UX/SectionCard";
 
-export default function KbArticle({ params }: { params: { slug: string } }) {
-  const file = findArticle(params.slug);
+export default function KbArticlePage({ params }: any) {
+  const { slug } = params as { slug: string };
+  const file = findArticle(slug);
   const raw = fs.readFileSync(file, "utf8");
   const { data, content } = matter(raw);
   const html = marked.parse(escapeHtml(content));
