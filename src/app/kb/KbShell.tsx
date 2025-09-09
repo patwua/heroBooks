@@ -4,7 +4,7 @@ import Image from "next/image";
 import ThemeToggle from "@/components/topbar/ThemeToggle";
 import NotificationsBell from "@/components/topbar/NotificationsBell";
 import UserMenu from "@/components/topbar/UserMenu";
-import React, { Suspense, useState } from "react";
+import React, { useState, Suspense } from "react";
 
 type Article = {
   slug: string;
