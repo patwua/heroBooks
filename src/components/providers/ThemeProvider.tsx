@@ -1,18 +1,29 @@
 "use client"
 import * as React from "react"
 import { ThemeProvider as NextThemesProvider } from "next-themes"
-// Note: next-themes supports any string (not just light/dark). We use 'data-theme'.
-// The actual palette comes from CSS variables in global.css (Tailwind v4 theme vars).
 
-const DEFAULT_THEME = process.env.NEXT_PUBLIC_THEME_ACTIVE || process.env.THEME_ACTIVE || "default"
+// Works whether you pass props from callers or not.
+// Defaults keep our data-theme approach for token switching.
+const DEFAULT_THEME =
+  process.env.NEXT_PUBLIC_THEME_ACTIVE || process.env.THEME_ACTIVE || "default"
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+type NextThemesProps = React.ComponentProps<typeof NextThemesProvider>
+
+export function ThemeProvider({
+  children,
+  attribute = "data-theme",
+  defaultTheme = DEFAULT_THEME,
+  enableSystem = false,
+  disableTransitionOnChange = true,
+  ...rest
+}: NextThemesProps) {
   return (
     <NextThemesProvider
-      attribute="data-theme"
-      defaultTheme={DEFAULT_THEME}
-      enableSystem={false}
-      disableTransitionOnChange
+      attribute={attribute as any}
+      defaultTheme={defaultTheme}
+      enableSystem={enableSystem}
+      disableTransitionOnChange={disableTransitionOnChange}
+      {...rest}
     >
       {children}
     </NextThemesProvider>
