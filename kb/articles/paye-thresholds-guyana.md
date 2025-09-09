@@ -1,38 +1,39 @@
-id: paye-thresholds-guyana
+---
+id: paye-thresholds-guyana-2025-full
 slug: paye-thresholds-guyana
-title: PAYE: thresholds, bands, and calculations (Guyana)
-summary: Explains current PAYE tax bands and how to compute deductions.
-level: Intermediate
-audience: [Accountant, Clerk]
+title: PAYE 2025 — thresholds, bands & monthly examples (GYD)
+summary: Personal allowance G$130,000/month (or 1/3 of income); 25% to G$3,120,000 per year and 35% above; interaction with NIS.
+level: Beginner
+audience: [Owner, Accountant, Clerk]
 format: Guide
-category_id: payroll-paye-nis
-tags: [PAYE, payroll]
+category_id: payroll
+tags: [PAYE, thresholds, bands, allowance, 2025]
 jurisdiction: [Guyana]
-last_reviewed: 2024-05-01
+last_reviewed: "2025-09-09"
+facts_verified_on: "2025-09-09"
 sources:
-  - title: "Income Tax Act of Guyana"
-    url: "https://www.gra.gov.gy/income-tax-act"
-    publisher: "GRA"
-    date_accessed: 2024-05-01
+  - title: "GRA Notice — 2025 Personal Allowance & Deductions"
+    url: "https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/"
+    publisher: Guyana Revenue Authority
+    date_accessed: "2025-09-09"
 kb_snippets:
-  - question: "What is the personal allowance for PAYE in Guyana?"
-    answer: "As at 2024 the annual allowance is GYD 960,000."
-    type: "faq"
-assistant_keys:
-  - intent: "ASK"
-    key: "paye_thresholds"
-    synonyms: ["PAYE rates", "income tax bands"]
-    link: "/dashboard/settings/payroll"
-body_markdown: |
-  ### Intro
-  PAYE is withheld from employee salaries and remitted monthly.
+  - question: What’s the personal allowance in 2025?
+    answer: **G$130,000 per month**, or **one-third of gross income**, whichever is greater.
+    type: faq
+  - question: What are the bands?
+    answer: **25%** up to **G$3,120,000/year**; **35%** on the excess.
+    type: faq
+---
 
-  ### Current thresholds (2024)
-  - Personal allowance: GYD 960,000 per year.
-  - Tax rate: 28% up to GYD 2,040,000, then 40%.
+## The 2025 rules in one place
+- **Personal allowance (free pay)** = **G$130,000/month** **or** **1/3 of gross income**, whichever is greater. :contentReference[oaicite:18]{index=18}  
+- **PAYE bands**: **25%** to **G$3,120,000/year** (G$260,000/month equivalent); **35%** above that. :contentReference[oaicite:19]{index=19}  
+- Deduct **NIS (employee 5.6%)** from gross **before** computing chargeable income. (See NIS article.) :contentReference[oaicite:20]{index=20}
 
-  ### Calculation example
-  An employee earning GYD 200,000 monthly pays 28% on the taxable portion after allowance.
+### Monthly mini example
+Gross **G$280,000**; NIS (5.6%) **G$15,680** → Income after NIS **G$264,320**  
+Personal allowance **G$130,000** → **Chargeable G$134,320** → **25% band** applies.
 
-  ### References
-  - Guyana Income Tax Act.
+> Keep the GRA 2025 Notice handy; if GRA updates the allowance/bands, revise payroll formulas. :contentReference[oaicite:21]{index=21}
+
+**Illustration (1:1):** A banded bar: up to G$260k/month at 25%, then 35% above; a callout bubble for “Personal allowance ≥ G$130k or 1/3”.

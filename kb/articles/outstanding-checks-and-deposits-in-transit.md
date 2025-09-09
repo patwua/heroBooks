@@ -1,83 +1,45 @@
 ---
-id: banking-reconciliation-29
+id: bank-recon-timing-2025
 slug: outstanding-checks-and-deposits-in-transit
-title: Outstanding checks and deposits in transit
-summary: This article covers outstanding checks and deposits in transit for Guyanese
-  businesses, explaining key principles and how to apply them in practice.
+title: Bank reconciliation timing items — outstanding cheques & deposits in transit
+summary: How to identify and present timing differences on your bank reconciliation, with a GYD example and posting tips.
 level: Beginner
-audience:
-- Owner
-- Accountant
-- Clerk
+audience: [Owner, Accountant, Clerk, Student]
 format: Guide
-category_id: banking-reconciliation
-tags:
-- deposits
-- and
-- in
-- checks
-- transit
-- reconciliation
-- outstanding
-- banking
-jurisdiction:
-- Guyana
-last_reviewed: '2025-09-07'
+category_id: banking
+tags: [bank reconciliation, outstanding cheques, deposits in transit, timing]
+jurisdiction: [Guyana, Caribbean]
+last_reviewed: "2025-09-09"
+facts_verified_on: "2025-09-09"
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: "IFRS for SMEs (3rd ed., 2025) — Concepts & Pervasive Principles"
+    url: "https://www.ifrs.org/content/dam/ifrs/publications/ifrs-for-smes/english/2025/ifrs-for-smes.pdf?bypass=on"
+    publisher: IFRS Foundation
+    date_accessed: "2025-09-09"
 kb_snippets:
-- question: What is outstanding checks and deposits in transit?
-  answer: 'Outstanding checks and deposits in transit refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform outstanding checks and deposits in transit in heroBooks?
-  answer: 'This article provides a step-by-step guide on outstanding checks and deposits
-    in transit. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: Why is outstanding checks and deposits in transit important?
-  answer: 'Understanding outstanding checks and deposits in transit helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
-assistant_keys:
-- intent: ASK
-  key: outstanding_checks_and_deposits_in_transit
-  synonyms:
-  - outstanding
-  - checks
-  - and
-  link: /help
+  - question: What is an outstanding cheque?
+    answer: A cheque issued and recorded in your cash book that has not yet cleared the bank by period end. It’s a timing difference shown on the bank side of the reconciliation.
+    type: definition
+  - question: What is a deposit in transit?
+    answer: A receipt recorded in your cash book but not yet credited by the bank at period end. Another timing item on the bank side of the reconciliation.
+    type: definition
 ---
 
-### Introduction
-Outstanding checks and deposits in transit is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.
+## Spotting the timing differences
+- **Outstanding cheques**: issued/recorded by you, **not** yet shown on the bank statement.  
+- **Deposits in transit**: recorded by you, **not** yet credited on the bank statement.  
+These are **timing items**, not errors; the purpose of reconciliation is to adjust the bank-statement balance to the **true** cash balance at period end (concept basis from IFRS for SMEs). :contentReference[oaicite:22]{index=22}
 
-### Key Concepts
-Discuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.
+## Where to show them
+- Adjust the **bank side** of the reconciliation:  
+  - **+ Deposits in transit**  
+  - **– Outstanding cheques**
 
-### Guyana specifics
-Provide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.
+## Worked example (GYD)
+Bank statement shows **G$1,220,000**; cash book shows **G$1,250,000**.  
+Timing: **Deposits in transit G$30,000**; **Outstanding cheques G$60,000**; bank charges **G$5,000** (not yet posted).  
+- Adjusted bank = 1,220,000 **+ 30,000 − 60,000 = G$1,190,000**  
+- Post the **bank charges** (Dr Bank Charges 5,000 | Cr Cash 5,000) → adjusted cash book **G$1,245,000**  
+Investigate the remaining difference — likely a posting error or omitted receipt.
 
-### Step-by-step guidance
-Outline practical steps and reference heroBooks features or pages using appropriate links.
-
-### Worked example
-Include a practical example using Guyanese dollars (GYD) to demonstrate the concept.
-
-### Common pitfalls & checks
-Highlight typical mistakes and provide tips on how to avoid them.
-
-### Glossary
-Define important terms related to the topic.
-
-### References
-List the sources cited in the article with retrieval dates.
+**Illustration (1:1):** A small T-diagram labelled “Bank Rec” with arrows for +Deposits in transit and −Outstanding cheques and a note “charges/interest → post to cash book”.
