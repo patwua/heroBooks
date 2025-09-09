@@ -1,10 +1,53 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" width="120" height="120">
-  <rect x="10" y="10" width="40" height="30" rx="4" ry="4" fill="hsl(var(--primary))"/>
-  <text x="30" y="30" font-size="8" text-anchor="middle" fill="hsl(var(--foreground))">Service</text>
-  <rect x="70" y="10" width="40" height="30" rx="4" ry="4" fill="hsl(var(--secondary))"/>
-  <text x="90" y="30" font-size="8" text-anchor="middle" fill="hsl(var(--foreground))">Upgrade</text>
-  <line x1="30" y1="40" x2="30" y2="90" stroke="hsl(var(--border))" stroke-width="2"/>
-  <line x1="30" y1="90" x2="90" y2="90" stroke="hsl(var(--border))" stroke-width="2"/>
-  <circle cx="30" cy="90" r="4" fill="hsl(var(--accent))"/>
-  <circle cx="90" cy="90" r="4" fill="hsl(var(--accent))"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Decision tree showing expense vs capitalise with derecognition">
+  <style>
+    .bg { fill: var(--muted, #F5F7FA); }
+    .card { fill: var(--card, #FFFFFF); stroke: var(--border, #E5E7EB); stroke-width: 2; }
+    .title { fill: var(--foreground, #111827); font: 600 18px/1.3 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial; }
+    .label { fill: var(--foreground, #111827); font: 600 14px/1.3 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial; }
+    .text { fill: var(--muted-foreground, #4B5563); font: 13px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial; }
+    .pill-exp { fill: var(--destructive, #EF4444); }
+    .pill-cap { fill: var(--primary, #2563EB); }
+    .arrow { stroke: var(--foreground, #111827); stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+    .tick { stroke: var(--primary, #2563EB); stroke-width: 2.5; fill: none; }
+    .cross { stroke: var(--destructive, #EF4444); stroke-width: 2.5; fill: none; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L8,4 L0,8 z" fill="var(--foreground, #111827)"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="512" height="512" rx="24"/>
+
+  <!-- Root card -->
+  <rect class="card" x="56" y="36" width="400" height="88" rx="16"/>
+  <text class="title" x="256" y="72" text-anchor="middle">Maintenance vs Capital Improvements</text>
+  <text class="text" x="256" y="98" text-anchor="middle">Does the work extend life / increase capacity / reduce cost?</text>
+
+  <!-- Left branch: Expense -->
+  <path class="arrow" d="M256 124 C 180 160, 160 168, 120 188"/>
+  <rect class="card" x="48" y="188" width="176" height="120" rx="14"/>
+  <rect class="pill-exp" x="64" y="204" width="96" height="24" rx="12"/>
+  <text class="label" x="112" y="222" text-anchor="middle" fill="#fff">Expense</text>
+  <text class="text" x="64" y="242">• Routine servicing</text>
+  <text class="text" x="64" y="262">• No extra life/capacity</text>
+  <text class="text" x="64" y="282">• Debit R&amp;M (P/L)</text>
+  <path class="cross" d="M168 298 l12 12 m0 -12 l-12 12"/>
+
+  <!-- Right branch: Capitalise -->
+  <path class="arrow" d="M256 124 C 332 160, 352 168, 392 188"/>
+  <rect class="card" x="288" y="188" width="176" height="160" rx="14"/>
+  <rect class="pill-cap" x="304" y="204" width="112" height="24" rx="12"/>
+  <text class="label" x="360" y="222" text-anchor="middle" fill="#fff">Capitalise</text>
+  <text class="text" x="304" y="244">• Replacement/upgrade</text>
+  <text class="text" x="304" y="264">• Extend life / capacity</text>
+  <text class="text" x="304" y="284">• Derecognise old part</text>
+  <path class="tick" d="M300 300 l14 14 l22 -22"/>
+
+  <!-- VAT callout -->
+  <rect class="card" x="96" y="356" width="320" height="100" rx="14"/>
+  <text class="label" x="256" y="380" text-anchor="middle">VAT (Guyana) — quick notes</text>
+  <text class="text" x="112" y="404">• Input VAT only if used to make taxable supplies</text>
+  <text class="text" x="112" y="424">• Mixed activities → partial exemption</text>
+  <text class="text" x="112" y="444">• Some capital equipment can be zero-rated (GRA Policy 6)</text>
 </svg>
