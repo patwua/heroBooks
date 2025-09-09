@@ -3,10 +3,10 @@
      pnpm run kb:build           # builds indexes
      pnpm run kb:check           # same, but CI guard
 */
-import fs from "node:fs";
-import path from "node:path";
-import matter from "gray-matter";
-import { marked } from "marked";
+const fs = require("node:fs");
+const path = require("node:path");
+const matter = require("gray-matter");
+const { marked } = require("marked");
 
 const ROOT = process.cwd();
 const ARTICLES_DIR = path.join(ROOT, "kb", "articles");

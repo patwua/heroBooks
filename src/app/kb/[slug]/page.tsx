@@ -9,7 +9,7 @@ export default function KbArticle({ params }: { params: { slug: string } }) {
   const file = findArticle(params.slug);
   const raw = fs.readFileSync(file, "utf8");
   const { data, content } = matter(raw);
-  const html = marked.parse(content);
+  const html = marked.parse(escapeHtml(content));
 
   return (
     <Page title={data.title} subtitle={data.summary}>
@@ -58,6 +58,15 @@ export default function KbArticle({ params }: { params: { slug: string } }) {
       </div>
     </Page>
   );
+}
+
+function escapeHtml(html: string) {
+  return html
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 function findArticle(slug: string) {
