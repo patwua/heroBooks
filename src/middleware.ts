@@ -12,7 +12,11 @@ export async function middleware(req: NextRequest) {
   if (!isProtected) return NextResponse.next()
 
   const secret = process.env.AUTH_SECRET ?? process.env.NEXTAUTH_SECRET
-  const token = await getToken({ req, secret })
+  const token = await getToken({
+    req,
+    secret,
+    secureCookie: req.nextUrl.protocol === "https:",
+  })
 
   if (token) return NextResponse.next()
 
