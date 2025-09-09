@@ -4,7 +4,7 @@ import Image from "next/image";
 import ThemeToggle from "@/components/topbar/ThemeToggle";
 import NotificationsBell from "@/components/topbar/NotificationsBell";
 import UserMenu from "@/components/topbar/UserMenu";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 
 type Article = {
   slug: string;
@@ -62,7 +62,9 @@ export default function KbShell({
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <NotificationsBell />
-          <UserMenu />
+          <Suspense fallback={null}>
+            <UserMenu />
+          </Suspense>
         </div>
       </header>
       <div className="flex flex-1 overflow-hidden">
