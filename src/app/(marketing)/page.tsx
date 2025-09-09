@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { FeatureCard } from "@/components/marketing/FeatureCard"
+import Link from "next/link"
 import TestimonialsSection from "@/components/marketing/TestimonialsSection"
 import PricingSection from "@/components/marketing/PricingSection"
 import FAQSection from "@/components/marketing/FAQSection"
@@ -15,7 +16,7 @@ export default function MarketingHome() {
           <h1 className="text-4xl font-bold">Local-first accounting for Guyana</h1>
           <p className="text-muted-foreground">VAT-ready invoices, PAYE/NIS schedules, and reports that match how you actually work.</p>
           <div className="flex gap-3">
-            <a href="/#pricing" className="inline-flex rounded-xl bg-blue-600 px-4 py-2 text-white text-sm hover:bg-blue-700">Start free trial</a>
+            <Link href="/#pricing" className="inline-flex rounded-xl bg-blue-600 px-4 py-2 text-white text-sm hover:bg-blue-700">Start free trial</Link>
             {/* @ts-expect-error client */}
             <DemoEnterButton />
           </div>

@@ -1,46 +1,43 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { auth } from "@/auth"
+import type { NextRequest } from "next/server"
+import { NextResponse } from "next/server"
 
-function randomVariant() {
-  return Math.random() < 0.5 ? "A" : "B";
-}
-
-export function middleware(req: NextRequest) {
-  const res = NextResponse.next();
-
-  const { pathname } = req.nextUrl;
-  const isMarketingRoute =
-    pathname === "/" ||
-    pathname.startsWith("/pricing") ||
-    pathname.startsWith("/about") ||
-    pathname.startsWith("/contact") ||
-    pathname.startsWith("/get-started") ||
-    pathname.startsWith("/help") ||
-    pathname.startsWith("/legal");
-
-  if (!isMarketingRoute) return res;
-
-  if (!req.cookies.get("hb_variant")) {
-    res.cookies.set("hb_variant", randomVariant(), {
-      path: "/",
-      httpOnly: true,
-      sameSite: "lax",
-      secure: true,
-      maxAge: 60 * 60 * 24 * 365,
-    });
+// Protect app routes; when unauthenticated:
+// 1) stash target in hb_next (10 min),
+// 2) send to "/" with ?auth=1 to auto-open the dropdown.
+export default auth((req: NextRequest) => {
+  const { nextUrl } = req
+  const path = nextUrl.pathname
+  const isProtected =
+    /^\/(admin|dashboard|customers|invoices|bills|items|vendors|payments|banking|payroll|reports|settings)(\/|$)/.test(
+      path
+    )
+  if (!req.auth && isProtected) {
+    const url = new URL("/", nextUrl.origin)
+    url.searchParams.set("auth", "1")
+    const res = NextResponse.redirect(url)
+    res.headers.append(
+      "Set-Cookie",
+      `hb_next=${encodeURIComponent(path + nextUrl.search)}; Path=/; Max-Age=600; SameSite=Lax`
+    )
+    return res
   }
-
-  return res;
-}
+  return NextResponse.next()
+})
 
 export const config = {
   matcher: [
-    "/",
-    "/pricing",
-    "/about",
-    "/contact",
-    "/get-started",
-    "/help",
-    "/legal/:path*",
+    "/admin/:path*",
+    "/dashboard/:path*",
+    "/customers/:path*",
+    "/invoices/:path*",
+    "/bills/:path*",
+    "/items/:path*",
+    "/vendors/:path*",
+    "/payments/:path*",
+    "/banking/:path*",
+    "/payroll/:path*",
+    "/reports/:path*",
+    "/settings/:path*",
   ],
-};
+}
