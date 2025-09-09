@@ -1559,9 +1559,9 @@
   },
   {
     "id": "financial-reporting-65",
-    "title": "P&L, Balance Sheet, Cash Flow \u2014 how they connect",
-    "summary": "This article covers p&l, balance sheet, cash flow \u2014 how they connect for Guyanese businesses, explaining key principles and how to apply them in practice.",
-    "body_markdown": "### Introduction\nP&L, Balance Sheet, Cash Flow \u2014 how they connect is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.\n\n### Key Concepts\nDiscuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.\n\n### Guyana specifics\nProvide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.\n\n### Step-by-step guidance\nOutline practical steps and reference heroBooks features or pages using appropriate links.\n\n### Worked example\nInclude a practical example using Guyanese dollars (GYD) to demonstrate the concept.\n\n### Common pitfalls & checks\nHighlight typical mistakes and provide tips on how to avoid them.\n\n### Glossary\nDefine important terms related to the topic.\n\n### References\nList the sources cited in the article with retrieval dates.",
+    "title": "P&L, Balance Sheet, Cash Flow — how they connect",
+    "summary": "This article covers p&l, balance sheet, cash flow — how they connect for Guyanese businesses, explaining key principles and how to apply them in practice.",
+    "body_markdown": "### Introduction\nP&L, Balance Sheet, Cash Flow — how they connect is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.\n\n### Key Concepts\nDiscuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.\n\n### Guyana specifics\nProvide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.\n\n### Step-by-step guidance\nOutline practical steps and reference heroBooks features or pages using appropriate links.\n\n### Worked example\nInclude a practical example using Guyanese dollars (GYD) to demonstrate the concept.\n\n### Common pitfalls & checks\nHighlight typical mistakes and provide tips on how to avoid them.\n\n### Glossary\nDefine important terms related to the topic.\n\n### References\nList the sources cited in the article with retrieval dates.",
     "tags": [
       "sheet",
       "financial",
@@ -1579,9 +1579,9 @@
       "Guyana"
     ],
     "snippets": [
-      "P&L, Balance Sheet, Cash Flow \u2014 how they connect refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
-      "This article provides a step-by-step guide on p&l, balance sheet, cash flow \u2014 how they connect. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
-      "Understanding p&l, balance sheet, cash flow \u2014 how they connect helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article."
+      "P&L, Balance Sheet, Cash Flow — how they connect refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+      "This article provides a step-by-step guide on p&l, balance sheet, cash flow — how they connect. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+      "Understanding p&l, balance sheet, cash flow — how they connect helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article."
     ]
   },
   {
@@ -2300,27 +2300,28 @@
     ]
   },
   {
-    "id": "real-estate-96",
-    "title": "Accounting for maintenance and repairs",
-    "summary": "This article covers accounting for maintenance and repairs for Guyanese businesses, explaining key principles and how to apply them in practice.",
-    "body_markdown": "### Introduction\nAccounting for maintenance and repairs is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.\n\n### Key Concepts\nDiscuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.\n\n### Guyana specifics\nProvide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.\n\n### Step-by-step guidance\nOutline practical steps and reference heroBooks features or pages using appropriate links.\n\n### Worked example\nInclude a practical example using Guyanese dollars (GYD) to demonstrate the concept.\n\n### Common pitfalls & checks\nHighlight typical mistakes and provide tips on how to avoid them.\n\n### Glossary\nDefine important terms related to the topic.\n\n### References\nList the sources cited in the article with retrieval dates.",
+    "id": "maintenance-vs-repairs-guyana-2025",
+    "title": "Maintenance vs capital improvements — how to expense or capitalise (with GYD examples)",
+    "summary": "Day-to-day servicing is expensed; replacements or upgrades that extend life or capacity are capitalised and the old component is derecognised. Includes VAT notes for Guyana and journal entry patterns.",
+    "body_markdown": "## The rule in one minute\n- **Expense** **day-to-day servicing** (e.g., oil, filters, minor fixes) — these keep the asset running but **do not** increase capacity or extend useful life. :contentReference[oaicite:0]{index=0}\n- **Capitalise** **significant replacements or upgrades** that **extend useful life**, **increase capacity**, **improve quality**, or **reduce operating costs**; at the same time, **derecognise** the carrying amount of the part replaced. :contentReference[oaicite:1]{index=1}\n\nThis “component approach” is explicit in IFRS (and carried into **IFRS for SMEs Section 17**). :contentReference[oaicite:2]{index=2}\n\n## Decision checklist (fast)\n1) **What changed?** Routine upkeep → expense. New capability/longer life → consider capitalise. :contentReference[oaicite:3]{index=3}  \n2) **Is it a significant component?** If yes and replaced, **capitalise new part** and **remove old**. :contentReference[oaicite:4]{index=4}  \n3) **Materiality**: if immaterial, expense for practicality (document your policy).  \n4) **VAT**: input VAT generally recoverable **only** if used for **taxable** supplies; apply **partial-exemption** if you have mixed supplies; note **special zero-rating** for certain capital equipment categories via GRA approvals. :contentReference[oaicite:5]{index=5}\n\n## Worked examples (GYD)\n\n### A. Routine servicing (expense)\nYou service a delivery van (oil, filters, minor fixes) for **G$85,000 + VAT**.  \n- **Dr Repairs & Maintenance** 85,000  \n- **Dr VAT Input** 11,900 *(14%)*  \n- **Cr Cash/Payables** 96,900  \nExplanation: no extension of life/capacity → **expense**. VAT input recoverable if the van supports **taxable** operations (subject to partial exemption if you also make exempt supplies). :contentReference[oaicite:6]{index=6}\n\n### B. Major component replacement (capitalise + derecognise)\nYou replace a **production machine motor** for **G$420,000 + VAT**; the old motor’s **carrying amount is G$60,000**. The new motor improves throughput and life.  \n- **Dr PPE – Machinery (new motor)** 420,000  \n- **Dr VAT Input** 58,800  \n- **Cr Cash/Payables** 478,800  \n- **Dr Loss on Disposal (old component)** 60,000  \n- **Cr PPE – Machinery (remove old motor)** 60,000  \nExplanation: replacement **extends useful life/increases capacity** → **capitalise**; derecognise the old component’s carrying amount. :contentReference[oaicite:7]{index=7}\n\n### C. Upgrade that reduces operating cost (capitalise)\nYou retrofit **LED plant lighting** for **G$300,000 + VAT**, cutting energy use materially; no old component is separately identifiable.  \n- **Dr PPE – Improvements** 300,000  \n- **Dr VAT Input** 42,000  \n- **Cr Cash/Payables** 342,000  \nExplanation: the upgrade **improves future economic benefits** (lower costs) → **capitalise**; if no separable old component, no derecognition entry. :contentReference[oaicite:8]{index=8}\n\n## Policy notes (what to write down)\n- Define **capitalisation thresholds** (e.g., ≥ G$X) and examples per asset class.  \n- State that **routine servicing is expensed**; **replacements/upgrades** are capitalised and **replaced parts derecognised**. :contentReference[oaicite:9]{index=9}  \n- Require **evidence**: vendor docs describing the nature (service vs upgrade), asset IDs, and management approval.  \n- Review **useful life, residual value, and method annually**; adjust **prospectively** if estimates change (don’t restate past depreciation). :contentReference[oaicite:10]{index=10}\n\n## VAT in Guyana (quick context)\n- Input VAT is allowed on purchases **used to make taxable supplies**; where activities are **mixed** (taxable + exempt), use **partial-exemption** to restrict recovery proportionally. :contentReference[oaicite:11]{index=11}  \n- **Capital equipment** used in specified sectors may be **zero-rated** (by approval) under GRA **Policy 6**—follow the CG-letter process. :contentReference[oaicite:12]{index=12}  \n- Keep **tax invoices** and link them to the asset/repair record for audits.\n\n## In heroBooks\n- Add the cost to the relevant **asset** (or **Repairs & Maintenance** for routine servicing).  \n- Use the **component** fields or notes to show replacements and **link the derecognition** entry (old part) for a clean audit trail.  \n- Depreciation will **recompute** from the new carrying amount over the revised remaining life.\n\n---\n\n**Illustration (1:1)**: `/public/kb/illustrations/maintenance-vs-capital.svg`  \nAlt text: \"Decision tree: routine servicing → expense; replacement/upgrade extending life or capacity → capitalise and derecognise old component; VAT callouts for taxable vs mixed supplies.\"",
     "tags": [
-      "and",
-      "repairs",
-      "real",
-      "accounting",
-      "for",
+      "PPE",
       "maintenance",
-      "estate"
+      "repairs",
+      "capital improvements",
+      "component",
+      "derecognition",
+      "VAT"
     ],
-    "category": "real-estate",
+    "category": "start-here",
     "jurisdiction": [
-      "Guyana"
+      "Guyana",
+      "Caribbean"
     ],
     "snippets": [
-      "Accounting for maintenance and repairs refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
-      "This article provides a step-by-step guide on accounting for maintenance and repairs. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
-      "Understanding accounting for maintenance and repairs helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article."
+      "Expense routine servicing; capitalise replacements or upgrades that increase future benefits or extend useful life—then derecognise the replaced part.",
+      "Yes. When a significant part is replaced, remove the carrying amount of the old part from PPE and recognise the new part at cost.",
+      "If used to make taxable supplies, input VAT is generally recoverable; follow GRA rules (partial exemption if you have exempt outputs; special rules for zero-rated capital equipment)."
     ]
   },
   {
@@ -2413,9 +2414,9 @@
   },
   {
     "id": "education-poa-101",
-    "title": "CXC PoA Syllabus 101: Sections A\u2013C at a glance",
-    "summary": "This article covers cxc poa syllabus 101: sections a\u2013c at a glance for Guyanese businesses, explaining key principles and how to apply them in practice.",
-    "body_markdown": "### Introduction\nCXC PoA Syllabus 101: Sections A\u2013C at a glance is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.\n\n### Key Concepts\nDiscuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.\n\n### Guyana specifics\nProvide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.\n\n### Step-by-step guidance\nOutline practical steps and reference heroBooks features or pages using appropriate links.\n\n### Worked example\nInclude a practical example using Guyanese dollars (GYD) to demonstrate the concept.\n\n### Common pitfalls & checks\nHighlight typical mistakes and provide tips on how to avoid them.\n\n### Glossary\nDefine important terms related to the topic.\n\n### References\nList the sources cited in the article with retrieval dates.",
+    "title": "CXC PoA Syllabus 101: Sections A–C at a glance",
+    "summary": "This article covers cxc poa syllabus 101: sections a–c at a glance for Guyanese businesses, explaining key principles and how to apply them in practice.",
+    "body_markdown": "### Introduction\nCXC PoA Syllabus 101: Sections A–C at a glance is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.\n\n### Key Concepts\nDiscuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.\n\n### Guyana specifics\nProvide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.\n\n### Step-by-step guidance\nOutline practical steps and reference heroBooks features or pages using appropriate links.\n\n### Worked example\nInclude a practical example using Guyanese dollars (GYD) to demonstrate the concept.\n\n### Common pitfalls & checks\nHighlight typical mistakes and provide tips on how to avoid them.\n\n### Glossary\nDefine important terms related to the topic.\n\n### References\nList the sources cited in the article with retrieval dates.",
     "tags": [
       "poa",
       "at",
@@ -2434,9 +2435,9 @@
       "CARICOM"
     ],
     "snippets": [
-      "CXC PoA Syllabus 101: Sections A\u2013C at a glance refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
-      "This article provides a step-by-step guide on cxc poa syllabus 101: sections a\u2013c at a glance. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
-      "Understanding cxc poa syllabus 101: sections a\u2013c at a glance helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article."
+      "CXC PoA Syllabus 101: Sections A–C at a glance refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+      "This article provides a step-by-step guide on cxc poa syllabus 101: sections a–c at a glance. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+      "Understanding cxc poa syllabus 101: sections a–c at a glance helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article."
     ]
   },
   {
@@ -3050,9 +3051,9 @@
   },
   {
     "id": "industry-guides-127",
-    "title": "Logistics: quotes \u2192 delivery \u2192 invoice with VAT",
-    "summary": "This article covers logistics: quotes \u2192 delivery \u2192 invoice with vat for Guyanese businesses, explaining key principles and how to apply them in practice.",
-    "body_markdown": "### Introduction\nLogistics: quotes \u2192 delivery \u2192 invoice with VAT is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.\n\n### Key Concepts\nDiscuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.\n\n### Guyana specifics\nProvide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.\n\n### Step-by-step guidance\nOutline practical steps and reference heroBooks features or pages using appropriate links.\n\n### Worked example\nInclude a practical example using Guyanese dollars (GYD) to demonstrate the concept.\n\n### Common pitfalls & checks\nHighlight typical mistakes and provide tips on how to avoid them.\n\n### Glossary\nDefine important terms related to the topic.\n\n### References\nList the sources cited in the article with retrieval dates.",
+    "title": "Logistics: quotes → delivery → invoice with VAT",
+    "summary": "This article covers logistics: quotes → delivery → invoice with vat for Guyanese businesses, explaining key principles and how to apply them in practice.",
+    "body_markdown": "### Introduction\nLogistics: quotes → delivery → invoice with VAT is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.\n\n### Key Concepts\nDiscuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.\n\n### Guyana specifics\nProvide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.\n\n### Step-by-step guidance\nOutline practical steps and reference heroBooks features or pages using appropriate links.\n\n### Worked example\nInclude a practical example using Guyanese dollars (GYD) to demonstrate the concept.\n\n### Common pitfalls & checks\nHighlight typical mistakes and provide tips on how to avoid them.\n\n### Glossary\nDefine important terms related to the topic.\n\n### References\nList the sources cited in the article with retrieval dates.",
     "tags": [
       "guides",
       "delivery",
@@ -3068,9 +3069,9 @@
       "Guyana"
     ],
     "snippets": [
-      "Logistics: quotes \u2192 delivery \u2192 invoice with VAT refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
-      "This article provides a step-by-step guide on logistics: quotes \u2192 delivery \u2192 invoice with vat. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
-      "Understanding logistics: quotes \u2192 delivery \u2192 invoice with vat helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article."
+      "Logistics: quotes → delivery → invoice with VAT refers to the accounting concept or practice described in the article. It outlines the fundamentals and explains why it matters in Guyana or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.",
+      "This article provides a step-by-step guide on logistics: quotes → delivery → invoice with vat. It includes practical examples using Guyanese currency (GYD) and highlights local compliance points. Next actions: Follow the step-by-step section and use the linked heroBooks feature.",
+      "Understanding logistics: quotes → delivery → invoice with vat helps ensure accurate accounting records and compliance with GRA and NIS requirements. It improves decision-making and financial transparency for Guyanese businesses. Next actions: Implement the best practices outlined in the article."
     ]
   },
   {
