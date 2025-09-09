@@ -14,7 +14,7 @@ export function FeatureCard(props: { title: string; body: string; img: string })
             alt={props.title}
             width={800}
             height={800}
-            className="rounded-2xl aspect-square object-cover"
+            className="rounded-2xl aspect-square object-cover hb-card"
             priority={false}
           />
         </div>

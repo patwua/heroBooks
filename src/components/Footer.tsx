@@ -5,7 +5,6 @@ interface FooterProps {
 }
 
 export default function Footer({ authenticated = false }: FooterProps) {
-  const year = new Date().getFullYear();
   const linkProps = authenticated
     ? ({ target: "_blank", rel: "noopener noreferrer" } as const)
     : {};
@@ -151,7 +150,7 @@ export default function Footer({ authenticated = false }: FooterProps) {
           </div>
         </div>
         <div className="mt-10 border-t border-white/10 pt-6 flex items-center justify-between">
-          <p className="text-neutral-300">© {year} heroBooks. Built for businesses in Guyana.</p>
+          <p className="text-neutral-300">© 2025 heroBooks. Built for businesses in Guyana.</p>
           <a href="mailto:support@herobooks.gy" className="hover:underline">
             support@herobooks.gy
           </a>
