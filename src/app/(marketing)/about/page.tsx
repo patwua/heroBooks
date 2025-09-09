@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Page from "@/components/UX/Page"
 import SectionCard from "@/components/UX/SectionCard"
+import ContactClient from "@/app/(marketing)/contact/ContactClient"
 
 export default function AboutPage() {
   return (
@@ -11,10 +12,8 @@ export default function AboutPage() {
           <p className="text-muted-foreground">We’re building modern accounting that understands VAT, PAYE, NIS, and the realities of running a small business in Guyana—with an eye toward the broader Caribbean.</p>
         </div>
       </SectionCard>
-      <SectionCard>
-        <h2 className="text-2xl font-semibold">Leadership</h2>
-        <p className="text-sm text-muted-foreground">The team guiding our product and customers</p>
-        <div className="mt-6 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <SectionCard title="Leadership" kicker="The team guiding our product and customers">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {[
             { img: "/leadership/founder.webp", name: "A. Founder", title: "CEO" },
             { img: "/leadership/cto.webp", name: "B. Engineer", title: "CTO" },
@@ -26,6 +25,16 @@ export default function AboutPage() {
               <p className="text-muted-foreground">{p.title}</p>
             </div>
           ))}
+        </div>
+      </SectionCard>
+      <SectionCard title="Careers">
+        <p className="text-muted-foreground">We’ll post opportunities here. In the meantime, send your portfolio to <a className="underline" href="mailto:support@herobooks.gy">support@herobooks.gy</a>.</p>
+      </SectionCard>
+      <SectionCard title="Contact">
+        <div className="max-w-3xl">
+          {/* Existing contact form, embedded at the bottom of About */}
+          {/* @ts-expect-error client */}
+          <ContactClient />
         </div>
       </SectionCard>
     </Page>
