@@ -32,7 +32,7 @@ kb_snippets:
     answer: Yes—only for small cash sales (≤ G$10,000). The sales invoice must still carry supplier details, description, price, VAT (if shown separately) and issue date.
     type: faq
   - question: How do I back out VAT from a VAT-inclusive price?
-    answer: Use the VAT fraction 7/57 (for 14% VAT). Example: G$2,500 × 7/57 = G$307 VAT; price before VAT = G$2,193.
+    answer: "Use the VAT fraction 7/57 (for 14% VAT). Example: G$2,500 × 7/57 = G$307 VAT; price before VAT = G$2,193."
     type: howto
 ---
 

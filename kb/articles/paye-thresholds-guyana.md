@@ -17,12 +17,12 @@ sources:
     publisher: Guyana Revenue Authority
     date_accessed: "2025-09-09"
 kb_snippets:
-  - question: What’s the personal allowance in 2025?
-    answer: **G$130,000 per month**, or **one-third of gross income**, whichever is greater.
-    type: faq
-  - question: What are the bands?
-    answer: **25%** up to **G$3,120,000/year**; **35%** on the excess.
-    type: faq
+    - question: What’s the personal allowance in 2025?
+      answer: "**G$130,000 per month**, or **one-third of gross income**, whichever is greater."
+      type: faq
+    - question: What are the bands?
+      answer: "**25%** up to **G$3,120,000/year**; **35%** on the excess."
+      type: faq
 ---
 
 ## The 2025 rules in one place
