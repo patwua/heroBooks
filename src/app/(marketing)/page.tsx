@@ -17,7 +17,6 @@ export default function MarketingHome() {
           <p className="text-muted-foreground">VAT-ready invoices, PAYE/NIS schedules, and reports that match how you actually work.</p>
           <div className="flex gap-3">
             <Link href="/#pricing" className="inline-flex rounded-xl bg-blue-600 px-4 py-2 text-white text-sm hover:bg-blue-700">Start free trial</Link>
-            {/* @ts-expect-error client */}
             <DemoEnterButton />
           </div>
         </div>

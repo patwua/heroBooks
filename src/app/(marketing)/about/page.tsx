@@ -12,7 +12,9 @@ export default function AboutPage() {
           <p className="text-muted-foreground">We’re building modern accounting that understands VAT, PAYE, NIS, and the realities of running a small business in Guyana—with an eye toward the broader Caribbean.</p>
         </div>
       </SectionCard>
-      <SectionCard title="Leadership" kicker="The team guiding our product and customers">
+      <SectionCard>
+        <h2 className="text-2xl font-semibold">Leadership</h2>
+        <p className="text-muted-foreground mb-6">The team guiding our product and customers</p>
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {[
             { img: "/leadership/founder.webp", name: "A. Founder", title: "CEO" },
@@ -27,13 +29,14 @@ export default function AboutPage() {
           ))}
         </div>
       </SectionCard>
-      <SectionCard title="Careers">
+      <SectionCard>
+        <h2 className="text-2xl font-semibold mb-4">Careers</h2>
         <p className="text-muted-foreground">We’ll post opportunities here. In the meantime, send your portfolio to <a className="underline" href="mailto:support@herobooks.gy">support@herobooks.gy</a>.</p>
       </SectionCard>
-      <SectionCard title="Contact">
+      <SectionCard>
+        <h2 className="text-2xl font-semibold mb-4">Contact</h2>
         <div className="max-w-3xl">
           {/* Existing contact form, embedded at the bottom of About */}
-          {/* @ts-expect-error client */}
           <ContactClient />
         </div>
       </SectionCard>

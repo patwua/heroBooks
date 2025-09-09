@@ -23,7 +23,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {/* Our ThemeProvider now defaults to data-theme and merges props safely */}
           <ThemeProvider>
             {/* Sync to org settings at runtime */}
-            {/* @ts-expect-error client component */}
             <OrgThemeClient />
             {children}
           </ThemeProvider>

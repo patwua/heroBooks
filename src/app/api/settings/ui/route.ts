@@ -29,7 +29,7 @@ export async function GET() {
 
   // 2) Cookie override (browser-scoped)
   try {
-    const jar = cookies()
+    const jar = await cookies()
     const raw = jar.get("hb_ui")
     if (raw?.value) {
       const parsed = JSON.parse(raw.value) as UiSettings
@@ -68,7 +68,7 @@ export async function POST(req: Request) {
   } catch {}
 
   if (!savedToDb) {
-    const jar = cookies()
+    const jar = await cookies()
     jar.set("hb_ui", JSON.stringify({ theme, modules }), {
       httpOnly: false,
       sameSite: "lax",

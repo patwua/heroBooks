@@ -16,7 +16,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
               <main className="flex-1">{children}</main>
               <AssistSidebar />
             </div>
-            <Footer authenticated />
+            <Footer />
           </div>
         </div>
       </body>

@@ -36,12 +36,10 @@ export default async function MarketingHeader() {
         </nav>
         <div className="flex items-center gap-2">
           {/* Expandable search */}
-          {/* @ts-expect-error client */}
           <SearchExpand />
           {/* Dark mode toggle keeps 'class' strategy for dark: variants */}
           <ThemeToggle />
           {/* Platform notifications only (visitor-side) */}
-          {/* @ts-expect-error client */}
           <NotificationsBell />
           {/* Auth dropdown: Sign in / Sign up links (plan selection) */}
           <UserMenu />
