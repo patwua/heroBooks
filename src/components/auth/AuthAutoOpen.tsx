@@ -1,11 +1,14 @@
 "use client"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import Toast from "@/components/Toast"
 
 /**
  * Installs a global fetch wrapper. Any 401 response from same-origin requests
  * triggers the marketing sign-in dropdown to open immediately.
  */
 export default function AuthAutoOpen() {
+  const [showToast, setShowToast] = useState(false)
+
   useEffect(() => {
     // Only install once
     if ((window as any).__hbFetchPatched) return
@@ -23,10 +26,18 @@ export default function AuthAutoOpen() {
           const u = new URL(window.location.href)
           u.searchParams.set("auth", "1")
           window.history.replaceState(null, "", u.toString())
+          setShowToast(true)
         }
       } catch {}
       return res
     }
   }, [])
-  return null
+
+  return showToast ? (
+    <Toast
+      type="error"
+      message="Session expired — please sign in"
+      onDone={() => setShowToast(false)}
+    />
+  ) : null
 }

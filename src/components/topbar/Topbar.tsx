@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Suspense } from "react";
 import { isDemoModeFromCookies } from "@/lib/demo";
 import SearchBar from "./SearchBar";
 import ThemeToggle from "./ThemeToggle";
@@ -35,7 +36,9 @@ export default async function Topbar() {
         <nav className="flex items-center gap-3 ml-auto">
           <ThemeToggle />
           <NotificationsBell />
-          <UserMenu />
+          <Suspense fallback={null}>
+            <UserMenu />
+          </Suspense>
         </nav>
       </div>
     </header>

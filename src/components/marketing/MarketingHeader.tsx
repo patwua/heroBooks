@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import { Suspense } from "react"
 import { resolveUiForRequest, isModuleEnabled } from "@/lib/modules"
 import SearchExpand from "@/components/SearchExpand"
 import ThemeToggle from "@/components/ThemeToggle"
@@ -42,7 +43,9 @@ export default async function MarketingHeader() {
           {/* Platform notifications only (visitor-side) */}
           <NotificationsBell />
           {/* Auth dropdown: Sign in / Sign up links (plan selection) */}
-          <UserMenu />
+          <Suspense fallback={null}>
+            <UserMenu />
+          </Suspense>
         </div>
       </div>
     </header>
