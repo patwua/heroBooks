@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react"
 import Link from "next/link"
 import { usePathname, useSearchParams } from "next/navigation"
-import { signIn, useSession } from "next-auth/react"
+import { signIn, signOut, useSession } from "next-auth/react"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
@@ -31,14 +31,35 @@ export default function UserMenu() {
 
   useEffect(() => {
     if (authParam === "1") setOpen(true)
+    const handler = () => setOpen(true)
+    window.addEventListener("hb:auth:open", handler)
+    if (sessionStorage.getItem("hb_auth_open") === "1") {
+      setOpen(true)
+      sessionStorage.removeItem("hb_auth_open")
+    }
+    return () => window.removeEventListener("hb:auth:open", handler)
   }, [authParam])
 
+  // Keep a dropdown for authenticated users (Dashboard + Sign out)
   if (data?.user) {
     return (
-      <Link href="/dashboard" className="inline-flex items-center gap-2 text-sm">
-        <User className="h-4 w-4" />
-        {data.user.name ?? "Account"}
-      </Link>
+      <DropdownMenu open={open} onOpenChange={setOpen}>
+        <DropdownMenuTrigger asChild>
+          <button className="inline-flex items-center gap-2 text-sm">
+            <User className="h-4 w-4" />
+            {data.user.name ?? "Account"}
+          </button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end" className="w-56 p-2">
+          <Link href="/dashboard" className="block px-2 py-1.5 text-sm hover:underline">Dashboard</Link>
+          <button
+            className="mt-1 w-full text-left px-2 py-1.5 text-sm hover:underline"
+            onClick={() => signOut({ callbackUrl: "/" })}
+          >
+            Sign out
+          </button>
+        </DropdownMenuContent>
+      </DropdownMenu>
     )
   }
 

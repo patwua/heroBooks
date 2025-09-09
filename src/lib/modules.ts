@@ -65,7 +65,7 @@ export async function resolveUiForRequest() {
 
   // 2) Cookie override (per-browser preview)
   try {
-    const jar = cookies();
+    const jar = await cookies();
     const raw = jar.get("hb_ui");
     if (raw?.value) {
       const parsed = JSON.parse(raw.value) as { theme?: string; modules?: string[] };
