@@ -21,6 +21,27 @@
 :root {
   color: var(--color-fg);
   background-color: var(--color-bg);
+
+  /* === shadcn/ui compatibility tokens === */
+  --background: var(--color-bg);
+  --foreground: var(--color-fg);
+  --card: var(--color-bg);
+  --card-foreground: var(--color-fg);
+  --popover: var(--color-bg);
+  --popover-foreground: var(--color-fg);
+  --primary: var(--color-brand-600);
+  --primary-foreground: white;
+  --secondary: oklch(0.98 0.01 240);
+  --secondary-foreground: var(--color-fg);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.5 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: var(--color-fg);
+  --destructive: oklch(0.65 0.14 25);
+  --destructive-foreground: white;
+  --border: oklch(0.9 0 0);
+  --input: oklch(0.92 0 0);
+  --ring: var(--color-brand-600);
 }
 
 [data-theme="default"] {

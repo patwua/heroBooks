@@ -1,20 +1,14 @@
-import ContactClient from "./ContactClient";
+import ContactClient from "./ContactClient"
+import Page from "@/components/UX/Page"
+import SectionCard from "@/components/UX/SectionCard"
 
-export const metadata = {
-  title: "Contact - heroBooks",
-  description:
-    "Contact heroBooks for sales, support, partnerships, press, billing, or general inquiries.",
-};
-
-export default async function ContactPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-}) {
-  const params = await searchParams;
-  const subjectParam =
-    typeof params.subject === "string" ? params.subject.toLowerCase() : "general";
-  // key ensures component resets when subject changes
-  return <ContactClient key={subjectParam} initialSubject={subjectParam} />;
+export default function ContactPage() {
+  return (
+    <Page title="Contact" subtitle="We’re happy to help.">
+      <SectionCard>
+        <ContactClient />
+      </SectionCard>
+    </Page>
+  )
 }
 
