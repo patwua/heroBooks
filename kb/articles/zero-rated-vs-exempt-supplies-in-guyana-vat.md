@@ -44,19 +44,19 @@ kb_snippets:
 > Guyana’s standard VAT rate is 14% (used for standard-rated items; not for zero-rated or exempt). For invoice details see GRA’s VAT invoice guidance and the Act/Regs. :contentReference[oaicite:2]{index=2}
 
 ## Typical examples (always verify current lists)
-- **Zero-rated**: Selected foods/commodities and items listed in **Schedule I** (GRA Zero-Rated page contains the current list and updates). :contentReference[oaicite:3]{index=3}  
-- **Exempt**: Financial services and other items listed in **Schedule II** (GRA Exempt page). :contentReference[oaicite:4]{index=4}
+- **Zero-rated**: Selected foods/commodities and items listed in **Schedule I** (GRA Zero-Rated page contains the current list and updates). :contentReference[oaicite:0]{index=0}  
+- **Exempt**: Financial services and other items listed in **Schedule II** (GRA Exempt page). :contentReference[oaicite:1]{index=1}
 
 ## Invoice & label rules that matter
-When issuing a **Tax Invoice**, include all particulars and **label zero-rated and exempt lines** clearly. These particulars are set out by GRA and in the VAT Act/Regs (e.g., the words **“Tax Invoice”**, supplier details, description, serial number, VAT amount/total). :contentReference[oaicite:5]{index=5}
+When issuing a **Tax Invoice**, include all particulars and **label zero-rated and exempt lines** clearly. These particulars are set out by GRA and in the VAT Act/Regs (e.g., the words **“Tax Invoice”**, supplier details, description, serial number, VAT amount/total). :contentReference[oaicite:3]{index=3}
 
 ## Accounting impact (refunds & input VAT)
-- **Zero-rated sales** → generally **input VAT recoverable**; heavy zero-rated outputs can lead to **excess input credits** (refund claims). Check GRA guidance and maintain documentation. :contentReference[oaicite:6]{index=6}  
-- **Exempt sales** → **input VAT not recoverable**; build the cost into pricing. If you sell a **mix**, apply **partial exemption** rules. :contentReference[oaicite:7]{index=7}
+- **Zero-rated sales** → generally **input VAT recoverable**; heavy zero-rated outputs can lead to **excess input credits** (refund claims). Check GRA guidance and maintain documentation. :contentReference[oaicite:0]{index=0}  
+- **Exempt sales** → **input VAT not recoverable**; build the cost into pricing. If you sell a **mix**, apply **partial exemption** rules. :contentReference[oaicite:1]{index=1}
 
 ### Quick checks before filing VAT
-1) Are zero-rated and exempt lines **explicitly tagged** on invoices? :contentReference[oaicite:8]{index=8}  
-2) Have you **excluded** input VAT tied to exempt supplies (or applied your method)? :contentReference[oaicite:9]{index=9}
+1) Are zero-rated and exempt lines **explicitly tagged** on invoices? :contentReference[oaicite:3]{index=3}  
+2) Have you **excluded** input VAT tied to exempt supplies (or applied your method)? :contentReference[oaicite:1]{index=1}
 
 ---
 

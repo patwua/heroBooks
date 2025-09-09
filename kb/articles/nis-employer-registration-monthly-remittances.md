@@ -31,8 +31,8 @@ kb_snippets:
 - Onboard employees with their NIS numbers and keep payroll records ready for audits.
 
 ## Contribution rates & ceiling
-- **Employee 5.6%** + **Employer 8.4%** = **14% total**. :contentReference[oaicite:16]{index=16}  
-- **Insurable earnings ceiling**: **G$280,000/month** (or **G$64,615/week**). :contentReference[oaicite:17]{index=17}  
+- **Employee 5.6%** + **Employer 8.4%** = **14% total**. :contentReference[oaicite:0]{index=0}  
+- **Insurable earnings ceiling**: **G$280,000/month** (or **G$64,615/week**). :contentReference[oaicite:1]{index=1}  
 
 ### Worked example (monthly)
 Salary **G$300,000** → insurable capped at **G$280,000** →  
