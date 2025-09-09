@@ -1,84 +1,63 @@
 ---
-id: sales-vat-10
+id: vat-zero-vs-exempt-2025
 slug: zero-rated-vs-exempt-supplies-in-guyana-vat
-title: Zero-rated vs Exempt supplies in Guyana VAT
-summary: This article covers zero-rated vs exempt supplies in guyana vat for Guyanese
-  businesses, explaining key principles and how to apply them in practice.
+title: Zero-rated vs Exempt VAT in Guyana — what’s the difference (and how to show it on invoices)
+summary: Zero-rated items are taxable at 0% (input VAT generally recoverable); exempt items are outside VAT (input VAT not recoverable). This guide shows the impact on invoicing and refunds with Guyana examples.
 level: Beginner
-audience:
-- Owner
-- Accountant
-- Clerk
+audience: [Owner, Accountant, Clerk]
 format: Guide
 category_id: sales-vat
-tags:
-- guyana
-- sales
-- zero
-- in
-- vs
-- rated
-- exempt
-- supplies
-- vat
-jurisdiction:
-- Guyana
-last_reviewed: '2025-09-07'
+tags: [VAT, zero-rated, exempt, invoices, refunds]
+jurisdiction: [Guyana]
+last_reviewed: "2025-09-09"
+facts_verified_on: "2025-09-09"
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: "GRA – Zero-Rated Supplies (Schedule I)"
+    url: "https://www.gra.gov.gy/business/tax-operations-and-services/value-add-tax-services/zero-rated/"
+    publisher: Guyana Revenue Authority
+    date_accessed: "2025-09-09"
+  - title: "GRA – Exempt Supplies (Schedule II)"
+    url: "https://www.gra.gov.gy/exempt-supplies/"
+    publisher: Guyana Revenue Authority
+    date_accessed: "2025-09-09"
+  - title: "VAT Act & Regulations (invoice particulars)"
+    url: "https://www.gra.gov.gy/wp-content/uploads/2022/07/VAT-Act-Regul.-Trans.-Reg.-revised-July-15-2022.pdf"
+    publisher: Guyana Revenue Authority
+    date_accessed: "2025-09-09"
+  - title: "GRA – VAT & INVOICES (required fields)"
+    url: "https://www.gra.gov.gy/vat-invoices/"
+    publisher: Guyana Revenue Authority
+    date_accessed: "2025-09-09"
 kb_snippets:
-- question: What is zero-rated vs exempt supplies in guyana vat?
-  answer: 'Zero-rated vs Exempt supplies in Guyana VAT refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform zero-rated vs exempt supplies in guyana vat in heroBooks?
-  answer: 'This article provides a step-by-step guide on zero-rated vs exempt supplies
-    in guyana vat. It includes practical examples using Guyanese currency (GYD) and
-    highlights local compliance points. Next actions: Follow the step-by-step section
-    and use the linked heroBooks feature.'
-  type: howto
-- question: Why is zero-rated vs exempt supplies in guyana vat important?
-  answer: 'Understanding zero-rated vs exempt supplies in guyana vat helps ensure
-    accurate accounting records and compliance with GRA and NIS requirements. It improves
-    decision-making and financial transparency for Guyanese businesses. Next actions:
-    Implement the best practices outlined in the article.'
-  type: faq
-assistant_keys:
-- intent: ASK
-  key: zero_rated_vs_exempt_supplies_in_guyana_vat
-  synonyms:
-  - zero
-  - rated
-  - vs
-  link: /help
+  - question: What’s the difference between zero-rated and exempt?
+    answer: Zero-rated is a taxable supply at 0% (usually allows input VAT recovery); exempt is non-taxable (input VAT not recoverable). See this article for examples and invoicing notes.
+    type: definition
+  - question: What should my invoice say?
+    answer: Tag each line explicitly as “Zero-rated” or “Exempt” and follow the Tax Invoice fields GRA lists (or Sales Invoice where permitted). See the “Invoice & label rules” section.
+    type: howto
 ---
 
-### Introduction
-Zero-rated vs Exempt supplies in Guyana VAT is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.
+## Plain-English definitions
+- **Zero-rated** = taxable at **0%**. You still treat it as VAT-able; typically you may **recover input VAT** on related purchases, and zero-rated sales count toward refund claims if they dominate your outputs. :contentReference[oaicite:0]{index=0}  
+- **Exempt** = **non-taxable**. You do **not** charge VAT; related input VAT is **not recoverable** (unless you operate a partial-exemption method for mixed supplies). :contentReference[oaicite:1]{index=1}
 
-### Key Concepts
-Discuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.
+> Guyana’s standard VAT rate is 14% (used for standard-rated items; not for zero-rated or exempt). For invoice details see GRA’s VAT invoice guidance and the Act/Regs. :contentReference[oaicite:2]{index=2}
 
-### Guyana specifics
-Provide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.
+## Typical examples (always verify current lists)
+- **Zero-rated**: Selected foods/commodities and items listed in **Schedule I** (GRA Zero-Rated page contains the current list and updates). :contentReference[oaicite:3]{index=3}  
+- **Exempt**: Financial services and other items listed in **Schedule II** (GRA Exempt page). :contentReference[oaicite:4]{index=4}
 
-### Step-by-step guidance
-Outline practical steps and reference heroBooks features or pages using appropriate links.
+## Invoice & label rules that matter
+When issuing a **Tax Invoice**, include all particulars and **label zero-rated and exempt lines** clearly. These particulars are set out by GRA and in the VAT Act/Regs (e.g., the words **“Tax Invoice”**, supplier details, description, serial number, VAT amount/total). :contentReference[oaicite:5]{index=5}
 
-### Worked example
-Include a practical example using Guyanese dollars (GYD) to demonstrate the concept.
+## Accounting impact (refunds & input VAT)
+- **Zero-rated sales** → generally **input VAT recoverable**; heavy zero-rated outputs can lead to **excess input credits** (refund claims). Check GRA guidance and maintain documentation. :contentReference[oaicite:6]{index=6}  
+- **Exempt sales** → **input VAT not recoverable**; build the cost into pricing. If you sell a **mix**, apply **partial exemption** rules. :contentReference[oaicite:7]{index=7}
 
-### Common pitfalls & checks
-Highlight typical mistakes and provide tips on how to avoid them.
+### Quick checks before filing VAT
+1) Are zero-rated and exempt lines **explicitly tagged** on invoices? :contentReference[oaicite:8]{index=8}  
+2) Have you **excluded** input VAT tied to exempt supplies (or applied your method)? :contentReference[oaicite:9]{index=9}
 
-### Glossary
-Define important terms related to the topic.
+---
 
-### References
-List the sources cited in the article with retrieval dates.
+**Illustration (1:1):** A split panel showing “Zero-rated (0%, input VAT usually recoverable)” vs “Exempt (outside VAT, input VAT not recoverable)” with two short invoice snippets highlighting the line labels.
