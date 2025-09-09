@@ -28,7 +28,7 @@ kb_snippets:
 ## Spotting the timing differences
 - **Outstanding cheques**: issued/recorded by you, **not** yet shown on the bank statement.  
 - **Deposits in transit**: recorded by you, **not** yet credited on the bank statement.  
-These are **timing items**, not errors; the purpose of reconciliation is to adjust the bank-statement balance to the **true** cash balance at period end (concept basis from IFRS for SMEs). :contentReference[oaicite:22]{index=22}
+These are **timing items**, not errors; the purpose of reconciliation is to adjust the bank-statement balance to the **true** cash balance at period end (concept basis from IFRS for SMEs). :contentReference[oaicite:0]{index=0}
 
 ## Where to show them
 - Adjust the **bank side** of the reconciliation:  

@@ -26,14 +26,14 @@ kb_snippets:
 ---
 
 ## The 2025 rules in one place
-- **Personal allowance (free pay)** = **G$130,000/month** **or** **1/3 of gross income**, whichever is greater. :contentReference[oaicite:18]{index=18}  
-- **PAYE bands**: **25%** to **G$3,120,000/year** (G$260,000/month equivalent); **35%** above that. :contentReference[oaicite:19]{index=19}  
-- Deduct **NIS (employee 5.6%)** from gross **before** computing chargeable income. (See NIS article.) :contentReference[oaicite:20]{index=20}
+- **Personal allowance (free pay)** = **G$130,000/month** **or** **1/3 of gross income**, whichever is greater. :contentReference[oaicite:0]{index=0}  
+- **PAYE bands**: **25%** to **G$3,120,000/year** (G$260,000/month equivalent); **35%** above that. :contentReference[oaicite:0]{index=0}  
+- Deduct **NIS (employee 5.6%)** from gross **before** computing chargeable income. (See NIS article.) :contentReference[oaicite:0]{index=0}
 
 ### Monthly mini example
 Gross **G$280,000**; NIS (5.6%) **G$15,680** → Income after NIS **G$264,320**  
 Personal allowance **G$130,000** → **Chargeable G$134,320** → **25% band** applies.
 
-> Keep the GRA 2025 Notice handy; if GRA updates the allowance/bands, revise payroll formulas. :contentReference[oaicite:21]{index=21}
+> Keep the GRA 2025 Notice handy; if GRA updates the allowance/bands, revise payroll formulas. :contentReference[oaicite:0]{index=0}
 
 **Illustration (1:1):** A banded bar: up to G$260k/month at 25%, then 35% above; a callout bubble for “Personal allowance ≥ G$130k or 1/3”.
