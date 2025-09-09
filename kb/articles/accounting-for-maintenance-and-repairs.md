@@ -16,21 +16,21 @@ sources:
     url: "https://www.ifrs.org/content/dam/ifrs/publications/ifrs-for-smes/english/2025/ifrs-for-smes.pdf?bypass=on"
     publisher: IFRS Foundation
     date_accessed: "2025-09-09"
-  - title: "IAS 16 — Property, Plant and Equipment (full standard PDF)"
-    url: "https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2022/issued/part-a/ias-16-property-plant-and-equipment.pdf?bypass=on"
+  - title: "IAS 16 — Property, Plant and Equipment (overview)"
+    url: "https://www.ifrs.org/issued-standards/list-of-standards/ias-16-property-plant-and-equipment/"
     publisher: IFRS Foundation
     date_accessed: "2025-09-09"
-  - title: "IFRS for SMEs — Implementation Module 17 (PPE)"
-    url: "https://www.ifrs.org/content/dam/ifrs/supporting-implementation/smes/module-17.pdf"
+  - title: "IAS 16 — Property, Plant and Equipment (full standard PDF)"
+    url: "https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2022/issued/part-a/ias-16-property-plant-and-equipment.pdf?bypass=on"
     publisher: IFRS Foundation
     date_accessed: "2025-09-09"
   - title: "GRA Policy 6 — VAT and Capital Equipment & Machinery"
     url: "https://www.gra.gov.gy/policy-6-vat-and-capital-equipment/"
     publisher: Guyana Revenue Authority
     date_accessed: "2025-09-09"
-  - title: "Guyana VAT Act/Regulations (input tax credit principles)"
-    url: "https://parliament.gov.gy/documents/bills/5342-new_profile_3.pdf"
-    publisher: Parliament of Guyana (Legal Supplement)
+  - title: "Guyana VAT Act & Regulations (revised Feb 8, 2024) — input tax/partial exemption"
+    url: "https://www.gra.gov.gy/wp-content/uploads/2024/03/VAT-Act-Regul.-Trans.-Reg.-revised-Feb-8-2024.pdf"
+    publisher: Guyana Revenue Authority
     date_accessed: "2025-09-09"
 
 kb_snippets:
@@ -46,59 +46,57 @@ kb_snippets:
 ---
 
 ## The rule in one minute
-- **Expense** **day-to-day servicing** (e.g., oil, filters, minor fixes) — these keep the asset running but **do not** increase capacity or extend useful life. :contentReference[oaicite:0]{index=0}
-- **Capitalise** **significant replacements or upgrades** that **extend useful life**, **increase capacity**, **improve quality**, or **reduce operating costs**; at the same time, **derecognise** the carrying amount of the part replaced. :contentReference[oaicite:1]{index=1}
+- **Expense** **day-to-day servicing** (e.g., oil, filters, minor fixes) — these keep the asset running but **do not** increase capacity or extend useful life.  
+- **Capitalise** **significant replacements or upgrades** that **extend useful life**, **increase capacity**, **improve quality**, or **reduce operating costs**; at the same time, **derecognise** the carrying amount of the part replaced.
 
-This “component approach” is explicit in IFRS (and carried into **IFRS for SMEs Section 17**). :contentReference[oaicite:2]{index=2}
+This **component approach** is explicit in IFRS/IFRS for SMEs and prevents double-counting old parts.
 
 ## Decision checklist (fast)
-1) **What changed?** Routine upkeep → expense. New capability/longer life → consider capitalise. :contentReference[oaicite:3]{index=3}  
-2) **Is it a significant component?** If yes and replaced, **capitalise new part** and **remove old**. :contentReference[oaicite:4]{index=4}  
+1) **What changed?** Routine upkeep → expense. New capability/longer life → consider capitalise.  
+2) **Is it a significant component?** If yes and replaced, **capitalise new part** and **remove old**.  
 3) **Materiality**: if immaterial, expense for practicality (document your policy).  
-4) **VAT**: input VAT generally recoverable **only** if used for **taxable** supplies; apply **partial-exemption** if you have mixed supplies; note **special zero-rating** for certain capital equipment categories via GRA approvals. :contentReference[oaicite:5]{index=5}
+4) **VAT**: input VAT is generally recoverable **only** if used for **taxable** supplies; apply **partial-exemption** rules for mixed activities; note **special zero-rating** for certain capital equipment via GRA Policy 6 approvals.
 
 ## Worked examples (GYD)
 
 ### A. Routine servicing (expense)
-You service a delivery van (oil, filters, minor fixes) for **G$85,000 + VAT**.  
+Service a delivery van (oil, filters, minor fixes) for **G$85,000 + VAT**.  
 - **Dr Repairs & Maintenance** 85,000  
 - **Dr VAT Input** 11,900 *(14%)*  
 - **Cr Cash/Payables** 96,900  
-Explanation: no extension of life/capacity → **expense**. VAT input recoverable if the van supports **taxable** operations (subject to partial exemption if you also make exempt supplies). :contentReference[oaicite:6]{index=6}
+Explanation: no extension of life/capacity → **expense**. VAT input recoverable if the van supports **taxable** operations (subject to partial exemption if you also make exempt supplies).
 
 ### B. Major component replacement (capitalise + derecognise)
-You replace a **production machine motor** for **G$420,000 + VAT**; the old motor’s **carrying amount is G$60,000**. The new motor improves throughput and life.  
+Replace a **production machine motor** for **G$420,000 + VAT**; the old motor’s **carrying amount is G$60,000**. Throughput and useful life both increase.  
 - **Dr PPE – Machinery (new motor)** 420,000  
 - **Dr VAT Input** 58,800  
 - **Cr Cash/Payables** 478,800  
 - **Dr Loss on Disposal (old component)** 60,000  
 - **Cr PPE – Machinery (remove old motor)** 60,000  
-Explanation: replacement **extends useful life/increases capacity** → **capitalise**; derecognise the old component’s carrying amount. :contentReference[oaicite:7]{index=7}
+Explanation: replacement **extends useful life/increases capacity** → **capitalise**; derecognise the old component’s carrying amount.
 
 ### C. Upgrade that reduces operating cost (capitalise)
-You retrofit **LED plant lighting** for **G$300,000 + VAT**, cutting energy use materially; no old component is separately identifiable.  
+Retrofit **LED plant lighting** for **G$300,000 + VAT**, cutting energy use materially; no old component is separately identifiable.  
 - **Dr PPE – Improvements** 300,000  
 - **Dr VAT Input** 42,000  
 - **Cr Cash/Payables** 342,000  
-Explanation: the upgrade **improves future economic benefits** (lower costs) → **capitalise**; if no separable old component, no derecognition entry. :contentReference[oaicite:8]{index=8}
+Explanation: the upgrade **improves future economic benefits** (lower costs) → **capitalise**; if no separable old component, no derecognition entry.
 
 ## Policy notes (what to write down)
 - Define **capitalisation thresholds** (e.g., ≥ G$X) and examples per asset class.  
-- State that **routine servicing is expensed**; **replacements/upgrades** are capitalised and **replaced parts derecognised**. :contentReference[oaicite:9]{index=9}  
+- State that **routine servicing is expensed**; **replacements/upgrades** are capitalised and **replaced parts derecognised**.  
 - Require **evidence**: vendor docs describing the nature (service vs upgrade), asset IDs, and management approval.  
-- Review **useful life, residual value, and method annually**; adjust **prospectively** if estimates change (don’t restate past depreciation). :contentReference[oaicite:10]{index=10}
+- Review **useful life, residual value, and method annually**; **change prospectively** if estimates change (don’t restate past depreciation).
 
 ## VAT in Guyana (quick context)
-- Input VAT is allowed on purchases **used to make taxable supplies**; where activities are **mixed** (taxable + exempt), use **partial-exemption** to restrict recovery proportionally. :contentReference[oaicite:11]{index=11}  
-- **Capital equipment** used in specified sectors may be **zero-rated** (by approval) under GRA **Policy 6**—follow the CG-letter process. :contentReference[oaicite:12]{index=12}  
-- Keep **tax invoices** and link them to the asset/repair record for audits.
+- Input VAT is generally allowed on purchases **used to make taxable supplies**; where activities are **mixed** (taxable + exempt), use **partial-exemption** to restrict recovery.  
+- **Capital equipment** used in specified sectors may be **zero-rated** (by approval) under GRA **Policy 6** — follow the prescribed process.  
+- Keep **Tax Invoices** attached to the asset/repair record for audits.
 
 ## In heroBooks
 - Add the cost to the relevant **asset** (or **Repairs & Maintenance** for routine servicing).  
-- Use the **component** fields or notes to show replacements and **link the derecognition** entry (old part) for a clean audit trail.  
+- Use **component notes** to show replacements and **link derecognition** entries for audit trail.  
 - Depreciation will **recompute** from the new carrying amount over the revised remaining life.
 
----
+> **Figure:** see `/public/kb/illustrations/maintenance-vs-capital.svg` (1:1)
 
-**Illustration (1:1)**: `/public/kb/illustrations/maintenance-vs-capital.svg`  
-Alt text: "Decision tree: routine servicing → expense; replacement/upgrade extending life or capacity → capitalise and derecognise old component; VAT callouts for taxable vs mixed supplies."
