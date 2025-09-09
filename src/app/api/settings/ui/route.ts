@@ -2,8 +2,7 @@ import { NextResponse } from "next/server"
 import { cookies } from "next/headers"
 import { loadModules } from "@/lib/modules"
 import { prisma } from "@/lib/prisma"
-import { getServerSession } from "next-auth"
-import { authOptions } from "@/lib/authOptions"
+import { auth } from "@/auth"
 
 type UiSettings = { theme: string; modules: string[] }
 
@@ -81,7 +80,7 @@ export async function POST(req: Request) {
 }
 
 async function isSystemAdmin() {
-  const session = await getServerSession(authOptions as any).catch(() => null)
+  const session = await auth().catch(() => null)
   const adminList = (process.env.ADMIN_EMAILS || "").split(",").map((s) => s.trim().toLowerCase()).filter(Boolean)
   const email = (session?.user as any)?.email?.toLowerCase?.()
   return !!(email && adminList.includes(email))

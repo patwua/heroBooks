@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/authOptions";
+import { auth } from "@/auth";
 
 export default async function Footer() {
-  const session = await getServerSession(authOptions as any).catch(() => null);
+  const session = await auth().catch(() => null);
   const linkProps = session
     ? ({ target: "_blank", rel: "noopener noreferrer" } as const)
     : {};
@@ -28,20 +27,6 @@ export default async function Footer() {
               <li>
                 <Link href="/demo" {...linkProps} className="hover:underline">
                   Demo
-                </Link>
-              </li>
-              <li>
-                <Link href="/changelog" {...linkProps} className="hover:underline">
-                  Changelog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://status.herobooks.gy"
-                  {...linkProps}
-                  className="hover:underline"
-                >
-                  Status
                 </Link>
               </li>
             </ul>
@@ -75,23 +60,13 @@ export default async function Footer() {
             <div className="mb-2 font-semibold">Resources</div>
             <ul className="space-y-1 text-neutral-300">
               <li>
-                <Link href="/docs" {...linkProps} className="hover:underline">
+                <Link href="/kb" {...linkProps} className="hover:underline">
                   Docs/Guides
                 </Link>
               </li>
               <li>
                 <Link href="/help" {...linkProps} className="hover:underline">
                   Help Center
-                </Link>
-              </li>
-              <li>
-                <Link href="/news" {...linkProps} className="hover:underline">
-                  News (WaterNewsGY)
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" {...linkProps} className="hover:underline">
-                  Blog (Patwua)
                 </Link>
               </li>
             </ul>
@@ -115,24 +90,6 @@ export default async function Footer() {
                   className="hover:underline"
                 >
                   Terms
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/legal/data-processing"
-                  {...linkProps}
-                  className="hover:underline"
-                >
-                  Data Processing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/legal/cookies"
-                  {...linkProps}
-                  className="hover:underline"
-                >
-                  Cookies
                 </Link>
               </li>
             </ul>
