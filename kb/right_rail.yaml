@@ -1,117 +1,17 @@
-gra_links:
-- description: Access VAT registration, returns and guidance from the GRA.
-  name: VAT portal
-  open_in_new_tab: true
-  url: https://www.gra.gov.gy/vat
-- description: Forms and publications for taxes, duties and compliance.
-  name: GRA forms & guides
-  open_in_new_tab: true
-  url: https://www.gra.gov.gy/forms
-internal_promos:
-- description: Share read-only access and get expert eyes on your books.
-  link: /dashboard/settings/team
-  open_in_new_tab: true
-  title: Invite your accountant
-- description: Bring in CSV/OFX to reconcile transactions quickly.
-  link: /dashboard/import
-  open_in_new_tab: true
-  title: Import bank file
-- description: Send a VAT-compliant invoice in minutes.
-  link: /dashboard/invoices/new
-  open_in_new_tab: true
-  title: Create your first invoice
-nis_links:
-- description: Official contribution rates and ceiling for employees, employers, self-employed
-    and voluntary contributors.
-  name: NIS contribution rates
-  open_in_new_tab: true
-  url: https://www.nis.org.gy/information_on_contributions
-- description: Forms for NIS registration, remittances, claims and benefits.
-  name: NIS forms & downloads
-  open_in_new_tab: true
-  url: https://www.nis.org.gy/downloads
-popular_snippets:
-- answer: 'Double-entry explained with GYD examples refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  link: /kb/double-entry-explained-with-gyd-examples
-  open_in_new_tab: false
-  question: What is double-entry explained with gyd examples?
-- answer: 'Chart of Accounts for a small Guyanese business refers to the accounting
-    concept or practice described in the article. It outlines the fundamentals and
-    explains why it matters in Guyana or the Caribbean. Next actions: Read this article
-    and follow the steps in heroBooks.'
-  link: /kb/chart-of-accounts-for-a-small-guyanese-business
-  open_in_new_tab: false
-  question: What is chart of accounts for a small guyanese business?
-- answer: 'Accrual vs cash accounting in Guyana refers to the accounting concept or
-    practice described in the article. It outlines the fundamentals and explains why
-    it matters in Guyana or the Caribbean. Next actions: Read this article and follow
-    the steps in heroBooks.'
-  link: /kb/accrual-vs-cash-accounting-in-guyana
-  open_in_new_tab: false
-  question: What is accrual vs cash accounting in guyana?
-- answer: 'Trial balance: purpose and preparation refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  link: /kb/trial-balance-purpose-and-preparation
-  open_in_new_tab: false
-  question: 'What is trial balance: purpose and preparation?'
-- answer: 'Adjusting entries at month-end refers to the accounting concept or practice
-    described in the article. It outlines the fundamentals and explains why it matters
-    in Guyana or the Caribbean. Next actions: Read this article and follow the steps
-    in heroBooks.'
-  link: /kb/adjusting-entries-at-month-end
-  open_in_new_tab: false
-  question: What is adjusting entries at month-end?
-- answer: 'Opening balances and capital contributions refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  link: /kb/opening-balances-and-capital-contributions
-  open_in_new_tab: false
-  question: What is opening balances and capital contributions?
-- answer: 'Accounting equation fundamentals refers to the accounting concept or practice
-    described in the article. It outlines the fundamentals and explains why it matters
-    in Guyana or the Caribbean. Next actions: Read this article and follow the steps
-    in heroBooks.'
-  link: /kb/accounting-equation-fundamentals
-  open_in_new_tab: false
-  question: What is accounting equation fundamentals?
-- answer: 'Understanding debits and credits in PoA refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  link: /kb/understanding-debits-and-credits-in-poa
-  open_in_new_tab: false
-  question: What is understanding debits and credits in poa?
-- answer: 'What makes a VAT-compliant invoice in Guyana? refers to the accounting
-    concept or practice described in the article. It outlines the fundamentals and
-    explains why it matters in Guyana or the Caribbean. Next actions: Read this article
-    and follow the steps in heroBooks.'
-  link: /kb/what-makes-a-vat-compliant-invoice-in-guyana
-  open_in_new_tab: false
-  question: What is what makes a vat-compliant invoice in guyana??
-- answer: 'Zero-rated vs Exempt supplies in Guyana VAT refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  link: /kb/zero-rated-vs-exempt-supplies-in-guyana-vat
-  open_in_new_tab: false
-  question: What is zero-rated vs exempt supplies in guyana vat?
-- answer: 'Recording sales returns and allowances refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  link: /kb/recording-sales-returns-and-allowances
-  open_in_new_tab: false
-  question: What is recording sales returns and allowances?
-- answer: 'Credit notes and debit notes: when and how refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  link: /kb/credit-notes-and-debit-notes-when-and-how
-  open_in_new_tab: false
-  question: 'What is credit notes and debit notes: when and how?'
+quick_links:
+  - title: GRA – VAT & Invoices (required fields)
+    url: https://www.gra.gov.gy/vat-invoices/
+  - title: GRA – VAT ‘Tax Fraction’ (7/57 for 14%)
+    url: https://www.gra.gov.gy/policy-25-vat-tax-fraction/
+  - title: GRA – File VAT Return (how to file)
+    url: https://www.gra.gov.gy/tax-services/vat-services/file-your-returns/
+  - title: GRA – VAT Calendar (21st due date)
+    url: https://www.gra.gov.gy/tax-calendar/?mc_id=140
+  - title: GRA – PAYE 2025 thresholds & allowance
+    url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+  - title: NIS – Contribution rates & ceiling
+    url: https://www.nis.org.gy/information_on_contributions
+  - title: IFRS for SMEs (3rd ed.) – Concepts & principles
+    url: https://www.ifrs.org/content/dam/ifrs/publications/ifrs-for-smes/english/2025/ifrs-for-smes.pdf?bypass=on
+  - title: CXC – Principles of Accounts syllabus (CSEC)
+    url: https://www.cxc.org/SiteAssets/syllabusses/CSEC/CSEC%20Principles%20of%20Accounts.pdf

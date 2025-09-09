@@ -4,6 +4,8 @@ import matter from "gray-matter";
 import yaml from "yaml";
 import React from "react";
 import KbShell from "./KbShell";
+import MarketingHeader from "@/components/marketing/MarketingHeader";
+import Footer from "@/components/Footer";
 
 function getArticles() {
   const dir = path.join(process.cwd(), "kb", "articles");
@@ -35,9 +37,17 @@ export default function KnowledgeBaseLayout({
 }) {
   const articles = getArticles();
   const rightRail = getRightRail();
+  // Wrap KB with the same marketing scaffold (sticky header + footer)
   return (
-    <KbShell articles={articles} rightRail={rightRail}>
-      {children}
-    </KbShell>
+    <div className="min-h-screen flex flex-col">
+      {/* @ts-expect-error Server Component */}
+      <MarketingHeader />
+      <KbShell articles={articles} rightRail={rightRail}>
+        {children}
+      </KbShell>
+      {/* Footer opens external links in new tab when authenticated (logic inside) */}
+      {/* @ts-expect-error Server Component */}
+      <Footer />
+    </div>
   );
 }

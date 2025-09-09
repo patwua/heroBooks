@@ -1,57 +1,72 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 import matter from "gray-matter";
 import { marked } from "marked";
-import { notFound } from "next/navigation";
+import Page from "@/components/UX/Page";
+import SectionCard from "@/components/UX/SectionCard";
 
-export async function generateStaticParams() {
-  const dir = path.join(process.cwd(), "kb", "articles");
-  return fs
-    .readdirSync(dir)
-    .filter((f) => f.endsWith(".md"))
-    .map((file) => ({ slug: file.replace(/\.md$/, "") }));
-}
+export default function KbArticle({ params }: { params: { slug: string } }) {
+  const file = findArticle(params.slug);
+  const raw = fs.readFileSync(file, "utf8");
+  const { data, content } = matter(raw);
+  const html = marked.parse(content);
 
-export const dynamicParams = false;
-
-function escapeHtml(html: string) {
-  return html
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-}
-
-export default async function ArticlePage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const filePath = path.join(
-    process.cwd(),
-    "kb",
-    "articles",
-    `${slug}.md`
-  );
-  let file: string;
-  try {
-    file = fs.readFileSync(filePath, "utf8");
-  } catch (err: any) {
-    if (err.code === "ENOENT") {
-      notFound();
-    }
-    throw err;
-  }
-  const { content, data } = matter(file);
-  const renderer = new marked.Renderer();
-  renderer.html = (token) => escapeHtml(token.text);
-  const html = marked.parse(content, { renderer });
   return (
-    <article>
-      <h1 className="text-2xl font-bold mb-4">{data.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </article>
+    <Page title={data.title} subtitle={data.summary}>
+      <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
+        <SectionCard>
+          {/* eslint-disable-next-line react/no-danger */}
+          <div className="prose prose-sm sm:prose lg:prose-lg max-w-none dark:prose-invert"
+               dangerouslySetInnerHTML={{ __html: String(html) }} />
+        </SectionCard>
+        <aside className="space-y-4">
+          <SectionCard>
+            <div className="text-sm text-muted-foreground">Last reviewed</div>
+            <div className="text-base">{data.last_reviewed ?? "—"}</div>
+            {Array.isArray(data.jurisdiction) && data.jurisdiction.length > 0 && (
+              <div className="mt-3">
+                <div className="text-sm text-muted-foreground">Jurisdiction</div>
+                <div className="text-base">{data.jurisdiction.join(", ")}</div>
+              </div>
+            )}
+          </SectionCard>
+          {Array.isArray(data.sources) && data.sources.length > 0 && (
+            <SectionCard>
+              <div className="font-semibold">Sources</div>
+              <ul className="mt-2 space-y-2 text-sm">
+                {data.sources.map((s: any, i: number) => (
+                  <li key={i}>
+                    <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline">
+                      {s.title}
+                    </a>
+                    {s.publisher ? <span className="text-muted-foreground"> — {s.publisher}</span> : null}
+                  </li>
+                ))}
+              </ul>
+            </SectionCard>
+          )}
+          <SectionCard>
+            <div className="font-semibold">Try it in the app</div>
+            <div className="text-sm text-muted-foreground mt-1">
+              Open the demo to practice this workflow in heroBooks.
+            </div>
+            <a href="/continue-demo" className="mt-3 inline-flex items-center rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm hover:opacity-90">
+              Open demo
+            </a>
+          </SectionCard>
+        </aside>
+      </div>
+    </Page>
   );
+}
+
+function findArticle(slug: string) {
+  const dir = path.join(process.cwd(), "kb", "articles");
+  for (const f of fs.readdirSync(dir)) {
+    if (!f.endsWith(".md")) continue;
+    const raw = fs.readFileSync(path.join(dir, f), "utf8");
+    const { data } = matter(raw);
+    if (data.slug === slug) return path.join(dir, f);
+  }
+  throw new Error(`KB article not found: ${slug}`);
 }
