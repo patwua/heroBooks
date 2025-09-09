@@ -1,13 +1,13 @@
 import Link from "next/link";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/authOptions";
 
-interface FooterProps {
-  authenticated?: boolean;
-}
-
-export default function Footer({ authenticated = false }: FooterProps) {
-  const linkProps = authenticated
+export default async function Footer() {
+  const session = await getServerSession(authOptions as any).catch(() => null);
+  const linkProps = session
     ? ({ target: "_blank", rel: "noopener noreferrer" } as const)
     : {};
+  const externalTarget = session ? "_blank" : undefined;
   return (
     <footer className="bg-neutral-900 text-neutral-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 text-sm">
@@ -151,7 +151,7 @@ export default function Footer({ authenticated = false }: FooterProps) {
         </div>
         <div className="mt-10 border-t border-white/10 pt-6 flex items-center justify-between">
           <p className="text-neutral-300">© 2025 heroBooks. Built for businesses in Guyana.</p>
-          <a href="mailto:support@herobooks.gy" className="hover:underline">
+          <a href="mailto:support@herobooks.gy" className="hover:underline" target={externalTarget}>
             support@herobooks.gy
           </a>
         </div>

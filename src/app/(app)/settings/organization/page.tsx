@@ -15,7 +15,6 @@ export default function OrganizationSettingsPage() {
       </section>
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">UI & Theme</h2>
-        {/* @ts-expect-error Client Component */}
         <UiSettingsPanel />
       </section>
     </div>
