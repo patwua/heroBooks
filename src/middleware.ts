@@ -1,10 +1,9 @@
 import type { NextRequest } from "next/server"
 import { NextResponse } from "next/server"
+import { getToken } from "next-auth/jwt"
 
-// Read-only check for Auth.js v5 session cookies (Edge-safe).
-// v5 defaults: "authjs.session-token" or "__Secure-authjs.session-token"
-// Ref: cookie name change from next-auth v4 → v5. 
-export function middleware(req: NextRequest) {
+// Verify Auth.js v5 session token via JWT (Edge-safe)
+export async function middleware(req: NextRequest) {
   const path = req.nextUrl.pathname
   const isProtected =
     /^\/(admin|dashboard|customers|invoices|bills|items|vendors|payments|banking|payroll|reports|settings)(\/|$)/.test(
@@ -12,10 +11,10 @@ export function middleware(req: NextRequest) {
     )
   if (!isProtected) return NextResponse.next()
 
-  const hasSession =
-    !!req.cookies.get("__Secure-authjs.session-token") || !!req.cookies.get("authjs.session-token")
+  const secret = process.env.AUTH_SECRET ?? process.env.NEXTAUTH_SECRET
+  const token = await getToken({ req, secret })
 
-  if (hasSession) return NextResponse.next()
+  if (token) return NextResponse.next()
 
   const url = new URL("/", req.nextUrl.origin)
   url.searchParams.set("auth", "1")
