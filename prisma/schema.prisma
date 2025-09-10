@@ -16,49 +16,53 @@ enum Role {
 }
 
 model User {
-  id            String          @id @default(cuid())
-  name          String?
-  email         String?         @unique
-  emailVerified DateTime?
-  image         String?
-  role          String          @default("user")
-  passwordHash  String?
-  accounts      Account[]
-  sessions      Session[]
-  memberships   UserOrg[]
-  checkoutIntents CheckoutIntent[]
+  id                  String               @id @default(cuid())
+  name                String?
+  email               String?              @unique
+  emailVerified       DateTime?
+  image               String?
+  role                String               @default("user")
+  passwordHash        String?
+  accounts            Account[]
+  sessions            Session[]
+  memberships         UserOrg[]
+  checkoutIntents     CheckoutIntent[]
   passwordResetTokens PasswordResetToken[]
-  preference    UserPreference?
-  settings      UserSettings?
-  createdAt     DateTime        @default(now())
-  updatedAt     DateTime        @default(now()) @updatedAt
+  preference          UserPreference?
+  settings            UserSettings?
+  // Back-relations
+  kbEvents            KbEvent[] // <-- matches KbEvent.user
+  createdAt           DateTime             @default(now())
+  updatedAt           DateTime             @default(now()) @updatedAt
 }
 
 model Org {
-  id               String            @id @default(cuid())
-  name             String
-  country          String            @default("GY")
-  settings         OrgSettings?
-  theme            OrgTheme?
-  members          UserOrg[]
-  customers        Customer[]
-  taxCodes         TaxCode[]
-  items            Item[]
-  invoices         Invoice[]
-  vendors          Vendor[]
-  bills            Bill[]
-  estimates        Estimate[]
-  bankTransactions BankTransaction[]
-  ledgerAccounts   LedgerAccount[]
-  payeBrackets     PayeBracket[]
-  nisSettings      NisSetting[]
-  taxFeature       OrgTaxFeature?
+  id                  String               @id @default(cuid())
+  name                String
+  country             String               @default("GY")
+  settings            OrgSettings?
+  theme               OrgTheme?
+  members             UserOrg[]
+  customers           Customer[]
+  taxCodes            TaxCode[]
+  items               Item[]
+  invoices            Invoice[]
+  vendors             Vendor[]
+  bills               Bill[]
+  estimates           Estimate[]
+  bankTransactions    BankTransaction[]
+  ledgerAccounts      LedgerAccount[]
+  payeBrackets        PayeBracket[]
+  nisSettings         NisSetting[]
+  taxFeature          OrgTaxFeature?
   taxAdvisoryReceipts TaxAdvisoryReceipt[]
-  subscriptions    OrgSubscription[]
-  checkoutIntents  CheckoutIntent[]
-  payslips         Payslip[]
-  createdAt        DateTime          @default(now())
-  updatedAt        DateTime          @updatedAt
+  subscriptions       OrgSubscription[]
+  checkoutIntents     CheckoutIntent[]
+  payslips            Payslip[]
+  // Back-relations
+  kbEvents            KbEvent[] // <-- matches KbEvent.org
+  createdAt           DateTime             @default(now())
+  updatedAt           DateTime             @updatedAt
 }
 
 model OrgSettings {
@@ -89,12 +93,12 @@ model Account {
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String?  @db.Text
-  access_token      String?  @db.Text
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String?  @db.Text
+  id_token          String? @db.Text
   session_state     String?
   user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -118,13 +122,13 @@ model VerificationToken {
 }
 
 model PasswordResetToken {
-  id        String   @id @default(cuid())
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id        String    @id @default(cuid())
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId    String
-  token     String   @unique
+  token     String    @unique
   expiresAt DateTime
   usedAt    DateTime?
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
 
   @@index([userId, token])
 }
@@ -150,14 +154,14 @@ model EmailIngestLog {
 }
 
 model Customer {
-  id        String     @id @default(cuid())
-  orgId     String
-  name      String
-  email     String?
-  org       Org        @relation(fields: [orgId], references: [id])
-  invoices  Invoice[]
-  estimates Estimate[]
-  isDemo        Boolean  @default(false)
+  id            String     @id @default(cuid())
+  orgId         String
+  name          String
+  email         String?
+  org           Org        @relation(fields: [orgId], references: [id])
+  invoices      Invoice[]
+  estimates     Estimate[]
+  isDemo        Boolean    @default(false)
   demoSessionId String?
   expiresAt     DateTime?
 
@@ -182,18 +186,18 @@ model TaxCode {
 }
 
 model Item {
-  id           String        @id @default(cuid())
-  orgId        String
-  name         String
-  description  String?
-  price        Decimal       @db.Decimal(10, 2)
-  taxCodeId    String?
-  qtyOnHand    Int           @default(0)
-  org          Org           @relation(fields: [orgId], references: [id])
-  taxCode      TaxCode?      @relation(fields: [taxCodeId, orgId], references: [id, orgId])
-  invoiceLines InvoiceLine[]
-  billLines    BillLine[]
-  isDemo        Boolean  @default(false)
+  id            String        @id @default(cuid())
+  orgId         String
+  name          String
+  description   String?
+  price         Decimal       @db.Decimal(10, 2)
+  taxCodeId     String?
+  qtyOnHand     Int           @default(0)
+  org           Org           @relation(fields: [orgId], references: [id])
+  taxCode       TaxCode?      @relation(fields: [taxCodeId, orgId], references: [id, orgId])
+  invoiceLines  InvoiceLine[]
+  billLines     BillLine[]
+  isDemo        Boolean       @default(false)
   demoSessionId String?
   expiresAt     DateTime?
 
@@ -216,9 +220,9 @@ model Invoice {
   lines            InvoiceLine[]
   payments         Payment[]
   bankTransactions BankTransaction[]
-  isDemo        Boolean  @default(false)
-  demoSessionId String?
-  expiresAt     DateTime?
+  isDemo           Boolean           @default(false)
+  demoSessionId    String?
+  expiresAt        DateTime?
 
   @@unique([id, orgId])
   @@unique([orgId, number])
@@ -253,9 +257,9 @@ model Payment {
   date             DateTime          @default(now())
   invoice          Invoice           @relation(fields: [invoiceId, orgId], references: [id, orgId])
   bankTransactions BankTransaction[]
-  isDemo        Boolean  @default(false)
-  demoSessionId String?
-  expiresAt     DateTime?
+  isDemo           Boolean           @default(false)
+  demoSessionId    String?
+  expiresAt        DateTime?
 
   @@unique([id, orgId])
   @@index([orgId, isDemo])
@@ -307,20 +311,20 @@ model BillLine {
 }
 
 model Estimate {
-  id         String         @id @default(cuid())
-  orgId      String
-  customerId String?
-  number     String
-  issueDate  DateTime       @default(now())
-  expiryDate DateTime?
-  status     String         @default("draft")
-  subTotal   Decimal        @db.Decimal(10, 2)
-  vatTotal   Decimal        @db.Decimal(10, 2)
-  total      Decimal        @db.Decimal(10, 2)
-  org        Org            @relation(fields: [orgId], references: [id])
-  customer   Customer?      @relation(fields: [customerId, orgId], references: [id, orgId])
-  lines      EstimateLine[]
-  isDemo        Boolean  @default(false)
+  id            String         @id @default(cuid())
+  orgId         String
+  customerId    String?
+  number        String
+  issueDate     DateTime       @default(now())
+  expiryDate    DateTime?
+  status        String         @default("draft")
+  subTotal      Decimal        @db.Decimal(10, 2)
+  vatTotal      Decimal        @db.Decimal(10, 2)
+  total         Decimal        @db.Decimal(10, 2)
+  org           Org            @relation(fields: [orgId], references: [id])
+  customer      Customer?      @relation(fields: [customerId, orgId], references: [id, orgId])
+  lines         EstimateLine[]
+  isDemo        Boolean        @default(false)
   demoSessionId String?
   expiresAt     DateTime?
 
@@ -346,23 +350,23 @@ model EstimateLine {
 }
 
 model BankTransaction {
-  id        String   @id @default(cuid())
-  orgId     String
-  bankName  String
-  accountNo String
-  date      DateTime
-  amount    Decimal  @db.Decimal(10, 2)
-  type      String
-  memo      String?
-  invoiceId String?
-  paymentId String?
-  billId    String?
-  status    String   @default("UNMATCHED")
-  org       Org      @relation(fields: [orgId], references: [id])
-  invoice   Invoice? @relation(fields: [invoiceId, orgId], references: [id, orgId])
-  payment   Payment? @relation(fields: [paymentId, orgId], references: [id, orgId])
-  bill      Bill?    @relation(fields: [billId, orgId], references: [id, orgId])
-  isDemo        Boolean  @default(false)
+  id            String    @id @default(cuid())
+  orgId         String
+  bankName      String
+  accountNo     String
+  date          DateTime
+  amount        Decimal   @db.Decimal(10, 2)
+  type          String
+  memo          String?
+  invoiceId     String?
+  paymentId     String?
+  billId        String?
+  status        String    @default("UNMATCHED")
+  org           Org       @relation(fields: [orgId], references: [id])
+  invoice       Invoice?  @relation(fields: [invoiceId, orgId], references: [id, orgId])
+  payment       Payment?  @relation(fields: [paymentId, orgId], references: [id, orgId])
+  bill          Bill?     @relation(fields: [billId, orgId], references: [id, orgId])
+  isDemo        Boolean   @default(false)
   demoSessionId String?
   expiresAt     DateTime?
 
@@ -405,13 +409,13 @@ model CheckoutIntent {
   discount      Int      @default(0)
   promoCode     String?
   status        String   @default("created") // created|processing|paid|failed|cancelled
-  paymentMethod String?  // "paypal" | "zelle" | "mmg" | "bank"
-  externalRef   String?  // PSP order/transaction reference
+  paymentMethod String? // "paypal" | "zelle" | "mmg" | "bank"
+  externalRef   String? // PSP order/transaction reference
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
 
   // link to created subscriptions
-  subscription  OrgSubscription[]
+  subscription OrgSubscription[]
 
   @@index([orgId])
 }
@@ -428,52 +432,55 @@ model AuditLog {
 }
 
 model OrgSubscription {
-  id                  String   @id @default(cuid())
-  org                 Org?     @relation(fields: [orgId], references: [id], onDelete: SetNull)
-  orgId               String?
-  plan                String
-  status              String   @default("active")
-  currentPeriodStart  DateTime
-  currentPeriodEnd    DateTime
-  createdAt           DateTime @default(now())
-  updatedAt           DateTime @updatedAt
-  checkoutIntent      CheckoutIntent? @relation(fields: [checkoutIntentId], references: [id], onDelete: SetNull)
-  checkoutIntentId    String?
+  id                 String          @id @default(cuid())
+  org                Org?            @relation(fields: [orgId], references: [id], onDelete: SetNull)
+  orgId              String?
+  plan               String
+  status             String          @default("active")
+  currentPeriodStart DateTime
+  currentPeriodEnd   DateTime
+  createdAt          DateTime        @default(now())
+  updatedAt          DateTime        @updatedAt
+  checkoutIntent     CheckoutIntent? @relation(fields: [checkoutIntentId], references: [id], onDelete: SetNull)
+  checkoutIntentId   String?
 }
 
 model LedgerAccount {
-  id     String @id @default(cuid())
-  orgId  String
-  code   String
-  name   String
-  group  String  // 'asset' | 'liability' | 'equity' | 'income' | 'expense' | 'cogs'
-  org    Org     @relation(fields: [orgId], references: [id])
+  id    String @id @default(cuid())
+  orgId String
+  code  String
+  name  String
+  group String // 'asset' | 'liability' | 'equity' | 'income' | 'expense' | 'cogs'
+  org   Org    @relation(fields: [orgId], references: [id])
+
   @@unique([orgId, code])
   @@index([orgId, group])
 }
 
 model PayeBracket {
-  id            String   @id @default(cuid())
+  id            String    @id @default(cuid())
   orgId         String
   order         Int
-  upTo          Decimal? @db.Decimal(14,2) // null = no cap/top band
-  rate          Decimal  @db.Decimal(5,4)  // e.g. 0.2500
+  upTo          Decimal?  @db.Decimal(14, 2) // null = no cap/top band
+  rate          Decimal   @db.Decimal(5, 4) // e.g. 0.2500
   effectiveFrom DateTime
   effectiveTo   DateTime?
-  org           Org      @relation(fields: [orgId], references: [id])
+  org           Org       @relation(fields: [orgId], references: [id])
+
   @@index([orgId, effectiveFrom, effectiveTo])
 }
 
 model NisSetting {
-  id            String   @id @default(cuid())
-  orgId         String   @unique
-  employeeRate  Decimal  @db.Decimal(5,4)  // 0.0560
-  employerRate  Decimal  @db.Decimal(5,4)  // 0.0840
-  ceilingAmount Decimal? @db.Decimal(14,2) // 280000.00 (monthly)
-  ceilingPeriod String   // 'weekly' | 'monthly' | 'annual'
+  id            String    @id @default(cuid())
+  orgId         String    @unique
+  employeeRate  Decimal   @db.Decimal(5, 4) // 0.0560
+  employerRate  Decimal   @db.Decimal(5, 4) // 0.0840
+  ceilingAmount Decimal?  @db.Decimal(14, 2) // 280000.00 (monthly)
+  ceilingPeriod String // 'weekly' | 'monthly' | 'annual'
   effectiveFrom DateTime
   effectiveTo   DateTime?
-  org           Org      @relation(fields: [orgId], references: [id])
+  org           Org       @relation(fields: [orgId], references: [id])
+
   @@index([orgId, effectiveFrom, effectiveTo])
 }
 
@@ -489,26 +496,27 @@ model OrgTaxFeature {
 }
 
 model TaxAdvisory {
-  id            String   @id @default(cuid())
-  region        String   // 'GY'
-  kind          String   // 'PAYE' | 'NIS' | 'VAT'
+  id            String               @id @default(cuid())
+  region        String // 'GY'
+  kind          String // 'PAYE' | 'NIS' | 'VAT'
   title         String
   body          String
-  payloadJson   Json     // serialized brackets/settings to apply
+  payloadJson   Json // serialized brackets/settings to apply
   effectiveFrom DateTime
-  createdAt     DateTime @default(now())
+  createdAt     DateTime             @default(now())
   receipts      TaxAdvisoryReceipt[]
 }
 
 model TaxAdvisoryReceipt {
-  id         String   @id @default(cuid())
+  id         String      @id @default(cuid())
   orgId      String
   advisoryId String
   acceptedAt DateTime?
   declinedAt DateTime?
   acceptedBy String?
-  org        Org           @relation(fields: [orgId], references: [id])
-  advisory   TaxAdvisory   @relation(fields: [advisoryId], references: [id])
+  org        Org         @relation(fields: [orgId], references: [id])
+  advisory   TaxAdvisory @relation(fields: [advisoryId], references: [id])
+
   @@unique([orgId, advisoryId])
   @@index([orgId, acceptedAt])
 }
@@ -516,22 +524,22 @@ model TaxAdvisoryReceipt {
 model Payslip {
   id            String   @id @default(cuid())
   orgId         String
-  period        DateTime  // e.g., 2025-08-01 (use first day of month)
+  period        DateTime // e.g., 2025-08-01 (use first day of month)
   employeeName  String
   employeeEmail String?
-  gross         Decimal  @db.Decimal(14,2)
-  allowance     Decimal  @db.Decimal(14,2)
-  chargeable    Decimal  @db.Decimal(14,2)
-  payeTax       Decimal  @db.Decimal(14,2)
-  nisEmployee   Decimal  @db.Decimal(14,2)
-  nisEmployer   Decimal  @db.Decimal(14,2)
-  nisInsurable  Decimal  @db.Decimal(14,2)
-  net           Decimal  @db.Decimal(14,2)
+  gross         Decimal  @db.Decimal(14, 2)
+  allowance     Decimal  @db.Decimal(14, 2)
+  chargeable    Decimal  @db.Decimal(14, 2)
+  payeTax       Decimal  @db.Decimal(14, 2)
+  nisEmployee   Decimal  @db.Decimal(14, 2)
+  nisEmployer   Decimal  @db.Decimal(14, 2)
+  nisInsurable  Decimal  @db.Decimal(14, 2)
+  net           Decimal  @db.Decimal(14, 2)
   createdAt     DateTime @default(now())
   org           Org      @relation(fields: [orgId], references: [id])
 
-  @@index([orgId, period])
   @@unique([id, orgId])
+  @@index([orgId, period])
 }
 
 model TelemetryEvent {
@@ -550,13 +558,14 @@ model KbEvent {
   userId    String?
   orgId     String?
   slug      String
-  kind      String   // 'view' | 'dismiss'
+  kind      String // 'view' | 'dismiss'
   createdAt DateTime @default(now())
-  user      User?    @relation(fields: [userId], references: [id])
-  org       Org?     @relation(fields: [orgId], references: [id])
 
-  @@index([userId, createdAt])
-  @@index([orgId, createdAt])
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+  org  Org?  @relation(fields: [orgId], references: [id], onDelete: SetNull, onUpdate: Cascade)
+
+  @@index([userId])
+  @@index([orgId])
   @@index([slug, createdAt])
 }
 
