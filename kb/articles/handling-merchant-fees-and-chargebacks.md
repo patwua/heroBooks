@@ -2,59 +2,67 @@
 id: banking-reconciliation-27
 slug: handling-merchant-fees-and-chargebacks
 title: Handling merchant fees and chargebacks
-summary: This article covers handling merchant fees and chargebacks for Guyanese businesses,
-  explaining key principles and how to apply them in practice.
+summary: >-
+  This article covers handling merchant fees and chargebacks for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: banking-reconciliation
 tags:
-- and
-- chargebacks
-- merchant
-- reconciliation
-- fees
-- banking
-- handling
+  - and
+  - chargebacks
+  - merchant
+  - reconciliation
+  - fees
+  - banking
+  - handling
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is handling merchant fees and chargebacks?
-  answer: 'Handling merchant fees and chargebacks refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform handling merchant fees and chargebacks in heroBooks?
-  answer: 'This article provides a step-by-step guide on handling merchant fees and
-    chargebacks. It includes practical examples using Guyanese currency (GYD) and
-    highlights local compliance points. Next actions: Follow the step-by-step section
-    and use the linked heroBooks feature.'
-  type: howto
-- question: Why is handling merchant fees and chargebacks important?
-  answer: 'Understanding handling merchant fees and chargebacks helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is handling merchant fees and chargebacks?
+    answer: >-
+      Handling merchant fees and chargebacks refers to the accounting concept or
+      practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform handling merchant fees and chargebacks in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on handling merchant fees and
+      chargebacks. It includes practical examples using Guyanese currency (GYD)
+      and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is handling merchant fees and chargebacks important?
+    answer: >-
+      Understanding handling merchant fees and chargebacks helps ensure accurate
+      accounting records and compliance with GRA and NIS requirements. It
+      improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: handling_merchant_fees_and_chargebacks
-  synonyms:
-  - handling
-  - merchant
-  - fees
-  link: /help
+  - intent: ASK
+    key: handling_merchant_fees_and_chargebacks
+    synonyms:
+      - handling
+      - merchant
+      - fees
+    link: /help
+status: draft
 ---
 
 ### Introduction

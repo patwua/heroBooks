@@ -2,58 +2,68 @@
 id: financial-reporting-72
 slug: interpreting-financial-statements-for-decision-making
 title: Interpreting financial statements for decision-making
-summary: This article covers interpreting financial statements for decision-making
-  for Guyanese businesses, explaining key principles and how to apply them in practice.
+summary: >-
+  This article covers interpreting financial statements for decision-making for
+  Guyanese businesses, explaining key principles and how to apply them in
+  practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: financial-reporting
 tags:
-- interpreting
-- financial
-- reporting
-- for
-- making
-- decision
-- statements
-jurisdiction:
-- Guyana
-last_reviewed: '2025-09-07'
-sources:
-- title: IFRS for SMEs Fact Sheet
-  url: https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
-  publisher: IFRS Foundation
-  date_accessed: '2025-09-07'
-kb_snippets:
-- question: What is interpreting financial statements for decision-making?
-  answer: 'Interpreting financial statements for decision-making refers to the accounting
-    concept or practice described in the article. It outlines the fundamentals and
-    explains why it matters in Guyana or the Caribbean. Next actions: Read this article
-    and follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform interpreting financial statements for decision-making
-    in heroBooks?
-  answer: 'This article provides a step-by-step guide on interpreting financial statements
-    for decision-making. It includes practical examples using Guyanese currency (GYD)
-    and highlights local compliance points. Next actions: Follow the step-by-step
-    section and use the linked heroBooks feature.'
-  type: howto
-- question: Why is interpreting financial statements for decision-making important?
-  answer: 'Understanding interpreting financial statements for decision-making helps
-    ensure accurate accounting records and compliance with GRA and NIS requirements.
-    It improves decision-making and financial transparency for Guyanese businesses.
-    Next actions: Implement the best practices outlined in the article.'
-  type: faq
-assistant_keys:
-- intent: ASK
-  key: interpreting_financial_statements_for_decision_making
-  synonyms:
   - interpreting
   - financial
+  - reporting
+  - for
+  - making
+  - decision
   - statements
-  link: /help
+jurisdiction:
+  - Guyana
+last_reviewed: '2025-09-07'
+sources:
+  - title: IFRS for SMEs Fact Sheet
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
+    publisher: IFRS Foundation
+    date_accessed: '2025-09-07'
+kb_snippets:
+  - question: What is interpreting financial statements for decision-making?
+    answer: >-
+      Interpreting financial statements for decision-making refers to the
+      accounting concept or practice described in the article. It outlines the
+      fundamentals and explains why it matters in Guyana or the Caribbean. Next
+      actions: Read this article and follow the steps in heroBooks.
+    type: definition
+  - question: >-
+      How do I perform interpreting financial statements for decision-making in
+      heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on interpreting financial
+      statements for decision-making. It includes practical examples using
+      Guyanese currency (GYD) and highlights local compliance points. Next
+      actions: Follow the step-by-step section and use the linked heroBooks
+      feature.
+    type: howto
+  - question: Why is interpreting financial statements for decision-making important?
+    answer: >-
+      Understanding interpreting financial statements for decision-making helps
+      ensure accurate accounting records and compliance with GRA and NIS
+      requirements. It improves decision-making and financial transparency for
+      Guyanese businesses. Next actions: Implement the best practices outlined
+      in the article.
+    type: faq
+assistant_keys:
+  - intent: ASK
+    key: interpreting_financial_statements_for_decision_making
+    synonyms:
+      - interpreting
+      - financial
+      - statements
+    link: /help
+status: draft
 ---
 
 ### Introduction

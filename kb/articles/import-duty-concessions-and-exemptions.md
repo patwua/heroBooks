@@ -2,61 +2,70 @@
 id: compliance-86
 slug: import-duty-concessions-and-exemptions
 title: Import duty concessions and exemptions
-summary: This article covers import duty concessions and exemptions for Guyanese businesses,
-  explaining key principles and how to apply them in practice.
+summary: >-
+  This article covers import duty concessions and exemptions for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: compliance
 tags:
-- duty
-- and
-- import
-- concessions
-- exemptions
-- compliance
+  - duty
+  - and
+  - import
+  - concessions
+  - exemptions
+  - compliance
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
-- title: BDO Guyana Budget Bulletin 2025
-  url: https://www.bdo.gy/getattachment/1d8dfc48-8c12-4dd2-909e-a49e19392cf4/BDO-Guyana-Budget-Bulletin-2025.pdf
-  publisher: BDO Guyana
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
+  - title: BDO Guyana Budget Bulletin 2025
+    url: >-
+      https://www.bdo.gy/getattachment/1d8dfc48-8c12-4dd2-909e-a49e19392cf4/BDO-Guyana-Budget-Bulletin-2025.pdf
+    publisher: BDO Guyana
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is import duty concessions and exemptions?
-  answer: 'Import duty concessions and exemptions refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform import duty concessions and exemptions in heroBooks?
-  answer: 'This article provides a step-by-step guide on import duty concessions and
-    exemptions. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: Why is import duty concessions and exemptions important?
-  answer: 'Understanding import duty concessions and exemptions helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is import duty concessions and exemptions?
+    answer: >-
+      Import duty concessions and exemptions refers to the accounting concept or
+      practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform import duty concessions and exemptions in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on import duty concessions and
+      exemptions. It includes practical examples using Guyanese currency (GYD)
+      and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is import duty concessions and exemptions important?
+    answer: >-
+      Understanding import duty concessions and exemptions helps ensure accurate
+      accounting records and compliance with GRA and NIS requirements. It
+      improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: import_duty_concessions_and_exemptions
-  synonyms:
-  - import
-  - duty
-  - concessions
-  link: /help
+  - intent: ASK
+    key: import_duty_concessions_and_exemptions
+    synonyms:
+      - import
+      - duty
+      - concessions
+    link: /help
+status: draft
 ---
 
 ### Introduction

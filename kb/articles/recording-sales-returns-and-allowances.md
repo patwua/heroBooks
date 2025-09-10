@@ -2,58 +2,66 @@
 id: sales-vat-11
 slug: recording-sales-returns-and-allowances
 title: Recording sales returns and allowances
-summary: This article covers recording sales returns and allowances for Guyanese businesses,
-  explaining key principles and how to apply them in practice.
+summary: >-
+  This article covers recording sales returns and allowances for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: sales-vat
 tags:
-- returns
-- and
-- allowances
-- sales
-- recording
-- vat
+  - returns
+  - and
+  - allowances
+  - sales
+  - recording
+  - vat
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is recording sales returns and allowances?
-  answer: 'Recording sales returns and allowances refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform recording sales returns and allowances in heroBooks?
-  answer: 'This article provides a step-by-step guide on recording sales returns and
-    allowances. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: Why is recording sales returns and allowances important?
-  answer: 'Understanding recording sales returns and allowances helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is recording sales returns and allowances?
+    answer: >-
+      Recording sales returns and allowances refers to the accounting concept or
+      practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform recording sales returns and allowances in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on recording sales returns and
+      allowances. It includes practical examples using Guyanese currency (GYD)
+      and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is recording sales returns and allowances important?
+    answer: >-
+      Understanding recording sales returns and allowances helps ensure accurate
+      accounting records and compliance with GRA and NIS requirements. It
+      improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: recording_sales_returns_and_allowances
-  synonyms:
-  - recording
-  - sales
-  - returns
-  link: /help
+  - intent: ASK
+    key: recording_sales_returns_and_allowances
+    synonyms:
+      - recording
+      - sales
+      - returns
+    link: /help
+status: draft
 ---
 
 ### Introduction

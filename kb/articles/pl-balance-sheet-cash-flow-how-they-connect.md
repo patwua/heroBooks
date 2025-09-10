@@ -1,62 +1,71 @@
 ---
 id: financial-reporting-65
 slug: pl-balance-sheet-cash-flow-how-they-connect
-title: "P&L, Balance Sheet, Cash Flow \u2014 how they connect"
-summary: "This article covers p&l, balance sheet, cash flow \u2014 how they connect\
-  \ for Guyanese businesses, explaining key principles and how to apply them in practice."
+title: 'P&L, Balance Sheet, Cash Flow — how they connect'
+summary: >-
+  This article covers p&l, balance sheet, cash flow — how they connect for
+  Guyanese businesses, explaining key principles and how to apply them in
+  practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: financial-reporting
 tags:
-- sheet
-- financial
-- pl
-- reporting
-- how
-- flow
-- connect
-- cash
-- they
-- balance
+  - sheet
+  - financial
+  - pl
+  - reporting
+  - how
+  - flow
+  - connect
+  - cash
+  - they
+  - balance
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: IFRS for SMEs Fact Sheet
-  url: https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
-  publisher: IFRS Foundation
-  date_accessed: '2025-09-07'
+  - title: IFRS for SMEs Fact Sheet
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
+    publisher: IFRS Foundation
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: "What is p&l, balance sheet, cash flow \u2014 how they connect?"
-  answer: "P&L, Balance Sheet, Cash Flow \u2014 how they connect refers to the accounting\
-    \ concept or practice described in the article. It outlines the fundamentals and\
-    \ explains why it matters in Guyana or the Caribbean. Next actions: Read this\
-    \ article and follow the steps in heroBooks."
-  type: definition
-- question: "How do I perform p&l, balance sheet, cash flow \u2014 how they connect\
-    \ in heroBooks?"
-  answer: "This article provides a step-by-step guide on p&l, balance sheet, cash\
-    \ flow \u2014 how they connect. It includes practical examples using Guyanese\
-    \ currency (GYD) and highlights local compliance points. Next actions: Follow\
-    \ the step-by-step section and use the linked heroBooks feature."
-  type: howto
-- question: "Why is p&l, balance sheet, cash flow \u2014 how they connect important?"
-  answer: "Understanding p&l, balance sheet, cash flow \u2014 how they connect helps\
-    \ ensure accurate accounting records and compliance with GRA and NIS requirements.\
-    \ It improves decision-making and financial transparency for Guyanese businesses.\
-    \ Next actions: Implement the best practices outlined in the article."
-  type: faq
+  - question: 'What is p&l, balance sheet, cash flow — how they connect?'
+    answer: >-
+      P&L, Balance Sheet, Cash Flow — how they connect refers to the accounting
+      concept or practice described in the article. It outlines the fundamentals
+      and explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: >-
+      How do I perform p&l, balance sheet, cash flow — how they connect in
+      heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on p&l, balance sheet, cash
+      flow — how they connect. It includes practical examples using Guyanese
+      currency (GYD) and highlights local compliance points. Next actions:
+      Follow the step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: 'Why is p&l, balance sheet, cash flow — how they connect important?'
+    answer: >-
+      Understanding p&l, balance sheet, cash flow — how they connect helps
+      ensure accurate accounting records and compliance with GRA and NIS
+      requirements. It improves decision-making and financial transparency for
+      Guyanese businesses. Next actions: Implement the best practices outlined
+      in the article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: pl_balance_sheet_cash_flow_how_they_connect
-  synonyms:
-  - pl
-  - balance
-  - sheet
-  link: /help
+  - intent: ASK
+    key: pl_balance_sheet_cash_flow_how_they_connect
+    synonyms:
+      - pl
+      - balance
+      - sheet
+    link: /help
+status: draft
 ---
 
 ### Introduction

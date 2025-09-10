@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="tbq" role="img">
+  <title id="tbq">Trial balance corrections quiz</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c:#2563eb; --fg:#0f172a }
+      .card{fill:none;stroke:var(--fg);stroke-width:10;rx:16}
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+    ]]></style>
+  </defs>
+  <rect class="card" x="40" y="64" width="180" height="96"/>
+  <text x="52" y="112" class="t">Find difference</text>
+  <rect class="card" x="216" y="64" width="180" height="96"/>
+  <text x="228" y="112" class="t">Fix errors</text>
+  <rect class="card" x="140" y="224" width="232" height="96"/>
+  <text x="156" y="272" class="t">Close suspense → 0</text>
+</svg>
+

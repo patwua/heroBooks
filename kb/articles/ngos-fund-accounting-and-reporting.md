@@ -2,59 +2,67 @@
 id: industry-guides-129
 slug: ngos-fund-accounting-and-reporting
 title: 'NGOs: fund accounting and reporting'
-summary: 'This article covers ngos: fund accounting and reporting for Guyanese businesses,
-  explaining key principles and how to apply them in practice.'
+summary: >-
+  This article covers ngos: fund accounting and reporting for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: industry-guides
 tags:
-- fund
-- and
-- guides
-- reporting
-- accounting
-- industry
-- ngos
+  - fund
+  - and
+  - guides
+  - reporting
+  - accounting
+  - industry
+  - ngos
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: 'What is ngos: fund accounting and reporting?'
-  answer: 'NGOs: fund accounting and reporting refers to the accounting concept or
-    practice described in the article. It outlines the fundamentals and explains why
-    it matters in Guyana or the Caribbean. Next actions: Read this article and follow
-    the steps in heroBooks.'
-  type: definition
-- question: 'How do I perform ngos: fund accounting and reporting in heroBooks?'
-  answer: 'This article provides a step-by-step guide on ngos: fund accounting and
-    reporting. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: 'Why is ngos: fund accounting and reporting important?'
-  answer: 'Understanding ngos: fund accounting and reporting helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: 'What is ngos: fund accounting and reporting?'
+    answer: >-
+      NGOs: fund accounting and reporting refers to the accounting concept or
+      practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: 'How do I perform ngos: fund accounting and reporting in heroBooks?'
+    answer: >-
+      This article provides a step-by-step guide on ngos: fund accounting and
+      reporting. It includes practical examples using Guyanese currency (GYD)
+      and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: 'Why is ngos: fund accounting and reporting important?'
+    answer: >-
+      Understanding ngos: fund accounting and reporting helps ensure accurate
+      accounting records and compliance with GRA and NIS requirements. It
+      improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: ngos_fund_accounting_and_reporting
-  synonyms:
-  - ngos
-  - fund
-  - accounting
-  link: /help
+  - intent: ASK
+    key: ngos_fund_accounting_and_reporting
+    synonyms:
+      - ngos
+      - fund
+      - accounting
+    link: /help
+status: draft
 ---
 
 ### Introduction

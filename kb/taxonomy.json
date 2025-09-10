@@ -5,6 +5,10 @@
     { "id": "payroll", "name": "Payroll (PAYE & NIS)" },
     { "id": "banking", "name": "Banking & Reconciliation" },
     { "id": "inventory-costing", "name": "Inventory & Costing" },
-    { "id": "compliance", "name": "Compliance & Deadlines" }
+    { "id": "compliance", "name": "Compliance & Deadlines" },
+    { "id": "controls", "name": "Controls (Cash & Processes)" },
+    { "id": "receivables", "name": "Receivables & Credit Control" },
+    { "id": "cash", "name": "Cash & Petty Cash" },
+    { "id": "bookkeeping", "name": "Bookkeeping & Close" }
   ]
 }

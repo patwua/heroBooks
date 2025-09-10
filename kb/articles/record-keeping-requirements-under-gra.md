@@ -1,84 +1,57 @@
 ---
-id: compliance-80
+id: gra-record-keeping
 slug: record-keeping-requirements-under-gra
-title: Record-keeping requirements under GRA
-summary: This article covers record-keeping requirements under gra for Guyanese businesses,
-  explaining key principles and how to apply them in practice.
-level: Intermediate
-audience:
-- Accountant
-- Owner
+title: GRA record-keeping — what to keep and for how long (8-year rule)
+summary: The essentials of retaining books and records for 8 years, VAT-specific record rules, and a simple folder scheme to keep audits painless.
+level: Beginner
+audience: [Owner, Accountant, Clerk]
 format: Guide
 category_id: compliance
-tags:
-- under
-- gra
-- requirements
-- keeping
-- record
-- compliance
-jurisdiction:
-- Guyana
-last_reviewed: '2025-09-07'
+tags: [records, retention, VAT, audit, Guyana]
+jurisdiction: [Guyana]
+last_reviewed: '2025-09-09'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
-- title: BDO Guyana Budget Bulletin 2025
-  url: https://www.bdo.gy/getattachment/1d8dfc48-8c12-4dd2-909e-a49e19392cf4/BDO-Guyana-Budget-Bulletin-2025.pdf
-  publisher: BDO Guyana
-  date_accessed: '2025-09-07'
+  - title: GRA FAQ — How long should records be kept?
+    url: https://www.gra.gov.gy/faqs/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-09'
+  - title: GRA VAT — Books & Records to be maintained for VAT purposes
+    url: https://dpi.gov.gy/wp-content/uploads/2021/06/10in-x-3col-GRA-VAT-POLICY-22-Books-and-Records-to-be-maintained-for-VAT-Purposes.pdf
+    publisher: GRA (policy excerpt via DPI)
+    date_accessed: '2025-09-09'
+  - title: VAT Act & Regulations (record keeping, invoices)
+    url: https://www.gra.gov.gy/wp-content/uploads/2022/07/VAT-Act-Regul.-Trans.-Reg.-revised-July-15-2022.pdf
+    publisher: GRA
+    date_accessed: '2025-09-09'
 kb_snippets:
-- question: What is record-keeping requirements under gra?
-  answer: 'Record-keeping requirements under GRA refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform record-keeping requirements under gra in heroBooks?
-  answer: 'This article provides a step-by-step guide on record-keeping requirements
-    under gra. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: Why is record-keeping requirements under gra important?
-  answer: 'Understanding record-keeping requirements under gra helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
-assistant_keys:
-- intent: ASK
-  key: record_keeping_requirements_under_gra
-  synonyms:
-  - record
-  - keeping
-  - requirements
-  link: /help
+  - question: How long do I keep my records?
+    answer: At least eight years after the transaction is completed (Income Tax Act s.65(1) per GRA FAQ). Keep VAT records and tax invoices within the same retention window.
+    type: faq
+  - question: What should a VAT-registered business keep?
+    answer: Tax invoices, credit/debit notes, supply/purchase ledgers, Z-reports, bank statements, import entries, and evidence supporting zero-rated/exempt supplies; all in English and GYD.
+    type: howto
 ---
 
-### Introduction
-Record-keeping requirements under GRA is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.
+## Retention basics (Guyana)
+Keep books and records for at least 8 years after the transaction is completed. For VAT, records must be in English, amounts expressed in Guyana dollars, and tax-invoicing rules apply (invoice/credit note sequences).
 
-### Key Concepts
-Discuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.
+## What to file (starter list)
+Sales: tax-invoices, Z-reports/daily sales, credit notes, contracts.  
+Purchases: supplier invoices, import entries, duty/VAT slips.  
+Banking: statements, deposit slips, merchant settlements.  
+Payroll: PAYE schedules, NIS contributions, payslips.  
+Fixed assets: invoices, capitalization support, disposal docs.  
+General: ledgers, trial balances, management accounts, returns filed.
 
-### Guyana specifics
-Provide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.
+## A practical folder scheme
+`/YYYY/01_January/...` with subfolders `Sales/`, `Purchases/`, `Bank/`, `Payroll/`, `VAT/`, `FixedAssets/`, `Other/`. File PDFs by YYYY-MM-DD_vendor_amount. Keep an index (CSV) for big months.
 
-### Step-by-step guidance
-Outline practical steps and reference heroBooks features or pages using appropriate links.
+## Digital storage & backups
+Scan paper, store read-only PDFs plus source files. Back up to a second location (cloud/drive) and test restores quarterly. Restrict delete rights; keep an audit trail for edits.
 
-### Worked example
-Include a practical example using Guyanese dollars (GYD) to demonstrate the concept.
+## VAT notes
+– If you issue VAT-inclusive receipts, retain the calculation showing output VAT extracted (e.g., 7/57 fraction).  
+– Keep evidence for zero-rated exports or special reliefs.
 
-### Common pitfalls & checks
-Highlight typical mistakes and provide tips on how to avoid them.
-
-### Glossary
-Define important terms related to the topic.
-
-### References
-List the sources cited in the article with retrieval dates.
+## Illustration
+> Figure: see /public/kb/illustrations/records-8-years.svg (1:1)

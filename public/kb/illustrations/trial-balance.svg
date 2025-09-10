@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="tb" role="img">
+  <title id="tb">TB flow: Unadjusted → Adjusted → Post-closing</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c1:#0ea5e9; --c2:#22c55e; --c3:#a78bfa; --fg:#111 }
+      .card{fill:none;stroke:#0f172a;stroke-width:10;rx:16}
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+    ]]></style>
+  </defs>
+  <rect class="card" x="32" y="64" width="144" height="96"/>
+  <text x="44" y="112" class="t">Unadjusted TB</text>
+  <path d="M176 112h64" stroke="#0f172a" stroke-width="10"/>
+  <rect class="card" x="240" y="64" width="144" height="96"/>
+  <text x="252" y="112" class="t">Adjusted TB</text>
+  <path d="M384 112h64" stroke="#0f172a" stroke-width="10"/>
+  <rect class="card" x="432" y="64" width="144" height="96" transform="translate(-16,0)"/>
+  <text x="444" y="112" text-anchor="middle" class="t">Post-closing TB</text>
+</svg>
+

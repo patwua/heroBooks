@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import yaml from "yaml";
 import React from "react";
 import KbShell from "./KbShell";
-import MarketingHeader from "@/components/marketing/MarketingHeader";
+import KbHeader from "@/components/kb/KbHeader";
 import Footer from "@/components/Footer";
 
 function getArticles() {
@@ -16,9 +16,11 @@ function getArticles() {
       const { data } = matter(
         fs.readFileSync(path.join(dir, file), "utf8")
       );
-      return { slug: data.slug, title: data.title };
+      return { slug: data.slug, title: data.title, category_id: (data as any)?.category_id, status: (data as any)?.status, draft: (data as any)?.draft } as any;
     })
     .filter((a) => a.slug && a.title)
+    // Hide drafts from navigation
+    .filter((a) => !(a.status === "draft" || a.draft === true))
     .sort((a, b) => (a.title as string).localeCompare(b.title as string));
 }
 
@@ -37,15 +39,14 @@ export default function KnowledgeBaseLayout({
 }) {
   const articles = getArticles();
   const rightRail = getRightRail();
-  // Wrap KB with the same marketing scaffold (sticky header + footer)
-    return (
-      <div className="min-h-screen flex flex-col">
-        <MarketingHeader />
-        <KbShell articles={articles} rightRail={rightRail}>
-          {children}
-        </KbShell>
-        {/* Footer opens external links in new tab when authenticated (logic inside) */}
-        <Footer />
-      </div>
-    );
+  // Use shared MarketingHeader (single search), no duplicate KB header
+  return (
+    <div className="min-h-screen flex flex-col">
+      <KbHeader />
+      <KbShell articles={articles} rightRail={rightRail}>
+        {children}
+      </KbShell>
+      <Footer />
+    </div>
+  );
   }

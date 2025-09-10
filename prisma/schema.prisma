@@ -545,6 +545,21 @@ model TelemetryEvent {
   createdAt DateTime @default(now())
 }
 
+model KbEvent {
+  id        String   @id @default(cuid())
+  userId    String?
+  orgId     String?
+  slug      String
+  kind      String   // 'view' | 'dismiss'
+  createdAt DateTime @default(now())
+  user      User?    @relation(fields: [userId], references: [id])
+  org       Org?     @relation(fields: [orgId], references: [id])
+
+  @@index([userId, createdAt])
+  @@index([orgId, createdAt])
+  @@index([slug, createdAt])
+}
+
 model UserSettings {
   id                 String  @id @default(cuid())
   userId             String  @unique

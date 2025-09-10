@@ -2,57 +2,64 @@
 id: financial-reporting-66
 slug: aging-schedules-arap-best-practices
 title: 'Aging schedules: AR/AP best practices'
-summary: 'This article covers aging schedules: ar/ap best practices for Guyanese businesses,
-  explaining key principles and how to apply them in practice.'
+summary: >-
+  This article covers aging schedules: ar/ap best practices for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: financial-reporting
 tags:
-- financial
-- best
-- reporting
-- arap
-- schedules
-- practices
-- aging
+  - financial
+  - best
+  - reporting
+  - arap
+  - schedules
+  - practices
+  - aging
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: IFRS for SMEs Fact Sheet
-  url: https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
-  publisher: IFRS Foundation
-  date_accessed: '2025-09-07'
+  - title: IFRS for SMEs Fact Sheet
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
+    publisher: IFRS Foundation
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: 'What is aging schedules: ar/ap best practices?'
-  answer: 'Aging schedules: AR/AP best practices refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: 'How do I perform aging schedules: ar/ap best practices in heroBooks?'
-  answer: 'This article provides a step-by-step guide on aging schedules: ar/ap best
-    practices. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: 'Why is aging schedules: ar/ap best practices important?'
-  answer: 'Understanding aging schedules: ar/ap best practices helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: 'What is aging schedules: ar/ap best practices?'
+    answer: >-
+      Aging schedules: AR/AP best practices refers to the accounting concept or
+      practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: 'How do I perform aging schedules: ar/ap best practices in heroBooks?'
+    answer: >-
+      This article provides a step-by-step guide on aging schedules: ar/ap best
+      practices. It includes practical examples using Guyanese currency (GYD)
+      and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: 'Why is aging schedules: ar/ap best practices important?'
+    answer: >-
+      Understanding aging schedules: ar/ap best practices helps ensure accurate
+      accounting records and compliance with GRA and NIS requirements. It
+      improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: aging_schedules_arap_best_practices
-  synonyms:
-  - aging
-  - schedules
-  - arap
-  link: /help
+  - intent: ASK
+    key: aging_schedules_arap_best_practices
+    synonyms:
+      - aging
+      - schedules
+      - arap
+    link: /help
+status: draft
 ---
 
 ### Introduction

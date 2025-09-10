@@ -1,84 +1,70 @@
 ---
-id: sales-vat-16
+id: bad-debts-allowance
 slug: bad-debts-and-allowance-for-doubtful-accounts
-title: Bad debts and allowance for doubtful accounts
-summary: This article covers bad debts and allowance for doubtful accounts for Guyanese
-  businesses, explaining key principles and how to apply them in practice.
-level: Beginner
-audience:
-- Owner
-- Accountant
-- Clerk
+title: Bad debts & allowance for doubtful accounts (IFRS for SMEs, GYD)
+summary: How to recognise write-offs, measure an allowance, and post year-end journals under IFRS for SMEs Section 11. Includes a quick aging method and GYD entries.
+level: Intermediate
+audience: [Accountant, Owner]
 format: Guide
-category_id: sales-vat
-tags:
-- and
-- sales
-- for
-- accounts
-- doubtful
-- allowance
-- bad
-- vat
-- debts
-jurisdiction:
-- Guyana
-last_reviewed: '2025-09-07'
+category_id: receivables
+tags: [receivables, impairment, allowance, IFRS for SMEs, aging]
+jurisdiction: [Guyana]
+last_reviewed: '2025-09-09'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: IFRS for SMEs — Educational Module 11 (Financial Instruments), third edition
+    url: https://www.ifrs.org/content/dam/ifrs/supporting-implementation/smes/2025-modules/module-11.pdf
+    publisher: IFRS Foundation
+    date_accessed: '2025-09-09'
+  - title: IFRS for SMEs (Third edition, 2025)
+    url: https://www.ifrs.org/content/dam/ifrs/publications/ifrs-for-smes/english/2025/ifrs-for-smes.pdf?bypass=on
+    publisher: IFRS Foundation
+    date_accessed: '2025-09-09'
+  - title: ACCA — Dealing with debtors (allowance & write-offs)
+    url: https://www.accaglobal.com/africa/en/student/exam-support-resources/fundamentals-exams-study-resources/f7/technical-articles/dealing-debtors.html
+    publisher: ACCA
+    date_accessed: '2025-09-09'
 kb_snippets:
-- question: What is bad debts and allowance for doubtful accounts?
-  answer: 'Bad debts and allowance for doubtful accounts refers to the accounting
-    concept or practice described in the article. It outlines the fundamentals and
-    explains why it matters in Guyana or the Caribbean. Next actions: Read this article
-    and follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform bad debts and allowance for doubtful accounts in heroBooks?
-  answer: 'This article provides a step-by-step guide on bad debts and allowance for
-    doubtful accounts. It includes practical examples using Guyanese currency (GYD)
-    and highlights local compliance points. Next actions: Follow the step-by-step
-    section and use the linked heroBooks feature.'
-  type: howto
-- question: Why is bad debts and allowance for doubtful accounts important?
-  answer: 'Understanding bad debts and allowance for doubtful accounts helps ensure
-    accurate accounting records and compliance with GRA and NIS requirements. It improves
-    decision-making and financial transparency for Guyanese businesses. Next actions:
-    Implement the best practices outlined in the article.'
-  type: faq
-assistant_keys:
-- intent: ASK
-  key: bad_debts_and_allowance_for_doubtful_accounts
-  synonyms:
-  - bad
-  - debts
-  - and
-  link: /help
+  - question: Does IFRS for SMEs use expected credit loss (ECL)?
+    answer: No. Section 11 uses an incurred-loss impairment approach for financial assets at cost or amortised cost. Recognise impairment when there is objective evidence a loss event occurred (e.g., default, significant financial difficulty).
+    type: faq
+  - question: What journals do I post for an allowance change?
+    answer: |
+      Increase: Dr Impairment expense / Cr Allowance for doubtful accounts.
+      Decrease (reversal): Dr Allowance / Cr Impairment income.
+      Write-off: Dr Allowance / Cr Trade receivables.
+    type: howto
 ---
 
-### Introduction
-Bad debts and allowance for doubtful accounts is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.
+## What counts as “objective evidence”?
+Common indicators include significant delinquency (e.g., >90 days past due), debtor bankruptcy/insolvency, or adverse changes in payment status. Under Section 11 you assess individually significant receivables individually, and the rest collectively (e.g., aging buckets).  
 
-### Key Concepts
-Discuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.
+### A simple aging-bucket method (example, G$)
+Assume trade receivables **G$10,500,000**:  
 
-### Guyana specifics
-Provide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.
+| Bucket | Balance | % Loss | Expected loss |
+|---|---:|---:|---:|
+| Current | 6,000,000 | 1% | 60,000 |
+| 31–60 days | 2,500,000 | 4% | 100,000 |
+| 61–90 days | 1,500,000 | 12% | 180,000 |
+| >90 days | 500,000 | 40% | 200,000 |
+| **Total** | **10,500,000** |  | **540,000** |
 
-### Step-by-step guidance
-Outline practical steps and reference heroBooks features or pages using appropriate links.
+If last year’s allowance was **G$420,000**, the **increase** is **G$120,000**:  
+**Dr Impairment expense 120,000 / Cr Allowance 120,000**.  
 
-### Worked example
-Include a practical example using Guyanese dollars (GYD) to demonstrate the concept.
+### Writing off a specific debtor (after collection efforts)
+When a G$80,000 balance is deemed uncollectible:  
+**Dr Allowance 80,000 / Cr Trade receivables 80,000**.  
+If later recovered **G$20,000**: **Dr Cash 20,000 / Cr Impairment recovery 20,000**.
 
-### Common pitfalls & checks
-Highlight typical mistakes and provide tips on how to avoid them.
+## Documentation & controls
+- Keep aged receivables reports and collection notes.  
+- Maintain a short credit policy (limits, terms, stop-supply triggers).  
+- Review top 10 customers monthly; re-age and re-assess allowance rates at quarter-end.  
+- Separate write-off approval from collection duties.
 
-### Glossary
-Define important terms related to the topic.
+## VAT note (Guyana)
+VAT is generally tied to tax invoices and supplies (time-of-supply rules). A bad-debt write-off does not itself create VAT, but VAT adjustments may apply where output tax was recognised and the debt becomes irrecoverable—confirm against current GRA guidance.
 
-### References
-List the sources cited in the article with retrieval dates.
+## Illustration
+> Figure: see /public/kb/illustrations/bad-debts-allowance.svg (1:1)

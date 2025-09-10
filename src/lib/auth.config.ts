@@ -47,6 +47,8 @@ providers.push(
 export const authConfig = {
   adapter: PrismaAdapter(prisma),
   session: { strategy: "jwt", maxAge: 30 * 24 * 60 * 60 },
+  // Trust x-forwarded-* headers for correct host/proto behind proxies
+  trustHost: true,
   providers,
   pages: {
     signIn: "/sign-in",

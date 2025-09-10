@@ -2,59 +2,69 @@
 id: industry-guides-130
 slug: agriculture-accounting-for-crops-livestock
 title: 'Agriculture: accounting for crops & livestock'
-summary: 'This article covers agriculture: accounting for crops & livestock for Guyanese
-  businesses, explaining key principles and how to apply them in practice.'
+summary: >-
+  This article covers agriculture: accounting for crops & livestock for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: industry-guides
 tags:
-- guides
-- accounting
-- for
-- livestock
-- industry
-- agriculture
-- crops
-jurisdiction:
-- Guyana
-last_reviewed: '2025-09-07'
-sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
-kb_snippets:
-- question: 'What is agriculture: accounting for crops & livestock?'
-  answer: 'Agriculture: accounting for crops & livestock refers to the accounting
-    concept or practice described in the article. It outlines the fundamentals and
-    explains why it matters in Guyana or the Caribbean. Next actions: Read this article
-    and follow the steps in heroBooks.'
-  type: definition
-- question: 'How do I perform agriculture: accounting for crops & livestock in heroBooks?'
-  answer: 'This article provides a step-by-step guide on agriculture: accounting for
-    crops & livestock. It includes practical examples using Guyanese currency (GYD)
-    and highlights local compliance points. Next actions: Follow the step-by-step
-    section and use the linked heroBooks feature.'
-  type: howto
-- question: 'Why is agriculture: accounting for crops & livestock important?'
-  answer: 'Understanding agriculture: accounting for crops & livestock helps ensure
-    accurate accounting records and compliance with GRA and NIS requirements. It improves
-    decision-making and financial transparency for Guyanese businesses. Next actions:
-    Implement the best practices outlined in the article.'
-  type: faq
-assistant_keys:
-- intent: ASK
-  key: agriculture_accounting_for_crops_livestock
-  synonyms:
-  - agriculture
+  - guides
   - accounting
   - for
-  link: /help
+  - livestock
+  - industry
+  - agriculture
+  - crops
+jurisdiction:
+  - Guyana
+last_reviewed: '2025-09-07'
+sources:
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
+kb_snippets:
+  - question: 'What is agriculture: accounting for crops & livestock?'
+    answer: >-
+      Agriculture: accounting for crops & livestock refers to the accounting
+      concept or practice described in the article. It outlines the fundamentals
+      and explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: >-
+      How do I perform agriculture: accounting for crops & livestock in
+      heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on agriculture: accounting for
+      crops & livestock. It includes practical examples using Guyanese currency
+      (GYD) and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: 'Why is agriculture: accounting for crops & livestock important?'
+    answer: >-
+      Understanding agriculture: accounting for crops & livestock helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
+assistant_keys:
+  - intent: ASK
+    key: agriculture_accounting_for_crops_livestock
+    synonyms:
+      - agriculture
+      - accounting
+      - for
+    link: /help
+status: draft
 ---
 
 ### Introduction

@@ -1,85 +1,76 @@
 ---
-id: getting-started-2
+id: chart-of-accounts-for-a-small-guyanese-business
 slug: chart-of-accounts-for-a-small-guyanese-business
-title: Chart of Accounts for a small Guyanese business
-summary: This article covers chart of accounts for a small guyanese business for Guyanese
-  businesses, explaining key principles and how to apply them in practice.
+title: Chart of Accounts for a small Guyanese business (starter set)
+summary: A practical starter COA you can copy into heroBooks — including VAT (14%), PAYE, and NIS accounts — plus tips to expand as you grow.
 level: Beginner
-audience:
-- Owner
-- Accountant
-- Clerk
+audience: [Owner, Accountant, Clerk]
 format: Guide
-category_id: getting-started
-tags:
-- chart
-- getting
-- for
-- accounts
-- small
-- a
-- of
-- guyanese
-- business
-- started
-jurisdiction:
-- Guyana
-last_reviewed: '2025-09-07'
+category_id: start-here
+tags: [chart of accounts, VAT, PAYE, NIS]
+jurisdiction: [Guyana]
+last_reviewed: "2025-09-09"
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: "VAT Policy #13 — Standard rate 14% (pricing guidance)"
+    url: "https://www.gra.gov.gy/vat-policy-13-vat-and-tax-inclusive-pricing/"
+    publisher: Guyana Revenue Authority
+    date_accessed: "2025-09-09"
+  - title: "NIS contribution split (5.6% employee, 8.4% employer)"
+    url: "https://www.nis.org.gy/information_on_contributions"
+    publisher: National Insurance Scheme (Guyana)
+    date_accessed: "2025-09-09"
 kb_snippets:
-- question: What is chart of accounts for a small guyanese business?
-  answer: 'Chart of Accounts for a small Guyanese business refers to the accounting
-    concept or practice described in the article. It outlines the fundamentals and
-    explains why it matters in Guyana or the Caribbean. Next actions: Read this article
-    and follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform chart of accounts for a small guyanese business in heroBooks?
-  answer: 'This article provides a step-by-step guide on chart of accounts for a small
-    guyanese business. It includes practical examples using Guyanese currency (GYD)
-    and highlights local compliance points. Next actions: Follow the step-by-step
-    section and use the linked heroBooks feature.'
-  type: howto
-- question: Why is chart of accounts for a small guyanese business important?
-  answer: 'Understanding chart of accounts for a small guyanese business helps ensure
-    accurate accounting records and compliance with GRA and NIS requirements. It improves
-    decision-making and financial transparency for Guyanese businesses. Next actions:
-    Implement the best practices outlined in the article.'
-  type: faq
-assistant_keys:
-- intent: ASK
-  key: chart_of_accounts_for_a_small_guyanese_business
-  synonyms:
-  - chart
-  - of
-  - accounts
-  link: /help
+  - question: Do I need separate accounts for VAT?
+    answer: Yes. Use Output VAT (liability) for tax you charge, and Input VAT (asset/contra) for VAT you paid that’s claimable.
+    type: faq
 ---
 
-### Introduction
-Chart of Accounts for a small Guyanese business is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.
+## Starter COA (copy/paste idea)
+**1000 Assets**  
+- 1010 Cash on hand  
+- 1020 Bank — GYD  
+- 1200 Accounts receivable  
+- 1300 **Input VAT (claimable)**  
+- 1400 Prepaid expenses  
+- 1500 Inventory  
+- 1600 Fixed assets
 
-### Key Concepts
-Discuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.
+**2000 Liabilities**  
+- 2100 Accounts payable  
+- 2200 **Output VAT (payable)** *(standard rate 14%)* :contentReference[oaicite:12]{index=12}  
+- 2300 **PAYE payable**  
+- 2310 **NIS — employee** (5.6%)  
+- 2320 **NIS — employer** (8.4%) :contentReference[oaicite:13]{index=13}
 
-### Guyana specifics
-Provide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.
+**3000 Equity**  
+- 3100 Owner’s capital  
+- 3200 Retained earnings
 
-### Step-by-step guidance
-Outline practical steps and reference heroBooks features or pages using appropriate links.
+**4000 Revenue**  
+- 4100 Sales — standard rated  
+- 4110 Sales — zero-rated  
+- 4120 Sales — exempt
 
-### Worked example
-Include a practical example using Guyanese dollars (GYD) to demonstrate the concept.
+**5000 Cost of Sales**  
+- 5100 Purchases — standard rated  
+- 5110 Freight/landed costs
 
-### Common pitfalls & checks
-Highlight typical mistakes and provide tips on how to avoid them.
+**6000 Expenses**  
+- 6100 Wages & salaries  
+- 6110 PAYE expense (contra to 2300 on payment)  
+- 6120 NIS — employer expense (contra to 2320 on payment) :contentReference[oaicite:14]{index=14}  
+- 6200 Rent & rates  
+- 6300 Utilities  
+- 6400 Repairs & maintenance  
+- 6500 Depreciation
 
-### Glossary
-Define important terms related to the topic.
+## How VAT flows (quick view)
+1) Sale G$11,400 (incl. VAT 14%): **Cr 4100 Sales 10,000; Cr 2200 Output VAT 1,400; Dr 1020 Bank 11,400**.  
+2) Purchase G$5,700 (incl. VAT): **Dr 5100 Purchases 5,000; Dr 1300 Input VAT 700; Cr 2100 A/P 5,700**.  
+3) Month-end VAT payable = **Output VAT − Input VAT**; file and pay by **the 21st**. :contentReference[oaicite:15]{index=15}
 
-### References
-List the sources cited in the article with retrieval dates.
+## Tips
+- Keep **zero-rated and exempt** sales in separate revenue accounts for VAT returns.  
+- Map payroll so **NIS employer** hits expense (6120) and the **liability** clears when remitted. :contentReference[oaicite:16]{index=16}
+
+> **Optional illustration:** a simple 1:1 flow diagram (Sales → Output VAT; Purchases → Input VAT; Net to GRA).

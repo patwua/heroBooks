@@ -10,22 +10,15 @@ import UserMenu from "./UserMenu";
 export default async function Topbar() {
   const inDemo = await isDemoModeFromCookies();
   return (
-    <header className="sticky top-0 z-50 h-16 border-b bg-background/70 backdrop-blur">
+    <header className="sticky top-0 z-50 h-24 border-b bg-background/70 backdrop-blur">
       {inDemo && (
         <div className="h-8 border-b bg-amber-50 text-amber-900 text-xs flex items-center justify-center">
           You’re viewing the demo org. Upgrading applies to your real company file.
         </div>
       )}
-      <div className="container mx-auto h-16 px-4 flex items-center gap-4">
+      <div className="container mx-auto h-24 px-4 flex items-center gap-4">
         <Link href="/dashboard" className="flex items-center gap-2" aria-label="Dashboard home">
-          <Image
-            src="/logos/heroBooks mini Color.png"
-            alt="heroBooks"
-            width={26}
-            height={26}
-            className="h-6 w-6"
-            priority
-          />
+          <Image src="/logos/heroBooks%20mini%20Color.webp" alt="heroBooks" width={96} height={96} className="h-20 w-20" priority />
           <span className="font-semibold tracking-tight hidden sm:inline">
             heroBooks
           </span>

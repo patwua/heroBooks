@@ -2,59 +2,67 @@
 id: purchases-payables-19
 slug: withholding-tax-overview-guyana-context
 title: Withholding tax overview (Guyana context)
-summary: This article covers withholding tax overview (guyana context) for Guyanese
+summary: >-
+  This article covers withholding tax overview (guyana context) for Guyanese
   businesses, explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Concept
 category_id: purchases-payables
 tags:
-- context
-- payables
-- purchases
-- guyana
-- withholding
-- overview
-- tax
+  - context
+  - payables
+  - purchases
+  - guyana
+  - withholding
+  - overview
+  - tax
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is withholding tax overview (guyana context)?
-  answer: 'Withholding tax overview (Guyana context) refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform withholding tax overview (guyana context) in heroBooks?
-  answer: 'This article provides a step-by-step guide on withholding tax overview
-    (guyana context). It includes practical examples using Guyanese currency (GYD)
-    and highlights local compliance points. Next actions: Follow the step-by-step
-    section and use the linked heroBooks feature.'
-  type: howto
-- question: Why is withholding tax overview (guyana context) important?
-  answer: 'Understanding withholding tax overview (guyana context) helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is withholding tax overview (guyana context)?
+    answer: >-
+      Withholding tax overview (Guyana context) refers to the accounting concept
+      or practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform withholding tax overview (guyana context) in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on withholding tax overview
+      (guyana context). It includes practical examples using Guyanese currency
+      (GYD) and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is withholding tax overview (guyana context) important?
+    answer: >-
+      Understanding withholding tax overview (guyana context) helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: withholding_tax_overview_guyana_context
-  synonyms:
-  - withholding
-  - tax
-  - overview
-  link: /help
+  - intent: ASK
+    key: withholding_tax_overview_guyana_context
+    synonyms:
+      - withholding
+      - tax
+      - overview
+    link: /help
+status: draft
 ---
 
 ### Introduction

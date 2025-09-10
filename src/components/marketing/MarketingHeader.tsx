@@ -16,10 +16,10 @@ export default async function MarketingHeader() {
           Early adopters: 2 months 50% off on Business plan. Use code <span className="font-semibold">GYA-LAUNCH</span>.
         </div>
       )}
-      <div className="mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div className="mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Left: logo + primary CTA */}
-        <Link href="/" className="flex items-center gap-3">
-          <Image src="/logos/logo.svg" alt="heroBooks" width={160} height={48} priority className="h-12 w-auto" />
+        <Link href="/" className="flex items-center gap-3" aria-label="heroBooks home">
+          <Image src="/logos/heroBook%20Full%20Color.webp" alt="heroBooks" width={540} height={144} priority className="h-20 w-auto" />
         </Link>
         <div className="flex items-center gap-6">
           <Link href="/#pricing" className="hidden sm:inline-flex rounded-xl bg-blue-600 px-4 py-2 text-white text-sm hover:bg-blue-700">
@@ -33,7 +33,6 @@ export default async function MarketingHeader() {
           <Link href="/#pricing">Pricing</Link>
           <Link href="/about">About</Link>
           <Link href="/help">Help</Link>
-          <Link href="/kb">Docs/Guides</Link>
         </nav>
         <div className="flex items-center gap-2">
           {/* Expandable search */}

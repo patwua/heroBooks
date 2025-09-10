@@ -2,56 +2,63 @@
 id: real-estate-99
 slug: real-estate-vat-treatment
 title: Real estate VAT treatment
-summary: This article covers real estate vat treatment for Guyanese businesses, explaining
-  key principles and how to apply them in practice.
+summary: >-
+  This article covers real estate vat treatment for Guyanese businesses,
+  explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: real-estate
 tags:
-- treatment
-- real
-- vat
-- estate
+  - treatment
+  - real
+  - vat
+  - estate
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is real estate vat treatment?
-  answer: 'Real estate VAT treatment refers to the accounting concept or practice
-    described in the article. It outlines the fundamentals and explains why it matters
-    in Guyana or the Caribbean. Next actions: Read this article and follow the steps
-    in heroBooks.'
-  type: definition
-- question: How do I perform real estate vat treatment in heroBooks?
-  answer: 'This article provides a step-by-step guide on real estate vat treatment.
-    It includes practical examples using Guyanese currency (GYD) and highlights local
-    compliance points. Next actions: Follow the step-by-step section and use the linked
-    heroBooks feature.'
-  type: howto
-- question: Why is real estate vat treatment important?
-  answer: 'Understanding real estate vat treatment helps ensure accurate accounting
-    records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is real estate vat treatment?
+    answer: >-
+      Real estate VAT treatment refers to the accounting concept or practice
+      described in the article. It outlines the fundamentals and explains why it
+      matters in Guyana or the Caribbean. Next actions: Read this article and
+      follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform real estate vat treatment in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on real estate vat treatment.
+      It includes practical examples using Guyanese currency (GYD) and
+      highlights local compliance points. Next actions: Follow the step-by-step
+      section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is real estate vat treatment important?
+    answer: >-
+      Understanding real estate vat treatment helps ensure accurate accounting
+      records and compliance with GRA and NIS requirements. It improves
+      decision-making and financial transparency for Guyanese businesses. Next
+      actions: Implement the best practices outlined in the article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: real_estate_vat_treatment
-  synonyms:
-  - real
-  - estate
-  - vat
-  link: /help
+  - intent: ASK
+    key: real_estate_vat_treatment
+    synonyms:
+      - real
+      - estate
+      - vat
+    link: /help
+status: draft
 ---
 
 ### Introduction

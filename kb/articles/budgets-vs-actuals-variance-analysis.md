@@ -2,57 +2,64 @@
 id: financial-reporting-70
 slug: budgets-vs-actuals-variance-analysis
 title: 'Budgets vs actuals: variance analysis'
-summary: 'This article covers budgets vs actuals: variance analysis for Guyanese businesses,
-  explaining key principles and how to apply them in practice.'
+summary: >-
+  This article covers budgets vs actuals: variance analysis for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: financial-reporting
 tags:
-- financial
-- actuals
-- reporting
-- variance
-- budgets
-- vs
-- analysis
-jurisdiction:
-- Guyana
-last_reviewed: '2025-09-07'
-sources:
-- title: IFRS for SMEs Fact Sheet
-  url: https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
-  publisher: IFRS Foundation
-  date_accessed: '2025-09-07'
-kb_snippets:
-- question: 'What is budgets vs actuals: variance analysis?'
-  answer: 'Budgets vs actuals: variance analysis refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: 'How do I perform budgets vs actuals: variance analysis in heroBooks?'
-  answer: 'This article provides a step-by-step guide on budgets vs actuals: variance
-    analysis. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: 'Why is budgets vs actuals: variance analysis important?'
-  answer: 'Understanding budgets vs actuals: variance analysis helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
-assistant_keys:
-- intent: ASK
-  key: budgets_vs_actuals_variance_analysis
-  synonyms:
+  - financial
+  - actuals
+  - reporting
+  - variance
   - budgets
   - vs
-  - actuals
-  link: /help
+  - analysis
+jurisdiction:
+  - Guyana
+last_reviewed: '2025-09-07'
+sources:
+  - title: IFRS for SMEs Fact Sheet
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
+    publisher: IFRS Foundation
+    date_accessed: '2025-09-07'
+kb_snippets:
+  - question: 'What is budgets vs actuals: variance analysis?'
+    answer: >-
+      Budgets vs actuals: variance analysis refers to the accounting concept or
+      practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: 'How do I perform budgets vs actuals: variance analysis in heroBooks?'
+    answer: >-
+      This article provides a step-by-step guide on budgets vs actuals: variance
+      analysis. It includes practical examples using Guyanese currency (GYD) and
+      highlights local compliance points. Next actions: Follow the step-by-step
+      section and use the linked heroBooks feature.
+    type: howto
+  - question: 'Why is budgets vs actuals: variance analysis important?'
+    answer: >-
+      Understanding budgets vs actuals: variance analysis helps ensure accurate
+      accounting records and compliance with GRA and NIS requirements. It
+      improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
+assistant_keys:
+  - intent: ASK
+    key: budgets_vs_actuals_variance_analysis
+    synonyms:
+      - budgets
+      - vs
+      - actuals
+    link: /help
+status: draft
 ---
 
 ### Introduction

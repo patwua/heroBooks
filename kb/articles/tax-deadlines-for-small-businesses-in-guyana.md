@@ -2,63 +2,74 @@
 id: compliance-89
 slug: tax-deadlines-for-small-businesses-in-guyana
 title: Tax deadlines for small businesses in Guyana
-summary: This article covers tax deadlines for small businesses in guyana for Guyanese
+summary: >-
+  This article covers tax deadlines for small businesses in guyana for Guyanese
   businesses, explaining key principles and how to apply them in practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: compliance
 tags:
-- businesses
-- deadlines
-- guyana
-- for
-- small
-- in
-- tax
-- compliance
+  - businesses
+  - deadlines
+  - guyana
+  - for
+  - small
+  - in
+  - tax
+  - compliance
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
-- title: BDO Guyana Budget Bulletin 2025
-  url: https://www.bdo.gy/getattachment/1d8dfc48-8c12-4dd2-909e-a49e19392cf4/BDO-Guyana-Budget-Bulletin-2025.pdf
-  publisher: BDO Guyana
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
+  - title: BDO Guyana Budget Bulletin 2025
+    url: >-
+      https://www.bdo.gy/getattachment/1d8dfc48-8c12-4dd2-909e-a49e19392cf4/BDO-Guyana-Budget-Bulletin-2025.pdf
+    publisher: BDO Guyana
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is tax deadlines for small businesses in guyana?
-  answer: 'Tax deadlines for small businesses in Guyana refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform tax deadlines for small businesses in guyana in heroBooks?
-  answer: 'This article provides a step-by-step guide on tax deadlines for small businesses
-    in guyana. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: Why is tax deadlines for small businesses in guyana important?
-  answer: 'Understanding tax deadlines for small businesses in guyana helps ensure
-    accurate accounting records and compliance with GRA and NIS requirements. It improves
-    decision-making and financial transparency for Guyanese businesses. Next actions:
-    Implement the best practices outlined in the article.'
-  type: faq
+  - question: What is tax deadlines for small businesses in guyana?
+    answer: >-
+      Tax deadlines for small businesses in Guyana refers to the accounting
+      concept or practice described in the article. It outlines the fundamentals
+      and explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: >-
+      How do I perform tax deadlines for small businesses in guyana in
+      heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on tax deadlines for small
+      businesses in guyana. It includes practical examples using Guyanese
+      currency (GYD) and highlights local compliance points. Next actions:
+      Follow the step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is tax deadlines for small businesses in guyana important?
+    answer: >-
+      Understanding tax deadlines for small businesses in guyana helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: tax_deadlines_for_small_businesses_in_guyana
-  synonyms:
-  - tax
-  - deadlines
-  - for
-  link: /help
+  - intent: ASK
+    key: tax_deadlines_for_small_businesses_in_guyana
+    synonyms:
+      - tax
+      - deadlines
+      - for
+    link: /help
+status: draft
 ---
 
 ### Introduction

@@ -1,66 +1,76 @@
 ---
 id: payroll-paye-nis-33
 slug: paye-thresholds-bands-and-calculations-guyana
-title: PAYE thresholds, bands, and calculations (Guyana)
-summary: This article covers paye thresholds, bands, and calculations (guyana) for
-  Guyanese businesses, explaining key principles and how to apply them in practice.
+title: 'PAYE thresholds, bands, and calculations (Guyana)'
+summary: >-
+  This article covers paye thresholds, bands, and calculations (guyana) for
+  Guyanese businesses, explaining key principles and how to apply them in
+  practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: payroll-paye-nis
 tags:
-- and
-- guyana
-- bands
-- thresholds
-- nis
-- paye
-- payroll
-- calculations
+  - and
+  - guyana
+  - bands
+  - thresholds
+  - nis
+  - paye
+  - payroll
+  - calculations
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: Information on NIS contributions
-  url: https://www.nis.org.gy/information_on_contributions
-  publisher: National Insurance Scheme
-  date_accessed: '2025-09-07'
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: Information on NIS contributions
+    url: 'https://www.nis.org.gy/information_on_contributions'
+    publisher: National Insurance Scheme
+    date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is paye thresholds, bands, and calculations (guyana)?
-  answer: 'PAYE thresholds, bands, and calculations (Guyana) refers to the accounting
-    concept or practice described in the article. It outlines the fundamentals and
-    explains why it matters in Guyana or the Caribbean. Next actions: Read this article
-    and follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform paye thresholds, bands, and calculations (guyana) in
-    heroBooks?
-  answer: 'This article provides a step-by-step guide on paye thresholds, bands, and
-    calculations (guyana). It includes practical examples using Guyanese currency
-    (GYD) and highlights local compliance points. Next actions: Follow the step-by-step
-    section and use the linked heroBooks feature.'
-  type: howto
-- question: Why is paye thresholds, bands, and calculations (guyana) important?
-  answer: 'Understanding paye thresholds, bands, and calculations (guyana) helps ensure
-    accurate accounting records and compliance with GRA and NIS requirements. It improves
-    decision-making and financial transparency for Guyanese businesses. Next actions:
-    Implement the best practices outlined in the article.'
-  type: faq
+  - question: 'What is paye thresholds, bands, and calculations (guyana)?'
+    answer: >-
+      PAYE thresholds, bands, and calculations (Guyana) refers to the accounting
+      concept or practice described in the article. It outlines the fundamentals
+      and explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: >-
+      How do I perform paye thresholds, bands, and calculations (guyana) in
+      heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on paye thresholds, bands, and
+      calculations (guyana). It includes practical examples using Guyanese
+      currency (GYD) and highlights local compliance points. Next actions:
+      Follow the step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: 'Why is paye thresholds, bands, and calculations (guyana) important?'
+    answer: >-
+      Understanding paye thresholds, bands, and calculations (guyana) helps
+      ensure accurate accounting records and compliance with GRA and NIS
+      requirements. It improves decision-making and financial transparency for
+      Guyanese businesses. Next actions: Implement the best practices outlined
+      in the article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: paye_thresholds_bands_and_calculations_guyana
-  synonyms:
-  - paye
-  - thresholds
-  - bands
-  link: /help
+  - intent: ASK
+    key: paye_thresholds_bands_and_calculations_guyana
+    synonyms:
+      - paye
+      - thresholds
+      - bands
+    link: /help
+status: draft
 ---
 
 ### Introduction

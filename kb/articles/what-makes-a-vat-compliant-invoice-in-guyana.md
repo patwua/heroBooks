@@ -2,61 +2,71 @@
 id: sales-vat-9
 slug: what-makes-a-vat-compliant-invoice-in-guyana
 title: What makes a VAT-compliant invoice in Guyana?
-summary: This article covers what makes a vat-compliant invoice in guyana? for Guyanese
+summary: >-
+  This article covers what makes a vat-compliant invoice in guyana? for Guyanese
   businesses, explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: sales-vat
 tags:
-- guyana
-- sales
-- in
-- a
-- invoice
-- what
-- compliant
-- vat
-- makes
+  - guyana
+  - sales
+  - in
+  - a
+  - invoice
+  - what
+  - compliant
+  - vat
+  - makes
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is what makes a vat-compliant invoice in guyana??
-  answer: 'What makes a VAT-compliant invoice in Guyana? refers to the accounting
-    concept or practice described in the article. It outlines the fundamentals and
-    explains why it matters in Guyana or the Caribbean. Next actions: Read this article
-    and follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform what makes a vat-compliant invoice in guyana? in heroBooks?
-  answer: 'This article provides a step-by-step guide on what makes a vat-compliant
-    invoice in guyana?. It includes practical examples using Guyanese currency (GYD)
-    and highlights local compliance points. Next actions: Follow the step-by-step
-    section and use the linked heroBooks feature.'
-  type: howto
-- question: Why is what makes a vat-compliant invoice in guyana? important?
-  answer: 'Understanding what makes a vat-compliant invoice in guyana? helps ensure
-    accurate accounting records and compliance with GRA and NIS requirements. It improves
-    decision-making and financial transparency for Guyanese businesses. Next actions:
-    Implement the best practices outlined in the article.'
-  type: faq
+  - question: What is what makes a vat-compliant invoice in guyana??
+    answer: >-
+      What makes a VAT-compliant invoice in Guyana? refers to the accounting
+      concept or practice described in the article. It outlines the fundamentals
+      and explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: >-
+      How do I perform what makes a vat-compliant invoice in guyana? in
+      heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on what makes a vat-compliant
+      invoice in guyana?. It includes practical examples using Guyanese currency
+      (GYD) and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is what makes a vat-compliant invoice in guyana? important?
+    answer: >-
+      Understanding what makes a vat-compliant invoice in guyana? helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: what_makes_a_vat_compliant_invoice_in_guyana
-  synonyms:
-  - what
-  - makes
-  - a
-  link: /help
+  - intent: ASK
+    key: what_makes_a_vat_compliant_invoice_in_guyana
+    synonyms:
+      - what
+      - makes
+      - a
+    link: /help
+status: draft
 ---
 
 ### Introduction

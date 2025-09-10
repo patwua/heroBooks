@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { auth } from "@/auth";
 
 export default async function Footer() {
@@ -6,7 +7,6 @@ export default async function Footer() {
   const linkProps = session
     ? ({ target: "_blank", rel: "noopener noreferrer" } as const)
     : {};
-  const externalTarget = session ? "_blank" : undefined;
   return (
     <footer className="bg-neutral-900 text-neutral-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 text-sm">
@@ -20,13 +20,8 @@ export default async function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" {...linkProps} className="hover:underline">
+                <Link href="/#pricing" {...linkProps} className="hover:underline">
                   Pricing
-                </Link>
-              </li>
-              <li>
-                <Link href="/demo" {...linkProps} className="hover:underline">
-                  Demo
                 </Link>
               </li>
             </ul>
@@ -40,18 +35,8 @@ export default async function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/leadership" {...linkProps} className="hover:underline">
-                  Leadership
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" {...linkProps} className="hover:underline">
-                  Careers (coming soon)
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" {...linkProps} className="hover:underline">
-                  Contact
+                <Link href="/about#contact-form" {...linkProps} className="hover:underline">
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -59,11 +44,6 @@ export default async function Footer() {
           <div>
             <div className="mb-2 font-semibold">Resources</div>
             <ul className="space-y-1 text-neutral-300">
-              <li>
-                <Link href="/kb" {...linkProps} className="hover:underline">
-                  Docs/Guides
-                </Link>
-              </li>
               <li>
                 <Link href="/help" {...linkProps} className="hover:underline">
                   Help Center
@@ -75,45 +55,36 @@ export default async function Footer() {
             <div className="mb-2 font-semibold">Legal</div>
             <ul className="space-y-1 text-neutral-300">
               <li>
-                <Link
-                  href="/legal/privacy"
-                  {...linkProps}
-                  className="hover:underline"
-                >
-                  Privacy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/legal/terms"
-                  {...linkProps}
-                  className="hover:underline"
-                >
-                  Terms
+                <Link href="/legal" {...linkProps} className="hover:underline">
+                  Terms & Privacy
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <div className="mb-2 font-semibold">Contact</div>
+            <div className="mb-2 font-semibold">Contact Us</div>
             <ul className="space-y-1 text-neutral-300">
               <li>
-                <a href="mailto:support@herobooks.gy" className="hover:underline">
-                  support@herobooks.gy
-                </a>
+                <Link href="/about#contact-form" className="hover:underline">
+                  Get in touch
+                </Link>
               </li>
-              <li>Georgetown, Guyana</li>
             </ul>
           </div>
         </div>
         <div className="mt-10 border-t border-white/10 pt-6 flex items-center justify-between">
-          <p className="text-neutral-300">© 2025 heroBooks. Built for businesses in Guyana.</p>
-          <a href="mailto:support@herobooks.gy" className="hover:underline" target={externalTarget}>
-            support@herobooks.gy
-          </a>
+          <div className="flex items-center gap-2 text-neutral-300">
+            <Image src="/logos/heroBooks%20mini%20Color.webp" alt="heroBooks" width={80} height={80} className="h-16 w-auto" />
+            <span>© 2025 heroBooks. Built for businesses in Guyana.</span>
+          </div>
+          <div />
         </div>
       </div>
     </footer>
   );
 }
+
+
+
+
 

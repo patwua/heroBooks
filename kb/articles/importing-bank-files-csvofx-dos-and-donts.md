@@ -2,61 +2,71 @@
 id: banking-reconciliation-25
 slug: importing-bank-files-csvofx-dos-and-donts
 title: 'Importing bank files: CSV/OFX do''s and don''ts'
-summary: 'This article covers importing bank files: csv/ofx do''s and don''ts for
-  Guyanese businesses, explaining key principles and how to apply them in practice.'
+summary: >-
+  This article covers importing bank files: csv/ofx do's and don'ts for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: banking-reconciliation
 tags:
-- files
-- and
-- donts
-- bank
-- dos
-- importing
-- csvofx
-- reconciliation
-- banking
+  - files
+  - and
+  - donts
+  - bank
+  - dos
+  - importing
+  - csvofx
+  - reconciliation
+  - banking
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: 'What is importing bank files: csv/ofx do''s and don''ts?'
-  answer: 'Importing bank files: CSV/OFX do''s and don''ts refers to the accounting
-    concept or practice described in the article. It outlines the fundamentals and
-    explains why it matters in Guyana or the Caribbean. Next actions: Read this article
-    and follow the steps in heroBooks.'
-  type: definition
-- question: 'How do I perform importing bank files: csv/ofx do''s and don''ts in heroBooks?'
-  answer: 'This article provides a step-by-step guide on importing bank files: csv/ofx
-    do''s and don''ts. It includes practical examples using Guyanese currency (GYD)
-    and highlights local compliance points. Next actions: Follow the step-by-step
-    section and use the linked heroBooks feature.'
-  type: howto
-- question: 'Why is importing bank files: csv/ofx do''s and don''ts important?'
-  answer: 'Understanding importing bank files: csv/ofx do''s and don''ts helps ensure
-    accurate accounting records and compliance with GRA and NIS requirements. It improves
-    decision-making and financial transparency for Guyanese businesses. Next actions:
-    Implement the best practices outlined in the article.'
-  type: faq
+  - question: 'What is importing bank files: csv/ofx do''s and don''ts?'
+    answer: >-
+      Importing bank files: CSV/OFX do's and don'ts refers to the accounting
+      concept or practice described in the article. It outlines the fundamentals
+      and explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: >-
+      How do I perform importing bank files: csv/ofx do's and don'ts in
+      heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on importing bank files:
+      csv/ofx do's and don'ts. It includes practical examples using Guyanese
+      currency (GYD) and highlights local compliance points. Next actions:
+      Follow the step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: 'Why is importing bank files: csv/ofx do''s and don''ts important?'
+    answer: >-
+      Understanding importing bank files: csv/ofx do's and don'ts helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: importing_bank_files_csvofx_dos_and_donts
-  synonyms:
-  - importing
-  - bank
-  - files
-  link: /help
+  - intent: ASK
+    key: importing_bank_files_csvofx_dos_and_donts
+    synonyms:
+      - importing
+      - bank
+      - files
+    link: /help
+status: draft
 ---
 
 ### Introduction

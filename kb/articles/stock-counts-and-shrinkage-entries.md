@@ -2,58 +2,66 @@
 id: inventory-cogs-43
 slug: stock-counts-and-shrinkage-entries
 title: Stock counts and shrinkage entries
-summary: This article covers stock counts and shrinkage entries for Guyanese businesses,
-  explaining key principles and how to apply them in practice.
+summary: >-
+  This article covers stock counts and shrinkage entries for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: inventory-cogs
 tags:
-- and
-- inventory
-- stock
-- shrinkage
-- entries
-- counts
-- cogs
+  - and
+  - inventory
+  - stock
+  - shrinkage
+  - entries
+  - counts
+  - cogs
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is stock counts and shrinkage entries?
-  answer: 'Stock counts and shrinkage entries refers to the accounting concept or
-    practice described in the article. It outlines the fundamentals and explains why
-    it matters in Guyana or the Caribbean. Next actions: Read this article and follow
-    the steps in heroBooks.'
-  type: definition
-- question: How do I perform stock counts and shrinkage entries in heroBooks?
-  answer: 'This article provides a step-by-step guide on stock counts and shrinkage
-    entries. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: Why is stock counts and shrinkage entries important?
-  answer: 'Understanding stock counts and shrinkage entries helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is stock counts and shrinkage entries?
+    answer: >-
+      Stock counts and shrinkage entries refers to the accounting concept or
+      practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform stock counts and shrinkage entries in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on stock counts and shrinkage
+      entries. It includes practical examples using Guyanese currency (GYD) and
+      highlights local compliance points. Next actions: Follow the step-by-step
+      section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is stock counts and shrinkage entries important?
+    answer: >-
+      Understanding stock counts and shrinkage entries helps ensure accurate
+      accounting records and compliance with GRA and NIS requirements. It
+      improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: stock_counts_and_shrinkage_entries
-  synonyms:
-  - stock
-  - counts
-  - and
-  link: /help
+  - intent: ASK
+    key: stock_counts_and_shrinkage_entries
+    synonyms:
+      - stock
+      - counts
+      - and
+    link: /help
+status: draft
 ---
 
 ### Introduction

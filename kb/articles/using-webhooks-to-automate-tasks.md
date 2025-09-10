@@ -2,59 +2,67 @@
 id: api-integrations-136
 slug: using-webhooks-to-automate-tasks
 title: Using Webhooks to automate tasks
-summary: This article covers using webhooks to automate tasks for Guyanese businesses,
+summary: >-
+  This article covers using webhooks to automate tasks for Guyanese businesses,
   explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: api-integrations
 tags:
-- tasks
-- using
-- api
-- webhooks
-- integrations
-- to
-- automate
+  - tasks
+  - using
+  - api
+  - webhooks
+  - integrations
+  - to
+  - automate
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is using webhooks to automate tasks?
-  answer: 'Using Webhooks to automate tasks refers to the accounting concept or practice
-    described in the article. It outlines the fundamentals and explains why it matters
-    in Guyana or the Caribbean. Next actions: Read this article and follow the steps
-    in heroBooks.'
-  type: definition
-- question: How do I perform using webhooks to automate tasks in heroBooks?
-  answer: 'This article provides a step-by-step guide on using webhooks to automate
-    tasks. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: Why is using webhooks to automate tasks important?
-  answer: 'Understanding using webhooks to automate tasks helps ensure accurate accounting
-    records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is using webhooks to automate tasks?
+    answer: >-
+      Using Webhooks to automate tasks refers to the accounting concept or
+      practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform using webhooks to automate tasks in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on using webhooks to automate
+      tasks. It includes practical examples using Guyanese currency (GYD) and
+      highlights local compliance points. Next actions: Follow the step-by-step
+      section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is using webhooks to automate tasks important?
+    answer: >-
+      Understanding using webhooks to automate tasks helps ensure accurate
+      accounting records and compliance with GRA and NIS requirements. It
+      improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: using_webhooks_to_automate_tasks
-  synonyms:
-  - using
-  - webhooks
-  - to
-  link: /help
+  - intent: ASK
+    key: using_webhooks_to_automate_tasks
+    synonyms:
+      - using
+      - webhooks
+      - to
+    link: /help
+status: draft
 ---
 
 ### Introduction

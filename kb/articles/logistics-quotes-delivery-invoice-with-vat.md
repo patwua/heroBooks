@@ -1,63 +1,72 @@
 ---
 id: industry-guides-127
 slug: logistics-quotes-delivery-invoice-with-vat
-title: "Logistics: quotes \u2192 delivery \u2192 invoice with VAT"
-summary: "This article covers logistics: quotes \u2192 delivery \u2192 invoice with\
-  \ vat for Guyanese businesses, explaining key principles and how to apply them in\
-  \ practice."
+title: 'Logistics: quotes → delivery → invoice with VAT'
+summary: >-
+  This article covers logistics: quotes → delivery → invoice with vat for
+  Guyanese businesses, explaining key principles and how to apply them in
+  practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: industry-guides
 tags:
-- guides
-- delivery
-- industry
-- with
-- quotes
-- invoice
-- vat
-- logistics
+  - guides
+  - delivery
+  - industry
+  - with
+  - quotes
+  - invoice
+  - vat
+  - logistics
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: "What is logistics: quotes \u2192 delivery \u2192 invoice with vat?"
-  answer: "Logistics: quotes \u2192 delivery \u2192 invoice with VAT refers to the\
-    \ accounting concept or practice described in the article. It outlines the fundamentals\
-    \ and explains why it matters in Guyana or the Caribbean. Next actions: Read this\
-    \ article and follow the steps in heroBooks."
-  type: definition
-- question: "How do I perform logistics: quotes \u2192 delivery \u2192 invoice with\
-    \ vat in heroBooks?"
-  answer: "This article provides a step-by-step guide on logistics: quotes \u2192\
-    \ delivery \u2192 invoice with vat. It includes practical examples using Guyanese\
-    \ currency (GYD) and highlights local compliance points. Next actions: Follow\
-    \ the step-by-step section and use the linked heroBooks feature."
-  type: howto
-- question: "Why is logistics: quotes \u2192 delivery \u2192 invoice with vat important?"
-  answer: "Understanding logistics: quotes \u2192 delivery \u2192 invoice with vat\
-    \ helps ensure accurate accounting records and compliance with GRA and NIS requirements.\
-    \ It improves decision-making and financial transparency for Guyanese businesses.\
-    \ Next actions: Implement the best practices outlined in the article."
-  type: faq
+  - question: 'What is logistics: quotes → delivery → invoice with vat?'
+    answer: >-
+      Logistics: quotes → delivery → invoice with VAT refers to the accounting
+      concept or practice described in the article. It outlines the fundamentals
+      and explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: >-
+      How do I perform logistics: quotes → delivery → invoice with vat in
+      heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on logistics: quotes → delivery
+      → invoice with vat. It includes practical examples using Guyanese currency
+      (GYD) and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: 'Why is logistics: quotes → delivery → invoice with vat important?'
+    answer: >-
+      Understanding logistics: quotes → delivery → invoice with vat helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: logistics_quotes_delivery_invoice_with_vat
-  synonyms:
-  - logistics
-  - quotes
-  - delivery
-  link: /help
+  - intent: ASK
+    key: logistics_quotes_delivery_invoice_with_vat
+    synonyms:
+      - logistics
+      - quotes
+      - delivery
+    link: /help
+status: draft
 ---
 
 ### Introduction

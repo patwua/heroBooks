@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="tbx" role="img">
+  <title id="tbx">TB corrections: Find → Fix → Close suspense</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c:#a78bfa; --fg:#0f172a }
+      .a{fill:none;stroke:var(--fg);stroke-width:10;rx:16}
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+      .dot{fill:var(--c)}
+    ]]></style>
+  </defs>
+  <rect class="a" x="32" y="56" width="160" height="90"/>
+  <text x="42" y="106" class="t">Find difference</text>
+  <circle class="dot" cx="212" cy="101" r="6"/>
+  <rect class="a" x="232" y="56" width="160" height="90"/>
+  <text x="242" y="106" class="t">Identify error</text>
+  <circle class="dot" cx="412" cy="101" r="6"/>
+  <rect class="a" x="32" y="216" width="160" height="90"/>
+  <text x="42" y="266" class="t">Post fix</text>
+  <circle class="dot" cx="212" cy="261" r="6"/>
+  <rect class="a" x="232" y="216" width="160" height="90"/>
+  <text x="242" y="266" class="t">Close suspense</text>
+</svg>
+

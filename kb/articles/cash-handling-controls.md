@@ -1,77 +1,78 @@
 ---
-id: internal-controls-121
+id: cash-handling-controls
 slug: cash-handling-controls
-title: Cash handling controls
-summary: This article covers cash handling controls for Guyanese businesses, explaining
-  key principles and how to apply them in practice.
-level: Intermediate
-audience:
-- Accountant
-- Owner
+title: Cash-handling controls (day open, day close, deposit) — practical checklist
+summary: A COSO-aligned routine to open tills, log floats, capture refunds/voids, perform surprise counts, reconcile to POS and bank, and post VAT-inclusive sales in GYD.
+level: Beginner
+audience: [Owner, Clerk, Accountant]
 format: Guide
-category_id: internal-controls
-tags:
-- internal
-- cash
-- controls
-- handling
-jurisdiction:
-- Guyana
-last_reviewed: '2025-09-07'
+category_id: cash
+tags: [cash, internal control, reconciliation, VAT, deposit, GYD]
+jurisdiction: [Guyana]
+last_reviewed: '2025-09-09'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: COSO — Internal Control (Integrated Framework) overview
+    url: https://www.coso.org/guidance-on-ic
+    publisher: COSO
+    date_accessed: '2025-09-09'
+  - title: AuditBoard — COSO framework fundamentals (5 components; 17 principles)
+    url: https://auditboard.com/blog/coso-framework-fundamentals
+    publisher: AuditBoard
+    date_accessed: '2025-09-09'
+  - title: IFC — Internal Control Handbook (cash management tools)
+    url: https://www.ifc.org/en/insights-reports/2022/internal-control-handbook
+    publisher: International Finance Corporation
+    date_accessed: '2025-09-09'
 kb_snippets:
-- question: What is cash handling controls?
-  answer: 'Cash handling controls refers to the accounting concept or practice described
-    in the article. It outlines the fundamentals and explains why it matters in Guyana
-    or the Caribbean. Next actions: Read this article and follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform cash handling controls in heroBooks?
-  answer: 'This article provides a step-by-step guide on cash handling controls. It
-    includes practical examples using Guyanese currency (GYD) and highlights local
-    compliance points. Next actions: Follow the step-by-step section and use the linked
-    heroBooks feature.'
-  type: howto
-- question: Why is cash handling controls important?
-  answer: 'Understanding cash handling controls helps ensure accurate accounting records
-    and compliance with GRA and NIS requirements. It improves decision-making and
-    financial transparency for Guyanese businesses. Next actions: Implement the best
-    practices outlined in the article.'
-  type: faq
-assistant_keys:
-- intent: ASK
-  key: cash_handling_controls
-  synonyms:
-  - cash
-  - handling
-  - controls
-  link: /help
+  - question: What’s a solid day-close routine?
+    answer: Count each till, reconcile to POS Z-report (sales, refunds, VAT), prepare the bank deposit, and log over/short with a second person observing. Post a single summary journal for the day.
+    type: howto
+  - question: How should VAT be handled for cash sales?
+    answer: If prices are VAT-inclusive, extract output VAT using the 14/114 fraction (i.e., 7/57 of the gross) before posting revenue. Keep Z-reports and tax-invoice ranges.
+    type: faq
 ---
 
-### Introduction
-Cash handling controls is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.
+## Day open (set control baseline)
+1) Float per till (e.g., G$10,000), logged and signed.  
+2) Drawer assignment (named user), passworded POS.  
+3) Petty cash kept separate from tills (own log).
 
-### Key Concepts
-Discuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.
+## During the day
+– Use POS for every sale; no manual receipts except if POS down (document outage).  
+– Refunds/voids require manager PIN and reason.  
+– No mixing of private money; store cheques separately.
 
-### Guyana specifics
-Provide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.
+## Day close (five steps)
+1) Physical count of each till (cash + cheques).  
+2) Print Z-report (gross, refunds, VAT, net).  
+3) Prepare bank deposit; attach Z-report.  
+4) Complete over/short log (investigate ±G$500 and above).  
+5) Post the summary journal.
 
-### Step-by-step guidance
-Outline practical steps and reference heroBooks features or pages using appropriate links.
+### Worked example (GYD, VAT-inclusive)
+Z-report: Gross cash sales G$228,000; refunds G$8,000; net G$220,000.  
+VAT portion (14% inclusive) = net × 14/114 = G$27,018 (≈7/57).  
+Revenue (net of VAT) = G$192,982.  
+Banking: Till count G$230,000 less float G$10,000 ⇒ Deposit G$220,000.  
 
-### Worked example
-Include a practical example using Guyanese dollars (GYD) to demonstrate the concept.
+Journal:  
+Dr Cash at bank 220,000  
+ Cr VAT Output 27,018  
+ Cr Sales (ex‑VAT) 192,982
 
-### Common pitfalls & checks
-Highlight typical mistakes and provide tips on how to avoid them.
+> Tip: Keep floats unchanged day‑to‑day; variances stay visible in the over/short log.
 
-### Glossary
-Define important terms related to the topic.
+## Controls that catch problems early
+• Segregation: different people for till use, approval of refunds, and daily posting.  
+• Surprise counts: once per week per till; document result.  
+• Deposit timeliness: banking next business day; match bank credit to deposit slip.  
+• Video at cash‑up area (if feasible) + locked drop safe.
 
-### References
-List the sources cited in the article with retrieval dates.
+## Common pitfalls in small shops
+– Deposits that don’t match POS Z‑report cash.  
+– Mixing floats and petty cash.  
+– Refunds without paper trail (scan/store slips).  
+– VAT not separated from VAT‑inclusive totals in the ledger.
+
+## Illustration
+> Figure: see /public/kb/illustrations/cash-controls-day-close.svg (1:1)

@@ -1,83 +1,56 @@
 ---
-id: purchases-payables-20
+id: petty-cash-controls
 slug: petty-cash-controls-for-small-shops
-title: Petty cash controls for small shops
-summary: This article covers petty cash controls for small shops for Guyanese businesses,
-  explaining key principles and how to apply them in practice.
+title: Petty cash controls for small shops (receipts, counts, and caps)
+summary: A COSO-aligned checklist for setting a petty-cash float, issuing vouchers, reconciling counts, and preventing leakage. Includes a G$15,000 float example.
 level: Beginner
-audience:
-- Owner
-- Accountant
-- Clerk
+audience: [Owner, Clerk, Accountant]
 format: Guide
-category_id: purchases-payables
-tags:
-- payables
-- purchases
-- controls
-- for
-- small
-- petty
-- cash
-- shops
-jurisdiction:
-- Guyana
-last_reviewed: '2025-09-07'
+category_id: cash
+tags: [petty cash, internal control, COSO, receipts, reconciliation, GYD]
+jurisdiction: [Guyana]
+last_reviewed: '2025-09-09'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: COSO — Internal Control guidance (principles for smaller entities)
+    url: https://www.coso.org/guidance-on-ic
+    publisher: COSO
+    date_accessed: '2025-09-09'
+  - title: AICPA — “Petty Cash Counts, Too”
+    url: https://www.journalofaccountancy.com/issues/2002/sep/pettycashcountstoo/
+    publisher: Journal of Accountancy
+    date_accessed: '2025-09-09'
 kb_snippets:
-- question: What is petty cash controls for small shops?
-  answer: 'Petty cash controls for small shops refers to the accounting concept or
-    practice described in the article. It outlines the fundamentals and explains why
-    it matters in Guyana or the Caribbean. Next actions: Read this article and follow
-    the steps in heroBooks.'
-  type: definition
-- question: How do I perform petty cash controls for small shops in heroBooks?
-  answer: 'This article provides a step-by-step guide on petty cash controls for small
-    shops. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: Why is petty cash controls for small shops important?
-  answer: 'Understanding petty cash controls for small shops helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
-assistant_keys:
-- intent: ASK
-  key: petty_cash_controls_for_small_shops
-  synonyms:
-  - petty
-  - cash
-  - controls
-  link: /help
+  - question: What’s the best petty-cash float size?
+    answer: Just enough for typical week-to-week incidentals. Many small shops use G$5k–G$25k. Replenish to the cap after each reconciliation; don’t “top up” daily.
+    type: faq
+  - question: How do I reconcile petty cash?
+    answer: Count the cash on hand + sum of approved vouchers/receipts + any IOUs. This should equal the float cap. Investigate any over/short immediately and document.
+    type: howto
 ---
 
-### Introduction
-Petty cash controls for small shops is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.
+## Set the float and the rules
+1) Float cap (example **G$15,000**). 2) Custodian (named person). 3) Use rules (e.g., ≤ G$3,000 per item, no wages, no loans). 4) Voucher with date, purpose, amount, requester + custodian signature. 5) Receipt required for every reimbursement.
 
-### Key Concepts
-Discuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.
+## Reimburse and record
+- Keep a small voucher book; number sequentially.  
+- When reimbursing, attach the receipt and post to the proper expense (e.g., cleaning supplies).  
+- Replenish to the cap via bank payment; post the summary to your ledger.
 
-### Guyana specifics
-Provide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.
+## Monthly reconciliation (5-step)
+1. Count **cash on hand** (e.g., **G$2,400**).  
+2. Sum **vouchers/receipts** since last replenishment (**G$12,600**).  
+3. Confirm **cash + vouchers = float cap** (**2,400 + 12,600 = 15,000**).  
+4. Post a journal to recognise the expenses if using periodic posting.  
+5. Replenish from bank back to **G$15,000**.
 
-### Step-by-step guidance
-Outline practical steps and reference heroBooks features or pages using appropriate links.
+Journal (summary): Dr Cleaning 6,000; Dr Snacks 3,200; Dr Stationery 3,400 / Cr Bank 12,600.  
 
-### Worked example
-Include a practical example using Guyanese dollars (GYD) to demonstrate the concept.
+## Controls that actually work
+- Lockbox + limited key access; no mixing with till cash.  
+- Weekly mini-counts by the custodian; **monthly surprise count** by someone else.  
+- No split purchases to bypass limits.  
+- Keep unused vouchers secure; investigate **over/short** on the spot.
 
-### Common pitfalls & checks
-Highlight typical mistakes and provide tips on how to avoid them.
+## Illustration
+> Figure: see /public/kb/illustrations/petty-cash-controls.svg (1:1)
 
-### Glossary
-Define important terms related to the topic.
-
-### References
-List the sources cited in the article with retrieval dates.

@@ -2,60 +2,68 @@
 id: getting-started-1
 slug: double-entry-explained-with-gyd-examples
 title: Double-entry explained with GYD examples
-summary: This article covers double-entry explained with gyd examples for Guyanese
+summary: >-
+  This article covers double-entry explained with gyd examples for Guyanese
   businesses, explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: getting-started
 tags:
-- getting
-- explained
-- gyd
-- entry
-- started
-- double
-- with
-- examples
+  - getting
+  - explained
+  - gyd
+  - entry
+  - started
+  - double
+  - with
+  - examples
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is double-entry explained with gyd examples?
-  answer: 'Double-entry explained with GYD examples refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform double-entry explained with gyd examples in heroBooks?
-  answer: 'This article provides a step-by-step guide on double-entry explained with
-    gyd examples. It includes practical examples using Guyanese currency (GYD) and
-    highlights local compliance points. Next actions: Follow the step-by-step section
-    and use the linked heroBooks feature.'
-  type: howto
-- question: Why is double-entry explained with gyd examples important?
-  answer: 'Understanding double-entry explained with gyd examples helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is double-entry explained with gyd examples?
+    answer: >-
+      Double-entry explained with GYD examples refers to the accounting concept
+      or practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform double-entry explained with gyd examples in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on double-entry explained with
+      gyd examples. It includes practical examples using Guyanese currency (GYD)
+      and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is double-entry explained with gyd examples important?
+    answer: >-
+      Understanding double-entry explained with gyd examples helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: double_entry_explained_with_gyd_examples
-  synonyms:
-  - double
-  - entry
-  - explained
-  link: /help
+  - intent: ASK
+    key: double_entry_explained_with_gyd_examples
+    synonyms:
+      - double
+      - entry
+      - explained
+    link: /help
+status: draft
 ---
 
 ### Introduction

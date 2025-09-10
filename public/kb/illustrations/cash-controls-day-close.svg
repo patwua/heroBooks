@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="c" role="img">
+  <title id="c">Day-close: Count → Z-report → Deposit → Journal</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c1:#2563eb; --c2:#22c55e; --fg:#0f172a }
+      .box{fill:none;stroke:var(--fg);stroke-width:10;rx:18}
+      .arrow{stroke:var(--fg);stroke-width:10;fill:none;marker-end:url(#m)}
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+    ]]></style>
+    <marker id="m" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <rect class="box" x="32" y="64" width="120" height="80"/>
+  <text x="42" y="110" class="t">Count</text>
+  <path class="arrow" d="M152 104h48"/>
+  <rect class="box" x="200" y="64" width="120" height="80"/>
+  <text x="210" y="110" class="t">Z-report</text>
+  <path class="arrow" d="M320 104h48"/>
+  <rect class="box" x="368" y="64" width="120" height="80"/>
+  <text x="378" y="110" class="t">Deposit</text>
+  <path class="arrow" d="M200 144v80"/>
+  <rect class="box" x="160" y="224" width="200" height="80"/>
+  <text x="170" y="270" class="t">Post journal</text>
+</svg>
+

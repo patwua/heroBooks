@@ -2,58 +2,68 @@
 id: projects-jobs-52
 slug: recording-mobilization-advances-and-retention
 title: Recording mobilization advances and retention
-summary: This article covers recording mobilization advances and retention for Guyanese
+summary: >-
+  This article covers recording mobilization advances and retention for Guyanese
   businesses, explaining key principles and how to apply them in practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: projects-jobs
 tags:
-- jobs
-- and
-- advances
-- mobilization
-- retention
-- recording
-- projects
+  - jobs
+  - and
+  - advances
+  - mobilization
+  - retention
+  - recording
+  - projects
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is recording mobilization advances and retention?
-  answer: 'Recording mobilization advances and retention refers to the accounting
-    concept or practice described in the article. It outlines the fundamentals and
-    explains why it matters in Guyana or the Caribbean. Next actions: Read this article
-    and follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform recording mobilization advances and retention in heroBooks?
-  answer: 'This article provides a step-by-step guide on recording mobilization advances
-    and retention. It includes practical examples using Guyanese currency (GYD) and
-    highlights local compliance points. Next actions: Follow the step-by-step section
-    and use the linked heroBooks feature.'
-  type: howto
-- question: Why is recording mobilization advances and retention important?
-  answer: 'Understanding recording mobilization advances and retention helps ensure
-    accurate accounting records and compliance with GRA and NIS requirements. It improves
-    decision-making and financial transparency for Guyanese businesses. Next actions:
-    Implement the best practices outlined in the article.'
-  type: faq
+  - question: What is recording mobilization advances and retention?
+    answer: >-
+      Recording mobilization advances and retention refers to the accounting
+      concept or practice described in the article. It outlines the fundamentals
+      and explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: >-
+      How do I perform recording mobilization advances and retention in
+      heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on recording mobilization
+      advances and retention. It includes practical examples using Guyanese
+      currency (GYD) and highlights local compliance points. Next actions:
+      Follow the step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is recording mobilization advances and retention important?
+    answer: >-
+      Understanding recording mobilization advances and retention helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: recording_mobilization_advances_and_retention
-  synonyms:
-  - recording
-  - mobilization
-  - advances
-  link: /help
+  - intent: ASK
+    key: recording_mobilization_advances_and_retention
+    synonyms:
+      - recording
+      - mobilization
+      - advances
+    link: /help
+status: draft
 ---
 
 ### Introduction

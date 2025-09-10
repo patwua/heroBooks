@@ -2,60 +2,71 @@
 id: real-estate-95
 slug: owner-statements-structure-and-best-practices
 title: 'Owner statements: structure and best practices'
-summary: 'This article covers owner statements: structure and best practices for Guyanese
-  businesses, explaining key principles and how to apply them in practice.'
+summary: >-
+  This article covers owner statements: structure and best practices for
+  Guyanese businesses, explaining key principles and how to apply them in
+  practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: real-estate
 tags:
-- and
-- structure
-- best
-- real
-- owner
-- practices
-- statements
-- estate
+  - and
+  - structure
+  - best
+  - real
+  - owner
+  - practices
+  - statements
+  - estate
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: 'What is owner statements: structure and best practices?'
-  answer: 'Owner statements: structure and best practices refers to the accounting
-    concept or practice described in the article. It outlines the fundamentals and
-    explains why it matters in Guyana or the Caribbean. Next actions: Read this article
-    and follow the steps in heroBooks.'
-  type: definition
-- question: 'How do I perform owner statements: structure and best practices in heroBooks?'
-  answer: 'This article provides a step-by-step guide on owner statements: structure
-    and best practices. It includes practical examples using Guyanese currency (GYD)
-    and highlights local compliance points. Next actions: Follow the step-by-step
-    section and use the linked heroBooks feature.'
-  type: howto
-- question: 'Why is owner statements: structure and best practices important?'
-  answer: 'Understanding owner statements: structure and best practices helps ensure
-    accurate accounting records and compliance with GRA and NIS requirements. It improves
-    decision-making and financial transparency for Guyanese businesses. Next actions:
-    Implement the best practices outlined in the article.'
-  type: faq
+  - question: 'What is owner statements: structure and best practices?'
+    answer: >-
+      Owner statements: structure and best practices refers to the accounting
+      concept or practice described in the article. It outlines the fundamentals
+      and explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: >-
+      How do I perform owner statements: structure and best practices in
+      heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on owner statements: structure
+      and best practices. It includes practical examples using Guyanese currency
+      (GYD) and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: 'Why is owner statements: structure and best practices important?'
+    answer: >-
+      Understanding owner statements: structure and best practices helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: owner_statements_structure_and_best_practices
-  synonyms:
-  - owner
-  - statements
-  - structure
-  link: /help
+  - intent: ASK
+    key: owner_statements_structure_and_best_practices
+    synonyms:
+      - owner
+      - statements
+      - structure
+    link: /help
+status: draft
 ---
 
 ### Introduction

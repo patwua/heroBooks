@@ -2,56 +2,63 @@
 id: fixed-assets-64
 slug: maintenance-vs-capital-improvements
 title: Maintenance vs capital improvements
-summary: This article covers maintenance vs capital improvements for Guyanese businesses,
-  explaining key principles and how to apply them in practice.
+summary: >-
+  This article covers maintenance vs capital improvements for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: fixed-assets
 tags:
-- assets
-- capital
-- improvements
-- vs
-- maintenance
-- fixed
+  - assets
+  - capital
+  - improvements
+  - vs
+  - maintenance
+  - fixed
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: IFRS for SMEs Fact Sheet
-  url: https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
-  publisher: IFRS Foundation
-  date_accessed: '2025-09-07'
+  - title: IFRS for SMEs Fact Sheet
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
+    publisher: IFRS Foundation
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is maintenance vs capital improvements?
-  answer: 'Maintenance vs capital improvements refers to the accounting concept or
-    practice described in the article. It outlines the fundamentals and explains why
-    it matters in Guyana or the Caribbean. Next actions: Read this article and follow
-    the steps in heroBooks.'
-  type: definition
-- question: How do I perform maintenance vs capital improvements in heroBooks?
-  answer: 'This article provides a step-by-step guide on maintenance vs capital improvements.
-    It includes practical examples using Guyanese currency (GYD) and highlights local
-    compliance points. Next actions: Follow the step-by-step section and use the linked
-    heroBooks feature.'
-  type: howto
-- question: Why is maintenance vs capital improvements important?
-  answer: 'Understanding maintenance vs capital improvements helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is maintenance vs capital improvements?
+    answer: >-
+      Maintenance vs capital improvements refers to the accounting concept or
+      practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform maintenance vs capital improvements in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on maintenance vs capital
+      improvements. It includes practical examples using Guyanese currency (GYD)
+      and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is maintenance vs capital improvements important?
+    answer: >-
+      Understanding maintenance vs capital improvements helps ensure accurate
+      accounting records and compliance with GRA and NIS requirements. It
+      improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: maintenance_vs_capital_improvements
-  synonyms:
-  - maintenance
-  - vs
-  - capital
-  link: /help
+  - intent: ASK
+    key: maintenance_vs_capital_improvements
+    synonyms:
+      - maintenance
+      - vs
+      - capital
+    link: /help
+status: draft
 ---
 
 ### Introduction

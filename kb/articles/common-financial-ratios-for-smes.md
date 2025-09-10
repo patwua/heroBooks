@@ -2,56 +2,63 @@
 id: financial-reporting-71
 slug: common-financial-ratios-for-smes
 title: Common financial ratios for SMEs
-summary: This article covers common financial ratios for smes for Guyanese businesses,
+summary: >-
+  This article covers common financial ratios for smes for Guyanese businesses,
   explaining key principles and how to apply them in practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: financial-reporting
 tags:
-- financial
-- common
-- reporting
-- for
-- ratios
-- smes
+  - financial
+  - common
+  - reporting
+  - for
+  - ratios
+  - smes
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: IFRS for SMEs Fact Sheet
-  url: https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
-  publisher: IFRS Foundation
-  date_accessed: '2025-09-07'
+  - title: IFRS for SMEs Fact Sheet
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
+    publisher: IFRS Foundation
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is common financial ratios for smes?
-  answer: 'Common financial ratios for SMEs refers to the accounting concept or practice
-    described in the article. It outlines the fundamentals and explains why it matters
-    in Guyana or the Caribbean. Next actions: Read this article and follow the steps
-    in heroBooks.'
-  type: definition
-- question: How do I perform common financial ratios for smes in heroBooks?
-  answer: 'This article provides a step-by-step guide on common financial ratios for
-    smes. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: Why is common financial ratios for smes important?
-  answer: 'Understanding common financial ratios for smes helps ensure accurate accounting
-    records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is common financial ratios for smes?
+    answer: >-
+      Common financial ratios for SMEs refers to the accounting concept or
+      practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform common financial ratios for smes in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on common financial ratios for
+      smes. It includes practical examples using Guyanese currency (GYD) and
+      highlights local compliance points. Next actions: Follow the step-by-step
+      section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is common financial ratios for smes important?
+    answer: >-
+      Understanding common financial ratios for smes helps ensure accurate
+      accounting records and compliance with GRA and NIS requirements. It
+      improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: common_financial_ratios_for_smes
-  synonyms:
-  - common
-  - financial
-  - ratios
-  link: /help
+  - intent: ASK
+    key: common_financial_ratios_for_smes
+    synonyms:
+      - common
+      - financial
+      - ratios
+    link: /help
+status: draft
 ---
 
 ### Introduction

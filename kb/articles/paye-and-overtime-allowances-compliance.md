@@ -2,60 +2,69 @@
 id: compliance-84
 slug: paye-and-overtime-allowances-compliance
 title: 'PAYE and overtime allowances: compliance'
-summary: 'This article covers paye and overtime allowances: compliance for Guyanese
-  businesses, explaining key principles and how to apply them in practice.'
+summary: >-
+  This article covers paye and overtime allowances: compliance for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: compliance
 tags:
-- and
-- allowances
-- paye
-- overtime
-- compliance
+  - and
+  - allowances
+  - paye
+  - overtime
+  - compliance
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
-- title: BDO Guyana Budget Bulletin 2025
-  url: https://www.bdo.gy/getattachment/1d8dfc48-8c12-4dd2-909e-a49e19392cf4/BDO-Guyana-Budget-Bulletin-2025.pdf
-  publisher: BDO Guyana
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
+  - title: BDO Guyana Budget Bulletin 2025
+    url: >-
+      https://www.bdo.gy/getattachment/1d8dfc48-8c12-4dd2-909e-a49e19392cf4/BDO-Guyana-Budget-Bulletin-2025.pdf
+    publisher: BDO Guyana
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: 'What is paye and overtime allowances: compliance?'
-  answer: 'PAYE and overtime allowances: compliance refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: 'How do I perform paye and overtime allowances: compliance in heroBooks?'
-  answer: 'This article provides a step-by-step guide on paye and overtime allowances:
-    compliance. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: 'Why is paye and overtime allowances: compliance important?'
-  answer: 'Understanding paye and overtime allowances: compliance helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: 'What is paye and overtime allowances: compliance?'
+    answer: >-
+      PAYE and overtime allowances: compliance refers to the accounting concept
+      or practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: 'How do I perform paye and overtime allowances: compliance in heroBooks?'
+    answer: >-
+      This article provides a step-by-step guide on paye and overtime
+      allowances: compliance. It includes practical examples using Guyanese
+      currency (GYD) and highlights local compliance points. Next actions:
+      Follow the step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: 'Why is paye and overtime allowances: compliance important?'
+    answer: >-
+      Understanding paye and overtime allowances: compliance helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: paye_and_overtime_allowances_compliance
-  synonyms:
-  - paye
-  - and
-  - overtime
-  link: /help
+  - intent: ASK
+    key: paye_and_overtime_allowances_compliance
+    synonyms:
+      - paye
+      - and
+      - overtime
+    link: /help
+status: draft
 ---
 
 ### Introduction

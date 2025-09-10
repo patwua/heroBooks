@@ -2,60 +2,70 @@
 id: api-integrations-134
 slug: dealer-system-hookups-principles-api-overview
 title: 'Dealer system hookups: principles & API overview'
-summary: 'This article covers dealer system hookups: principles & api overview for
-  Guyanese businesses, explaining key principles and how to apply them in practice.'
+summary: >-
+  This article covers dealer system hookups: principles & api overview for
+  Guyanese businesses, explaining key principles and how to apply them in
+  practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Concept
 category_id: api-integrations
 tags:
-- hookups
-- api
-- system
-- principles
-- overview
-- integrations
-- dealer
+  - hookups
+  - api
+  - system
+  - principles
+  - overview
+  - integrations
+  - dealer
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: 'What is dealer system hookups: principles & api overview?'
-  answer: 'Dealer system hookups: principles & API overview refers to the accounting
-    concept or practice described in the article. It outlines the fundamentals and
-    explains why it matters in Guyana or the Caribbean. Next actions: Read this article
-    and follow the steps in heroBooks.'
-  type: definition
-- question: 'How do I perform dealer system hookups: principles & api overview in
-    heroBooks?'
-  answer: 'This article provides a step-by-step guide on dealer system hookups: principles
-    & api overview. It includes practical examples using Guyanese currency (GYD) and
-    highlights local compliance points. Next actions: Follow the step-by-step section
-    and use the linked heroBooks feature.'
-  type: howto
-- question: 'Why is dealer system hookups: principles & api overview important?'
-  answer: 'Understanding dealer system hookups: principles & api overview helps ensure
-    accurate accounting records and compliance with GRA and NIS requirements. It improves
-    decision-making and financial transparency for Guyanese businesses. Next actions:
-    Implement the best practices outlined in the article.'
-  type: faq
+  - question: 'What is dealer system hookups: principles & api overview?'
+    answer: >-
+      Dealer system hookups: principles & API overview refers to the accounting
+      concept or practice described in the article. It outlines the fundamentals
+      and explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: >-
+      How do I perform dealer system hookups: principles & api overview in
+      heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on dealer system hookups:
+      principles & api overview. It includes practical examples using Guyanese
+      currency (GYD) and highlights local compliance points. Next actions:
+      Follow the step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: 'Why is dealer system hookups: principles & api overview important?'
+    answer: >-
+      Understanding dealer system hookups: principles & api overview helps
+      ensure accurate accounting records and compliance with GRA and NIS
+      requirements. It improves decision-making and financial transparency for
+      Guyanese businesses. Next actions: Implement the best practices outlined
+      in the article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: dealer_system_hookups_principles_api_overview
-  synonyms:
-  - dealer
-  - system
-  - hookups
-  link: /help
+  - intent: ASK
+    key: dealer_system_hookups_principles_api_overview
+    synonyms:
+      - dealer
+      - system
+      - hookups
+    link: /help
+status: draft
 ---
 
 ### Introduction

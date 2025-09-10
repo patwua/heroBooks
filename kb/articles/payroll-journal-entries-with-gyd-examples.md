@@ -2,64 +2,72 @@
 id: payroll-paye-nis-35
 slug: payroll-journal-entries-with-gyd-examples
 title: Payroll journal entries with GYD examples
-summary: This article covers payroll journal entries with gyd examples for Guyanese
+summary: >-
+  This article covers payroll journal entries with gyd examples for Guyanese
   businesses, explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: payroll-paye-nis
 tags:
-- gyd
-- nis
-- entries
-- paye
-- journal
-- with
-- examples
-- payroll
+  - gyd
+  - nis
+  - entries
+  - paye
+  - journal
+  - with
+  - examples
+  - payroll
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: Information on NIS contributions
-  url: https://www.nis.org.gy/information_on_contributions
-  publisher: National Insurance Scheme
-  date_accessed: '2025-09-07'
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: Information on NIS contributions
+    url: 'https://www.nis.org.gy/information_on_contributions'
+    publisher: National Insurance Scheme
+    date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is payroll journal entries with gyd examples?
-  answer: 'Payroll journal entries with GYD examples refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform payroll journal entries with gyd examples in heroBooks?
-  answer: 'This article provides a step-by-step guide on payroll journal entries with
-    gyd examples. It includes practical examples using Guyanese currency (GYD) and
-    highlights local compliance points. Next actions: Follow the step-by-step section
-    and use the linked heroBooks feature.'
-  type: howto
-- question: Why is payroll journal entries with gyd examples important?
-  answer: 'Understanding payroll journal entries with gyd examples helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is payroll journal entries with gyd examples?
+    answer: >-
+      Payroll journal entries with GYD examples refers to the accounting concept
+      or practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform payroll journal entries with gyd examples in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on payroll journal entries with
+      gyd examples. It includes practical examples using Guyanese currency (GYD)
+      and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is payroll journal entries with gyd examples important?
+    answer: >-
+      Understanding payroll journal entries with gyd examples helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: payroll_journal_entries_with_gyd_examples
-  synonyms:
-  - payroll
-  - journal
-  - entries
-  link: /help
+  - intent: ASK
+    key: payroll_journal_entries_with_gyd_examples
+    synonyms:
+      - payroll
+      - journal
+      - entries
+    link: /help
+status: draft
 ---
 
 ### Introduction

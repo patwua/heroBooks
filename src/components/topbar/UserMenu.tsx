@@ -45,12 +45,11 @@ export default function UserMenu() {
     return (
       <DropdownMenu open={open} onOpenChange={setOpen}>
         <DropdownMenuTrigger asChild>
-          <button className="inline-flex items-center gap-2 text-sm">
-            <User className="h-4 w-4" />
-            {data.user.name ?? "Account"}
+          <button className="rounded-full p-2 hover:bg-muted focus:outline-none" aria-label="Account menu">
+            <User className="h-5 w-5" />
           </button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-56 p-2">
+        <DropdownMenuContent align="end" className="w-56 p-2 bg-background border shadow-md">
           <Link href="/dashboard" className="block px-2 py-1.5 text-sm hover:underline">Dashboard</Link>
           <button
             className="mt-1 w-full text-left px-2 py-1.5 text-sm hover:underline"
@@ -77,12 +76,12 @@ export default function UserMenu() {
   return (
     <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
-        <button className="inline-flex items-center gap-2 text-sm">
-          <User className="h-4 w-4" />
-          Sign in
+        <button className="rounded-full p-2 hover:bg-muted focus:outline-none" aria-label="Sign in">
+          <User className="h-5 w-5" />
         </button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-80 p-4 space-y-3">
+      <DropdownMenuContent align="end" className="w-96 p-5 space-y-3 bg-background border shadow-xl rounded-xl">
+        <div className="text-sm font-semibold">Sign in</div>
         <form onSubmit={handleCredentials} className="space-y-3">
           <div className="space-y-1">
             <label className="text-xs font-medium">Email</label>
@@ -90,15 +89,15 @@ export default function UserMenu() {
           </div>
           <div className="space-y-1">
             <label className="text-xs font-medium">Password</label>
-            <Input ref={passRef} type="password" placeholder="••••••••" required />
+            <Input ref={passRef} type="password" placeholder="********" required />
           </div>
           <Button type="submit" className="w-full">Sign in</Button>
         </form>
-        <div className="flex items-center justify-between text-xs">
+        <div className="flex items-center justify-between text-xs text-muted-foreground">
           <Link href="/forgot-password" className="underline">Forgot password</Link>
           <Link href="/#pricing" className="underline">Create account</Link>
         </div>
-        <div className="pt-2">
+        <div className="pt-1">
           <Button
             variant="outline"
             className="w-full"
@@ -111,3 +110,6 @@ export default function UserMenu() {
     </DropdownMenu>
   )
 }
+
+
+

@@ -2,57 +2,64 @@
 id: fixed-assets-62
 slug: component-depreciation-ifrs-for-smes
 title: Component depreciation (IFRS for SMEs)
-summary: This article covers component depreciation (ifrs for smes) for Guyanese businesses,
-  explaining key principles and how to apply them in practice.
+summary: >-
+  This article covers component depreciation (ifrs for smes) for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: fixed-assets
 tags:
-- fixed
-- assets
-- component
-- ifrs
-- for
-- depreciation
-- smes
+  - fixed
+  - assets
+  - component
+  - ifrs
+  - for
+  - depreciation
+  - smes
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: IFRS for SMEs Fact Sheet
-  url: https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
-  publisher: IFRS Foundation
-  date_accessed: '2025-09-07'
+  - title: IFRS for SMEs Fact Sheet
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
+    publisher: IFRS Foundation
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is component depreciation (ifrs for smes)?
-  answer: 'Component depreciation (IFRS for SMEs) refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform component depreciation (ifrs for smes) in heroBooks?
-  answer: 'This article provides a step-by-step guide on component depreciation (ifrs
-    for smes). It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: Why is component depreciation (ifrs for smes) important?
-  answer: 'Understanding component depreciation (ifrs for smes) helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is component depreciation (ifrs for smes)?
+    answer: >-
+      Component depreciation (IFRS for SMEs) refers to the accounting concept or
+      practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform component depreciation (ifrs for smes) in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on component depreciation (ifrs
+      for smes). It includes practical examples using Guyanese currency (GYD)
+      and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is component depreciation (ifrs for smes) important?
+    answer: >-
+      Understanding component depreciation (ifrs for smes) helps ensure accurate
+      accounting records and compliance with GRA and NIS requirements. It
+      improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: component_depreciation_ifrs_for_smes
-  synonyms:
-  - component
-  - depreciation
-  - ifrs
-  link: /help
+  - intent: ASK
+    key: component_depreciation_ifrs_for_smes
+    synonyms:
+      - component
+      - depreciation
+      - ifrs
+    link: /help
+status: draft
 ---
 
 ### Introduction

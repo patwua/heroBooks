@@ -2,57 +2,63 @@
 id: education-poa-102
 slug: common-poa-journal-entries-for-exams
 title: Common PoA journal entries for exams
-summary: This article covers common poa journal entries for exams for Guyanese businesses,
-  explaining key principles and how to apply them in practice.
+summary: >-
+  This article covers common poa journal entries for exams for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Student
+  - Student
 format: Guide
 category_id: education-poa
 tags:
-- poa
-- common
-- for
-- education
-- entries
-- journal
-- exams
+  - poa
+  - common
+  - for
+  - education
+  - entries
+  - journal
+  - exams
 jurisdiction:
-- Guyana
-- CARICOM
+  - Guyana
+  - CARICOM
 last_reviewed: '2025-09-07'
 sources:
-- title: CXC CSEC Principles of Accounts Syllabus
-  url: https://www.cxc.org
-  publisher: Caribbean Examinations Council
-  date_accessed: '2025-09-07'
+  - title: CXC CSEC Principles of Accounts Syllabus
+    url: 'https://www.cxc.org'
+    publisher: Caribbean Examinations Council
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is common poa journal entries for exams?
-  answer: 'Common PoA journal entries for exams refers to the accounting concept or
-    practice described in the article. It outlines the fundamentals and explains why
-    it matters in Guyana or the Caribbean. Next actions: Read this article and follow
-    the steps in heroBooks.'
-  type: definition
-- question: How do I perform common poa journal entries for exams in heroBooks?
-  answer: 'This article provides a step-by-step guide on common poa journal entries
-    for exams. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: Why is common poa journal entries for exams important?
-  answer: 'Understanding common poa journal entries for exams helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is common poa journal entries for exams?
+    answer: >-
+      Common PoA journal entries for exams refers to the accounting concept or
+      practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform common poa journal entries for exams in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on common poa journal entries
+      for exams. It includes practical examples using Guyanese currency (GYD)
+      and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is common poa journal entries for exams important?
+    answer: >-
+      Understanding common poa journal entries for exams helps ensure accurate
+      accounting records and compliance with GRA and NIS requirements. It
+      improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: common_poa_journal_entries_for_exams
-  synonyms:
-  - common
-  - poa
-  - journal
-  link: /help
+  - intent: ASK
+    key: common_poa_journal_entries_for_exams
+    synonyms:
+      - common
+      - poa
+      - journal
+    link: /help
+status: draft
 ---
 
 ### Introduction

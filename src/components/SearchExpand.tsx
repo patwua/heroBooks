@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import { recordFeatureImpression } from "@/lib/telemetry";
 
@@ -9,6 +9,7 @@ export default function SearchExpand() {
   const [q, setQ] = useState("");
   const ref = useRef<HTMLInputElement>(null);
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (open) ref.current?.focus();
@@ -43,7 +44,10 @@ export default function SearchExpand() {
           onSubmit={(e) => {
             e.preventDefault();
             recordFeatureImpression({ feature: "search", reason: "header_search", path: location.pathname });
-            router.push(`/search?q=${encodeURIComponent(q)}`);
+            const section = pathname.startsWith('/kb') ? 'kb' : pathname.startsWith('/help') ? 'help' : undefined;
+            const qs = new URLSearchParams({ q });
+            if (section) qs.set('section', section);
+            router.push(`/search?${qs.toString()}`);
             setOpen(false);
           }}
           className="flex items-center gap-2 rounded-xl border bg-white pl-2 pr-2 dark:bg-neutral-900 dark:border-neutral-700"

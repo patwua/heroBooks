@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="h" role="img">
+  <title id="h">Aging buckets and allowance flow</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c1:#ef4444; --c2:#22c55e; --c3:#f59e0b; --fg:#111; }
+      .box{fill:none;stroke:#0f172a;stroke-width:10;rx:12}
+      .bar{stroke-width:20;stroke-linecap:round}
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+    ]]></style>
+  </defs>
+  <rect class="box" x="24" y="24" width="464" height="300"/>
+  <line class="bar" x1="80" y1="300" x2="80" y2="180" stroke="#22c55e"/>
+  <line class="bar" x1="160" y1="300" x2="160" y2="160" stroke="#84cc16"/>
+  <line class="bar" x1="240" y1="300" x2="240" y2="120" stroke="#f59e0b"/>
+  <line class="bar" x1="320" y1="300" x2="320" y2="80" stroke="#ef4444"/>
+  <text x="62" y="328" class="t">Cur</text>
+  <text x="138" y="328" class="t">31-60</text>
+  <text x="214" y="328" class="t">61-90</text>
+  <text x="300" y="328" class="t">&gt;90</text>
+  <path d="M420 340v40h-80" fill="none" stroke="#0f172a" stroke-width="10"/>
+  <rect class="box" x="280" y="360" width="160" height="100"/>
+  <text x="292" y="396" class="t">Allowance</text>
+  <text x="292" y="424" class="t">→ Write-offs</text>
+</svg>
+

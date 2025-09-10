@@ -11,7 +11,7 @@ type NextThemesProps = React.ComponentProps<typeof NextThemesProvider>
 
 export function ThemeProvider({
   children,
-  attribute = "data-theme",
+  attribute = "class",
   defaultTheme = DEFAULT_THEME,
   enableSystem = false,
   disableTransitionOnChange = true,

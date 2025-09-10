@@ -2,59 +2,67 @@
 id: purchases-payables-21
 slug: accounts-payable-management-and-aging
 title: Accounts payable management and aging
-summary: This article covers accounts payable management and aging for Guyanese businesses,
-  explaining key principles and how to apply them in practice.
+summary: >-
+  This article covers accounts payable management and aging for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: purchases-payables
 tags:
-- payables
-- and
-- purchases
-- accounts
-- management
-- aging
-- payable
+  - payables
+  - and
+  - purchases
+  - accounts
+  - management
+  - aging
+  - payable
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is accounts payable management and aging?
-  answer: 'Accounts payable management and aging refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform accounts payable management and aging in heroBooks?
-  answer: 'This article provides a step-by-step guide on accounts payable management
-    and aging. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: Why is accounts payable management and aging important?
-  answer: 'Understanding accounts payable management and aging helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is accounts payable management and aging?
+    answer: >-
+      Accounts payable management and aging refers to the accounting concept or
+      practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform accounts payable management and aging in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on accounts payable management
+      and aging. It includes practical examples using Guyanese currency (GYD)
+      and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is accounts payable management and aging important?
+    answer: >-
+      Understanding accounts payable management and aging helps ensure accurate
+      accounting records and compliance with GRA and NIS requirements. It
+      improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: accounts_payable_management_and_aging
-  synonyms:
-  - accounts
-  - payable
-  - management
-  link: /help
+  - intent: ASK
+    key: accounts_payable_management_and_aging
+    synonyms:
+      - accounts
+      - payable
+      - management
+    link: /help
+status: draft
 ---
 
 ### Introduction

@@ -1,82 +1,52 @@
 ---
-id: getting-started-4
+id: trial-balance-purpose
 slug: trial-balance-purpose-and-preparation
-title: 'Trial balance: purpose and preparation'
-summary: 'This article covers trial balance: purpose and preparation for Guyanese
-  businesses, explaining key principles and how to apply them in practice.'
+title: Trial balance — purpose, types, and a quick prep checklist
+summary: Understand the unadjusted, adjusted, and post-closing trial balances, what each is for, and how to prepare one quickly without missing common errors.
 level: Beginner
-audience:
-- Owner
-- Accountant
-- Clerk
+audience: [Owner, Accountant, Clerk, Student]
 format: Guide
-category_id: getting-started
-tags:
-- and
-- getting
-- purpose
-- trial
-- started
-- balance
-- preparation
-jurisdiction:
-- Guyana
-last_reviewed: '2025-09-07'
+category_id: bookkeeping
+tags: [trial balance, unadjusted, adjusted, post-closing, accounting cycle]
+jurisdiction: [Guyana]
+last_reviewed: '2025-09-09'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: ACCA — Adjustments to financial statements (post-TB adjustments)
+    url: https://www.accaglobal.com/us/en/student/exam-support-resources/fundamentals-exams-study-resources/f3/technical-articles/adjustments-financial-statements.html
+    publisher: ACCA
+    date_accessed: '2025-09-09'
+  - title: Xero — What is a trial balance? (types overview)
+    url: https://www.xero.com/us/guides/trial-balance/
+    publisher: Xero
+    date_accessed: '2025-09-09'
 kb_snippets:
-- question: 'What is trial balance: purpose and preparation?'
-  answer: 'Trial balance: purpose and preparation refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: 'How do I perform trial balance: purpose and preparation in heroBooks?'
-  answer: 'This article provides a step-by-step guide on trial balance: purpose and
-    preparation. It includes practical examples using Guyanese currency (GYD) and
-    highlights local compliance points. Next actions: Follow the step-by-step section
-    and use the linked heroBooks feature.'
-  type: howto
-- question: 'Why is trial balance: purpose and preparation important?'
-  answer: 'Understanding trial balance: purpose and preparation helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
-assistant_keys:
-- intent: ASK
-  key: trial_balance_purpose_and_preparation
-  synonyms:
-  - trial
-  - balance
-  - purpose
-  link: /help
+  - question: What are the three trial balances?
+    answer: Unadjusted (before period-end journals), Adjusted (after accruals, prepayments, depreciation, etc.), and Post-closing (after closing temporary accounts; only balance-sheet accounts remain).
+    type: definition
+  - question: Does a balanced TB prove there are no errors?
+    answer: No. It catches math/posting errors but not omissions, misclassifications, compensating errors, or equal-and-opposite mistakes.
+    type: faq
 ---
 
-### Introduction
-Trial balance: purpose and preparation is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.
+## What a trial balance does (and doesn’t) do
+A TB lists ledger balances in **debit/credit** columns to test equality. It is an **internal** control step: crucial for accuracy, yet it **cannot** detect every error (e.g., an entire missing entry). Use it as a checkpoint in your period-end routine, not as proof of perfection.
 
-### Key Concepts
-Discuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.
+## Types and timing
+- **Unadjusted TB** — extracted before adjustments; used to plan period-end journals.  
+- **Adjusted TB** — after adjustments; forms the basis for the **financial statements**.  
+- **Post-closing TB** — after closing income/expense to retained earnings; only permanent accounts remain.
 
-### Guyana specifics
-Provide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.
+## Quick prep checklist
+1) Export balances from your ledger as at the period end. 2) Scan for **obvious sign flips** (negative assets). 3) Confirm **debits = credits**. 4) Post the standard adjustments: inventory, accruals/prepayments, depreciation, income tax estimates. 5) Re-extract as an **adjusted TB**. 6) After statements, **close** temporary accounts and produce a **post-closing TB**.
 
-### Step-by-step guidance
-Outline practical steps and reference heroBooks features or pages using appropriate links.
+## Mini example (GYD)
+Unadjusted debits total **G$18,524,000**; credits **G$18,494,000**. You discover **G$30,000** bank charges posted to income. Correct: **Dr Bank Fees 30,000 / Cr Sales 30,000**. Debits now equal credits; proceed with adjustments.
 
-### Worked example
-Include a practical example using Guyanese dollars (GYD) to demonstrate the concept.
+## Common pitfalls
+- Confusing **post-closing** with **adjusted** TB.  
+- Leaving suspense balances uninvestigated.  
+- Not re-running the TB after posting adjustment journals.  
 
-### Common pitfalls & checks
-Highlight typical mistakes and provide tips on how to avoid them.
+## Illustration
+> Figure: see /public/kb/illustrations/trial-balance.svg (1:1)
 
-### Glossary
-Define important terms related to the topic.
-
-### References
-List the sources cited in the article with retrieval dates.

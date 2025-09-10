@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="via" role="img">
+  <title id="via">VAT invoice audit checklist</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c:#22c55e; --fg:#0f172a }
+      .box{fill:none;stroke:var(--fg);stroke-width:10;rx:16}
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+      .tick{stroke:var(--c);stroke-width:10}
+    ]]></style>
+  </defs>
+  <rect class="box" x="48" y="64" width="416" height="192"/>
+  <text x="64" y="112" class="t">Tax invoice ✓</text>
+  <text x="64" y="144" class="t">Rate shown (14% / 0% / Exempt) ✓</text>
+  <text x="64" y="176" class="t">Zero-rated/Exempt clearly indicated ✓</text>
+  <text x="64" y="208" class="t">Totals & VAT math check ✓</text>
+  <line class="tick" x1="48" y1="280" x2="464" y2="280"/>
+</svg>
+

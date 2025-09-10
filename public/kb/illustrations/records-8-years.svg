@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="r8" role="img">
+  <title id="r8">8-year retention timeline</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c:#22c55e; --fg:#0f172a }
+      .line{stroke:var(--fg);stroke-width:10}
+      .tick{stroke:var(--fg);stroke-width:8}
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+    ]]></style>
+  </defs>
+  <line class="line" x1="48" y1="256" x2="464" y2="256"/>
+  <line class="tick" x1="80" y1="236" x2="80" y2="276"/>
+  <line class="tick" x1="136" y1="236" x2="136" y2="276"/>
+  <line class="tick" x1="192" y1="236" x2="192" y2="276"/>
+  <line class="tick" x1="248" y1="236" x2="248" y2="276"/>
+  <line class="tick" x1="304" y1="236" x2="304" y2="276"/>
+  <line class="tick" x1="360" y1="236" x2="360" y2="276"/>
+  <line class="tick" x1="416" y1="236" x2="416" y2="276"/>
+  <text x="64" y="214" class="t">Year 1</text>
+  <text x="400" y="214" class="t">Year 8</text>
+  <text x="96" y="320" class="t">Keep VAT books, invoices & bank</text>
+</svg>
+

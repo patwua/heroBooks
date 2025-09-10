@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="t" role="img">
+  <title id="t">Bank rules decision flow</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c1: #2563eb; --c2:#0ea5e9; --fg:#111; --muted:#94a3b8; }
+      .a{fill:none;stroke:var(--c1);stroke-width:10;stroke-linecap:round;stroke-linejoin:round}
+      .b{fill:var(--c2);opacity:.2}
+      .t{font:600 20px/1.2 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto}
+    ]]></style>
+  </defs>
+  <rect class="b" x="24" y="24" width="464" height="464" rx="24"/>
+  <circle class="a" cx="128" cy="128" r="48"/>
+  <text x="92" y="132" class="t">Payee</text>
+  <path class="a" d="M176 128h80"/>
+  <rect class="a" x="256" y="100" width="120" height="56" rx="8"/>
+  <text x="266" y="133" class="t">Amount range</text>
+  <path class="a" d="M316 156v60"/>
+  <rect class="a" x="220" y="216" width="180" height="64" rx="12"/>
+  <text x="230" y="255" class="t">Outcome: Account + VAT</text>
+  <path class="a" d="M310 280v56"/>
+  <rect class="a" x="236" y="340" width="148" height="56" rx="10"/>
+  <text x="246" y="374" class="t">Suggest / Auto-post</text>
+</svg>
+

@@ -1,7 +1,7 @@
-/* Build KB indexes + guard against placeholder content
+/* Build KB indexes + guard against placeholder content with a draft gate
    Usage:
-     pnpm run kb:build           # builds indexes
-     pnpm run kb:check           # same, but CI guard
+     pnpm run kb:build    # builds indexes
+     pnpm run kb:check    # same, but CI guard
 */
 const fs = require("node:fs");
 const path = require("node:path");
@@ -13,8 +13,9 @@ const ARTICLES_DIR = path.join(ROOT, "kb", "articles");
 const search = [];
 const assist = [];
 
-// Gather all placeholder offenders so authors can fix them in one pass.
+// Placeholder tracking
 const offenders = [];
+const drafted = [];
 
 // Tightly scoped phrases used in stubs; keep list short to avoid false positives.
 const BAD_PHRASES = [
@@ -27,21 +28,29 @@ const BAD_PHRASES = [
   /Define important terms/i,
   /List the sources cited/i,
   /Next actions: Read this article/i, // older template text
-  /Next actions: Follow the step-by-step/i
+  /Next actions: Follow the step-by-step/i,
 ];
 
 for (const file of fs.readdirSync(ARTICLES_DIR)) {
   if (!file.endsWith(".md")) continue;
-  const raw = fs.readFileSync(path.join(ARTICLES_DIR, file), "utf8");
+  const full = path.join(ARTICLES_DIR, file);
+  const raw = fs.readFileSync(full, "utf8");
   const { data, content } = matter(raw);
 
-  // Placeholder guard
-  if (BAD_PHRASES.some((rx) => rx.test(content))) {
-    offenders.push(file);
+  const isDraft = Boolean(data && (data.status === "draft" || data.draft === true));
+  const hasPlaceholder = BAD_PHRASES.some((rx) => rx.test(content || ""));
+
+  // Placeholder guard with draft gate
+  if (hasPlaceholder) {
+    if (isDraft) drafted.push(file);
+    else offenders.push(file);
     continue; // skip indexing placeholders
   }
 
-  const html = marked.parse(content);
+  // Skip indexing drafts even if they don't have placeholders
+  if (isDraft) continue;
+
+  const html = marked.parse(content || "");
   search.push({
     id: data.id,
     slug: data.slug,
@@ -50,7 +59,7 @@ for (const file of fs.readdirSync(ARTICLES_DIR)) {
     category_id: data.category_id,
     tags: data.tags ?? [],
     last_reviewed: data.last_reviewed,
-    html_excerpt: String(html).replace(/<[^>]+>/g, " ").slice(0, 1000)
+    html_excerpt: String(html).replace(/<[^>]+>/g, " ").slice(0, 1000),
   });
   for (const s of data.kb_snippets ?? []) {
     assist.push({
@@ -58,15 +67,24 @@ for (const file of fs.readdirSync(ARTICLES_DIR)) {
       slug: data.slug,
       intent: s.type,
       q: s.question,
-      a: s.answer
+      a: s.answer,
     });
   }
 }
 
-if (offenders.length) {
+if (offenders.length || (process.env.KB_STRICT === "1" && drafted.length)) {
   console.error("❌ Placeholder text found in the following KB articles:");
   offenders.forEach((f) => console.error(" -", f));
+  if (process.env.KB_STRICT === "1" && drafted.length) {
+    console.error("\nDrafts containing placeholders (strict mode):");
+    drafted.forEach((f) => console.error(" -", f));
+  }
   process.exit(1);
+}
+
+if (drafted.length) {
+  console.log("ℹ️ Draft articles with placeholders (not failing):");
+  drafted.forEach((f) => console.log(" -", f));
 }
 
 fs.writeFileSync(
@@ -78,3 +96,4 @@ fs.writeFileSync(
   JSON.stringify({ kb_snippets: assist }, null, 2)
 );
 console.log("✅ KB indexes rebuilt:", { articles: search.length, snippets: assist.length });
+

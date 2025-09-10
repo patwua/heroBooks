@@ -2,59 +2,69 @@
 id: industry-guides-126
 slug: beautysalon-tips-receipts-payroll-basics
 title: 'Beauty/Salon: tips, receipts, payroll basics'
-summary: 'This article covers beauty/salon: tips, receipts, payroll basics for Guyanese
-  businesses, explaining key principles and how to apply them in practice.'
+summary: >-
+  This article covers beauty/salon: tips, receipts, payroll basics for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: industry-guides
 tags:
-- beautysalon
-- guides
-- tips
-- basics
-- industry
-- receipts
-- payroll
+  - beautysalon
+  - guides
+  - tips
+  - basics
+  - industry
+  - receipts
+  - payroll
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: 'What is beauty/salon: tips, receipts, payroll basics?'
-  answer: 'Beauty/Salon: tips, receipts, payroll basics refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: 'How do I perform beauty/salon: tips, receipts, payroll basics in heroBooks?'
-  answer: 'This article provides a step-by-step guide on beauty/salon: tips, receipts,
-    payroll basics. It includes practical examples using Guyanese currency (GYD) and
-    highlights local compliance points. Next actions: Follow the step-by-step section
-    and use the linked heroBooks feature.'
-  type: howto
-- question: 'Why is beauty/salon: tips, receipts, payroll basics important?'
-  answer: 'Understanding beauty/salon: tips, receipts, payroll basics helps ensure
-    accurate accounting records and compliance with GRA and NIS requirements. It improves
-    decision-making and financial transparency for Guyanese businesses. Next actions:
-    Implement the best practices outlined in the article.'
-  type: faq
+  - question: 'What is beauty/salon: tips, receipts, payroll basics?'
+    answer: >-
+      Beauty/Salon: tips, receipts, payroll basics refers to the accounting
+      concept or practice described in the article. It outlines the fundamentals
+      and explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: >-
+      How do I perform beauty/salon: tips, receipts, payroll basics in
+      heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on beauty/salon: tips,
+      receipts, payroll basics. It includes practical examples using Guyanese
+      currency (GYD) and highlights local compliance points. Next actions:
+      Follow the step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: 'Why is beauty/salon: tips, receipts, payroll basics important?'
+    answer: >-
+      Understanding beauty/salon: tips, receipts, payroll basics helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: beautysalon_tips_receipts_payroll_basics
-  synonyms:
-  - beautysalon
-  - tips
-  - receipts
-  link: /help
+  - intent: ASK
+    key: beautysalon_tips_receipts_payroll_basics
+    synonyms:
+      - beautysalon
+      - tips
+      - receipts
+    link: /help
+status: draft
 ---
 
 ### Introduction

@@ -2,59 +2,69 @@
 id: sales-vat-13
 slug: vat-filing-calendar-and-preparation-checklist
 title: VAT filing calendar and preparation checklist
-summary: This article covers vat filing calendar and preparation checklist for Guyanese
+summary: >-
+  This article covers vat filing calendar and preparation checklist for Guyanese
   businesses, explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Checklist
 category_id: sales-vat
 tags:
-- and
-- sales
-- filing
-- checklist
-- calendar
-- vat
-- preparation
+  - and
+  - sales
+  - filing
+  - checklist
+  - calendar
+  - vat
+  - preparation
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is vat filing calendar and preparation checklist?
-  answer: 'VAT filing calendar and preparation checklist refers to the accounting
-    concept or practice described in the article. It outlines the fundamentals and
-    explains why it matters in Guyana or the Caribbean. Next actions: Read this article
-    and follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform vat filing calendar and preparation checklist in heroBooks?
-  answer: 'This article provides a step-by-step guide on vat filing calendar and preparation
-    checklist. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: Why is vat filing calendar and preparation checklist important?
-  answer: 'Understanding vat filing calendar and preparation checklist helps ensure
-    accurate accounting records and compliance with GRA and NIS requirements. It improves
-    decision-making and financial transparency for Guyanese businesses. Next actions:
-    Implement the best practices outlined in the article.'
-  type: faq
+  - question: What is vat filing calendar and preparation checklist?
+    answer: >-
+      VAT filing calendar and preparation checklist refers to the accounting
+      concept or practice described in the article. It outlines the fundamentals
+      and explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: >-
+      How do I perform vat filing calendar and preparation checklist in
+      heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on vat filing calendar and
+      preparation checklist. It includes practical examples using Guyanese
+      currency (GYD) and highlights local compliance points. Next actions:
+      Follow the step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is vat filing calendar and preparation checklist important?
+    answer: >-
+      Understanding vat filing calendar and preparation checklist helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: vat_filing_calendar_and_preparation_checklist
-  synonyms:
-  - vat
-  - filing
-  - calendar
-  link: /help
+  - intent: ASK
+    key: vat_filing_calendar_and_preparation_checklist
+    synonyms:
+      - vat
+      - filing
+      - calendar
+    link: /help
+status: draft
 ---
 
 ### Introduction

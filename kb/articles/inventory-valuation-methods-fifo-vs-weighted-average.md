@@ -1,83 +1,55 @@
 ---
-id: inventory-cogs-42
+id: inventory-fifo-vs-avg
 slug: inventory-valuation-methods-fifo-vs-weighted-average
-title: 'Inventory valuation methods: FIFO vs weighted average'
-summary: 'This article covers inventory valuation methods: fifo vs weighted average
-  for Guyanese businesses, explaining key principles and how to apply them in practice.'
-level: Intermediate
-audience:
-- Accountant
-- Owner
-format: Concept
-category_id: inventory-cogs
-tags:
-- inventory
-- average
-- valuation
-- fifo
-- methods
-- vs
-- cogs
-- weighted
-jurisdiction:
-- Guyana
-last_reviewed: '2025-09-07'
+title: Inventory valuation - FIFO vs weighted average (IFRS/SMEs, GYD)
+summary: "Choose between FIFO and weighted-average under IFRS for SMEs / IAS 2, with GYD examples and an NRV check. Note: LIFO is not permitted under IFRS."
+level: Beginner
+audience: [Owner, Accountant, Clerk, Student]
+format: Guide
+category_id: inventory
+tags: [inventory, FIFO, weighted average, NRV, IFRS for SMEs, IAS 2]
+jurisdiction: [Guyana]
+last_reviewed: "2025-09-09"
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: "IFRS for SMEs (3rd ed., 2025) - Section 13 Inventories"
+    url: https://www.ifrs.org/content/dam/ifrs/publications/html-standards/english/2025/issued/html-ifrs-for-smes.html
+    publisher: IFRS Foundation
+    date_accessed: "2025-09-09"
 kb_snippets:
-- question: 'What is inventory valuation methods: fifo vs weighted average?'
-  answer: 'Inventory valuation methods: FIFO vs weighted average refers to the accounting
-    concept or practice described in the article. It outlines the fundamentals and
-    explains why it matters in Guyana or the Caribbean. Next actions: Read this article
-    and follow the steps in heroBooks.'
-  type: definition
-- question: 'How do I perform inventory valuation methods: fifo vs weighted average
-    in heroBooks?'
-  answer: 'This article provides a step-by-step guide on inventory valuation methods:
-    fifo vs weighted average. It includes practical examples using Guyanese currency
-    (GYD) and highlights local compliance points. Next actions: Follow the step-by-step
-    section and use the linked heroBooks feature.'
-  type: howto
-- question: 'Why is inventory valuation methods: fifo vs weighted average important?'
-  answer: 'Understanding inventory valuation methods: fifo vs weighted average helps
-    ensure accurate accounting records and compliance with GRA and NIS requirements.
-    It improves decision-making and financial transparency for Guyanese businesses.
-    Next actions: Implement the best practices outlined in the article.'
-  type: faq
-assistant_keys:
-- intent: ASK
-  key: inventory_valuation_methods_fifo_vs_weighted_average
-  synonyms:
-  - inventory
-  - valuation
-  - methods
-  link: /help
+  - question: Which cost formulas are allowed?
+    answer: Under IFRS for SMEs / IAS 2, you may use FIFO or weighted-average (and specific identification for unique items). LIFO is not permitted.
+    type: definition
+  - question: How do I pick one?
+    answer: Prefer FIFO when prices are rising and stock turns quickly; prefer weighted-average for high-volume, indistinguishable items. Apply the same method to inventories of similar nature and use.
+    type: faq
 ---
 
-### Introduction
-Inventory valuation methods: FIFO vs weighted average is an important topic for businesses in Guyana and the Caribbean. This section explains what it is and why it matters.
+## Cost components (what "cost" includes)
+Purchase price (less discounts), import duties, freight, and conversion costs (a share of production overheads). Abnormal waste, storage after production, and selling costs are expensed (not inventory).
 
-### Key Concepts
-Discuss the foundational principles, linking back to Principles of Accounts (PoA) where applicable.
+## GYD mini-scenario
+Purchases of Item A:
+- Jan 10: 100 @ G$1,000 = G$100,000
+- Jan 25: 60 @ G$1,200 = G$72,000
+Sales in Jan: 120 units.
 
-### Guyana specifics
-Provide current rates, forms, deadlines, and rules relevant to Guyana. Remember to indicate that figures are subject to change and cite official sources.
+### FIFO
+COGS = 100x1,000 + 20x1,200 = G$124,000.
+Ending inventory = remaining 40x1,200 = G$48,000.
 
-### Step-by-step guidance
-Outline practical steps and reference heroBooks features or pages using appropriate links.
+### Weighted-average (periodic)
+Total cost 172,000 / total units 160 = G$1,075 per unit.
+COGS = 120x1,075 = G$129,000; Ending inventory = 40x1,075 = G$43,000.
 
-### Worked example
-Include a practical example using Guyanese dollars (GYD) to demonstrate the concept.
+## NRV (lower of cost and NRV)
+If expected selling price less costs to sell is G$1,050 per unit at period end, NRV of the 40 units = G$42,000.
+Under IAS 2/IFRS for SMEs, carry inventory at lower of cost and NRV - write down G$1,000 (from cost G$43,000 to NRV G$42,000).
 
-### Common pitfalls & checks
-Highlight typical mistakes and provide tips on how to avoid them.
+## Method discipline
+- Use one method for similar inventories; change only with a clear improvement in reliability/relevance and disclose the change.
+- Document assumptions; keep vendor invoices and landed-cost workings.
 
-### Glossary
-Define important terms related to the topic.
+## Illustration
+> Figure: see /public/kb/illustrations/inventory-fifo-avg.svg (1:1)
 
-### References
-List the sources cited in the article with retrieval dates.
+

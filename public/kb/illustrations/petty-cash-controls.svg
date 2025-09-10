@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="p" role="img">
+  <title id="p">Petty cash triangle: Float • Voucher • Count</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c:#2563eb; --fg:#0f172a }
+      .a{fill:none;stroke:var(--c);stroke-width:12;stroke-linejoin:round}
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+    ]]></style>
+  </defs>
+  <polygon class="a" points="256,64 448,400 64,400"/>
+  <text x="236" y="52" class="t">Float</text>
+  <text x="440" y="412" text-anchor="end" class="t">Voucher</text>
+  <text x="72" y="412" class="t">Count</text>
+</svg>
+

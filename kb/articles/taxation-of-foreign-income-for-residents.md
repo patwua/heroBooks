@@ -2,62 +2,71 @@
 id: compliance-92
 slug: taxation-of-foreign-income-for-residents
 title: Taxation of foreign income for residents
-summary: This article covers taxation of foreign income for residents for Guyanese
+summary: >-
+  This article covers taxation of foreign income for residents for Guyanese
   businesses, explaining key principles and how to apply them in practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: compliance
 tags:
-- compliance
-- foreign
-- for
-- taxation
-- income
-- of
-- residents
+  - compliance
+  - foreign
+  - for
+  - taxation
+  - income
+  - of
+  - residents
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
-- title: BDO Guyana Budget Bulletin 2025
-  url: https://www.bdo.gy/getattachment/1d8dfc48-8c12-4dd2-909e-a49e19392cf4/BDO-Guyana-Budget-Bulletin-2025.pdf
-  publisher: BDO Guyana
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
+  - title: BDO Guyana Budget Bulletin 2025
+    url: >-
+      https://www.bdo.gy/getattachment/1d8dfc48-8c12-4dd2-909e-a49e19392cf4/BDO-Guyana-Budget-Bulletin-2025.pdf
+    publisher: BDO Guyana
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is taxation of foreign income for residents?
-  answer: 'Taxation of foreign income for residents refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform taxation of foreign income for residents in heroBooks?
-  answer: 'This article provides a step-by-step guide on taxation of foreign income
-    for residents. It includes practical examples using Guyanese currency (GYD) and
-    highlights local compliance points. Next actions: Follow the step-by-step section
-    and use the linked heroBooks feature.'
-  type: howto
-- question: Why is taxation of foreign income for residents important?
-  answer: 'Understanding taxation of foreign income for residents helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is taxation of foreign income for residents?
+    answer: >-
+      Taxation of foreign income for residents refers to the accounting concept
+      or practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform taxation of foreign income for residents in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on taxation of foreign income
+      for residents. It includes practical examples using Guyanese currency
+      (GYD) and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is taxation of foreign income for residents important?
+    answer: >-
+      Understanding taxation of foreign income for residents helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: taxation_of_foreign_income_for_residents
-  synonyms:
-  - taxation
-  - of
-  - foreign
-  link: /help
+  - intent: ASK
+    key: taxation_of_foreign_income_for_residents
+    synonyms:
+      - taxation
+      - of
+      - foreign
+    link: /help
+status: draft
 ---
 
 ### Introduction

@@ -2,61 +2,69 @@
 id: purchases-payables-18
 slug: supplier-bills-vs-expenses-which-to-use
 title: 'Supplier bills vs expenses: which to use?'
-summary: 'This article covers supplier bills vs expenses: which to use? for Guyanese
-  businesses, explaining key principles and how to apply them in practice.'
+summary: >-
+  This article covers supplier bills vs expenses: which to use? for Guyanese
+  businesses, explaining key principles and how to apply them in practice.
 level: Beginner
 audience:
-- Owner
-- Accountant
-- Clerk
+  - Owner
+  - Accountant
+  - Clerk
 format: Guide
 category_id: purchases-payables
 tags:
-- payables
-- purchases
-- bills
-- which
-- supplier
-- expenses
-- vs
-- to
-- use
+  - payables
+  - purchases
+  - bills
+  - which
+  - supplier
+  - expenses
+  - vs
+  - to
+  - use
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: 'What is supplier bills vs expenses: which to use??'
-  answer: 'Supplier bills vs expenses: which to use? refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: 'How do I perform supplier bills vs expenses: which to use? in heroBooks?'
-  answer: 'This article provides a step-by-step guide on supplier bills vs expenses:
-    which to use?. It includes practical examples using Guyanese currency (GYD) and
-    highlights local compliance points. Next actions: Follow the step-by-step section
-    and use the linked heroBooks feature.'
-  type: howto
-- question: 'Why is supplier bills vs expenses: which to use? important?'
-  answer: 'Understanding supplier bills vs expenses: which to use? helps ensure accurate
-    accounting records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: 'What is supplier bills vs expenses: which to use??'
+    answer: >-
+      Supplier bills vs expenses: which to use? refers to the accounting concept
+      or practice described in the article. It outlines the fundamentals and
+      explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: 'How do I perform supplier bills vs expenses: which to use? in heroBooks?'
+    answer: >-
+      This article provides a step-by-step guide on supplier bills vs expenses:
+      which to use?. It includes practical examples using Guyanese currency
+      (GYD) and highlights local compliance points. Next actions: Follow the
+      step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: 'Why is supplier bills vs expenses: which to use? important?'
+    answer: >-
+      Understanding supplier bills vs expenses: which to use? helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: supplier_bills_vs_expenses_which_to_use
-  synonyms:
-  - supplier
-  - bills
-  - vs
-  link: /help
+  - intent: ASK
+    key: supplier_bills_vs_expenses_which_to_use
+    synonyms:
+      - supplier
+      - bills
+      - vs
+    link: /help
+status: draft
 ---
 
 ### Introduction

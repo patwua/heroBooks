@@ -2,57 +2,64 @@
 id: financial-reporting-68
 slug: preparing-notes-to-the-financial-statements
 title: Preparing notes to the financial statements
-summary: This article covers preparing notes to the financial statements for Guyanese
+summary: >-
+  This article covers preparing notes to the financial statements for Guyanese
   businesses, explaining key principles and how to apply them in practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: financial-reporting
 tags:
-- financial
-- reporting
-- notes
-- the
-- to
-- statements
-- preparing
+  - financial
+  - reporting
+  - notes
+  - the
+  - to
+  - statements
+  - preparing
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: IFRS for SMEs Fact Sheet
-  url: https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
-  publisher: IFRS Foundation
-  date_accessed: '2025-09-07'
+  - title: IFRS for SMEs Fact Sheet
+    url: >-
+      https://www.ifrs.org/content/dam/ifrs/groups/smes/major-documents/sme-fact-sheet-dec-16.pdf
+    publisher: IFRS Foundation
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is preparing notes to the financial statements?
-  answer: 'Preparing notes to the financial statements refers to the accounting concept
-    or practice described in the article. It outlines the fundamentals and explains
-    why it matters in Guyana or the Caribbean. Next actions: Read this article and
-    follow the steps in heroBooks.'
-  type: definition
-- question: How do I perform preparing notes to the financial statements in heroBooks?
-  answer: 'This article provides a step-by-step guide on preparing notes to the financial
-    statements. It includes practical examples using Guyanese currency (GYD) and highlights
-    local compliance points. Next actions: Follow the step-by-step section and use
-    the linked heroBooks feature.'
-  type: howto
-- question: Why is preparing notes to the financial statements important?
-  answer: 'Understanding preparing notes to the financial statements helps ensure
-    accurate accounting records and compliance with GRA and NIS requirements. It improves
-    decision-making and financial transparency for Guyanese businesses. Next actions:
-    Implement the best practices outlined in the article.'
-  type: faq
+  - question: What is preparing notes to the financial statements?
+    answer: >-
+      Preparing notes to the financial statements refers to the accounting
+      concept or practice described in the article. It outlines the fundamentals
+      and explains why it matters in Guyana or the Caribbean. Next actions: Read
+      this article and follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform preparing notes to the financial statements in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on preparing notes to the
+      financial statements. It includes practical examples using Guyanese
+      currency (GYD) and highlights local compliance points. Next actions:
+      Follow the step-by-step section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is preparing notes to the financial statements important?
+    answer: >-
+      Understanding preparing notes to the financial statements helps ensure
+      accurate accounting records and compliance with GRA and NIS requirements.
+      It improves decision-making and financial transparency for Guyanese
+      businesses. Next actions: Implement the best practices outlined in the
+      article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: preparing_notes_to_the_financial_statements
-  synonyms:
-  - preparing
-  - notes
-  - to
-  link: /help
+  - intent: ASK
+    key: preparing_notes_to_the_financial_statements
+    synonyms:
+      - preparing
+      - notes
+      - to
+    link: /help
+status: draft
 ---
 
 ### Introduction

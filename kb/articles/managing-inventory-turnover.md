@@ -2,55 +2,62 @@
 id: inventory-cogs-44
 slug: managing-inventory-turnover
 title: Managing inventory turnover
-summary: This article covers managing inventory turnover for Guyanese businesses,
+summary: >-
+  This article covers managing inventory turnover for Guyanese businesses,
   explaining key principles and how to apply them in practice.
 level: Intermediate
 audience:
-- Accountant
-- Owner
+  - Accountant
+  - Owner
 format: Guide
 category_id: inventory-cogs
 tags:
-- turnover
-- managing
-- cogs
-- inventory
+  - turnover
+  - managing
+  - cogs
+  - inventory
 jurisdiction:
-- Guyana
+  - Guyana
 last_reviewed: '2025-09-07'
 sources:
-- title: "Notice to Employers, Employees & Self-Employed Persons \u2013 Revised Personal\
-    \ Allowance 2025"
-  url: https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
-  publisher: Guyana Revenue Authority
-  date_accessed: '2025-09-07'
+  - title: >-
+      Notice to Employers, Employees & Self-Employed Persons – Revised Personal
+      Allowance 2025
+    url: >-
+      https://www.gra.gov.gy/notice-to-employers-employees-self-employed-persons-revised-personal-allowance-and-deductions-for-income-tax-2025-copy/
+    publisher: Guyana Revenue Authority
+    date_accessed: '2025-09-07'
 kb_snippets:
-- question: What is managing inventory turnover?
-  answer: 'Managing inventory turnover refers to the accounting concept or practice
-    described in the article. It outlines the fundamentals and explains why it matters
-    in Guyana or the Caribbean. Next actions: Read this article and follow the steps
-    in heroBooks.'
-  type: definition
-- question: How do I perform managing inventory turnover in heroBooks?
-  answer: 'This article provides a step-by-step guide on managing inventory turnover.
-    It includes practical examples using Guyanese currency (GYD) and highlights local
-    compliance points. Next actions: Follow the step-by-step section and use the linked
-    heroBooks feature.'
-  type: howto
-- question: Why is managing inventory turnover important?
-  answer: 'Understanding managing inventory turnover helps ensure accurate accounting
-    records and compliance with GRA and NIS requirements. It improves decision-making
-    and financial transparency for Guyanese businesses. Next actions: Implement the
-    best practices outlined in the article.'
-  type: faq
+  - question: What is managing inventory turnover?
+    answer: >-
+      Managing inventory turnover refers to the accounting concept or practice
+      described in the article. It outlines the fundamentals and explains why it
+      matters in Guyana or the Caribbean. Next actions: Read this article and
+      follow the steps in heroBooks.
+    type: definition
+  - question: How do I perform managing inventory turnover in heroBooks?
+    answer: >-
+      This article provides a step-by-step guide on managing inventory turnover.
+      It includes practical examples using Guyanese currency (GYD) and
+      highlights local compliance points. Next actions: Follow the step-by-step
+      section and use the linked heroBooks feature.
+    type: howto
+  - question: Why is managing inventory turnover important?
+    answer: >-
+      Understanding managing inventory turnover helps ensure accurate accounting
+      records and compliance with GRA and NIS requirements. It improves
+      decision-making and financial transparency for Guyanese businesses. Next
+      actions: Implement the best practices outlined in the article.
+    type: faq
 assistant_keys:
-- intent: ASK
-  key: managing_inventory_turnover
-  synonyms:
-  - managing
-  - inventory
-  - turnover
-  link: /help
+  - intent: ASK
+    key: managing_inventory_turnover
+    synonyms:
+      - managing
+      - inventory
+      - turnover
+    link: /help
+status: draft
 ---
 
 ### Introduction
