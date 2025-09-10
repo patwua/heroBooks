@@ -4,9 +4,12 @@
   "packageManager": "pnpm@10.15.1",
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "pnpm prisma:check && next build",
     "start": "prisma migrate deploy && next start",
     "postinstall": "prisma generate",
+    "prisma:format": "prisma format",
+    "prisma:validate": "prisma validate",
+    "prisma:check": "pnpm prisma:format && pnpm prisma:validate",
     "lint": "next lint",
     "seed:demo": "tsx scripts/seed-demo.ts",
     "kb:download": "tsx scripts/download-kb-drive.ts",
