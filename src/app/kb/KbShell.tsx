@@ -30,19 +30,19 @@ type RightRail = {
 export default function KbShell({
   children,
   articles,
-  rightRail,
-}: {
-  children: React.ReactNode;
-  articles: Article[];
-  rightRail: RightRail;
-}) {
+  rightRail
+
+
+
+
+}: {children: React.ReactNode;articles: Article[];rightRail: RightRail;}) {
   const pathname = usePathname();
   const params = useSearchParams();
   const cat = params?.get('cat') || undefined;
   const catName = useMemo(() => {
     if (!cat) return undefined;
     const cats = (taxonomy as any).categories || [];
-    return (cats.find((c: any) => c.id === cat)?.name as string) || undefined;
+    return cats.find((c: any) => c.id === cat)?.name as string || undefined;
   }, [cat]);
   const slugFromPath = useMemo(() => {
     const m = pathname.match(/^\/kb\/(.+)$/);
@@ -84,9 +84,9 @@ export default function KbShell({
     return Array.from(map.entries()).map(([key, items]) => ({
       id: key,
       name:
-        (taxonomy as any).categories?.find((c: any) => c.id === key)?.name ||
-        key,
-      items,
+      (taxonomy as any).categories?.find((c: any) => c.id === key)?.name ||
+      key,
+      items
     }));
   }, [filtered]);
 
@@ -102,14 +102,14 @@ export default function KbShell({
       }
       if (activeCat) {
         const next: Record<string, boolean> = {};
-        grouped.forEach((g) => { next[g.id] = g.id === activeCat; });
+        grouped.forEach((g) => {next[g.id] = g.id === activeCat;});
         setOpenGroups(next);
         // Soft scroll group into view
         const el = document.getElementById(`kb-group-${activeCat}`);
         if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     } catch {}
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cat, slugFromPath]);
 
   const palettes: Record<string, [string, string]> = {
@@ -120,7 +120,7 @@ export default function KbShell({
     cash: ["#14b8a6", "#0f766e"],
     bookkeeping: ["#4338ca", "#1e3a8a"],
     inventory: ["#f59e0b", "#b45309"],
-    compliance: ["#f97316", "#7c2d12"],
+    compliance: ["#f97316", "#7c2d12"]
   };
   const [g1, g2] = palettes[cat || ""] || [colors.brandBlue, colors.brandBlueDark];
 
@@ -130,9 +130,9 @@ export default function KbShell({
       <div
         className="w-full text-white"
         style={{
-          backgroundImage: `linear-gradient(to right, ${g1}, ${g2})`,
-        }}
-      >
+          backgroundImage: `linear-gradient(to right, ${g1}, ${g2})`
+        }}>
+
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-sm opacity-90">Knowledge Base{catName ? ` / ${catName}` : ""}</div>
           <h1 className="mt-1 text-3xl font-extrabold">{catName || "Learn it. Run it."}</h1>
@@ -145,117 +145,117 @@ export default function KbShell({
           {/* Left: Navigation + links (no borders) */}
           <aside className="hidden lg:block">
             <div className="text-xs uppercase tracking-wide text-muted-foreground mb-3">Browse</div>
-            {grouped.map((g) => (
-              <div key={g.id} id={`kb-group-${g.id}`} className="mb-5">
+            {grouped.map((g) =>
+            <div key={g.id} id={`kb-group-${g.id}`} className="mb-5">
                 <div className="mb-2 flex items-center justify-between">
                   <Link href={`/kb?cat=${g.id}`} className="text-[13px] font-semibold text-foreground hover:underline">
                     {g.name}
                   </Link>
                   <button
-                    className="text-xs text-muted-foreground hover:underline"
-                    onClick={() => setOpenGroups((s) => ({ ...s, [g.id]: !s[g.id] }))}
-                    aria-expanded={!!openGroups[g.id]}
-                  >
+                  className="text-xs text-muted-foreground hover:underline"
+                  onClick={() => setOpenGroups((s) => ({ ...s, [g.id]: !s[g.id] }))}
+                  aria-expanded={!!openGroups[g.id]}>
+
                     {openGroups[g.id] ? 'Hide' : 'Show'}
                   </button>
                 </div>
-                {openGroups[g.id] !== false && (
-                <ul className="space-y-2">
+                {(openGroups[g.id] !== false ?
+              <ul className="space-y-2">
                   {g.items.map((article) => {
-                    const isRead = read.has(article.slug);
-                    return (
-                      <li key={article.slug}>
+                  const isRead = read.has(article.slug);
+                  return (
+                    <li key={article.slug}>
                         <Link
-                          href={`/kb/${article.slug}`}
-                          onClick={() => {
-                            try {
-                              setRead((prev) => {
-                                const next = new Set(prev);
-                                next.add(article.slug);
-                                localStorage.setItem(
-                                  "kb_read_slugs",
-                                  JSON.stringify(Array.from(next))
-                                );
-                                return next;
-                              });
-                            } catch {}
-                          }}
-                          className={`block text-sm hover:underline ${isRead ? "text-foreground" : "text-blue-600 font-medium"}`}
-                        >
+                        href={`/kb/${article.slug}`}
+                        onClick={() => {
+                          try {
+                            setRead((prev) => {
+                              const next = new Set(prev);
+                              next.add(article.slug);
+                              localStorage.setItem(
+                                "kb_read_slugs",
+                                JSON.stringify(Array.from(next))
+                              );
+                              return next;
+                            });
+                          } catch {}
+                        }}
+                        className={`block text-sm hover:underline ${isRead ? "text-foreground" : "text-blue-600 font-medium"}`}>
+
                           {article.title}
                         </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-                )}
+                      </li>);
+
+                })}
+                </ul> : null)}
+
               </div>
-            ))}
+            )}
 
             {/* Quick Links */}
-            {(rightRail.gra_links || rightRail.nis_links) && (
-              <div className="mt-8 space-y-6">
-                {rightRail.gra_links && (
-                  <div>
+            {(rightRail.gra_links || rightRail.nis_links ?
+            <div className="mt-8 space-y-6">
+                {(rightRail.gra_links ?
+              <div>
                     <div className="text-xs uppercase tracking-wide text-muted-foreground mb-2">
                       GRA Links
                     </div>
                     <ul className="space-y-1 text-sm">
-                      {rightRail.gra_links.map((l) => (
-                        <li key={l.url}>
+                      {rightRail.gra_links.map((l) =>
+                  <li key={l.url}>
                           <a
-                            href={l.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:underline"
-                          >
+                      href={l.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline">
+
                             {l.name}
                           </a>
                         </li>
-                      ))}
+                  )}
                     </ul>
-                  </div>
-                )}
-                {rightRail.nis_links && (
-                  <div>
+                  </div> : null)}
+
+                {(rightRail.nis_links ?
+              <div>
                     <div className="text-xs uppercase tracking-wide text-muted-foreground mb-2">
                       NIS Links
                     </div>
                     <ul className="space-y-1 text-sm">
-                      {rightRail.nis_links.map((l) => (
-                        <li key={l.url}>
+                      {rightRail.nis_links.map((l) =>
+                  <li key={l.url}>
                           <a
-                            href={l.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:underline"
-                          >
+                      href={l.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline">
+
                             {l.name}
                           </a>
                         </li>
-                      ))}
+                  )}
                     </ul>
-                  </div>
-                )}
-              </div>
-            )}
+                  </div> : null)}
 
-            {rightRail.popular_snippets && (
-              <div className="mt-8">
+              </div> : null)}
+
+
+            {(rightRail.popular_snippets ?
+            <div className="mt-8">
                 <div className="text-xs uppercase tracking-wide text-muted-foreground mb-2">
                   Popular
                 </div>
                 <ul className="space-y-1 text-sm">
-                  {rightRail.popular_snippets.map((l) => (
-                    <li key={l.link}>
+                  {rightRail.popular_snippets.map((l) =>
+                <li key={l.link}>
                       <Link href={l.link ?? "#"} className="hover:underline">
                         {l.question}
                       </Link>
                     </li>
-                  ))}
+                )}
                 </ul>
-              </div>
-            )}
+              </div> : null)}
+
           </aside>
 
           {/* Main content */}
@@ -264,8 +264,8 @@ export default function KbShell({
             <div className="mb-4 lg:hidden">
               <button
                 className="rounded-xl border px-3 py-2 text-sm"
-                onClick={() => setDrawer(true)}
-              >
+                onClick={() => setDrawer(true)}>
+
                 Browse articles
               </button>
             </div>
@@ -275,31 +275,31 @@ export default function KbShell({
       </div>
 
       {/* Mobile drawer */}
-      {drawer && (
-        <div className="fixed inset-0 z-50 lg:hidden">
+      {(drawer ?
+      <div className="fixed inset-0 z-50 lg:hidden">
           <div className="absolute inset-0 bg-black/30" onClick={() => setDrawer(false)} />
           <div className="absolute inset-y-0 left-0 w-80 bg-background shadow-xl p-4 overflow-y-auto">
             <div className="flex items-center justify-between mb-3">
               <div className="text-xs uppercase tracking-wide text-muted-foreground">Browse</div>
               <button className="rounded-md px-2 py-1 text-sm border" onClick={() => setDrawer(false)}>Close</button>
             </div>
-            {grouped.map((g) => (
-              <div key={g.id} className="mb-5">
+            {grouped.map((g) =>
+          <div key={g.id} className="mb-5">
                 <div className="mb-2 text-[13px] font-semibold text-foreground/80">{g.name}</div>
                 <ul className="space-y-2">
-                  {g.items.map((article) => (
-                    <li key={article.slug}>
+                  {g.items.map((article) =>
+              <li key={article.slug}>
                       <Link href={`/kb/${article.slug}`} onClick={() => setDrawer(false)} className="block text-sm hover:underline">
                         {article.title}
                       </Link>
                     </li>
-                  ))}
+              )}
                 </ul>
               </div>
-            ))}
+          )}
           </div>
-        </div>
-      )}
-    </div>
-  );
+        </div> : null)}
+
+    </div>);
+
 }

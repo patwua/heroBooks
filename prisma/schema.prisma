@@ -73,6 +73,10 @@ model OrgSettings {
   allowNegativeStock Boolean @default(false)
   apiKey             String? @unique
   webhookUrl         String?
+  // Optional site/global UI configuration
+  scope              String? // e.g., "site" for global settings
+  theme              String?
+  modules            String[]
 }
 
 model UserOrg {

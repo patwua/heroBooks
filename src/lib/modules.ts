@@ -46,8 +46,8 @@ import { cookies } from "next/headers";
 import { prisma } from "@/lib/prisma";
 
 export async function resolveUiForRequest() {
-  // 1) DB: try orgSettings if it exists and flagged as site/global
-  try {
+  // 1) DB: try orgSettings if enabled via UI_FROM_DB=1
+  try { if (process.env.UI_FROM_DB === "1") {
     // We don't know your exact schema; access through 'any' and catch if the model/fields don't exist.
     // @ts-ignore - runtime guard
     if ((prisma as any).orgSettings) {
@@ -61,7 +61,7 @@ export async function resolveUiForRequest() {
         return { theme: row.theme as ThemeKey, modules: new Set<ModuleKey>(row.modules) };
       }
     }
-  } catch {}
+  } } catch {}
 
   // 2) Cookie override (per-browser preview)
   try {

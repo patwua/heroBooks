@@ -1,13 +1,34 @@
-name: Prisma Check
-on: [pull_request, push]
+name: Prisma Schema Check
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
 jobs:
-  prisma:
+  prisma-validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with: { version: 9 }
-      - uses: actions/setup-node@v4
-        with: { node-version: '20' }
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm prisma:check
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.1
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Prisma format + validate
+        run: pnpm prisma:check
+        env:
+          # Dummy URL to satisfy Prisma when DATABASE_URL is required by the CLI
+          DATABASE_URL: postgresql://user:pass@localhost:5432/db?schema=public
+

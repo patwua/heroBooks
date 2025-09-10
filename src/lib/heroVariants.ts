@@ -65,7 +65,7 @@ function pickRandom<T>(arr: readonly T[]): T {
 export async function resolveHeroVariant(): Promise<{ key: HeroVariantKey; content: HeroContent }> {
   const enable = process.env.LANDING_RANDOMIZE === "1";
   const pool = parsePool();
-  const jar = cookies();
+  const jar = await cookies();
 
   // Default (no randomization): general
   if (!enable) {
@@ -80,9 +80,8 @@ export async function resolveHeroVariant(): Promise<{ key: HeroVariantKey; conte
 
   // Persist selection for 1 hour (3600s) per request
   try {
-    jar.set("hb_hero", selected, { path: "/", maxAge: 3600, sameSite: "lax" });
+    (jar as any).set?.("hb_hero", selected, { path: "/", maxAge: 3600, sameSite: "lax" });
   } catch {}
 
   return { key: selected, content: HERO_VARIANTS[selected] };
 }
-

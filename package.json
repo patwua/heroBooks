@@ -4,7 +4,7 @@
   "packageManager": "pnpm@10.15.1",
   "scripts": {
     "dev": "next dev",
-    "build": "pnpm prisma:check && next build",
+    "build": "prisma generate && next build",
     "start": "prisma migrate deploy && next start",
     "postinstall": "prisma generate",
     "prisma:format": "prisma format",
@@ -16,7 +16,9 @@
     "kb:build": "node scripts/build-kb-index.js",
     "kb:check": "node scripts/build-kb-index.js",
     "kb:report": "node scripts/build-kb-index.js",
-    "kb:sweep": "node scripts/kb-sweep.js"
+    "kb:sweep": "node scripts/kb-sweep.js",
+    "codemod:jsx-ternary": "node scripts/codemods/fix-jsx-and-conditionals.cjs",
+    "codemod:jsx-ternary:kb": "node scripts/codemods/fix-jsx-and-conditionals.cjs src/app/kb/**/*.tsx"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.10.0",
@@ -28,10 +30,10 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
+    "gray-matter": "^4.0.3",
     "imapflow": "^1.0.195",
     "lucide-react": "^0.542.0",
     "mailparser": "^3.7.4",
-    "gray-matter": "^4.0.3",
     "marked": "^16.2.1",
     "mjml": "^4.15.3",
     "next": "15.5.2",
@@ -46,11 +48,16 @@
     "react-dom": "19.1.1",
     "react-fast-marquee": "^1.6.5",
     "recharts": "^3.1.2",
+    "sanitize-html": "^2.17.0",
     "tailwind-merge": "^3.3.1",
-    "zod": "^4.1.5",
-    "yaml": "^2.8.1"
+    "yaml": "^2.8.1",
+    "zod": "^4.1.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/generator": "^7.28.3",
+    "@babel/parser": "^7.28.4",
+    "@babel/traverse": "^7.28.4",
     "@tailwindcss/postcss": "^4.1.13",
     "@types/mailparser": "^3.4.6",
     "@types/node": "24.3.1",
@@ -59,11 +66,15 @@
     "@types/pdf-parse": "^1.1.5",
     "@types/pdfkit": "^0.17.3",
     "@types/react": "19.1.12",
+    "@types/sanitize-html": "^2.16.0",
     "eslint": "^9.35.0",
     "eslint-config-next": "^15.5.2",
+    "fs-extra": "^11.3.1",
+    "glob": "^11.0.3",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.13",
     "tailwindcss-animate": "^1.0.7",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   },
   "pnpm": {

@@ -6,14 +6,19 @@ Auth: NextAuth (Google + Credentials) • Prisma • Postgres
 
 ## Local
 1) `cp .env.example .env` and set `DATABASE_URL` to your hosted Postgres connection string and `NEXTAUTH_SECRET`
-2) `npm i`
-3) `npx prisma migrate deploy`
-4) `npm run dev`
+2) Install dependencies (pnpm recommended):
+   - `npx pnpm@10.15.1 install`  (no global install needed)
+   - or `npm i --legacy-peer-deps` (if you prefer npm)
+3) Database migrations:
+   - To create/apply new migrations locally: `npx prisma migrate dev -n <name>`
+   - To apply existing migrations: `npx prisma migrate deploy`
+4) Run the app:
+   - `npx pnpm@10.15.1 dev` (or `npm run dev`)
 
 ## Render
 - Create **Postgres**; copy internal connection string -> `DATABASE_URL`
 - Create **Web Service** from GitHub
-  - Build: `npm run build`
+  - Build: `npx pnpm@10.15.1 build`
   - Start: `npm start`
   - Add envs from `.env.example`
 - Point **herobooks.net** DNS to the service; enable HTTPS
@@ -74,3 +79,21 @@ Flags:
 - `--logo-scale`: percent of output width (default 15)
 - `--logo-opacity`: 0–100 (default 100)
 - `--quality`: output quality for WebP/JPEG (default 85)
+
+## UI Settings Source (DB vs Env)
+
+- By default, theme and UI modules come from env: `THEME_ACTIVE`, `MODULES_ENABLED`.
+- To resolve these from the database (`OrgSettings` row with `scope = "site"`), set `UI_FROM_DB=1`.
+- New DB fields used when enabled:
+  - `OrgSettings.scope` (TEXT, e.g., `site`)
+  - `OrgSettings.theme` (TEXT)
+  - `OrgSettings.modules` (TEXT[])
+
+### Migrating DB for UI settings
+
+If you haven’t applied the UI fields yet:
+
+1) Generate migration: `npx prisma migrate dev -n add_orgsettings_site_ui`
+2) Deploy migration (prod): `npx prisma migrate deploy`
+
+These add columns to `OrgSettings` and are safe to run; existing rows get `modules = {}` by default.

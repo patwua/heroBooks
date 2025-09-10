@@ -1,20 +1,22 @@
-import fs from "node:fs";
 import path from "node:path";
+import fs from "node:fs";
+import React from "react";
 import Link from "next/link";
 import SectionCard from "@/components/UX/SectionCard";
 import taxonomy from "@/../kb/taxonomy.json";
 import TipsBlock from "./TipsBlock";
-import dynamic from "next/dynamic";
-const FaqList = dynamic(() => import("./FaqList"), { ssr: false });
-const RecentBlock = dynamic(() => import("./RecentBlock"), { ssr: false });
+import FaqList from "./FaqList";
+import RecentBlock from "./RecentBlock";
 
-export default async function KbHome({ searchParams }: { searchParams?: Promise<Record<string, string | string[] | undefined>> }) {
+export const dynamic = "force-dynamic";
+
+export default async function KbHome({ searchParams }: {searchParams?: Promise<Record<string, string | string[] | undefined>>;}) {
   const cats = (taxonomy as any).categories ?? [];
   const params = (await (searchParams || Promise.resolve({}))) as any;
   const cat = typeof params.cat === 'string' ? params.cat : undefined;
 
   // Load published articles from search index
-  let articles: Array<{ slug: string; title: string; category_id?: string; summary?: string }> = [];
+  let articles: Array<{slug: string;title: string;category_id?: string;summary?: string;}> = [];
   try {
     const file = path.join(process.cwd(), "kb", "search_index.json");
     const raw = fs.readFileSync(file, "utf8");
@@ -24,7 +26,7 @@ export default async function KbHome({ searchParams }: { searchParams?: Promise<
 
   const inCat = (cat ? articles.filter((a) => a.category_id === cat) : []).slice(0, 24);
   // Load FAQs (snippets) for this page
-  let faqs: Array<{ slug: string; q: string; a: string }> = [];
+  let faqs: Array<{slug: string;q: string;a: string;}> = [];
   try {
     const file = path.join(process.cwd(), "kb", "kb_assist_index.json");
     const raw = fs.readFileSync(file, "utf8");
@@ -39,6 +41,8 @@ export default async function KbHome({ searchParams }: { searchParams?: Promise<
   } catch {}
 
   return (
+    <React.Suspense fallback={null}>
+      <>
       <SectionCard className="border-0 shadow-none bg-transparent dark:bg-transparent">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="text-sm text-muted-foreground">
@@ -50,62 +54,62 @@ export default async function KbHome({ searchParams }: { searchParams?: Promise<
           </div>
         </div>
       </SectionCard>
-      {!cat && (
+      {!cat ?
         <SectionCard className="border-0 shadow-none bg-transparent dark:bg-transparent">
           <div className="mb-2 text-lg font-semibold">Browse by section</div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {cats.map((c: any) => (
-              <Link
-                key={c.id}
-                href={`/kb?cat=${c.id}`}
-                className="group rounded-2xl border bg-card p-4 hover:shadow-md transition"
-              >
+            {cats.map((c: any) =>
+            <Link
+              key={c.id}
+              href={`/kb?cat=${c.id}`}
+              className="group rounded-2xl border bg-card p-4 hover:shadow-md transition">
+
                 <div className="text-lg font-semibold">{c.name}</div>
                 <div className="text-sm text-muted-foreground mt-1">Open this section</div>
                 <div className="mt-3 aspect-square rounded-xl bg-muted group-hover:bg-muted/70" />
               </Link>
-            ))}
+            )}
           </div>
-        </SectionCard>
-      )}
-      {cat ? (
+        </SectionCard> :
+        null}
+      {cat ?
         <SectionCard className="border-0 shadow-none bg-transparent dark:bg-transparent">
           <div className="mb-3 text-sm text-muted-foreground">{inCat.length} article(s) in this category</div>
           <div className="grid gap-3">
-            {inCat.map((a) => (
-              <Link
-                key={a.slug}
-                href={`/kb/${a.slug}`}
-                className="rounded-xl border p-4 hover:bg-neutral-50 dark:hover:bg-neutral-900"
-              >
+            {inCat.map((a) =>
+            <Link
+              key={a.slug}
+              href={`/kb/${a.slug}`}
+              className="rounded-xl border p-4 hover:bg-neutral-50 dark:hover:bg-neutral-900">
+              
                 <div className="font-medium">{a.title}</div>
-                {a.summary && <div className="text-sm text-muted-foreground line-clamp-2">{a.summary}</div>}
+                {(a.summary ? <div className="text-sm text-muted-foreground line-clamp-2">{a.summary}</div> : null)}
               </Link>
-            ))}
-            {inCat.length === 0 && (
-              <div className="text-sm text-muted-foreground">No published articles yet. Check back soon.</div>
             )}
+            {(inCat.length === 0 ?
+            <div className="text-sm text-muted-foreground">No published articles yet. Check back soon.</div> : null)}
+            
           </div>
-        </SectionCard>
-      ) : (
+        </SectionCard> :
+
         <SectionCard className="border-0 shadow-none bg-transparent dark:bg-transparent">
           <div className="mb-2 text-lg font-semibold">Tips for you</div>
           <TipsBlock />
         </SectionCard>
-      )}
-      {!cat && (
+        }
+      {!cat ?
         <SectionCard className="border-0 shadow-none bg-transparent dark:bg-transparent">
           <div className="mb-2 text-lg font-semibold">Pick up where you left off</div>
           <RecentBlock />
-        </SectionCard>
-      )}
-      {!cat && (
+        </SectionCard> :
+        null}
+      {!cat ?
         <SectionCard className="border-0 shadow-none bg-transparent dark:bg-transparent">
           <div className="mb-2 text-lg font-semibold">Frequently Asked Questions</div>
           <FaqList items={faqs} />
-        </SectionCard>
-      )}
-  );
+        </SectionCard> :
+        null}
+      </>
+    </React.Suspense>);
+
 }
-
-

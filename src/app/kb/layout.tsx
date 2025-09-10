@@ -43,9 +43,11 @@ export default function KnowledgeBaseLayout({
   return (
     <div className="min-h-screen flex flex-col">
       <KbHeader />
-      <KbShell articles={articles} rightRail={rightRail}>
-        {children}
-      </KbShell>
+      <React.Suspense fallback={null}>
+        <KbShell articles={articles} rightRail={rightRail}>
+          {children}
+        </KbShell>
+      </React.Suspense>
       <Footer />
     </div>
   );

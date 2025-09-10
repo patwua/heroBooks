@@ -9,7 +9,7 @@ export async function GET() {
   try {
     const raw = fs.readFileSync(file, "utf8");
     const idx = JSON.parse(raw) as Array<{ slug: string; title: string; summary?: string; category_id?: string }>;
-    const c = cookies();
+    const c = await cookies();
     let counts: Record<string, number> = {};
     let dismissed: string[] = [];
     try { counts = JSON.parse(c.get("kb_view_counts")?.value || "{}"); } catch {}
