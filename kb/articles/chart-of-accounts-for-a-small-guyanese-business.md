@@ -19,6 +19,10 @@ sources:
     url: "https://www.nis.org.gy/information_on_contributions"
     publisher: National Insurance Scheme (Guyana)
     date_accessed: "2025-09-09"
+  - title: "GRA – Tax Calendar (VAT returns due by the 21st)"
+    url: "https://www.gra.gov.gy/tax-calendar/?mc_id=203"
+    publisher: Guyana Revenue Authority
+    date_accessed: "2025-09-09"
 kb_snippets:
   - question: Do I need separate accounts for VAT?
     answer: Yes. Use Output VAT (liability) for tax you charge, and Input VAT (asset/contra) for VAT you paid that’s claimable.
@@ -36,11 +40,11 @@ kb_snippets:
 - 1600 Fixed assets
 
 **2000 Liabilities**  
-- 2100 Accounts payable  
-- 2200 **Output VAT (payable)** *(standard rate 14%)* :contentReference[oaicite:12]{index=12}  
-- 2300 **PAYE payable**  
-- 2310 **NIS — employee** (5.6%)  
-- 2320 **NIS — employer** (8.4%) :contentReference[oaicite:13]{index=13}
+- 2100 Accounts payable
+- 2200 **Output VAT (payable)** *(standard rate 14%)* :contentReference[oaicite:0]{index=0}
+- 2300 **PAYE payable**
+- 2310 **NIS — employee** (5.6%)
+- 2320 **NIS — employer** (8.4%) :contentReference[oaicite:1]{index=1}
 
 **3000 Equity**  
 - 3100 Owner’s capital  
@@ -56,9 +60,9 @@ kb_snippets:
 - 5110 Freight/landed costs
 
 **6000 Expenses**  
-- 6100 Wages & salaries  
-- 6110 PAYE expense (contra to 2300 on payment)  
-- 6120 NIS — employer expense (contra to 2320 on payment) :contentReference[oaicite:14]{index=14}  
+- 6100 Wages & salaries
+- 6110 PAYE expense (contra to 2300 on payment)
+- 6120 NIS — employer expense (contra to 2320 on payment) :contentReference[oaicite:1]{index=1}
 - 6200 Rent & rates  
 - 6300 Utilities  
 - 6400 Repairs & maintenance  
@@ -66,11 +70,11 @@ kb_snippets:
 
 ## How VAT flows (quick view)
 1) Sale G$11,400 (incl. VAT 14%): **Cr 4100 Sales 10,000; Cr 2200 Output VAT 1,400; Dr 1020 Bank 11,400**.  
-2) Purchase G$5,700 (incl. VAT): **Dr 5100 Purchases 5,000; Dr 1300 Input VAT 700; Cr 2100 A/P 5,700**.  
-3) Month-end VAT payable = **Output VAT − Input VAT**; file and pay by **the 21st**. :contentReference[oaicite:15]{index=15}
+2) Purchase G$5,700 (incl. VAT): **Dr 5100 Purchases 5,000; Dr 1300 Input VAT 700; Cr 2100 A/P 5,700**.
+3) Month-end VAT payable = **Output VAT − Input VAT**; file and pay by **the 21st**. :contentReference[oaicite:2]{index=2}
 
 ## Tips
-- Keep **zero-rated and exempt** sales in separate revenue accounts for VAT returns.  
-- Map payroll so **NIS employer** hits expense (6120) and the **liability** clears when remitted. :contentReference[oaicite:16]{index=16}
+- Keep **zero-rated and exempt** sales in separate revenue accounts for VAT returns.
+- Map payroll so **NIS employer** hits expense (6120) and the **liability** clears when remitted. :contentReference[oaicite:1]{index=1}
 
 > **Optional illustration:** a simple 1:1 flow diagram (Sales → Output VAT; Purchases → Input VAT; Net to GRA).
