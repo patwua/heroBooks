@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" aria-labelledby="olc" role="img">
+  <title id="olc">Owner loans vs drawings (regional)</title>
+  <defs><style><![CDATA[:root{--c1:#22c55e;--c2:#0ea5e9;--fg:#0f172a}.box{fill:none;stroke:var(--fg);stroke-width:10;rx:16}.t{font:600 18px/1.2 ui-sans-serif,system-ui}]]></style></defs>
+  <rect class="box" x="40" y="48" width="200" height="144"/>
+  <text x="56" y="96" class="t">Drawings → Equity</text>
+  <rect class="box" x="272" y="48" width="200" height="144"/>
+  <text x="288" y="96" class="t">Loans → Asset/Liab</text>
+</svg>
+

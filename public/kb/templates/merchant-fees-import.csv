@@ -1,0 +1,3 @@
+date,gateway,gross_sales,fees,refunds,chargebacks,net_settlement,location,notes
+2025-09-01,Stripe,1500000,45000,20000,0,1435000,Georgetown,Effective rate 3.0%
+

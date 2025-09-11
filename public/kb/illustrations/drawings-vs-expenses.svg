@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="dve" role="img">
+  <title id="dve">Drawings reduce equity, not profit</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c1:#22c55e; --c2:#ef4444; --fg:#0f172a }
+      .axis{stroke:#94a3b8;stroke-width:6}
+      .line{stroke:var(--c1);stroke-width:6;fill:none}
+      .bar{stroke:var(--c2);stroke-width:20}
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+    ]]></style>
+  </defs>
+  <line class="axis" x1="64" y1="384" x2="448" y2="384"/>
+  <line class="axis" x1="64" y1="96" x2="64" y2="384"/>
+  <polyline class="line" points="96,200 176,200 256,200 336,200 416,200"/>
+  <text x="82" y="118" class="t">Profit</text>
+  <line class="bar" x1="160" y1="384" x2="160" y2="280"/>
+  <line class="bar" x1="240" y1="384" x2="240" y2="300"/>
+  <line class="bar" x1="320" y1="384" x2="320" y2="320"/>
+  <text x="128" y="412" class="t">Equity</text>
+</svg>
+

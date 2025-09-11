@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "version": 1,
+    "generated_at": "2025-09-10",
+    "note": "Indicative standard rates for quick reference. Always verify using the provided links."
+  },
+  "countries": [
+    {"code": "GY", "name": "Guyana", "tax_name": "VAT", "standard_rate": 14.0, "currency": "GYD", "verify_url": "https://www.gra.gov.gy/vat/", "last_checked": "2025-09-10"},
+    {"code": "TT", "name": "Trinidad and Tobago", "tax_name": "VAT", "standard_rate": 12.5, "currency": "TTD", "verify_url": "https://www.ird.gov.tt/", "last_checked": "2025-09-10"},
+    {"code": "JM", "name": "Jamaica", "tax_name": "GCT", "standard_rate": 15.0, "currency": "JMD", "verify_url": "https://www.jamaicatax.gov.jm/", "last_checked": "2025-09-10"},
+    {"code": "BB", "name": "Barbados", "tax_name": "VAT", "standard_rate": 17.5, "currency": "BBD", "verify_url": "https://www.bra.gov.bb/", "last_checked": "2025-09-10"},
+    {"code": "BZ", "name": "Belize", "tax_name": "GST", "standard_rate": 12.5, "currency": "BZD", "verify_url": "https://www.belizetaxservice.gov.bz/", "last_checked": "2025-09-10"},
+    {"code": "AG", "name": "Antigua and Barbuda", "tax_name": "ABST", "standard_rate": 15.0, "currency": "XCD", "verify_url": "https://abst.gov.ag/", "last_checked": "2025-09-10"},
+    {"code": "GD", "name": "Grenada", "tax_name": "VAT", "standard_rate": 15.0, "currency": "XCD", "verify_url": "https://www.ird.gd/", "last_checked": "2025-09-10"},
+    {"code": "KN", "name": "St Kitts and Nevis", "tax_name": "VAT", "standard_rate": 17.0, "currency": "XCD", "verify_url": "https://www.sknird.com/", "last_checked": "2025-09-10"},
+    {"code": "LC", "name": "St Lucia", "tax_name": "VAT", "standard_rate": 12.5, "currency": "XCD", "verify_url": "https://www.irdstlucia.gov.lc/", "last_checked": "2025-09-10"},
+    {"code": "VC", "name": "St Vincent & the Grenadines", "tax_name": "VAT", "standard_rate": 16.0, "currency": "XCD", "verify_url": "https://www.svgird.com/", "last_checked": "2025-09-10"},
+    {"code": "DM", "name": "Dominica", "tax_name": "VAT", "standard_rate": 15.0, "currency": "XCD", "verify_url": "https://www.ird.gov.dm/", "last_checked": "2025-09-10"},
+    {"code": "BS", "name": "Bahamas", "tax_name": "VAT", "standard_rate": 10.0, "currency": "BSD", "verify_url": "https://inlandrevenue.finance.gov.bs/", "last_checked": "2025-09-10"},
+    {"code": "KY", "name": "Cayman Islands", "tax_name": "None (no VAT)", "standard_rate": null, "currency": "KYD", "verify_url": "https://www.caymanresident.com/working/taxes", "last_checked": "2025-09-10"},
+    {"code": "VG", "name": "British Virgin Islands", "tax_name": "No VAT", "standard_rate": null, "currency": "USD", "verify_url": "https://inlandrevenue.gov.vg/", "last_checked": "2025-09-10"},
+    {"code": "SR", "name": "Suriname", "tax_name": "VAT (BTW)", "standard_rate": null, "currency": "SRD", "verify_url": "https://www.belastingdienst.sr/", "last_checked": "2025-09-10"},
+    {"code": "BR", "name": "Brazil", "tax_name": "ICMS/ISS (no single VAT)", "standard_rate": null, "currency": "BRL", "verify_url": "https://www.gov.br/receitafederal/pt-br", "last_checked": "2025-09-10"},
+    {"code": "VE", "name": "Venezuela", "tax_name": "VAT (IVA)", "standard_rate": null, "currency": "VES", "verify_url": "https://declaraciones.seniat.gob.ve/", "last_checked": "2025-09-10"},
+    {"code": "GF", "name": "French Guiana", "tax_name": "Local indirect taxes (verify)", "standard_rate": null, "currency": "EUR", "verify_url": "https://www.impots.gouv.fr/", "last_checked": "2025-09-10"}
+  ]
+}

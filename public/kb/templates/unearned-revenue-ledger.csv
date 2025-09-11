@@ -1,0 +1,3 @@
+date_received,customer,reference,description,amount,currency,expected_recognition,recognized_date,recognized_amount,balance,notes
+2025-09-02,ABC Trading,DEP-1001,Deposit for order ORD-1001,50000,GYD,2025-09-12,2025-09-12,50000,0,Recognized on delivery
+

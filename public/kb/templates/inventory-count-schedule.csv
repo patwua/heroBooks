@@ -1,0 +1,5 @@
+sku_class,frequency,day_of_week,bin_range,counter,verifier,notes
+A,Weekly,Monday,BIN-001..BIN-050,Sam,Rita,
+B,Monthly,First Wednesday,BIN-051..BIN-150,Kim,Joe,
+C,Quarterly,First Friday,BIN-151..BIN-300,Priya,Alex,
+

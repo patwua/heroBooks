@@ -1,0 +1,3 @@
+job_id,customer,description,materials,labour,overhead_absorbed,total_wip,status
+JOB-2025-001,Client A,Custom build,120000,80000,40000,240000,In progress
+

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" aria-labelledby="dc" role="img">
+  <title id="dc">Drawings: equity, not expense</title>
+  <defs><style><![CDATA[:root{--c:#22c55e;--fg:#0f172a}.axis{stroke:#94a3b8;stroke-width:6}.line{stroke:var(--c);stroke-width:6;fill:none}.t{font:600 18px/1.2 ui-sans-serif,system-ui}]]></style></defs>
+  <line class="axis" x1="64" y1="184" x2="448" y2="184"/>
+  <line class="axis" x1="64" y1="64" x2="64" y2="184"/>
+  <polyline class="line" points="96,120 176,120 256,120 336,120 416,120"/>
+  <text x="88" y="88" class="t">Profit</text>
+</svg>
+

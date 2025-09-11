@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "title": "Find answers fast",
+    "subtitle": "Focused guides, G$ examples, and ready-to-use templates",
+    "search_placeholder": "Search tasks, e.g., 'VAT return', 'bank rec'",
+    "region_toggle": ["Guyana", "Caribbean"]
+  },
+  "quick_chips": [
+    {"label": "VAT", "slug": "vat-return-review-checklist-guyana"},
+    {"label": "Inventory", "slug": "inventory-moving-average-perpetual"},
+    {"label": "Payroll", "slug": "payroll-statutory-deductions-guyana-overview-2025"},
+    {"label": "Cash", "slug": "bank-reconciliation-timing-vs-errors-deep-dive"}
+  ],
+  "featured_articles": [
+    "vat-return-review-checklist-guyana",
+    "vat-return-variance-analysis-guyana",
+    "inventory-write-downs-nrv-reversals-guyana-2025",
+    "inventory-nrv-disclosures-examples",
+    "owner-withdrawals-vs-expenses",
+    "owner-loans-vs-drawings-guyana-sme",
+    "bank-reconciliation-workbook-template",
+    "vat-refunds-evidence-pack-guyana"
+  ],
+  "featured_templates": [
+    {"label": "Fixed Asset Register", "path": "/kb/templates/fixed-asset-register-template.csv"},
+    {"label": "Inventory Count Sheet", "path": "/kb/templates/inventory-count-sheet-template.csv"},
+    {"label": "Bank Rec Workbook", "path": "/kb/templates/bank-reconciliation-template.csv"},
+    {"label": "AR Aging Export", "path": "/kb/templates/ar-aging-export.csv"}
+  ],
+  "glossary_spotlight": ["VAT", "7/57", "NRV", "FIFO", "DSO"],
+  "widgets": {
+    "show_rates": true,
+    "rates_source": "/kb/rates/tax_rates.json",
+    "show_tips": true,
+    "tips_source": "/kb/kb_glossary.json"
+  }
+}
+

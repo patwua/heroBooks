@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" aria-labelledby="pci" role="img">
+  <title id="pci">Petty cash imprest: fixed float</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c:#f59e0b; --fg:#0f172a }
+      .box{fill:none;stroke:var(--fg);stroke-width:10;rx:16}
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+      .bar{stroke:var(--c);stroke-width:20}
+    ]]></style>
+  </defs>
+  <rect class="box" x="40" y="48" width="432" height="144"/>
+  <text x="56" y="96" class="t">Float = G$20,000</text>
+  <text x="56" y="128" class="t">Reimburse vouchers → restore float</text>
+  <line class="bar" x1="360" y1="200" x2="440" y2="200"/>
+</svg>
+

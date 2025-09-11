@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="brw" role="img">
+  <title id="brw">Bank rec workbook CSV</title>
+  <defs><style><![CDATA[:root{--c:#0ea5e9;--fg:#0f172a}.t{font:600 18px/1.2 ui-sans-serif,system-ui}.box{fill:none;stroke:var(--fg);stroke-width:10;rx:16}]]></style></defs>
+  <rect class="box" x="48" y="64" width="416" height="224"/>
+  <text x="64" y="112" class="t">date, description, amount...</text>
+  <text x="64" y="144" class="t">type: timing / error</text>
+  <text x="64" y="176" class="t">adjusted bank == adjusted book</text>
+</svg>
+

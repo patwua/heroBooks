@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" aria-labelledby="vir" role="img">
+  <title id="vir">VAT inclusive: r/(100+r)</title>
+  <defs><style><![CDATA[:root{--c:#22c55e;--fg:#0f172a}.t{font:600 18px/1.2 ui-sans-serif,system-ui}.box{fill:none;stroke:var(--fg);stroke-width:10;rx:16}]]></style></defs>
+  <rect class="box" x="32" y="48" width="448" height="144"/>
+  <text x="48" y="96" class="t">VAT = Gross × r/(100+r)</text>
+  <text x="48" y="128" class="t">Example: 117.50 → 17.50 + 100.00</text>
+</svg>
+

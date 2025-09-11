@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" aria-labelledby="pgc" role="img">
+  <title id="pgc">GRA vs NIS comparison</title>
+  <defs><style><![CDATA[:root{--fg:#0f172a}.col{fill:none;stroke:var(--fg);stroke-width:10;rx:16}.t{font:600 18px/1.2 ui-sans-serif,system-ui}]]></style></defs>
+  <rect class="col" x="40" y="48" width="200" height="144"/>
+  <text x="56" y="88" class="t">GRA (PAYE)</text>
+  <text x="56" y="120" class="t">Taxable income</text>
+  <rect class="col" x="272" y="48" width="200" height="144"/>
+  <text x="288" y="88" class="t">NIS</text>
+  <text x="288" y="120" class="t">Insurable earnings</text>
+</svg>
+

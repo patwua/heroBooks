@@ -1,0 +1,5 @@
+score_min,score_max,suggested_limit,approval
+0,2,50000,Manager
+3,4,250000,Controller
+5,5,500000,CFO
+

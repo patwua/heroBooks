@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" aria-labelledby="wipv" role="img">
+  <title id="wipv">WIP variances</title>
+  <defs><style><![CDATA[:root{--fg:#0f172a}.box{fill:none;stroke:var(--fg);stroke-width:10;rx:16}.t{font:600 18px/1.2 ui-sans-serif,system-ui}]]></style></defs>
+  <rect class="box" x="40" y="48" width="120" height="144"/>
+  <text x="56" y="96" class="t">OH</text>
+  <rect class="box" x="196" y="48" width="120" height="144"/>
+  <text x="212" y="96" class="t">Scrap</text>
+  <rect class="box" x="352" y="48" width="120" height="144"/>
+  <text x="364" y="96" class="t">Yield</text>
+</svg>
+

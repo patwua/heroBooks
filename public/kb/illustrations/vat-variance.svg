@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="vv" role="img">
+  <title id="vv">VAT variance bridge</title>
+  <defs><style><![CDATA[:root{--c:#22c55e;--fg:#0f172a}.axis{stroke:#94a3b8;stroke-width:6}.t{font:600 18px/1.2 ui-sans-serif,system-ui}.bar{stroke:var(--c);stroke-width:24}]]></style></defs>
+  <line class="axis" x1="64" y1="384" x2="448" y2="384"/><line class="axis" x1="64" y1="96" x2="64" y2="384"/>
+  <line class="bar" x1="120" y1="384" x2="120" y2="240"/><text x="88" y="412" class="t">Sales</text>
+  <line class="bar" x1="240" y1="384" x2="240" y2="280"/><text x="204" y="412" class="t">Taxable</text>
+  <line class="bar" x1="360" y1="384" x2="360" y2="300"/><text x="332" y="412" class="t">Output VAT</text>
+</svg>
+

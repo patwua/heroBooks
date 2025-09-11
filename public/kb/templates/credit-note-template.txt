@@ -1,0 +1,19 @@
+Credit Note Template (Text)
+
+Header
+- Credit Note No:
+- Issue date:
+- Original invoice no/date:
+- Customer name/TIN:
+
+Lines
+- Reason:
+- Net amount:
+- VAT rate:
+- VAT amount:
+- Total:
+
+Footer
+- Authorized by:
+- Notes:
+

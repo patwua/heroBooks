@@ -1,0 +1,3 @@
+sku,avg_daily_demand,lead_time_days,stdev_demand,Z_svc,ROP,safety_stock,notes
+SKU-1001,8,12,3,1.65,,,
+

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" aria-labelledby="scn" role="img">
+  <title id="scn">Supplier credit notes</title>
+  <defs><style><![CDATA[:root{--c:#0ea5e9;--fg:#0f172a}.box{fill:none;stroke:var(--fg);stroke-width:10;rx:16}.t{font:600 18px/1.2 ui-sans-serif,system-ui}]]></style></defs>
+  <rect class="box" x="40" y="48" width="432" height="144"/>
+  <text x="56" y="96" class="t">Ref original invoice • Reason</text>
+  <text x="56" y="128" class="t">Net/VAT/Total • Unique number</text>
+</svg>
+

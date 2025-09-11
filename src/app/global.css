@@ -109,3 +109,19 @@ html { scroll-behavior: smooth; }
 .prose p { margin-top: 0.75em; margin-bottom: 0.75em; }
 .prose ul, .prose ol { margin-top: 0.75em; margin-bottom: 0.75em; padding-left: 1.25em; }
 .prose li { margin: 0.25em 0; }
+/* Link color and decoration for clarity */
+.prose a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
+/* Modern image wrapping: float on wider screens; stack on mobile */
+.prose img { border-radius: 0.75rem; border: 1px solid var(--border); max-width: 100%; height: auto; }
+@media (min-width: 640px) {
+  .prose img { float: right; max-width: min(360px, 45%); margin: 0.25rem 0 1rem 1rem; }
+}
+
+/* KB packed illustration overrides (no borders, seamless) */
+.kb-article p > img[src^="/kb/illustrations/"] {
+  float: right;
+  max-width: min(40%, 360px);
+  margin: 0 0 .75rem 1rem;
+  border: 0 !important;
+}
+.kb-article a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }

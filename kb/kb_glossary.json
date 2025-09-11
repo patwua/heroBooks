@@ -1,0 +1,25 @@
+{
+  "terms": [
+    {"term": "VAT", "aliases": ["Value Added Tax"], "description": "Consumption tax charged on value added at each stage of supply. Paid by customers, collected by registered businesses, remitted to the tax authority.", "related": ["vat-inclusive-pricing-regional-cheat-sheet", "vat-zero-vs-exempt-invoice-audit-caribbean"]},
+    {"term": "GCT", "aliases": ["General Consumption Tax", "Jamaica VAT"], "description": "Jamaica’s VAT-equivalent consumption tax. Functions similarly to VAT; rates and exemptions are set by Jamaican law.", "related": ["vat-return-variance-analysis-caribbean"]},
+    {"term": "GST", "aliases": ["Goods and Services Tax"], "description": "VAT-style tax used in some jurisdictions (e.g., Belize). Mechanically similar to VAT; rates and scope vary by country.", "related": ["vat-return-review-checklist-caribbean"]},
+    {"term": "ABST", "aliases": ["Antigua and Barbuda Sales Tax"], "description": "VAT-style sales tax used in Antigua and Barbuda. Operates similarly to VAT with local rules and rates.", "related": []},
+    {"term": "7/57", "aliases": ["14/114"], "description": "Shortcut to extract VAT from a VAT-inclusive price at 14% in Guyana. VAT = Gross × 14/114 (i.e., 7/57); Net = Gross − VAT.", "related": ["vat-inclusive-pricing-7-57-cheat-sheet-guyana", "vat-inclusive-pricing-regional-cheat-sheet"]},
+    {"term": "r/(100+r)", "aliases": ["inclusive VAT formula"], "description": "General formula to extract VAT from VAT-inclusive prices at rate r%. VAT = Gross × r/(100+r); Net = Gross − VAT.", "related": ["vat-inclusive-pricing-regional-cheat-sheet"]},
+    {"term": "NRV", "aliases": ["Net realisable value"], "description": "Estimated selling price in the ordinary course of business, less costs to complete and sell. Inventories are carried at the lower of cost and NRV.", "related": ["inventory-nrv-disclosures-examples", "inventory-write-downs-nrv-reversals-guyana-2025"]},
+    {"term": "FIFO", "aliases": ["First-in, First-out"], "description": "Inventory cost formula where earliest costs are issued to COGS first; latest costs remain in inventory.", "related": ["inventory-cost-formulas-fifo-vs-weighted-average"]},
+    {"term": "Weighted average", "aliases": ["Moving average"], "description": "Inventory cost formula that uses average costs; moving-average updates after each receipt in perpetual systems.", "related": ["inventory-moving-average-perpetual", "inventory-cost-formulas-fifo-vs-weighted-average"]},
+    {"term": "SL", "aliases": ["Straight-line depreciation"], "description": "Depreciation method allocating equal expense over useful life.", "related": ["depreciation-methods-changes-gyd", "depreciation-methods-estimate-changes-ifrs-smes"]},
+    {"term": "RB", "aliases": ["Reducing-balance depreciation", "Declining-balance"], "description": "Depreciation method applying a fixed percentage to the carrying amount each period.", "related": ["depreciation-methods-changes-gyd"]},
+    {"term": "DSO", "aliases": ["Days Sales Outstanding"], "description": "Average number of days it takes to collect receivables. Lower is generally better.", "related": ["ar-aging-collections-workflow-guyana", "ar-aging-credit-control-playbook"]},
+    {"term": "CEI", "aliases": ["Collection Effectiveness Index"], "description": "KPI measuring the effectiveness of collections over a period relative to opening receivables and new sales.", "related": ["ar-aging-credit-control-playbook"]},
+    {"term": "POS", "aliases": ["Point of Sale"], "description": "Sales system; end-of-day Z-reports are often used to reconcile cash and VAT.", "related": ["retail-shops-daily-sales-vat-workflow"]},
+    {"term": "Z-report", "aliases": ["End-of-day report"], "description": "POS report summarising sales/voids/refunds for a period; used in bank and VAT reconciliations.", "related": ["bank-reconciliation-timing-vs-errors-deep-dive"]},
+    {"term": "DIT", "aliases": ["Deposits in transit"], "description": "Cash/cheques recorded in the books but not yet shown on the bank statement at period end. A timing difference.", "related": ["bank-reconciliation-timing-vs-errors-deep-dive"]},
+    {"term": "EMS", "aliases": ["Express Mail Service"], "description": "International express postal service. Courier/EMS tracking slips may be accepted as export evidence for small consignments (check local rules).", "related": ["vat-refunds-exporter-evidence-caribbean"]},
+    {"term": "BL", "aliases": ["Bill of Lading"], "description": "Document issued by a carrier to acknowledge receipt of cargo for shipment; commonly used as export evidence.", "related": ["vat-refunds-evidence-pack-guyana"]},
+    {"term": "AWB", "aliases": ["Air Waybill"], "description": "Non-negotiable consignment note for air shipments; used as export evidence.", "related": ["vat-refunds-evidence-pack-guyana"]},
+    {"term": "DLA", "aliases": ["Director’s loan account"], "description": "Account tracking amounts due from/to a company’s director. Balances are assets/liabilities, not expenses.", "related": ["owner-loans-vs-drawings-guyana-sme", "owner-loans-vs-drawings-caribbean"]}
+  ]
+}
+

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" aria-labelledby="v7157" role="img">
+  <title id="v7157">VAT-inclusive pricing: 14/114 = 7/57</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c:#22c55e; --fg:#0f172a }
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+      .box{fill:none;stroke:var(--fg);stroke-width:10;rx:16}
+    ]]></style>
+  </defs>
+  <rect class="box" x="32" y="48" width="448" height="80"/>
+  <text x="48" y="96" class="t">VAT = Gross × 14/114  (same as 7/57)</text>
+  <text x="48" y="144" class="t">Example: 114,000 → VAT 14,000 • Net 100,000</text>
+</svg>
+

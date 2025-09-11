@@ -1,0 +1,4 @@
+period,task,authority,due_date,reference,status,notes
+2025-09,PAYE remittance,GRA,2025-10-21,TRX-0001,Pending,Submit return and payment
+2025-09,NIS remittance,NIS,2025-10-21,TRX-0002,Pending,Attach contribution schedule
+

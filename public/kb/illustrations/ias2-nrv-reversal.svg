@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="nrv" role="img">
+  <title id="nrv">Lower of cost and NRV with write-down and reversal</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c1:#0ea5e9; --c2:#22c55e; --c3:#ef4444; --fg:#0f172a }
+      .axis{stroke:#94a3b8;stroke-width:6}
+      .line1{stroke:var(--c1);stroke-width:6;fill:none}
+      .line2{stroke:var(--c2);stroke-width:6;fill:none;stroke-dasharray:8 8}
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+    ]]></style>
+  </defs>
+  <line class="axis" x1="64" y1="384" x2="448" y2="384"/>
+  <line class="axis" x1="64" y1="96" x2="64" y2="384"/>
+  <polyline class="line1" points="80,200 160,200 240,200 320,200 400,200"/>
+  <polyline class="line2" points="80,260 160,300 240,320 320,280 400,260"/>
+  <text x="92" y="118" class="t">Cost</text>
+  <text x="92" y="330" class="t">NRV</text>
+  <text x="220" y="236" class="t">Write-down</text>
+  <text x="304" y="256" class="t">Reversal</text>
+</svg>
+

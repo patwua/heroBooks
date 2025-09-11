@@ -1,0 +1,3 @@
+employee_id,employee_name,period,opening_hours,accrued_hours,taken_hours,payout_hours,closing_hours,notes
+E-001,R. Persaud,2025-09,40,8,0,0,48,Full accrual
+

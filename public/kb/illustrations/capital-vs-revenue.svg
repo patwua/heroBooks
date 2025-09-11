@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" aria-labelledby="cvr" role="img">
+  <title id="cvr">Capital vs revenue decision</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c1:#22c55e; --c2:#ef4444; --fg:#0f172a }
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+      .diamond{fill:none;stroke:var(--fg);stroke-width:8}
+    ]]></style>
+  </defs>
+  <polygon class="diamond" points="256,64 336,128 256,192 176,128"/>
+  <text x="188" y="132" class="t">Capex?</text>
+  <text x="96" y="220" class="t" fill="#22c55e">Yes → Capitalise</text>
+  <text x="296" y="220" class="t" fill="#ef4444">No → Expense</text>
+</svg>
+

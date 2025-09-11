@@ -1,0 +1,4 @@
+parent_sku,parent_desc,component_sku,component_desc,qty_per,uom
+BUNDLE-100,Starter Kit,SKU-001,Item A,1,ea
+BUNDLE-100,Starter Kit,SKU-002,Item B,2,ea
+

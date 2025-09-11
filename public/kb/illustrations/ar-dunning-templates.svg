@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="adt" role="img">
+  <title id="adt">AR dunning templates</title>
+  <defs><style><![CDATA[:root{--c:#22c55e;--fg:#0f172a}.box{fill:none;stroke:var(--fg);stroke-width:10;rx:16}.t{font:600 18px/1.2 ui-sans-serif,system-ui}]]></style></defs>
+  <rect class="box" x="48" y="64" width="416" height="224"/>
+  <text x="64" y="112" class="t">Email Day‑1 / Day‑7 / Day‑14</text>
+  <text x="64" y="144" class="t">Call script (promise‑to‑pay)</text>
+  <text x="64" y="176" class="t">Write‑off policy outline</text>
+</svg>
+

@@ -1,0 +1,3 @@
+date_received,customer,reference,amount,currency,applied_invoice,applied_date,balance,notes
+2025-09-02,ABC Trading,ORD-1001,50000,GYD,INV-2001,2025-09-10,0,Applied in full
+

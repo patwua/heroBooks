@@ -1,0 +1,12 @@
+Title: Bad-Debt Policy (Sample)
+
+Scope: Trade receivables.
+
+Provisioning: Use an aging/ECL matrix calibrated to history and forward-looking factors. Review monthly.
+
+Write-offs: Allowed after documented collection efforts and authorization by [Role] per thresholds: up to G$50k [Manager], G$50k–G$250k [Controller], above [CFO].
+
+Recoveries: Recognize in other income; reverse any VAT relief where applicable.
+
+Documentation: Keep aging, attempts, approvals, and rationale attached to the customer file.
+

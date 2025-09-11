@@ -1,0 +1,7 @@
+date,description,amount,side,type,subtype,cleared_date,notes
+2025-08-31,Deposit batch #184,125000.00,bank,timing,deposit-in-transit,,End-of-day deposit posted next day
+2025-08-30,Cheque #1214,-86000.00,bank,timing,outstanding-cheque,,Not cleared as of statement date
+2025-08-28,Bank service charge,-1200.00,book,error,bank-fee,2025-08-31,Record fee to bank charges
+2025-08-29,Interest earned,450.00,book,error,interest,2025-08-31,Record interest income
+2025-08-26,Customer receipt duplicated,48000.00,book,error,duplicate,,Reverse duplicate entry
+

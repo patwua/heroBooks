@@ -1,0 +1,5 @@
+task,cashier,supervisor,accounting,comments
+Open till,Do,Verify,Record,
+Safe drops,Do,Escort,Record,
+Deposit,No,Escort,Do,
+

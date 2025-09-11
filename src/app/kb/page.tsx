@@ -3,6 +3,7 @@ import fs from "node:fs";
 import React from "react";
 import Link from "next/link";
 import SectionCard from "@/components/UX/SectionCard";
+import RatesWidget from "@/components/kb/RatesWidget";
 import taxonomy from "@/../kb/taxonomy.json";
 import TipsBlock from "./TipsBlock";
 import FaqList from "./FaqList";
@@ -25,6 +26,13 @@ export default async function KbHome({ searchParams }: {searchParams?: Promise<R
   } catch {}
 
   const inCat = (cat ? articles.filter((a) => a.category_id === cat) : []).slice(0, 24);
+  // Load KB home layout to determine optional widgets (rates/tips preload)
+  let homeLayout: any = {};
+  try {
+    const file = path.join(process.cwd(), "kb", "home_layout.json");
+    const raw = fs.readFileSync(file, "utf8");
+    homeLayout = JSON.parse(raw);
+  } catch {}
   // Load FAQs (snippets) for this page
   let faqs: Array<{slug: string;q: string;a: string;}> = [];
   try {
@@ -97,6 +105,12 @@ export default async function KbHome({ searchParams }: {searchParams?: Promise<R
           <TipsBlock />
         </SectionCard>
         }
+      {!cat && homeLayout?.widgets?.show_rates ?
+        <SectionCard className="border-0 shadow-none bg-transparent dark:bg-transparent">
+          <div className="mb-2 text-lg font-semibold">VAT/GCT/GST standard rates</div>
+          <RatesWidget defaultCode="GY" />
+        </SectionCard> :
+        null}
       {!cat ?
         <SectionCard className="border-0 shadow-none bg-transparent dark:bg-transparent">
           <div className="mb-2 text-lg font-semibold">Pick up where you left off</div>

@@ -1,0 +1,4 @@
+customer_id,customer_name,invoice_number,invoice_date,due_date,amount,days_past_due,bucket,contact_email,contact_phone,owner,notes
+C001,ABC Trading,INV-1001,2025-07-01,2025-07-31,150000,12,1-30,ap@abc.com,592-555-1001,Shaun,
+C014,XYZ Services,INV-1044,2025-05-15,2025-06-14,98000,88,61-90,ar@xyz.com,592-555-1044,Amy,PTP 2025-09-12
+

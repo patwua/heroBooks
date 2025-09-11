@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="vcdr" role="img">
+  <title id="vcdr">VAT credit/debit notes — requirements</title>
+  <defs><style><![CDATA[:root{--c:#22c55e;--fg:#0f172a}.box{fill:none;stroke:var(--fg);stroke-width:10;rx:16}.t{font:600 18px/1.2 ui-sans-serif,system-ui}]]></style></defs>
+  <rect class="box" x="48" y="64" width="416" height="224"/>
+  <text x="64" y="112" class="t">Original invoice ref</text>
+  <text x="64" y="144" class="t">Reason & VAT rate</text>
+  <text x="64" y="176" class="t">Net / VAT / Total</text>
+  <text x="64" y="208" class="t">Unique note number</text>
+</svg>
+

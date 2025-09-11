@@ -1,0 +1,13 @@
+Day-1 Email
+Subject: Invoice [#] — quick confirmation
+Body: Hi [Name], attached is invoice [#] for [Amount]. Could you confirm receipt? Payment link: [link]. Thanks!
+
+Day-7 Email
+Subject: Invoice [#] — follow-up
+Body: Hi [Name], following up on invoice [#]. Can we set a payment date this week?
+
+Promise-to-Pay Call Script
+1) Confirm invoices and amounts.
+2) Ask for payment date and method.
+3) Recap by email.
+

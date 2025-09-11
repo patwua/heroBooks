@@ -69,6 +69,115 @@
     "html_excerpt": " Plain-English definitions \n \n  Accrual basis : recognise revenue when it’s  earned  and expenses when  incurred  (even if cash moves later).   \n  Cash basis : recognise only when  cash is received/paid . Financial statements for SMEs are prepared on the  accrual basis , per IFRS for SMEs. \n \n VAT (what trips teams up) \n \n Guyana VAT uses the  time of supply  (tax point) to determine when output VAT is due, not when cash hits your account.   \n For taxable (14% or 0%) supplies you must issue a  Tax Invoice  with the required particulars.   \n If you quoted  VAT-inclusive  prices, apply  7/57  to derive the VAT portion when reconciling. \n \n Worked mini-example (GYD) \n You invoice a customer on  March 29  for  G$228,000 VAT-inclusive ; payment arrives  April 5 .   \n \n  Accrual : recognise sales in  March . Back-out VAT using 7/57 → VAT  G$28,000 , net sales  G$200,000 .   \n  Cash : if you kept a separate cash-basis internal view, you’d show the receipt in  April  — but your VAT  output  is"
   },
   {
+    "id": "ar-aging-collections-workflow-guyana",
+    "slug": "ar-aging-collections-workflow-guyana",
+    "title": "AR aging & collections workflow — DSO, reminders, write‑offs (G$)",
+    "summary": "Turn your aging into action: prioritize buckets, set a reminder cadence, capture promises-to-pay, and handle write‑offs — with G$ examples.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "accounts receivable",
+      "aging",
+      "DSO",
+      "reminders",
+      "write-off"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page focuses on workflow and KPIs. For scripts and a write‑off policy, see  click here . \n Prioritize by risk \n Buckets: Current / 1–30 / 31–60 / 61–90 / 90+. Focus on 31–60 and 90+; watch large balances. \n Cadence \n Day‑1 reminder → Day‑7 follow‑up → Day‑14 call/promise‑to‑pay → Day‑21 manager escalation → Day‑30 hold/stop‑ship. \n Write‑offs \n After documented efforts and approval, write‑off or adjust allowance per policy; disclose material items. \n Illustration \n   \n"
+  },
+  {
+    "id": "ar-collections-scripts-writeoff-policy",
+    "slug": "ar-collections-scripts-writeoff-policy",
+    "title": "AR collections scripts & write-off policy — templates you can use",
+    "summary": "Ready-to-adapt email/call scripts for reminders and escalations, plus a concise write-off policy outline. Cross-link to the aging & credit-control playbook.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "accounts receivable",
+      "collections",
+      "scripts",
+      "write-off policy",
+      "dunning"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides templates. For the process and KPIs, see  click here . \n Email scripts (short forms) \n – Day‑1: &quot;Hi [Name], attached is invoice [#] for [Amount]. Could you confirm receipt? Payment link: [link]. Thanks!&quot;\n– Day‑7: &quot;Hi [Name], following up on invoice [#]. Can we set a payment date this week?&quot;\n– Day‑14: &quot;Hi [Name], please confirm a payment plan by [date] to keep the account in good standing.&quot; \n Call script (promise‑to‑pay) \n \n Confirm invoice(s) and amount.   \n Ask for a payment date and method.   \n Log the promise and send a recap email. \n \n Write‑off policy outline (brief) \n – Criteria: after reasonable collection efforts, immaterial balances, or debtor liquidation. – Approval levels by amount thresholds. – Accounting: recognize bad debt expense or adjust allowance per ECL policy; document decisions. \n  Download scripts:   /kb/templates/ar-dunning-templates.txt  \n See also \n – Aging &amp; credit‑control playbook:  click here  \n Illustrat"
+  },
+  {
+    "id": "ar-statements-and-dunning-gyd",
+    "slug": "ar-statements-and-dunning-gyd",
+    "title": "AR statements & dunning — GY workflow and templates",
+    "summary": "Send clear monthly statements, follow a simple dunning cadence, and reconcile promises-to-pay — with GY examples and CSV templates.",
+    "category_id": "receivables",
+    "tags": [
+      "statements",
+      "dunning",
+      "AR",
+      "promises-to-pay"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " Why this matters (context) \n Consistent statements reduce disputes and accelerate cash. A light dunning cadence keeps accounts warm without harming relationships. \n GY workflow (simple) \n \n Generate monthly statements (by customer).   \n Email statements with a friendly note and a payment link.   \n Follow the cadence: Day‑1, Day‑7, Day‑14, Day‑21 (manager), Day‑30 (hold).   \n Log promises‑to‑pay and confirm by email. \n \n Templates \n  Click here to download the statement export CSV .  Click here for dunning email/call scripts . \n See also \n – Regional statement &amp; dunning pack —  click here  – AR aging &amp; playbook (GY) —  click here  \n Illustration \n   \n"
+  },
+  {
+    "id": "ar-statements-templates-caribbean",
+    "slug": "ar-statements-templates-caribbean",
+    "title": "AR statements & dunning — regional practices and templates",
+    "summary": "Universal practices for statements and dunning, with CSV/TXT templates you can adapt by country.",
+    "category_id": "receivables",
+    "tags": [
+      "statements",
+      "dunning",
+      "templates",
+      "regional"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " Context (universal rules) \n Statements summarize balance and recent activity; dunning is a stepped, respectful nudge sequence. Keep messages short, include invoice links, and confirm promises in writing. \n Templates \n  Click here for the statement export CSV .  Click here for dunning scripts . \n See also \n – GY workflow and cadence —  click here  \n Illustration \n   \n"
+  },
+  {
+    "id": "ar-writeoff-policy-sector-matrix-caribbean",
+    "slug": "ar-writeoff-policy-sector-matrix-caribbean",
+    "title": "AR write‑off policy — sector matrix (Caribbean)",
+    "summary": "Set sector‑specific thresholds, documentation, and approval for AR write‑offs. Includes a CSV policy matrix and an approval log template.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "bad debts",
+      "write-off",
+      "policy",
+      "sector"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides the matrix. For G$ sector examples, see  click here . \n CSV templates \n – Policy matrix:  /kb/templates/ar-writeoff-policy-matrix.csv  – Approval log:  /kb/templates/ar-writeoff-approval-log.csv  \n See also \n – G$ examples:  click here  \n"
+  },
+  {
+    "id": "ar-writeoffs-sector-examples-gyd",
+    "slug": "ar-writeoffs-sector-examples-gyd",
+    "title": "AR write‑offs — sector examples and G$ journals (retail, services, construction)",
+    "summary": "Apply clean G$ entries and documentation for AR write‑offs across sectors (retail, professional services, construction billing). Pairs with a sector policy matrix.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "bad debts",
+      "write-off",
+      "sector",
+      "construction",
+      "services"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides G$ sector examples. For a regional policy matrix, see  click here  and the journals page  click here . \n G$ journals \n Retail: Dr Allowance / Cr AR; recovery later to other income. Services with WIP: Dr Allowance / Cr AR; reverse unbilled WIP if unrecoverable. Construction: align contract asset/liability; adjust retentions if deemed uncollectible. \n Template \n Approval log:  /kb/templates/ar-writeoff-approval-log.csv  \n See also \n – Policy matrix (Caribbean):  click here  – G$ journals &amp; VAT:  click here  \n"
+  },
+  {
+    "id": "bad-debt-policy-disclosure-caribbean",
+    "slug": "bad-debt-policy-disclosure-caribbean",
+    "title": "Bad-debt policy & disclosures — allowance, write‑offs and recoveries (Caribbean)",
+    "summary": "Set policy for provisioning and write‑offs, align with ECL principles, and draft concise disclosure notes. Cross-link to G$ journal entries.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "bad debts",
+      "allowance",
+      "ECL",
+      "policy",
+      "disclosure"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers policy and disclosures. For entries and VAT, see  click here . \n Policy basics \n – Provision methodology (aging/ECL), review frequency, approval levels. – Write‑off criteria and documentation. – Recovery handling and VAT implications by jurisdiction. \n Example disclosure (short) \n \n The Group recognises an allowance for expected credit losses on trade receivables based on an aging provision matrix calibrated to historical loss experience and forward‑looking factors. During the year, bad‑debt expense of G$[x] was recognised; write‑offs of G$[y] were charged against the allowance. \n \n Illustration \n   \n Download \n Sample policy:  /kb/templates/bad-debt-policy-sample.txt  \n"
+  },
+  {
     "id": "bad-debts-allowance",
     "slug": "bad-debts-and-allowance-for-doubtful-accounts",
     "title": "Bad debts & allowance for doubtful accounts (IFRS for SMEs, GYD)",
@@ -83,6 +192,51 @@
     ],
     "last_reviewed": "2025-09-09",
     "html_excerpt": " What counts as “objective evidence”? \n Common indicators include significant delinquency (e.g., &gt;90 days past due), debtor bankruptcy/insolvency, or adverse changes in payment status. Under Section 11 you assess individually significant receivables individually, and the rest collectively (e.g., aging buckets).   \n A simple aging-bucket method (example, G$) \n Assume trade receivables  G$10,500,000 :   \n \n \n \n Bucket \n Balance \n % Loss \n Expected loss \n \n \n  \n Current \n 6,000,000 \n 1% \n 60,000 \n \n \n 31–60 days \n 2,500,000 \n 4% \n 100,000 \n \n \n 61–90 days \n 1,500,000 \n 12% \n 180,000 \n \n \n &gt;90 days \n 500,000 \n 40% \n 200,000 \n \n \n  Total  \n  10,500,000  \n  \n  540,000  \n \n  \n If last year’s allowance was  G$420,000 , the  increase  is  G$120,000 :  Dr Impairment expense 120,000 / Cr Allowance 120,000 .   \n Writing off a specific debtor (after collection efforts) \n When a G$80,000 balance is deemed uncollectible:  Dr Allowance 80,000 / Cr Trade receivables 80,000 . If later recovered  G"
+  },
+  {
+    "id": "bad-debts-recoveries-journals-vat-guyana",
+    "slug": "bad-debts-recoveries-journals-vat-guyana",
+    "title": "Bad debts & recoveries — journals and VAT considerations (Guyana)",
+    "summary": "Write-off vs provision entries, VAT output adjustments on bad debts (where applicable), and accounting for recoveries — with G$ examples.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "bad debts",
+      "allowance",
+      "write-off",
+      "recovery",
+      "VAT"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers entries and VAT adjustments. For policy/disclosures, see  click here . \n G$ examples \n – Provision: Dr Bad debt expense 50,000 / Cr Allowance 50,000. – Write‑off: Dr Allowance 30,000 / Cr Trade receivables 30,000. – Recovery later: Dr Bank 10,000 / Cr Recovery of bad debts (other income) 10,000. \n VAT note \n If VAT bad‑debt relief applies, reduce output VAT when conditions are met (period elapsed, evidence of non‑recovery). Keep support and reverse relief if later recovered. \n Controls \n – Aging review monthly; align with collections cadence. – Document approvals for write‑offs and relief claims. \n Illustration \n   \n"
+  },
+  {
+    "id": "bank-errors-adjustments-gyd",
+    "slug": "bank-errors-adjustments-gyd",
+    "title": "Bank errors vs book errors — GY adjustments and evidence",
+    "summary": "Distinguish bank errors from book errors, adjust cleanly in GY, and retain evidence. Includes an error log CSV and bank contact template.",
+    "category_id": "banking-reconciliation",
+    "tags": [
+      "bank errors",
+      "book errors",
+      "adjustments",
+      "evidence"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " Context \n Some differences require your journal; others require the bank to fix their records. Keep a clear log and evidence. \n GY adjustments \n Bank fee not recorded: Dr Bank charges / Cr Bank. Book miskey (overstated receipt): Dr Cash over/short / Cr Bank. Bank error (e.g., wrong amount posted): no journal; contact bank and track resolution. \n Templates \n  Click here for the error log CSV   Click here for the bank investigation email template  \n See also \n – Regional error patterns —  click here  – Bank rec (GY) —  click here  \n"
+  },
+  {
+    "id": "bank-errors-patterns-caribbean",
+    "slug": "bank-errors-patterns-caribbean",
+    "title": "Bank error patterns — regional practices and templates",
+    "summary": "Recognize patterns (duplicate postings, date shifts, fee bundles), escalate with a concise email, and track to resolution. Includes CSV + email template.",
+    "category_id": "banking-reconciliation",
+    "tags": [
+      "bank errors",
+      "patterns",
+      "escalation"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " Templates \n  Click here for the error log CSV   Click here for the investigation email text  \n See also \n – GY adjustments and evidence —  click here  \n"
   },
   {
     "id": "bank-recon-step-2025",
@@ -101,6 +255,53 @@
     "html_excerpt": " Steps \n \n  Get the bank statement  for the period (e.g., Aug 1–31).   \n  Tick matches  between bank statement and cash book.   \n Note  timing differences : outstanding cheques; deposits in transit; bank charges; interest; direct debits/credits.   \n  Prepare the reconciliation : Adjust bank or cash-book side to reach the true balance at period end.   \n  Post journals  for bank charges/interest/fees and any errors found. \n \n Worked GYD example \n Cash book shows  G$1,250,000 ; bank statement shows  G$1,220,000 . Outstanding cheques  G$60,000 ; deposit in transit  G$30,000 ; bank charges  G$5,000  not yet in cash book. → Adjusted bank = 1,220,000 + 30,000 − 60,000 =  G$1,190,000  → Adjust cash book with  G$5,000  bank charges →  G$1,245,000  Investigate the remaining  G$55,000  difference — likely an error or omitted receipt. \n"
   },
   {
+    "id": "bank-reconciliation-timing-vs-errors-caribbean",
+    "slug": "bank-reconciliation-timing-vs-errors-caribbean",
+    "title": "Bank reconciliation — timing vs errors (Caribbean troubleshooting)",
+    "summary": "Regional troubleshooting for deposits in transit, outstanding cheques, and error fixes. Cross-link to the G$ deep-dive and the workbook CSV template.",
+    "category_id": "banking-reconciliation",
+    "tags": [
+      "bank reconciliation",
+      "timing differences",
+      "errors",
+      "Caribbean"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page is regional troubleshooting. For G$ examples/journals, see  click here  and the workbook  click here . \n Classify \n Timing items (no journal): deposits in transit, outstanding cheques. Errors (journal or bank contact): miskeys, duplicates, unrecorded fees/interest. \n Tips \n Weekly recs for high‑volume tills; lock period after close; keep deposit slips. \n See also \n – Deep dive (G$):  click here  – Workbook (CSV):  click here  \n Illustration \n   \n"
+  },
+  {
+    "id": "bank-rec-timing-vs-errors-deep-dive",
+    "slug": "bank-reconciliation-timing-vs-errors-deep-dive",
+    "title": "Bank reconciliation — timing vs errors (how to fix)",
+    "summary": "Distinguish normal timing items (deposits in transit, outstanding cheques) from true errors (book or bank). Includes a step-by-step G$ workflow and what to journal.",
+    "category_id": "banking-reconciliation",
+    "tags": [
+      "bank reconciliation",
+      "timing differences",
+      "errors",
+      "deposit in transit",
+      "outstanding cheques"
+    ],
+    "last_reviewed": "2025-09-09",
+    "html_excerpt": " This page focuses on classification and journals. For the CSV workbook, see  click here . \n Classify first \n  Timing items  (normal): deposits in transit, outstanding cheques, cut-off deposits, bank’s after-hours batches.  Errors  (need action): wrong amounts keyed, duplicate postings, missing receipts/cheques, bank fees/interest not recorded. \n G$ month-end workflow \n \n Start with the  bank statement  balance.   \n Add  deposits in transit ; subtract  outstanding cheques  →  adjusted bank .   \n Take the  ledger cash ; add bank interest; subtract bank charges/NSFs →  adjusted book .   \n  Adjusted bank = adjusted book ; if not, investigate the difference. \n \n Journals you’ll likely need \n • Record  bank charges  /  interest . • Fix  book errors  (reverse and repost). • Investigate old items: stale cheques or deposits that never clear → reissue or void and reverse. \n Controls that keep it clean \n – Reconcile  monthly  (or weekly for busy tills). – Keep deposit slips; tie  cash-to-bank  d"
+  },
+  {
+    "id": "bank-reconciliation-workbook-template",
+    "slug": "bank-reconciliation-workbook-template",
+    "title": "Bank reconciliation — workbook template (CSV + workflow)",
+    "summary": "Download a CSV you can use to mark timing vs error items and auto-foot to adjusted bank/book. Includes column layout and usage tips.",
+    "category_id": "banking-reconciliation",
+    "tags": [
+      "bank reconciliation",
+      "CSV",
+      "template",
+      "timing differences",
+      "errors"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides a workbook template. For timing vs errors classification and journals, see  click here . \n Columns (copy into Sheets/Excel if you prefer) \n  date, description, amount, side (bank/book), type (timing/error), subtype (deposit-in-transit|outstanding-cheque|bank-fee|interest|nsf|duplicate|miskey|other), cleared_date, notes  \n  Rules  – Mark  timing  for deposits in transit/outstanding cheques;  error  for miskeys/duplicates. – Add separate lines for  bank fees/interest  (these will drive your journals). – Adjusted bank = statement + deposits in transit − outstanding cheques. – Adjusted book = ledger + interest − fees ± error corrections. –  Adjusted bank must equal adjusted book . \n  Download the CSV:   /kb/templates/bank-reconciliation-template.csv  \n See also \n – Deep dive (timing vs errors &amp; journals):  click here  \n Illustration \n   \n"
+  },
+  {
     "id": "bank-rules-auto-categorize",
     "slug": "bank-rules-to-auto-categorize-common-transactions",
     "title": "Bank rules to auto-categorize common transactions (and when not to)",
@@ -116,6 +317,23 @@
     ],
     "last_reviewed": "2025-09-09",
     "html_excerpt": " Why bank rules matter \n Bank rules turn repeat bank-feed lines into consistent ledger entries, saving time and improving period-end cut-off. They are most effective for  recurring  or  predictable  payments (utilities, mobile top-ups, bank charges) and  small cash-like receipts  (till deposits). Start with suggestions, then graduate to auto-post for truly stable patterns. \n Designing precise rules (GYD examples) \n \n  Identify a stable pattern : e.g., statements with “GTT TOPUP” in the description and amounts between  G$1,000–G$10,000 .   \n  Conditions :  contains: &quot;GTT&quot;  and  contains: &quot;TOPUP&quot; ; amount  between   1000–10000 .   \n  Outcome : Account  “Phone &amp; Internet” , VAT  Exempt  (telecom top-ups) or as per invoice; payee  GTT ;  suggest only  for the first month.   \n  Fuel : Description contains “SHELL” or “GUYOIL”; amount  2,000–30,000  → Account  “Fuel” , VAT  14%  (if documented), payee set;  no auto-post  if receipts often include shop items (split need"
+  },
+  {
+    "id": "capital-vs-revenue-expenditure-decision-tree",
+    "slug": "capital-vs-revenue-expenditure-decision-tree",
+    "title": "Capital vs revenue expenditure — decision tree with G$ examples",
+    "summary": "Decide if a spend should be capitalised or expensed: create a new asset, enhance/extend useful life, or just restore to original condition. Includes G$ journals and notes.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "capital expenditure",
+      "revenue expenditure",
+      "repairs",
+      "PPE",
+      "IAS 16",
+      "IFRS for SMEs"
+    ],
+    "last_reviewed": "2025-09-09",
+    "html_excerpt": " Decision tree \n \n Does the spend create a new identifiable asset? →  Capex .   \n Does it significantly enhance capacity or extend  useful life ? →  Capex .   \n Otherwise, it’s likely a  repair/maintenance  expense. \n \n G$ examples \n – Replace engine with higher-spec unit:  Dr PPE 600,000 / Cr Bank 600,000  (capitalize; depreciate). – Routine service and oil:  Dr Repairs 25,000 / Cr Bank 25,000  (expense). – Roof replacement that extends life:  Dr PPE 900,000 / Cr Bank 900,000 . \n Notes \n – Keep invoices/quotes to support the assessment. – Be consistent with your  capitalisation threshold  and document it. – Update depreciation schedules after capital projects. \n Illustration \n   \n"
   },
   {
     "id": "cash-handling-controls",
@@ -137,7 +355,7 @@
   {
     "id": "cash-fraud-red-flags",
     "slug": "cash-handling-fraud-red-flags",
-    "title": "Cash-handling fraud red flags - skimming, larceny and manipulation",
+    "title": "Cash-handling fraud red flags — skimming, larceny & manipulation",
     "summary": "What to watch for at the till and in the back office. Covers behavioral red flags, scheme patterns, and practical data tests you can run monthly.",
     "category_id": "cash",
     "tags": [
@@ -150,7 +368,37 @@
       "analytics"
     ],
     "last_reviewed": "2025-09-09",
-    "html_excerpt": " Behavioral red flags (watch patterns, not people) \n Living beyond means; personal financial pressure; reluctance to share duties; unusual vendor/customer closeness. One flag alone is not proof - look for clusters and correlate with data. \n Scheme patterns at the till \n \n Excess voids/returns; &quot;no-sale&quot; spikes; cancelled receipts re-issued at lower totals.   \n End-of-shift refunds without manager approval.   \n Deposits that do not match Z-report cash; frequent &quot;safe shortages&quot;. \n \n Monthly analytics (quick start) \n \n Rank refund % by cashier/day; review top outliers.   \n Count no-sales by hour; investigate after-hours spikes.   \n Compare cash-to-deposit; flag &gt;G$500 deltas.   \n List same-customer, repeated returns.   \n Trace voids within 10 minutes of a sale (possible cancel/re-ring). \n \n Controls that help \n Segregate refunds/void approvals; lock price overrides; require manager PIN; rotate cash-up duties; run surprise counts; maintain camera coverage of cash-up"
+    "html_excerpt": " Behavioral red flags (watch patterns, not people) \n Living beyond means; personal financial pressure; reluctance to share duties; unusual vendor/customer closeness. One flag alone isn’t proof — look for  clusters  and correlate with data.  \n Scheme patterns at the till \n – Excess voids/returns; “no-sale” spikes; cancelled receipts re-issued at lower totals. – End-of-shift refunds without manager approval. – Deposits that don’t  match  Z-report cash; frequent “safe shortages.” \n Monthly analytics (quick start) \n \n Rank  refund %  by cashier/day; review top outliers.   \n Count  no-sales  by hour; investigate after-hours spikes.   \n Compare  cash-to-deposit ; flag &gt;G$500 deltas.   \n List  same-customer, repeated returns .   \n Trace  voids  within 10 minutes of a sale (possible cancel/re-ring). \n \n Controls that help \n Segregate refunds/void approvals; lock price overrides; require manager  PIN ; rotate cash-up duties; run  surprise counts ; maintain camera coverage of cash-up area. \n "
+  },
+  {
+    "id": "cash-handling-sop-guyana",
+    "slug": "cash-handling-sop-guyana",
+    "title": "Cash handling SOP — opening/closing, drops and deposits (G$)",
+    "summary": "Daily SOP for tills: opening floats, safe drops, closing counts, and next-day deposit ties — with G$ corrections and checklists.",
+    "category_id": "cash",
+    "tags": [
+      "cash handling",
+      "SOP",
+      "tills",
+      "deposits"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides a G$ SOP. For regional templates and a duties matrix, see  click here . \n Steps \n Opening: verify float; sign log; till lock; till owner. During day: safe drops over threshold; attach vouchers. Closing: count cash; compare to POS; code variances; seal bag for deposit. \n Corrections (G$) \n Short: Dr Cash over/short / Cr Cash. Over: Dr Cash / Cr Cash over/short. \n Templates \n – SOP checklist:  /kb/templates/cash-sop-checklist.csv  – Till opening/closing:  /kb/templates/cash-till-opening-closing-checklist.csv  \n See also \n – Regional templates:  click here  \n"
+  },
+  {
+    "id": "cash-handling-sop-templates-caribbean",
+    "slug": "cash-handling-sop-templates-caribbean",
+    "title": "Cash handling SOP — templates & duties matrix (Caribbean)",
+    "summary": "Downloadable SOP templates: daily checklist, till opening/closing, and duties matrix for segregation of duties.",
+    "category_id": "cash",
+    "tags": [
+      "cash handling",
+      "SOP",
+      "duties matrix",
+      "checklist"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides templates. For a G$ SOP, see  click here . \n Downloads \n – Daily SOP checklist:  /kb/templates/cash-sop-checklist.csv  – Till opening/closing checklist:  /kb/templates/cash-till-opening-closing-checklist.csv  – Duties matrix:  /kb/templates/cash-sop-duties-matrix.csv  \n See also \n – G$ SOP:  click here  \n"
   },
   {
     "id": "chart-of-accounts-for-a-small-guyanese-business",
@@ -166,6 +414,129 @@
     ],
     "last_reviewed": "2025-09-09",
     "html_excerpt": " Starter COA (copy/paste idea) \n  1000 Assets    \n \n 1010 Cash on hand   \n 1020 Bank — GYD   \n 1200 Accounts receivable   \n 1300  Input VAT (claimable)    \n 1400 Prepaid expenses   \n 1500 Inventory   \n 1600 Fixed assets \n \n  2000 Liabilities    \n \n 2100 Accounts payable \n 2200  Output VAT (payable)   (standard rate 14%)  :contentReference[oaicite:0]{index=0} \n 2300  PAYE payable  \n 2310  NIS — employee  (5.6%) \n 2320  NIS — employer  (8.4%) :contentReference[oaicite:1]{index=1} \n \n  3000 Equity    \n \n 3100 Owner’s capital   \n 3200 Retained earnings \n \n  4000 Revenue    \n \n 4100 Sales — standard rated   \n 4110 Sales — zero-rated   \n 4120 Sales — exempt \n \n  5000 Cost of Sales    \n \n 5100 Purchases — standard rated   \n 5110 Freight/landed costs \n \n  6000 Expenses    \n \n 6100 Wages &amp; salaries \n 6110 PAYE expense (contra to 2300 on payment) \n 6120 NIS — employer expense (contra to 2320 on payment) :contentReference[oaicite:1]{index=1} \n 6200 Rent &amp; rates   \n 6300 Utilities   \n 6400"
+  },
+  {
+    "id": "costing-policy-overhead-rates-caribbean",
+    "slug": "costing-policy-overhead-rates-caribbean",
+    "title": "Costing policy — overhead rates and WIP controls (Caribbean)",
+    "summary": "Choose overhead bases, set and review absorption rates, and control WIP movements. Includes CSV templates for job ledger and rate setup.",
+    "category_id": "inventory",
+    "tags": [
+      "overhead",
+      "absorption",
+      "WIP",
+      "policy"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page sets policy and controls. For G$ journals, see  click here . \n Policy pointers \n Pick an overhead base (labour, machine hours, or materials); set a rate; monitor variances; close WIP with approvals. \n CSV templates \n – Job ledger:  /kb/templates/wip-job-ledger.csv  – Overhead rates:  /kb/templates/overhead-rate-setup.csv  \n See also \n – G$ WIP journals:  click here  \n"
+  },
+  {
+    "id": "credit-policy-customer-onboarding-gyd",
+    "slug": "credit-policy-customer-onboarding-gyd",
+    "title": "Credit policy & customer onboarding — Guyana (process + G$)",
+    "summary": "Approve the right customers at the right limits: onboarding steps, documentation, and G$ configuration (limits, terms, holds), with a credit application template.",
+    "category_id": "receivables",
+    "tags": [
+      "credit policy",
+      "onboarding",
+      "limits",
+      "AR"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " Context \n Good customers + clear limits reduce bad debts and rework. A simple onboarding workflow prevents disputes and aligns collections. \n Steps \n Application → KYC checks → Reference checks → Set limits/terms → Approve → Configure in system (limits, holds, statements). \n G$ configuration \n Credit limit per customer; payment terms; dunning cadence; statement cycle; hold on overdue accounts. \n Template \n  Click here to download the credit application template  \n See also \n – Collections playbook:  click here  – Write‑offs (G$):  click here  \n"
+  },
+  {
+    "id": "credit-policy-forms-templates-caribbean",
+    "slug": "credit-policy-forms-templates-caribbean",
+    "title": "Credit policy — forms & matrix (Caribbean)",
+    "summary": "Regional templates for credit applications, risk scoring, and approval limits. Includes CSVs for application, risk factors, and limit matrix.",
+    "category_id": "receivables",
+    "tags": [
+      "credit policy",
+      "templates",
+      "approvals",
+      "risk"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " Templates \n – Credit application —  click here  – Risk factors —  click here  – Limit matrix —  click here  \n See also \n – Onboarding (G$):  click here  \n"
+  },
+  {
+    "id": "customer-advances-contract-liabilities-gyd",
+    "slug": "customer-advances-contract-liabilities-gyd",
+    "title": "Customer advances & contract liabilities — G$ journals and aging",
+    "summary": "Record customer advances as contract liabilities, recognize revenue on performance, and age outstanding balances. Includes G$ entries and a ledger CSV.",
+    "category_id": "vat",
+    "tags": [
+      "customer advances",
+      "contract liabilities",
+      "revenue recognition",
+      "aging"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers G$ mechanics. For policy and disclosures, see  click here . \n G$ journals \n Advance received: Dr Bank / Cr Contract liabilities — customer advances. Revenue recognized: Dr Contract liabilities / Cr Revenue. Refund: Dr Contract liabilities / Cr Bank. \n Aging \n Maintain an advances aging with expected performance dates; investigate overdue balances and update delivery plans. \n VAT note (time of supply) \n Confirm when VAT is triggered (invoice vs part‑payment vs delivery) under the VAT Act; issue tax invoices accordingly. \n CSV ledger \n  date_received, customer, contract_ref, description, advance_amount, currency, expected_performance, recognized_date, recognized_amount, balance, notes   Click here to download the contract liabilities ledger  \n See also \n – Policy &amp; disclosures (regional practices) —  click here  – Deposits &amp; advance invoices (GY) —  click here  \n Illustration \n   \n"
+  },
+  {
+    "id": "customer-deposits-advance-invoices-guyana",
+    "slug": "customer-deposits-advance-invoices-guyana",
+    "title": "Customer deposits & advance invoices — VAT and postings (G$)",
+    "summary": "How to handle deposits and advance invoices: VAT timing, G$ entries for receipts, revenue recognition on delivery, and refunds/cancellations.",
+    "category_id": "vat",
+    "tags": [
+      "customer deposit",
+      "advance invoice",
+      "VAT",
+      "revenue recognition"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers VAT and postings. For regional policy &amp; templates, see  click here . \n G$ postings \n Deposit received: Dr Bank / Cr Customer deposits (liability). On delivery/invoice: Dr Customer deposits / Cr Revenue; recognise VAT per tax invoice. Refund of deposit: Dr Customer deposits / Cr Bank. \n Invoicing \n Issue a tax invoice when VAT is due; ensure deposit/part payment references appear on the final invoice. \n See also \n – Regional policy &amp; templates:  click here  \n"
+  },
+  {
+    "id": "customer-deposits-policy-templates-caribbean",
+    "slug": "customer-deposits-policy-templates-caribbean",
+    "title": "Customer deposits — policy, wording & CSV template (Caribbean)",
+    "summary": "Regional policy pointers for deposits/advance invoices, suggested invoice wording, and a simple deposits ledger CSV you can import.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "customer deposit",
+      "policy",
+      "invoice wording",
+      "CSV",
+      "Caribbean"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page is regional. For VAT specifics in Guyana, see  click here . \n Invoice wording (example) \n “Deposit received on [date] for order [ref]. VAT to be accounted for per tax regulations at time of supply. This deposit will be applied to the final invoice [#].” \n CSV template \n  date_received, customer, reference, amount, currency, applied_invoice, applied_date, balance, notes  \n  Download:   /kb/templates/deposits-ledger.csv  \n See also \n – Guyana VAT &amp; postings:  click here  \n"
+  },
+  {
+    "id": "depreciation-methods-changes-gyd",
+    "slug": "depreciation-methods-changes-gyd",
+    "title": "Depreciation methods & estimate changes — mechanics (G$)",
+    "summary": "Pick SL or RB, compute entries with G$ examples, and handle prospective changes in estimates. Cross-link to disclosures page.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "depreciation",
+      "straight-line",
+      "reducing-balance",
+      "estimates",
+      "PPE"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page focuses on mechanics. For disclosures, see  click here . \n G$ examples \n – SL: Asset 240,000 over 36 months → 6,667/month. – RB 25%: Asset 3,600,000 → Year‑1 900,000. \n Prospective changes \n When useful life/residual changes, recompute remaining depreciation prospectively. Document rationale and approval. \n Illustration \n   \n"
+  },
+  {
+    "id": "depreciation-methods-estimate-changes-ifrs-smes",
+    "slug": "depreciation-methods-estimate-changes-ifrs-smes",
+    "title": "Depreciation methods & changes in estimates — mechanics and disclosures",
+    "summary": "Choose SL or RB, reassess useful lives and residual values annually, and disclose method/changes with G$ examples. Cross-link to Fixed Asset Register template.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "depreciation",
+      "estimates",
+      "IAS 16",
+      "IFRS for SMEs",
+      "PPE"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers methods and estimate changes. For a quick register layout, see  click here . \n Methods and examples (GYD) \n – Straight-line (SL): Computer G$240,000, 36 months → G$6,667/month. – Reducing-balance (RB 25%): Vehicle G$3,600,000 → Year‑1 G$900,000. \n Estimate changes \n Reassess useful life and residual annually. Changes are  prospective ; adjust remaining depreciation going forward. \n Disclosures \n – Method(s) used and useful lives/rates. – Nature of any  changes in estimates  and reasons. – Effects on depreciation expense for the current period. \n Illustration \n   \n"
   },
   {
     "id": "depreciation-methods-gyd-2025",
@@ -221,6 +592,133 @@
     "html_excerpt": " Before you start \n \n Create/verify your  GRA e-Services  account and entity linkage. :contentReference[oaicite:0]{index=0}   \n Prepare the  VAT Summary  (outputs vs inputs) and supporting schedules. (heroBooks: Reports → VAT). \n \n Steps (e-Services) \n \n  Log in  to GRA e-Services and choose  Submit Return . :contentReference[oaicite:0]{index=0}   \n Select  VAT  and  tax period .   \n Enter totals ( outputs, inputs, adjustments ) and  attach  required documents.   \n  Submit ; you’ll receive on-screen status and email notifications as GRA processes the return. :contentReference[oaicite:1]{index=1} \n \n Deadline &amp; payments \n \n Returns are due by the  21st  of the month following the period (move to next business day if the 21st is a holiday). Plan earlier to avoid congestion. :contentReference[oaicite:2]{index=2} \n \n Tips \n \n If you invoice  VAT-inclusive , use the  7/57 VAT fraction  to back out the VAT when reconciling totals. :contentReference[oaicite:0]{index=0} \n Keep  Tax Invoice"
   },
   {
+    "id": "fixed-asset-register-quick-start",
+    "slug": "fixed-asset-register-quick-start",
+    "title": "Fixed Asset Register — quick start (IFRS for SMEs / IAS 16)",
+    "summary": "Columns to track, handling components and replacements, depreciation choices, reviews and disposals — with a 1‑click CSV template and G$ examples.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "fixed assets",
+      "PPE",
+      "register",
+      "depreciation",
+      "components"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides a register layout and practical notes. For disclosures and estimate changes, see  click here . \n Columns (copy or use the CSV) \n  asset_id, description, category, location, acquired_on, cost, method (SL/RB), useful_life_months, residual_value, component_of, depn_ytd, depn_cumulative, carrying_amount, notes  \n G$ examples \n Computer G$240,000 (SL 36 months, residual 0): Depn/mo 6,667. Vehicle G$3,600,000 (RB 25%): Year‑1 depn 900,000. \n Components &amp; replacements \n Significant parts with different lives (e.g., roof/engine) are separate components; capitalise new, derecognise old carrying amount when replaced. \n Reviews &amp; disposals \n Reassess useful life &amp; residual yearly; test for impairment if indicators. On disposal: remove cost/accumulated depn; recognise gain/loss. \n  Download the CSV:   /kb/templates/fixed-asset-register-template.csv  \n Illustration \n   \n"
+  },
+  {
+    "id": "goods-in-transit-consignment-journals-gyd",
+    "slug": "goods-in-transit-consignment-journals-gyd",
+    "title": "Goods in transit & consignment — G$ journals and cut‑off",
+    "summary": "Record goods-in-transit at period end and handle consignment stock (held for or by others) with clean G$ entries and disclosures.",
+    "category_id": "inventory",
+    "tags": [
+      "goods in transit",
+      "consignment",
+      "cut-off",
+      "journals"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers G$ journals and cut‑off. For policy/disclosures, see  click here . \n G$ journals \n GIT at period end: Dr Inventory—GIT / Cr Accrued purchases. Consignment stock held for others: off‑balance memo; recognise fee revenue only. Consignment stock with agent: recognise inventory when risks/rewards pass per terms. \n Disclosures \n Material consignment arrangements; significant GIT balances and subsequent receipts. \n See also \n – Policy &amp; disclosures (Caribbean):  click here \n– GIT register CSV:  /kb/templates/goods-in-transit-register.csv  \n"
+  },
+  {
+    "id": "goods-in-transit-consignment-policy-caribbean",
+    "slug": "goods-in-transit-consignment-policy-caribbean",
+    "title": "Goods in transit & consignment — policy & disclosures (Caribbean)",
+    "summary": "Define ownership and cut‑off rules, consignment arrangements, and simple disclosures for material GIT/consignment balances.",
+    "category_id": "inventory",
+    "tags": [
+      "goods in transit",
+      "consignment",
+      "policy",
+      "disclosures"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page is policy/disclosures. For G$ journals, see  click here . \n Policy pointers \n Ownership transfer terms (INCOTERMS), cut‑off at period end, evidence required (BL/AWB), and responsibility for insurance/risk. \n Short disclosure template \n \n The Group engages in consignment arrangements as agent/principal [as applicable]. At year‑end, goods in transit totalled [x]; consignment inventory [as agent/principal] was [y]. \n \n See also \n – G$ journals &amp; cut‑off:  click here  \n"
+  },
+  {
+    "id": "inventory-bom-kitting-costing-gyd",
+    "slug": "inventory-bom-kitting-costing-gyd",
+    "title": "BOM & kitting — component costing and build journals (G$)",
+    "summary": "Build finished goods from components, roll up costs (materials, labour, overhead), and post G$ journals for builds and disassemblies. Includes CSV templates.",
+    "category_id": "inventory",
+    "tags": [
+      "BOM",
+      "kitting",
+      "cost roll-up",
+      "builds"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers the concept, mechanics, and G$ journals. For policy/templates, see  click here . \n Concept (context) \n A bill of materials (BOM) lists components and quantities required to build a finished good. Kitting bundles components for sale as a set without transformation. Costing must capture materials, plus labour/overhead when applicable, so builds reflect true cost. \n G$ journals \n Build: Dr Finished goods (rolled-up cost) / Cr Components (materials) / Cr Accrued labour/overhead where applicable. Disassembly: Dr Components / Cr Finished goods. \n CSV templates \n – BOM structure —  click here  – Cost roll‑up —  click here  \n See also \n – BOM policy &amp; templates (regional practices) —  click here  \n Illustration \n   \n"
+  },
+  {
+    "id": "inventory-bom-policy-templates-caribbean",
+    "slug": "inventory-bom-policy-templates-caribbean",
+    "title": "BOM & kitting — policy and templates (Caribbean)",
+    "summary": "Define BOM/kitting policy, capitalization of labour/overhead, and variances; includes CSV templates for structure and cost roll-ups.",
+    "category_id": "inventory",
+    "tags": [
+      "BOM",
+      "kitting",
+      "policy",
+      "templates"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page focuses on policy/templates. For G$ build journals, see  click here . \n Policy pointers \n Standardize UOMs; version BOMs; define when to capitalize labour/overhead; track scrap and build variances. \n CSV templates \n – Structure:  /kb/templates/bom-structure.csv  – Cost roll-up:  /kb/templates/bom-cost-rollup.csv  \n See also \n – G$ mechanics:  click here  \n"
+  },
+  {
+    "id": "inventory-cost-formulas-fifo-vs-weighted-average",
+    "slug": "inventory-cost-formulas-fifo-vs-weighted-average",
+    "title": "Inventory cost formulas — FIFO vs weighted average (IFRS/SMEs)",
+    "summary": "Choose and apply a cost formula consistently; compare FIFO to weighted-average with G$ mini-ledger, effects during price changes, and disclosure requirements. LIFO not permitted.",
+    "category_id": "inventory",
+    "tags": [
+      "inventory",
+      "cost formulas",
+      "FIFO",
+      "weighted average",
+      "IFRS for SMEs",
+      "IAS 2"
+    ],
+    "last_reviewed": "2025-09-09",
+    "html_excerpt": " What to pick — and why \n –  FIFO : recent purchases remain in inventory; older costs flow to COGS. In rising prices, FIFO tends to show lower COGS and higher closing inventory. –  Weighted-average : smooths price volatility; COGS and inventory use average costs. \n Mini ledger (GYD) \n Start 0 units. Buy  100 @ 1,000 ; sell  60 ; buy  80 @ 1,200 ; sell  50 . – FIFO COGS differs from  moving-average  because the timing of receipts/sales determines which costs are issued. – Weighted-average (periodic): compute total cost ÷ total units in the period. \n Disclosure \n Disclose the  cost formula  used and keep it  consistent  for similar items. Document any changes with reasons (IAS 8). \n Illustration \n   \n"
+  },
+  {
+    "id": "inventory-count-sheet-template-caribbean",
+    "slug": "inventory-count-sheet-template-caribbean",
+    "title": "Inventory count sheet template — cycle and full counts (Caribbean)",
+    "summary": "Downloadable CSV count sheet for cycle/full counts with bins and variance columns. Regional template; cross-link to accounting for shrinkage and NRV write-downs.",
+    "category_id": "inventory",
+    "tags": [
+      "inventory",
+      "count sheet",
+      "cycle count",
+      "full count",
+      "shrinkage",
+      "NRV"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides a regional count sheet template. For shrinkage and NRV write-down postings, see  click here . \n CSV columns \n  sku, description, bin, uom, counted_qty, system_qty, variance_qty, unit_cost, variance_value, counted_by, verified_by, notes  \n Tips for use \n – Freeze movements; assign zones/bins; have a verifier sign off. – Investigate variances &gt; threshold; record shrinkage or NRV write-downs as needed. – Keep signed sheets and reconciliation notes for audit trail. \n  Download the CSV:   /kb/templates/inventory-count-sheet-template.csv  \n See also \n – Shrinkage &amp; NRV postings (GYD):  click here  \n Illustration \n   \n"
+  },
+  {
+    "id": "inventory-counts-shrinkage-guyana",
+    "slug": "inventory-counts-shrinkage-guyana",
+    "title": "Inventory counts & shrinkage — cycle and full counts (GYD)",
+    "summary": "Set up cycle counts for busy SKUs and an annual full count. Post shrinkage and NRV write‑downs with G$ entries, plus quick controls and a reconciliation checklist.",
+    "category_id": "inventory",
+    "tags": [
+      "inventory",
+      "cycle count",
+      "shrinkage",
+      "IAS 2",
+      "NRV",
+      "reconciliation"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page focuses on counts and accounting entries. For a downloadable count sheet, see  click here . \n Counting strategy \n Cycle counts for A/B/C classes; annual full count to reset the baseline and test controls. Enforce cut‑off, tag areas, and reconcile variances promptly. \n Accounting for differences (GYD) \n Shortage G$42,000: Dr COGS—shrinkage 42,000 / Cr Inventory 42,000. Obsolete (NRV 80,000 vs cost 96,000): Dr COGS—write‑down 16,000 / Cr Inventory 16,000. \n Controls that matter \n Lock SKU master data; keep bin locations tight; investigate negative stock; review voids/returns patterns. \n Reconciliation quick check \n ☐ Count sheets agree to adjusted stock cards; ☐ Variances approved; ☐ Write‑downs disclosed; ☐ Supplier returns handled; ☐ NRV evidence on file. \n Illustration \n   \n See also \n – Count sheet template (CSV):  click here  \n"
+  },
+  {
     "id": "inventory-moving-average-perpetual",
     "slug": "inventory-moving-average-perpetual",
     "title": "Inventory costing — perpetual moving average with G$ examples",
@@ -236,7 +734,55 @@
       "IAS 2"
     ],
     "last_reviewed": "2025-09-09",
-    "html_excerpt": " Concept \n Perpetual moving-average keeps a running average unit cost that updates immediately with each purchase receipt. Issues (sales) in between use the current average cost. It’s practical for high-volume, indistinguishable items and gives a smoother COGS than FIFO during price swings. \n Mini ledger (GYD) \n Starting: 0 units.   \n \n Receive 100 @ 1,000 → Avg cost 1,000; On-hand 100.   \n Sell 60 → COGS 60 × 1,000 = 60,000; On-hand 40 @ 1,000.   \n Receive 80 @ 1,200 → New average = (40×1,000 + 80×1,200) / 120 = 1,133.33.   \n Sell 50 → COGS 50 × 1,133.33 ≈ 56,666; On-hand 70 @ 1,133.33. \n \n Compare to periodic weighted-average (month end) \n Periodically, average = total cost ÷ total units for the period. Numbers will differ slightly from the perpetual method because receipts/sales timing affects the running average. \n NRV check (IAS 2/IFRS-SMEs) \n At period end, compare on-hand cost to NRV; write down to NRV if lower. Disclose the cost formula used and your write-down policy. \n Contro"
+    "html_excerpt": " Concept \n Perpetual moving-average keeps a  running average unit cost  that updates immediately with each  purchase receipt . Issues (sales) in between use the current average cost. It’s practical for high-volume, indistinguishable items and gives a smoother COGS than FIFO during price swings. \n Mini ledger (GYD) \n Starting:  0 units .   \n \n Receive  100 @ 1,000  → Avg cost  1,000 ; On-hand  100 .   \n Sell  60  → COGS  60 × 1,000 = 60,000 ; On-hand  40 @ 1,000 .   \n Receive  80 @ 1,200  → New average = (40×1,000 + 80×1,200) / 120 =  1,133.33 .   \n Sell  50  → COGS  50 × 1,133.33 ≈ 56,666 ; On-hand  70 @ 1,133.33 . \n \n Compare to periodic weighted-average (month end) \n Periodically, average = total cost ÷ total units for the period. Numbers will differ slightly from the  perpetual  method because receipts/sales timing affects the running average. \n NRV check (IAS 2/IFRS-SMEs) \n At period end, compare on-hand cost to  NRV ; write down to NRV if lower. Disclose the  cost formula  used an"
+  },
+  {
+    "id": "inventory-nrv-disclosures-examples",
+    "slug": "inventory-nrv-disclosures-examples",
+    "title": "Inventory NRV — disclosures & note templates (IFRS/SMEs)",
+    "summary": "What to disclose for inventories: cost formula (FIFO or weighted-average), write-downs and reversals, classes, and NRV basis — with two G$ sample notes to adapt.",
+    "category_id": "inventory",
+    "tags": [
+      "IAS 2",
+      "IFRS for SMEs",
+      "NRV",
+      "disclosures",
+      "inventory",
+      "write-down",
+      "reversal"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page focuses on disclosures and note wording. For recognition/journals, see  click here . \n What readers expect to see \n At a minimum disclose:   \n \n  Cost formula  — FIFO or weighted-average (IFRS does not permit LIFO).   \n  Write-downs to NRV  recognised as expense, and 3)  reversals  recognised when NRV recovers (not above original cost).   \n  Carrying amount  by relevant classes (e.g., raw materials, finished goods).   \n  Basis for NRV  estimates (selling prices, costs to sell). \n \n Short note template (no write-downs) \n \n Inventories are measured at the lower of cost and net realisable value. Cost is determined using the  weighted-average  method. As at 31 December 2025, inventories comprise finished goods of G$4.2m and raw materials of G$1.1m. No write-downs were recognised in the period. \n \n Expanded note (write-down and partial reversal) \n During 2025, the Group recognised  G$640,000  to write inventories down to NRV for slow-moving SKUs. In Q4 2025,  G$320,000  of that w"
+  },
+  {
+    "id": "inventory-shrinkage-abc-deep-dive-gyd",
+    "slug": "inventory-shrinkage-abc-deep-dive-gyd",
+    "title": "Inventory shrinkage — ABC risk approach with G$ journals",
+    "summary": "Focus effort by ABC class: tight controls and analytics for A items, sampling for C. Includes G$ entries, an ABC risk matrix CSV, and monthly KPIs.",
+    "category_id": "inventory",
+    "tags": [
+      "shrinkage",
+      "ABC",
+      "risk",
+      "analytics"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page is a G$ deep dive. For regional analytics, see  click here . \n G$ journals \n Shortage: Dr COGS — shrinkage / Cr Inventory. Adjustments: approve variances; track by class. \n ABC approach \n Classify by value/velocity; count A often; tighten controls (bin security, approvals). For C, use sampling and trend monitoring. \n CSV \n ABC matrix:  /kb/templates/abc-risk-matrix.csv  \n See also \n – Regional analytics:  click here  \n"
+  },
+  {
+    "id": "inventory-shrinkage-analytics-caribbean",
+    "slug": "inventory-shrinkage-analytics-caribbean",
+    "title": "Inventory shrinkage analytics — tests & templates (Caribbean)",
+    "summary": "Run practical tests: refund/void correlations, negative on-hand events, and high-risk SKUs. Includes a shrinkage analytics CSV.",
+    "category_id": "inventory",
+    "tags": [
+      "shrinkage",
+      "analytics",
+      "ABC",
+      "tests"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides analytics. For G$ risk/journals by ABC, see  click here . \n Tests \n Refund/void spikes vs shrinkage; negative on-hand streaks; bin move anomalies; late-night adjustments. \n CSV \n  period, sku, class, shrink_qty, shrink_value, refunds, voids, negative_onhand_events, notes  Download:  click here  \n See also \n – G$ deep dive:  click here  \n"
   },
   {
     "id": "inventory-fifo-vs-avg",
@@ -254,6 +800,87 @@
     ],
     "last_reviewed": "2025-09-09",
     "html_excerpt": " Cost components (what &quot;cost&quot; includes) \n Purchase price (less discounts), import duties, freight, and conversion costs (a share of production overheads). Abnormal waste, storage after production, and selling costs are expensed (not inventory). \n GYD mini-scenario \n Purchases of Item A: \n \n Jan 10: 100 @ G$1,000 = G$100,000 \n Jan 25: 60 @ G$1,200 = G$72,000\nSales in Jan: 120 units. \n \n FIFO \n COGS = 100x1,000 + 20x1,200 = G$124,000.\nEnding inventory = remaining 40x1,200 = G$48,000. \n Weighted-average (periodic) \n Total cost 172,000 / total units 160 = G$1,075 per unit.\nCOGS = 120x1,075 = G$129,000; Ending inventory = 40x1,075 = G$43,000. \n NRV (lower of cost and NRV) \n If expected selling price less costs to sell is G$1,050 per unit at period end, NRV of the 40 units = G$42,000.\nUnder IAS 2/IFRS for SMEs, carry inventory at lower of cost and NRV - write down G$1,000 (from cost G$43,000 to NRV G$42,000). \n Method discipline \n \n Use one method for similar inventories; change on"
+  },
+  {
+    "id": "inventory-nrv-reversals-gy-2025",
+    "slug": "inventory-write-downs-nrv-reversals-guyana-2025",
+    "title": "Inventory NRV — recognition & journals (write-downs and reversals)",
+    "summary": "Measure inventories at the lower of cost and net realisable value (NRV), record write-downs when NRV falls, and reverse them when NRV recovers — with clear G$ journals and disclosures.",
+    "category_id": "inventory",
+    "tags": [
+      "IAS 2",
+      "IFRS for SMEs",
+      "NRV",
+      "write-down",
+      "reversal",
+      "inventory"
+    ],
+    "last_reviewed": "2025-09-09",
+    "html_excerpt": " This page focuses on recognition and journals. For note wording, see  click here . \n What “lower of cost and NRV” means \n Under IAS 2 and IFRS for SMEs Section 13, inventories are carried at the lower of cost and net realisable value. NRV is the estimated selling price in the ordinary course of business less costs to complete and sell. If NRV falls below cost, record a write-down; if NRV later increases, reverse the write-down (but not above original cost). \n G$ mini-scenario (write-down) \n • 80 units on hand at G$1,200 cost = G$96,000. • Market softened; NRV per unit now G$1,120 → NRV total G$89,600. • Write-down = G$6,400. \n Journal (recognition): Dr Cost of sales / Inventory write-down 6,400 Cr Inventory 6,400 \n Reversal when NRV recovers \n Next month NRV improves to G$1,160 per unit (total G$92,800). The maximum reversal is G$3,200 (not above original cost). \n Journal (reversal): Dr Inventory 3,200 Cr Cost of sales 3,200 \n Disclosures you should include \n – Cost formula used (FIFO"
+  },
+  {
+    "id": "inventory-writeoffs-policy-disclosures-caribbean",
+    "slug": "inventory-writeoffs-policy-disclosures-caribbean",
+    "title": "Inventory — write‑offs and write‑downs (policy & disclosures, Caribbean)",
+    "summary": "Set criteria for write‑offs vs write‑downs, approval levels, and evidence; draft concise disclosures for NRV write‑downs and reversals.",
+    "category_id": "inventory",
+    "tags": [
+      "inventory",
+      "policy",
+      "write-off",
+      "write-down",
+      "NRV",
+      "disclosures"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page focuses on policy/disclosures. For G$ journals, see  click here . \n Policy elements \n Definitions, triggers (damage, obsolescence, market decline), evidence, approval thresholds, and periodic review. \n Short disclosure template \n \n Inventories are measured at the lower of cost and net realisable value. During the year, write‑downs of [x] were recognised; reversals of [y] were recognised when NRV recovered (not above cost). The cost formula used is [FIFO/weighted average]. \n \n See also \n – NRV recognition &amp; journals (G$):  click here  \n"
+  },
+  {
+    "id": "inventory-writeoffs-writedowns-returns-gyd",
+    "slug": "inventory-writeoffs-writedowns-returns-gyd",
+    "title": "Inventory — write‑off vs write‑down vs returns (G$ journals)",
+    "summary": "Post clean G$ entries for write‑downs to NRV, write‑offs (loss/obsolete), and purchase returns — plus quick controls and disclosures to remember.",
+    "category_id": "inventory",
+    "tags": [
+      "inventory",
+      "write-off",
+      "write-down",
+      "returns",
+      "NRV",
+      "IAS 2"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers journals. For policy/disclosures, see  click here . \n G$ journals \n \n Write‑down to NRV: Dr COGS — write‑down / Cr Inventory.   \n Write‑off (obsolete/damaged): Dr COGS — write‑off / Cr Inventory.   \n Purchase return to supplier: Dr Accounts payable / Cr Inventory (and reverse input VAT where applicable). \n \n Controls \n Approval thresholds; evidence for NRV; physical disposal/return documentation; cut‑off. \n Disclosures \n Material write‑downs and reversals disclosed per IAS 2; describe reasons (e.g., obsolescence, market fall). \n See also \n – Policy &amp; disclosures (Caribbean):  click here  – Count sheet template:  /kb/templates/inventory-count-sheet-template.csv  \n"
+  },
+  {
+    "id": "merchant-fees-chargebacks-analytics-caribbean",
+    "slug": "merchant-fees-chargebacks-analytics-caribbean",
+    "title": "Merchant fees & chargebacks — analytics & template (Caribbean)",
+    "summary": "CSV template and patterns to monitor fees, net effective rate, and chargeback reasons across gateways and locations.",
+    "category_id": "cash",
+    "tags": [
+      "merchant fees",
+      "chargebacks",
+      "analytics",
+      "CSV"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides analytics. For G$ postings, see  click here . \n CSV columns \n  date, gateway, gross_sales, fees, refunds, chargebacks, net_settlement, location, notes  \n  Download:   /kb/templates/merchant-fees-import.csv  \n Patterns \n Spikes in effective rate; higher disputes on specific SKUs; timing gaps between refunds and settlements. \n See also \n – G$ journals:  click here  \n"
+  },
+  {
+    "id": "merchant-fees-chargebacks-journals-gyd",
+    "slug": "merchant-fees-chargebacks-journals-gyd",
+    "title": "Merchant fees & chargebacks — G$ journals and controls",
+    "summary": "Post monthly merchant fees, daily settlements, and chargebacks with G$ entries; reconcile to gateway reports and bank statements.",
+    "category_id": "cash",
+    "tags": [
+      "merchant fees",
+      "chargebacks",
+      "settlements",
+      "bank reconciliation"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers G$ journals. For analytics/patterns, see  click here . \n G$ journals (examples) \n Monthly fee: Dr Bank charges 18,000 / Cr Bank 18,000. Settlement net of fees: Dr Bank 96,000 / Dr Bank charges 4,000 / Cr Card clearing 100,000. Chargeback: Dr Chargebacks 20,000 / Cr Bank 20,000; pursue recovery if eligible. \n Controls \n Reconcile gateway reports to bank, investigate repeated chargebacks, ensure refunds are matched to original transactions. \n See also \n – Analytics &amp; template (regional):  click here  \n"
   },
   {
     "id": "nis-contributions-guyana-2025",
@@ -319,6 +946,70 @@
     "html_excerpt": " Spotting the timing differences \n \n  Outstanding cheques : issued/recorded by you,  not  yet shown on the bank statement.   \n  Deposits in transit : recorded by you,  not  yet credited on the bank statement. These are  timing items , not errors; the purpose of reconciliation is to adjust the bank-statement balance to the  true  cash balance at period end (concept basis from IFRS for SMEs). :contentReference[oaicite:0]{index=0} \n \n Where to show them \n \n Adjust the  bank side  of the reconciliation:   \n  + Deposits in transit    \n  – Outstanding cheques  \n \n \n \n Worked example (GYD) \n Bank statement shows  G$1,220,000 ; cash book shows  G$1,250,000 . Timing:  Deposits in transit G$30,000 ;  Outstanding cheques G$60,000 ; bank charges  G$5,000  (not yet posted).   \n \n Adjusted bank = 1,220,000  + 30,000 − 60,000 = G$1,190,000    \n Post the  bank charges  (Dr Bank Charges 5,000 | Cr Cash 5,000) → adjusted cash book  G$1,245,000  Investigate the remaining difference — likely a posting err"
   },
   {
+    "id": "owner-drawings-vs-expenses-caribbean",
+    "slug": "owner-drawings-vs-expenses-caribbean",
+    "title": "Owner drawings vs expenses — regional guidance (Caribbean)",
+    "summary": "Drawings reduce equity — not profit. Regional guidance with simple entries and notes on partnerships and companies; cross‑link to G$ examples and loan treatment.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "drawings",
+      "equity",
+      "expenses",
+      "partnership"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page is regional. For G$ examples, see  click here . \n Core idea \n Drawings are equity distributions, not expenses. They don’t affect profit or VAT returns. \n Example entries (generic) \n Cash drawing: Dr Drawings / Cr Bank. Goods for personal use: Dr Drawings / Cr Inventory. Year‑end: Dr Capital / Cr Drawings. \n Partnerships and companies \n Partnership drawings appear in current/capital accounts. For companies, use director/owner loan accounts for advances/repayments — see loans guidance. \n See also \n – G$ drawings (Guyana):  click here  – Loans vs drawings (G$):  click here  \n Illustration \n   \n"
+  },
+  {
+    "id": "owner-loans-vs-drawings-caribbean",
+    "slug": "owner-loans-vs-drawings-caribbean",
+    "title": "Owner loans vs drawings — regional overview (Caribbean)",
+    "summary": "Differentiate equity drawings from owner/director loans; show generic entries and balance‑sheet presentation. Cross-link to G$ details and drawings page.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "owner loan",
+      "drawings",
+      "equity",
+      "liabilities",
+      "Caribbean"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page is regional. For G$ examples, see  click here  and  click here . \n Quick view \n Drawings reduce capital/current; loans are receivable/payable balances. Keep memo trails and terms for loans. \n Generic entries \n Loan from owner: Dr Bank / Cr Loan — Owner. Repayment: Dr Loan — Owner / Cr Bank. Drawing: Dr Drawings / Cr Bank; transfer to capital at year‑end. \n See also \n – G$ loans vs drawings:  click here  – G$ drawings:  click here  \n Illustration \n  (alt: &quot;Loans (asset/liability) vs Drawings (equity)&quot;). \n"
+  },
+  {
+    "id": "owner-loans-vs-drawings-guyana-sme",
+    "slug": "owner-loans-vs-drawings-guyana-sme",
+    "title": "Owner loans vs drawings — balance‑sheet treatment (G$)",
+    "summary": "Drawings reduce equity; loans create receivables/payables. Clean postings for sole traders, partnerships, and companies with G$ examples and pitfalls to avoid.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "drawings",
+      "owner loan",
+      "directors' loan",
+      "equity",
+      "liabilities",
+      "partnership"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page focuses on loans vs drawings. For drawings as equity distributions, see  click here . \n Drawings vs loans (quick view) \n Drawings (sole trader/partners): reduce  capital/current  accounts. Loans: amounts  due from/to  the owner/director → show as  receivable/payable  on the balance sheet, not in profit or loss. \n Clean G$ postings \n – Cash drawings: Dr Drawings 150,000 / Cr Bank 150,000 → year‑end transfer Dr Capital / Cr Drawings. – Loan from owner to business: Dr Bank 500,000 / Cr Loan — Owner 500,000. – Repayment: Dr Loan — Owner 200,000 / Cr Bank 200,000. – Company DLA (director owes company): Dr Directors’ Loan 75,000 / Cr Bank 75,000; charge interest if agreed. \n Pitfalls \n – Coding drawings to  wages/repairs  (distorts profit, VAT). – Letting a director’s loan drift without terms — document  repayment/interest . – Mixing personal and business expenses in one card; keep a simple memo trail. \n See also \n – Drawings (equity, not expense):  click here \n– Regional overview"
+  },
+  {
+    "id": "owner-withdrawals-vs-expenses",
+    "slug": "owner-withdrawals-vs-expenses",
+    "title": "Owner drawings — equity, not expense (G$)",
+    "summary": "Drawings are not expenses. They reduce equity — not profit. Here’s how to post owner withdrawals (sole traders/partnerships), how partner “salaries” are treated, and what to avoid.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "drawings",
+      "equity",
+      "expenses",
+      "partnership",
+      "sole trader"
+    ],
+    "last_reviewed": "2025-09-09",
+    "html_excerpt": " This page focuses on drawings (equity). For loans vs drawings, see  click here . \n Core idea \n For sole traders and partnerships, owner withdrawals ( drawings ) are  distributions of equity , not expenses. They  reduce capital  and  do not  affect profit or VAT. Record them cleanly to avoid misstating results. \n G$ examples \n  Cash draw:  Dr  Drawings – Owner  150,000 / Cr  Bank  150,000.  Goods withdrawn for personal use:  Dr  Drawings – Owner  30,000 / Cr  Inventory  30,000.  Year-end close:  Dr  Capital  180,000 / Cr  Drawings – Owner  180,000 (transfer to capital). \n Partnerships \n Partner “salaries”, interest on capital, and profit shares are part of the  appropriation  of profit — not operating expenses. Use  current/capital  accounts per the partnership agreement. \n Don’ts \n – Don’t code drawings to  wages  or  repairs . – Don’t claim input VAT on purely  personal  items. – Avoid frequent cash withdrawals without a simple memo trail. \n Illustration \n   \n See also \n – Loans vs d"
+  },
+  {
     "id": "paye-thresholds-guyana-2025",
     "slug": "paye-2025-thresholds-guyana",
     "title": "PAYE 2025 — thresholds, bands & worked examples (GYD)",
@@ -333,6 +1024,21 @@
     ],
     "last_reviewed": "2025-09-09",
     "html_excerpt": " Key rules (2025) \n \n  Personal allowance :  G$1,560,000  per year  or   1/3 of income , whichever is higher.   \n  Tax bands :  25%  up to  G$3,120,000  (i.e., G$260,000 monthly);  35%  on the excess.   \n  Child allowance :  G$120,000 per year  per child (cap  G$10,000/mo  each).   \n  Overtime : non-taxable up to  G$600,000/yr  (cap  G$50,000/mo ). \n \n Mini example (monthly) \n Gross  G$280,000 ; NIS (employee)  5.6%  =  G$15,680 ; Personal allowance  G$130,000  → Chargeable  G$134,320  →  25%  band applies.   \n \n Note: Apply NIS employee deduction before computing chargeable income. \n \n"
+  },
+  {
+    "id": "paye-calculation-walkthrough-guyana-2025",
+    "slug": "paye-calculation-walkthrough-guyana-2025",
+    "title": "PAYE calculation — GY walkthrough (verify current bands)",
+    "summary": "Step-through of PAYE calculation in Guyana with a sample layout. Includes a CSV calculator; always verify current bands at GRA.",
+    "category_id": "payroll",
+    "tags": [
+      "PAYE",
+      "calculator",
+      "payroll",
+      "Guyana"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " Context \n PAYE bands and thresholds change; always verify at GRA before running payroll. \n Walkthrough (illustrative) \n \n Determine chargeable income for the period.   \n Apply current bands/thresholds (verify at GRA).   \n Compute PAYE; record statutory deductions separately (NIS, etc.). \n \n Template \n  Click here to download the PAYE calculator CSV . \n See also \n – GRA vs NIS compliance —  click here  – Remittance &amp; audit checklist —  click here  \n"
   },
   {
     "id": "paye-thresholds-guyana-2025-full",
@@ -351,6 +1057,72 @@
     "html_excerpt": " The 2025 rules in one place \n \n  Personal allowance (free pay)  =  G$130,000/month   or   1/3 of gross income , whichever is greater. :contentReference[oaicite:0]{index=0}   \n  PAYE bands :  25%  to  G$3,120,000/year  (G$260,000/month equivalent);  35%  above that. :contentReference[oaicite:0]{index=0}   \n Deduct  NIS (employee 5.6%)  from gross  before  computing chargeable income. (See NIS article.) :contentReference[oaicite:0]{index=0} \n \n Monthly mini example \n Gross  G$280,000 ; NIS (5.6%)  G$15,680  → Income after NIS  G$264,320  Personal allowance  G$130,000  →  Chargeable G$134,320  →  25% band  applies. \n \n Keep the GRA 2025 Notice handy; if GRA updates the allowance/bands, revise payroll formulas. :contentReference[oaicite:0]{index=0} \n \n  Illustration (1:1):  A banded bar: up to G$260k/month at 25%, then 35% above; a callout bubble for “Personal allowance ≥ G$130k or 1/3”. \n"
   },
   {
+    "id": "payroll-allowances-benefits-taxability-gyd",
+    "slug": "payroll-allowances-benefits-taxability-gyd",
+    "title": "Allowances & benefits — PAYE taxability and NIS insurability (G$)",
+    "summary": "Classify common allowances/benefits for GRA PAYE and NIS, with G$ examples and config tips. Links to a benefits taxability matrix CSV.",
+    "category_id": "payroll",
+    "tags": [
+      "allowances",
+      "benefits",
+      "PAYE",
+      "NIS",
+      "taxability"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides context, G$ examples, and config tips. For a regional policy matrix, see  click here . \n Context — PAYE vs NIS \n GRA’s PAYE taxes chargeable income (cash allowances are often taxable; reimbursements with receipts are generally not). NIS contributions apply to insurable earnings and may include some allowances up to ceilings. Classify each category explicitly and keep policy evidence. \n Examples (illustrative) \n Cash allowance (taxable, insurable): include in PAYE/NIS bases. Reimbursement with receipts (non‑taxable): exclude from PAYE/NIS; keep proof. Benefit in kind: assess per GRA rules; include where required. \n CSV \n  code, name, PAYE_taxable (Y/N), NIS_insurable (Y/N), notes  Download:  click here  \n See also \n – Regional policy matrix:  click here  \n"
+  },
+  {
+    "id": "payroll-allowances-policy-matrix-caribbean",
+    "slug": "payroll-allowances-policy-matrix-caribbean",
+    "title": "Allowances & benefits — policy matrix and config (Caribbean)",
+    "summary": "Build a policy matrix for allowances/benefits across countries; configure PAYE/GCT taxability and insurance flags. Includes a CSV template.",
+    "category_id": "payroll",
+    "tags": [
+      "allowances",
+      "benefits",
+      "policy",
+      "matrix",
+      "Caribbean"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides the matrix. For G$ examples, see  click here . \n CSV template \n  code, name, PAYE_taxable (Y/N), NIS_insurable (Y/N), notes   Click here to download the benefits matrix  \n See also \n – G$ taxability examples:  click here  \n"
+  },
+  {
+    "id": "payroll-gra-vs-nis-compliance-deep-dive-guyana",
+    "slug": "payroll-gra-vs-nis-compliance-deep-dive-guyana",
+    "title": "Payroll compliance in Guyana — GRA vs NIS (deep dive)",
+    "summary": "Compare how GRA and NIS view payroll: what counts as taxable pay, allowances/benefits, ceilings, bands, filings, and evidence. Includes G$ examples and a side-by-side visual.",
+    "category_id": "payroll",
+    "tags": [
+      "payroll",
+      "GRA",
+      "NIS",
+      "PAYE",
+      "contributions",
+      "benefits"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page compares GRA (tax) vs NIS (social insurance) treatment. For a quick Guyana overview, see  click here . \n Scope snapshot \n \n GRA (PAYE): income tax on chargeable income per bands/thresholds; taxable benefits/allowances per current rules; monthly withholding and remittance. \n NIS: employee and employer contributions on insurable earnings, with ceilings and categories; separate remittance and reporting. \n \n G$ worked example (illustrative) \n Gross salary 220,000; taxable allowance 10,000; non-taxable travel reimbursement 12,000 (per receipts).   \n \n PAYE base (GRA): 230,000; compute tax per current bands/thresholds.   \n NIS base: include insurable earnings up to the ceiling; compute EE/ER shares; confirm current rates at NIS. \n \n Allowances &amp; benefits \n \n Taxable for PAYE? Check GRA guidance (cash allowances commonly taxable).   \n Insurable for NIS? Check NIS categories and ceilings.   \n Non-taxable reimbursements require receipts and policy. \n \n Filing &amp; payments \n \n G"
+  },
+  {
+    "id": "payroll-gra-vs-nis-remittance-audit-checklist-guyana",
+    "slug": "payroll-gra-vs-nis-remittance-audit-checklist-guyana",
+    "title": "Payroll remittances & audits — GRA vs NIS checklist (Guyana)",
+    "summary": "Monthly remittance timeline, documents to retain, and audit focus points for GRA (PAYE) and NIS. Includes a remittance calendar CSV and a payrun reconciliation template.",
+    "category_id": "payroll",
+    "tags": [
+      "payroll",
+      "remittance",
+      "audit",
+      "GRA",
+      "NIS",
+      "checklist"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page helps you prepare clean remittances and pass basic audits. For policy differences, see  click here . \n Timeline (monthly) \n \n Run pay and approvals; snapshot config/rates.   \n Reconcile gross→net→statutory payables.   \n Prepare GRA PAYE return and payment.   \n Prepare NIS schedule and payment.   \n File, pay, and archive proofs. \n \n Documents to retain \n \n Payrun register; timesheets; contracts.   \n Rate tables and allowance taxability config.   \n GRA/NIS returns, schedules, and payment proofs.   \n Reconciliations to bank and ledgers. \n \n Audit focus points (GRA vs NIS) \n \n GRA: taxable allowances/benefits; correct bands/thresholds; year-end certificates.   \n NIS: ceilings; employee classification; registration status; prompt payment of EE/ER shares. \n \n Templates \n \n Remittance calendar CSV:  /kb/templates/payroll-remittance-calendar.csv    \n Payrun reconciliation CSV:  /kb/templates/payroll-payrun-reconciliation.csv  \n \n Visual \n   \n See also \n \n GRA vs NIS compliance (deep"
+  },
+  {
     "id": "payroll-journals-guyana-2025",
     "slug": "payroll-journals-guyana-2025",
     "title": "Payroll journal entries (GYD) — PAYE, NIS and net pay",
@@ -364,6 +1136,128 @@
     ],
     "last_reviewed": "2025-09-09",
     "html_excerpt": " Standard monthly journal (example) \n Gross wages  Dr  300,000   PAYE payable  Cr  (per bands)   XX,XXX    NIS payable (employee 5.6%)  Cr    16,800    Net pay  Cr    (balancing)  Employer NIS expense  Dr  25,200   NIS payable (employer 8.4%)  Cr  25,200   \n \n Note: If gross exceeds  G$280,000 , NIS calculations use the  ceiling . \n \n"
+  },
+  {
+    "id": "payroll-leave-accruals-payouts-gyd",
+    "slug": "payroll-leave-accruals-payouts-gyd",
+    "title": "Leave accruals & termination payouts — G$ journals and checks",
+    "summary": "Accrue leave entitlements monthly, pay out on termination per policy/law, and reconcile to a leave ledger. Includes G$ entries and calculator CSV.",
+    "category_id": "payroll",
+    "tags": [
+      "leave",
+      "accrual",
+      "termination payout",
+      "payroll"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers G$ entries and checks. For regional policy &amp; calculator CSV, see  click here . \n G$ journals \n Monthly accrual: Dr Staff costs — leave accrual / Cr Accrued expenses. When taken: Dr Accrued expenses / Cr Wages (or leave payable). Termination payout: Dr Accrued expenses / Cr Bank. \n Reconciliation \n Use a leave ledger per employee: opening + accruals − taken − payouts = closing; verify against HR records. \n Templates \n – Leave ledger calculator —  click here  – Termination payout calculator —  click here  \n See also \n – Policy &amp; templates (regional practices) —  click here  \n"
+  },
+  {
+    "id": "payroll-leave-policy-templates-caribbean",
+    "slug": "payroll-leave-policy-templates-caribbean",
+    "title": "Leave & termination payouts — policy and calculator (Caribbean)",
+    "summary": "Set leave accrual rules, approval, and termination payouts; includes a CSV calculator and ledger template. Cross-link to G$ journals.",
+    "category_id": "payroll",
+    "tags": [
+      "leave",
+      "policy",
+      "termination",
+      "calculator",
+      "Caribbean"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page focuses on policy and calculators. For G$ entries, see  click here . \n Policy pointers \n Accrual rates, carry-forward caps, approval and documentation, termination rules. \n CSV templates \n – Leave ledger:  /kb/templates/leave-accrual-ledger.csv  – Termination payout:  /kb/templates/termination-payout-calculator.csv  \n See also \n – G$ journals:  click here  \n"
+  },
+  {
+    "id": "payroll-overtime-allowances-caribbean",
+    "slug": "payroll-overtime-allowances-caribbean",
+    "title": "Payroll — overtime & allowances (Caribbean overview)",
+    "summary": "Regional pointers for overtime rules and allowances, plus a CSV you can use to configure payroll categories and taxability flags.",
+    "category_id": "payroll",
+    "tags": [
+      "payroll",
+      "overtime",
+      "allowances",
+      "Caribbean"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page is regional. For Guyana specifics, see  click here . \n CSV template \n  code, name, taxable (Y/N), statutory (Y/N), notes  \n  Download:   /kb/templates/payroll-allowances-config.csv  \n See also \n – Guyana compliance:  click here  \n"
+  },
+  {
+    "id": "payroll-overtime-allowances-compliance-guyana",
+    "slug": "payroll-overtime-allowances-compliance-guyana",
+    "title": "Payroll — overtime & allowances compliance (Guyana)",
+    "summary": "Where to verify rules and rates for overtime and taxable/non-taxable allowances in Guyana, plus clean journal mapping and common pitfalls.",
+    "category_id": "payroll",
+    "tags": [
+      "payroll",
+      "overtime",
+      "allowances",
+      "compliance",
+      "Guyana"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers Guyana specifics. For a regional overview and a config CSV, see  click here . \n Journals (generic) \n Wages: Dr Wages / Cr Statutory payables / Cr Bank. Allowances (taxable): Dr Wages / Cr Allowances payable. \n Pitfalls \n Back-dated changes; misclassifying taxable benefits; not applying caps. \n See also \n – Regional overview &amp; config:  click here \n– GRA vs NIS compliance (deep dive):  click here \n– Remittances &amp; audit checklist:  click here  \n"
+  },
+  {
+    "id": "payroll-statutory-deductions-caribbean-map",
+    "slug": "payroll-statutory-deductions-caribbean-map",
+    "title": "Payroll statutory deductions — Caribbean overview (rates map)",
+    "summary": "Regional snapshot of payroll-related taxes/levies and where to verify current rates, with pointers to local calculators and authorities.",
+    "category_id": "payroll",
+    "tags": [
+      "payroll",
+      "statutory deductions",
+      "Caribbean",
+      "rates"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page is regional. For Guyana specifics, see  click here . \n At-a-glance map \n Load  /kb/rates/tax_rates.json  and show the latest known standard VAT/GCT/GST rates and links to verify. Add a footnote that rates change and should be confirmed. \n Calculators and authorities \n Link to each country’s revenue/NIS portals or approved calculators where available. \n See also \n – Guyana overview:  click here  \n"
+  },
+  {
+    "id": "payroll-statutory-deductions-guyana-overview-2025",
+    "slug": "payroll-statutory-deductions-guyana-overview-2025",
+    "title": "Payroll statutory deductions — Guyana overview (links & guardrails)",
+    "summary": "Know where to check current PAYE, NIS, and other payroll deductions in Guyana; includes official links, common pitfalls, and journal mapping.",
+    "category_id": "payroll",
+    "tags": [
+      "payroll",
+      "PAYE",
+      "NIS",
+      "statutory deductions",
+      "Guyana"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page aggregates official links and guardrails. For a regional overview, see  click here . \n Guardrails \n Rates and bands change. Use configuration and fetch from an external source, with a “Verify” footnote linking to GRA/NIS. \n Common pitfalls \n Back‑dated rate changes; not applying caps or ceilings; misclassifying allowances. \n Journal mapping (generic) \n Gross wages: Dr Wages / Cr PAYE payable / Cr NIS payable / Cr Cash (net). Employer NIS: Dr Staff costs / Cr NIS payable. \n See also \n – Regional overview:  click here \n– GRA vs NIS compliance (deep dive):  click here \n– Remittances &amp; audit checklist:  click here  \n"
+  },
+  {
+    "id": "payroll-tax-gross-ups-caribbean",
+    "slug": "payroll-tax-gross-ups-caribbean",
+    "title": "Payroll tax gross-ups — regional practices and calculator",
+    "summary": "When benefits are taxed on the employer side, compute gross-ups so employees receive a promised net. Includes a CSV calculator.",
+    "category_id": "payroll",
+    "tags": [
+      "gross-up",
+      "payroll tax",
+      "benefits"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " Context (regional) \n Gross-ups ensure a promised net after tax; configure rates and confirm statutory treatment per country. \n Template \n  Click here to download the gross-up calculator CSV  \n See also \n – PAYE calculation (GY) —  click here  \n"
+  },
+  {
+    "id": "petty-cash-analytics-checklist-caribbean",
+    "slug": "petty-cash-analytics-checklist-caribbean",
+    "title": "Petty cash analytics — red flags & checklist (Caribbean)",
+    "summary": "Analyze petty cash usage with a simple checklist and monthly red flags (splitting, duplicate vendors, frequent change fund issues). Includes downloadable CSV.",
+    "category_id": "cash",
+    "tags": [
+      "petty cash",
+      "analytics",
+      "checklist",
+      "fraud"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides analytics and a checklist. For G$ steps/journals, see  click here . \n Red flags \n Voucher splitting; frequent change fund adjustments; duplicate vendor claims; after-hours reimbursements; missing approvals. \n Checklist CSV \n  date, counted_by, verified_by, vouchers_count, vouchers_total, cash_on_hand, expected_cash, variance, reason_code, notes  Download:  click here  \n See also \n – Surprise audits (G$):  click here  \n"
   },
   {
     "id": "petty-cash-controls",
@@ -381,6 +1275,84 @@
     ],
     "last_reviewed": "2025-09-09",
     "html_excerpt": " Set the float and the rules \n \n Float cap (example  G$15,000 ). 2) Custodian (named person). 3) Use rules (e.g., ≤ G$3,000 per item, no wages, no loans). 4) Voucher with date, purpose, amount, requester + custodian signature. 5) Receipt required for every reimbursement. \n \n Reimburse and record \n \n Keep a small voucher book; number sequentially.   \n When reimbursing, attach the receipt and post to the proper expense (e.g., cleaning supplies).   \n Replenish to the cap via bank payment; post the summary to your ledger. \n \n Monthly reconciliation (5-step) \n \n Count  cash on hand  (e.g.,  G$2,400 ).   \n Sum  vouchers/receipts  since last replenishment ( G$12,600 ).   \n Confirm  cash + vouchers = float cap  ( 2,400 + 12,600 = 15,000 ).   \n Post a journal to recognise the expenses if using periodic posting.   \n Replenish from bank back to  G$15,000 . \n \n Journal (summary): Dr Cleaning 6,000; Dr Snacks 3,200; Dr Stationery 3,400 / Cr Bank 12,600.   \n Controls that actually work \n \n Lockbox +"
+  },
+  {
+    "id": "petty-cash-imprest-caribbean",
+    "slug": "petty-cash-imprest-caribbean",
+    "title": "Petty cash imprest — regional setup and controls (Caribbean)",
+    "summary": "Run a simple imprest with a fixed float, vouchers, and periodic top‑ups. Regional guidance; cross‑link to G$ entries and controls.",
+    "category_id": "cash",
+    "tags": [
+      "petty cash",
+      "imprest",
+      "controls",
+      "vouchers"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page is regional. For G$ entries, see  click here . \n Imprest basics \n Set a fixed float; pay only small items from petty cash with vouchers; reimburse to restore the float based on approved vouchers. \n Controls \n Lock the tin; assign a custodian; reconcile vouchers to cash‑on‑hand; require approvals; no IOUs. \n See also \n – G$ petty cash entries:  click here  \n Illustration \n   \n"
+  },
+  {
+    "id": "petty-cash-imprest-gyd",
+    "slug": "petty-cash-imprest-system-gyd",
+    "title": "Petty cash imprest — setup, top-ups, controls (G$)",
+    "summary": "Run a simple imprest: set a float, record spends with vouchers, and reimburse back to the fixed float. Includes G$ journals and control tips.",
+    "category_id": "cash",
+    "tags": [
+      "petty cash",
+      "imprest",
+      "controls",
+      "vouchers",
+      "receipts"
+    ],
+    "last_reviewed": "2025-09-09",
+    "html_excerpt": " Setup the float (GYD) \n Decide a fixed float, e.g.,  G$20,000 . Journal:  Dr Petty cash 20,000 / Cr Bank 20,000 . \n Using the fund \n Every payment needs a  voucher  with date, description, amount, and receipt. Record expenses immediately: e.g.,  Dr Stationery 1,200 / Cr Petty cash 1,200 . \n Reimbursement \n When cash on hand is, say,  G$5,300 , vouchers total  G$14,700 . Reimburse:  Dr Petty cash 14,700 / Cr Bank 14,700  to bring the box back to  G$20,000 . \n Controls that matter \n – Lock the tin; assign a custodian; reconcile vouchers to cash-on-hand frequently. – Manager approval for vouchers; avoid splitting invoices to bypass limits. – No IOUs or salary advances from petty cash. \n Illustration \n   \n See also \n – Regional petty cash guidance:  click here  \n"
+  },
+  {
+    "id": "petty-cash-surprise-audits-gyd",
+    "slug": "petty-cash-surprise-audits-gyd",
+    "title": "Petty cash surprise audits — steps, G$ journals, red flags",
+    "summary": "Run unannounced counts, tie vouchers to cash-on-hand, and post G$ corrections. Includes a checklist CSV and analytic red flags to review monthly.",
+    "category_id": "cash",
+    "tags": [
+      "petty cash",
+      "surprise audit",
+      "controls",
+      "vouchers"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers steps and G$ corrections. For regional analytics, see  click here . \n Steps \n \n Secure the tin; count cash; list vouchers; compute expected vs actual.   \n Investigate variances; code reasons; obtain approvals.   \n Post corrections. \n \n G$ journals \n Cash short: Dr Cash over/short / Cr Petty cash. Cash over: Dr Petty cash / Cr Cash over/short. \n Download \n Checklist:  /kb/templates/petty-cash-audit-checklist.csv  \n See also \n – Petty cash imprest (G$):  click here  – Analytics (Caribbean):  click here  \n"
+  },
+  {
+    "id": "pos-discrepancy-analytics-caribbean",
+    "slug": "pos-discrepancy-analytics-caribbean",
+    "title": "POS discrepancies — analytics & patterns (Caribbean)",
+    "summary": "Analyze recurring POS differences: late settlements, refund spikes, no-sales bursts, and fee mismatches. Includes a discrepancy log CSV.",
+    "category_id": "cash",
+    "tags": [
+      "POS",
+      "discrepancy",
+      "analytics",
+      "refunds",
+      "settlements"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides analytics. For G$ fixes, see  click here . \n Patterns \n Late settlements on weekends/holidays; refunds concentrated by cashier; chargebacks cluster by SKU; missing fee postings at month-end. \n CSV \n Columns:  date, pos_id, cashier, discrepancy_amount, reason_code, resolution, notes   Click here to download the discrepancy log  \n See also \n – GY root‑cause and fixes —  click here  \n"
+  },
+  {
+    "id": "pos-discrepancy-root-cause-gyd",
+    "slug": "pos-discrepancy-root-cause-gyd",
+    "title": "POS discrepancies — root-cause analysis and G$ fixes",
+    "summary": "Trace differences between POS Z-reports and bank/cash, identify causes (timing, refunds, chargebacks), and post clean G$ corrections.",
+    "category_id": "cash",
+    "tags": [
+      "POS",
+      "discrepancy",
+      "refunds",
+      "chargebacks",
+      "reconciliation"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers root‑cause and G$ fixes. For regional analytics patterns, see  click here . \n Why this matters (context) \n Recurring differences between POS Z‑reports and bank/cash erode trust in reported sales, slow VAT filing, and mask fraud or process errors. The goal is to separate timing differences from true errors, fix the books, and prevent repeat issues. \n Steps \n \n Align periods; compare POS Z-reports to bank/cash.   \n Classify: timing (settlements), refunds/chargebacks, fees, cash over/short, miskeys.   \n Post corrections and document. \n \n G$ journals (examples) \n Bank fee missed: Dr Bank charges / Cr Bank. Chargeback: Dr Chargebacks / Cr Bank; recover if eligible. Cash over/short: Dr/Cr Cash over/short. \n CSV \n  date, pos_id, cashier, discrepancy_amount, reason_code, resolution, notes  Download:  click here  \n See also \n – Analytics (Caribbean):  click here  \n"
   },
   {
     "id": "record-keeping-gra-2025",
@@ -414,6 +1386,115 @@
     "html_excerpt": " Retention basics (Guyana) \n Keep books and records for at least 8 years after the transaction is completed. For VAT, records must be in English, amounts expressed in Guyana dollars, and tax-invoicing rules apply (invoice/credit note sequences). \n What to file (starter list) \n Sales: tax-invoices, Z-reports/daily sales, credit notes, contracts. Purchases: supplier invoices, import entries, duty/VAT slips. Banking: statements, deposit slips, merchant settlements. Payroll: PAYE schedules, NIS contributions, payslips. Fixed assets: invoices, capitalization support, disposal docs. General: ledgers, trial balances, management accounts, returns filed. \n A practical folder scheme \n  /YYYY/01_January/...  with subfolders  Sales/ ,  Purchases/ ,  Bank/ ,  Payroll/ ,  VAT/ ,  FixedAssets/ ,  Other/ . File PDFs by YYYY-MM-DD_vendor_amount. Keep an index (CSV) for big months. \n Digital storage &amp; backups \n Scan paper, store read-only PDFs plus source files. Back up to a second location (cloud/d"
   },
   {
+    "id": "reorder-points-safety-stock-gyd",
+    "slug": "reorder-points-safety-stock-gyd",
+    "title": "Reorder point & safety stock — GY calculator and journals",
+    "summary": "Compute reorder points with lead time and demand variability, set safety stock, and post clean GY adjustments. Includes a calculator CSV.",
+    "category_id": "inventory",
+    "tags": [
+      "reorder point",
+      "safety stock",
+      "lead time",
+      "variability"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " Context \n Reorder points prevent stockouts without overstocking. Safety stock absorbs variability in demand and lead time. \n How to compute (simple) \n Reorder point = (Avg daily demand × Lead time days) + Safety stock. Safety stock (simple) = Z × σ (use a z‑score for service level). \n Templates \n  Click here to download the calculator  \n Illustration \n   \n"
+  },
+  {
+    "id": "replenishment-policy-templates-caribbean",
+    "slug": "replenishment-policy-templates-caribbean",
+    "title": "Replenishment policy — regional templates (ROP/SS, min–max)",
+    "summary": "Universal practices for reorder point/safety stock and min–max policies; includes a calculator CSV and a review checklist.",
+    "category_id": "inventory",
+    "tags": [
+      "replenishment",
+      "min–max",
+      "reorder point",
+      "safety stock"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " Templates \n  Click here for the ROP/SS calculator   Click here for the review checklist  \n See also \n – GY calculator and examples —  click here  \n"
+  },
+  {
+    "id": "revenue-recognition-advances-policy-caribbean",
+    "slug": "revenue-recognition-advances-policy-caribbean",
+    "title": "Revenue from advances — policy, contract liabilities & disclosures (Caribbean)",
+    "summary": "Set a clear policy for advances and contract liabilities, maintain an aging ledger, and disclose balances/movements. Includes a CSV template.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "revenue recognition",
+      "advances",
+      "contract liabilities",
+      "disclosures"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page focuses on policy and disclosures. For G$ journals, see  click here . \n Policy pointers \n Identify performance obligations; record advances as contract liabilities; recognize revenue when obligations are satisfied; age and escalate overdue items. \n Disclosure (short) \n \n Contract liabilities (customer advances) totalled [x] at period end. Revenue of [y] was recognized from opening contract liabilities during the period. \n \n CSV template \n  date_received, customer, contract_ref, description, advance_amount, currency, expected_performance, recognized_date, recognized_amount, balance, notes  Download:  click here  \n See also \n – G$ journals &amp; aging:  click here  \n"
+  },
+  {
+    "id": "supplier-credit-notes-postings-regional",
+    "slug": "supplier-credit-notes-postings-regional",
+    "title": "Supplier credit notes — postings and CSV imports (Caribbean)",
+    "summary": "How to post supplier credit notes and purchase returns, with regional examples and CSV templates for imports. Cross-link to country requirements.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "supplier credit note",
+      "purchase returns",
+      "AP",
+      "CSV import",
+      "Caribbean"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page focuses on postings and imports. For Guyana note requirements, see  click here . \n Postings (generic) \n Supplier credit note (price reduction): Dr Accounts payable / Cr Purchases (or expense) and Cr Input VAT reversal, as applicable. Purchase return (inventory): Dr Accounts payable / Cr Inventory and Cr Input VAT reversal, as applicable. \n CSV templates \n \n Credit note (header-level):  /kb/templates/credit-note-template.csv    \n Purchase return lines:  /kb/templates/purchase-return-template.csv  \n \n Controls \n Match to original invoice, reason code, and approval. Reconcile to AP aging and VAT return. \n See also \n – Guyana requirements:  click here  \n"
+  },
+  {
+    "id": "supplier-credit-notes-vs-purchase-returns-guyana",
+    "slug": "supplier-credit-notes-vs-purchase-returns-guyana",
+    "title": "Supplier credit notes vs purchase returns — requirements (Guyana)",
+    "summary": "When to request a supplier credit note versus a physical return, what the note must show, and how it interacts with VAT documentation and AP controls.",
+    "category_id": "vat",
+    "tags": [
+      "supplier credit note",
+      "purchase returns",
+      "VAT",
+      "AP controls"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers requirements and AP control points. For postings/templates, see  click here . \n When to use what \n \n Price adjustment/overcharge → Supplier credit note.   \n Damaged/incorrect goods returned → Physical return plus supplier credit note referencing the original invoice.   \n Quantity short-delivered → Debit/credit as per agreement; document the correction. \n \n VAT and records \n Ensure the supplier credit note references the original tax invoice and shows the correct VAT rate/amount. Keep the note with your AP voucher trail; reconcile notes to VAT return boxes and the purchases ledger. \n AP controls \n \n Separate sequencing for notes; manager approval thresholds.   \n Three-way match (PO/GRN/invoice) and note linkage; update inventory where returns occur.   \n Period cut‑off: date the note in the correct period. \n \n Templates \n Credit note templates:  /kb/templates/credit-note-template.csv ,  /kb/templates/credit-note-template.txt . \n See also \n \n Postings &amp; CSV imports ("
+  },
+  {
+    "id": "till-variance-analytics-template-caribbean",
+    "slug": "till-variance-analytics-template-caribbean",
+    "title": "Till variance analytics — template & patterns (Caribbean)",
+    "summary": "CSV template to analyze till variances by cashier/day/time with patterns to watch (refund spikes, no-sales bursts, deposit mismatches).",
+    "category_id": "cash",
+    "tags": [
+      "till variance",
+      "analytics",
+      "refunds",
+      "voids",
+      "deposits",
+      "CSV"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page provides analytics. For the daily reconciliation flow (G$), see  click here . \n CSV columns \n  date, shift, cashier, pos_id, reason_code, amount, direction (over/short), payment_type (cash/card), hour, customer_id, notes  \n Patterns to watch \n Refund spikes; late‑night no‑sales; voids near shift end; deposit mismatches; repeated “change fund errors”. \n See also \n – Reconciliation (G$):  click here  \n"
+  },
+  {
+    "id": "till-variance-reconciliation-gyd",
+    "slug": "till-variance-reconciliation-gyd",
+    "title": "Till variance reconciliation — cash, cards and vouchers (G$)",
+    "summary": "Daily/shift reconciliation flow with G$ examples, from POS Z-report to bank deposit, including common variance codes and journal entries.",
+    "category_id": "cash",
+    "tags": [
+      "till variance",
+      "POS",
+      "Z-report",
+      "bank deposit",
+      "reconciliation"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers the reconciliation flow. For analytics templates/patterns, see  click here . \n Flow (daily) \n \n POS Z‑report: cash/cards/vouchers totals.   \n Count cash: compare to POS; record over/short.   \n Prepare deposit; match to next‑day bank.   \n Investigate variances; code reasons; journal if needed. \n \n Common G$ journals \n Cash short: Dr Cash over/short 1,200 / Cr Cash 1,200. Bank fee not recorded: Dr Bank charges 1,200 / Cr Bank 1,200. Card payout timing: no journal (timing difference) — verify settlement next day. \n Variance codes \n Over/short; late deposit; change fund error; voids/returns; payout without voucher. \n See also \n – Analytics template (regional):  click here  \n"
+  },
+  {
     "id": "trial-balance-corrections-gy-2025",
     "slug": "trial-balance-corrections-guyana-2025",
     "title": "Trial balance corrections & suspense accounts — step-by-step (GYD)",
@@ -431,8 +1512,8 @@
   {
     "id": "tb-corrections-quiz",
     "slug": "trial-balance-corrections-quiz",
-    "title": "Trial balance corrections - practice quiz with worked answers (GYD)",
-    "summary": "Sharpen your error-spotting: 10 practical scenarios covering one-sided postings, transpositions, principle errors, and suspense clean-ups - each with worked G$ solutions.",
+    "title": "Trial balance corrections — practice quiz with worked answers (GYD)",
+    "summary": "Sharpen your error-spotting: 10 practical scenarios covering one-sided postings, transpositions, principle errors, and suspense clean-ups — each with worked G$ solutions.",
     "category_id": "bookkeeping",
     "tags": [
       "trial balance",
@@ -441,7 +1522,7 @@
       "quiz"
     ],
     "last_reviewed": "2025-09-09",
-    "html_excerpt": " \n  How to use this page \nTry each scenario first. Then expand &quot;Answer &amp; reasoning&quot; to review the journal(s) and why they work. \n \n"
+    "html_excerpt": " \n  How to use this page  Try each scenario first. Then expand “Answer &amp; reasoning” to review the journal(s) and why they work. \n \n Q1 — One-sided posting (G$90,000) \n Equipment purchase Dr  90,000  was posted; the Cr to Bank is missing. TB shows Debits &gt; Credits by  90,000 .  Answer &amp; reasoning:  Post  Cr Bank 90,000 . If you opened suspense initially, do  Dr Suspense 90,000 / Cr Bank 90,000 , then close  Dr Bank 90,000 / Cr Suspense 90,000 . \n Q2 — Transposition \n Sales  54,800  recorded as  58,400 ; TB difference  3,600  (divisible by  9 ).  Answer &amp; reasoning:   Dr Sales 3,600 / Cr Suspense 3,600  to remove the overstatement; close suspense once all items are fixed. \n Q3 — Error of principle \n G$120,000 spent on  machinery overhaul  capital in nature was posted to  Repairs expense . TB balances.  Answer &amp; reasoning:   Dr PPE 120,000 / Cr Repairs 120,000 . No suspense needed because TB already balanced (principle error). \n Q4 — Omission \n Rent  G$60,000  not recor"
   },
   {
     "id": "trial-balance-purpose",
@@ -458,6 +1539,103 @@
     ],
     "last_reviewed": "2025-09-09",
     "html_excerpt": " What a trial balance does (and doesn’t) do \n A TB lists ledger balances in  debit/credit  columns to test equality. It is an  internal  control step: crucial for accuracy, yet it  cannot  detect every error (e.g., an entire missing entry). Use it as a checkpoint in your period-end routine, not as proof of perfection. \n Types and timing \n \n  Unadjusted TB  — extracted before adjustments; used to plan period-end journals.   \n  Adjusted TB  — after adjustments; forms the basis for the  financial statements .   \n  Post-closing TB  — after closing income/expense to retained earnings; only permanent accounts remain. \n \n Quick prep checklist \n \n Export balances from your ledger as at the period end. 2) Scan for  obvious sign flips  (negative assets). 3) Confirm  debits = credits . 4) Post the standard adjustments: inventory, accruals/prepayments, depreciation, income tax estimates. 5) Re-extract as an  adjusted TB . 6) After statements,  close  temporary accounts and produce a  post-closing "
+  },
+  {
+    "id": "unearned-revenue-aging-gyd",
+    "slug": "unearned-revenue-aging-gyd",
+    "title": "Unearned revenue aging — deposits and deferrals (G$)",
+    "summary": "Track and age customer deposits and unearned revenue, recognize to income on delivery, and reconcile monthly. Includes G$ journals and a CSV ledger.",
+    "category_id": "vat",
+    "tags": [
+      "unearned revenue",
+      "deposits",
+      "deferrals",
+      "aging"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers G$ journals and aging. For policy/disclosures and templates, see  click here . \n G$ journals \n \n Deposit received: Dr Bank / Cr Unearned revenue.   \n Recognize on delivery: Dr Unearned revenue / Cr Revenue.   \n Refund: Dr Unearned revenue / Cr Bank (and reverse VAT if applicable per time of supply rules). \n \n Aging and reconciliation \n Maintain an aging by bucket (Current / 1–30 / 31–60 / 61–90 / 90+). Investigate long‑outstanding deferrals; tie opening + receipts − recognitions − refunds = closing. \n CSV ledger \n Columns:  date_received, customer, reference, description, amount, currency, expected_recognition, recognized_date, recognized_amount, balance, notes .  Click here to download the ledger template . \n See also \n – Deposits &amp; advance invoices (GY) —  click here  – Policy &amp; disclosures (regional practices) —  click here  \n Illustration \n   \n"
+  },
+  {
+    "id": "unearned-revenue-policy-disclosures-caribbean",
+    "slug": "unearned-revenue-policy-disclosures-caribbean",
+    "title": "Unearned revenue — policy, recognition and disclosures (Caribbean)",
+    "summary": "Set recognition policy for deposits/deferrals, keep an aging, and draft clear disclosures of unearned revenue balances and movements. Includes a CSV ledger template.",
+    "category_id": "bookkeeping",
+    "tags": [
+      "unearned revenue",
+      "deposits",
+      "deferrals",
+      "disclosures",
+      "policy"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page focuses on policy and disclosures. For G$ journals, see  click here . \n Policy pointers \n Define when performance obligations are satisfied; record deposits as liabilities until delivery; set aging thresholds and escalation rules. \n Disclosure (short template) \n \n At period end, unearned revenue totalled [x], primarily customer deposits for [goods/services]. Revenue is recognized on delivery or as services are performed. \n \n CSV template \n  date_received, customer, reference, description, amount, currency, expected_recognition, recognized_date, recognized_amount, balance, notes   Click here to download the ledger template  \n See also \n – GY aging &amp; journals —  click here  – Deposits policy &amp; wording (regional practices) —  click here  \n"
+  },
+  {
+    "id": "vat-credit-debit-notes-postings-gyd",
+    "slug": "vat-credit-debit-notes-postings-gyd",
+    "title": "VAT credit notes & debit notes — postings and controls (G$)",
+    "summary": "Worked G$ postings for seller and buyer sides, how they affect VAT boxes, and controls to prevent abuse. Cross-link to requirements page.",
+    "category_id": "vat",
+    "tags": [
+      "VAT",
+      "credit note",
+      "debit note",
+      "postings",
+      "journal entries"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers postings and controls. For legal/format requirements, see  click here . \n Seller (credit note) — G$ example \n Original sale G$114,000 (VAT-inclusive): Net 100,000, VAT 14,000. Return of goods 50% → Credit note: Dr Sales returns 50,000; Dr Output VAT 7,000; Cr Trade receivables 57,000. \n Buyer (credit note received) \n Reverse input VAT and reduce expense/inventory accordingly; credit AP or bank if already paid and refunded. \n Debit notes \n Price increases or undercharges: mirror entries with VAT impact; reference the original invoice. \n Controls \n – Approval for credit/debit notes; sequential numbering; tie to inventory/returns. – Reconcile notes to VAT return adjustments. \n Templates \n CSV:  /kb/templates/credit-note-template.csv ,  /kb/templates/debit-note-template.csv . Text:  /kb/templates/credit-note-template.txt ,  /kb/templates/debit-note-template.txt . \n Illustration \n   \n"
+  },
+  {
+    "id": "vat-credit-debit-notes-requirements-guyana",
+    "slug": "vat-credit-debit-notes-requirements-guyana",
+    "title": "VAT credit notes & debit notes — requirements (Guyana)",
+    "summary": "When to issue a credit/debit note, what it must show, time limits, and how it affects your VAT return — mapped to GRA guidance.",
+    "category_id": "vat",
+    "tags": [
+      "VAT",
+      "credit note",
+      "debit note",
+      "invoices",
+      "Guyana"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers legal/format requirements. For postings and examples, see  click here . \n Must-have fields \n – Words “Credit Note”/“Debit Note”, supplier TIN, buyer details. – Original invoice number/date; reason for the note; correct VAT rate. – Net, VAT, and total amounts; date and unique note number. \n Timing and return impact \n – Reflect adjustments in the VAT period when the note is issued/received. – Ensure output/input VAT is adjusted accordingly; retain cross-references. \n Controls \n – Separate sequencing for notes; manager approval for high-value notes. – Tie notes back to returns and to inventory where relevant (returns). \n See also \n – Postings &amp; worked examples:  click here \n– Templates:  /kb/templates/credit-note-template.csv ,  /kb/templates/debit-note-template.csv ,  /kb/templates/credit-note-template.txt ,  /kb/templates/debit-note-template.txt  \n Illustration \n   \n"
+  },
+  {
+    "id": "vat-inclusive-pricing-7-57-cheat-sheet",
+    "slug": "vat-inclusive-pricing-7-57-cheat-sheet-guyana",
+    "title": "VAT-inclusive pricing — 7/57 cheat sheet (Guyana)",
+    "summary": "Quickly extract VAT from VAT-inclusive prices, handle rounding and multi-line invoices, and avoid common pitfalls. With G$ examples at 14%.",
+    "category_id": "vat",
+    "tags": [
+      "VAT",
+      "pricing",
+      "inclusive",
+      "7/57",
+      "Guyana",
+      "invoices",
+      "GRA"
+    ],
+    "last_reviewed": "2025-09-09",
+    "html_excerpt": " When to use inclusive math (context) \n Use inclusive extraction when your selling prices are VAT‑inclusive (shelf/advertised prices include VAT) or when customers present invoices showing a single gross amount. If your system stores net prices and adds VAT, use the exclusive rate instead. \n Formula and quick example (GYD) \n For VAT-inclusive prices at 14%: • VAT = Gross × 14/114 (same as 7/57). • Net = Gross − VAT. \n Example: Gross  G$114,000  → VAT  G$14,000 ; Net  G$100,000 . \n Multi-line invoices and discounts \n – If you have multiple lines, calculate VAT per line then sum, or compute on the invoice total — just be consistent with rounding. – For VAT-inclusive discounts, apply the discount to gross first, then extract VAT using  14/114 . – For VAT-exclusive discounts, reduce the net first, then apply  14% . \n Common pitfalls to avoid \n – Mixing exclusive and inclusive math on the same invoice. – Rounding at both line and invoice level in ways that don’t tie. – Forgetting to show th"
+  },
+  {
+    "id": "vat-inclusive-pricing-regional-cheat-sheet",
+    "slug": "vat-inclusive-pricing-regional-cheat-sheet",
+    "title": "VAT-inclusive pricing — r/(100+r) cheat sheet (Caribbean)",
+    "summary": "Extract VAT from VAT-inclusive prices using the general formula r/(100+r); includes multi-line invoice tips and rounding guidance. Cross-link to 14% Guyana examples.",
+    "category_id": "vat",
+    "tags": [
+      "VAT",
+      "inclusive pricing",
+      "formula",
+      "r/(100+r)",
+      "Caribbean"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page is regional. For 14% examples, see  click here . \n Formula \n VAT = Gross × r/(100+r). Net = Gross − VAT. Example (r = 17.5%): Gross 117.50 → VAT 117.50 × 17.5/117.5 = 17.50; Net 100.00. \n Multi-line invoices \n You may compute per line then sum, or compute at invoice level. Be consistent with rounding and disclose your policy. \n Rounding \n Choose line-level or invoice-level rounding; ensure VAT totals reconcile to the return. \n See also \n – Guyana (14%):  click here  \n Illustration \n  (alt: &quot;r/(100+r) extraction with example&quot;). \n"
   },
   {
     "id": "vat-invoice-requirements-guyana-2025",
@@ -480,11 +1658,129 @@
     "html_excerpt": " id: vat-invoice-requirements\nslug: vat-invoice-requirements\ntitle: What makes a VAT-compliant invoice in Guyana?\nsummary: Key details that every Guyanese VAT invoice must include.\nlevel: Beginner\naudience: [Owner, Clerk]\nformat: Checklist\ncategory_id: sales-vat\ntags: [VAT, invoicing]\njurisdiction: [Guyana]\nlast_reviewed: 2024-05-01\nsources: \n \n title: &quot;VAT Act of Guyana&quot;\nurl: &quot; https://www.gra.gov.gy/vat-act &quot;\npublisher: &quot;GRA&quot;\ndate_accessed: 2024-05-01\nkb_snippets: \n question: &quot;Which items are mandatory on a VAT invoice in Guyana?&quot;\nanswer: &quot;Name and TIN of supplier, invoice number, date, description, taxable amount, VAT at 14%.&quot;\ntype: &quot;howto&quot;\nassistant_keys: \n intent: &quot;DO&quot;\nkey: &quot;vat_invoice_create&quot;\nsynonyms: [&quot;VAT invoice&quot;, &quot;tax invoice&quot;]\nlink: &quot;/dashboard/invoices/new&quot;\nbody_markdown: | \n \n Intro \n   VAT-registered businesses must issue invoices with specific fields. \n Require"
   },
   {
+    "id": "vat-refunds-evidence-pack-guyana",
+    "slug": "vat-refunds-evidence-pack-guyana",
+    "title": "VAT refunds in Guyana - eligibility, application and evidence pack",
+    "summary": "When a VAT credit becomes a refund vs a carry-forward, how to apply on the official GRA form, and what to include in your reviewer-friendly evidence pack.",
+    "category_id": "vat",
+    "tags": [
+      "VAT",
+      "refund",
+      "carry forward",
+      "evidence",
+      "exporters",
+      "zero-rated"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page is specific to Guyana (forms and policy). For an exporter-focused regional template, see  click here . \n When a credit becomes a refund (vs carry-forward) \n Credits arise when input VAT exceeds output VAT. Exporters and zero-rated suppliers are most likely to qualify. GRA requires the prescribed application form and supporting evidence; some credits may be carried forward depending on policy and eligibility. \n How to apply (quick steps) \n \n Confirm eligibility (e.g., zero-rated activity/export support). \n Complete Application for VAT Refund &amp; Tax Relief and attach schedules. \n Include your VAT return for the period and payment status. \n Submit via the channel indicated by GRA. \n Respond promptly to GRA queries with a named contact. \n \n Evidence pack - what reviewers look for \n \n VAT return; output/input summaries; bank proof of VAT payments/refunds. \n Sales &amp; purchase listings; verify rates (14% / 0% / exempt) and math (use 14/114 for inclusive prices). \n Export proo"
+  },
+  {
+    "id": "vat-refunds-exporter-evidence-caribbean",
+    "slug": "vat-refunds-exporter-evidence-caribbean",
+    "title": "VAT refunds for exporters — evidence pack and cover letter (Caribbean)",
+    "summary": "Exporter-focused checklist: what to include in your VAT refund evidence pack, with a sample cover letter and reconciliation pointers. Regional view; cross-link to Guyana specifics.",
+    "category_id": "vat",
+    "tags": [
+      "VAT",
+      "refund",
+      "exporters",
+      "evidence",
+      "zero-rated",
+      "reconciliation"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page focuses on a regional exporter evidence pack. For Guyana specifics (forms, policy), see  click here . \n Exporter evidence pack (core items) \n – VAT return and period selection; refund request amount. – Sales summary split by 0% exports and domestic. – Purchase VAT summary with high-value invoices listed. – Export proof: bill of lading/air waybill, customs export entry, commercial invoice. – Reconciliations: sales to ledgers/POS, purchases to AP; narrative for large swings. \n Sample cover letter (adapt) \n \n We request a VAT refund of [G$/X$] for [period]. The enclosed pack includes: (1) VAT return and ledgers bridge; (2) invoice listings; (3) export proofs; (4) bank proofs; and (5) explanations for variances and prior-period adjustments. Contact: [Name, phone, email]. \n \n Tips \n – Keep invoice numbering tight; label zero-rated lines clearly. – Extract VAT from inclusive amounts using the jurisdiction’s rate (e.g.,  14/114 ). – Maintain a running refund file during the month. "
+  },
+  {
+    "id": "vat-return-review-checklist-caribbean",
+    "slug": "vat-return-review-checklist-caribbean",
+    "title": "VAT return — pre‑filing checklist (Caribbean)",
+    "summary": "A regional checklist to sanity‑check sales vs VAT boxes, evidence for zero‑rated/exempt, and inclusive price math before filing. Cross‑links to country‑specific guides.",
+    "category_id": "vat",
+    "tags": [
+      "VAT",
+      "checklist",
+      "zero-rated",
+      "exempt",
+      "inclusive pricing"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page is regional. For Guyana specifics, see  click here . \n Pre‑filing checklist (tick) \n ☐ Sales split: taxable / zero‑rated / exempt. ☐ VAT math: exclusive (rate) or inclusive using gross × r/(100+r). ☐ Evidence on file for zero‑rated/exempt. ☐ Input VAT sampled against valid invoices. ☐ Bridge totals to ledgers/POS and bank where needed. \n See also \n – Guyana checklist:  click here  – Inclusive pricing:  click here  \n Illustration \n   \n"
+  },
+  {
+    "id": "vat-return-review-checklist-guyana",
+    "slug": "vat-return-review-checklist-guyana",
+    "title": "VAT return — pre‑filing checklist (Guyana)",
+    "summary": "A practical pre-filing checklist for GRA VAT returns: verify invoices, rates, zero-rated/exempt support, box mapping, 7/57 inclusive math, and payment timing to meet the 21st deadline.",
+    "category_id": "vat",
+    "tags": [
+      "VAT",
+      "return",
+      "GRA",
+      "21st deadline",
+      "checklist",
+      "zero-rated",
+      "exempt"
+    ],
+    "last_reviewed": "2025-09-09",
+    "html_excerpt": " This page focuses on a pre‑filing checklist. For the variance bridge and 7/57 analysis, see  click here . \n Pre-filing checklist (tick through) \n ☐  Period  is right; all sales/purchases posted to the correct month ☐  Tax invoices  captured: supplier &amp; customer TINs, unique invoice no., date ☐  Rates  correct (14% / 0% /  exempt ) and  labelled  on invoices ☐  Math  checked: if prices are VAT-inclusive, extract  VAT = gross × 14/114 (7/57)  ☐  Zero-rated/exempt  support on file (Schedule/Act reference, export docs) ☐  Input VAT  only on VAT-qualifying purchases; exclude exempt purchases ☐  Box mapping  agrees to sales/purchase ledgers (and POS Z-reports) ☐  Bank payment  amount matches the return and falls before the  21st    \n Quick reconciliation \n \n Sales ledger VAT output vs summary of tax invoices.   \n Purchases ledger VAT input vs supplier invoices/import entries.   \n Tie to  trial balance  VAT control accounts.   \n Investigate large  credit  positions (e.g., heavy zero-rate"
+  },
+  {
+    "id": "vat-return-variance-analysis-caribbean",
+    "slug": "vat-return-variance-analysis-caribbean",
+    "title": "VAT return — variance bridge (Caribbean)",
+    "summary": "Regional approach to bridge revenue to VAT boxes, test inclusive invoices with r/(100+r), and sanity-check input VAT. Cross-link to country pages.",
+    "category_id": "vat",
+    "tags": [
+      "VAT",
+      "variance",
+      "bridge",
+      "inclusive pricing",
+      "Caribbean"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page is regional. For Guyana specifics, see  click here . \n Checks \n \n Sales split (taxable/zero‑rated/exempt) and bridge to VAT boxes.   \n Inclusive invoices: VAT = Gross × r/(100+r).   \n Input VAT reasonableness vs VATable purchases; scan extremes.   \n Evidence retained for zero‑rated/exempt. \n \n See also \n – Guyana variance analysis:  click here  \n Illustration \n   \n"
+  },
+  {
+    "id": "vat-return-variance-analysis-guyana",
+    "slug": "vat-return-variance-analysis-guyana",
+    "title": "VAT return — variance bridge & 7/57 analysis (Guyana)",
+    "summary": "Bridge revenue to VAT boxes, recompute inclusive invoices with 14/114 (7/57), test zero-rated/exempt shares, and sanity-check input VAT before the 21st.",
+    "category_id": "vat",
+    "tags": [
+      "VAT",
+      "variance",
+      "reconciliation",
+      "inclusive pricing",
+      "7/57",
+      "GRA",
+      "21st deadline"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page focuses on the variance bridge and 7/57 checks. For a pre-filing checklist, see  click here . \n The four checks that matter \n \n  Revenue → return bridge : Start with sales ledger (or POS Z-reports). Split taxable 14%,  zero-rated , and  exempt  totals. Ensure taxable base × 14% equals output VAT.   \n  Inclusive-price test (7/57) : For gross-priced invoices (e.g., G$114,000), VAT =  114,000 × 14/114 = 14,000 ; net  100,000 .   \n  Zero-rated/exempt evidence : Keep Schedule/Act references or export docs. No input VAT claim on exempt purchases.   \n  Input VAT reasonableness : Compare input VAT to VATable purchases; scan suppliers with unusually high/low VAT rates. \n \n Mini walkthrough (GYD) \n POS shows G$6,270,000 gross. Mix: G$4,560,000 taxed, G$1,050,000 zero-rated, G$660,000 exempt. – Output VAT check:  4,560,000 × 14% = 638,400 . – Inclusive check on a sample invoice  G$114,000  → VAT  14,000 ; net  100,000 . – Input VAT list totals  G$502,300 ; after removing exempt items’ "
+  },
+  {
+    "id": "vat-zero-exempt-invoice-audit-caribbean",
+    "slug": "vat-zero-vs-exempt-invoice-audit-caribbean",
+    "title": "VAT zero‑rated vs exempt — invoice audit (Caribbean)",
+    "summary": "A regional review checklist to test invoice labels, rates, and math (including inclusive r/(100+r)), with notes on evidence to retain. Cross‑link to country pages.",
+    "category_id": "vat",
+    "tags": [
+      "VAT",
+      "zero-rated",
+      "exempt",
+      "invoices",
+      "audit"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page is regional. For Guyana specifics, see  click here . \n Quick checklist \n ☐ Correct invoice headings and identifiers. ☐ Rate and amount shown; inclusive math uses r/(100+r). ☐ Zero‑rated/exempt clearly indicated with evidence. ☐ Totals foot and reconcile to ledgers. \n See also \n – Guyana invoice audit:  click here  \n Illustration \n   \n"
+  },
+  {
     "id": "vat-zero-exempt-invoice-audit",
     "slug": "vat-zero-vs-exempt-invoice-audit",
     "title": "VAT zero-rated vs exempt — worked invoice audit (Guyana)",
     "summary": "How to review invoices for correct VAT labelling, rates, and support — with a checklist that maps to GRA guidance and a mini audit example in G$.",
-    "category_id": "sales-vat",
+    "category_id": "vat",
     "tags": [
       "VAT",
       "zero-rated",
@@ -494,7 +1790,52 @@
       "Guyana"
     ],
     "last_reviewed": "2025-09-09",
-    "html_excerpt": " Quick checklist (tick each) \n ☐ “Tax invoice” wording, unique number, date ☐ Supplier TIN &amp; address; customer ID if required ☐ Description/quantity; unit price; VAT rate and amount ☐ If zero-rated or exempt, it’s explicitly stated, with evidence (e.g., Schedule 1 item) ☐ Totals foot; VAT math checks (14% exclusive or 7/57 inclusive) ☐ Invoice included in VAT returns with correct output (and input on purchases) \n Worked mini audit (GYD) \n Sample: 10 invoices in March. Two show “0%” for exported items; one shows “Exempt — financial service”. – Zero-rated: confirm export docs; label “0% (Schedule 1)” and amounts in GYD. – Exempt: check service qualifies; ensure no input VAT claim on that purchase. – Recompute VAT for VAT-inclusive invoice G$114,000: output VAT = 114,000 × 14/114 = 14,000; net sales 100,000. \n Illustration \n \n Figure: see /public/kb/illustrations/vat-invoice-audit.svg (1:1) \n \n"
+    "html_excerpt": " Quick checklist (tick each) \n ☐ “ Tax invoice ” wording, unique number, date ☐ Supplier TIN &amp; address; customer ID if required ☐ Description/quantity; unit price;  VAT rate  and  amount  ☐ If  zero-rated  or  exempt , it’s  explicitly stated , with evidence (e.g., Schedule 1 item) ☐ Totals foot; VAT math checks (14% exclusive or  7/57  inclusive) ☐ Invoice included in VAT returns with correct  output  (and  input  on purchases) \n Worked mini audit (GYD) \n Sample: 10 invoices in March. Two show “0%” for exported items; one shows “Exempt — financial service”. –  Zero-rated : confirm export docs; label “0% (Schedule 1)” and amounts in  GYD . –  Exempt : check service qualifies; ensure  no input VAT claim  on that purchase. – Recompute VAT for VAT-inclusive invoice  G$114,000 : output VAT =  114,000 × 14/114 = 14,000 ; net sales  100,000 . \n Illustration \n   \n See also \n – Regional audit checklist:  click here  \n"
+  },
+  {
+    "id": "wip-overhead-absorption-gyd",
+    "slug": "wip-overhead-absorption-gyd",
+    "title": "WIP and overhead absorption — job costing journals (G$)",
+    "summary": "Accumulate materials, labour, and overhead in WIP; absorb overhead using a rate; and move completed jobs to finished goods/COGS. Includes job ledger CSVs.",
+    "category_id": "inventory",
+    "tags": [
+      "WIP",
+      "overhead absorption",
+      "job costing"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers G$ job costing. For policy/rates and templates, see  click here . \n G$ journals \n Materials to WIP: Dr WIP — materials / Cr Inventory. Labour to WIP: Dr WIP — labour / Cr Wages payable. Overhead absorbed: Dr WIP — overhead absorbed / Cr Overhead control. Job completion: Dr Finished goods / Cr WIP (or Dr COGS / Cr WIP for services). \n CSV templates \n – Job ledger —  click here  – Overhead rates —  click here  \n See also \n – Policy &amp; overhead rate setup (regional practices) —  click here  \n Illustration \n   \n"
+  },
+  {
+    "id": "wip-variances-journals-gyd",
+    "slug": "wip-variances-journals-gyd",
+    "title": "WIP variances — overhead, scrap and yield (G$ journals)",
+    "summary": "Post over/under-absorbed overhead, scrap, and yield variances cleanly in G$. Includes a variance log CSV and tips for closing WIP.",
+    "category_id": "inventory",
+    "tags": [
+      "WIP",
+      "variances",
+      "overhead",
+      "scrap",
+      "yield"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page covers G$ variance postings. For policy/KPIs, see  click here . \n G$ journals \n Under-absorbed OH: Dr COGS (Overhead variance) / Cr Overhead control. Over-absorbed OH: Dr Overhead control / Cr COGS (Overhead variance). Abnormal scrap: Dr COGS (Scrap variance) / Cr WIP. Yield variance: Dr/Cr Yield variance vs WIP as applicable. \n Variance log CSV \n  period, job_id, variance_type, amount, root_cause, action, owner, closed_on   Click here to download the variance log  \n See also \n – Overhead absorption (GY) —  click here  – Policy &amp; KPIs (regional practices) —  click here  \n Illustration \n   \n"
+  },
+  {
+    "id": "wip-variances-policy-kpi-caribbean",
+    "slug": "wip-variances-policy-kpi-caribbean",
+    "title": "WIP variances — policy, closure and KPIs (Caribbean)",
+    "summary": "Define variance handling (over/under absorption, scrap, yield), close WIP with approvals, and track KPIs. Includes variance log CSV.",
+    "category_id": "inventory",
+    "tags": [
+      "WIP",
+      "variances",
+      "policy",
+      "KPIs"
+    ],
+    "last_reviewed": "2025-09-10",
+    "html_excerpt": " This page sets policy/KPIs. For G$ journals, see  click here . \n Policy \n Define acceptable ranges, approval thresholds, and routing for root-cause (rate reset, process change, scrap control). \n KPIs \n Overhead variance % of absorbed OH; scrap rate by BOM; yield variance %; closure time. \n CSV \n  period, job_id, variance_type, amount, root_cause, action, owner, closed_on   Click here to download the variance log  \n See also \n – G$ journals:  click here  \n"
   },
   {
     "id": "vat-zero-vs-exempt-2025",

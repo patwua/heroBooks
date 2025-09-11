@@ -1,0 +1,4 @@
+date,shift,cashier,pos_id,reason_code,amount,direction,payment_type,hour,customer_id,notes
+2025-09-01,AM,Shaun,POS-1,OVER_SHORT,-1200,short,cash,10,,Cash short vs POS
+2025-09-01,PM,Rita,POS-2,REFUND_SPIKE,-8500,short,cash,20,CUST-009,Multiple refunds
+

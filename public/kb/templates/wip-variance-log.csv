@@ -1,0 +1,3 @@
+period,job_id,variance_type,amount,root_cause,action,owner,closed_on
+2025-09,JOB-2025-001,UNDER_ABSORB,25000,Rate too low,Review rate Q4,Controller,
+

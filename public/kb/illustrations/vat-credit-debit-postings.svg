@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="vcdp" role="img">
+  <title id="vcdp">VAT credit/debit notes — postings</title>
+  <defs><style><![CDATA[:root{--c1:#0ea5e9;--c2:#22c55e;--fg:#0f172a}.t{font:600 18px/1.2 ui-sans-serif,system-ui}.box{fill:none;stroke:var(--fg);stroke-width:10;rx:16}]]></style></defs>
+  <rect class="box" x="40" y="64" width="200" height="160"/><text x="56" y="112" class="t">Seller entries</text>
+  <rect class="box" x="272" y="64" width="200" height="160"/><text x="288" y="112" class="t">Buyer entries</text>
+</svg>
+

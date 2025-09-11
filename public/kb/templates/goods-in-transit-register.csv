@@ -1,0 +1,3 @@
+po_number,incoterm,carrier,bl_or_awb,expected_arrival,item,qty,cost,currency,booked_date,remarks
+PO-2025-101,FOB,CaribShip,BL-889123,2025-09-18,SKU-1001,200,1200,GYD,2025-08-31,Booked at month-end
+

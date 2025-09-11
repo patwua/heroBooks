@@ -1,0 +1,5 @@
+code,name,PAYE_taxable,NIS_insurable,notes
+MEAL,Meal allowance,Y,N,Taxable if cash; not insurable
+TRVL,Travel stipend,N,N,If reimbursed with receipts
+PHONE,Phone allowance,Y,Y,Verify policy
+

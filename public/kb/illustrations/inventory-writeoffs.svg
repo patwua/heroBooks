@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" aria-labelledby="iw" role="img">
+  <title id="iw">Inventory write-off/write-down</title>
+  <defs><style><![CDATA[:root{--c1:#ef4444;--c2:#22c55e;--fg:#0f172a}.t{font:600 18px/1.2 ui-sans-serif,system-ui}.axis{stroke:#94a3b8;stroke-width:6}]]></style></defs>
+  <line class="axis" x1="64" y1="200" x2="448" y2="200"/>
+  <text x="72" y="96" class="t">Write-down → NRV</text>
+  <text x="72" y="136" class="t">Write-off → expense</text>
+</svg>
+

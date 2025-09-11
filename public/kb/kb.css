@@ -1,0 +1,11 @@
+/* Packed illustration styles for KB articles */
+.kb-article p > img[src^="/kb/illustrations/"] {
+  float: right;
+  max-width: min(40%, 360px);
+  margin: 0 0 .75rem 1rem;
+  border: 0;
+}
+.kb-article img { height: auto; }
+.kb-article a { color: #2563eb; text-decoration: none; }
+.kb-article a:hover { text-decoration: underline; }
+

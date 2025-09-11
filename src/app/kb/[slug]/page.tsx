@@ -5,6 +5,7 @@ import { marked } from "marked";
 import sanitizeHtml from "sanitize-html";
 import taxonomy from "@/../kb/taxonomy.json";
 import SectionCard from "@/components/UX/SectionCard";
+import GlossaryTips from "@/components/kb/GlossaryTips";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import ViewBeacon from "../ViewBeacon";
@@ -76,16 +77,17 @@ export default async function KbArticlePage({ params }: {params: Promise<{slug: 
     return file;
   }
 
-  const metaLine = buildMetaLine(data, readingMinutes);
+  const metaLine = buildMetaLine2(data, readingMinutes);
   const catId = (data as any)?.category_id as string | undefined;
   const cat = ((taxonomy as any).categories || []).find((c: any) => c.id === catId);
+  const titleClean = fixMojibakeText(String(data.title || ""));
 
   return (
     <div className="space-y-6">
       <ViewBeacon slug={data.slug} />
       <div className="space-y-2">
         <div className="flex items-start justify-between gap-4">
-          <h1 className="text-2xl font-bold flex-1">{data.title}</h1>
+          <h1 className="text-2xl font-bold flex-1">{titleClean}</h1>
           <DismissTopic slug={data.slug} />
         </div>
         <div className="flex items-center gap-3">
@@ -99,18 +101,14 @@ export default async function KbArticlePage({ params }: {params: Promise<{slug: 
       </div>
       {data.illustration ?
       <div className="rounded-2xl overflow-hidden border">
-          <Image src={String(data.illustration)} alt={data.title} width={1200} height={630} className="w-full h-auto" />
+          <Image src={String(data.illustration)} alt={titleClean} width={1200} height={630} className="w-full h-auto" />
         </div> :
 
       <ArticleHero category={data.category_id} />
       }
 
       <SectionCard className="border-0 shadow-none bg-transparent dark:bg-transparent p-0">
-        {/* eslint-disable-next-line react/no-danger */}
-        <div
-          className="prose prose-sm sm:prose lg:prose-lg max-w-none dark:prose-invert leading-relaxed space-y-6"
-          dangerouslySetInnerHTML={{ __html: safeHtml }} />
-        
+        <GlossaryTips html={String(safeHtml)} />
       </SectionCard>
 
       <div className="grid gap-6 sm:grid-cols-2">
@@ -191,22 +189,105 @@ async function resolveArticlePath(slug: string): Promise<string | undefined> {
   return file;
 }
 
+function buildMetaLine2(data: any, mins: number) {
+  const src = Array.isArray(data.sources) && data.sources.length
+    ? domainFromUrl(data.sources[0].url) || data.sources[0].publisher || data.sources[0].title
+    : undefined;
+  const when = data.last_reviewed
+    ? new Date(String(data.last_reviewed)).toLocaleString(undefined, { month: "short", year: "numeric" })
+    : undefined;
+  const parts: string[] = [];
+  if (src) parts.push(`Source @ ${src}`);
+  parts.push(`${mins} min read`);
+  if (when) parts.push(when);
+  return parts.join(" • ");
+}
+
+function fixMojibakeText(s: string) {
+  if (!s) return s;
+  let out = s;
+  // Replace common replacement-char artifacts with intended punctuation
+  out = out.replace(/\uFFFD\+/g, "→");        // �+  => arrow
+  out = out.replace(/\uFFFD['"]/g, " — ");    // �" or �' => em dash with spaces
+  out = out.replace(/\uFFFD[-–—]/g, "—");      // �- or �– => em dash
+  out = out.replace(/\uFFFD/g, "");            // drop any remaining unknowns
+  // Fix odd sequences like "+'" left from arrow replacements
+  out = out.replace(/\+'|\+’/g, "→");
+  // Collapse whitespace
+  out = out.replace(/\s{2,}/g, " ").trim();
+  return out;
+}
+
 // HTML is sanitized via sanitize-html after marked.parse
 
 function preprocessFigures(md: string) {
-  // Convert lines like: "> Figure: see /public/kb/illustrations/file.svg (1:1)"
-  // into markdown images pointing to /kb/illustrations/file.svg
-  const lines = md.split(/\r?\n/);
-  const rx = /^>\s*Figure:\s*see\s+([^\s\)]+).*$/i;
-  const out = lines.map((ln) => {
-    const m = rx.exec(ln.trim());
-    if (!m) return ln;
-    let url = m[1].replace(/^\/public\//, "/");
-    // if points to /kb/illustrations/..., leave as is; otherwise fallback
-    if (!/^\/(kb|logos)\//.test(url)) url = "/" + url.replace(/^\/+/, "");
-    return `![Figure](${url})`;
-  });
-  return out.join("\n");
+  // Enhance authoring shortcuts to proper markdown links/images while
+  // avoiding code fences.
+  const codeFence = /```[\s\S]*?```/g;
+  let last = 0;
+  const parts: string[] = [];
+
+  function processSegment(s: string) {
+    const lines = s.split(/\r?\n/);
+
+    const rxFigure = /^>\s*Figure:\s*see\s+([^\s\)]+).*$/i;
+    const rxVisual = /^(?:.*?)(?:SVG|Image|Visual)\s*:\s*(\/public\/kb\/illustrations\/[^\s\)]+|\/kb\/illustrations\/[^\s\)]+)\s*(?:\(alt:\s*"([^"]+)"\))?.*$/i;
+
+    const out = lines.map((ln) => {
+      const t = ln.trim();
+      // Pattern 1: blockquote Figure syntax
+      let m = rxFigure.exec(t);
+      if (m) {
+        let url = m[1].replace(/^\/public\//, "/");
+        if (!/^\/(kb|logos)\//.test(url)) url = "/" + url.replace(/^\/+/, "");
+        return `![Figure](${url})`;
+      }
+      // Pattern 2: Visual/Image/SVG line with optional alt
+      m = rxVisual.exec(t);
+      if (m) {
+        let url = m[1].replace(/^\/public\//, "/");
+        if (!/^\/(kb|logos)\//.test(url)) url = "/" + url.replace(/^\/+/, "");
+        const alt = (m[2] || "Figure").trim();
+        return `![${alt}](${url})`;
+      }
+      return ln;
+    });
+
+    let text = out.join("\n");
+
+    // Inline transformations (outside fenced code):
+    // - Article path: kb/articles/<slug>.md -> markdown link to /kb/<slug>
+    text = text.replace(/\bkb\/articles\/([a-z0-9\-]+)\.md\b/gi, (_m, slug: string) => `[here](/kb/${slug})`);
+    //   Also convert when wrapped in single backticks (inline code) by removing backticks
+    text = text.replace(/`kb\/articles\/([a-z0-9\-]+)\.md`/gi, (_m, slug: string) => `[here](/kb/${slug})`);
+    // - Templates: /kb/templates/<file>.csv -> markdown link
+    text = text.replace(/(^|[^\]])(\/kb\/templates\/[\w\-/.]+\.(csv|txt|tsv|pdf|xlsx))/gi, (_m, pfx: string, path: string) => `${pfx}[${path}](${path})`);
+    //   Also convert when wrapped in backticks
+    text = text.replace(/`(\/kb\/templates\/[\w\-/.]+)`/gi, (_m, path: string) => `[${path}](${path})`);
+    // - Raw illustration references: /public/kb/illustrations/*.svg -> image
+    text = text.replace(/(^|\s)(\/public\/kb\/illustrations\/[\w\-/.]+\.svg)(?=\s|$)/gi, (_m, sp: string, url: string) => {
+      const clean = url.replace(/^\/public\//, "/");
+      return `${sp}![Figure](${clean})`;
+    });
+    // - Bare URLs: linkify http(s) and www.*
+    text = text.replace(/(^|\s)(https?:\/\/[^\s<]+)(?=\s|$)/gi, (_m, sp: string, url: string) => `${sp}<${url}>`);
+    text = text.replace(/(^|\s)(www\.[^\s<]+)(?=\s|$)/gi, (_m, sp: string, host: string) => `${sp}<http://${host}>`);
+
+    return fixMojibakeText(text);
+  }
+
+  let m: RegExpExecArray | null;
+  while ((m = codeFence.exec(md))) {
+    const start = m.index;
+    const end = start + m[0].length;
+    if (start > last) parts.push(processSegment(md.slice(last, start)));
+    // Keep code fence as-is
+    parts.push(m[0]);
+    last = end;
+  }
+  if (last < md.length) parts.push(processSegment(md.slice(last)));
+
+  return parts.join("");
 }
 
 function domainFromUrl(u?: string) {

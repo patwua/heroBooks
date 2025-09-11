@@ -1,0 +1,11 @@
+Subject: Investigation request — bank posting discrepancy [REF]
+
+Dear [Bank Contact],
+
+We identified a discrepancy on [date] for [amount] on account [acct]. Our records show [details]; statement shows [details]. Could you please investigate and advise correction?
+
+Attached: statement page, internal log, supporting documents.
+
+Regards,
+[Your Name]
+

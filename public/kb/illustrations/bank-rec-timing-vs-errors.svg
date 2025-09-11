@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="brve" role="img">
+  <title id="brve">Bank reconciliation: timing vs errors</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c1:#0ea5e9; --c2:#ef4444; --fg:#0f172a }
+      .col{fill:none;stroke:var(--fg);stroke-width:10;rx:16}
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+      .b1{fill:var(--c1);opacity:.12}
+      .b2{fill:var(--c2);opacity:.12}
+    ]]></style>
+  </defs>
+  <rect class="col b1" x="40" y="64" width="200" height="320"/>
+  <text x="56" y="102" class="t">Timing</text>
+  <text x="56" y="140" class="t">• Deposits in transit</text>
+  <text x="56" y="172" class="t">• Outstanding cheques</text>
+  <rect class="col b2" x="272" y="64" width="200" height="320"/>
+  <text x="288" y="102" class="t">Errors</text>
+  <text x="288" y="140" class="t">• Miskeys / duplicates</text>
+  <text x="288" y="172" class="t">• Missing fees/interest</text>
+</svg>
+

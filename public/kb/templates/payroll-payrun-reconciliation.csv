@@ -1,0 +1,3 @@
+run_date,employees,gross_pay,paye_withheld,nis_employee,nis_employer,other_deductions,net_pay,bank_total,variance,notes
+2025-09-30,18,3450000,420000,172500,207000,98000,2615500,2615500,0,Reconciled to bank
+

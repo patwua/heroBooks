@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="dm2" role="img">
+  <title id="dm2">Depreciation mechanics</title>
+  <defs><style><![CDATA[:root{--c1:#22c55e;--c2:#0ea5e9;--fg:#0f172a}.axis{stroke:#94a3b8;stroke-width:6}.line1{stroke:var(--c1);stroke-width:6;fill:none}.line2{stroke:var(--c2);stroke-width:6;fill:none}.t{font:600 18px/1.2 ui-sans-serif,system-ui}]]></style></defs>
+  <line class="axis" x1="64" y1="384" x2="448" y2="384"/>
+  <line class="axis" x1="64" y1="96" x2="64" y2="384"/>
+  <polyline class="line1" points="80,340 160,300 240,260 320,220 400,180"/>
+  <polyline class="line2" points="80,360 160,330 240,300 320,270 400,245"/>
+  <text x="88" y="112" class="t">SL vs RB</text>
+</svg>
+

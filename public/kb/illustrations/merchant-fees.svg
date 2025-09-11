@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" aria-labelledby="mf" role="img">
+  <title id="mf">Merchant fees & chargebacks</title>
+  <defs><style><![CDATA[:root{--c1:#0ea5e9;--c2:#ef4444;--fg:#0f172a}.box{fill:none;stroke:var(--fg);stroke-width:10;rx:16}.t{font:600 18px/1.2 ui-sans-serif,system-ui}]]></style></defs>
+  <rect class="box" x="40" y="48" width="432" height="144"/>
+  <text x="56" y="96" class="t">Fees • Settlements</text>
+  <text x="56" y="128" class="t">Chargebacks</text>
+</svg>
+

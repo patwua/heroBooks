@@ -1,0 +1,3 @@
+date_received,customer,contract_ref,description,advance_amount,currency,expected_performance,recognized_date,recognized_amount,balance,notes
+2025-09-01,XYZ Services,CTR-2025-07,Advance for maintenance plan,150000,GYD,2025-10-01,,,150000,To be recognized on start date
+

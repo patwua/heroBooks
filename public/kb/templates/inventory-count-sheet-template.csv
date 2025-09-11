@@ -1,0 +1,4 @@
+sku,description,bin,uom,counted_qty,system_qty,variance_qty,unit_cost,variance_value,counted_by,verified_by,notes
+SKU-001,Widget A,BIN-A,ea,98,100,-2,1200,-2400,Sam,Rita,Missing 2 units
+SKU-015,Widget B,BIN-C,ea,55,54,1,800,800,Sam,Rita,Overage 1 unit
+

@@ -1,0 +1,5 @@
+code,name,taxable,statutory,notes
+MEAL,Meal allowance,Y,N,Taxable if cash; verify thresholds
+TRVL,Travel stipend,N,N,If reimbursed per receipts
+OVERT,Overtime premium,Y,Y,Subject to normal deductions
+

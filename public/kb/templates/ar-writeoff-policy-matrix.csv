@@ -1,0 +1,4 @@
+sector,thresholds,documentation,approval,notes
+Retail,<= G$25k clerk / <= G$100k controller,Statements+attempts+ID,Manager->Controller->CFO,Monthly review
+Construction,By contract % and age,Contract+certificates+correspondence,PM->Controller->CFO,Coordinate retentions
+

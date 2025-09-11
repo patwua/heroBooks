@@ -85,6 +85,55 @@
       "a": "On or before the 21st of the following month (or next business day)."
     },
     {
+      "id": "ar-aging-collections-workflow-guyana",
+      "slug": "ar-aging-collections-workflow-guyana",
+      "intent": "howto",
+      "q": "Where can I get actual scripts to use?",
+      "a": "See the AR collections scripts & write‑off policy templates page. This article lays out the workflow and KPIs."
+    },
+    {
+      "id": "ar-collections-scripts-writeoff-policy",
+      "slug": "ar-collections-scripts-writeoff-policy",
+      "intent": "howto",
+      "q": "Where can I download dunning templates?",
+      "a": "See /kb/templates/ar-dunning-templates.txt for copy-paste email/call scripts."
+    },
+    {
+      "id": "ar-statements-and-dunning-gyd",
+      "slug": "ar-statements-and-dunning-gyd",
+      "intent": "howto",
+      "q": "Do you have a statement CSV?",
+      "a": "Yes — use the statement export at /kb/templates/ar-statement-export.csv and the dunning text pack at /kb/templates/ar-dunning-templates.txt."
+    },
+    {
+      "id": "ar-statements-templates-caribbean",
+      "slug": "ar-statements-templates-caribbean",
+      "intent": "howto",
+      "q": "Where are the templates?",
+      "a": "Download /kb/templates/ar-statement-export.csv and /kb/templates/ar-dunning-templates.txt; adapt read times and links."
+    },
+    {
+      "id": "ar-writeoff-policy-sector-matrix-caribbean",
+      "slug": "ar-writeoff-policy-sector-matrix-caribbean",
+      "intent": "howto",
+      "q": "Where is the policy matrix CSV?",
+      "a": "Use /kb/templates/ar-writeoff-policy-matrix.csv and /kb/templates/ar-writeoff-approval-log.csv."
+    },
+    {
+      "id": "ar-writeoffs-sector-examples-gyd",
+      "slug": "ar-writeoffs-sector-examples-gyd",
+      "intent": "howto",
+      "q": "How do write‑off entries differ by sector?",
+      "a": "Retail: Dr Allowance / Cr AR. Services: same plus WIP reversal if applicable. Construction: adjust contract assets/retentions as needed."
+    },
+    {
+      "id": "bad-debt-policy-disclosure-caribbean",
+      "slug": "bad-debt-policy-disclosure-caribbean",
+      "intent": "howto",
+      "q": "Where are the entries?",
+      "a": "See the G$ journals page for provisions, write‑offs and recoveries. This page focuses on policy and disclosures."
+    },
+    {
       "id": "bad-debts-allowance",
       "slug": "bad-debts-and-allowance-for-doubtful-accounts",
       "intent": "faq",
@@ -97,6 +146,55 @@
       "intent": "howto",
       "q": "What journals do I post for an allowance change?",
       "a": "Increase: Dr Impairment expense / Cr Allowance for doubtful accounts.\nDecrease (reversal): Dr Allowance / Cr Impairment income.\nWrite-off: Dr Allowance / Cr Trade receivables.\n"
+    },
+    {
+      "id": "bad-debts-recoveries-journals-vat-guyana",
+      "slug": "bad-debts-recoveries-journals-vat-guyana",
+      "intent": "howto",
+      "q": "What’s the write‑off entry?",
+      "a": "Dr Allowance for doubtful accounts (or Bad debt expense) / Cr Trade receivables — then adjust VAT output if the Act permits bad‑debt relief."
+    },
+    {
+      "id": "bank-errors-adjustments-gyd",
+      "slug": "bank-errors-adjustments-gyd",
+      "intent": "howto",
+      "q": "Do you have an error log and bank email template?",
+      "a": "Yes — /kb/templates/bank-error-log.csv and /kb/templates/bank-investigation-email.txt."
+    },
+    {
+      "id": "bank-errors-patterns-caribbean",
+      "slug": "bank-errors-patterns-caribbean",
+      "intent": "howto",
+      "q": "Where are the templates?",
+      "a": "Use /kb/templates/bank-error-log.csv and /kb/templates/bank-investigation-email.txt."
+    },
+    {
+      "id": "bank-reconciliation-timing-vs-errors-caribbean",
+      "slug": "bank-reconciliation-timing-vs-errors-caribbean",
+      "intent": "howto",
+      "q": "Where is the workbook CSV?",
+      "a": "Download the workbook at /kb/templates/bank-reconciliation-template.csv. For G$ examples and journals, see the deep dive."
+    },
+    {
+      "id": "bank-rec-timing-vs-errors-deep-dive",
+      "slug": "bank-reconciliation-timing-vs-errors-deep-dive",
+      "intent": "howto",
+      "q": "Where is the downloadable workbook?",
+      "a": "Use the bank rec workbook template page for the CSV download and workflow. This deep dive focuses on classification and journals."
+    },
+    {
+      "id": "bank-rec-timing-vs-errors-deep-dive",
+      "slug": "bank-reconciliation-timing-vs-errors-deep-dive",
+      "intent": "definition",
+      "q": "What are timing differences?",
+      "a": "Legitimate reconciling items (e.g., deposits in transit, outstanding cheques) that clear shortly after period end; no journal needed unless they don’t clear timely."
+    },
+    {
+      "id": "bank-reconciliation-workbook-template",
+      "slug": "bank-reconciliation-workbook-template",
+      "intent": "howto",
+      "q": "Where is the bank rec CSV download?",
+      "a": "Download from /kb/templates/bank-reconciliation-template.csv. This page explains how to use it. For error classification and journals, see the deep dive."
     },
     {
       "id": "bank-rules-auto-categorize",
@@ -120,6 +218,20 @@
       "a": "Over-broad text matches, missing VAT codes, ignoring split transactions (fuel + shop), and never reviewing exceptions. Use “suggest only” first; sample-test 10–20 lines monthly."
     },
     {
+      "id": "capital-vs-revenue-expenditure-decision-tree",
+      "slug": "capital-vs-revenue-expenditure-decision-tree",
+      "intent": "definition",
+      "q": "What’s the quick test for capex vs revenue?",
+      "a": "Capex if the spend creates a new asset or enhances/extends the asset’s useful life beyond original; routine repair to maintain condition is revenue."
+    },
+    {
+      "id": "capital-vs-revenue-expenditure-decision-tree",
+      "slug": "capital-vs-revenue-expenditure-decision-tree",
+      "intent": "howto",
+      "q": "How do I correct a misclassification?",
+      "a": "Reclassify with a journal (e.g., Dr PPE / Cr Repairs), adjust depreciation if necessary, and disclose if material."
+    },
+    {
       "id": "cash-handling-controls",
       "slug": "cash-handling-controls",
       "intent": "howto",
@@ -138,14 +250,28 @@
       "slug": "cash-handling-fraud-red-flags",
       "intent": "definition",
       "q": "What are the classic cash schemes?",
-      "a": "Skimming (off-book theft before recording) and larceny (after recording - false voids/returns, short banking). Watch for unusual refunds, no-sale pops, and delayed deposits."
+      "a": "**Skimming** (off-book theft before recording) and **larceny** (after recording: false voids/returns, short banking). Watch for unusual refunds, no-sale pops, and delayed deposits."
     },
     {
       "id": "cash-fraud-red-flags",
       "slug": "cash-handling-fraud-red-flags",
       "intent": "howto",
       "q": "Which analytics should I run?",
-      "a": "Tests like high-refund clerks, late-night no-sales, voids near shift end, and deposit-to-Z report differences by cashier and day."
+      "a": "ACFE-style tests like “high-refund clerks,” “late-night no-sales,” “voids near shift end,” and “deposit-to-Z report differences” by cashier and day."
+    },
+    {
+      "id": "cash-handling-sop-guyana",
+      "slug": "cash-handling-sop-guyana",
+      "intent": "howto",
+      "q": "Do you have SOP checklists?",
+      "a": "Download /kb/templates/cash-sop-checklist.csv and /kb/templates/cash-till-opening-closing-checklist.csv."
+    },
+    {
+      "id": "cash-handling-sop-templates-caribbean",
+      "slug": "cash-handling-sop-templates-caribbean",
+      "intent": "howto",
+      "q": "Where are the SOP templates?",
+      "a": "Use /kb/templates/cash-sop-checklist.csv, /kb/templates/cash-till-opening-closing-checklist.csv, and /kb/templates/cash-sop-duties-matrix.csv."
     },
     {
       "id": "chart-of-accounts-for-a-small-guyanese-business",
@@ -153,6 +279,62 @@
       "intent": "faq",
       "q": "Do I need separate accounts for VAT?",
       "a": "Yes. Use Output VAT (liability) for tax you charge, and Input VAT (asset/contra) for VAT you paid that’s claimable."
+    },
+    {
+      "id": "costing-policy-overhead-rates-caribbean",
+      "slug": "costing-policy-overhead-rates-caribbean",
+      "intent": "howto",
+      "q": "Where are the CSV templates for WIP?",
+      "a": "Download /kb/templates/wip-job-ledger.csv and /kb/templates/overhead-rate-setup.csv."
+    },
+    {
+      "id": "credit-policy-customer-onboarding-gyd",
+      "slug": "credit-policy-customer-onboarding-gyd",
+      "intent": "howto",
+      "q": "Do you have a credit application template?",
+      "a": "Download /kb/templates/credit-application.csv and store approvals with limits and terms."
+    },
+    {
+      "id": "credit-policy-forms-templates-caribbean",
+      "slug": "credit-policy-forms-templates-caribbean",
+      "intent": "howto",
+      "q": "Where are the forms?",
+      "a": "Use /kb/templates/credit-application.csv, /kb/templates/credit-risk-factors.csv, and /kb/templates/credit-limit-matrix.csv."
+    },
+    {
+      "id": "customer-advances-contract-liabilities-gyd",
+      "slug": "customer-advances-contract-liabilities-gyd",
+      "intent": "howto",
+      "q": "What’s the journal for a customer advance?",
+      "a": "Dr Bank / Cr Contract liabilities (customer advances); recognize revenue later: Dr Contract liabilities / Cr Revenue."
+    },
+    {
+      "id": "customer-deposits-advance-invoices-guyana",
+      "slug": "customer-deposits-advance-invoices-guyana",
+      "intent": "faq",
+      "q": "Do deposits trigger VAT?",
+      "a": "VAT follows time of supply; deposits may trigger VAT if considered part payments — confirm under the Act and invoice correctly."
+    },
+    {
+      "id": "customer-deposits-policy-templates-caribbean",
+      "slug": "customer-deposits-policy-templates-caribbean",
+      "intent": "howto",
+      "q": "Where is the deposits CSV?",
+      "a": "Download /kb/templates/deposits-ledger.csv and track receipt date, amount, customer, reference, and application."
+    },
+    {
+      "id": "depreciation-methods-changes-gyd",
+      "slug": "depreciation-methods-changes-gyd",
+      "intent": "howto",
+      "q": "Where do I find disclosure wording?",
+      "a": "See the methods & estimate changes disclosures page. This page focuses on calculations and journals with G$ examples."
+    },
+    {
+      "id": "depreciation-methods-estimate-changes-ifrs-smes",
+      "slug": "depreciation-methods-estimate-changes-ifrs-smes",
+      "intent": "howto",
+      "q": "How do I disclose a change in depreciation estimate?",
+      "a": "Explain the nature of the change (e.g., useful life), the reason, and the effect on current and future periods."
     },
     {
       "id": "depreciation-methods-gyd-2025",
@@ -183,11 +365,95 @@
       "a": "On or before the **21st** of the following month (or next business day if the 21st is a holiday)."
     },
     {
+      "id": "fixed-asset-register-quick-start",
+      "slug": "fixed-asset-register-quick-start",
+      "intent": "howto",
+      "q": "Where do I find register columns?",
+      "a": "Use the CSV at /kb/templates/fixed-asset-register-template.csv. For disclosures and estimate changes, see the depreciation methods page."
+    },
+    {
+      "id": "goods-in-transit-consignment-journals-gyd",
+      "slug": "goods-in-transit-consignment-journals-gyd",
+      "intent": "howto",
+      "q": "How do I book goods-in-transit at month end?",
+      "a": "Dr Inventory — GIT / Cr Accrued purchases; reverse when invoice/GRN arrives."
+    },
+    {
+      "id": "goods-in-transit-consignment-policy-caribbean",
+      "slug": "goods-in-transit-consignment-policy-caribbean",
+      "intent": "howto",
+      "q": "What should we disclose for consignment?",
+      "a": "Nature of arrangements, carrying amounts, and risks retained — where material."
+    },
+    {
+      "id": "inventory-bom-kitting-costing-gyd",
+      "slug": "inventory-bom-kitting-costing-gyd",
+      "intent": "howto",
+      "q": "How do I post a build from components?",
+      "a": "Dr Finished goods / Cr Components for rolled-up cost; capitalize labour/overhead as appropriate."
+    },
+    {
+      "id": "inventory-bom-policy-templates-caribbean",
+      "slug": "inventory-bom-policy-templates-caribbean",
+      "intent": "howto",
+      "q": "Where are the BOM CSV templates?",
+      "a": "Download /kb/templates/bom-structure.csv and /kb/templates/bom-cost-rollup.csv for structure and rolled-up costing."
+    },
+    {
+      "id": "inventory-cost-formulas-fifo-vs-weighted-average",
+      "slug": "inventory-cost-formulas-fifo-vs-weighted-average",
+      "intent": "faq",
+      "q": "Which cost formulas are allowed under IFRS?",
+      "a": "FIFO and weighted-average are permitted. LIFO is not allowed."
+    },
+    {
+      "id": "inventory-cost-formulas-fifo-vs-weighted-average",
+      "slug": "inventory-cost-formulas-fifo-vs-weighted-average",
+      "intent": "howto",
+      "q": "Can I change my cost formula later?",
+      "a": "Keep consistent for similar inventories. Changing is an accounting policy change under IAS 8 — document rationale and disclose."
+    },
+    {
+      "id": "inventory-count-sheet-template-caribbean",
+      "slug": "inventory-count-sheet-template-caribbean",
+      "intent": "howto",
+      "q": "Where is the count sheet CSV?",
+      "a": "Download from /kb/templates/inventory-count-sheet-template.csv. For accounting entries (shrinkage/NRV), see the Guyana shrinkage guide."
+    },
+    {
+      "id": "inventory-counts-shrinkage-guyana",
+      "slug": "inventory-counts-shrinkage-guyana",
+      "intent": "howto",
+      "q": "How do I book shrinkage?",
+      "a": "Record the loss to COGS/shrinkage when counts show shortages; if NRV < cost, write down to NRV under IAS 2 and disclose material write‑downs."
+    },
+    {
       "id": "inventory-moving-average-perpetual",
       "slug": "inventory-moving-average-perpetual",
       "intent": "faq",
       "q": "Is moving average allowed under IFRS?",
-      "a": "IFRS/SMEs allow weighted-average and FIFO cost formulas. A perpetual moving-average is an implementation of weighted-average that updates after each receipt."
+      "a": "IFRS/SMEs allow **weighted-average** and **FIFO** cost formulas. A **perpetual moving-average** is an implementation of weighted-average that updates after each receipt."
+    },
+    {
+      "id": "inventory-nrv-disclosures-examples",
+      "slug": "inventory-nrv-disclosures-examples",
+      "intent": "howto",
+      "q": "Where do I find disclosure note wording?",
+      "a": "Use this page’s templates for cost formula, write-downs and reversals under IAS 2/IFRS for SMEs. For posting journals, see the recognition guide."
+    },
+    {
+      "id": "inventory-shrinkage-abc-deep-dive-gyd",
+      "slug": "inventory-shrinkage-abc-deep-dive-gyd",
+      "intent": "howto",
+      "q": "Do you have an ABC risk matrix CSV?",
+      "a": "Download /kb/templates/abc-risk-matrix.csv and review KPIs monthly (shrink % by class, high-risk SKUs)."
+    },
+    {
+      "id": "inventory-shrinkage-analytics-caribbean",
+      "slug": "inventory-shrinkage-analytics-caribbean",
+      "intent": "howto",
+      "q": "Where is the analytics CSV?",
+      "a": "Download /kb/templates/shrinkage-analytics.csv and pivot by ABC class, SKU, cashier, and day."
     },
     {
       "id": "inventory-fifo-vs-avg",
@@ -202,6 +468,55 @@
       "intent": "faq",
       "q": "How do I pick one?",
       "a": "Prefer FIFO when prices are rising and stock turns quickly; prefer weighted-average for high-volume, indistinguishable items. Apply the same method to inventories of similar nature and use."
+    },
+    {
+      "id": "inventory-nrv-reversals-gy-2025",
+      "slug": "inventory-write-downs-nrv-reversals-guyana-2025",
+      "intent": "howto",
+      "q": "How do I post a write-down or reversal?",
+      "a": "Use this recognition guide for G$ journals. For disclosure wording and note templates, see the inventory NRV disclosures page."
+    },
+    {
+      "id": "inventory-nrv-reversals-gy-2025",
+      "slug": "inventory-write-downs-nrv-reversals-guyana-2025",
+      "intent": "definition",
+      "q": "When do I write down inventory?",
+      "a": "When its net realisable value (expected selling price less costs to complete/sell) is below cost — recognise the loss in the period and carry inventory at NRV."
+    },
+    {
+      "id": "inventory-nrv-reversals-gy-2025",
+      "slug": "inventory-write-downs-nrv-reversals-guyana-2025",
+      "intent": "faq",
+      "q": "Can I reverse a write-down?",
+      "a": "Under IFRS/SMEs, yes — if NRV increases later, reverse up to the original write-down amount and recognise the reversal in profit or loss."
+    },
+    {
+      "id": "inventory-writeoffs-policy-disclosures-caribbean",
+      "slug": "inventory-writeoffs-policy-disclosures-caribbean",
+      "intent": "howto",
+      "q": "What should our policy cover?",
+      "a": "Triggers, definitions (write‑off vs write‑down), approval levels, evidence required, NRV estimation basis, and disclosure responsibilities."
+    },
+    {
+      "id": "inventory-writeoffs-writedowns-returns-gyd",
+      "slug": "inventory-writeoffs-writedowns-returns-gyd",
+      "intent": "howto",
+      "q": "How do I post a write‑off?",
+      "a": "Dr COGS — write‑off / Cr Inventory; document reason and approval; consider impairment vs disposal."
+    },
+    {
+      "id": "merchant-fees-chargebacks-analytics-caribbean",
+      "slug": "merchant-fees-chargebacks-analytics-caribbean",
+      "intent": "howto",
+      "q": "Where is the CSV?",
+      "a": "Download /kb/templates/merchant-fees-import.csv and compute effective rate = fees/gross sales."
+    },
+    {
+      "id": "merchant-fees-chargebacks-journals-gyd",
+      "slug": "merchant-fees-chargebacks-journals-gyd",
+      "intent": "howto",
+      "q": "Is there a CSV import for fees?",
+      "a": "Use /kb/templates/merchant-fees-import.csv to post fees/chargebacks against daily settlements."
     },
     {
       "id": "nis-contributions-guyana-2025",
@@ -232,11 +547,53 @@
       "a": "A receipt recorded in your cash book but not yet credited by the bank at period end. Another timing item on the bank side of the reconciliation."
     },
     {
+      "id": "owner-drawings-vs-expenses-caribbean",
+      "slug": "owner-drawings-vs-expenses-caribbean",
+      "intent": "howto",
+      "q": "Where are G$ examples?",
+      "a": "See the Guyana drawings page for amounts and entries; this page gives regional guidance."
+    },
+    {
+      "id": "owner-loans-vs-drawings-caribbean",
+      "slug": "owner-loans-vs-drawings-caribbean",
+      "intent": "howto",
+      "q": "Where are G$ postings?",
+      "a": "See the Guyana loans vs drawings page for G$ entries and DLA notes."
+    },
+    {
+      "id": "owner-loans-vs-drawings-guyana-sme",
+      "slug": "owner-loans-vs-drawings-guyana-sme",
+      "intent": "faq",
+      "q": "Where do I find drawings treatment?",
+      "a": "See the drawings guide for equity postings. This page focuses on owner/director loans and balance‑sheet presentation."
+    },
+    {
+      "id": "owner-withdrawals-vs-expenses",
+      "slug": "owner-withdrawals-vs-expenses",
+      "intent": "definition",
+      "q": "Are drawings an expense?",
+      "a": "No. Drawings reduce equity (capital), not profit. They don’t appear on the income statement and don’t change your VAT return."
+    },
+    {
+      "id": "owner-withdrawals-vs-expenses",
+      "slug": "owner-withdrawals-vs-expenses",
+      "intent": "howto",
+      "q": "Where can I find owner/director loan treatment?",
+      "a": "See the loans vs drawings page for balance‑sheet postings and director loan accounts. This page focuses on drawings as equity distributions."
+    },
+    {
       "id": "paye-thresholds-guyana-2025",
       "slug": "paye-2025-thresholds-guyana",
       "intent": "faq",
       "q": "What are the PAYE bands in 2025?",
       "a": "25% on chargeable income up to **G$3,120,000** per year; **35%** on the excess."
+    },
+    {
+      "id": "paye-calculation-walkthrough-guyana-2025",
+      "slug": "paye-calculation-walkthrough-guyana-2025",
+      "intent": "howto",
+      "q": "Where is the PAYE calculator CSV?",
+      "a": "Download /kb/templates/paye-calculator-guyana.csv and verify bands at the GRA site."
     },
     {
       "id": "paye-thresholds-guyana-2025-full",
@@ -253,6 +610,104 @@
       "a": "**25%** up to **G$3,120,000/year**; **35%** on the excess."
     },
     {
+      "id": "payroll-allowances-benefits-taxability-gyd",
+      "slug": "payroll-allowances-benefits-taxability-gyd",
+      "intent": "howto",
+      "q": "Do you have a benefits/allowances matrix?",
+      "a": "Download /kb/templates/benefits-taxability-matrix.csv and configure PAYE and NIS flags per category."
+    },
+    {
+      "id": "payroll-allowances-policy-matrix-caribbean",
+      "slug": "payroll-allowances-policy-matrix-caribbean",
+      "intent": "howto",
+      "q": "Where is the policy matrix CSV?",
+      "a": "Use /kb/templates/benefits-taxability-matrix.csv to map categories to PAYE/NIS flags and notes per jurisdiction."
+    },
+    {
+      "id": "payroll-gra-vs-nis-compliance-deep-dive-guyana",
+      "slug": "payroll-gra-vs-nis-compliance-deep-dive-guyana",
+      "intent": "definition",
+      "q": "What is the key difference between GRA and NIS for payroll?",
+      "a": "GRA focuses on taxable income for PAYE; NIS is a social insurance with employee and employer contributions and ceilings."
+    },
+    {
+      "id": "payroll-gra-vs-nis-compliance-deep-dive-guyana",
+      "slug": "payroll-gra-vs-nis-compliance-deep-dive-guyana",
+      "intent": "faq",
+      "q": "Are allowances taxable for PAYE and insurable for NIS?",
+      "a": "Some allowances are taxable for PAYE and may be insurable for NIS — verify current rules and any ceilings or exemptions."
+    },
+    {
+      "id": "payroll-gra-vs-nis-remittance-audit-checklist-guyana",
+      "slug": "payroll-gra-vs-nis-remittance-audit-checklist-guyana",
+      "intent": "howto",
+      "q": "Where can I download the remittance calendar?",
+      "a": "Use /kb/templates/payroll-remittance-calendar.csv and add your internal cutoffs and bank references."
+    },
+    {
+      "id": "payroll-gra-vs-nis-remittance-audit-checklist-guyana",
+      "slug": "payroll-gra-vs-nis-remittance-audit-checklist-guyana",
+      "intent": "howto",
+      "q": "Do you have a payrun reconciliation template?",
+      "a": "Download /kb/templates/payroll-payrun-reconciliation.csv and reconcile gross-to-net-to-remittances monthly."
+    },
+    {
+      "id": "payroll-leave-accruals-payouts-gyd",
+      "slug": "payroll-leave-accruals-payouts-gyd",
+      "intent": "howto",
+      "q": "How do I post leave accruals monthly?",
+      "a": "Dr Staff costs — leave accrual / Cr Accrued expenses; reverse when leave is taken or paid."
+    },
+    {
+      "id": "payroll-leave-policy-templates-caribbean",
+      "slug": "payroll-leave-policy-templates-caribbean",
+      "intent": "howto",
+      "q": "Where is the leave calculator CSV?",
+      "a": "Download /kb/templates/leave-accrual-ledger.csv and /kb/templates/termination-payout-calculator.csv."
+    },
+    {
+      "id": "payroll-overtime-allowances-caribbean",
+      "slug": "payroll-overtime-allowances-caribbean",
+      "intent": "howto",
+      "q": "Where is the CSV config?",
+      "a": "Download /kb/templates/payroll-allowances-config.csv and mark each category as taxable/non-taxable with notes."
+    },
+    {
+      "id": "payroll-overtime-allowances-compliance-guyana",
+      "slug": "payroll-overtime-allowances-compliance-guyana",
+      "intent": "faq",
+      "q": "Are allowances taxable?",
+      "a": "Depends on the allowance and current rules — verify with GRA guidance; configure payroll accordingly."
+    },
+    {
+      "id": "payroll-statutory-deductions-caribbean-map",
+      "slug": "payroll-statutory-deductions-caribbean-map",
+      "intent": "howto",
+      "q": "Where do I see indicative rates?",
+      "a": "Use /kb/rates/tax_rates.json in the app for an at-a-glance view with a Verify link to each authority."
+    },
+    {
+      "id": "payroll-statutory-deductions-guyana-overview-2025",
+      "slug": "payroll-statutory-deductions-guyana-overview-2025",
+      "intent": "howto",
+      "q": "Where do I verify current PAYE/NIS rates?",
+      "a": "Use the official GRA and NIS links; rates change — avoid hard‑coding."
+    },
+    {
+      "id": "payroll-tax-gross-ups-caribbean",
+      "slug": "payroll-tax-gross-ups-caribbean",
+      "intent": "howto",
+      "q": "Where is the gross-up calculator?",
+      "a": "Download /kb/templates/payroll-grossup-calculator.csv and set the tax rate assumptions per country rules."
+    },
+    {
+      "id": "petty-cash-analytics-checklist-caribbean",
+      "slug": "petty-cash-analytics-checklist-caribbean",
+      "intent": "howto",
+      "q": "Where is the checklist CSV?",
+      "a": "Use /kb/templates/petty-cash-audit-checklist.csv and pivot by cashier, reason code, and day."
+    },
+    {
       "id": "petty-cash-controls",
       "slug": "petty-cash-controls-for-small-shops",
       "intent": "faq",
@@ -267,6 +722,48 @@
       "a": "Count the cash on hand + sum of approved vouchers/receipts + any IOUs. This should equal the float cap. Investigate any over/short immediately and document."
     },
     {
+      "id": "petty-cash-imprest-caribbean",
+      "slug": "petty-cash-imprest-caribbean",
+      "intent": "howto",
+      "q": "Where are G$ journals?",
+      "a": "See the Guyana petty cash guide for G$ setup and reimbursement entries."
+    },
+    {
+      "id": "petty-cash-imprest-gyd",
+      "slug": "petty-cash-imprest-system-gyd",
+      "intent": "definition",
+      "q": "What is an imprest petty cash system?",
+      "a": "A fixed fund that is reimbursed to its preset float by recording spends and topping up by exactly the amount spent."
+    },
+    {
+      "id": "petty-cash-imprest-gyd",
+      "slug": "petty-cash-imprest-system-gyd",
+      "intent": "howto",
+      "q": "What are the journals for setup and reimbursement?",
+      "a": "Setup: Dr Petty cash / Cr Bank. Reimburse: Dr Petty cash / Cr Bank for the total of approved vouchers; expenses were recorded when paid from petty cash."
+    },
+    {
+      "id": "petty-cash-surprise-audits-gyd",
+      "slug": "petty-cash-surprise-audits-gyd",
+      "intent": "howto",
+      "q": "Where is the audit checklist CSV?",
+      "a": "Download /kb/templates/petty-cash-audit-checklist.csv and attach counts and voucher lists."
+    },
+    {
+      "id": "pos-discrepancy-analytics-caribbean",
+      "slug": "pos-discrepancy-analytics-caribbean",
+      "intent": "howto",
+      "q": "Where is the log CSV?",
+      "a": "Use /kb/templates/pos-discrepancy-log.csv and pivot by reason_code and cashier/day to find patterns."
+    },
+    {
+      "id": "pos-discrepancy-root-cause-gyd",
+      "slug": "pos-discrepancy-root-cause-gyd",
+      "intent": "howto",
+      "q": "Is there a CSV to log discrepancies?",
+      "a": "Download /kb/templates/pos-discrepancy-log.csv and track by date, cashier, reason, and resolution."
+    },
+    {
       "id": "gra-record-keeping",
       "slug": "record-keeping-requirements-under-gra",
       "intent": "faq",
@@ -279,6 +776,55 @@
       "intent": "howto",
       "q": "What should a VAT-registered business keep?",
       "a": "Tax invoices, credit/debit notes, supply/purchase ledgers, Z-reports, bank statements, import entries, and evidence supporting zero-rated/exempt supplies; all in English and GYD."
+    },
+    {
+      "id": "reorder-points-safety-stock-gyd",
+      "slug": "reorder-points-safety-stock-gyd",
+      "intent": "howto",
+      "q": "Do you have a calculator CSV?",
+      "a": "Yes — download /kb/templates/reorder-safety-stock-calculator.csv and input average demand, lead time, and variability."
+    },
+    {
+      "id": "replenishment-policy-templates-caribbean",
+      "slug": "replenishment-policy-templates-caribbean",
+      "intent": "howto",
+      "q": "Where are the templates?",
+      "a": "Download /kb/templates/reorder-safety-stock-calculator.csv and /kb/templates/replenishment-review-checklist.csv."
+    },
+    {
+      "id": "revenue-recognition-advances-policy-caribbean",
+      "slug": "revenue-recognition-advances-policy-caribbean",
+      "intent": "howto",
+      "q": "Where is the contract liabilities ledger CSV?",
+      "a": "Download /kb/templates/contract-liabilities-ledger.csv and track expected performance dates to manage recognition."
+    },
+    {
+      "id": "supplier-credit-notes-postings-regional",
+      "slug": "supplier-credit-notes-postings-regional",
+      "intent": "howto",
+      "q": "Where are the CSV templates?",
+      "a": "See /kb/templates/credit-note-template.csv and /kb/templates/purchase-return-template.csv."
+    },
+    {
+      "id": "supplier-credit-notes-vs-purchase-returns-guyana",
+      "slug": "supplier-credit-notes-vs-purchase-returns-guyana",
+      "intent": "howto",
+      "q": "What must a supplier credit note include?",
+      "a": "Supplier/buyer details, original invoice number/date, reason, rate, net/VAT/total, unique note number, and date."
+    },
+    {
+      "id": "till-variance-analytics-template-caribbean",
+      "slug": "till-variance-analytics-template-caribbean",
+      "intent": "howto",
+      "q": "Where is the template?",
+      "a": "Download /kb/templates/till-variance-analytics.csv and pivot by cashier/day/hour and reason code."
+    },
+    {
+      "id": "till-variance-reconciliation-gyd",
+      "slug": "till-variance-reconciliation-gyd",
+      "intent": "howto",
+      "q": "Is there a CSV to analyze variances?",
+      "a": "Use the regional analytics template at /kb/templates/till-variance-analytics.csv to trend issues by cashier/day."
     },
     {
       "id": "trial-balance-corrections-gy-2025",
@@ -316,6 +862,55 @@
       "a": "No. It catches math/posting errors but not omissions, misclassifications, compensating errors, or equal-and-opposite mistakes."
     },
     {
+      "id": "unearned-revenue-aging-gyd",
+      "slug": "unearned-revenue-aging-gyd",
+      "intent": "howto",
+      "q": "How do I age unearned revenue?",
+      "a": "Use a ledger with receipt date, expected recognition date, and balance; review overdue deferrals and recognize when performance occurs."
+    },
+    {
+      "id": "unearned-revenue-policy-disclosures-caribbean",
+      "slug": "unearned-revenue-policy-disclosures-caribbean",
+      "intent": "howto",
+      "q": "Where is the deferrals ledger template?",
+      "a": "Download /kb/templates/unearned-revenue-ledger.csv and add an expected recognition date to drive alerts."
+    },
+    {
+      "id": "vat-credit-debit-notes-postings-gyd",
+      "slug": "vat-credit-debit-notes-postings-gyd",
+      "intent": "howto",
+      "q": "How do I post a credit note as a seller?",
+      "a": "Dr Sales returns/adjustments (or revenue) + Dr Output VAT / Cr Trade receivables — referencing the original invoice."
+    },
+    {
+      "id": "vat-credit-debit-notes-requirements-guyana",
+      "slug": "vat-credit-debit-notes-requirements-guyana",
+      "intent": "faq",
+      "q": "When should I issue a credit note?",
+      "a": "For price reductions, returns, cancellations, or errors in VAT or quantity — referencing the original invoice number and date."
+    },
+    {
+      "id": "vat-inclusive-pricing-7-57-cheat-sheet",
+      "slug": "vat-inclusive-pricing-7-57-cheat-sheet-guyana",
+      "intent": "howto",
+      "q": "How do I extract VAT from a VAT-inclusive total?",
+      "a": "Use gross × 14/114 (i.e., 7/57). Example: G$114,000 × 14/114 = G$14,000 VAT; net = G$100,000."
+    },
+    {
+      "id": "vat-inclusive-pricing-7-57-cheat-sheet",
+      "slug": "vat-inclusive-pricing-7-57-cheat-sheet-guyana",
+      "intent": "faq",
+      "q": "How should I handle rounding?",
+      "a": "Round consistently (line or invoice level per policy) and ensure VAT totals reconcile to return boxes."
+    },
+    {
+      "id": "vat-inclusive-pricing-regional-cheat-sheet",
+      "slug": "vat-inclusive-pricing-regional-cheat-sheet",
+      "intent": "howto",
+      "q": "Where are 14% worked examples?",
+      "a": "See the Guyana cheat sheet (7/57) for r = 14. This page shows the general formula for any VAT rate."
+    },
+    {
       "id": "vat-invoice-requirements-guyana-2025",
       "slug": "vat-invoice-requirements-guyana",
       "intent": "definition",
@@ -337,18 +932,109 @@
       "a": "Use the VAT fraction 7/57 (for 14% VAT). Example: G$2,500 × 7/57 = G$307 VAT; price before VAT = G$2,193."
     },
     {
+      "id": "vat-refunds-evidence-pack-guyana",
+      "slug": "vat-refunds-evidence-pack-guyana",
+      "intent": "faq",
+      "q": "Who can claim a VAT refund in Guyana?",
+      "a": "Registered taxpayers with legitimate excess input VAT (e.g., exporters/zero-rated supplies) can apply on the prescribed GRA form; otherwise the credit often carries forward."
+    },
+    {
+      "id": "vat-refunds-evidence-pack-guyana",
+      "slug": "vat-refunds-evidence-pack-guyana",
+      "intent": "howto",
+      "q": "What should my evidence pack contain?",
+      "a": "Return summary, invoice lists, export/zero-rated support, payment proofs, reconciliations to ledgers, and explanations for large variances or prior-period corrections."
+    },
+    {
+      "id": "vat-refunds-evidence-pack-guyana",
+      "slug": "vat-refunds-evidence-pack-guyana",
+      "intent": "howto",
+      "q": "Where are exporter-focused templates?",
+      "a": "See the Caribbean exporter evidence pack for a sample cover letter and regional checklist."
+    },
+    {
+      "id": "vat-refunds-exporter-evidence-caribbean",
+      "slug": "vat-refunds-exporter-evidence-caribbean",
+      "intent": "howto",
+      "q": "Where are Guyana-specific refund steps?",
+      "a": "See the Guyana guide for forms and policy links. This page focuses on exporter evidence structure you can adapt across Caribbean VAT regimes."
+    },
+    {
+      "id": "vat-return-review-checklist-caribbean",
+      "slug": "vat-return-review-checklist-caribbean",
+      "intent": "howto",
+      "q": "Where are country‑specific steps?",
+      "a": "Use this regional checklist for workflow; jump to country guides (e.g., Guyana) for forms, deadlines, and rates."
+    },
+    {
+      "id": "vat-return-review-checklist-guyana",
+      "slug": "vat-return-review-checklist-guyana",
+      "intent": "faq",
+      "q": "When are VAT returns due in Guyana?",
+      "a": "On or before the 21st day of the following month (or next business day), per the GRA."
+    },
+    {
+      "id": "vat-return-review-checklist-guyana",
+      "slug": "vat-return-review-checklist-guyana",
+      "intent": "howto",
+      "q": "Where do I find the variance bridge?",
+      "a": "See the VAT return — variance bridge & 7/57 analysis page. This checklist focuses on pre‑filing steps and documentation."
+    },
+    {
+      "id": "vat-return-variance-analysis-caribbean",
+      "slug": "vat-return-variance-analysis-caribbean",
+      "intent": "howto",
+      "q": "Where are country specifics?",
+      "a": "Use this bridge regionally; see the Guyana variance analysis for 14% and local return mapping."
+    },
+    {
+      "id": "vat-return-variance-analysis-guyana",
+      "slug": "vat-return-variance-analysis-guyana",
+      "intent": "faq",
+      "q": "Where do I find a VAT pre-filing checklist?",
+      "a": "See the checklist guide for step-by-step pre-filing validation. This page focuses on the variance bridge and the 7/57 inclusive-price analysis."
+    },
+    {
+      "id": "vat-zero-exempt-invoice-audit-caribbean",
+      "slug": "vat-zero-vs-exempt-invoice-audit-caribbean",
+      "intent": "howto",
+      "q": "Where are Guyana specifics?",
+      "a": "See the Guyana invoice audit page for 14% examples and local requirements."
+    },
+    {
       "id": "vat-zero-exempt-invoice-audit",
       "slug": "vat-zero-vs-exempt-invoice-audit",
       "intent": "definition",
       "q": "What must a VAT invoice show in Guyana?",
-      "a": "Supplier details, buyer details, unique tax invoice number/date, description, quantity, VAT rate/amount, and where relevant a clear zero-rated or exempt indication, per GRA guidance."
+      "a": "Supplier details, buyer details, unique **tax invoice** number/date, description, quantity, **VAT rate/amount**, and where relevant a clear **zero-rated** or **exempt** indication, per GRA guidance."
     },
     {
       "id": "vat-zero-exempt-invoice-audit",
       "slug": "vat-zero-vs-exempt-invoice-audit",
       "intent": "howto",
       "q": "What’s the audit shortcut?",
-      "a": "Pick a sample, confirm rate (14%/0%/exempt), test math (e.g., use 7/57 for VAT-inclusive prices), confirm support (Schedule 1/Act) and that summaries post to the right VAT boxes."
+      "a": "Pick a sample, confirm **rate** (14%/0%/exempt), test math (e.g., use **7/57** for VAT-inclusive prices), confirm support (Schedule 1/Act) and that summaries post to the right VAT boxes."
+    },
+    {
+      "id": "wip-overhead-absorption-gyd",
+      "slug": "wip-overhead-absorption-gyd",
+      "intent": "howto",
+      "q": "How do I absorb overhead to WIP?",
+      "a": "Apply a rate (e.g., % of labour or machine hours): Dr WIP — overhead absorbed / Cr Overhead control; true‑up variances at period end."
+    },
+    {
+      "id": "wip-variances-journals-gyd",
+      "slug": "wip-variances-journals-gyd",
+      "intent": "howto",
+      "q": "How do I treat under-absorbed overhead?",
+      "a": "Dr COGS (or variance account) / Cr Overhead control; analyze for rate reset."
+    },
+    {
+      "id": "wip-variances-policy-kpi-caribbean",
+      "slug": "wip-variances-policy-kpi-caribbean",
+      "intent": "howto",
+      "q": "Where is the variance log CSV?",
+      "a": "Download /kb/templates/wip-variance-log.csv and require root-cause and closure owner."
     },
     {
       "id": "vat-zero-vs-exempt-2025",

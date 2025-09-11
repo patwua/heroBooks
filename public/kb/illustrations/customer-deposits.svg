@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" aria-labelledby="cd" role="img">
+  <title id="cd">Customer deposits</title>
+  <defs><style><![CDATA[:root{--c:#22c55e;--fg:#0f172a}.box{fill:none;stroke:var(--fg);stroke-width:10;rx:16}.t{font:600 18px/1.2 ui-sans-serif,system-ui}]]></style></defs>
+  <rect class="box" x="40" y="48" width="432" height="144"/>
+  <text x="56" y="96" class="t">Receive deposit → Liability</text>
+  <text x="56" y="128" class="t">Invoice/Delivery → Revenue</text>
+</svg>
+

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" aria-labelledby="icf" role="img">
+  <title id="icf">FIFO vs weighted-average</title>
+  <defs>
+    <style><![CDATA[
+      :root { --c1:#0ea5e9; --c2:#22c55e; --fg:#0f172a }
+      .t{font:600 18px/1.2 ui-sans-serif,system-ui}
+      .stack{stroke:var(--c1);stroke-width:20}
+      .line{stroke:var(--c2);stroke-width:6;fill:none}
+      .axis{stroke:#94a3b8;stroke-width:6}
+    ]]></style>
+  </defs>
+  <line class="axis" x1="64" y1="200" x2="448" y2="200"/>
+  <line class="stack" x1="120" y1="200" x2="120" y2="120"/>
+  <line class="stack" x1="160" y1="200" x2="160" y2="140"/>
+  <line class="stack" x1="200" y1="200" x2="200" y2="160"/>
+  <polyline class="line" points="280,180 320,160 360,168 400,150"/>
+  <text x="96" y="228" class="t">FIFO</text>
+  <text x="312" y="96" class="t">Weighted-average</text>
+</svg>
+
